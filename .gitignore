@@ -1,0 +1,8 @@
+# Ignore everything by default
+/*
+
+# Except these directories (and everything inside them)
+!/.agents/
+!.gitignore
+!docs
+
