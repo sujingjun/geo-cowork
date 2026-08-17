@@ -166,7 +166,7 @@ draft → verifying → review → approved → published → deprecated
 ## 11. 目录结构
 
 ```text
-myyshop-geo-brand-knowledge-base-v0.1.0/
+knowledge/
 ├── README.md
 ├── 00-governance/
 ├── 01-templates/
