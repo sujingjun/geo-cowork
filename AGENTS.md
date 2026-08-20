@@ -5,7 +5,7 @@
 本仓是geo SDD 协同工作的控制面仓库：维护统一工作流规范、文档体系与知识库导航。
 
 - `docs/` 是本仓唯一 tracked 内容目录，文档导航入口见 [`docs/README.md`](docs/README.md)。
-- `projects/` 为本地项目检出目录（如 geo-expert），已被 `.gitignore` 排除；项目代码、实现事实与验证证据以各项目仓库为准，本仓不复制维护。
+- `plugins/` 为本地项目检出目录（如 geo-expert），已被 `.gitignore` 排除；项目代码、实现事实与验证证据以各项目仓库为准，本仓不复制维护。
 
 ## 权威来源与冲突顺序
 
