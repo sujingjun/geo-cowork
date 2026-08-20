@@ -6,5 +6,5 @@
 !.gitignore
 !docs
 !workspaces
-!plugins/
+!plugins
 !AGENTS.md
