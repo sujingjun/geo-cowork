@@ -5,5 +5,5 @@
 !/.agents/
 !.gitignore
 !docs
-!data
+!workspaces
 !AGENTS.md
