@@ -1,0 +1,7 @@
+{
+  "schema_version": "1.0.0",
+  "workspace_id": "{{WORKSPACE_ID}}",
+  "brand": "{{BRAND}}",
+  "created_at": "{{CREATED_AT}}",
+  "created_by": "geo-workspace-init/{{PLUGIN_VERSION}}"
+}

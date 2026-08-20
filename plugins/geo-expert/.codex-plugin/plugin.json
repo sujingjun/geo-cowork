@@ -1,0 +1,20 @@
+{
+  "name": "geo-expert",
+  "version": "0.1.0",
+  "description": "本地优先的企业品牌 GEO 专家：共享 GEO Skills 与本地品牌工作区",
+  "author": {
+    "name": "geo-cowork"
+  },
+  "repository": "https://github.com/sujingjun/geo-cowork",
+  "license": "UNLICENSED",
+  "keywords": ["geo", "brand", "workspace"],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "GEO Expert",
+    "shortDescription": "本地优先的企业品牌 GEO 专家",
+    "longDescription": "在本地文件工作区中跑通品牌 GEO 闭环：Query、知识、站点、舆情、答案测试、竞品、策略、执行与复验。",
+    "developerName": "geo-cowork",
+    "category": "Productivity",
+    "capabilities": ["Read", "Write"]
+  }
+}
