@@ -3,7 +3,8 @@ title: 本地 GEO 专家插件原始需求
 status: proposed
 created: 2026-08-20
 source: docs/handoff/2026-08-20-geo-cowork-plugin-initialization-handoff.md; docs/plans/2026-08-20-geo-cowork-local-geo-expert-rebaseline-plan.md
-scope: geo-cowork 仓库里程碑 0（仓库重新定基线）与里程碑 1（三宿主插件骨架）
+scope: geo-cowork 仓库里程碑 0（仓库重新定基线）与里程碑 1（宿主插件骨架）
+revision: 2026-08-20 用户指令：移除 CodeBuddy 适配，只保留 WorkBuddy（中国区，官方文档 workbuddy.cn 专家中心）；CodeBuddy 相关条目为历史原始记录
 ---
 
 # 本地 GEO 专家插件原始需求

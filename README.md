@@ -4,7 +4,7 @@
 
 ## 产品定位
 
-`geo-cowork` 让企业品牌在 Codex、Claude Code、CodeBuddy/WorkBuddy 三个宿主中，用同一套 GEO Skills 和本地文件工作区，跑通品牌 GEO 闭环：
+`geo-cowork` 让企业品牌在 Codex、Claude Code 两个已适配宿主中，用同一套 GEO Skills 和本地文件工作区，跑通品牌 GEO 闭环；中国区 WorkBuddy 宿主待其官方发布专家/技能开发者契约后再行适配：
 
 ```text
 Query → Knowledge → Site → Reputation → Answers
@@ -17,7 +17,7 @@ Query → Knowledge → Site → Reputation → Answers
 
 ## 安装
 
-本仓库即三个宿主的本地插件 Marketplace，插件为 `plugins/geo-expert`。
+本仓库即 Codex 与 Claude Code 的本地插件 Marketplace（WorkBuddy 待官方开发者契约，见下），插件为 `plugins/geo-expert`。
 
 ### Claude Code
 
@@ -28,14 +28,17 @@ claude --plugin-dir ./plugins/geo-expert
 
 会话中触发：`/geo-expert:geo-workspace-init`
 
-### CodeBuddy / WorkBuddy
+### WorkBuddy（中国区，待适配）
 
-```bash
-codebuddy plugin validate ./plugins/geo-expert
-codebuddy --plugin-dir ./plugins/geo-expert
-```
+WorkBuddy 是腾讯云代码助手 CodeBuddy 旗下的 AI 任务执行型产品，其专家体系由「专家中心」（官方专家/专家团）与「我的专家」（自定义专家）构成，专家 = 人设 + 方法论 + 工具链。
 
-会话中添加本地市场：`/plugin marketplace add .`，随后 `/geo-expert:geo-workspace-init`。
+截至 2026-08-20，WorkBuddy 中国区官方文档未发布开发者契约（无插件/专家的 manifest、文件格式、导入协议或 CLI 验证命令），因此本仓库**不提供 WorkBuddy 插件包装**。过渡期的使用方式：
+
+- 在 WorkBuddy「我的专家」或「创建技能」中，以自然语言把 GEO 专家的人设与方法论指向本仓库的 `skills/*/SKILL.md` 与本地品牌工作区；
+- 工作区文件（Markdown/JSONL/JSON）由 WorkBuddy 在授权下直接读写，与插件机制无关；
+- 待官方发布开发者契约后，本仓将按 `docs/workflow.md` 新立 Spec 恢复仓库级适配。
+
+官方文档：<https://www.workbuddy.cn/docs/workbuddy/From-Beginner-to-Expert-Guide/Function-Description/Expert-Center>
 
 ### Codex
 

@@ -2,9 +2,11 @@
 title: geo-cowork 本地 GEO 专家插件重新定基线方案
 status: proposed
 date: 2026-08-20
+updated: 2026-08-20
 repository: https://github.com/sujingjun/geo-cowork
 cloud_repository: https://github.com/weiyan2026/geo-agents
 scope: local-first GEO expert plugin and local brand workspaces
+revision: 2026-08-20 按用户指令移除 CodeBuddy 适配层，第三宿主改为 WorkBuddy（中国区）专家体系，其包装契约待官方开发者契约发布（§5.3、§5.4、§6、§11、§13、§16 已同步）；里程碑 0-1 曾按三宿主执行并验收，事实见 docs/records/
 ---
 
 # geo-cowork 本地 GEO 专家插件重新定基线方案
@@ -22,7 +24,7 @@ scope: local-first GEO expert plugin and local brand workspaces
 
 当前正式目标是：
 
-> 在 Codex、Claude Code、CodeBuddy/WorkBuddy 中，以同一套 GEO Skills 和本地文件工作区，跑通品牌 GEO 从问题集合、知识库、站内外审计、舆情、生成式平台答案测试、竞品差距、优化提案、人工执行、发布复验到周期复盘的完整闭环。
+> 在 Codex、Claude Code 与 WorkBuddy（中国区）中，以同一套 GEO Skills 和本地文件工作区，跑通品牌 GEO 从问题集合、知识库、站内外审计、舆情、生成式平台答案测试、竞品差距、优化提案、人工执行、发布复验到周期复盘的完整闭环。
 
 长期状态和业务交付物以 Markdown、JSONL、JSON、HTML 快照和截图等本地文件为准。聊天记录、模型记忆和插件缓存不是项目事实来源。
 
@@ -69,7 +71,7 @@ scope: local-first GEO expert plugin and local brand workspaces
 
 达到 `v1.0.0` 时必须满足：
 
-- Codex、Claude Code、CodeBuddy/WorkBuddy 可安装同一仓库中的插件；
+- Codex、Claude Code 可安装同一仓库中的插件；WorkBuddy（中国区）适配以其官方发布专家/技能开发者契约为前提；
 - 三个平台读取同一个品牌工作区；
 - 相同输入产生语义一致的结构化交付物；
 - 所有关键结论能追溯到 Query、知识、Evidence、网页、平台答案或外部观察；
@@ -84,7 +86,7 @@ scope: local-first GEO expert plugin and local brand workspaces
 
 ### 4.1 geo-cowork 拥有
 
-- Codex、Claude Code、CodeBuddy/WorkBuddy 插件清单；
+- Codex、Claude Code 插件清单，及 WorkBuddy（中国区）适配跟踪；
 - 共享 GEO Skills、References、Schemas、Templates 和确定性脚本；
 - 工作区模板和文件契约；
 - MyyShop 本地工作区；
@@ -121,9 +123,9 @@ Cycle Contract
 
 禁止本地 Skill 导入 `geo-agents` 源码包、强制启动云端服务、复制维护两套业务规则，或在本地流程验证前提前固化云端 API。
 
-## 5. 三宿主插件规范
+## 5. 跨宿主插件规范
 
-本仓采用“一个共享能力内核，三个官方宿主适配层”。
+本仓采用“一个共享能力内核，多个官方宿主适配层”（当前已适配 Codex 与 Claude Code；WorkBuddy 见 §5.3）。
 
 ### 5.1 Codex
 
@@ -156,34 +158,21 @@ claude --plugin-dir ./plugins/geo-expert
 
 Skill 使用 `/geo-expert:<skill-name>` 命名空间。只有 `plugin.json` 放在 `.claude-plugin/` 中，Skills、Scripts 和 Assets 位于插件根目录。
 
-### 5.3 CodeBuddy/WorkBuddy
+### 5.3 WorkBuddy（中国区）
 
-WorkBuddy 官方文档中的插件产品名称为 CodeBuddy Code。本仓显式提供：
+WorkBuddy 是腾讯云代码助手 CodeBuddy 旗下的 AI 任务执行型产品，其专家体系由「专家中心」（官方专家/专家团）与「我的专家」（自定义专家）构成：专家 = 人设 + 方法论 + 工具链；技能市场支持安装与上传技能。
 
-```text
-plugins/geo-expert/.codebuddy-plugin/plugin.json
-plugins/geo-expert/skills/<skill-name>/SKILL.md
-.codebuddy-plugin/marketplace.json
-```
+本仓对 WorkBuddy 的定位：
 
-本地开发和验证使用：
+- **不提供 WorkBuddy 插件包装**：中国区官方文档（workbuddy.cn）截至 2026-08-20 未发布开发者契约——无 manifest/文件格式/导入协议/CLI 验证命令，也未说明与 Claude Code 或 CodeBuddy CLI 插件规范的兼容性；
+- **过渡期适配路径**：在 WorkBuddy「我的专家/创建技能」中，以自然语言把 GEO 专家的人设与方法论指向本仓 `skills/*/SKILL.md` 与本地品牌工作区；工作区文件由 WorkBuddy 在授权下读写；
+- **恢复条件**：官方发布开发者契约后，按 `docs/workflow.md` 新立 Spec，恢复仓库级 Manifest 与 Marketplace 适配；契约发布前不得虚构格式。
 
-```bash
-codebuddy plugin validate ./plugins/geo-expert
-codebuddy --plugin-dir ./plugins/geo-expert
-```
-
-本地市场通过 CodeBuddy 交互命令添加：
-
-```text
-/plugin marketplace add .
-```
-
-CodeBuddy 优先识别 `.codebuddy-plugin/`，同时兼容 `.workbuddy-plugin/` 和 `.claude-plugin/`。本项目仍显式维护 CodeBuddy Manifest，避免依赖隐式兼容。
+原 CodeBuddy CLI 适配层（`.codebuddy-plugin/plugin.json`、`.codebuddy-plugin/marketplace.json`）已于 2026-08-20 按用户指令移除；其曾通过的真实验证事实保留在 docs/records/ 验收记录中。
 
 ### 5.4 单一事实来源
 
-三个 Manifest 只保存宿主元数据，不保存 GEO 业务规则。权威关系固定为：
+已适配宿主的 Manifest 只保存宿主元数据，不保存 GEO 业务规则。权威关系固定为：
 
 ```text
 skills/**/SKILL.md
@@ -195,8 +184,7 @@ skills/**/SKILL.md
 
 .codex-plugin/plugin.json
 .claude-plugin/plugin.json
-.codebuddy-plugin/plugin.json
-= 宿主适配层
+= 宿主适配层（WorkBuddy 待官方开发者契约，见 §5.3）
 ```
 
 不得分别维护 Query 分类、知识状态机、Finding 规则、GEO 评分、内容优化、审批门禁或输出格式。
@@ -211,12 +199,10 @@ geo-cowork/
 ├── package.json
 ├── .agents/plugins/marketplace.json
 ├── .claude-plugin/marketplace.json
-├── .codebuddy-plugin/marketplace.json
 ├── plugins/
 │   └── geo-expert/
 │       ├── .codex-plugin/plugin.json
 │       ├── .claude-plugin/plugin.json
-│       ├── .codebuddy-plugin/plugin.json
 │       ├── README.md
 │       ├── CHANGELOG.md
 │       ├── skills/
@@ -290,7 +276,7 @@ Agent 开工时读取仓级规则、工作区 README、STATUS、最近一次 Run
 
 每个 `SKILL.md` 必须明确触发场景、输入、开工前必读文件、步骤、输出、可做事项、禁止事项、失败和停止条件、验收方式、示例及相关 References/Scripts。
 
-共同 Frontmatter 使用三宿主均可理解的最小交集：
+共同 Frontmatter 使用已适配宿主均可理解的最小交集（WorkBuddy 契约发布后按其要求扩展）：
 
 ```yaml
 ---
@@ -347,14 +333,14 @@ Agent 不得把 Candidate Query 自动批准、把 Observation 升级为企业 E
 | 里程碑 | 目标 | 主要结果 |
 | --- | --- | --- |
 | 0. 仓库重新定基线 | 修正仓库定位和两仓边界 | AGENTS、README、Requirement、PRD、Architecture、Spec、Plan、Task |
-| 1. 三宿主插件骨架 | 三个平台识别同一个插件 | 三 Manifest、三 Marketplace、`geo-workspace-init`、模板和校验 |
+| 1. 宿主插件骨架 | Codex 与 Claude Code 识别同一个插件（WorkBuddy 待契约） | 两 Manifest、两 Marketplace、`geo-workspace-init`、模板和校验 |
 | 2. Query 与知识 | 跑通 GEO 第 1、2 步 | Query Portfolio、Knowledge Audit、Evidence Gap |
 | 3. 站点与舆情 | 跑通站内外诊断 | Asset Snapshot、Site Finding、External Observation |
 | 4. 答案与竞品 | 建立真实平台基线 | Sample Matrix、Raw Answer、Review、Competitor Gap |
 | 5. 策略与内容提案 | 把诊断转成候选行动 | GEO Diagnosis、Content Brief、Candidate Change |
 | 6. 人工执行与复验 | 跑通发布前后闭环 | Baseline、Day 14、Day 30 |
 | 7. 完整 GEO 周期 | 连续完成两个真实周期 | Cycle、趋势、成功与失败经验 |
-| 8. 三宿主一致性与 v1.0 | 稳定发布本地插件 | Conformance、Security Review、v1.0 Release、云端需求导出 |
+| 8. 跨宿主一致性与 v1.0 | 稳定发布本地插件 | Conformance、Security Review、v1.0 Release、云端需求导出 |
 
 当前只授权后续 Agent 实施里程碑 0 和里程碑 1，完成后停止。
 
@@ -369,7 +355,7 @@ Agent 不得把 Candidate Query 自动批准、把 Observation 升级为企业 E
 7. 创建三个 Manifest 和三个 Marketplace；
 8. 创建共享 `geo-workspace-init` Skill；
 9. 创建工作区模板、初始化脚本、校验脚本、Fixture 和测试；
-10. 完成 Codex、Claude Code、CodeBuddy 的真实 Smoke Test；
+10. 完成 Codex、Claude Code 的真实 Smoke Test（当时含 CodeBuddy，2026-08-20 起移除，见 §5.3）；
 11. 写 Acceptance Record 和下一 Handoff；
 12. 停止，不自动进入里程碑 2。
 
@@ -390,19 +376,6 @@ claude plugin validate ./plugins/geo-expert
 claude --plugin-dir ./plugins/geo-expert
 ```
 
-CodeBuddy/WorkBuddy：
-
-```bash
-codebuddy plugin validate ./plugins/geo-expert
-codebuddy --plugin-dir ./plugins/geo-expert
-```
-
-CodeBuddy 本地市场在交互会话中使用：
-
-```text
-/plugin marketplace add .
-```
-
 Codex：
 
 ```bash
@@ -411,12 +384,14 @@ codex plugin marketplace add .
 
 Codex 最终验收必须包含真实市场添加、插件安装、Skill 触发和 Fixture 文件检查。
 
+WorkBuddy（中国区）：无 CLI 验证命令；适配路径与限制见 §5.3。
+
 ## 14. 红线
 
 1. 不把 `geo-cowork` 合回 `geo-agents`。
 2. 不让本地插件依赖云端 API。
 3. 当前阶段不以 MCP 作为必需能力。
-4. 不为三个宿主复制三套 Skill。
+4. 不为各宿主复制多套 Skill。
 5. 不把 Manifest 当业务规则位置。
 6. 不把真实工作区写入插件安装缓存。
 7. 不引用插件根目录外的资源。
@@ -453,9 +428,9 @@ cloud-readiness-assessment
 - Codex Plugin Packaging: https://developers.openai.com/plugins/build/plugins
 - Claude Code Plugins: https://code.claude.com/docs/en/plugins
 - Claude Code Plugin Marketplaces: https://code.claude.com/docs/en/plugin-marketplaces
-- CodeBuddy/WorkBuddy 创建插件: https://www.workbuddy.ai/docs/zh/cli/plugins
-- CodeBuddy/WorkBuddy 插件参考: https://www.workbuddy.ai/docs/zh/cli/plugins-reference
-- CodeBuddy/WorkBuddy 插件市场: https://www.workbuddy.ai/docs/zh/cli/plugin-marketplaces
+- WorkBuddy（中国区）专家中心: https://www.workbuddy.cn/docs/workbuddy/From-Beginner-to-Expert-Guide/Function-Description/Expert-Center
+- WorkBuddy（中国区）技能市场: https://www.workbuddy.cn/docs/workbuddy/From-Beginner-to-Expert-Guide/Function-Description/Skills-Market
+- WorkBuddy（中国区）创建自定义 Skills: https://www.workbuddy.cn/docs/workbuddy/From-Beginner-to-Expert-Guide/Practice-Cases/Practice-Eight
 
 ## 17. 决策摘要
 

@@ -9,13 +9,12 @@ import { fileURLToPath } from 'node:url';
 const PLUGIN_ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const REPO_ROOT = path.resolve(PLUGIN_ROOT, '..', '..');
 
-const MANIFESTS = ['.codex-plugin', '.claude-plugin', '.codebuddy-plugin'].map((d) =>
+const MANIFESTS = ['.codex-plugin', '.claude-plugin'].map((d) =>
   path.join(PLUGIN_ROOT, d, 'plugin.json'),
 );
 const MARKETPLACES = [
   '.agents/plugins/marketplace.json',
   '.claude-plugin/marketplace.json',
-  '.codebuddy-plugin/marketplace.json',
 ].map((p) => path.join(REPO_ROOT, p));
 
 const violations = [];
@@ -62,7 +61,7 @@ async function checkManifests() {
   }
   const versions = new Set(manifests.map((m) => m.data.version));
   if (versions.size > 1) {
-    fail(`三个 Manifest 版本不一致: ${[...versions].join(', ')}`);
+    fail(`各 Manifest 版本不一致: ${[...versions].join(', ')}`);
   }
 }
 

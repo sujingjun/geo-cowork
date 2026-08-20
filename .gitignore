@@ -4,7 +4,6 @@
 # Except these directories (and everything inside them)
 !/.agents/
 !/.claude-plugin/
-!/.codebuddy-plugin/
 !.gitignore
 !docs
 !workspaces

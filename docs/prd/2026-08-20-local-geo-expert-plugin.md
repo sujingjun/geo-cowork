@@ -3,19 +3,19 @@ title: 本地 GEO 专家插件 PRD（里程碑 0—1）
 status: proposed
 created: 2026-08-20
 source: docs/requirements/2026-08-20-local-geo-expert-plugin.md
-scope: geo-cowork 仓库重新定基线与三宿主插件骨架
+scope: geo-cowork 仓库重新定基线与插件骨架（2026-08-20 修订：移除 CodeBuddy 适配，WorkBuddy 待官方契约）
 ---
 
 # 本地 GEO 专家插件 PRD（里程碑 0—1）
 
 ## 1. 为什么做
 
-企业品牌的 GEO 工作需要多轮、多宿主、跨 Session 的持续协作。没有插件包装和工作区契约时，每次协作都依赖聊天记录和模型记忆，结论不可追溯、结果不可复验。本 PRD 定义最小可用形态：让 Codex、Claude Code、CodeBuddy/WorkBuddy 安装同一个本地插件，并对同一个品牌工作区完成幂等初始化与校验。
+企业品牌的 GEO 工作需要多轮、多宿主、跨 Session 的持续协作。没有插件包装和工作区契约时，每次协作都依赖聊天记录和模型记忆，结论不可追溯、结果不可复验。本 PRD 定义最小可用形态：让 Codex、Claude Code 安装同一个本地插件，并对同一个品牌工作区完成幂等初始化与校验；中国区 WorkBuddy 宿主待其官方发布专家/技能开发者契约后再行适配（2026-08-20 修订，见重新定基线方案 §5.3）。
 
 ## 2. 为谁做
 
 - 品牌 GEO 负责人：需要一个本地文件事实中心，承接 Query、知识、审计、答案测试等长期状态。
-- 协作 Agent（Codex / Claude Code / CodeBuddy）：需要明确的插件入口、工作区定位和确定性脚本，不依赖宿主差异。
+- 协作 Agent（Codex / Claude Code；WorkBuddy 待官方契约）：需要明确的插件入口、工作区定位和确定性脚本，不依赖宿主差异。
 - 后续接手 Agent：需要不依赖原聊天记录即可继续工作的文件基线。
 
 ## 3. 解决什么问题
@@ -62,5 +62,5 @@ scope: geo-cowork 仓库重新定基线与三宿主插件骨架
 
 ## 8. 待确认问题
 
-- CodeBuddy 桌面端与 CLI 的插件缓存路径是否需要在文档中说明（当前以 CLI 实测为准）。
+- WorkBuddy（中国区）官方开发者契约的发布时间与形态（当前仅有用户级操作指南，无法仓库级适配）。
 - Codex 在 ChatGPT 宿主中的安装界面展示项（`interface` 字段）后续按真实展示效果调整。

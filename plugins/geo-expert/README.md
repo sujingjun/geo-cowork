@@ -1,6 +1,6 @@
 # geo-expert
 
-本地优先的企业品牌 GEO（Generative Engine Optimization）专家插件，可被 Codex、Claude Code、CodeBuddy/WorkBuddy 安装。
+本地优先的企业品牌 GEO（Generative Engine Optimization）专家插件，为 Codex 与 Claude Code 提供插件包装；中国区 WorkBuddy 宿主待官方发布专家/技能开发者契约后再行适配（见仓库根 `README.md`）。
 
 ## 能力
 
@@ -15,8 +15,7 @@
 ```text
 .codex-plugin/plugin.json     Codex Manifest
 .claude-plugin/plugin.json    Claude Code Manifest
-.codebuddy-plugin/plugin.json CodeBuddy/WorkBuddy Manifest
-skills/                       共享 GEO Skills（三宿主单一事实来源）
+skills/                       共享 GEO Skills（已适配宿主的单一事实来源）
 scripts/                      确定性脚本（Node 20+，零依赖）
 assets/workspace-template/    工作区模板
 ```

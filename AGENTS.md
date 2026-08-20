@@ -5,7 +5,7 @@
 本仓是**本地优先的企业品牌 GEO 专家插件**仓库：维护跨宿主插件（`plugins/geo-expert`）、品牌工作区（`workspaces/`）、SDD 工作流与文档体系（`docs/`）。
 
 - 产品说明、安装与边界见根 [`README.md`](README.md)；文档导航入口见 [`docs/README.md`](docs/README.md)。
-- tracked 内容包括：`docs/`、`plugins/`、`workspaces/`、`tests/`、根 `README.md`、`AGENTS.md`、`CHANGELOG.md`、`package.json`、`.gitignore` 及三个 Marketplace 目录（`.agents/`、`.claude-plugin/`、`.codebuddy-plugin/`）。
+- tracked 内容包括：`docs/`、`plugins/`、`workspaces/`、`tests/`、根 `README.md`、`AGENTS.md`、`CHANGELOG.md`、`package.json`、`.gitignore` 及两个 Marketplace 目录（`.agents/`、`.claude-plugin/`）。
 - 与云端系统 `weiyan2026/geo-agents` 当前**无运行时依赖**；双仓分工与交接条件见 `docs/plans/2026-08-20-geo-cowork-local-geo-expert-rebaseline-plan.md`。
 
 ## 权威来源与冲突顺序

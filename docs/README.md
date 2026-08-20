@@ -24,12 +24,27 @@
 | 任务清单 | [`tasks/2026-08-20-plugin-initialization.md`](tasks/2026-08-20-plugin-initialization.md) | verified |
 | 验收记录 | [`records/2026-08-20-plugin-initialization-acceptance.md`](records/2026-08-20-plugin-initialization-acceptance.md) | verified（三宿主真实验证通过） |
 
+### 里程碑 1 加固与中国区 WorkBuddy 适配（2026-08-20）
+
+| 类别 | 工件 | 状态 |
+| --- | --- | --- |
+| 任务清单 | [`tasks/2026-08-20-milestone-1-hardening-workbuddy-china.md`](tasks/2026-08-20-milestone-1-hardening-workbuddy-china.md) | verified（其中 README CodeBuddy 加固已被下一任务移除，验证事实保留为历史） |
+| 验收记录 | [`records/2026-08-20-milestone-1-hardening-record.md`](records/2026-08-20-milestone-1-hardening-record.md) | verified（WorkBuddy workbuddy.ai 规范复核、三宿主复验；交互式命令待人工补验） |
+
+### 移除 CodeBuddy 适配、切换 WorkBuddy 中国区（2026-08-20）
+
+| 类别 | 工件 | 状态 |
+| --- | --- | --- |
+| 任务清单 | [`tasks/2026-08-20-workbuddy-pivot.md`](tasks/2026-08-20-workbuddy-pivot.md) | verified |
+| 验收记录 | [`records/2026-08-20-workbuddy-pivot-record.md`](records/2026-08-20-workbuddy-pivot-record.md) | verified（两 Manifest/两 Marketplace、插件 0.2.0、workbuddy.cn 契约核实；WorkBuddy 适配待官方契约） |
+
 ## 提案与交接
 
 | 工件 | 位置 | 状态与用途 |
 | --- | --- | --- |
 | 本地 GEO 专家插件重新定基线方案 | [`plans/2026-08-20-geo-cowork-local-geo-expert-rebaseline-plan.md`](plans/2026-08-20-geo-cowork-local-geo-expert-rebaseline-plan.md) | `proposed`；双仓分工、三宿主插件规范、里程碑 0—8 |
-| 插件初始化 Handoff | [`handoff/2026-08-20-geo-cowork-plugin-initialization-handoff.md`](handoff/2026-08-20-geo-cowork-plugin-initialization-handoff.md) | 本次执行基线；里程碑 0—1 |
+| 插件初始化 Handoff | [`handoff/2026-08-20-geo-cowork-plugin-initialization-handoff.md`](handoff/2026-08-20-geo-cowork-plugin-initialization-handoff.md) | 历史执行基线；里程碑 0—1 |
+| CodeBuddy 移除与 WorkBuddy 切换 Handoff | [`handoff/2026-08-20-milestone-1-hardening-workbuddy-china-handoff.md`](handoff/2026-08-20-milestone-1-hardening-workbuddy-china-handoff.md) | 当前生效；WorkBuddy 契约跟踪与里程碑 2 入口 |
 | 里程碑 2 Handoff | [`handoff/2026-08-20-query-and-knowledge-milestone-handoff.md`](handoff/2026-08-20-query-and-knowledge-milestone-handoff.md) | 里程碑 0—1 验收后生效；Query 与知识 |
 
 以上提案进入实现前，仍须按 `docs/workflow.md` 补齐并批准 Requirement、PRD、Architecture、Spec、Plan 和 Task。Handoff 不能自行提升提案状态。

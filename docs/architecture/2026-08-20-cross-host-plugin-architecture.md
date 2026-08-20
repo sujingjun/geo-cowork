@@ -2,6 +2,8 @@
 title: 跨宿主插件架构
 status: proposed
 created: 2026-08-20
+updated: 2026-08-20
+revision: 2026-08-20 按用户指令移除 CodeBuddy 适配层；WorkBuddy（中国区）待官方开发者契约后另行加入适配层
 source: docs/prd/2026-08-20-local-geo-expert-plugin.md; docs/plans/2026-08-20-geo-cowork-local-geo-expert-rebaseline-plan.md
 scope: geo-cowork 插件包装、工作区契约与宿主适配层
 ---
@@ -15,7 +17,6 @@ scope: geo-cowork 插件包装、工作区契约与宿主适配层
 │ 宿主适配层（只含身份元数据，无业务规则）           │
 │  .codex-plugin/plugin.json                      │
 │  .claude-plugin/plugin.json                     │
-│  .codebuddy-plugin/plugin.json                  │
 ├─────────────────────────────────────────────────┤
 │ 共享能力内核（GEO 能力单一事实来源）              │
 │  skills/<skill>/SKILL.md   行为契约与编排        │
@@ -28,14 +29,14 @@ scope: geo-cowork 插件包装、工作区契约与宿主适配层
 └─────────────────────────────────────────────────┘
 ```
 
-三个宿主读取同一套 Skills 与脚本，对同一个工作区产生一致结果。Marketplace（`.agents/plugins/`、`.claude-plugin/`、`.codebuddy-plugin/` 下的 `marketplace.json`）只解决"宿主如何发现插件"，不承载能力定义。
+已适配宿主（Codex、Claude Code）读取同一套 Skills 与脚本，对同一个工作区产生一致结果；WorkBuddy（中国区）待官方开发者契约发布后另行加入（见重新定基线方案 §5.3）。Marketplace（`.agents/plugins/`、`.claude-plugin/` 下的 `marketplace.json`）只解决"宿主如何发现插件"，不承载能力定义。
 
 ## 2. 模块关系
 
 | 模块 | 职责 | 不得做 |
 | --- | --- | --- |
-| Manifest ×3 | 插件名称、版本、描述、组件路径 | 保存 Query 分类、状态机、Finding 规则、评分或输出格式 |
-| Marketplace ×3 | 市场名称、插件来源路径、安装策略 | 复制插件内容或业务规则 |
+| Manifest ×2 | 插件名称、版本、描述、组件路径 | 保存 Query 分类、状态机、Finding 规则、评分或输出格式 |
+| Marketplace ×2 | 市场名称、插件来源路径、安装策略 | 复制插件内容或业务规则 |
 | SKILL.md | 触发场景、输入、步骤、输出、权限边界、停止条件 | 绕过脚本直接手写工作区结构 |
 | scripts/*.mjs | 幂等初始化、结构校验、插件包自检 | 依赖 cwd、引用插件根外文件、写插件缓存 |
 | assets/workspace-template/ | README/STATUS/workspace.json 模板 | 存放真实品牌数据 |
@@ -43,13 +44,13 @@ scope: geo-cowork 插件包装、工作区契约与宿主适配层
 
 ## 3. 关键架构决策（待批准）
 
-### AD-1 一个插件目录承载三个 Manifest
+### AD-1 一个插件目录承载全部宿主 Manifest
 
-`plugins/geo-expert/` 同时包含 `.codex-plugin/`、`.claude-plugin/`、`.codebuddy-plugin/` 三个子目录。三宿主各自只读取自己的 Manifest，互不干扰。替代方案（三个插件目录）会复制 Skills，违反红线 4。
+`plugins/geo-expert/` 同时包含 `.codex-plugin/`、`.claude-plugin/` 两个子目录（原含 `.codebuddy-plugin/`，2026-08-20 按用户指令移除）。各宿主只读取自己的 Manifest，互不干扰。替代方案（每宿主一个插件目录）会复制 Skills，违反红线 4。WorkBuddy（中国区）待官方开发者契约发布后按新 Spec 加入。
 
 ### AD-2 业务行为下沉到确定性脚本
 
-工作区初始化与校验由 `scripts/workspace-init.mjs`、`scripts/workspace-validate.mjs` 完成；Skill 只负责定位工作区、调用脚本、解释结果。这保证三宿主行为一致且可脱离宿主用 `node --test` 验证。
+工作区初始化与校验由 `scripts/workspace-init.mjs`、`scripts/workspace-validate.mjs` 完成；Skill 只负责定位工作区、调用脚本、解释结果。这保证各宿主行为一致且可脱离宿主用 `node --test` 验证。
 
 ### AD-3 工作区定位两段式
 
