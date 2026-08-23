@@ -38,16 +38,23 @@
 | 任务清单 | [`tasks/2026-08-20-workbuddy-pivot.md`](tasks/2026-08-20-workbuddy-pivot.md) | verified |
 | 验收记录 | [`records/2026-08-20-workbuddy-pivot-record.md`](records/2026-08-20-workbuddy-pivot-record.md) | verified（两 Manifest/两 Marketplace、插件 0.2.0、workbuddy.cn 契约核实；WorkBuddy 适配待官方契约） |
 
-## 提案与交接
+## 当前批准产品基线与交接
 
 | 工件 | 位置 | 状态与用途 |
 | --- | --- | --- |
-| 本地 GEO 专家插件重新定基线方案 | [`plans/2026-08-20-geo-cowork-local-geo-expert-rebaseline-plan.md`](plans/2026-08-20-geo-cowork-local-geo-expert-rebaseline-plan.md) | `proposed`；双仓分工、三宿主插件规范、里程碑 0—8 |
-| 插件初始化 Handoff | [`handoff/2026-08-20-geo-cowork-plugin-initialization-handoff.md`](handoff/2026-08-20-geo-cowork-plugin-initialization-handoff.md) | 历史执行基线；里程碑 0—1 |
-| CodeBuddy 移除与 WorkBuddy 切换 Handoff | [`handoff/2026-08-20-milestone-1-hardening-workbuddy-china-handoff.md`](handoff/2026-08-20-milestone-1-hardening-workbuddy-china-handoff.md) | 当前生效；WorkBuddy 契约跟踪与里程碑 2 入口 |
-| 里程碑 2 Handoff | [`handoff/2026-08-20-query-and-knowledge-milestone-handoff.md`](handoff/2026-08-20-query-and-knowledge-milestone-handoff.md) | 里程碑 0—1 验收后生效；Query 与知识 |
+| 最终产品方案 | [`plans/2026-08-23-geo-cowork-final-product-plan.md`](plans/2026-08-23-geo-cowork-final-product-plan.md) | `approved`；M2—M8 当前 Owner 批准产品基线，覆盖知识治理、Gap 模型、真实消费者平台测试、GEO Cycle、Agent/Skill/Tool 与开源吸收方案 |
+| 当前 M2 Handoff | [`handoff/2026-08-23-m2-contract-provenance-kernel-handoff.md`](handoff/2026-08-23-m2-contract-provenance-kernel-handoff.md) | `approved`；下一执行 Agent 先建立 Contract & Provenance Kernel 的 Gap Review 与 Requirement/PRD/Architecture/Spec/Plan/Task，完成后停在 Owner 批准门 |
 
-以上提案进入实现前，仍须按 `docs/workflow.md` 补齐并批准 Requirement、PRD、Architecture、Spec、Plan 和 Task。Handoff 不能自行提升提案状态。
+## 历史提案与交接
+
+| 工件 | 位置 | 状态与用途 |
+| --- | --- | --- |
+| 本地 GEO 专家插件重新定基线方案 | [`plans/2026-08-20-geo-cowork-local-geo-expert-rebaseline-plan.md`](plans/2026-08-20-geo-cowork-local-geo-expert-rebaseline-plan.md) | `proposed`；历史双仓分工、宿主插件规范和原 M0—M8 规划；与 2026-08-23 最终产品方案冲突部分以后者为准 |
+| 插件初始化 Handoff | [`handoff/2026-08-20-geo-cowork-plugin-initialization-handoff.md`](handoff/2026-08-20-geo-cowork-plugin-initialization-handoff.md) | 历史执行基线；里程碑 0—1 |
+| CodeBuddy 移除与 WorkBuddy 切换 Handoff | [`handoff/2026-08-20-milestone-1-hardening-workbuddy-china-handoff.md`](handoff/2026-08-20-milestone-1-hardening-workbuddy-china-handoff.md) | 历史 WorkBuddy 契约跟踪与 M1 收口基线 |
+| 原“Query 与知识” M2 Handoff | [`handoff/2026-08-20-query-and-knowledge-milestone-handoff.md`](handoff/2026-08-20-query-and-knowledge-milestone-handoff.md) | 已被 2026-08-23 产品基线重排；保留历史，不再作为当前 M2 启动指令 |
+
+当前 M2 仍须按 `docs/workflow.md` 建立 Requirement、PRD、Architecture、Spec、Plan 和 Task，并在进入代码实现前获得对应批准。Handoff 不能自行提升 Spec 或 Plan 状态。
 
 ## 现有目录
 
@@ -57,10 +64,10 @@
 | [`prd/`](prd/2026-08-20-local-geo-expert-plugin.md) | 用户、场景、业务规则与业务验收 |
 | [`architecture/`](architecture/2026-08-20-cross-host-plugin-architecture.md) | 目标形态、模块关系与待批准架构决策 |
 | [`specs/`](specs/0001-plugin-package-contract.md) | 插件包与工作区系统契约 |
-| [`plans/`](plans/2026-08-20-plugin-initialization-plan.md) | 实施顺序、技术方案、测试和停止条件 |
+| [`plans/`](plans/2026-08-23-geo-cowork-final-product-plan.md) | 产品方案、实施顺序、技术方案、测试和停止条件 |
 | [`tasks/`](tasks/2026-08-20-plugin-initialization.md) | 可独立执行、验证和交接的最小工作单元 |
 | [`records/`](records/2026-08-20-plugin-initialization-acceptance.md) | 实际命令、结果、失败、修复与未验证项 |
 | [`wiki/`](wiki/index.md) | 项目知识库导航摘要 |
-| [`handoff/`](handoff/2026-08-20-geo-cowork-plugin-initialization-handoff.md) | 跨 Session 或跨 Agent 的继承基线、第一动作和停止条件 |
+| [`handoff/`](handoff/2026-08-23-m2-contract-provenance-kernel-handoff.md) | 跨 Session 或跨 Agent 的继承基线、第一动作和停止条件 |
 
 其余文档类别（原型、Runbook、Release、复盘和经验）的目录契约与建档规则见 `docs/workflow.md` 第 2 章；各类目录在首次出现 canonical 文档时创建并加入本导航。
