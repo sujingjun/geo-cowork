@@ -1,0 +1,39 @@
+{
+  "url": "https://example.invalid/",
+  "date": "2026-08-24",
+  "geo_score": 52,
+  "scores": {
+    "technical": 61,
+    "schema": 25
+  },
+  "platforms": {
+    "Synthetic Engine": 40
+  },
+  "snapshots": [
+    {
+      "key": "homepage",
+      "path": "legacy/raw/homepage.txt",
+      "source_url": "https://example.invalid/",
+      "captured_at": "2026-08-24T00:00:00+08:00",
+      "sha256": "f533c806a69449d3197643b49c6b2a70e64f63785c5f82032d983e77e31d295c",
+      "media_type": "text/plain",
+      "collector": "synthetic-fixture",
+      "collector_version": "1.0.0"
+    }
+  ],
+  "findings": [
+    {
+      "severity": "high",
+      "title": "Synthetic snapshot-backed observation",
+      "description": "A deterministic synthetic observation.",
+      "evidence_keys": ["homepage"]
+    },
+    {
+      "severity": "medium",
+      "title": "Synthetic unsupported legacy statement",
+      "description": "No exact raw snapshot is available.",
+      "evidence_keys": []
+    }
+  ]
+}
+

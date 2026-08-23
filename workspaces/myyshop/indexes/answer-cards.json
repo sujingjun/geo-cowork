@@ -1,0 +1,20 @@
+{
+  "objects": [
+    {
+      "id": "ANS-MYYSHOP-WHAT-IS-001",
+      "path": "knowledge/answer-cards/ans-myyshop-what-is-001.md",
+      "refs": [
+        "CLM-MYYSHOP-AUDIENCE-001",
+        "CLM-MYYSHOP-LIFECYCLE-SERVICE-001",
+        "EVD-MYYSHOP-LEGACY-DEFINITION-001",
+        "KR-MYYSHOP-DEFINITION-001",
+        "Q-MYYSHOP-WHAT-IS-001"
+      ],
+      "status": "candidate",
+      "updated_at": "2026-08-24T04:00:00.000Z",
+      "version": "1.0.0"
+    }
+  ],
+  "record_type": "answer_card",
+  "schema_version": "1.1.0"
+}

@@ -1,0 +1,18 @@
+{
+  "objects": [
+    {
+      "id": "KR-MYYSHOP-DEFINITION-001",
+      "path": "knowledge/releases/kr-myyshop-definition-001.md",
+      "refs": [
+        "ANS-MYYSHOP-WHAT-IS-001",
+        "CLM-MYYSHOP-AUDIENCE-001",
+        "CLM-MYYSHOP-LIFECYCLE-SERVICE-001"
+      ],
+      "status": "draft",
+      "updated_at": "2026-08-24T04:00:00.000Z",
+      "version": "1.0.0"
+    }
+  ],
+  "record_type": "knowledge_release",
+  "schema_version": "1.1.0"
+}

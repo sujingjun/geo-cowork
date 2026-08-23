@@ -43,7 +43,34 @@
 | 工件 | 位置 | 状态与用途 |
 | --- | --- | --- |
 | 最终产品方案 | [`plans/2026-08-23-geo-cowork-final-product-plan.md`](plans/2026-08-23-geo-cowork-final-product-plan.md) | `approved`；M2—M8 当前 Owner 批准产品基线，覆盖知识治理、Gap 模型、真实消费者平台测试、GEO Cycle、Agent/Skill/Tool 与开源吸收方案 |
-| 当前 M2 Handoff | [`handoff/2026-08-23-m2-contract-provenance-kernel-handoff.md`](handoff/2026-08-23-m2-contract-provenance-kernel-handoff.md) | `approved`；下一执行 Agent 先建立 Contract & Provenance Kernel 的 Gap Review 与 Requirement/PRD/Architecture/Spec/Plan/Task，完成后停在 Owner 批准门 |
+| M2 启动 Handoff | [`handoff/2026-08-23-m2-contract-provenance-kernel-handoff.md`](handoff/2026-08-23-m2-contract-provenance-kernel-handoff.md) | `approved` 历史执行输入；实际结果见 M2 Record |
+
+## M2 Contract & Provenance Kernel（本地开发验收完成）
+
+| 类别 | 工件 | 状态 |
+| --- | --- | --- |
+| Gap Review | [`records/2026-08-23-m2-contract-provenance-gap-review.md`](records/2026-08-23-m2-contract-provenance-gap-review.md) | verified |
+| Requirement | [`requirements/2026-08-23-m2-contract-provenance-kernel.md`](requirements/2026-08-23-m2-contract-provenance-kernel.md) | proposed |
+| PRD | [`prd/2026-08-23-m2-contract-provenance-kernel.md`](prd/2026-08-23-m2-contract-provenance-kernel.md) | proposed |
+| Architecture | [`architecture/2026-08-23-contract-provenance-kernel-architecture.md`](architecture/2026-08-23-contract-provenance-kernel-architecture.md) | proposed |
+| Spec 0003 | [`specs/0003-contract-provenance-kernel.md`](specs/0003-contract-provenance-kernel.md) | proposed；不得由本地测试自行批准 |
+| Plan / Task | [`plans/2026-08-23-m2-contract-provenance-kernel-plan.md`](plans/2026-08-23-m2-contract-provenance-kernel-plan.md) / [`tasks/2026-08-23-m2-contract-provenance-kernel.md`](tasks/2026-08-23-m2-contract-provenance-kernel.md) | proposed / verified |
+| Acceptance Record | [`records/2026-08-24-m2-contract-provenance-kernel-record.md`](records/2026-08-24-m2-contract-provenance-kernel-record.md) | verified；仅限本地源码与 Workspace |
+
+## M3 Knowledge & Query Operating System（本地工程与候选切片验收完成）
+
+| 类别 | 工件 | 状态 |
+| --- | --- | --- |
+| Requirement / PRD / Architecture | [`requirements/2026-08-24-m3-knowledge-query-operating-system.md`](requirements/2026-08-24-m3-knowledge-query-operating-system.md) / [`prd/2026-08-24-m3-knowledge-query-operating-system.md`](prd/2026-08-24-m3-knowledge-query-operating-system.md) / [`architecture/2026-08-24-knowledge-query-operating-system-architecture.md`](architecture/2026-08-24-knowledge-query-operating-system-architecture.md) | proposed；不得由本地验收自行批准 |
+| Spec / Plan / Task | [`specs/0004-knowledge-query-operating-system.md`](specs/0004-knowledge-query-operating-system.md) / [`plans/2026-08-24-m3-knowledge-query-operating-system-plan.md`](plans/2026-08-24-m3-knowledge-query-operating-system-plan.md) / [`tasks/2026-08-24-m3-knowledge-query-operating-system.md`](tasks/2026-08-24-m3-knowledge-query-operating-system.md) | proposed / proposed / verified |
+| Acceptance Record | [`records/2026-08-24-m3-knowledge-query-operating-system-record.md`](records/2026-08-24-m3-knowledge-query-operating-system-record.md) | verified；仅限本地工程与 MyyShop candidate/draft slice |
+| 已执行 Handoff | [`handoff/2026-08-24-m3-knowledge-query-operating-system-handoff.md`](handoff/2026-08-24-m3-knowledge-query-operating-system-handoff.md) | verified；精确新任务创建失败后按 Owner fallback 在原会话收口 |
+
+## M4 Diagnosis, Site & Asset Proposal（待批准启动）
+
+| 类别 | 工件 | 状态 |
+| --- | --- | --- |
+| 启动 Handoff | [`handoff/2026-08-24-m4-diagnosis-site-asset-proposal-handoff.md`](handoff/2026-08-24-m4-diagnosis-site-asset-proposal-handoff.md) | proposed；先建立并批准 M4 SDD，真实诊断仍受 approved Goal、frozen Query Set、published Knowledge Release 门限制 |
 
 ## 历史提案与交接
 
@@ -54,7 +81,7 @@
 | CodeBuddy 移除与 WorkBuddy 切换 Handoff | [`handoff/2026-08-20-milestone-1-hardening-workbuddy-china-handoff.md`](handoff/2026-08-20-milestone-1-hardening-workbuddy-china-handoff.md) | 历史 WorkBuddy 契约跟踪与 M1 收口基线 |
 | 原“Query 与知识” M2 Handoff | [`handoff/2026-08-20-query-and-knowledge-milestone-handoff.md`](handoff/2026-08-20-query-and-knowledge-milestone-handoff.md) | 已被 2026-08-23 产品基线重排；保留历史，不再作为当前 M2 启动指令 |
 
-当前 M2 仍须按 `docs/workflow.md` 建立 Requirement、PRD、Architecture、Spec、Plan 和 Task，并在进入代码实现前获得对应批准。Handoff 不能自行提升 Spec 或 Plan 状态。
+M2/M3 的本地实现与验证已有各自 Record；M4 只从最新 Handoff 进入。Record/Handoff 都不能自行提升 PRD、Spec、业务批准、发布或部署状态。
 
 ## 现有目录
 
@@ -68,6 +95,6 @@
 | [`tasks/`](tasks/2026-08-20-plugin-initialization.md) | 可独立执行、验证和交接的最小工作单元 |
 | [`records/`](records/2026-08-20-plugin-initialization-acceptance.md) | 实际命令、结果、失败、修复与未验证项 |
 | [`wiki/`](wiki/index.md) | 项目知识库导航摘要 |
-| [`handoff/`](handoff/2026-08-23-m2-contract-provenance-kernel-handoff.md) | 跨 Session 或跨 Agent 的继承基线、第一动作和停止条件 |
+| [`handoff/`](handoff/2026-08-24-m4-diagnosis-site-asset-proposal-handoff.md) | 跨 Session 或跨 Agent 的继承基线、第一动作和停止条件 |
 
 其余文档类别（原型、Runbook、Release、复盘和经验）的目录契约与建档规则见 `docs/workflow.md` 第 2 章；各类目录在首次出现 canonical 文档时创建并加入本导航。

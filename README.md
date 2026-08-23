@@ -63,8 +63,13 @@ node plugins/geo-expert/scripts/workspace-validate.mjs --workspace ./workspaces/
 ## 开发与验证
 
 ```bash
-node --test                                              # 单元测试（node:test，零依赖）
-node plugins/geo-expert/scripts/validate-plugin.mjs      # 插件包契约自检
+npm install --ignore-scripts                             # 安装锁定的本地运行依赖
+npm test                                                 # 全量 node:test
+npm run test:m2-contract                                 # M2 专项测试
+npm run test:m3-knowledge-query                          # M3 Knowledge/Query 专项测试
+npm run validate:plugin                                  # 插件包契约自检
+node plugins/geo-expert/scripts/build-index.mjs --workspace workspaces/myyshop --check
+node plugins/geo-expert/scripts/knowledge-query.mjs validate --workspace workspaces/myyshop
 ```
 
 要求 Node.js 20+。协作规则见 `AGENTS.md` 与 `docs/workflow.md`；文档导航见 `docs/README.md`。

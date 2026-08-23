@@ -1,0 +1,27 @@
+MyyShop M3 候选切片的 legacy 草稿快照
+
+采集日期：2026-08-24
+采集方式：本地工作区人工摘录
+
+来源 1：knowledge/02-brand-identity/one-line-definition.md
+Legacy ID：KB-IDENTITY-009
+Legacy 状态：draft
+Legacy 版本：0.1.0
+摘录：MyyShop 是面向全球内容创作者的达人全生命周期服务平台，围绕达人加入、成长、活跃与商业化提供工具、机会和服务。
+待确认：确认“全球”“全生命周期”“工具、机会和服务”的实际覆盖范围。
+
+来源 2：knowledge/10-query-answer-cards/what-is-myyshop.md
+Legacy ID：KB-ANSWER-001
+Legacy 状态：draft
+Legacy 版本：0.1.0
+摘录：MyyShop 是面向全球内容创作者的达人全生命周期服务平台，围绕达人加入、成长、活跃与商业化提供工具、机会和服务。
+待确认：引用前必须确认关联事实、政策和页面已审批。
+
+治理边界：该快照只证明两个 legacy 文件在采集时包含上述草稿文字，不证明文字真实、完整、已审批、可对外发布或已获业务验证。
+
+来源 3：repo://docs/plans/2026-08-23-geo-cowork-final-product-plan.md
+文档状态：approved
+摘录：MyyShop 正在从达人流量变现平台升级为面向全球达人的全生命周期服务容器，目前已提供画像报告、品牌商单和 MyyFinds，并在探索课程、数字代言人、社交涨粉等成长能力或工具。
+风险边界：不得把全生命周期描述成全部服务已经上线；探索能力不得描述为正式上线；不得保证结果；不得描述为 MCN；不得退回单一联盟营销或流量变现定位。
+
+补充治理边界：该产品方案是本仓 M2—M8 的权威产品基线，但本快照仍不替代对应事实负责人对 MyyShop Claim、Evidence、Document 或 Knowledge Release 的逐对象业务批准。

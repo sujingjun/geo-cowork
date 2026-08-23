@@ -13,7 +13,8 @@
 ## 下一动作
 
 1. 确认品牌范围并补充本工作区 `README.md`；
-2. 进入里程碑 2：建立 Query Portfolio 与知识审计（见 geo-cowork 仓库 `docs/handoff/` 最新 Handoff）。
+2. 运行对象校验与空 index 构建；
+3. 经人类确认 Goal 与来源范围后，按最新 Handoff 进入 M3 Knowledge & Query Operating System。
 
 ## 最近运行
 

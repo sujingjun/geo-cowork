@@ -12,6 +12,9 @@ const TEMPLATE_DIR = path.join(PLUGIN_ROOT, 'assets', 'workspace-template');
 export const REQUIRED_DIRS = [
   'queries',
   'knowledge',
+  'evidence',
+  'assets',
+  'indexes',
   'site',
   'reputation',
   'answers',
@@ -25,6 +28,24 @@ export const REQUIRED_DIRS = [
 export const REQUIRED_FILES = ['README.md', 'STATUS.md', 'workspace.json'];
 
 const IDENTITY_FIELDS = ['schema_version', 'workspace_id', 'brand', 'created_at', 'created_by'];
+
+async function readIdentity(file) {
+  let lastError;
+  for (let attempt = 0; attempt < 6; attempt += 1) {
+    try {
+      const parsed = JSON.parse(await readFile(file, 'utf8'));
+      const missing = IDENTITY_FIELDS.filter((field) => !(field in parsed));
+      if (missing.length > 0) throw new Error(`缺少必需字段: ${missing.join(', ')}`);
+      return parsed;
+    } catch (error) {
+      lastError = error;
+      if (attempt < 5) await new Promise((resolve) => setTimeout(resolve, 10));
+    }
+  }
+  const error = new Error(`workspace.json 身份冲突: ${lastError.message}`);
+  error.code = 'IDENTITY_CONFLICT';
+  throw error;
+}
 
 function parseArgs(argv) {
   const args = { workspace: null, brand: null, dryRun: false };
@@ -82,20 +103,7 @@ export async function initWorkspace({ workspace, brand, dryRun = false }) {
 
   if (await exists(wsJsonPath)) {
     // 已存在身份文件：校验必需字段，身份保持不变（Spec 0002 §5.2.4）
-    let parsed;
-    try {
-      parsed = JSON.parse(await readFile(wsJsonPath, 'utf8'));
-    } catch (err) {
-      const e = new Error(`workspace.json 无法解析: ${err.message}`);
-      e.code = 'IDENTITY_CONFLICT';
-      throw e;
-    }
-    const missing = IDENTITY_FIELDS.filter((f) => !(f in parsed));
-    if (missing.length > 0) {
-      const e = new Error(`workspace.json 缺少必需字段: ${missing.join(', ')}`);
-      e.code = 'IDENTITY_CONFLICT';
-      throw e;
-    }
+    const parsed = await readIdentity(wsJsonPath);
     workspaceId = parsed.workspace_id;
     kept.push('workspace.json');
   }
@@ -114,6 +122,27 @@ export async function initWorkspace({ workspace, brand, dryRun = false }) {
 
   await mkdir(root, { recursive: true });
 
+  if (!workspaceId) {
+    const candidateId = generateWorkspaceId();
+    const version = await pluginVersion();
+    const template = await readFile(path.join(TEMPLATE_DIR, 'workspace.json'), 'utf8');
+    const candidate = template
+      .replaceAll('{{BRAND}}', brandName)
+      .replaceAll('{{WORKSPACE_ID}}', candidateId)
+      .replaceAll('{{CREATED_AT}}', new Date().toISOString())
+      .replaceAll('{{PLUGIN_VERSION}}', version);
+    try {
+      await writeFile(wsJsonPath, candidate, { flag: 'wx' });
+      workspaceId = candidateId;
+      created.push('workspace.json');
+    } catch (err) {
+      if (err.code !== 'EEXIST') throw err;
+      const actual = await readIdentity(wsJsonPath);
+      workspaceId = actual.workspace_id;
+      kept.push('workspace.json');
+    }
+  }
+
   for (const dir of REQUIRED_DIRS) {
     if (await exists(path.join(root, dir))) {
       kept.push(`${dir}/`);
@@ -123,8 +152,6 @@ export async function initWorkspace({ workspace, brand, dryRun = false }) {
     }
   }
 
-  if (!workspaceId) workspaceId = generateWorkspaceId();
-
   const replacements = {
     '{{BRAND}}': brandName,
     '{{WORKSPACE_ID}}': workspaceId,
@@ -133,7 +160,7 @@ export async function initWorkspace({ workspace, brand, dryRun = false }) {
   };
 
   for (const file of REQUIRED_FILES) {
-    if (kept.includes(file)) continue; // workspace.json 已存在并保留
+    if (file === 'workspace.json' || kept.includes(file)) continue;
     const target = path.join(root, file);
     const template = await readFile(path.join(TEMPLATE_DIR, file), 'utf8');
     const content = Object.entries(replacements).reduce(

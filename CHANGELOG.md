@@ -1,5 +1,20 @@
 # geo-cowork 变更记录
 
+## 2026-08-24 - M3 Knowledge & Query Operating System
+
+- 新增 M3 Schema、Document/Claim/Evidence/Answer Card/Knowledge Release/Query Set/Evidence Plan/Goal 契约与四个 Knowledge/Query Skills；
+- 新增 create-only propose/assemble、M3 profile、证据充分性建议、发布闭包、关系 trace 与显式 lifecycle gates；
+- 建立 MyyShop “是什么” 的 13 对象 candidate/draft slice、补证计划、技术 Run 与可重建 indexes，保留五条产品风险；
+- 本地 10 项 M3 专项与全量 47 tests 通过；MyyShop 仍无人工批准、frozen Query Set、published Knowledge Release、发布或部署。
+
+## 2026-08-24 - M2 Contract & Provenance Kernel
+
+- 建立 Markdown Object Contract、稳定 ID/version/refs、可重建 indexes 与 legacy knowledge 兼容索引；
+- 建立 Run lifecycle、input supersede、不可覆盖 raw/output artifact 与安全路径边界；
+- 独立实现脱敏 ops-geo legacy audit 迁移语义，不复制无许可证上游代码或真实数据；
+- MyyShop 补齐 Workspace 根身份与 M2 派生 indexes，120 条 legacy knowledge 原文不改；
+- M3 在制检查点后已由同一会话按 Owner fallback 收口；M2 本条目的历史验收范围不因此扩大。
+
 ## 2026-08-20 - 移除 CodeBuddy 适配，切换 WorkBuddy（中国区）专家体系
 
 - 删除 `.codebuddy-plugin/plugin.json` 与仓库根 `.codebuddy-plugin/marketplace.json`；插件版本升至 0.2.0（两 Manifest、两 Marketplace）；

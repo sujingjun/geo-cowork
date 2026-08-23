@@ -37,7 +37,7 @@ description: 幂等初始化并校验本地 GEO 品牌工作区，生成 README�
 3. 执行校验：
 
    ```bash
-   node <plugin-root>/scripts/workspace-validate.mjs --workspace <path>
+   node <plugin-root>/scripts/workspace-validate.mjs --workspace <path> --objects
    ```
 
 4. 向用户汇报：创建了哪些文件、保留了哪些已有文件、`workspace_id`、校验结论。
@@ -46,7 +46,7 @@ description: 幂等初始化并校验本地 GEO 品牌工作区，生成 README�
 
 - init 输出 JSON：`{ workspace, created, kept, workspace_id }`；
 - validate 输出 JSON：`{ workspace, ok, missing, errors }`；
-- 工作区文件：`README.md`、`STATUS.md`、`workspace.json` 及 queries、knowledge、site、reputation、answers、competitors、strategy、execution、runs、cycles 目录。
+- 工作区文件：`README.md`、`STATUS.md`、`workspace.json` 及 queries、knowledge、evidence、assets、indexes、site、reputation、answers、competitors、strategy、execution、runs、cycles 目录。
 
 ## 可做事项
 
@@ -82,7 +82,7 @@ description: 幂等初始化并校验本地 GEO 品牌工作区，生成 README�
 node <plugin-root>/scripts/workspace-init.mjs --workspace ./workspaces/acme --brand Acme
 
 # 校验（也可在工作区内省略 --workspace）
-node <plugin-root>/scripts/workspace-validate.mjs --workspace ./workspaces/acme
+node <plugin-root>/scripts/workspace-validate.mjs --workspace ./workspaces/acme --objects
 
 # 预演，不写文件
 node <plugin-root>/scripts/workspace-init.mjs --workspace ./workspaces/acme --dry-run

@@ -1,0 +1,18 @@
+{
+  "objects": [
+    {
+      "id": "EPL-MYYSHOP-DEFINITION-001",
+      "path": "evidence/plans/epl-myyshop-definition-001.md",
+      "refs": [
+        "CLM-MYYSHOP-AUDIENCE-001",
+        "CLM-MYYSHOP-LIFECYCLE-SERVICE-001",
+        "Q-MYYSHOP-WHAT-IS-001"
+      ],
+      "status": "draft",
+      "updated_at": "2026-08-24T04:00:00.000Z",
+      "version": "1.0.0"
+    }
+  ],
+  "record_type": "evidence_plan",
+  "schema_version": "1.1.0"
+}

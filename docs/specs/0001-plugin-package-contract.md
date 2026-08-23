@@ -23,7 +23,7 @@ plugins/geo-expert/
 ├── README.md                       # 插件说明与安装方式
 ├── CHANGELOG.md                    # 插件版本记录
 ├── skills/<skill-name>/SKILL.md    # 技能（Frontmatter: name, description）
-├── scripts/*.mjs                   # 确定性脚本（Node 20+，零依赖）
+├── scripts/*.mjs                   # 确定性脚本（Node 20+；依赖由仓库根 lock 固定）
 ├── schemas/                        # 机器可读契约（里程碑 1 可为空，不提交空目录）
 └── assets/workspace-template/      # 工作区模板
 ```
@@ -119,4 +119,5 @@ Manifest 只含宿主元数据与组件路径。出现以下任一情况即为�
 ## 7. 非功能要求
 
 - `scripts/validate-plugin.mjs` 在仓库根以 `node plugins/geo-expert/scripts/validate-plugin.mjs` 运行，退出码 0 表示合规；
+- M2 起允许最终产品方案点名的 `gray-matter`、Ajv；版本必须由仓库根 `package-lock.json` 固定，业务脚本不得新增未立项依赖；
 - 校验不依赖网络与宿主 CLI；宿主官方校验（`claude plugin validate`、Codex 市场添加）作为补充层。

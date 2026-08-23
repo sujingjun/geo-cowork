@@ -1,0 +1,30 @@
+{
+  "objects": [
+    {
+      "id": "CLM-MYYSHOP-AUDIENCE-001",
+      "path": "knowledge/claims/clm-myyshop-audience-001.md",
+      "refs": [
+        "DOC-MYYSHOP-WHAT-IS-001",
+        "EVD-MYYSHOP-LEGACY-DEFINITION-001",
+        "KR-MYYSHOP-DEFINITION-001"
+      ],
+      "status": "candidate",
+      "updated_at": "2026-08-24T04:00:00.000Z",
+      "version": "1.0.0"
+    },
+    {
+      "id": "CLM-MYYSHOP-LIFECYCLE-SERVICE-001",
+      "path": "knowledge/claims/clm-myyshop-lifecycle-service-001.md",
+      "refs": [
+        "DOC-MYYSHOP-WHAT-IS-001",
+        "EVD-MYYSHOP-LEGACY-DEFINITION-001",
+        "KR-MYYSHOP-DEFINITION-001"
+      ],
+      "status": "candidate",
+      "updated_at": "2026-08-24T04:00:00.000Z",
+      "version": "1.0.0"
+    }
+  ],
+  "record_type": "claim",
+  "schema_version": "1.0.0"
+}

@@ -1,5 +1,22 @@
 # geo-expert 变更记录
 
+## 0.3.0 — 2026-08-24（M2 Contract Kernel + M3 Knowledge/Query）
+
+### M3 Knowledge & Query Operating System
+
+- 新增 `geo-query`、`geo-knowledge`、`geo-evidence`、`geo-knowledge-cycle`；
+- 新增 M3 对象 Schema/模板、Knowledge/Query CLI、M3 validator 与 lifecycle-aware trace；
+- propose/assemble 只创建 candidate/draft，对自动批准、版本漂移、路径/ID 冲突与不完整发布闭包明确失败；
+- 本地工程和 MyyShop candidate/draft slice 已验证；不代表业务批准、发布或部署。
+
+### M2 Contract & Provenance Kernel
+
+- 新增 Markdown Object Schema、gray-matter/Ajv 校验、安全路径与 Evidence checksum；
+- 新增确定性 indexes/refs、Run lifecycle/supersede、不可覆盖 artifact；
+- 新增脱敏 legacy ops-geo Source/Evidence/Finding 迁移器和合成 Fixture；
+- 工作区模板增加 `evidence/`、`assets/`、`indexes/`，修复并发初始化身份竞态；
+- M3 Skills 与语义实现随后在同一 0.3.0 工作树完成独立本地验收；本条目的 M2 验收结论仍保持历史范围。
+
 ## 0.2.0 — 2026-08-20（移除 CodeBuddy 适配，切换 WorkBuddy 中国区定位）
 
 - 移除 `.codebuddy-plugin/plugin.json` 与仓库根 `.codebuddy-plugin/marketplace.json`；

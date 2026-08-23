@@ -5,6 +5,7 @@
 import { readFile, readdir, stat } from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { parseMarkdownObjectText } from './lib/object-contract.mjs';
 
 const PLUGIN_ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const REPO_ROOT = path.resolve(PLUGIN_ROOT, '..', '..');
@@ -19,6 +20,10 @@ const MARKETPLACES = [
 
 const violations = [];
 const checked = [];
+const REQUIRED_SKILL_HEADINGS = [
+  '触发场景', '输入', '开工前必读', '步骤', '输出', '可做事项',
+  '禁止事项', '失败与停止条件', '验收方式', '示例',
+];
 
 function fail(message) {
   violations.push(message);
@@ -103,6 +108,9 @@ async function checkSkills() {
     if (!fm.name) fail(`${rel}: Frontmatter 缺少 name`);
     else if (fm.name !== entry) fail(`${rel}: name "${fm.name}" 与目录名 "${entry}" 不一致`);
     if (!fm.description) fail(`${rel}: Frontmatter 缺少 description`);
+    for (const heading of REQUIRED_SKILL_HEADINGS) {
+      if (!text.includes(`## ${heading}`)) fail(`${rel}: 缺少正文小节 ${heading}`);
+    }
   }
 }
 
@@ -142,12 +150,70 @@ async function checkTemplates() {
       fail(`工作区模板缺失: ${path.relative(REPO_ROOT, p)}`);
     }
   }
+  for (const file of [
+    'query.md', 'claim.md', 'source.md', 'evidence.md',
+    'finding.md', 'asset.md', 'run.md', 'cycle.md',
+    'document.md', 'answer-card.md', 'knowledge-release.md',
+    'query-set.md', 'evidence-plan.md', 'perception-goal.md',
+  ]) {
+    const p = path.join(PLUGIN_ROOT, 'assets', 'object-templates', file);
+    try {
+      parseMarkdownObjectText(await readFile(p, 'utf8'), {
+        path: path.relative(REPO_ROOT, p),
+      });
+      checked.push(path.relative(REPO_ROOT, p));
+    } catch (error) {
+      fail(`对象模板无效: ${path.relative(REPO_ROOT, p)} (${error.code ?? error.message})`);
+    }
+  }
+}
+
+async function checkRuntime() {
+  for (const file of [
+    'common-object.schema.json', 'm2-record-types.schema.json', 'm3-record-types.schema.json',
+  ]) {
+    const p = path.join(PLUGIN_ROOT, 'schemas', file);
+    const data = await readJson(p);
+    if (data) checked.push(path.relative(REPO_ROOT, p));
+  }
+  for (const file of [
+    'build-index.mjs', 'run-lifecycle.mjs', 'legacy-ops-geo-import.mjs',
+    'knowledge-query.mjs', 'workspace-init.mjs', 'workspace-validate.mjs',
+  ]) {
+    const p = path.join(PLUGIN_ROOT, 'scripts', file);
+    try {
+      await readFile(p, 'utf8');
+      checked.push(path.relative(REPO_ROOT, p));
+    } catch {
+      fail(`运行脚本缺失: ${path.relative(REPO_ROOT, p)}`);
+    }
+  }
+  for (const file of ['knowledge-query.mjs', 'knowledge-trace.mjs']) {
+    const p = path.join(PLUGIN_ROOT, 'scripts', 'lib', file);
+    try {
+      await readFile(p, 'utf8');
+      checked.push(path.relative(REPO_ROOT, p));
+    } catch {
+      fail(`运行库缺失: ${path.relative(REPO_ROOT, p)}`);
+    }
+  }
+  const rootPackage = await readJson(path.join(REPO_ROOT, 'package.json'));
+  if (rootPackage) {
+    if (rootPackage.dependencies?.['gray-matter'] !== '4.0.3') {
+      fail('package.json: gray-matter 必须锁定为 4.0.3');
+    }
+    if (rootPackage.dependencies?.ajv !== '8.20.0') {
+      fail('package.json: ajv 必须锁定为 8.20.0');
+    }
+    checked.push('package.json');
+  }
 }
 
 await checkManifests();
 await checkSkills();
 await checkMarketplaces();
 await checkTemplates();
+await checkRuntime();
 
 if (violations.length > 0) {
   console.error(JSON.stringify({ ok: false, violations }, null, 2));

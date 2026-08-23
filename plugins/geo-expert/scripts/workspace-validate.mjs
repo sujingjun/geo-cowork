@@ -35,9 +35,11 @@ async function findUp(start) {
   }
 }
 
-export async function validateWorkspace(root) {
+export async function validateWorkspace(root, { objects = false } = {}) {
   const missing = [];
   const errors = [];
+  let objectErrors = [];
+  let warnings = [];
 
   for (const dir of REQUIRED_DIRS) {
     if (!(await isDir(path.join(root, dir)))) missing.push(`${dir}/`);
@@ -65,17 +67,39 @@ export async function validateWorkspace(root) {
     }
   }
 
-  return { workspace: root, ok: missing.length === 0 && errors.length === 0, missing, errors };
+  if (objects) {
+    try {
+      const { buildIndexes } = await import('./lib/index-builder.mjs');
+      const result = await buildIndexes({ workspace: root, write: false });
+      warnings = result.warnings;
+    } catch (error) {
+      objectErrors = error.diagnostics ?? [{
+        code: error.code ?? 'OBJECT_VALIDATION_FAILED',
+        message: error.message,
+      }];
+    }
+  }
+
+  return {
+    workspace: root,
+    ok: missing.length === 0 && errors.length === 0 && objectErrors.length === 0,
+    missing,
+    errors,
+    ...(objects ? { object_errors: objectErrors, warnings } : {}),
+  };
 }
 
 async function main() {
   const argv = process.argv.slice(2);
   let workspace = null;
+  let objects = false;
   for (let i = 0; i < argv.length; i += 1) {
     if (argv[i] === '--workspace') {
       workspace = argv[++i] ?? null;
+    } else if (argv[i] === '--objects') {
+      objects = true;
     } else if (argv[i] === '--help' || argv[i] === '-h') {
-      console.log('用法: node workspace-validate.mjs [--workspace <path>]');
+      console.log('用法: node workspace-validate.mjs [--workspace <path>] [--objects]');
       process.exit(0);
     } else {
       console.error(JSON.stringify({ error: `未知参数: ${argv[i]}` }));
@@ -98,7 +122,7 @@ async function main() {
     }
   }
 
-  const result = await validateWorkspace(root);
+  const result = await validateWorkspace(root, { objects });
   console.log(JSON.stringify(result, null, 2));
   process.exit(result.ok ? 0 : 1);
 }

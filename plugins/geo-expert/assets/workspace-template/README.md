@@ -14,6 +14,9 @@
 | --- | --- |
 | `queries/` | 问题候选、正式集合、聚类和覆盖 |
 | `knowledge/` | 知识、Evidence、答案卡和冲突 |
+| `evidence/` | Source、Evidence、snapshot 与 Evidence Plan |
+| `assets/` | Own/External Asset registry |
+| `indexes/` | 从 Markdown 删除后可重建的 JSON 派生索引 |
 | `site/` | 资产、快照、审计和候选变更 |
 | `reputation/` | 外部观察、主题和事实错误 |
 | `answers/` | 固定 Query Set、原始答案和人工 Review |
@@ -26,7 +29,7 @@
 ## 使用方式
 
 1. Agent 开工时读取本文件、`STATUS.md` 和最近一次 `runs/` 记录；
-2. 通过 geo-expert 插件的 Skills 执行 GEO 流程；
+2. 先运行 `workspace-validate.mjs --objects` 与 `build-index.mjs --check`，再通过 geo-expert 插件的 Skills 执行 GEO 流程；
 3. 结束时更新 `STATUS.md`、本次 `runs/` 记录和相关业务工件。
 
 ## 边界

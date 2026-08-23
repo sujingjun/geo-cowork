@@ -26,6 +26,9 @@ STATUS.md        当前阶段、阻塞、下一动作
 workspace.json   稳定机器身份与 Schema 版本
 queries/         问题候选、正式集合、聚类和覆盖
 knowledge/       知识、Evidence、答案卡和冲突
+evidence/        Source、Evidence、snapshot 与证据计划
+assets/          Own/External Asset registry
+indexes/         可删除重建的 JSON 派生索引
 site/            资产、快照、审计和候选变更
 reputation/      外部观察、主题和事实错误
 answers/         固定 Query Set、原始答案和人工 Review
@@ -36,7 +39,7 @@ runs/            每次 Agent 运行
 cycles/          每个 GEO 运营周期
 ```
 
-`brand/` 目录在里程碑 2 引入，不属于里程碑 1 必需集合。
+`evidence/`、`assets/`、`indexes/` 由 M2 追加到必需集合；保留所有 M1 目录，不做破坏性迁移。
 
 ## 4. workspace.json Schema
 
@@ -92,7 +95,7 @@ cycles/          每个 GEO 运营周期
 
 ### 6.1 输入
 
-`--workspace <path>`；缺省时从当前目录向上查找含 `workspace.json` 的目录，找不到则报错。
+`--workspace <path>`；缺省时从当前目录向上查找含 `workspace.json` 的目录，找不到则报错。可选 `--objects` 追加公共对象、checksum、refs 与 M3 语义校验。
 
 ### 6.2 规则
 
