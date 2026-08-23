@@ -1,10 +1,10 @@
 ---
 id: CLM-MYYSHOP-AUDIENCE-001
 record_type: claim
-status: candidate
-version: 1.0.0
-created_at: 2026-08-24T12:00:00+08:00
-updated_at: 2026-08-24T12:00:00+08:00
+status: published
+version: 1.0.1
+created_at: 2026-08-24T01:13:17+08:00
+updated_at: 2026-08-24T06:46:23+08:00
 title: MyyShop 面向全球内容创作者
 statement: MyyShop 面向全球内容创作者。
 risk_type: ordinary_fact
@@ -21,8 +21,11 @@ evidence_sufficiency:
     - first_party
 release_refs:
   - KR-MYYSHOP-DEFINITION-001
+approval:
+  approved_by: MyyShop Owner
+  approved_at: 2026-08-24T06:46:23+08:00
+  decision_ref: workspace://cycles/preparation/decisions/2026-08-24-m3-business-objects-approved.md
 ---
 # MyyShop 面向全球内容创作者
 
-该 Claim 仅来自 legacy 草稿快照，缺少已批准的一方地区与受众口径，因此保持 `candidate`。
-
+Owner 已批准该 Claim 进入本地正式 Knowledge Release；缺少 first-party Evidence 的 warning 与 Scope 继续保留，不构成外部发布或效果保证。

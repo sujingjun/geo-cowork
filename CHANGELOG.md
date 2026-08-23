@@ -4,8 +4,9 @@
 
 - 新增 M3 Schema、Document/Claim/Evidence/Answer Card/Knowledge Release/Query Set/Evidence Plan/Goal 契约与四个 Knowledge/Query Skills；
 - 新增 create-only propose/assemble、M3 profile、证据充分性建议、发布闭包、关系 trace 与显式 lifecycle gates；
-- 建立 MyyShop “是什么” 的 13 对象 candidate/draft slice、补证计划、技术 Run 与可重建 indexes，保留五条产品风险；
-- 本地 10 项 M3 专项与全量 47 tests 通过；MyyShop 仍无人工批准、frozen Query Set、published Knowledge Release、发布或部署。
+- 建立 MyyShop “是什么” 的 13 对象关系链、补证计划、技术 Run 与可重建 indexes，保留五条产品风险；
+- Owner 后续批准全部 M3 业务对象：Query Set 已冻结，本地 Knowledge Release 已 `published/ready`，trace 为 `lifecycle_ready:true`；两条证据不足 warning 与外部发布边界继续保留；
+- 本地 10 项 M3 专项与全量 47 tests 通过；没有真实 M4 诊断、外部发布或部署。
 
 ## 2026-08-24 - M2 Contract & Provenance Kernel
 

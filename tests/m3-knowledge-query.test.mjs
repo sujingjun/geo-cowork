@@ -192,10 +192,12 @@ test('formal/frozen/published 合成链通过，trace 可达 Source/Evidence/Doc
   const publishedClaim = {
     id: 'CLM-TEST-001', record_type: 'claim', status: 'published', version: '1.0.0',
     created_at: NOW, updated_at: NOW, title: 'Published claim',
-    statement: 'Synthetic Brand provides a documented service.', risk_type: 'ordinary_fact',
+    statement: 'Synthetic Brand provides a documented service.', risk_type: 'capability_fact',
     risk_level: 'low', evidence_refs: ['EVD-TEST-001'], document_refs: ['DOC-TEST-001'],
     scope: 'Synthetic test only',
-    evidence_sufficiency: { status: 'sufficient', rule_version: 'm3-evidence-sufficiency-v1', missing: [] },
+    evidence_sufficiency: {
+      status: 'insufficient', rule_version: 'm3-evidence-sufficiency-v1', missing: ['data_or_case'],
+    },
     release_refs: ['KR-TEST-001'], approval: APPROVAL,
   };
   await writeObject(root, 'knowledge/claims/claim.md', publishedClaim);
@@ -226,6 +228,7 @@ test('formal/frozen/published 合成链通过，trace 可达 Source/Evidence/Doc
 
   const validation = await validateKnowledgeWorkspace({ workspace: root });
   assert.deepEqual(validation.errors, []);
+  assert.ok(validation.warnings.some((warning) => warning.code === 'EVIDENCE_INSUFFICIENT'));
   const trace = await traceQuery({ workspace: root, queryId: 'Q-TEST-001' });
   assert.deepEqual(trace.answer_card_refs, ['ANS-TEST-001']);
   assert.deepEqual(trace.claim_refs, ['CLM-TEST-001']);

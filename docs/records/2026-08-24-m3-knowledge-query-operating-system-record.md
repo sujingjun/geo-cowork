@@ -14,6 +14,8 @@ scope: M3 Schema、Tool、Skills、合成发布门、MyyShop candidate/draft sli
 
 # M3 Knowledge & Query Operating System 验收记录
 
+> 后续状态：本 Record 固定记录 candidate/draft 验收检查点。Owner 随后已明确批准全部 M3 业务对象；当前状态、版本、warnings 与验证结果见 [`2026-08-24-m3-business-object-approval-record.md`](2026-08-24-m3-business-object-approval-record.md)，不得继续以本 Record 的候选状态表代表当前 Workspace。
+
 ## 1. 验收结论
 
 M3 的本地工程门和 MyyShop 最窄候选闭环已通过：六类 M3 对象、Query/Claim/Evidence 扩展、四个 Skills、create-only propose/assemble、状态与批准前置校验、证据充分性建议、版本 pin、关系追溯与生命周期 gate 均有实际测试或 Workspace 实例证据。
@@ -129,4 +131,3 @@ M3 实现范围：
 ## 9. Git 与交付状态
 
 所有结果保留在 `/Users/sujingjun/geo-cowork` 的 `main` 脏工作树；未执行任何 Git 写入远端或不可逆清理。下一里程碑只以 `docs/handoff/2026-08-24-m4-diagnosis-site-asset-proposal-handoff.md` 为交接入口，并仍受上述人工门限制。
-

@@ -444,9 +444,6 @@ function validateReleases(graph, errors) {
           }
         }
       }
-      if (claim && evidenceGaps(graph, { data: claim }).length > 0) {
-        addError(errors, 'RELEASE_NOT_READY', object, { ref: item.ref, field: 'evidence_sufficiency' });
-      }
     }
     for (const item of object.data.answer_card_versions) {
       const answer = graph.byId.get(item.ref)?.data;

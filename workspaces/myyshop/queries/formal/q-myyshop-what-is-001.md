@@ -1,10 +1,10 @@
 ---
 id: Q-MYYSHOP-WHAT-IS-001
 record_type: query
-status: candidate
-version: 1.0.0
-created_at: 2026-08-24T12:00:00+08:00
-updated_at: 2026-08-24T12:00:00+08:00
+status: formal
+version: 1.0.1
+created_at: 2026-08-24T01:13:17+08:00
+updated_at: 2026-08-24T06:46:23+08:00
 title: MyyShop 是什么
 query_text: MyyShop 是什么？
 language: zh-CN
@@ -19,7 +19,12 @@ discovery_source_refs:
 legacy_refs:
   - Q-IDENTITY-009
   - Q-ANSWER-001
+approval:
+  approved_by: MyyShop Owner
+  approved_at: 2026-08-24T06:46:23+08:00
+  decision_ref: workspace://cycles/preparation/decisions/2026-08-24-m3-business-objects-approved.md
 ---
 # MyyShop 是什么
 
-该 Query 来自两个 legacy 草稿中的问题映射，当前保持 `candidate`，未进入 formal 集合。
+Owner 已批准该 Query 进入 formal 集合；Query Set 以版本与内容哈希冻结。
+

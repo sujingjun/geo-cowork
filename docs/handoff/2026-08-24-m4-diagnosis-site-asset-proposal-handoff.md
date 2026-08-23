@@ -3,10 +3,11 @@ title: M4 Diagnosis, Site & Asset Proposal Handoff
 status: proposed
 created: 2026-08-24
 working_directory: /Users/sujingjun/geo-cowork
-baseline: main @ 4f4a1a831ca05719b1d3ff0a3e5519f3acc31fbd with uncommitted M2/M3 changes
+baseline: main @ 7de1e7b0cc475bd9ae967386598d09adaf2f4949 with uncommitted M3 business approval transition
 source:
   - docs/plans/2026-08-23-geo-cowork-final-product-plan.md
   - docs/records/2026-08-24-m3-knowledge-query-operating-system-record.md
+  - docs/records/2026-08-24-m3-business-object-approval-record.md
   - docs/specs/0004-knowledge-query-operating-system.md
 scope: M4 SDD 启动、诊断/站点/资产建议提案边界与真实业务输入门
 ---
@@ -19,14 +20,14 @@ scope: M4 SDD 启动、诊断/站点/资产建议提案边界与真实业务输�
 
 ## 2. 新会话与同环境硬门
 
-此前精确 `gpt-5.5-sol-max`、标准速度的新任务创建被当前任务接口拒绝，未产生新任务。自动创建路径当前为明确阻塞；只有用户手工打开且系统实际确认满足精确配置的新会话，或 Owner 另行修改硬门，才可继续。不得由 Agent 自选替代模型。下一次若再次移交新任务：
+此前按用户要求创建精确 `gpt5.5-sol-max`、标准速度的新任务时，任务接口以模型标签 `gpt-5.5-sol-max` 返回参数校验失败，未产生新任务。自动创建路径当前为明确阻塞；只有用户手工打开且系统实际确认满足精确配置的新会话，或 Owner 另行修改硬门，才可继续。不得由 Agent 自选替代模型。下一次若再次移交新任务：
 
 - 必须由系统实际确认精确模型/速度，不接受近似、别名推断或静默降级；
 - 必须打开 `/Users/sujingjun/geo-cowork` 当前 `main` 脏工作树，不新建 worktree、不切换到干净 checkout；
-- 必须看到 HEAD `4f4a1a831ca05719b1d3ff0a3e5519f3acc31fbd` 与本 Handoff、M2/M3 全部未提交文件；
+- 必须看到 HEAD `7de1e7b0cc475bd9ae967386598d09adaf2f4949`，并保留本 Handoff 与全部未提交的 M3 业务批准变更；
 - 先执行只读预检，任一项不一致即停止写入并向 Owner 报告。
 
-当前接口无法满足精确配置时，M4 执行状态保持 blocked；Handoff 交付完成不等于 M4 已获启动条件。
+当前接口无法满足精确配置时，M4 执行状态保持 blocked。M3 业务输入门已通过，但不解除新会话环境、M4 SDD 批准与真实采集授权门；Handoff 交付完成不等于 M4 已获启动条件。
 
 建议只读预检：
 
@@ -42,56 +43,66 @@ npm run test:m2-contract
 npm run test:m3-knowledge-query
 ```
 
-除本 Handoff 自身外，当前 M2/M3 脏工作树必须通过以下冻结指纹；它同时检查 tracked 修改和逐文件展开的 untracked 内容。预期路径数与聚合 SHA 见本节末尾，任一不一致都要停止：
+除本 Handoff 自身外，当前 M3 业务批准脏工作树必须通过以下冻结指纹；它同时记录 Git 状态、tracked 删除和逐文件展开的 untracked 内容。预期路径数与聚合 SHA 见本节末尾，任一不一致都要停止：
 
 ```bash
 set -o pipefail
 git status --porcelain=v1 -uall \
-  | sed -E 's/^.. //' \
-  | grep -v '^docs/handoff/2026-08-24-m4-diagnosis-site-asset-proposal-handoff.md$' \
+  | grep -v '^.. docs/handoff/2026-08-24-m4-diagnosis-site-asset-proposal-handoff.md$' \
+  | wc -l \
+  | tr -d ' '
+
+git status --porcelain=v1 -uall \
+  | grep -v '^.. docs/handoff/2026-08-24-m4-diagnosis-site-asset-proposal-handoff.md$' \
   | LC_ALL=C sort \
-  | while IFS= read -r file; do
-      test -f "$file" || exit 1
-      printf '%s\0' "$file"
-      shasum -a 256 "$file" | awk '{print $1}'
+  | while IFS= read -r entry; do
+      entry_state=$(printf '%s' "$entry" | cut -c1-2)
+      file=$(printf '%s' "$entry" | cut -c4-)
+      printf '%s\0%s\0' "$entry_state" "$file"
+      if test -f "$file"; then
+        shasum -a 256 "$file" | awk '{print $1}'
+      else
+        printf 'MISSING\n'
+      fi
     done \
   | shasum -a 256
 ```
 
-- 预期路径数：`125`
-- 预期聚合 SHA：`21eae73d14cd22103b1f50343c067e5304535cf18c0422ee8ec8e8bef84ad6b1`
+- 预期路径数：`40`
+- 预期聚合 SHA：`79c5d5a90f7cef26efd794cb926e2b9e876cd52e0e57ab51d43df4e2a3f4aaac`
 - `package-lock.json` SHA：`8b94eb852ca87fb388da6c7ff1ab7dcd7bbc0dd89880491b99fb57b71547eac8`
-- 另行核验 MyyShop index aggregate 与 legacy current/HEAD aggregate，以 M3 Record 的命令与期望值为准。
+- 另行核验 MyyShop index aggregate 与 legacy current/HEAD aggregate，以 M3 业务对象批准 Record 的命令与期望值为准。
 
 ## 3. 已验证、可继承的本地事实
 
-以 M3 Record 为准：
+以 M3 工程 Record 与后续业务对象批准 Record 为准：
 
 - M2 专项 25 tests、M3 专项 10 tests、全量 47 tests 通过；
 - 插件自检 38 项通过；MyyShop object validator 通过；
 - 13 个 canonical 对象与 120 个 legacy entries 可重建为 15 个确定性 indexes；
 - `Q-MYYSHOP-WHAT-IS-001` 的关系 trace 可到 Goal/Set/Answer/Claims/Evidence/Sources/Document/Release；
-- trace 明确返回 `lifecycle_ready:false` 与 9 个 gate；
-- 两条 Claim 的 Evidence Sufficiency 均不足；
+- Owner 已批准全部 M3 业务对象，trace 返回 `lifecycle_ready:true` 与 `gates:[]`；
+- 两条 Claim 的 Evidence Sufficiency 仍不足，validator 保留两条 warning；Owner 的内部采用决定没有改写证据类别；
 - 120 条 legacy knowledge 与 HEAD 原始字节一致；
-- 没有 commit、push、PR、真实采集、业务批准、发布或部署。
+- 前序 M2/M3 已由用户提交并推送为 `7de1e7b`；本轮批准变更尚未提交，Agent 没有执行 commit、push、PR、真实采集、外部发布或部署。
 
-## 4. 真实 M4 输入门尚未通过
+## 4. M3 业务输入门已通过；M4 启动门仍未通过
 
-下列对象是准备材料，不是可启动真实 GEO 诊断的批准输入：
+下列对象已经形成可追溯的 M3 业务输入闭包：
 
-| 对象 | 当前状态 | 进入真实 M4 前至少需要 |
+| 对象 | 当前状态 | 继续保留的边界 |
 | --- | --- | --- |
-| `GOAL-MYYSHOP-DEFINITION-001` | candidate | Owner 可追溯批准，并进入 approved/active |
-| `Q-MYYSHOP-WHAT-IS-001` | candidate | 人工确认语义、来源与优先级后成为 formal |
-| `QS-MYYSHOP-DEFINITION-001` | draft | formal Query、精确版本、内容哈希、freeze metadata 与人工 approval |
-| `EVD-MYYSHOP-LEGACY-DEFINITION-001` | candidate | 足够的一方事实/数据或案例 Evidence；当前 legacy/product-plan snapshot 不够 |
-| `DOC-MYYSHOP-WHAT-IS-001` | draft | 事实 Owner 审核范围与来源后批准 |
-| 两个 `CLM-*` | candidate/insufficient | 补证、review、approval；不得跨门宣称 published |
-| `ANS-MYYSHOP-WHAT-IS-001` | candidate | formal Query、approved Claims、人工批准 |
-| `KR-MYYSHOP-DEFINITION-001` | draft/incomplete | approved 闭包、`readiness:ready`、人工发布决定 |
+| `GOAL-MYYSHOP-DEFINITION-001` | approved 1.0.1 | 尚未启动 active Cycle；M4 SDD 与真实执行另设门 |
+| `Q-MYYSHOP-WHAT-IS-001` | formal 1.0.1 | 文本或语义变化必须新版本并重冻 Query Set |
+| `QS-MYYSHOP-DEFINITION-001` | frozen 1.0.1 | pin Query 1.0.1；内容哈希和 freeze metadata 已记录 |
+| `EVD-MYYSHOP-LEGACY-DEFINITION-001` | approved 1.0.1 | 仍为 `legacy_draft`；不足以伪装 first-party/data/case Evidence |
+| `DOC-MYYSHOP-WHAT-IS-001` | approved 1.0.1 | Scope 与未决补证事项继续有效 |
+| 两个 `CLM-*` | published 1.0.1 / insufficient | 仅进入内部 KR；两条证据不足 warning 保留 |
+| `ANS-MYYSHOP-WHAT-IS-001` | published 1.0.1 | limitations 与 forbidden statements 继续有效 |
+| `KR-MYYSHOP-DEFINITION-001` | published/ready 1.0.1 | `release_version:1.0.0`；不是外部发布证明 |
+| `EPL-MYYSHOP-DEFINITION-001` | active 1.0.1 | 只表示补证计划已接受，不表示材料已提供 |
 
-只有 approved/active Goal、formal Query、frozen Query Set 和 published Knowledge Release 的一致版本同时成立，才具备真实 M4 基线诊断资格。Agent 不得代替 Owner 写 `approval` 或提升状态。
+approved Goal、formal Query、frozen Query Set 与 published Knowledge Release 的一致版本已经成立，因此 M3 业务输入门通过。进入真实 M4 仍必须先满足第 2 节精确会话/同环境硬门，建立并获批第 5 节 SDD 工件，并对具体站点、账号、API 与外部写入取得当次授权。Agent 不得把本次 M3 批准扩张为 M4 方案批准或真实采集授权。
 
 ## 5. M4 SDD 必须先建立
 
@@ -140,7 +151,7 @@ git status --porcelain=v1 -uall \
 - 创建真实业务 Finding、Gap、Asset 定论或把候选内容写入外部系统；
 - 调用付费模型/第三方 API、自动发布、CMS 写入、社区运营；
 - 把 M3 产品方案 Source 当 approved business Evidence；
-- 自行批准 M4 PRD/Spec、MyyShop 对象或发布决定；
+- 自行批准 M4 PRD/Spec、擅自变更已批准 MyyShop 对象或作出外部发布决定；
 - commit、push、PR、merge、部署或发布。
 
 ## 8. 已知设计限制
@@ -155,7 +166,7 @@ M4 Record 至少应分别证明：
 
 - Schema/Tool 正常、非法、边界、路径、checksum、refs、幂等与故障恢复测试；
 - 合成 Site/Asset/Gap Fixture 的确定性结果，不含虚假真实结论；
-- 若 Owner 之后批准真实 MyyShop 输入，真实诊断的每条 Finding/Evidence/Asset trace；
+- 基于已批准 M3 输入开展真实诊断时，每条 Finding/Evidence/Asset trace 与对应采集授权；
 - suggestion、Adoption、实际发布、Technical Retest 与业务观察仍为分离状态；
 - M0—M3 全量回归、插件自检、Workspace/index 确定性和 legacy 不变。
 

@@ -12,7 +12,7 @@
 | `geo-evidence` | Source、Evidence、Evidence Plan 与 legacy import（M3 本地工程已验收） |
 | `geo-knowledge-cycle` | M3 编排、关系 trace 与人工生命周期门禁（M3 本地工程已验收） |
 
-当前产品与里程碑基线见 `docs/plans/2026-08-23-geo-cowork-final-product-plan.md`。0.3.0 已完成 M2 内核与 M3 本地工程/candidate slice 验收；这不表示 MyyShop 业务对象已批准、Query Set 已冻结或 Knowledge Release 已发布。
+当前产品与里程碑基线见 `docs/plans/2026-08-23-geo-cowork-final-product-plan.md`。0.3.0 已完成 M2 内核与 M3 本地工程验收；MyyShop Owner 后续批准了 M3 业务对象、冻结 Query Set 并形成内部 Knowledge Release。该内部 `published` 状态不表示任何外部内容、插件版本或生产环境已经发布。
 
 ## 结构
 
@@ -41,4 +41,4 @@ npm run validate:plugin
 
 - 工作区位于插件目录之外；插件不向安装目录或宿主缓存写业务文件；
 - 不自动批准知识、不自动发布、不写 CRM、不连接云端 geo-agents；
-- M2/M3 验收只覆盖本地源码与 Workspace；安装缓存中的依赖安装、跨宿主复验、业务批准与发布不在本次验收范围。
+- M2/M3 工程验收只覆盖本地源码与 Workspace；MyyShop 业务批准由 Owner 的独立决定记录证明。安装缓存依赖、跨宿主复验、外部发布与部署仍不在本次验收范围。

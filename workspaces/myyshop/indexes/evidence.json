@@ -9,9 +9,9 @@
         "SRC-MYYSHOP-FINAL-PRODUCT-PLAN-001",
         "SRC-MYYSHOP-LEGACY-KNOWLEDGE-001"
       ],
-      "status": "candidate",
-      "updated_at": "2026-08-24T04:00:00.000Z",
-      "version": "1.0.0"
+      "status": "approved",
+      "updated_at": "2026-08-23T22:46:23.000Z",
+      "version": "1.0.1"
     }
   ],
   "record_type": "evidence",

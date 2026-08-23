@@ -5,8 +5,8 @@
 ## 当前范围
 
 - M2 为现有 120 条 legacy knowledge 建立兼容索引，不改写原文，也不把它们自动转换成已批准 Claim 或 Evidence。
-- M3 已建立 “MyyShop 是什么” 的最窄 candidate/draft 关系链、补证计划与技术 Run；关系 trace 完整但 `lifecycle_ready:false`。
-- 任何 `approved/formal/frozen/published` 状态都需要可追溯的人类决定；当前 Goal/Query/Evidence/Claims/Answer 仍为 candidate，Document/Set/Release/Plan 仍为 draft。
+- M3 已建立 “MyyShop 是什么” 的最窄关系链、补证计划与技术 Run；Owner 已批准全部 M3 业务对象，Query 为 `formal`、Query Set 为 `frozen`、Knowledge Release 为 `published/ready`，关系 trace 为 `lifecycle_ready:true`。
+- 两条 `EVIDENCE_INSUFFICIENT` warning、Claim Scope、Answer limitations 与禁止表述继续有效；这里的 `published` 只表示进入本地正式知识包，不表示任何官网、媒体、插件或生产环境已经发布。
 
 ## 目录
 
@@ -23,4 +23,4 @@
 
 ## 开工规则
 
-先读本文件、`STATUS.md`、`workspace.json` 和当前 Handoff；运行对象校验和 index check 后再修改。未经当次明确授权，不执行 Git 写操作、外部发布或业务批准。
+先读本文件、`STATUS.md`、`workspace.json` 和当前 Handoff；运行对象校验和 index check 后再修改。后续对象状态变化仍需新的可追溯人类决定；未经当次明确授权，不执行 Git 写操作、真实采集、外部发布或部署。

@@ -6,6 +6,8 @@
 > 知识条目：`120`  
 > 每个知识条目均绑定 `1` 条主 Query。
 
+> 当前治理说明（2026-08-24）：本文件保留 120 条 legacy Knowledge Entry 的 v0.1 历史流程语义，其中 `published` 指外部页面已上线并通过站点审计。它不定义 M3 canonical Claim、Answer Card 或 Knowledge Release 的状态；当前权威产品方案中，这些对象的 `published` 只表示进入正式 Knowledge Release，不表示官网、媒体或生产环境已经发布。当前对象规则见 `../../../docs/specs/0004-knowledge-query-operating-system.md`。
+
 ## 1. 知识库定位
 
 本知识库不是品牌文案仓库，也不是把官网内容复制成 Markdown。它是 MyyShop 在 GEO 场景下的**品牌事实与答案单一可信源**，用于把真实用户问题连接到可核验知识、权威页面、分发资产、生成式平台答案测试和业务转化。
@@ -87,7 +89,7 @@
 | Distribution Asset | 社交、媒体、合作伙伴、帮助中心等同步资产 | 必须与权威页面一致 |
 | Answer Test | 在生成式平台上的实测记录 | 必须记录提及、引用、正确性和偏差 |
 
-## 5. 条目状态
+## 5. Legacy Knowledge Entry 状态
 
 ```text
 draft → verifying → review → approved → published → deprecated
@@ -97,7 +99,7 @@ draft → verifying → review → approved → published → deprecated
 - `verifying`：正在收集或核验证据。
 - `review`：事实、表达、法务或数据进入审批。
 - `approved`：可进入发布流程，但尚未确认上线。
-- `published`：已发布并通过站点审计。
+- `published`：在本 legacy 流程中指已发布并通过站点审计；不得套用于 M3 canonical 对象。
 - `deprecated`：已失效，不再用于新内容，但保留历史与迁移记录。
 
 任何状态回退都必须记录原因。
@@ -127,7 +129,7 @@ draft → verifying → review → approved → published → deprecated
 - `_index.md` 仅用于目录导航，不属于知识条目，不要求绑定 Query。
 - 所有内部链接使用相对路径。
 
-## 9. 发布门禁
+## 9. Legacy 外部发布门禁
 
 一个知识条目从 `review` 进入 `approved` 前，必须同时满足：
 

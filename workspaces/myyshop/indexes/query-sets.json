@@ -7,9 +7,9 @@
         "GOAL-MYYSHOP-DEFINITION-001",
         "Q-MYYSHOP-WHAT-IS-001"
       ],
-      "status": "draft",
-      "updated_at": "2026-08-24T04:00:00.000Z",
-      "version": "1.0.0"
+      "status": "frozen",
+      "updated_at": "2026-08-23T22:46:23.000Z",
+      "version": "1.0.1"
     }
   ],
   "record_type": "query_set",

@@ -7,7 +7,7 @@
 - 新增 `geo-query`、`geo-knowledge`、`geo-evidence`、`geo-knowledge-cycle`；
 - 新增 M3 对象 Schema/模板、Knowledge/Query CLI、M3 validator 与 lifecycle-aware trace；
 - propose/assemble 只创建 candidate/draft，对自动批准、版本漂移、路径/ID 冲突与不完整发布闭包明确失败；
-- 本地工程和 MyyShop candidate/draft slice 已验证；不代表业务批准、发布或部署。
+- 本地工程和 MyyShop 初始 candidate/draft slice 已验证；Owner 随后批准业务对象并形成本地正式 Knowledge Release，证据 warning 保留；不代表外部发布或部署。
 
 ### M2 Contract & Provenance Kernel
 

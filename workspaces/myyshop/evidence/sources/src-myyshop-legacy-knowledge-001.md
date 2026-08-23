@@ -3,8 +3,8 @@ id: SRC-MYYSHOP-LEGACY-KNOWLEDGE-001
 record_type: source
 status: active
 version: 1.0.0
-created_at: 2026-08-24T12:00:00+08:00
-updated_at: 2026-08-24T12:00:00+08:00
+created_at: 2026-08-24T01:13:17+08:00
+updated_at: 2026-08-24T01:13:17+08:00
 title: MyyShop 品牌定义 legacy 草稿来源
 name: MyyShop 品牌定义 legacy 草稿来源
 source_kind: legacy_workspace_draft
@@ -19,4 +19,3 @@ extensions:
 
 - `KB-IDENTITY-009`：`knowledge/02-brand-identity/one-line-definition.md`
 - `KB-ANSWER-001`：`knowledge/10-query-answer-cards/what-is-myyshop.md`
-

@@ -1,10 +1,10 @@
 ---
 id: EPL-MYYSHOP-DEFINITION-001
 record_type: evidence_plan
-status: draft
-version: 1.0.0
-created_at: 2026-08-24T12:00:00+08:00
-updated_at: 2026-08-24T12:00:00+08:00
+status: active
+version: 1.0.1
+created_at: 2026-08-24T01:13:17+08:00
+updated_at: 2026-08-24T06:46:23+08:00
 title: MyyShop 品牌定义补证计划
 claim_refs:
   - CLM-MYYSHOP-AUDIENCE-001
@@ -26,5 +26,4 @@ retest_query_refs:
 ---
 # MyyShop 品牌定义补证计划
 
-该计划只描述补证要求，不代表所列材料已经提供或通过验收。
-
+Owner 已接受并激活该补证计划；所列材料仍未因此自动出现或通过 Evidence 验收。

@@ -3,8 +3,8 @@ id: RUN-MYYSHOP-M3-DEFINITION-001
 record_type: run
 status: completed
 version: 1.0.0
-created_at: 2026-08-24T12:00:00+08:00
-updated_at: 2026-08-24T12:00:00+08:00
+created_at: 2026-08-24T01:13:56+08:00
+updated_at: 2026-08-24T01:22:12+08:00
 title: MyyShop M3 品牌定义候选闭环
 skill: geo-knowledge-cycle
 skill_version: 0.3.0

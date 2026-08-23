@@ -81,10 +81,10 @@ candidate Query
 ## 6. MyyShop 迁移策略
 
 - 保留 120 条 legacy 文件；compatibility index 记录路径/hash/status。
-- 新建一份窄 draft Document，只引用 `KB-IDENTITY-009`、`KB-ANSWER-001` 两个 legacy IDs 作为背景，不把其升级为已批准 Evidence。
-- 最终产品方案与两个 legacy 草稿分别登记 Source，共享一个 checksum snapshot 和 candidate Evidence，仍不替代品牌事实负责人批准。
-- 建立 candidate Claim/Answer Card/Query 与 draft KR/Set；不改 `/about-us`、Schema、llms 或外部系统。
+- 自动创建阶段先建立窄 draft Document，只引用 `KB-IDENTITY-009`、`KB-ANSWER-001` 两个 legacy IDs 作为背景，不自动把它们升级为已批准 Evidence。
+- 最终产品方案与两个 legacy 草稿分别登记 Source，共享一个 checksum snapshot 和 candidate Evidence；后续状态提升只接受品牌事实负责人的可追溯决定。
+- 初始 candidate Claim/Answer Card/Query 与 draft KR/Set 已由 Owner 后续全量批准；证据不足 warning 保留，且没有改动 `/about-us`、Schema、llms 或外部系统。
 
 ## 7. M4 边界
 
-M3 可输出 Evidence Plan，但不创建 Finding、Asset、Content/Evidence/Product Gap、建议稿、Adoption Record 或 Technical Retest。M4 Handoff 只能引用 approved/frozen/published 输入；draft MyyShop slice 是待 Owner 处理的明确前置门。
+M3 可输出 Evidence Plan，但不创建 Finding、Asset、Content/Evidence/Product Gap、建议稿、Adoption Record 或 Technical Retest。Owner 已使 MyyShop slice 满足 M4 的 approved/formal/frozen/published 业务输入门；M4 精确会话环境、SDD 批准、真实采集与外部写入授权仍是独立前置门。

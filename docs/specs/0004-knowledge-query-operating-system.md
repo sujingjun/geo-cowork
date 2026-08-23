@@ -99,7 +99,7 @@ approved/published Answer Card 只能引用 formal Query 和 approved/published 
 
 ### 4.6 Perception Goal
 
-必需：`goal_statement`、`success_question`。可选 `query_set_refs`。M3 的 MyyShop Goal 保持 candidate，直到 Owner 显式批准。
+必需：`goal_statement`、`success_question`。可选 `query_set_refs`。Tool 创建的 MyyShop Goal 保持 candidate，直到 Owner 显式批准；当前实例的后续批准见 M3 业务对象批准 Record。
 
 ### 4.7 Query Set
 
@@ -134,6 +134,8 @@ approved/published Answer Card 只能引用 formal Query 和 approved/published 
 - `high_risk_commitment`：formal-rule Evidence + 明确 Scope + Claim approval。
 
 Evidence 通过 `extensions.geo.evidence_category` 表示类别。缺失返回 warning 与建议，不自动修改 `evidence_sufficiency` 或 status。
+
+Evidence Sufficiency 是建议而非机器发布硬门。只要 published Release 的 Document/Evidence/Claim/Answer/Query 均具备可追溯人类批准，Owner 可以在保留 `EVIDENCE_INSUFFICIENT` warning、Scope、limitations 与禁止表述的前提下决定纳入内部 Knowledge Release；系统不得把批准改写成不存在的 `first_party/data/case` Evidence。
 
 ## 6. Tool 输入输出
 
@@ -194,7 +196,7 @@ OBJECT_CONFLICT
 
 ## 10. MyyShop v1 边界
 
-真实 Workspace 只创建 candidate/draft 对象，保留最终产品方案中的五条风险，不把 legacy draft 或 `approved` 产品计划自动升级为品牌事实批准。trace 必须返回 `lifecycle_ready:false` 和具体 gate。合成 Fixture 可包含明确的测试 approval，用于验证机器门；Fixture 必须使用虚构品牌和 `.invalid` locator。
+自动创建阶段只产生 candidate/draft 对象，保留最终产品方案中的五条风险，不把 legacy draft 或 `approved` 产品计划自动升级为品牌事实批准；此时 trace 必须返回 `lifecycle_ready:false` 和具体 gate。Owner 后续已明确批准 MyyShop v1 业务对象，当前实例 trace 为 `lifecycle_ready:true`，但两条证据不足 warning 与外部发布边界继续保留，详见 M3 业务对象批准 Record。合成 Fixture 可包含明确的测试 approval，用于验证机器门；Fixture 必须使用虚构品牌和 `.invalid` locator。
 
 ## 11. 非目标与授权
 

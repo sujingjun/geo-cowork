@@ -64,13 +64,14 @@
 | Requirement / PRD / Architecture | [`requirements/2026-08-24-m3-knowledge-query-operating-system.md`](requirements/2026-08-24-m3-knowledge-query-operating-system.md) / [`prd/2026-08-24-m3-knowledge-query-operating-system.md`](prd/2026-08-24-m3-knowledge-query-operating-system.md) / [`architecture/2026-08-24-knowledge-query-operating-system-architecture.md`](architecture/2026-08-24-knowledge-query-operating-system-architecture.md) | proposed；不得由本地验收自行批准 |
 | Spec / Plan / Task | [`specs/0004-knowledge-query-operating-system.md`](specs/0004-knowledge-query-operating-system.md) / [`plans/2026-08-24-m3-knowledge-query-operating-system-plan.md`](plans/2026-08-24-m3-knowledge-query-operating-system-plan.md) / [`tasks/2026-08-24-m3-knowledge-query-operating-system.md`](tasks/2026-08-24-m3-knowledge-query-operating-system.md) | proposed / proposed / verified |
 | Acceptance Record | [`records/2026-08-24-m3-knowledge-query-operating-system-record.md`](records/2026-08-24-m3-knowledge-query-operating-system-record.md) | verified；仅限本地工程与 MyyShop candidate/draft slice |
+| 业务对象批准 Record | [`records/2026-08-24-m3-business-object-approval-record.md`](records/2026-08-24-m3-business-object-approval-record.md) | verified；Owner 已批准 M3 对象，formal Query、frozen Query Set、内部 published KR v1 成立；Evidence warnings 保留 |
 | 已执行 Handoff | [`handoff/2026-08-24-m3-knowledge-query-operating-system-handoff.md`](handoff/2026-08-24-m3-knowledge-query-operating-system-handoff.md) | verified；精确新任务创建失败后按 Owner fallback 在原会话收口 |
 
 ## M4 Diagnosis, Site & Asset Proposal（待批准启动）
 
 | 类别 | 工件 | 状态 |
 | --- | --- | --- |
-| 启动 Handoff | [`handoff/2026-08-24-m4-diagnosis-site-asset-proposal-handoff.md`](handoff/2026-08-24-m4-diagnosis-site-asset-proposal-handoff.md) | proposed；先建立并批准 M4 SDD，真实诊断仍受 approved Goal、frozen Query Set、published Knowledge Release 门限制 |
+| 启动 Handoff | [`handoff/2026-08-24-m4-diagnosis-site-asset-proposal-handoff.md`](handoff/2026-08-24-m4-diagnosis-site-asset-proposal-handoff.md) | proposed；M3 业务输入门已通过，仍须精确新会话环境、M4 SDD 批准与真实诊断授权 |
 
 ## 历史提案与交接
 
