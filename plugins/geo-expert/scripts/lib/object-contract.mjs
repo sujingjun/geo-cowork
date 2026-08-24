@@ -23,6 +23,7 @@ async function loadSchema(name) {
 const COMMON = await loadSchema('common-object.schema.json');
 const M2 = await loadSchema('m2-record-types.schema.json');
 const M3 = await loadSchema('m3-record-types.schema.json');
+const M4 = await loadSchema('m4-record-types.schema.json');
 
 export class ObjectContractError extends Error {
   constructor(code, message, diagnostics = []) {
@@ -35,7 +36,7 @@ export class ObjectContractError extends Error {
 
 function mergeDefinitions() {
   const definitions = new Map();
-  for (const schema of [M2, M3]) {
+  for (const schema of [M2, M3, M4]) {
     for (const [recordType, definition] of Object.entries(schema.$defs)) {
       const prior = definitions.get(recordType);
       const existing = prior ?? {
@@ -139,6 +140,7 @@ function validateDateFields(data, pathLabel) {
     ['updated_at', data.updated_at],
     ['captured_at', data.captured_at],
     ['frozen_at', data.frozen_at],
+    ['published_at', data.published_at],
     ['approval.approved_at', data.approval?.approved_at],
   ];
   for (const [field, value] of fields) {

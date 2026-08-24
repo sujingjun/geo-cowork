@@ -30,10 +30,14 @@ const INDEX_NAMES = {
   query_set: 'query-sets.json',
   evidence_plan: 'evidence-plans.json',
   perception_goal: 'perception-goals.json',
+  asset_proposal: 'asset-proposals.json',
+  adoption_record: 'adoption-records.json',
+  asset_publication: 'asset-publications.json',
 };
-const M3_INDEX_TYPES = new Set([
+const EXTENDED_INDEX_TYPES = new Set([
   'document', 'answer_card', 'knowledge_release',
   'query_set', 'evidence_plan', 'perception_goal',
+  'asset_proposal', 'adoption_record', 'asset_publication',
 ]);
 
 const REF_FIELDS = {
@@ -44,19 +48,33 @@ const REF_FIELDS = {
     release_refs: ['knowledge_release'],
   },
   source: {},
-  evidence: { source_refs: ['source'], claim_refs: ['claim'] },
+  evidence: {
+    source_refs: ['source'],
+    claim_refs: ['claim'],
+    independent_support_refs: ['evidence'],
+    counter_evidence_refs: ['evidence'],
+  },
   finding: {
     query_refs: ['query'],
     claim_refs: ['claim'],
     evidence_refs: ['evidence'],
     asset_refs: ['asset'],
+    source_refs: ['source'],
+    retest_of_ref: ['finding'],
   },
-  asset: { source_refs: ['source'] },
+  asset: {
+    source_refs: ['source'],
+    goal_refs: ['perception_goal'],
+    query_refs: ['query'],
+  },
   run: {
     input_refs: RECORD_TYPES,
     finding_refs: ['finding'],
     evidence_refs: ['evidence'],
     asset_refs: ['asset'],
+    goal_refs: ['perception_goal'],
+    publication_refs: ['asset_publication'],
+    retest_of_refs: ['finding'],
     supersedes_ref: ['run'],
     superseded_by_ref: ['run'],
   },
@@ -69,8 +87,47 @@ const REF_FIELDS = {
   },
   knowledge_release: {},
   query_set: { goal_refs: ['perception_goal'] },
-  evidence_plan: { claim_refs: ['claim'], retest_query_refs: ['query'] },
+  evidence_plan: {
+    claim_refs: ['claim'],
+    retest_query_refs: ['query'],
+    finding_refs: ['finding'],
+    asset_refs: ['asset'],
+  },
   perception_goal: { query_set_refs: ['query_set'] },
+  asset_proposal: {
+    asset_ref: ['asset'],
+    goal_refs: ['perception_goal'],
+    query_refs: ['query'],
+    finding_refs: ['finding'],
+    evidence_refs: ['evidence'],
+  },
+  adoption_record: { proposal_ref: ['asset_proposal'], asset_ref: ['asset'] },
+  asset_publication: {
+    proposal_ref: ['asset_proposal'],
+    adoption_ref: ['adoption_record'],
+    asset_ref: ['asset'],
+  },
+};
+
+const VERSION_FIELDS = {
+  answer_card: [['claim_versions', ['claim']]],
+  knowledge_release: [
+    ['claim_versions', ['claim']],
+    ['answer_card_versions', ['answer_card']],
+  ],
+  query_set: [['query_versions', ['query']]],
+  asset: [
+    ['claim_versions', ['claim']],
+    ['knowledge_release_versions', ['knowledge_release']],
+  ],
+  run: [
+    ['query_set_versions', ['query_set']],
+    ['knowledge_release_versions', ['knowledge_release']],
+  ],
+  asset_proposal: [
+    ['claim_versions', ['claim']],
+    ['knowledge_release_versions', ['knowledge_release']],
+  ],
 };
 
 export class IndexValidationError extends Error {
@@ -94,13 +151,7 @@ export function collectObjectReferences(data) {
       refs.push({ field, ref, allowedTypes, version: null });
     }
   }
-  const versionFields = data.record_type === 'answer_card'
-    ? [['claim_versions', ['claim']]]
-    : data.record_type === 'knowledge_release'
-      ? [['claim_versions', ['claim']], ['answer_card_versions', ['answer_card']]]
-      : data.record_type === 'query_set'
-        ? [['query_versions', ['query']]]
-        : [];
+  const versionFields = VERSION_FIELDS[data.record_type] ?? [];
   for (const [field, allowedTypes] of versionFields) {
     for (const entry of data[field] ?? []) {
       refs.push({ field, ref: entry.ref, version: entry.version, allowedTypes });
@@ -244,7 +295,7 @@ export async function buildIndexes({ workspace, write = true }) {
   const indexes = new Map();
   for (const recordType of RECORD_TYPES) {
     const payload = {
-      schema_version: M3_INDEX_TYPES.has(recordType) ? '1.1.0' : '1.0.0',
+      schema_version: EXTENDED_INDEX_TYPES.has(recordType) ? '1.1.0' : '1.0.0',
       record_type: recordType,
       objects: graph.objects
         .filter((object) => object.data.record_type === recordType)

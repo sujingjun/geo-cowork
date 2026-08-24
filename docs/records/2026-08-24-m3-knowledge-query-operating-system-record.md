@@ -24,14 +24,14 @@ M3 的本地工程门和 MyyShop 最窄候选闭环已通过：六类 M3 对象�
 
 ## 2. 会话移交硬门的实际结果
 
-Owner 要求 M2 验收后只在精确 `gpt-5.5-sol-max`、标准速度且环境一致的新会话继续；若不一致则留在当前会话完成。创建新任务时，任务接口返回：
+Owner 的实际要求是：M2 验收后只在模型 `gpt-5.6-sol`、推理强度 `max`（合称 `gpt-5.6-sol / max`）、标准速度且环境一致的新会话继续；若不一致则留在当前会话完成。当时创建新任务的请求误将模型/推理组合写为 `gpt-5.5-sol-max`，任务接口实际返回：
 
 ```text
 create_thread could not validate reasoning effort "max" for model "gpt-5.5-sol-max".
 Use a model and reasoning combination listed in the tool description, or omit thinking.
 ```
 
-因此没有新任务被创建，也没有发生近似模型或静默降级，无法进入新会话环境预检。按 Owner 明确的 fallback 条件，本会话继续完成 M3 与 M4 Handoff。
+因此错误参数没有创建新任务，也没有发生近似模型或静默降级，无法进入新会话环境预检。该报错是历史笔误请求的实际回执，不表示正确的 `gpt-5.6-sol / max` 不可用。按 Owner 明确的 fallback 条件，本会话继续完成 M3 与 M4 Handoff。
 
 ## 3. 基线、授权与变更范围
 

@@ -1,18 +1,31 @@
 ---
 title: M4 Diagnosis, Site & Asset Proposal Handoff
-status: proposed
+status: verified
 created: 2026-08-24
+updated: 2026-08-24
 working_directory: /Users/sujingjun/geo-cowork
-baseline: main @ 7de1e7b0cc475bd9ae967386598d09adaf2f4949 with uncommitted M3 business approval transition
+baseline: main @ d1b2b6ce043664c8b3d97a14711605059794810e (Owner-confirmed human commit)
 source:
+  - "当前用户指令：同意以人工提交 d1b2b6c 作为 M4 基线"
+  - "2026-08-24 当前用户指令：批准 M4 六份 SDD 进入实现；真实 MyyShop 采集仍不授权"
+  - docs/requirements/2026-08-24-m4-diagnosis-site-asset-proposal.md
+  - docs/prd/2026-08-24-m4-diagnosis-site-asset-proposal.md
+  - docs/architecture/2026-08-24-diagnosis-site-asset-proposal-architecture.md
+  - docs/specs/0005-diagnosis-site-asset-proposal.md
+  - docs/plans/2026-08-24-m4-diagnosis-site-asset-proposal-plan.md
+  - docs/tasks/2026-08-24-m4-diagnosis-site-asset-proposal.md
   - docs/plans/2026-08-23-geo-cowork-final-product-plan.md
   - docs/records/2026-08-24-m3-knowledge-query-operating-system-record.md
   - docs/records/2026-08-24-m3-business-object-approval-record.md
   - docs/specs/0004-knowledge-query-operating-system.md
+  - docs/records/2026-08-24-m4-diagnosis-site-asset-proposal-record.md
+  - docs/handoff/2026-08-24-m2-m4-integrated-optimization-handoff.md
 scope: M4 SDD 启动、诊断/站点/资产建议提案边界与真实业务输入门
 ---
 
 # M4 Diagnosis, Site & Asset Proposal Handoff
+
+> 执行状态：本启动 Handoff 已完成。M4 本地离线工程的实际结果见 [`../records/2026-08-24-m4-diagnosis-site-asset-proposal-record.md`](../records/2026-08-24-m4-diagnosis-site-asset-proposal-record.md)；后续只从 [`2026-08-24-m2-m4-integrated-optimization-handoff.md`](2026-08-24-m2-m4-integrated-optimization-handoff.md) 评审整体优化与 M5 进入门。真实 MyyShop 采集仍未授权。
 
 ## 1. 唯一目标
 
@@ -20,14 +33,14 @@ scope: M4 SDD 启动、诊断/站点/资产建议提案边界与真实业务输�
 
 ## 2. 新会话与同环境硬门
 
-此前按用户要求创建精确 `gpt5.5-sol-max`、标准速度的新任务时，任务接口以模型标签 `gpt-5.5-sol-max` 返回参数校验失败，未产生新任务。自动创建路径当前为明确阻塞；只有用户手工打开且系统实际确认满足精确配置的新会话，或 Owner 另行修改硬门，才可继续。不得由 Agent 自选替代模型。下一次若再次移交新任务：
+Owner 已于 2026-08-24 纠正：精确配置是模型 `gpt-5.6-sol`、推理强度 `max`（合称 `gpt-5.6-sol / max`）及标准速度。此前的新任务创建请求误将模型/推理组合写为 `gpt-5.5-sol-max`，因此任务接口返回参数校验失败且未产生新任务；该失败只记录笔误请求未创建任务，不表示正确配置不可用。只有系统实际确认满足正确配置的新会话，或 Owner 另行修改硬门，才可继续。不得由 Agent 自选替代模型。下一次若再次移交新任务：
 
-- 必须由系统实际确认精确模型/速度，不接受近似、别名推断或静默降级；
-- 必须打开 `/Users/sujingjun/geo-cowork` 当前 `main` 脏工作树，不新建 worktree、不切换到干净 checkout；
-- 必须看到 HEAD `7de1e7b0cc475bd9ae967386598d09adaf2f4949`，并保留本 Handoff 与全部未提交的 M3 业务批准变更；
+- 必须由系统实际确认模型 `gpt-5.6-sol`、推理强度 `max` 与标准速度，不接受近似、别名推断或静默降级；
+- 必须打开 `/Users/sujingjun/geo-cowork` 当前 `main` 工作树，不新建 worktree、不切换 checkout；
+- 必须看到 Owner 确认的人工提交 HEAD `d1b2b6ce043664c8b3d97a14711605059794810e`，并保留其后的全部未提交 M4 文档与实现变更；
 - 先执行只读预检，任一项不一致即停止写入并向 Owner 报告。
 
-当前接口无法满足精确配置时，M4 执行状态保持 blocked。M3 业务输入门已通过，但不解除新会话环境、M4 SDD 批准与真实采集授权门；Handoff 交付完成不等于 M4 已获启动条件。
+本任务已由系统会话元数据确认模型 `gpt-5.6-sol`、推理强度 `max`，Owner 已明确同意以人工提交 `d1b2b6c` 更新基线；模型/推理与 Git 基线硬门通过。M3 业务输入门已通过，但不解除 M4 SDD 批准与真实采集授权门；Handoff 交付完成不等于 M4 已获实现或真实执行批准。
 
 建议只读预检：
 
@@ -43,35 +56,21 @@ npm run test:m2-contract
 npm run test:m3-knowledge-query
 ```
 
-除本 Handoff 自身外，当前 M3 业务批准脏工作树必须通过以下冻结指纹；它同时记录 Git 状态、tracked 删除和逐文件展开的 untracked 内容。预期路径数与聚合 SHA 见本节末尾，任一不一致都要停止：
+`d1b2b6c` 已把原 M3 业务批准脏工作树提交为一个人工提交。为了证明基线更新没有丢失旧冻结内容，本任务只读重建了提交前状态：
 
 ```bash
-set -o pipefail
-git status --porcelain=v1 -uall \
-  | grep -v '^.. docs/handoff/2026-08-24-m4-diagnosis-site-asset-proposal-handoff.md$' \
-  | wc -l \
-  | tr -d ' '
-
-git status --porcelain=v1 -uall \
-  | grep -v '^.. docs/handoff/2026-08-24-m4-diagnosis-site-asset-proposal-handoff.md$' \
-  | LC_ALL=C sort \
-  | while IFS= read -r entry; do
-      entry_state=$(printf '%s' "$entry" | cut -c1-2)
-      file=$(printf '%s' "$entry" | cut -c4-)
-      printf '%s\0%s\0' "$entry_state" "$file"
-      if test -f "$file"; then
-        shasum -a 256 "$file" | awk '{print $1}'
-      else
-        printf 'MISSING\n'
-      fi
-    done \
-  | shasum -a 256
+git merge-base --is-ancestor \
+  7de1e7b0cc475bd9ae967386598d09adaf2f4949 \
+  d1b2b6ce043664c8b3d97a14711605059794810e
+git diff-tree --no-commit-id --name-only -r -M \
+  d1b2b6ce043664c8b3d97a14711605059794810e
 ```
 
-- 预期路径数：`40`
-- 预期聚合 SHA：`79c5d5a90f7cef26efd794cb926e2b9e876cd52e0e57ab51d43df4e2a3f4aaac`
-- `package-lock.json` SHA：`8b94eb852ca87fb388da6c7ff1ab7dcd7bbc0dd89880491b99fb57b71547eac8`
-- 另行核验 MyyShop index aggregate 与 legacy current/HEAD aggregate，以 M3 业务对象批准 Record 的命令与期望值为准。
+- `7de1e7b` 是 `d1b2b6c` 的祖先，命令退出码为 `0`；
+- 提交差异为 `40` 个 rename-aware 路径项；
+- 按旧 Handoff 的 Git 状态、tracked 删除与逐文件 untracked 规则重建，仍得到 `40` 条与聚合 SHA `79c5d5a90f7cef26efd794cb926e2b9e876cd52e0e57ab51d43df4e2a3f4aaac`；
+- `package-lock.json` SHA 仍为 `8b94eb852ca87fb388da6c7ff1ab7dcd7bbc0dd89880491b99fb57b71547eac8`；
+- MyyShop index aggregate 与 legacy current/HEAD aggregate 继续以 M3 业务对象批准 Record 为准，M4 验收时重新核验。
 
 ## 3. 已验证、可继承的本地事实
 
@@ -84,9 +83,9 @@ git status --porcelain=v1 -uall \
 - Owner 已批准全部 M3 业务对象，trace 返回 `lifecycle_ready:true` 与 `gates:[]`；
 - 两条 Claim 的 Evidence Sufficiency 仍不足，validator 保留两条 warning；Owner 的内部采用决定没有改写证据类别；
 - 120 条 legacy knowledge 与 HEAD 原始字节一致；
-- 前序 M2/M3 已由用户提交并推送为 `7de1e7b`；本轮批准变更尚未提交，Agent 没有执行 commit、push、PR、真实采集、外部发布或部署。
+- 前序 M2/M3 已由用户提交并推送为 `7de1e7b`；M3 业务批准变更随后由用户人工提交为 `d1b2b6c`，当前 `main` 比 `origin/main` 超前 1 个提交。Agent 没有执行 commit、push、PR、真实采集、外部发布或部署。
 
-## 4. M3 业务输入门已通过；M4 启动门仍未通过
+## 4. M3 业务输入、M4 环境与 SDD 批准门已通过
 
 下列对象已经形成可追溯的 M3 业务输入闭包：
 
@@ -102,11 +101,11 @@ git status --porcelain=v1 -uall \
 | `KR-MYYSHOP-DEFINITION-001` | published/ready 1.0.1 | `release_version:1.0.0`；不是外部发布证明 |
 | `EPL-MYYSHOP-DEFINITION-001` | active 1.0.1 | 只表示补证计划已接受，不表示材料已提供 |
 
-approved Goal、formal Query、frozen Query Set 与 published Knowledge Release 的一致版本已经成立，因此 M3 业务输入门通过。进入真实 M4 仍必须先满足第 2 节精确会话/同环境硬门，建立并获批第 5 节 SDD 工件，并对具体站点、账号、API 与外部写入取得当次授权。Agent 不得把本次 M3 批准扩张为 M4 方案批准或真实采集授权。
+approved Goal、formal Query、frozen Query Set 与 published Knowledge Release 的一致版本已经成立，因此 M3 业务输入门通过；第 2 节模型/推理与 Git 基线门也已通过。Owner 已于 2026-08-24 批准第 5 节 SDD 工件进入本地离线实现。真实 M4 诊断仍须对具体站点、账号、API 与外部写入取得当次授权；Agent 不得把 SDD 批准扩张为真实采集授权。
 
-## 5. M4 SDD 必须先建立
+## 5. M4 SDD 已批准进入本地离线实现
 
-第一执行阶段只建立并请求批准：
+第一执行阶段已建立并请求批准：
 
 1. `docs/requirements/2026-08-24-m4-diagnosis-site-asset-proposal.md`
 2. `docs/prd/2026-08-24-m4-diagnosis-site-asset-proposal.md`
@@ -115,7 +114,7 @@ approved Goal、formal Query、frozen Query Set 与 published Knowledge Release 
 5. `docs/plans/2026-08-24-m4-diagnosis-site-asset-proposal-plan.md`
 6. `docs/tasks/2026-08-24-m4-diagnosis-site-asset-proposal.md`
 
-这些工件保持 `proposed`，直到 Owner 明确批准。必须把实现准备、真实 MyyShop 诊断、建议采用、发布与效果复测分成独立门。
+这些工件已获 Owner 批准并标记为 `approved`，允许开始本地离线实现。它们把离线实现、真实 MyyShop 诊断、建议采用、实际发布、Technical Retest 与 M5/M6 效果观察分成独立门；真实 MyyShop 采集仍未授权。实现阶段还必须记录 M2/M3 不合理项，并在 M4 验收后建立 `docs/handoff/2026-08-24-m2-m4-integrated-optimization-handoff.md`。
 
 ## 6. 建议的 M4 最窄纵切
 
@@ -170,4 +169,4 @@ M4 Record 至少应分别证明：
 - suggestion、Adoption、实际发布、Technical Retest 与业务观察仍为分离状态；
 - M0—M3 全量回归、插件自检、Workspace/index 确定性和 legacy 不变。
 
-出口 Handoff 只能交给 M5 或后续真实执行门，不能凭代码测试声明建议已采用、页面已发布或 GEO 效果成立。
+本地离线工程已按 M4 Record 验收；出口改由 M2–M4 整体优化 Handoff 承接。不能凭代码测试声明建议已采用、页面已发布或 GEO 效果成立。

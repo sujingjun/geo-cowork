@@ -10,12 +10,12 @@ source:
   - docs/specs/0004-knowledge-query-operating-system.md
   - docs/tasks/2026-08-24-m3-knowledge-query-operating-system.md
   - docs/records/2026-08-24-m3-knowledge-query-operating-system-record.md
-scope: 新会话环境硬门的实际失败、当前会话 fallback、M3 收口与 M4 Handoff
+scope: 新会话模型笔误校正、环境硬门的历史执行结果、当前会话 fallback、M3 收口与 M4 Handoff
 ---
 
 # M3 Knowledge & Query Operating System Handoff
 
-> 本 Handoff 已执行并收口。新任务因精确模型/推理组合无法通过任务接口校验而未创建；按 Owner 预设 fallback，由原会话完成 M3。当前事实以 M3 Record 为准，下一入口是 `docs/handoff/2026-08-24-m4-diagnosis-site-asset-proposal-handoff.md`。
+> 本 Handoff 已执行并收口。当时的新任务创建请求误将 Owner 指定的 `gpt-5.6-sol / max` 写成 `gpt-5.5-sol-max`，错误参数未通过任务接口校验；按 Owner 预设 fallback，由原会话完成 M3。当前事实以 M3 Record 为准，下一入口是 `docs/handoff/2026-08-24-m4-diagnosis-site-asset-proposal-handoff.md`。
 
 ## 1. 历史唯一目标（已完成）
 
@@ -23,7 +23,7 @@ scope: 新会话环境硬门的实际失败、当前会话 fallback、M3 收口�
 
 ## 2. 新会话模型与环境硬门
 
-Owner 指定新会话必须使用 `gpt-5.5-sol-max`、标准速度，并与当前会话使用同一环境。创建后第一回合只能做只读预检，不能修改文件：
+Owner 实际指定新会话必须使用模型 `gpt-5.6-sol`、推理强度 `max`（合称 `gpt-5.6-sol / max`）、标准速度，并与当前会话使用同一环境。创建后第一回合只能做只读预检，不能修改文件：
 
 ```bash
 pwd
@@ -133,7 +133,7 @@ M3 收口后创建 `docs/handoff/2026-08-24-m4-diagnosis-site-asset-proposal-han
 
 ## 9. 实际执行结果
 
-- 新任务创建失败信息：`create_thread could not validate reasoning effort "max" for model "gpt-5.5-sol-max"`；未创建任务、未接受近似模型、未进入环境写入。
+- 历史创建请求因笔误实际传入 `gpt-5.5-sol-max`，失败信息为 `create_thread could not validate reasoning effort "max" for model "gpt-5.5-sol-max"`；该结果只证明错误参数未创建任务，不表示正确的 `gpt-5.6-sol / max` 不可用。未接受近似模型，也未进入新任务环境写入。
 - 当前会话 fallback 完成 M3 Schema/Tool/Skills、10 项专项测试、MyyShop 13 个 candidate/draft canonical 对象、完整关系 trace 与 `lifecycle_ready:false` gates。
 - 实际命令、hash、warnings、限制与 Git 状态见 [`../records/2026-08-24-m3-knowledge-query-operating-system-record.md`](../records/2026-08-24-m3-knowledge-query-operating-system-record.md)。
 - 后续只从 [`2026-08-24-m4-diagnosis-site-asset-proposal-handoff.md`](2026-08-24-m4-diagnosis-site-asset-proposal-handoff.md) 进入 M4；本 Handoff 不再是接续入口。

@@ -11,6 +11,10 @@ sources:
   - docs/records/2026-08-24-m3-knowledge-query-operating-system-record.md
   - docs/records/2026-08-24-m3-business-object-approval-record.md
   - docs/handoff/2026-08-24-m4-diagnosis-site-asset-proposal-handoff.md
+  - docs/specs/0005-diagnosis-site-asset-proposal.md
+  - docs/plans/2026-08-24-m4-diagnosis-site-asset-proposal-plan.md
+  - docs/records/2026-08-24-m4-diagnosis-site-asset-proposal-record.md
+  - docs/handoff/2026-08-24-m2-m4-integrated-optimization-handoff.md
 updated: 2026-08-24
 ---
 
@@ -36,5 +40,9 @@ updated: 2026-08-24
 - M3 本地验收：[`../records/2026-08-24-m3-knowledge-query-operating-system-record.md`](../records/2026-08-24-m3-knowledge-query-operating-system-record.md)
 - M3 业务对象批准：[`../records/2026-08-24-m3-business-object-approval-record.md`](../records/2026-08-24-m3-business-object-approval-record.md)
 - M4 启动边界：[`../handoff/2026-08-24-m4-diagnosis-site-asset-proposal-handoff.md`](../handoff/2026-08-24-m4-diagnosis-site-asset-proposal-handoff.md)
+- M4 已批准系统规格：[`../specs/0005-diagnosis-site-asset-proposal.md`](../specs/0005-diagnosis-site-asset-proposal.md)
+- M4 已批准实施计划：[`../plans/2026-08-24-m4-diagnosis-site-asset-proposal-plan.md`](../plans/2026-08-24-m4-diagnosis-site-asset-proposal-plan.md)
+- M4 本地离线验收：[`../records/2026-08-24-m4-diagnosis-site-asset-proposal-record.md`](../records/2026-08-24-m4-diagnosis-site-asset-proposal-record.md)
+- M2–M4 整体优化与 M5 进入门：[`../handoff/2026-08-24-m2-m4-integrated-optimization-handoff.md`](../handoff/2026-08-24-m2-m4-integrated-optimization-handoff.md)
 
 其他文档类别目录（架构、需求、PRD、原型、Spec、Plan、Task、Record、Runbook、Release、复盘、经验、Handoff）在首次出现 canonical 文档时创建，并由 `docs/README.md` 导航。

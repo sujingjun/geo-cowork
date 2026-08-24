@@ -65,13 +65,17 @@
 | Spec / Plan / Task | [`specs/0004-knowledge-query-operating-system.md`](specs/0004-knowledge-query-operating-system.md) / [`plans/2026-08-24-m3-knowledge-query-operating-system-plan.md`](plans/2026-08-24-m3-knowledge-query-operating-system-plan.md) / [`tasks/2026-08-24-m3-knowledge-query-operating-system.md`](tasks/2026-08-24-m3-knowledge-query-operating-system.md) | proposed / proposed / verified |
 | Acceptance Record | [`records/2026-08-24-m3-knowledge-query-operating-system-record.md`](records/2026-08-24-m3-knowledge-query-operating-system-record.md) | verified；仅限本地工程与 MyyShop candidate/draft slice |
 | 业务对象批准 Record | [`records/2026-08-24-m3-business-object-approval-record.md`](records/2026-08-24-m3-business-object-approval-record.md) | verified；Owner 已批准 M3 对象，formal Query、frozen Query Set、内部 published KR v1 成立；Evidence warnings 保留 |
-| 已执行 Handoff | [`handoff/2026-08-24-m3-knowledge-query-operating-system-handoff.md`](handoff/2026-08-24-m3-knowledge-query-operating-system-handoff.md) | verified；精确新任务创建失败后按 Owner fallback 在原会话收口 |
+| 已执行 Handoff | [`handoff/2026-08-24-m3-knowledge-query-operating-system-handoff.md`](handoff/2026-08-24-m3-knowledge-query-operating-system-handoff.md) | verified；历史创建请求误传模型标签后按 Owner fallback 在原会话收口，正确配置为 `gpt-5.6-sol / max` |
 
-## M4 Diagnosis, Site & Asset Proposal（待批准启动）
+## M4 Diagnosis, Site & Asset Proposal（本地离线工程验收完成）
 
 | 类别 | 工件 | 状态 |
 | --- | --- | --- |
-| 启动 Handoff | [`handoff/2026-08-24-m4-diagnosis-site-asset-proposal-handoff.md`](handoff/2026-08-24-m4-diagnosis-site-asset-proposal-handoff.md) | proposed；M3 业务输入门已通过，仍须精确新会话环境、M4 SDD 批准与真实诊断授权 |
+| 启动 Handoff | [`handoff/2026-08-24-m4-diagnosis-site-asset-proposal-handoff.md`](handoff/2026-08-24-m4-diagnosis-site-asset-proposal-handoff.md) | verified；历史启动输入已执行，真实诊断仍未授权 |
+| Requirement / PRD / Architecture | [`requirements/2026-08-24-m4-diagnosis-site-asset-proposal.md`](requirements/2026-08-24-m4-diagnosis-site-asset-proposal.md) / [`prd/2026-08-24-m4-diagnosis-site-asset-proposal.md`](prd/2026-08-24-m4-diagnosis-site-asset-proposal.md) / [`architecture/2026-08-24-diagnosis-site-asset-proposal-architecture.md`](architecture/2026-08-24-diagnosis-site-asset-proposal-architecture.md) | approved；仅开放本地离线工程，真实执行、人工采用、发布与效果门分离 |
+| Spec / Plan / Task | [`specs/0005-diagnosis-site-asset-proposal.md`](specs/0005-diagnosis-site-asset-proposal.md) / [`plans/2026-08-24-m4-diagnosis-site-asset-proposal-plan.md`](plans/2026-08-24-m4-diagnosis-site-asset-proposal-plan.md) / [`tasks/2026-08-24-m4-diagnosis-site-asset-proposal.md`](tasks/2026-08-24-m4-diagnosis-site-asset-proposal.md) | approved / approved / verified；真实 MyyShop 采集不在授权内 |
+| Acceptance Record | [`records/2026-08-24-m4-diagnosis-site-asset-proposal-record.md`](records/2026-08-24-m4-diagnosis-site-asset-proposal-record.md) | verified；仅限源码、脱敏 Fixture、只读 Workspace 兼容与派生 index |
+| 整体优化 Handoff | [`handoff/2026-08-24-m2-m4-integrated-optimization-handoff.md`](handoff/2026-08-24-m2-m4-integrated-optimization-handoff.md) | proposed；列出 M5 P0 阻塞点，不代表优化、M5 或真实采集获批 |
 
 ## 历史提案与交接
 
@@ -82,7 +86,7 @@
 | CodeBuddy 移除与 WorkBuddy 切换 Handoff | [`handoff/2026-08-20-milestone-1-hardening-workbuddy-china-handoff.md`](handoff/2026-08-20-milestone-1-hardening-workbuddy-china-handoff.md) | 历史 WorkBuddy 契约跟踪与 M1 收口基线 |
 | 原“Query 与知识” M2 Handoff | [`handoff/2026-08-20-query-and-knowledge-milestone-handoff.md`](handoff/2026-08-20-query-and-knowledge-milestone-handoff.md) | 已被 2026-08-23 产品基线重排；保留历史，不再作为当前 M2 启动指令 |
 
-M2/M3 的本地实现与验证已有各自 Record；M4 只从最新 Handoff 进入。Record/Handoff 都不能自行提升 PRD、Spec、业务批准、发布或部署状态。
+M2–M4 的本地实现与验证已有各自 Record；下一任务只从整体优化 Handoff 评审。Record/Handoff 都不能自行提升 PRD、Spec、业务批准、真实采集、发布或部署状态。
 
 ## 现有目录
 
@@ -96,6 +100,6 @@ M2/M3 的本地实现与验证已有各自 Record；M4 只从最新 Handoff 进�
 | [`tasks/`](tasks/2026-08-20-plugin-initialization.md) | 可独立执行、验证和交接的最小工作单元 |
 | [`records/`](records/2026-08-20-plugin-initialization-acceptance.md) | 实际命令、结果、失败、修复与未验证项 |
 | [`wiki/`](wiki/index.md) | 项目知识库导航摘要 |
-| [`handoff/`](handoff/2026-08-24-m4-diagnosis-site-asset-proposal-handoff.md) | 跨 Session 或跨 Agent 的继承基线、第一动作和停止条件 |
+| [`handoff/`](handoff/2026-08-24-m2-m4-integrated-optimization-handoff.md) | 跨 Session 或跨 Agent 的继承基线、第一动作和停止条件 |
 
 其余文档类别（原型、Runbook、Release、复盘和经验）的目录契约与建档规则见 `docs/workflow.md` 第 2 章；各类目录在首次出现 canonical 文档时创建并加入本导航。

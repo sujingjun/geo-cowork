@@ -155,6 +155,7 @@ async function checkTemplates() {
     'finding.md', 'asset.md', 'run.md', 'cycle.md',
     'document.md', 'answer-card.md', 'knowledge-release.md',
     'query-set.md', 'evidence-plan.md', 'perception-goal.md',
+    'asset-proposal.md', 'adoption-record.md', 'asset-publication.md',
   ]) {
     const p = path.join(PLUGIN_ROOT, 'assets', 'object-templates', file);
     try {
@@ -171,6 +172,7 @@ async function checkTemplates() {
 async function checkRuntime() {
   for (const file of [
     'common-object.schema.json', 'm2-record-types.schema.json', 'm3-record-types.schema.json',
+    'm4-record-types.schema.json',
   ]) {
     const p = path.join(PLUGIN_ROOT, 'schemas', file);
     const data = await readJson(p);
@@ -179,6 +181,7 @@ async function checkRuntime() {
   for (const file of [
     'build-index.mjs', 'run-lifecycle.mjs', 'legacy-ops-geo-import.mjs',
     'knowledge-query.mjs', 'workspace-init.mjs', 'workspace-validate.mjs',
+    'diagnosis.mjs',
   ]) {
     const p = path.join(PLUGIN_ROOT, 'scripts', file);
     try {
@@ -188,7 +191,11 @@ async function checkRuntime() {
       fail(`运行脚本缺失: ${path.relative(REPO_ROOT, p)}`);
     }
   }
-  for (const file of ['knowledge-query.mjs', 'knowledge-trace.mjs']) {
+  for (const file of [
+    'knowledge-query.mjs', 'knowledge-trace.mjs',
+    'diagnosis-io.mjs', 'diagnosis-profile.mjs', 'diagnosis-trace.mjs',
+    'site-audit.mjs', 'research-input.mjs', 'asset-proposal.mjs',
+  ]) {
     const p = path.join(PLUGIN_ROOT, 'scripts', 'lib', file);
     try {
       await readFile(p, 'utf8');

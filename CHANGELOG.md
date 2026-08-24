@@ -1,5 +1,14 @@
 # geo-cowork 变更记录
 
+## 2026-08-24 - M4 Diagnosis, Site & Asset Proposal（本地未发布）
+
+- 新增 M4 Schema/profile、三类 Gap 前置、Asset Proposal/Adoption/Publication 对象、三类派生 index 与 Proposal trace；
+- 新增本地 checksum manifest 驱动的九项站点检测、研究输入、multi-goal 单 Asset Proposal 和 Technical Retest；
+- 新增 `geo-diagnosis-cycle`、`geo-site`、`geo-reputation`、`geo-competitor`、`geo-content` 五个 Skill 与 `diagnosis.mjs`；
+- 实现只使用 `.invalid`/本地合成 Fixture，不包含真实 MyyShop 采集、外部写入、发布、部署或 M5 消费者平台复测；
+- M4 专项 20/20、全量 67 tests 与插件 54 项通过；建立 M4 Record 和 M2–M4 整体优化/M5 进入门 Handoff；
+- 当前插件 Manifest 仍为 0.3.0，本条是未发布源码变更，不构成版本发布记录。
+
 ## 2026-08-24 - M3 Knowledge & Query Operating System
 
 - 新增 M3 Schema、Document/Claim/Evidence/Answer Card/Knowledge Release/Query Set/Evidence Plan/Goal 契约与四个 Knowledge/Query Skills；

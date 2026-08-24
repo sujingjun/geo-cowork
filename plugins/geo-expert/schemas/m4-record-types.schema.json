@@ -1,0 +1,247 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://geo-cowork.local/schemas/m4-record-types-v1.json",
+  "$defs": {
+    "finding": {
+      "properties": {
+        "diagnosis_class": {
+          "enum": ["technical", "content_gap", "evidence_gap", "product_gap"]
+        },
+        "source_refs": { "$ref": "common#/$defs/stringArray" },
+        "approval": { "$ref": "common#/$defs/approval" },
+        "gap_basis": {
+          "type": "object",
+          "required": [
+            "supporting_evidence_refs",
+            "counter_evidence_refs",
+            "unresolved_conflicts",
+            "rationale"
+          ],
+          "properties": {
+            "supporting_evidence_refs": { "$ref": "common#/$defs/stringArray" },
+            "counter_evidence_refs": { "$ref": "common#/$defs/stringArray" },
+            "unresolved_conflicts": { "$ref": "common#/$defs/stringArray" },
+            "rationale": { "type": "string", "minLength": 1 }
+          },
+          "additionalProperties": false
+        },
+        "retest_of_ref": {
+          "type": "string",
+          "pattern": "^FND-(?:[A-Z0-9]+-)*[A-Z0-9]+$"
+        }
+      }
+    },
+    "asset": {
+      "properties": {
+        "asset_role": {
+          "enum": [
+            "about",
+            "homepage",
+            "faq",
+            "organization_schema",
+            "llms",
+            "answer_card",
+            "official_social",
+            "partner",
+            "media",
+            "community",
+            "other"
+          ]
+        },
+        "control_scope": {
+          "enum": ["own", "official_external", "partner", "media", "community", "user"]
+        },
+        "goal_refs": { "$ref": "common#/$defs/stringArray" },
+        "query_refs": { "$ref": "common#/$defs/stringArray" },
+        "claim_versions": {
+          "type": "array",
+          "items": { "$ref": "common#/$defs/refVersion" },
+          "uniqueItems": true
+        },
+        "knowledge_release_versions": {
+          "type": "array",
+          "items": { "$ref": "common#/$defs/refVersion" },
+          "uniqueItems": true
+        }
+      }
+    },
+    "evidence": {
+      "properties": {
+        "collection_state": { "enum": ["captured", "blocked", "unverifiable"] },
+        "access_state": { "enum": ["accessible", "blocked", "unverifiable"] },
+        "original_content_state": { "enum": ["captured", "missing", "not_applicable"] },
+        "support_kind": {
+          "enum": ["first_party", "user", "independent", "competitor", "platform_observation"]
+        },
+        "independent_support_refs": { "$ref": "common#/$defs/stringArray" },
+        "counter_evidence_refs": { "$ref": "common#/$defs/stringArray" },
+        "confidence": { "enum": ["high", "medium", "low", "unknown"] },
+        "confidence_reason": { "type": "string", "minLength": 1 },
+        "proof_scope": {
+          "enum": ["target_content", "collection_failure", "original_content", "metadata_only"]
+        },
+        "detector_code": { "type": "string", "pattern": "^[A-Z][A-Z0-9_]+$" }
+      }
+    },
+    "evidence_plan": {
+      "properties": {
+        "finding_refs": { "$ref": "common#/$defs/stringArray" },
+        "asset_refs": { "$ref": "common#/$defs/stringArray" },
+        "deployment_targets": { "$ref": "common#/$defs/stringArray" }
+      }
+    },
+    "run": {
+      "properties": {
+        "goal_refs": { "$ref": "common#/$defs/stringArray" },
+        "query_set_versions": {
+          "type": "array",
+          "items": { "$ref": "common#/$defs/refVersion" },
+          "uniqueItems": true
+        },
+        "knowledge_release_versions": {
+          "type": "array",
+          "items": { "$ref": "common#/$defs/refVersion" },
+          "uniqueItems": true
+        },
+        "publication_refs": { "$ref": "common#/$defs/stringArray" },
+        "retest_of_refs": { "$ref": "common#/$defs/stringArray" },
+        "development_fixture": { "type": "boolean" },
+        "manifest_fingerprint": { "$ref": "common#/$defs/sha256" },
+        "detector_results": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["code", "state", "rule_version", "message"],
+            "properties": {
+              "code": { "type": "string", "pattern": "^[A-Z][A-Z0-9_]+$" },
+              "state": { "enum": ["pass", "fail", "blocked", "unverifiable"] },
+              "rule_version": { "type": "string", "minLength": 1 },
+              "message": { "type": "string", "minLength": 1 }
+            },
+            "additionalProperties": false
+          }
+        }
+      }
+    },
+    "asset_proposal": {
+      "x-id-prefix": "PRP-",
+      "x-statuses": ["draft", "superseded"],
+      "required": [
+        "asset_ref",
+        "goal_refs",
+        "query_refs",
+        "finding_refs",
+        "knowledge_release_versions",
+        "claim_versions",
+        "evidence_refs",
+        "body_sha256",
+        "recommendation_items"
+      ],
+      "properties": {
+        "asset_ref": { "type": "string", "pattern": "^AST-(?:[A-Z0-9]+-)*[A-Z0-9]+$" },
+        "goal_refs": { "$ref": "common#/$defs/stringArray", "type": "array", "minItems": 1 },
+        "query_refs": { "$ref": "common#/$defs/stringArray", "type": "array", "minItems": 1 },
+        "finding_refs": { "$ref": "common#/$defs/stringArray", "type": "array", "minItems": 1 },
+        "knowledge_release_versions": {
+          "type": "array",
+          "items": { "$ref": "common#/$defs/refVersion" },
+          "minItems": 1,
+          "uniqueItems": true
+        },
+        "claim_versions": {
+          "type": "array",
+          "items": { "$ref": "common#/$defs/refVersion" },
+          "minItems": 1,
+          "uniqueItems": true
+        },
+        "evidence_refs": { "$ref": "common#/$defs/stringArray", "type": "array", "minItems": 1 },
+        "body_sha256": { "$ref": "common#/$defs/sha256" },
+        "recommendation_items": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "required": [
+              "item_id",
+              "section",
+              "action",
+              "claim_refs",
+              "evidence_refs",
+              "finding_refs",
+              "risk"
+            ],
+            "properties": {
+              "item_id": { "type": "string", "pattern": "^REC-(?:[A-Z0-9]+-)*[A-Z0-9]+$" },
+              "section": { "type": "string", "minLength": 1 },
+              "action": { "type": "string", "minLength": 1 },
+              "claim_refs": { "$ref": "common#/$defs/stringArray", "type": "array", "minItems": 1 },
+              "evidence_refs": { "$ref": "common#/$defs/stringArray", "type": "array", "minItems": 1 },
+              "finding_refs": { "$ref": "common#/$defs/stringArray", "type": "array", "minItems": 1 },
+              "risk": {
+                "type": "object",
+                "required": ["level", "type", "reason", "suggested_weakening"],
+                "properties": {
+                  "level": { "enum": ["low", "medium", "high", "critical"] },
+                  "type": {
+                    "enum": [
+                      "none",
+                      "unapproved_claim",
+                      "evidence_insufficient",
+                      "stale_evidence",
+                      "scope_limit",
+                      "conflict"
+                    ]
+                  },
+                  "reason": { "type": "string", "minLength": 1 },
+                  "suggested_weakening": { "type": "string", "minLength": 1 }
+                },
+                "additionalProperties": false
+              }
+            },
+            "additionalProperties": false
+          }
+        }
+      }
+    },
+    "adoption_record": {
+      "x-id-prefix": "ADR-",
+      "x-statuses": ["draft", "decided", "superseded"],
+      "required": ["proposal_ref", "asset_ref", "decisions"],
+      "properties": {
+        "proposal_ref": { "type": "string", "pattern": "^PRP-(?:[A-Z0-9]+-)*[A-Z0-9]+$" },
+        "asset_ref": { "type": "string", "pattern": "^AST-(?:[A-Z0-9]+-)*[A-Z0-9]+$" },
+        "decisions": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "required": ["item_id", "decision", "reason"],
+            "properties": {
+              "item_id": { "type": "string", "pattern": "^REC-(?:[A-Z0-9]+-)*[A-Z0-9]+$" },
+              "decision": { "enum": ["pending", "accepted", "modified", "rejected"] },
+              "reason": { "type": "string", "minLength": 1 },
+              "modified_text": { "type": "string" }
+            },
+            "additionalProperties": false
+          }
+        },
+        "approval": { "$ref": "common#/$defs/approval" }
+      }
+    },
+    "asset_publication": {
+      "x-id-prefix": "PUB-",
+      "x-statuses": ["draft", "confirmed", "withdrawn", "superseded"],
+      "required": ["proposal_ref", "adoption_ref", "asset_ref"],
+      "properties": {
+        "proposal_ref": { "type": "string", "pattern": "^PRP-(?:[A-Z0-9]+-)*[A-Z0-9]+$" },
+        "adoption_ref": { "type": "string", "pattern": "^ADR-(?:[A-Z0-9]+-)*[A-Z0-9]+$" },
+        "asset_ref": { "type": "string", "pattern": "^AST-(?:[A-Z0-9]+-)*[A-Z0-9]+$" },
+        "published_item_ids": { "$ref": "common#/$defs/stringArray" },
+        "published_locator": { "type": "string", "minLength": 1 },
+        "content_sha256": { "$ref": "common#/$defs/sha256" },
+        "published_at": { "$ref": "common#/$defs/rfc3339" },
+        "approval": { "$ref": "common#/$defs/approval" }
+      }
+    }
+  }
+}

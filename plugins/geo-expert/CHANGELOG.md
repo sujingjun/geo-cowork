@@ -1,5 +1,11 @@
 # geo-expert 变更记录
 
+## Unreleased — M4 Diagnosis, Site & Asset Proposal
+
+- 新增五个 M4 Skill、M4 Schema/模板、`diagnosis.mjs` 与确定性 profile/trace；
+- 新增本地 site/research manifest、九项 detector、Asset Proposal、draft Adoption/Publication 与 Technical Retest；
+- 不包含网络抓取、真实 MyyShop 采集、自动采用、自动发布或新插件版本发布；Manifest 保持 0.3.0。
+
 ## 0.3.0 — 2026-08-24（M2 Contract Kernel + M3 Knowledge/Query）
 
 ### M3 Knowledge & Query Operating System
