@@ -1,0 +1,57 @@
+{
+  "asset_refs": [
+    "AST-MYYSHOP-HOMEPAGE-001"
+  ],
+  "development_fixture": false,
+  "goal_refs": [
+    "GOAL-MYYSHOP-DEFINITION-001"
+  ],
+  "input_versions": {
+    "AST-MYYSHOP-HOMEPAGE-001": "1.0.0",
+    "CLM-MYYSHOP-AUDIENCE-001": "1.0.1",
+    "CLM-MYYSHOP-LIFECYCLE-SERVICE-001": "1.0.1",
+    "GOAL-MYYSHOP-DEFINITION-001": "1.0.1",
+    "KR-MYYSHOP-DEFINITION-001": "1.0.1",
+    "QS-MYYSHOP-DEFINITION-001": "1.0.1",
+    "SRC-MYYSHOP-WEB-HOMEPAGE-001": "1.0.0"
+  },
+  "knowledge_release_versions": [
+    {
+      "ref": "KR-MYYSHOP-DEFINITION-001",
+      "version": "1.0.1"
+    }
+  ],
+  "outputs": {
+    "CANONICAL": {
+      "evidence": {
+        "id": "EVD-MYYSHOP-SITE-HOMEPAGE-20260824-V101-CANONICAL",
+        "path": "evidence/records/evd-myyshop-site-homepage-20260824-v101-canonical.md"
+      },
+      "finding": {
+        "id": "FND-MYYSHOP-SITE-HOMEPAGE-20260824-V101-CANONICAL",
+        "path": "findings/fnd-myyshop-site-homepage-20260824-v101-canonical.md"
+      }
+    },
+    "CRAWLABILITY": {
+      "evidence": {
+        "id": "EVD-MYYSHOP-SITE-HOMEPAGE-20260824-V101-CRAWLABILITY",
+        "path": "evidence/records/evd-myyshop-site-homepage-20260824-v101-crawlability.md"
+      },
+      "finding": {
+        "id": "FND-MYYSHOP-SITE-HOMEPAGE-20260824-V101-CRAWLABILITY",
+        "path": "findings/fnd-myyshop-site-homepage-20260824-v101-crawlability.md"
+      }
+    }
+  },
+  "query_set_versions": [
+    {
+      "ref": "QS-MYYSHOP-DEFINITION-001",
+      "version": "1.0.1"
+    }
+  ],
+  "run": {
+    "id": "RUN-MYYSHOP-M4-SITE-HOMEPAGE-20260824-V101",
+    "path": "runs/RUN-MYYSHOP-M4-SITE-HOMEPAGE-20260824-V101/run.md"
+  },
+  "source_ref": "SRC-MYYSHOP-WEB-HOMEPAGE-001"
+}

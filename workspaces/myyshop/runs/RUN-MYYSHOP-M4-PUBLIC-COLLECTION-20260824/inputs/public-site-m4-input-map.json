@@ -1,0 +1,196 @@
+{
+  "schema_version": "m4-public-site-input-map-v1",
+  "output_root": "runs/RUN-MYYSHOP-M4-PUBLIC-COLLECTION-20260824/inputs/m4",
+  "development_fixture": false,
+  "shared": {
+    "goal_versions": [
+      { "ref": "GOAL-MYYSHOP-DEFINITION-001", "version": "1.0.1" }
+    ],
+    "query_set_versions": [
+      { "ref": "QS-MYYSHOP-DEFINITION-001", "version": "1.0.1" }
+    ],
+    "knowledge_release_versions": [
+      { "ref": "KR-MYYSHOP-DEFINITION-001", "version": "1.0.1" }
+    ],
+    "claim_versions": [
+      { "ref": "CLM-MYYSHOP-AUDIENCE-001", "version": "1.0.1" },
+      { "ref": "CLM-MYYSHOP-LIFECYCLE-SERVICE-001", "version": "1.0.1" }
+    ]
+  },
+  "site_defaults": {
+    "robots_target_id": "robots",
+    "sitemap_target_id": "sitemap-pages"
+  },
+  "site_targets": [
+    {
+      "target_id": "homepage",
+      "asset_ref": "AST-MYYSHOP-HOMEPAGE-001",
+      "source_ref": "SRC-MYYSHOP-WEB-HOMEPAGE-001",
+      "run_id": "RUN-MYYSHOP-M4-SITE-HOMEPAGE-20260824",
+      "output_id_prefix": "MYYSHOP-SITE-HOMEPAGE-20260824"
+    },
+    {
+      "target_id": "about-us",
+      "asset_ref": "AST-MYYSHOP-ABOUT-001",
+      "source_ref": "SRC-MYYSHOP-WEB-ABOUT-001",
+      "run_id": "RUN-MYYSHOP-M4-SITE-ABOUT-20260824",
+      "output_id_prefix": "MYYSHOP-SITE-ABOUT-20260824"
+    },
+    {
+      "target_id": "for-creators",
+      "asset_ref": "AST-MYYSHOP-FOR-CREATORS-001",
+      "source_ref": "SRC-MYYSHOP-WEB-FOR-CREATORS-001",
+      "run_id": "RUN-MYYSHOP-M4-SITE-FOR-CREATORS-20260824",
+      "output_id_prefix": "MYYSHOP-SITE-FOR-CREATORS-20260824"
+    },
+    {
+      "target_id": "brand-deals-opportunies",
+      "asset_ref": "AST-MYYSHOP-BRAND-DEALS-001",
+      "source_ref": "SRC-MYYSHOP-WEB-BRAND-DEALS-001",
+      "run_id": "RUN-MYYSHOP-M4-SITE-BRAND-DEALS-20260824",
+      "output_id_prefix": "MYYSHOP-SITE-BRAND-DEALS-20260824"
+    },
+    {
+      "target_id": "earn-from-every-view-myyfinds",
+      "asset_ref": "AST-MYYSHOP-MYYFINDS-001",
+      "source_ref": "SRC-MYYSHOP-WEB-MYYFINDS-001",
+      "run_id": "RUN-MYYSHOP-M4-SITE-MYYFINDS-20260824",
+      "output_id_prefix": "MYYSHOP-SITE-MYYFINDS-20260824"
+    }
+  ],
+  "research": {
+    "run_id": "RUN-MYYSHOP-M4-RESEARCH-PUBLIC-WEB-20260824",
+    "skill": "geo-reputation",
+    "asset_refs": [
+      "AST-MYYSHOP-HOMEPAGE-001",
+      "AST-MYYSHOP-ABOUT-001",
+      "AST-MYYSHOP-FOR-CREATORS-001",
+      "AST-MYYSHOP-BRAND-DEALS-001",
+      "AST-MYYSHOP-MYYFINDS-001",
+      "AST-MYYSHOP-LLMS-001",
+      "AST-MYYSHOP-LLMS-FULL-001"
+    ],
+    "observations": [
+      {
+        "target_id": "homepage",
+        "source_ref": "SRC-MYYSHOP-WEB-HOMEPAGE-001",
+        "evidence_id": "EVD-MYYSHOP-WEB-HOMEPAGE-20260824",
+        "evidence_path": "evidence/records/evd-myyshop-web-homepage-20260824.md",
+        "claim_refs": [
+          "CLM-MYYSHOP-AUDIENCE-001",
+          "CLM-MYYSHOP-LIFECYCLE-SERVICE-001"
+        ],
+        "confidence": "medium",
+        "confidence_reason": "MyyShop 官网首页公开原文已按 checksum 采集；其对现有 Claim 的支持范围仍待人工 reviewer 逐条核验。"
+      },
+      {
+        "target_id": "about-us",
+        "source_ref": "SRC-MYYSHOP-WEB-ABOUT-001",
+        "evidence_id": "EVD-MYYSHOP-WEB-ABOUT-20260824",
+        "evidence_path": "evidence/records/evd-myyshop-web-about-20260824.md",
+        "claim_refs": [
+          "CLM-MYYSHOP-AUDIENCE-001",
+          "CLM-MYYSHOP-LIFECYCLE-SERVICE-001"
+        ],
+        "confidence": "medium",
+        "confidence_reason": "MyyShop About Us 公开原文已按 checksum 采集；品牌与能力陈述仍须结合 Claim Scope 人工复核。"
+      },
+      {
+        "target_id": "for-creators",
+        "source_ref": "SRC-MYYSHOP-WEB-FOR-CREATORS-001",
+        "evidence_id": "EVD-MYYSHOP-WEB-FOR-CREATORS-20260824",
+        "evidence_path": "evidence/records/evd-myyshop-web-for-creators-20260824.md",
+        "claim_refs": [
+          "CLM-MYYSHOP-AUDIENCE-001",
+          "CLM-MYYSHOP-LIFECYCLE-SERVICE-001"
+        ],
+        "confidence": "medium",
+        "confidence_reason": "MyyShop For Creators 公开原文已按 checksum 采集；地区、资格、服务可用性与效果边界仍待人工复核。"
+      },
+      {
+        "target_id": "brand-deals-opportunies",
+        "source_ref": "SRC-MYYSHOP-WEB-BRAND-DEALS-001",
+        "evidence_id": "EVD-MYYSHOP-WEB-BRAND-DEALS-20260824",
+        "evidence_path": "evidence/records/evd-myyshop-web-brand-deals-20260824.md",
+        "claim_refs": [
+          "CLM-MYYSHOP-AUDIENCE-001",
+          "CLM-MYYSHOP-LIFECYCLE-SERVICE-001"
+        ],
+        "confidence": "medium",
+        "confidence_reason": "MyyShop Brand Deals 公开原文已按 checksum 采集；营销陈述不作为效果保证，Claim 支持范围待人工复核。"
+      },
+      {
+        "target_id": "earn-from-every-view-myyfinds",
+        "source_ref": "SRC-MYYSHOP-WEB-MYYFINDS-001",
+        "evidence_id": "EVD-MYYSHOP-WEB-MYYFINDS-20260824",
+        "evidence_path": "evidence/records/evd-myyshop-web-myyfinds-20260824.md",
+        "claim_refs": [
+          "CLM-MYYSHOP-AUDIENCE-001",
+          "CLM-MYYSHOP-LIFECYCLE-SERVICE-001"
+        ],
+        "confidence": "medium",
+        "confidence_reason": "MyyShop MyyFinds 公开原文已按 checksum 采集；收益、地区、资格与可用条件必须由人工 reviewer 保留限定。"
+      },
+      {
+        "target_id": "robots",
+        "source_ref": "SRC-MYYSHOP-WEB-ROBOTS-001",
+        "evidence_id": "EVD-MYYSHOP-WEB-ROBOTS-20260824",
+        "evidence_path": "evidence/records/evd-myyshop-web-robots-20260824.md",
+        "claim_refs": [],
+        "confidence": "high",
+        "confidence_reason": "官方 robots.txt 原文已按 checksum 采集；它只证明该时点声明，不证明任何平台实际抓取或引用。"
+      },
+      {
+        "target_id": "llms",
+        "source_ref": "SRC-MYYSHOP-WEB-LLMS-001",
+        "evidence_id": "EVD-MYYSHOP-WEB-LLMS-20260824",
+        "evidence_path": "evidence/records/evd-myyshop-web-llms-20260824.md",
+        "claim_refs": [
+          "CLM-MYYSHOP-AUDIENCE-001",
+          "CLM-MYYSHOP-LIFECYCLE-SERVICE-001"
+        ],
+        "confidence": "medium",
+        "confidence_reason": "官方 llms.txt 原文已按 checksum 采集；文件存在不等于消费者平台采用，Claim 支持范围仍待人工复核。"
+      },
+      {
+        "target_id": "llms-full",
+        "source_ref": "SRC-MYYSHOP-WEB-LLMS-FULL-001",
+        "evidence_id": "EVD-MYYSHOP-WEB-LLMS-FULL-20260824",
+        "evidence_path": "evidence/records/evd-myyshop-web-llms-full-20260824.md",
+        "claim_refs": [
+          "CLM-MYYSHOP-AUDIENCE-001",
+          "CLM-MYYSHOP-LIFECYCLE-SERVICE-001"
+        ],
+        "confidence": "medium",
+        "confidence_reason": "官方 llms-full.txt 原文已按 checksum 采集；长文本的事实、限定与 Claim 支持范围仍待人工复核。"
+      },
+      {
+        "target_id": "sitemap-index",
+        "source_ref": "SRC-MYYSHOP-WEB-SITEMAP-INDEX-001",
+        "evidence_id": "EVD-MYYSHOP-WEB-SITEMAP-INDEX-20260824",
+        "evidence_path": "evidence/records/evd-myyshop-web-sitemap-index-20260824.md",
+        "claim_refs": [],
+        "confidence": "high",
+        "confidence_reason": "官方 sitemap index 已按 checksum 采集；它只证明该时点索引声明，不扩展本轮 URL 授权。"
+      },
+      {
+        "target_id": "sitemap-pages",
+        "source_ref": "SRC-MYYSHOP-WEB-SITEMAP-PAGES-001",
+        "evidence_id": "EVD-MYYSHOP-WEB-SITEMAP-PAGES-20260824",
+        "evidence_path": "evidence/records/evd-myyshop-web-sitemap-pages-20260824.md",
+        "claim_refs": [],
+        "confidence": "high",
+        "confidence_reason": "官方 pages sitemap 已按 checksum 采集；它用于获授权页面检查，不把其中其他 URL 变成已授权目标。"
+      },
+      {
+        "target_id": "sitemap-blogs",
+        "source_ref": "SRC-MYYSHOP-WEB-SITEMAP-BLOGS-001",
+        "evidence_id": "EVD-MYYSHOP-WEB-SITEMAP-BLOGS-20260824",
+        "evidence_path": "evidence/records/evd-myyshop-web-sitemap-blogs-20260824.md",
+        "claim_refs": [],
+        "confidence": "high",
+        "confidence_reason": "官方 blogs sitemap 已按 checksum 采集；博客 URL 未在本轮自动展开或读取。"
+      }
+    ]
+  }
+}

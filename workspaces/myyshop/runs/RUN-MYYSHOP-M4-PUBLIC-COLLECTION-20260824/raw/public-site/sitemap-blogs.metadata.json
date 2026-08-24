@@ -1,0 +1,51 @@
+{
+  "byte_length": 10779,
+  "captured_at": "2026-08-24T20:24:33+08:00",
+  "collector": {
+    "mode": "public_http",
+    "name": "geo-cowork-public-site",
+    "version": "0.3.0"
+  },
+  "expectation": {
+    "expected_media_types": [
+      "application/xml",
+      "text/xml"
+    ],
+    "expected_statuses": [
+      200
+    ],
+    "media_type_met": true,
+    "status_met": true
+  },
+  "final_url": "https://www.myyshop.com/__sitemap__/blogs.xml",
+  "plan_fingerprint": "0b813aa643e74272302f7d0702c2185332ebf83121f2e65c9d3577951e8c103e",
+  "raw_retention_days": 90,
+  "redirects": [],
+  "request": {
+    "attempts": 1,
+    "headers": {
+      "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,text/plain;q=0.8,*/*;q=0.1",
+      "accept-language": "en-US,en;q=0.9",
+      "user-agent": "geo-cowork-m4/0.3.0"
+    },
+    "method": "GET",
+    "redirect_count": 0
+  },
+  "requested_url": "https://www.myyshop.com/__sitemap__/blogs.xml",
+  "response": {
+    "headers": {
+      "cache-control": "public, max-age=14400",
+      "content-type": "text/xml; charset=utf-8",
+      "last-modified": "Mon, 24 Aug 2026 11:51:43 GMT"
+    },
+    "status": 200,
+    "status_text": "OK"
+  },
+  "reviewer_role": "MyyShop Owner",
+  "schema_version": "1.0.0",
+  "sha256": "49a97542ec3f27145fb295222f2f4fa3c7c0601ccb85b9789499206fa73e38e7",
+  "snapshot_path": "runs/RUN-MYYSHOP-M4-PUBLIC-COLLECTION-20260824/raw/public-site/sitemap-blogs.xml",
+  "state": "captured",
+  "target_fingerprint": "4bfc26959c83587cbdf00589ae26189d390501098df0e335d3e7bed28adf1eda",
+  "target_id": "sitemap-blogs"
+}

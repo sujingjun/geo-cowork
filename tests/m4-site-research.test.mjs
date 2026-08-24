@@ -122,6 +122,20 @@ test('site detector 九项逐项覆盖 fail，robots 按最长匹配 Allow/Disal
   const malformedEvaluation = await evaluateSiteManifest({ workspace: root, manifest: malformedSitemap });
   assert.equal(malformedEvaluation.checks.find(({ code }) => code === 'SITEMAP').state, 'fail');
 
+  const styledSitemap = await writeSiteSnapshots(root, {
+    prefix: 'styled-sitemap-',
+    sitemap: [
+      '<?xml version="1.0" encoding="UTF-8"?>',
+      '<?xml-stylesheet type="text/xsl" href="/sitemap.xsl"?>',
+      '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">',
+      '<url><loc>https://brand.example.invalid/about</loc></url>',
+      '</urlset>',
+      '<!-- sitemap generator metadata -->',
+    ].join(''),
+  });
+  const styledEvaluation = await evaluateSiteManifest({ workspace: root, manifest: styledSitemap });
+  assert.equal(styledEvaluation.checks.find(({ code }) => code === 'SITEMAP').state, 'pass');
+
   const mismatchedSitemap = await writeSiteSnapshots(root, {
     prefix: 'mismatched-sitemap-',
     sitemap: '<urlset><url><loc>https://brand.example.invalid/about</loc></url></sitemapindex>',

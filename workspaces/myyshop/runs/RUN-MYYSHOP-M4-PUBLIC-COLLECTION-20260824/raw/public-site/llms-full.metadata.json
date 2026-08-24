@@ -1,0 +1,51 @@
+{
+  "byte_length": 59727,
+  "captured_at": "2026-08-24T20:24:33+08:00",
+  "collector": {
+    "mode": "public_http",
+    "name": "geo-cowork-public-site",
+    "version": "0.3.0"
+  },
+  "expectation": {
+    "expected_media_types": [
+      "text/plain"
+    ],
+    "expected_statuses": [
+      200
+    ],
+    "media_type_met": true,
+    "status_met": true
+  },
+  "final_url": "https://www.myyshop.com/llms-full.txt",
+  "plan_fingerprint": "0b813aa643e74272302f7d0702c2185332ebf83121f2e65c9d3577951e8c103e",
+  "raw_retention_days": 90,
+  "redirects": [],
+  "request": {
+    "attempts": 1,
+    "headers": {
+      "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,text/plain;q=0.8,*/*;q=0.1",
+      "accept-language": "en-US,en;q=0.9",
+      "user-agent": "geo-cowork-m4/0.3.0"
+    },
+    "method": "GET",
+    "redirect_count": 0
+  },
+  "requested_url": "https://www.myyshop.com/llms-full.txt",
+  "response": {
+    "headers": {
+      "cache-control": "public, max-age=14400",
+      "content-type": "text/plain; charset=utf-8",
+      "etag": "W/\"e94f-RFer+WIzKrLZ69OW8eEfS/SCAkk\"",
+      "last-modified": "Fri, 21 Aug 2026 03:30:17 GMT"
+    },
+    "status": 200,
+    "status_text": "OK"
+  },
+  "reviewer_role": "MyyShop Owner",
+  "schema_version": "1.0.0",
+  "sha256": "85f95a7bcdb103a38655e63ab3fdb71e715d2c7c72a0bc55e4cefe6265ab4b4c",
+  "snapshot_path": "runs/RUN-MYYSHOP-M4-PUBLIC-COLLECTION-20260824/raw/public-site/llms-full.txt",
+  "state": "captured",
+  "target_fingerprint": "592f8fe1efb513fb1f2401433c68a35125870cabc661949ead329191ac2a6e3d",
+  "target_id": "llms-full"
+}

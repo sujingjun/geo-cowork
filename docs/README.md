@@ -71,11 +71,13 @@
 
 | 类别 | 工件 | 状态 |
 | --- | --- | --- |
-| 启动 Handoff | [`handoff/2026-08-24-m4-diagnosis-site-asset-proposal-handoff.md`](handoff/2026-08-24-m4-diagnosis-site-asset-proposal-handoff.md) | verified；历史启动输入已执行，真实诊断仍未授权 |
-| Requirement / PRD / Architecture | [`requirements/2026-08-24-m4-diagnosis-site-asset-proposal.md`](requirements/2026-08-24-m4-diagnosis-site-asset-proposal.md) / [`prd/2026-08-24-m4-diagnosis-site-asset-proposal.md`](prd/2026-08-24-m4-diagnosis-site-asset-proposal.md) / [`architecture/2026-08-24-diagnosis-site-asset-proposal-architecture.md`](architecture/2026-08-24-diagnosis-site-asset-proposal-architecture.md) | approved；仅开放本地离线工程，真实执行、人工采用、发布与效果门分离 |
-| Spec / Plan / Task | [`specs/0005-diagnosis-site-asset-proposal.md`](specs/0005-diagnosis-site-asset-proposal.md) / [`plans/2026-08-24-m4-diagnosis-site-asset-proposal-plan.md`](plans/2026-08-24-m4-diagnosis-site-asset-proposal-plan.md) / [`tasks/2026-08-24-m4-diagnosis-site-asset-proposal.md`](tasks/2026-08-24-m4-diagnosis-site-asset-proposal.md) | approved / approved / verified；真实 MyyShop 采集不在授权内 |
+| 启动 Handoff | [`handoff/2026-08-24-m4-diagnosis-site-asset-proposal-handoff.md`](handoff/2026-08-24-m4-diagnosis-site-asset-proposal-handoff.md) | verified；历史启动输入已执行；该任务原本不授权真实诊断，后续公开采集由独立 Decision/Plan/Record 授权 |
+| Requirement / PRD / Architecture | [`requirements/2026-08-24-m4-diagnosis-site-asset-proposal.md`](requirements/2026-08-24-m4-diagnosis-site-asset-proposal.md) / [`prd/2026-08-24-m4-diagnosis-site-asset-proposal.md`](prd/2026-08-24-m4-diagnosis-site-asset-proposal.md) / [`architecture/2026-08-24-diagnosis-site-asset-proposal-architecture.md`](architecture/2026-08-24-diagnosis-site-asset-proposal-architecture.md) | approved；本地工程、后续公开只读执行、人工采用、发布与效果门保持分离 |
+| Spec / 原 Plan / 原 Task | [`specs/0005-diagnosis-site-asset-proposal.md`](specs/0005-diagnosis-site-asset-proposal.md) / [`plans/2026-08-24-m4-diagnosis-site-asset-proposal-plan.md`](plans/2026-08-24-m4-diagnosis-site-asset-proposal-plan.md) / [`tasks/2026-08-24-m4-diagnosis-site-asset-proposal.md`](tasks/2026-08-24-m4-diagnosis-site-asset-proposal.md) | approved / approved / verified；仅证明原离线实施范围 |
 | Acceptance Record | [`records/2026-08-24-m4-diagnosis-site-asset-proposal-record.md`](records/2026-08-24-m4-diagnosis-site-asset-proposal-record.md) | verified；仅限源码、脱敏 Fixture、只读 Workspace 兼容与派生 index |
-| 整体优化 Handoff | [`handoff/2026-08-24-m2-m4-integrated-optimization-handoff.md`](handoff/2026-08-24-m2-m4-integrated-optimization-handoff.md) | proposed；列出 M5 P0 阻塞点，不代表优化、M5 或真实采集获批 |
+| 公开采集 Plan / Task | [`plans/2026-08-24-m2-m4-optimization-and-myyshop-real-collection-plan.md`](plans/2026-08-24-m2-m4-optimization-and-myyshop-real-collection-plan.md) / [`tasks/2026-08-24-m2-m4-optimization-and-myyshop-real-collection.md`](tasks/2026-08-24-m2-m4-optimization-and-myyshop-real-collection.md) | approved / verified；只覆盖 11 个精确公开 URL 与直接相关优化 |
+| 公开采集与优化 Record | [`records/2026-08-24-m2-m4-optimization-and-myyshop-real-collection-record.md`](records/2026-08-24-m2-m4-optimization-and-myyshop-real-collection-record.md) | verified；11/11 快照、五页 Site Run、11 份 candidate 一方 Evidence；GA4/GSC/消费者平台/外部写入仍未授权 |
+| 整体优化 Handoff | [`handoff/2026-08-24-m2-m4-integrated-optimization-handoff.md`](handoff/2026-08-24-m2-m4-integrated-optimization-handoff.md) | proposed；记录已完成的直接优化、五层信源模型与 M5 P0；下一任务独立判断进入门 |
 
 ## 历史提案与交接
 
@@ -86,7 +88,7 @@
 | CodeBuddy 移除与 WorkBuddy 切换 Handoff | [`handoff/2026-08-20-milestone-1-hardening-workbuddy-china-handoff.md`](handoff/2026-08-20-milestone-1-hardening-workbuddy-china-handoff.md) | 历史 WorkBuddy 契约跟踪与 M1 收口基线 |
 | 原“Query 与知识” M2 Handoff | [`handoff/2026-08-20-query-and-knowledge-milestone-handoff.md`](handoff/2026-08-20-query-and-knowledge-milestone-handoff.md) | 已被 2026-08-23 产品基线重排；保留历史，不再作为当前 M2 启动指令 |
 
-M2–M4 的本地实现与验证已有各自 Record；下一任务只从整体优化 Handoff 评审。Record/Handoff 都不能自行提升 PRD、Spec、业务批准、真实采集、发布或部署状态。
+M2–M4 的本地实现、公开只读执行与边界已有各自 Record；下一任务依据最终产品方案、全部 Records 与整体优化 Handoff 独立评审。Record/Handoff 都不能自行提升 Evidence/Gap 人工批准、M5 实现、消费者平台采样、发布或部署状态。
 
 ## 现有目录
 

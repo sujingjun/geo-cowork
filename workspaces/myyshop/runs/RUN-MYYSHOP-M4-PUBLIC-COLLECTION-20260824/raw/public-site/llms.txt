@@ -1,0 +1,201 @@
+# MyyShop
+
+> MyyShop is an AI-driven global creator marketing platform that empowers creators to monetize their influence and grow their earnings through paid collaborations, free samples, and cash payouts.
+
+Canonical Origin: https://www.myyshop.com
+
+## LLM Resources
+
+- [Full Content](https://www.myyshop.com/llms-full.txt) Complete site content in markdown format for comprehensive understanding.
+- [sitemap.xml](https://www.myyshop.com/sitemap_index.xml) XML sitemap for search engines and crawlers.
+- [robots.txt](https://www.myyshop.com/robots.txt) Crawler rules and permissions.
+
+## Platform Overview
+
+MyyShop is a social commerce platform that enables creators, influencers, and content producers to:
+- Earn from brand collaborations with 100% paid opportunities
+- Receive free product samples for content creation
+- Get 100% cash payouts with transparent earnings
+- Build personalized storefronts (Bio pages) with AI assistance
+- Access thousands of products to sell on social media effortlessly
+- Connect with global brands through AI-powered matching
+
+## Key Features
+
+### Creator Tools
+- **Bio Pages**: Personalized storefronts with custom domains and branding
+- **Product Discovery**: AI-powered product recommendations based on niche and audience
+- **Content Creation**: Free samples and brand-sponsored opportunities
+- **Analytics Dashboard**: Real-time performance tracking and insights
+- **Wallet System**: Transparent earnings tracking and instant cash withdrawals
+
+### AI-Powered Services
+- **MyyCompass**: AI agent for niche discovery and audience insights
+- **Smart Recommendations**: AI-driven product and opportunity matching
+- **Content Optimization**: AI-assisted bio and product descriptions
+
+### Business Models
+- **Affiliate Marketing**: Earn commission from every order generated
+- **Brand Collaborations**: Paid partnerships with global brands
+- **Referral Program**: Earn by inviting other creators
+
+## Core Pages
+
+### Public Pages
+- [Home](https://www.myyshop.com/): Platform overview, features, and creator success stories. Start earning with MyyShop.
+- [About Us](https://www.myyshop.com/about-us): Learn about MyyShop's mission to empower creators through AI-driven monetization tools.
+- [For Creators](https://www.myyshop.com/for-creators): Landing page for creators to join the MyyShop network, review benefits, FAQs, and contact details.
+- [For Brands](https://www.myyshop.com/for-brands): Landing page for brands exploring TikTok Shop management, creator campaigns, livestream commerce, and contact options.
+- [Brand Deals & Opportunities](https://www.myyshop.com/brand-deals-opportunies): Discover how creators can access brand collaboration opportunities.
+- [Earn from Every View - MyyFinds](https://www.myyshop.com/earn-from-every-view-myyfinds): MyyFinds program for creators to earn from social content engagement.
+
+### Documentation
+- [Privacy Policy](https://www.myyshop.com/docs/privacy): Privacy policy and data protection information.
+- [Terms & Conditions](https://www.myyshop.com/docs/termsCondition): Platform terms of service and usage guidelines.
+
+### Authentication
+- [Login](https://www.myyshop.com/login): Sign in to creator dashboard.
+- [Register](https://www.myyshop.com/register): Join MyyShop as a creator or brand.
+
+### Creator Dashboard (Authentication Required)
+- [Creator Home](https://www.myyshop.com/admin/home): Creator dashboard with performance overview, earnings, and recommendations.
+- [Opportunities](https://www.myyshop.com/admin/opportunities): Browse and apply for brand collaboration opportunities.
+- [Offers](https://www.myyshop.com/admin/offers): Manage active brand deals and track progress.
+- [Profile Settings](https://www.myyshop.com/admin/profile): Update creator profile, social accounts, and payment information.
+- [Wallet](https://www.myyshop.com/admin/wallet): View earnings, transaction history, and request withdrawals.
+- [Refer & Earn](https://www.myyshop.com/admin/refer/earn): Invite creators and earn referral rewards.
+
+### Bio Storefront System
+- [Create Bio Page](https://www.myyshop.com/shop/create): Set up your personalized creator storefront.
+- [Bio Admin](https://www.myyshop.com/shop/admin): Manage your Bio page content, products, and appearance.
+- [Product Selection](https://www.myyshop.com/shop/products): Browse and add products to your storefront.
+- [Bio Preview](https://www.myyshop.com/shop/preview): Preview your Bio page before publishing.
+- [Bio Insights](https://www.myyshop.com/shop/insight): Analytics for Bio page performance and visitor engagement.
+  - [Bio Pages](https://myyfinds.io/[bioname]): Public creator storefronts (replace [bioname] with creator username).
+
+### AI Agent Services
+- [MyyCompass Chat](https://www.myyshop.com/chat): AI-powered assistant for niche discovery and creator guidance.
+- [AI Chatbot](https://www.myyshop.com/agent/chatbot): Interactive AI agent for creator support and insights.
+
+### Blog & Content
+- [Blog Home](https://www.myyshop.com/blog): Creator stories, tips, and platform updates.
+- [Blog Articles](https://www.myyshop.com/blog/[blogName]): Individual blog posts (replace [blogName] with article slug).
+
+### Campaign Pages
+- [MyyFinds Introduction](https://www.myyshop.com/myyfinds-introduction): Learn about the MyyFinds creator program.
+- [MyyFinds Win the Cash](https://www.myyshop.com/myyfinds-win-the-cash): Participate in cash reward campaigns.
+- [Quick Tasks Earn Cash](https://www.myyshop.com/campaign/quick-tasks-earn-cash): Complete tasks for instant cash rewards.
+- [Season Prize Campaign](https://www.myyshop.com/campaign/season-prize): Seasonal creator contests and prizes.
+- [MyyFinds Task Hub](https://www.myyshop.com/campaign/myyfinds-task): Task-based earning opportunities for creators.
+
+### MCN & Partnership
+- [MCN Affiliate Program](https://www.myyshop.com/mcnaffiliate): Multi-channel network partnership opportunities.
+
+### Reports & Analytics (Authentication Required)
+- [Report Center](https://www.myyshop.com/report): Business intelligence and performance reports.
+- [Report Details](https://www.myyshop.com/report/detail/[id]): Detailed analytics reports (authentication required).
+
+## Target Audience
+
+### Primary Users
+- **Content Creators**: TikTok, Instagram, YouTube, and other social media influencers
+- **Micro-Influencers**: Creators with 1K-100K followers looking to monetize
+- **Nano-Influencers**: Emerging creators starting their monetization journey
+- **Brands**: Companies seeking authentic creator partnerships
+- **MCN Agencies**: Talent management and creator networks
+
+### Geographic Focus
+- Global platform with primary markets in North America, Europe, and Asia
+- Multi-language support through i18n
+- Localized content and opportunities
+
+## Business Value Propositions
+
+### For Creators
+- **Zero Cost Entry**: Free to join, no subscription fees
+- **100% Paid Opportunities**: All collaborations are compensated
+- **Free Product Samples**: Receive products for authentic reviews
+- **100% Cash Payouts**: Transparent earnings with no hidden fees
+- **AI-Powered Matching**: Smart opportunity recommendations
+- **Flexible Monetization**: Multiple earning streams (affiliate, brand deals, referrals)
+
+### For Brands
+- **Authentic Reach**: Connect with genuine creator audiences
+- **Performance-Based**: Pay for actual results and engagement
+- **Global Network**: Access creators worldwide
+- **AI Matching**: Find creators aligned with brand values
+- **Transparent Metrics**: Real-time campaign performance tracking
+
+## Technical Stack
+
+- **Framework**: Nuxt 3 (Vue 3 + SSR)
+- **UI Libraries**: Element Plus (Desktop), Vant (Mobile)
+- **CSS**: UnoCSS, Tailwind CSS, SCSS
+- **State Management**: Pinia
+- **i18n**: @nuxtjs/i18n for multilingual support
+- **SEO**: @nuxtjs/sitemap, Schema.org structured data
+- **Monitoring**: Sentry error tracking
+- **AI Integration**: Model Context Protocol (MCP) compatible
+
+## SEO & Discovery
+
+### Structured Data
+- Organization Schema for platform identity
+- Article Schema for blog content
+- Product Schema for featured items
+- Person Schema for creator Bio pages
+- Review Schema for testimonials
+
+### Search Optimization
+- Dynamic sitemap generation for blogs and Bio pages
+- Optimized meta tags for all public pages
+- Open Graph tags for social sharing
+- Mobile-first responsive design
+- Fast page load with Nuxt SSR
+
+## API & Integration
+
+### Available Integrations
+- Social media platform authentication (TikTok, Instagram, YouTube)
+- Payment gateways for instant payouts
+- Analytics and tracking systems
+- Email notifications
+- Webhook support for real-time updates
+
+### Developer Resources
+- RESTful API endpoints
+- Authentication via OAuth and JWT
+- Real-time data sync
+- Comprehensive error handling
+
+## Support & Resources
+
+### Creator Resources
+- Getting started guides
+- Video tutorials and masterclasses
+- Success stories and case studies
+- FAQ and help center
+- Community support
+
+### Official Resource Sites
+- [MyyShop Blog](https://www.myyshop.com/blog) - Creator insights and platform content.
+- [MyyShop Academy](https://academy.myyshop.com/) - Learning resources for creators.
+- [MyyShop Newsroom](https://newsroom.myyshop.com/) - Official news and stories.
+- [What's New](https://whatsnew.myyshop.com/) - Product and platform updates.
+
+### Contact & Help
+- In-platform support chat
+- Email support
+- AI-powered chatbot assistance
+- Creator success team
+
+## Platform Status
+- **Environment**: Production
+- **Version**: Latest (see /version.json)
+- **Availability**: 24/7 global access
+- **Maintenance**: Scheduled updates with advance notice
+
+---
+
+Last Updated: 2026-06-09
+Platform: MyyShop - Social Commerce for Creators

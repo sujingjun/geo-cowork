@@ -1,0 +1,1749 @@
+# MyyShop - Complete Platform Documentation for LLMs
+
+> MyyShop is an AI-driven global creator marketing platform that empowers creators to monetize their influence through paid collaborations, free samples, and transparent cash payouts.
+
+**Canonical Origin**: https://www.myyshop.com
+**Last Updated**: 2026-06-09
+**Platform Type**: Social Commerce & Creator Marketing Platform
+**Target Users**: Content Creators, Influencers, Brands, MCN Agencies
+
+---
+
+## Table of Contents
+
+1. [Platform Overview](#platform-overview)
+2. [Core Business Models](#core-business-models)
+3. [Creator Journey](#creator-journey)
+4. [Key Features & Modules](#key-features--modules)
+5. [Technical Architecture](#technical-architecture)
+6. [Page Structure & Routes](#page-structure--routes)
+7. [User Roles & Permissions](#user-roles--permissions)
+8. [Monetization Mechanisms](#monetization-mechanisms)
+9. [AI-Powered Services](#ai-powered-services)
+10. [SEO & Discovery Strategy](#seo--discovery-strategy)
+11. [Integration & APIs](#integration--apis)
+12. [Support & Resources](#support--resources)
+
+---
+
+## Platform Overview
+
+### Mission Statement
+MyyShop revolutionizes creator monetization by providing an AI-driven platform where creators can effortlessly earn from their social influence through multiple income streams, including brand collaborations, affiliate marketing, and direct sales.
+
+### Core Value Propositions
+
+#### For Creators
+- **100% Paid Collaborations**: Every brand partnership is compensated
+- **100% Free Samples**: Receive products at no cost for authentic content creation
+- **100% Cash Payouts**: Transparent earnings without hidden fees or deductions
+- **Zero Entry Barriers**: Free to join, no subscription or setup costs
+- **AI-Powered Matching**: Smart algorithm matches creators with relevant opportunities
+- **Multiple Revenue Streams**: Combine affiliate, sponsorship, and referral earnings
+- **Global Reach**: Access to international brands and products
+
+#### For Brands
+- **Authentic Creator Network**: Connect with genuine influencers and their engaged audiences
+- **Performance Tracking**: Real-time analytics on campaign performance and ROI
+- **Flexible Budgeting**: Campaigns for all budget sizes
+- **AI-Driven Targeting**: Find creators aligned with brand values and target demographics
+- **Quality Assurance**: Vetted creator community with performance metrics
+- **Global Distribution**: Reach audiences worldwide through diverse creators
+
+### Platform Statistics
+- **Creator Network**: Thousands of active creators across social platforms
+- **Brand Partners**: Global brands across fashion, beauty, tech, home, and lifestyle
+- **Geographic Reach**: North America, Europe, Asia, and expanding globally
+- **Product Catalog**: Tens of thousands of products available for promotion
+- **Average Creator Earnings**: Competitive rates with top performers earning significant monthly income
+
+---
+
+## Core Business Models
+
+### 1. Affiliate Marketing
+Creators earn commission on every sale generated through their unique Bio page links or social content.
+
+**How It Works**:
+1. Creator selects products from the catalog
+2. Products are added to their Bio storefront
+3. Creator shares Bio link or product links on social media
+4. Followers purchase through creator's links
+5. Creator earns commission on successful transactions
+6. Earnings tracked in real-time in creator wallet
+
+**Commission Structure**:
+- Variable commission rates based on product category and brand partnership
+- Transparent commission display before product selection
+- No hidden fees or deductions
+- Monthly or instant payouts available
+
+### 2. Brand Collaborations (Paid Opportunities)
+Creators receive direct compensation for creating content featuring brand products.
+
+**Opportunity Types**:
+- **Sponsored Posts**: Create social content featuring brand products
+- **Product Reviews**: Authentic reviews and demonstrations
+- **Unboxing Videos**: Product reveals and first impressions
+- **Tutorial Content**: How-to guides using brand products
+- **Brand Ambassador**: Long-term partnership agreements
+
+**Collaboration Process**:
+1. Browse available opportunities in Opportunities page
+2. Apply to relevant campaigns matching creator niche
+3. Get selected by brand (AI-assisted matching)
+4. Receive free product sample and collaboration brief
+5. Create and submit content per brand guidelines
+6. Get paid upon content approval and publishing
+7. Earn additional commission from sales generated
+
+### 3. Referral Program (Refer & Earn)
+Creators earn rewards by inviting other creators to join MyyShop.
+
+**Referral Benefits**:
+- **Sign-up Bonus**: Earn when referred creator completes registration
+- **Activity Rewards**: Earn when referrals complete their first collaboration
+- **Lifetime Earnings**: Some programs offer percentage of referral's earnings
+- **Tiered Rewards**: Higher earnings for referring top-performing creators
+
+### 4. Campaign & Task-Based Earnings
+Short-term, task-based opportunities for quick cash rewards.
+
+**Campaign Types**:
+- **Quick Tasks**: Simple actions like following, sharing, commenting
+- **Seasonal Campaigns**: Holiday and event-specific promotions
+- **Challenge Contests**: Creator competitions with prize pools
+- **MyyFinds Tasks**: Earn by discovering and sharing trending products
+
+---
+
+## Creator Journey
+
+### Phase 1: Registration & Onboarding
+**Entry Point**: `/register` or homepage "Start Earning" CTA
+
+**Steps**:
+1. **Account Creation**: Email or social login (TikTok, Instagram, Google)
+2. **Profile Setup**: Basic information (name, email, location)
+3. **Social Verification**: Connect at least one social media account
+4. **Niche Selection**: Choose content category (fashion, beauty, tech, lifestyle, etc.)
+5. **Audience Insights**: Provide follower count and engagement metrics
+6. **Welcome Tutorial**: Platform overview and feature walkthrough
+
+**AI Assistance**:
+- **MyyCompass Integration**: AI agent helps creators discover their optimal niche
+- **Smart Recommendations**: Personalized opportunity suggestions from day one
+- **Profile Optimization Tips**: AI-powered advice for improving profile completeness
+
+### Phase 2: Bio Page Creation
+**Entry Point**: `/shop/create`
+
+**Bio Page Elements**:
+- **Profile Header**: Avatar, display name, bio description
+- **Social Links**: Connected Instagram, TikTok, YouTube, etc.
+- **Product Showcase**: Curated product collection
+- **Content Highlights**: Featured social posts and videos
+- **Contact Options**: Email, DM links for collaborations
+- **Custom Branding**: Colors, fonts, and layout customization
+
+**Customization Options**:
+- Drag-and-drop product arrangement
+- Custom bio descriptions (AI writing assistance available)
+- Theme selection (multiple templates)
+- Custom domain support (premium feature)
+- Analytics widget integration
+
+**AI Features**:
+- **Product Recommendations**: AI suggests products based on creator niche
+- **Bio Optimization**: AI rewrites bio for better conversion
+- **SEO Suggestions**: Keywords and descriptions for discoverability
+
+### Phase 3: Product Discovery & Selection
+**Entry Point**: `/shop/products`
+
+**Product Browsing**:
+- **Category Filters**: Fashion, Beauty, Tech, Home, Lifestyle, etc.
+- **Price Range Filters**: Find products matching audience budget
+- **Commission Filters**: Sort by earning potential
+- **Trending Products**: Popular items with high conversion
+- **New Arrivals**: Latest products added to catalog
+- **Brand Filters**: Filter by specific brand partnerships
+
+**Product Details**:
+- High-quality images and videos
+- Detailed descriptions and specifications
+- Commission rate and earning potential
+- Historical performance data
+- Creator reviews and ratings
+- Inventory availability
+
+**Selection Process**:
+1. Browse or search products
+2. View detailed product information
+3. Check commission and earning potential
+4. Add products to Bio storefront
+5. Customize product positioning
+6. Preview how products appear on Bio page
+7. Publish and share
+
+### Phase 4: Content Creation & Collaboration
+**Entry Point**: `/admin/opportunities` and `/admin/offers`
+
+**Opportunity Discovery**:
+- **Browse Opportunities**: View all available brand collaborations
+- **AI Recommendations**: Personalized opportunity matching
+- **Filter Options**: By category, budget, timeline, requirements
+- **Application Process**: One-click apply or detailed proposal submission
+
+**Collaboration Workflow**:
+1. **Discovery**: Find relevant opportunity
+2. **Application**: Submit application with portfolio samples
+3. **Selection**: Brand reviews and selects creators
+4. **Briefing**: Receive detailed collaboration brief and guidelines
+5. **Sample Shipping**: Free product shipped to creator
+6. **Content Creation**: Create content per brand requirements
+7. **Submission**: Upload content for brand approval
+8. **Revision** (if needed): Make requested changes
+9. **Approval**: Content approved by brand
+10. **Publishing**: Post content on social platforms
+11. **Tracking**: Monitor engagement and sales performance
+12. **Payment**: Receive payment to wallet
+
+**Content Guidelines**:
+- Platform and brand-specific content requirements
+- Disclosure requirements (FTC compliance)
+- Quality standards and best practices
+- Timeline and deadline management
+- Revision policy and iterations
+
+### Phase 5: Earnings & Analytics
+**Entry Point**: `/admin/wallet` and `/shop/insight`
+
+**Wallet Features**:
+- **Current Balance**: Real-time earnings display
+- **Pending Earnings**: Awaiting confirmation transactions
+- **Transaction History**: Detailed earning records
+- **Withdrawal Options**: Multiple payout methods
+- **Tax Documentation**: Earnings reports and tax forms
+- **Payment Methods**: PayPal, bank transfer, etc.
+
+**Analytics Dashboard**:
+- **Traffic Sources**: Where Bio visitors are coming from
+- **Click-Through Rates**: Product link performance
+- **Conversion Rates**: Purchase completion rates
+- **Revenue Breakdown**: Earnings by source (affiliate, sponsorship, referral)
+- **Top Products**: Best-performing products
+- **Audience Insights**: Visitor demographics and behavior
+- **Growth Trends**: Historical performance charts
+
+### Phase 6: Growth & Optimization
+**Continuous Improvement**:
+- **A/B Testing**: Test different Bio layouts and product arrangements
+- **Content Strategy**: AI-powered content recommendations
+- **Niche Expansion**: Explore new product categories
+- **Skill Development**: Access tutorials and masterclasses
+- **Community Engagement**: Connect with other creators
+- **Success Stories**: Learn from top performers
+
+---
+
+## Key Features & Modules
+
+### 1. Bio Storefront System
+**Module**: Bio Layer (`layers/bio/`)
+
+**Purpose**: Personalized creator storefronts for product showcasing and sales
+
+**Key Pages**:
+- **Create Bio** (`/shop/create`): Initial Bio setup and onboarding
+- **Bio Admin** (`/shop/admin`): Manage Bio content, products, and settings
+- **Bio Preview** (`/shop/preview`): Preview Bio before publishing
+- **Product Selection** (`/shop/products`): Browse and add products
+- **Bio Insights** (`/shop/insight`): Performance analytics
+  - **Public Bio** (myyfinds.io/[bioname]): Customer-facing storefront
+
+**Features**:
+- Custom branding and theming
+- Drag-and-drop product management
+- Social media integration
+- Analytics and tracking
+- Mobile-optimized display
+- SEO optimization with Schema.org markup
+- Custom domain support
+- Product search and filtering
+
+**Technical Implementation**:
+- SSR-rendered for SEO
+- Dynamic routing for custom bionames
+- Real-time data sync with Pinia store
+- Responsive design (desktop and mobile)
+- Schema.org Person and Product markup
+- Image optimization and lazy loading
+
+### 2. Creator Dashboard
+**Module**: Creator Layer (`layers/creator/`)
+
+**Purpose**: Central hub for creator activities, earnings, and opportunities
+
+**Key Pages**:
+- **Home** (`/admin/home`): Dashboard overview with KPIs and recommendations
+- **Opportunities** (`/admin/opportunities`): Browse and apply for brand collaborations
+- **Offers** (`/admin/offers`): Manage active and completed collaborations
+- **Profile** (`/admin/profile`): Account settings and social connections
+  - Account settings
+  - Social media connections
+  - Payment information
+  - Address management
+- **Wallet** (`/admin/wallet`): Earnings, transactions, and withdrawals
+- **Refer & Earn** (`/admin/refer/earn`): Referral program dashboard
+- **Campaign** (`/admin/campaign`): Active campaigns and rewards
+
+**Dashboard Widgets**:
+- **Performance Summary**: Total earnings, clicks, conversions
+- **Pending Actions**: Applications awaiting response, content due dates
+- **Recommendations**: AI-suggested opportunities and products
+- **Recent Activity**: Latest earnings and interactions
+- **Top Products**: Best-performing products in Bio
+- **Notifications**: Platform updates and messages
+
+**Features**:
+- Real-time data updates
+- Push notifications
+- Quick actions and shortcuts
+- Personalized recommendations
+- Mobile app support (coming soon)
+- Multi-language support
+
+### 3. AI Agent Services (MyyCompass)
+**Module**: Agent Layer (`layers/agent/`)
+
+**Purpose**: AI-powered guidance for niche discovery and creator success
+
+**Key Pages**:
+- **Chat Interface** (`/chat`): Main conversation UI
+- **Chatbot Admin** (`/agent/chatbot`): Configure AI agent preferences
+- **Chat Results** (`/chat/results`): Historical conversations and insights
+- **Talking** (`/chat/talking`): Active conversation session
+
+**AI Capabilities**:
+- **Niche Discovery**: Help creators find their optimal content category
+- **Product Recommendations**: Suggest products based on creator profile
+- **Content Ideas**: Generate content concepts and strategies
+- **Audience Analysis**: Insights about target audience preferences
+- **Opportunity Matching**: Recommend relevant brand collaborations
+- **Performance Tips**: Actionable advice for improving metrics
+- **Competitor Analysis**: Insights on similar creators' strategies
+
+**MyyCompass Features**:
+- Natural language conversation
+- Context-aware responses
+- Multi-turn dialogue support
+- Visual data presentation
+- Export insights and recommendations
+- Integration with creator dashboard
+
+**AI Models**:
+- GPT-4 for conversational AI
+- Custom recommendation algorithms
+- Machine learning for opportunity matching
+- Predictive analytics for performance forecasting
+
+### 4. Blog & Content Hub
+**Module**: Blog Layer (`layers/blog/`)
+
+**Purpose**: Educational content, creator stories, and platform updates
+
+**Key Pages**:
+- **Blog Home** (`/blog`): Latest articles and featured content
+- **Article Pages** (`/blog/[blogName]`): Individual blog posts
+- **Preview** (`/previewblog`): Article preview before publishing (admin)
+
+**Content Categories**:
+- **Creator Success Stories**: Interviews and case studies
+- **How-To Guides**: Tutorials on platform features
+- **Industry Insights**: Social commerce trends and tips
+- **Platform Updates**: New features and announcements
+- **Marketing Strategies**: Content creation best practices
+- **Product Spotlights**: Featured brand partnerships
+
+**SEO Optimization**:
+- Article Schema.org markup
+- Optimized meta descriptions
+- Social sharing (Open Graph)
+- Breadcrumb navigation
+- Author attribution
+- Publication dates and updates
+- Dynamic sitemap generation
+
+**Blog Features**:
+- Rich text formatting
+- Embedded images and videos
+- Related articles recommendations
+- Social sharing buttons
+- Comments and engagement (coming soon)
+- Newsletter subscription
+- Search functionality
+
+### 5. Campaign & Events System
+**Module**: Bio Layer (`layers/bio/pages/campaign/`)
+
+**Purpose**: Time-limited campaigns and creator challenges
+
+**Active Campaigns**:
+- **MyyFinds Introduction** (`/myyfinds-introduction`): Learn about MyyFinds program
+- **Win the Cash** (`/myyfinds-win-the-cash`): Cash prize competitions
+- **Quick Tasks** (`/campaign/quick-tasks-earn-cash`): Fast earning opportunities
+- **Season Prize** (`/campaign/season-prize`): Seasonal contests
+- **MyyFinds Tasks** (`/campaign/myyfinds-task`): Product discovery challenges
+
+**Campaign Types**:
+- **Contests & Challenges**: Creator competitions with leaderboards
+- **Limited-Time Offers**: Exclusive brand collaborations
+- **Seasonal Promotions**: Holiday and event-specific campaigns
+- **Task-Based Earnings**: Complete actions for instant rewards
+- **Community Events**: Collaborative creator activities
+
+**Gamification Elements**:
+- Leaderboards and rankings
+- Achievement badges
+- Progress tracking
+- Milestone rewards
+- Social sharing and referrals
+
+### 6. Authentication & User Management
+**Module**: Auth Layer (`layers/auth/`)
+
+**Purpose**: Secure user authentication and account management
+
+**Key Pages**:
+- **Login** (`/login`): Sign in with email or social accounts
+- **Register** (`/register`): Create new creator account
+- **Forgot Password** (`/forgotpassword`): Password recovery
+- **Reset Password** (`/resetpassword`): Set new password
+- **Registration Activation** (`/regActivated`): Verify email
+- **Password Activation** (`/pwdActivated`): Confirm password change
+- **OAuth Callback** (`/login/callback`): Social login redirect
+
+**Authentication Methods**:
+- Email and password
+- Social OAuth (TikTok, Instagram, Google, Facebook)
+- Magic link (passwordless)
+- Two-factor authentication (2FA)
+
+**Security Features**:
+- JWT token-based auth
+- Secure session management
+- Password encryption
+- Rate limiting on login attempts
+- HTTPS-only cookies
+- CSRF protection
+
+**Account Verification**:
+- Email verification required
+- Social account connection
+- Phone verification (optional)
+- Identity verification for high earners
+
+### 7. MCN & Partnership Program
+**Module**: MCN Layer (`layers/mcn/`)
+
+**Purpose**: Multi-channel network and agency partnerships
+
+**Key Pages**:
+- **MCN Affiliate** (`/mcnaffiliate`): MCN partnership overview and application
+
+**MCN Features**:
+- Bulk creator onboarding
+- Agency dashboard
+- Commission management
+- Creator performance tracking
+- White-label options
+- API access for integration
+
+**Partnership Benefits**:
+- Higher commission rates
+- Priority support
+- Dedicated account manager
+- Custom campaigns
+- Advanced analytics
+- Payment consolidation
+
+### 8. Reporting & Analytics
+**Module**: Report Layer (`layers/report/`)
+
+**Purpose**: Business intelligence and performance reporting
+
+**Key Pages**:
+- **Report Center** (`/report`): Main reporting dashboard
+- **Report Details** (`/report/detail/[id]`): Detailed report view
+
+**Report Types**:
+- **Revenue Reports**: Earnings breakdown by source
+- **Performance Reports**: Traffic, clicks, conversions
+- **Product Reports**: Best and worst-performing products
+- **Campaign Reports**: Brand collaboration outcomes
+- **Referral Reports**: Referral program performance
+- **Audience Reports**: Visitor demographics and behavior
+
+**Export Options**:
+- PDF reports
+- Excel spreadsheets
+- CSV data export
+- Scheduled email reports
+
+---
+
+## Technical Architecture
+
+### Frontend Stack
+
+**Framework**: Nuxt 3.16.2+
+- Vue 3.5+ with Composition API
+- TypeScript support (with JS fallback)
+- SSR (Server-Side Rendering) for SEO
+- File-based routing
+- Auto-imported components
+
+**UI Frameworks**:
+- **Desktop**: Element Plus (comprehensive component library)
+- **Mobile**: Vant (mobile-first components)
+- **Strategy**: Conditional rendering based on device detection
+
+**Styling**:
+- **UnoCSS**: Atomic CSS engine (high performance, on-demand)
+- **Tailwind CSS**: Utility-first CSS framework
+- **SCSS**: For complex component styling
+- **Design Tokens**: Centralized theme variables in `@/assets/css/vars.module.scss`
+
+**State Management**:
+- **Pinia**: Vue state management (Vuex successor)
+- **Persistence**: Local storage sync for user preferences
+- **Modular Stores**: Organized by business domain
+
+**HTTP Client**:
+- **Axios**: Promise-based HTTP client
+- **Interceptors**: Auth token injection, error handling
+- **API Layer**: Organized by business module (`api/`, `layers/*/api/`)
+
+**Utilities**:
+- **VueUse**: Collection of Vue Composition utilities
+- **dayjs**: Lightweight date manipulation
+- **lodash-es**: Utility functions (tree-shakable)
+
+### Backend Stack
+
+**Runtime**: Node.js 18.17.1+
+
+**Server**: Nitro (Nuxt 3 server engine)
+- Universal JavaScript
+- API routes in `server/api/`
+- Middleware in `server/middleware/`
+- Utilities in `server/utils/`
+
+**Database**: (Not directly exposed in frontend)
+- Assumed relational DB (MySQL/PostgreSQL)
+- API-driven data access
+
+**Caching**:
+- Server-side caching for API responses
+- CDN caching for static assets
+- Browser caching strategies
+
+### Build & Development
+
+**Package Manager**: pnpm (required)
+- Fast, disk space efficient
+- Strict dependency management
+- Monorepo-friendly
+
+**Build Tool**: Vite (built into Nuxt 3)
+- Lightning-fast HMR (Hot Module Replacement)
+- Optimized production builds
+- Plugin ecosystem
+
+**Code Quality**:
+- **ESLint**: Code linting and style enforcement
+- **Prettier**: Code formatting
+- **Husky**: Git hooks for pre-commit checks
+- **lint-staged**: Run linters on staged files
+
+**Testing**:
+- **Vitest**: Unit and integration testing
+- **E2E** (planned): Playwright or Cypress
+
+### Deployment
+
+**Environments**:
+- **Local**: `pnpm local` (http://localhost:3000)
+- **Development**: `pnpm dev`
+- **Test/Staging**: `pnpm test`
+- **Production**: `pnpm build` → `pnpm start`
+
+**Infrastructure**:
+- Server-side rendering (SSR) hosting
+- CDN for static assets
+- Environment-specific configurations
+
+**Monitoring**:
+- **Sentry**: Error tracking and performance monitoring
+- **Analytics**: Google Analytics, custom tracking
+
+### Layers Architecture
+
+MyyShop uses Nuxt Layers for modular business domain separation:
+
+```
+layers/
+├── bio/          # Bio storefront system
+├── creator/      # Creator dashboard and tools
+├── agent/        # AI agent services
+├── auth/         # Authentication and user management
+├── mcn/          # MCN and partnership features
+├── report/       # Reporting and analytics
+└── blog/         # Content and blog system
+```
+
+**Layer Benefits**:
+- **Modularity**: Clear separation of concerns
+- **Reusability**: Shared components and logic
+- **Scalability**: Easy to add new business modules
+- **Team Collaboration**: Multiple teams can work independently
+- **Code Organization**: Reduced coupling between features
+
+**Each Layer Contains**:
+- `pages/`: Route pages
+- `components/`: Layer-specific components
+- `composables/`: Business logic hooks
+- `api/`: API endpoint definitions
+- `store/`: Pinia state stores
+- `hooks/`: Shared business logic
+- `assets/`: Layer-specific assets
+- `utils/`: Utility functions
+
+### SEO Architecture
+
+**Meta Management**:
+- Dynamic meta tags per page using `useHead()`
+- Open Graph tags for social sharing
+- Twitter Card metadata
+- Canonical URLs
+- Hreflang for i18n
+
+**Structured Data**:
+- Organization Schema (site-wide)
+- Person Schema (creator Bio pages)
+- Article Schema (blog posts)
+- Product Schema (product pages)
+- FAQPage Schema (FAQ sections)
+- Review Schema (testimonials)
+
+**Sitemap**:
+- Dynamic sitemap generation (`@nuxtjs/sitemap`)
+- Separate sitemaps for blogs and Bio pages
+- 10-minute cache on blog sitemap
+- Automatic submission to search engines
+
+**Robots.txt**:
+- Allow public pages
+- Disallow admin and preview pages
+- Sitemap reference
+- Crawl-delay configuration
+
+**Performance**:
+- Server-side rendering for instant content
+- Image optimization and lazy loading
+- Code splitting and lazy components
+- Critical CSS inlining
+- Asset preloading and prefetching
+
+---
+
+## Page Structure & Routes
+
+### Public Routes (No Authentication)
+
+#### Homepage
+- **URL**: `/`
+- **Purpose**: Landing page with platform overview, value props, and CTAs
+- **Key Elements**: Hero section, video demo, brand logos, creator testimonials, FAQ
+- **SEO**: Organization + WebSite Schema, optimized meta tags
+
+#### About Us
+- **URL**: `/about-us`
+- **Purpose**: Platform mission, story, and team introduction
+- **Content**: Company values, creator success stories, platform benefits
+- **SEO**: AboutPage Schema
+
+#### For Creators
+- **URL**: `/for-creators`
+- **Purpose**: Recruit creators into the MyyShop network with clear benefits, onboarding steps, FAQs, and direct contact information
+- **Content**: Creator services, monetization benefits, onboarding steps, platform support, creator FAQ, contact details
+- **SEO**: Organization + WebPage + Service Schema + FAQPage Schema
+
+#### For Brands
+- **URL**: `/for-brands`
+- **Purpose**: Introduce MyyShop's TikTok Shop growth services for brands and drive inbound partnership leads
+- **Content**: Brand value proposition, partner proof, service capabilities, event videos, contact details
+- **SEO**: Organization + WebPage + Service Schema
+
+#### Brand Deals & Opportunities
+- **URL**: `/brand-deals-opportunies`
+- **Purpose**: Showcase brand collaboration opportunities for creators
+- **Content**: How collaborations work, benefits, success metrics
+- **CTA**: Register to browse opportunities
+
+#### Earn from MyyFinds
+- **URL**: `/earn-from-every-view-myyfinds`
+- **Purpose**: MyyFinds program explanation
+- **Content**: How to earn from views, content requirements, payout structure
+
+#### Campaign Pages
+- **URLs**: `/myyfinds-*`, `/campaign/*`
+- **Purpose**: Time-sensitive campaigns and challenges
+- **Dynamic**: Content changes based on active campaigns
+- **SEO**: Event Schema for contests
+
+#### Documentation
+- **Privacy Policy**: `/docs/privacy`
+- **Terms & Conditions**: `/docs/termsCondition`
+- **Legal**: Standard legal documentation
+
+#### Blog System
+- **Blog Home**: `/blog` - Article listings with pagination
+- **Article Page**: `/blog/[blogName]` - Individual blog posts
+- **SEO**: Article Schema, author attribution, publish dates
+
+#### Bio Pages (Public Storefronts)
+  - **URL**: `myyfinds.io/[bioname]` (New domain) or `/bio/[bioname]` (Legacy, redirects to new domain)
+- **Purpose**: Creator's public storefront
+- **Dynamic**: Content based on creator configuration
+- **SEO**: Person Schema, Product Schema for listed items
+- **Features**: Product links, social links, contact options
+
+### Authenticated Routes (Login Required)
+
+#### Creator Dashboard
+- **Home**: `/admin/home` - Dashboard overview
+- **Opportunities**: `/admin/opportunities` - Browse brand collaborations
+  - **Detail**: `/admin/opportunities/[id]` - Opportunity details
+- **Offers**: `/admin/offers` - Manage active collaborations
+  - **Detail**: `/admin/offers/[id]` - Offer progress and details
+- **Profile**: `/admin/profile` - Account settings
+  - **Subpages**: `/admin/profile/account`, `/admin/profile/social`, `/admin/profile/payment`, `/admin/profile/addressinfo`
+- **Wallet**: `/admin/wallet` - Earnings and withdrawals
+  - **Withdrawal**: `/admin/wallet/withdrawal` - Request payout
+- **Campaigns**: `/admin/campaign/marketing`, `/admin/campaign/rewardsRecord`
+- **Refer & Earn**: `/admin/refer/earn` - Referral program
+
+#### Bio Management
+- **Create**: `/shop/create` - Initial Bio setup
+- **Admin**: `/shop/admin` - Manage Bio content
+- **Preview**: `/shop/preview` - Preview before publishing
+- **Products**: `/shop/products` - Browse and select products
+- **Insights**: `/shop/insight` - Bio analytics
+- **Search**: `/shop/search` - Search products
+
+#### Onboarding
+- **URL**: `/onboarding`
+- **Purpose**: New user onboarding flow
+- **Steps**: Profile setup, social connection, niche selection
+
+### AI Agent Routes
+
+#### Chat Interface
+- **Main**: `/chat` - MyyCompass landing
+- **Talking**: `/chat/talking` - Active conversation
+- **Results**: `/chat/results` - Conversation history
+- **Chatbot**: `/agent/chatbot/*` - Chatbot configuration and interactions
+
+### Authentication Routes
+
+- **Login**: `/login` - Sign in page
+  - **Callback**: `/login/callback` - OAuth redirect
+- **Register**: `/register` - Create account
+- **Forgot Password**: `/forgotpassword`
+- **Reset Password**: `/resetpassword`
+- **Activations**: `/regActivated`, `/pwdActivated`
+
+### Admin & Management Routes (Restricted)
+
+- **MCN**: `/mcnaffiliate` - MCN partnership page
+- **Reports**: `/report`, `/report/detail/[id]` - Business reports
+
+### Special Routes
+
+- **404**: `/404` - Not found page
+- **500**: `/500` - Server error page
+- **Restrict**: `/restrict` - Access denied
+- **No Bio**: `/nobio` - No Bio page found
+- **Catch-all**: `/[...paths]` - Dynamic routing fallback
+
+### API Endpoints (Server Routes)
+
+Located in `server/api/`:
+- **Sitemap**: `/api/sitemap/blogs` - Dynamic blog sitemap
+- **User**: User profile and authentication
+- **Products**: Product catalog and search
+- **Opportunities**: Brand collaboration opportunities
+- **Offers**: Creator offers and status
+- **Wallet**: Earnings and transactions
+- **Reports**: Analytics and reporting
+- **AI**: MyyCompass and AI services
+
+---
+
+## User Roles & Permissions
+
+### 1. Guest (Non-Authenticated)
+**Access**:
+- View public pages (homepage, about, blog)
+- View public Bio pages
+- View campaign pages
+- Read documentation (privacy, terms)
+
+**Restrictions**:
+- Cannot access dashboard
+- Cannot apply to opportunities
+- Cannot create Bio page
+- Cannot view wallet or earnings
+
+### 2. Creator (Authenticated)
+**Access**:
+- Full dashboard access
+- Create and manage Bio page
+- Browse and select products
+- Apply to brand opportunities
+- Manage active offers
+- View earnings and request withdrawals
+- Participate in campaigns
+- Use AI agent (MyyCompass)
+- Access analytics and insights
+- Update profile and settings
+- Refer other creators
+
+**Restrictions**:
+- Cannot access admin/internal tools
+- Cannot modify other creators' content
+- Cannot access MCN features (unless enrolled)
+
+### 3. Brand Partner (Authenticated)
+**Access**:
+- Post collaboration opportunities
+- Review creator applications
+- Approve/reject content submissions
+- View campaign performance
+- Access brand dashboard (separate interface)
+- Communicate with selected creators
+
+**Restrictions**:
+- Cannot create Bio pages
+- Cannot apply to opportunities (they create them)
+- Limited access to creator-specific features
+
+### 4. MCN/Agency (Authenticated)
+**Access**:
+- All creator features
+- Bulk creator management
+- Agency dashboard
+- White-label options
+- API access
+- Custom reporting
+- Consolidated payouts
+- Dedicated support
+
+**Special Features**:
+- Manage multiple creator accounts
+- Higher commission rates
+- Priority opportunity access
+- Custom campaign creation
+
+### 5. Admin/Internal (Super Admin)
+**Access**:
+- Full platform access
+- User management
+- Content moderation
+- System configuration
+- Analytics dashboards
+- Report generation
+- Feature flags
+- Debug tools
+
+---
+
+## Monetization Mechanisms
+
+### 1. Affiliate Commissions
+
+**How It Works**:
+- Creator adds products to Bio page
+- Shares Bio link or direct product links
+- Customer clicks link and purchases
+- Creator earns commission on sale
+
+**Commission Structure**:
+- **Fashion**: 10-15%
+- **Beauty**: 12-18%
+- **Tech**: 5-10%
+- **Home & Lifestyle**: 8-12%
+- **Variable**: Some brands offer higher rates for top performers
+
+**Tracking**:
+- Cookie-based attribution (30-day window)
+- Last-click attribution model
+- Real-time tracking in dashboard
+- Detailed transaction logs
+
+**Payment**:
+- Monthly payout cycle
+- Minimum threshold: $50
+- Multiple payout methods (PayPal, bank transfer)
+- Tax documentation provided
+
+### 2. Sponsored Content (Paid Collaborations)
+
+**Payment Types**:
+- **Flat Fee**: Fixed payment for content creation (e.g., $100-$5000 per post)
+- **Tiered Pricing**: Based on follower count and engagement rate
+- **Performance Bonus**: Additional pay for exceeding engagement targets
+- **Hybrid**: Base fee + commission on sales generated
+
+**Collaboration Flow**:
+1. Creator applies to opportunity
+2. Brand reviews and selects creator
+3. Agreement and brief sent
+4. Product sample shipped (free)
+5. Content created and submitted
+6. Brand approval process
+7. Content published on social media
+8. Payment released to creator wallet
+
+**Content Requirements**:
+- Platform-specific formats (TikTok video, Instagram post, YouTube review)
+- Disclosure requirements (#ad, #sponsored)
+- Brand guidelines and messaging
+- Timeline and posting dates
+- Usage rights and licensing
+
+**Payment Timeline**:
+- 50% upfront upon content approval (some campaigns)
+- 50% upon publishing and performance verification
+- Or full payment within 30 days of publishing
+- Instant payment for top-tier creators
+
+### 3. Referral Earnings
+
+**Referral Types**:
+- **New Creator Referral**: Earn when inviting new creators
+- **Brand Referral**: Earn for referring brands to platform (higher commission)
+- **Product Referral**: Bonus for discovering high-performing products
+
+**Referral Rewards**:
+- **Sign-Up**: $10-$25 when referral completes registration
+- **First Collaboration**: $50 when referral completes first paid campaign
+- **Activity-Based**: Percentage of referral's earnings (e.g., 5% for first 6 months)
+- **Tiered Bonuses**: Higher rewards for referring multiple creators
+
+**Tracking**:
+- Unique referral codes/links
+- Attribution via cookies and account linking
+- Dashboard showing referral status and earnings
+
+### 4. Campaign & Task Rewards
+
+**Task Categories**:
+- **Quick Tasks**: $1-$10 (follow account, share post, comment)
+- **Product Discovery**: $20-$50 (find and share trending products)
+- **Content Challenges**: $100-$500 (create themed content)
+- **Seasonal Contests**: $1000+ prize pools
+
+**MyyFinds Program**:
+- Earn from every view on shared product discoveries
+- CPM-based earnings (e.g., $5-$10 per 1000 views)
+- Bonus for viral discoveries (100K+ views)
+
+**Leaderboards**:
+- Top performers earn bonus rewards
+- Monthly/seasonal resets
+- Public recognition and badges
+
+### 5. Premium Features (Planned)
+
+**Subscription Tiers** (Coming Soon):
+- **Free**: Basic features, standard commission rates
+- **Pro** ($19/month): Higher commission, priority support, custom domain, advanced analytics
+- **Elite** ($49/month): Highest commission, dedicated manager, exclusive opportunities, API access
+
+**Add-On Services**:
+- Custom Bio themes ($29 one-time)
+- Featured placement in opportunity marketplace ($99/month)
+- Advanced analytics and reporting ($15/month)
+
+---
+
+## AI-Powered Services
+
+### MyyCompass: AI Creator Assistant
+
+**Purpose**: Guide creators to success through AI-powered insights and recommendations
+
+**Core Capabilities**:
+
+#### 1. Niche Discovery
+- **Input**: Creator interests, existing content, social profiles
+- **Output**: Recommended niche(s) with market analysis
+- **Methodology**: 
+  - Analyze creator's existing content themes
+  - Assess market demand for various niches
+  - Evaluate creator's unique strengths
+  - Suggest optimal niche positioning
+  - Provide competitive analysis
+
+**Example Interaction**:
+```
+Creator: "I post about fashion and travel, but not sure which to focus on."
+
+MyyCompass: "Based on your content analysis:
+- Fashion posts: 65% of content, 4.2% avg engagement
+- Travel posts: 35% of content, 6.8% avg engagement
+
+Recommendation: Focus on 'Travel Fashion' micro-niche.
+- Higher engagement on travel content
+- Growing market ($X billion)
+- Less competition than general fashion
+- Opportunities: 47 active brand collaborations in this niche
+- Top products: Carry-on luggage, travel accessories, versatile clothing"
+```
+
+#### 2. Product Recommendations
+- **Input**: Creator niche, audience demographics, past performance
+- **Output**: Curated product list with earning potential
+- **Algorithm**: 
+  - Match products to creator's audience profile
+  - Consider historical conversion rates for similar creators
+  - Factor in seasonal trends and demand
+  - Prioritize products with favorable commission rates
+  - Highlight trending products with high engagement
+
+**Recommendation Format**:
+```
+Product: Portable Travel Blender
+- Relevance Score: 92/100
+- Commission: 15% ($7.50 per sale)
+- Avg Price: $49.99
+- Projected Monthly Earnings: $300-$500
+- Similar Creators' Conversion: 3.2%
+- Why Recommended: Aligns with your travel + wellness content; trending product
+```
+
+#### 3. Content Strategy
+- **Input**: Creator goals, past content performance, niche trends
+- **Output**: Actionable content calendar and ideas
+- **Features**:
+  - Content topic suggestions
+  - Optimal posting times
+  - Format recommendations (video, carousel, story)
+  - Hook/caption ideas
+  - Hashtag strategy
+  - Trend integration
+
+**Example Strategy**:
+```
+This Week's Content Plan:
+1. Monday: "5 Travel Must-Haves Under $50" (Carousel)
+   - Featured Products: Items from your Bio
+   - Best Time: 6 PM EST (peak engagement)
+   - Hashtags: #TravelEssentials #BudgetTravel [+15 more]
+
+2. Wednesday: "Packing Hack" (Reel)
+   - Demonstrate product usage
+   - Partner Product: Travel Organizer Set
+   - Trending Sound: [suggested audio]
+
+3. Friday: Behind-the-scenes (Story Series)
+   - Show product testing process
+   - Poll: "Which product should I review next?"
+   - Swipe-up to Bio link
+```
+
+#### 4. Opportunity Matching
+- **Input**: Creator profile, collaboration history, preferences
+- **Output**: Ranked list of suitable brand opportunities
+- **Matching Factors**:
+  - Niche alignment (80% weight)
+  - Follower count requirements (meets criteria)
+  - Engagement rate match
+  - Past collaboration success rate
+  - Brand budget vs. creator tier
+  - Content format compatibility
+  - Timeline availability
+
+**Smart Filters**:
+- Only show opportunities creator qualifies for
+- Highlight "Quick Apply" for pre-approved matches
+- Flag opportunities with high acceptance probability
+
+#### 5. Performance Insights
+- **Analytics Interpretation**: Translate data into actionable advice
+- **Example Insights**:
+  ```
+  ⚠️ Alert: Your Bio click-through rate (1.2%) is below average (2.5%)
+  
+  Recommendations:
+  1. Add video introduction at top of Bio
+  2. Optimize product titles (use benefit-driven language)
+  3. Reduce number of displayed products from 30 to 15 (top performers only)
+  4. Update bio description with clearer call-to-action
+  
+  Expected Impact: +1.8% CTR, +$250 monthly earnings
+  ```
+
+#### 6. Competitor Analysis
+- **Privacy-Compliant**: Public data only, no scraping private info
+- **Insights Provided**:
+  - Successful content themes from similar creators
+  - Product trends in niche
+  - Engagement benchmarks
+  - Content format popularity
+  - Posting frequency sweet spot
+
+**Example**:
+```
+Creators in your niche (Travel Fashion) are seeing success with:
+- TikTok: 60-second "Get Ready With Me" featuring travel outfits (4.2M avg views)
+- Instagram: Carousel posts comparing products (6.5% engagement)
+- YouTube Shorts: Quick packing tips (320K avg views)
+
+Your Opportunity: You're not leveraging TikTok yet. Creators similar to you earn avg $800/month from TikTok alone.
+```
+
+#### 7. Bio Optimization
+- **AI-Powered Rewriting**: Enhance bio descriptions for better conversion
+- **Before**: "Fashion and travel blogger. Check out my faves!"
+- **After**: "Helping you travel in style 🌍✈️ | Curated fashion finds under $100 | 🎁 Use code TRAVEL10 for exclusive deals"
+
+- **A/B Testing Suggestions**: Test different bio versions
+- **Product Positioning**: AI suggests optimal product order on Bio page
+
+### AI Model Architecture
+
+**Primary Model**: GPT-4 (OpenAI)
+- Natural language understanding
+- Context-aware responses
+- Multi-turn conversations
+
+**Recommendation Engine**: Custom ML Model
+- Collaborative filtering for product recommendations
+- Content-based filtering for opportunity matching
+- Hybrid approach for optimal results
+- Trained on historical performance data
+
+**Sentiment Analysis**: NLP model for content feedback
+- Analyze brand guidelines and creator content fit
+- Provide improvement suggestions
+- Ensure brand voice compliance
+
+**Predictive Analytics**: Forecasting models
+- Estimate earning potential
+- Predict campaign success probability
+- Forecast product performance trends
+
+### Privacy & Data Usage
+
+**Data Collection**:
+- Creators opt-in to AI features
+- Public social media data (with permission)
+- Platform behavior (products clicked, opportunities viewed)
+- Collaboration outcomes (earnings, engagement)
+
+**Data Protection**:
+- Anonymized aggregate data for model training
+- No sharing of individual creator data with brands without consent
+- GDPR and CCPA compliant
+- Transparent data usage policies
+
+---
+
+## SEO & Discovery Strategy
+
+### Search Engine Optimization (SEO)
+
+#### On-Page SEO
+- **Title Tags**: Descriptive, keyword-rich titles (<60 chars)
+- **Meta Descriptions**: Compelling descriptions (<155 chars)
+- **Header Tags**: Proper H1-H6 hierarchy
+- **Alt Text**: Descriptive image alt attributes
+- **URL Structure**: Clean, readable URLs (e.g., `/blog/how-to-earn-as-creator`)
+- **Internal Linking**: Strategic links between related pages
+- **Keyword Optimization**: Target long-tail and short-tail keywords
+  - Primary: "creator marketing platform", "influencer monetization"
+  - Secondary: "earn money as creator", "brand collaborations for influencers"
+  - Long-tail: "how to monetize small following", "best affiliate program for creators"
+
+#### Technical SEO
+- **Site Speed**: Optimized for Core Web Vitals
+  - LCP (Largest Contentful Paint): <2.5s
+  - FID (First Input Delay): <100ms
+  - CLS (Cumulative Layout Shift): <0.1
+- **Mobile-First**: Responsive design, mobile-optimized
+- **HTTPS**: Secure connections site-wide
+- **XML Sitemap**: Dynamic sitemap generation
+  - Main sitemap: `/sitemap.xml`
+  - Blog sitemap: `/sitemap/blogs.xml`
+  - Bio pages sitemap: Auto-generated for public Bios
+- **Robots.txt**: Proper crawler directives
+- **Canonical URLs**: Prevent duplicate content issues
+- **Schema.org Markup**: Structured data for rich snippets
+
+#### Content SEO
+- **Blog Strategy**: 
+  - Publish 4-8 articles/month
+  - Topics: Creator tips, success stories, industry trends
+  - Target keywords: "how to", "best", "[year]", "guide"
+  - Internal linking to opportunities and registration
+- **Evergreen Content**: Timeless guides and tutorials
+- **Fresh Content**: Regular updates to existing pages
+- **Content Depth**: Comprehensive, 1500+ word articles
+- **Multimedia**: Images, videos, infographics
+
+#### Local SEO (If Applicable)
+- Regional targeting for specific markets
+- Localized content for different geographies
+- Hreflang tags for international versions
+
+### AI Engine Optimization (AEO/GEO)
+
+**Goal**: Make MyyShop discoverable and citable by AI assistants (ChatGPT, Claude, Perplexity, Gemini)
+
+#### llms.txt Implementation
+- **Location**: `/public/llms.txt`
+- **Purpose**: Provide AI-readable site summary
+- **Contents**:
+  - Platform overview
+  - Key features and value props
+  - Page structure and navigation
+  - Target audience and use cases
+  - Contact and support info
+
+#### llms-full.txt Implementation
+- **Location**: `/public/llms-full.txt`
+- **Purpose**: Comprehensive platform documentation for LLMs
+- **Contents**:
+  - Detailed feature descriptions
+  - User journey and workflows
+  - Technical architecture overview
+  - Business models and monetization
+  - Integration guides
+  - API documentation summary
+
+#### Content Structure for AI
+- **Clear Headings**: Hierarchical structure with descriptive titles
+- **Definitions**: Explicit definitions of platform-specific terms
+- **Lists and Tables**: Structured data over prose where possible
+- **Examples**: Concrete examples of use cases and outcomes
+- **FAQs**: Common questions with direct answers
+- **Statistics**: Quantifiable metrics and data points
+
+#### Semantic Markup
+- **Schema.org**: Rich structured data
+  - Organization: Company info, logo, social profiles
+  - Product: Featured products with prices and availability
+  - Article: Blog posts with author and publish date
+  - Person: Creator profiles on Bio pages
+  - Review: Testimonials and ratings
+  - FAQPage: Structured Q&A content
+- **Microformats**: hCard, hProduct for legacy compatibility
+
+#### Answer Engine Optimization
+- **Question-Based Content**: "How to...", "What is...", "Best ways to..."
+- **Concise Answers**: Provide direct answers in first paragraph
+- **Featured Snippet Optimization**: Format for Google Featured Snippets
+  - Lists (ordered and unordered)
+  - Tables for comparisons
+  - Definition boxes
+- **People Also Ask**: Anticipate follow-up questions
+
+#### Citation-Friendly Content
+- **Authoritative Tone**: Professional, fact-based writing
+- **Data-Backed**: Include statistics and case studies
+- **Original Research**: Platform-generated insights and data
+- **Expert Quotes**: Testimonials from successful creators
+- **Transparent Sourcing**: Cite external sources when referencing data
+
+### Social Media Integration
+
+#### Open Graph (OG) Tags
+- Dynamic OG tags for all shareable pages
+- **OG Image**: Custom images for homepage, blog posts, opportunities
+- **OG Title**: Compelling titles optimized for social feeds
+- **OG Description**: Engaging descriptions to drive clicks
+
+#### Twitter Cards
+- Summary Card with Large Image for blog posts
+- App Card for mobile app (if/when launched)
+
+#### Pinterest Rich Pins
+- Product Rich Pins for items in catalog
+- Article Rich Pins for blog content
+
+#### Social Sharing Buttons
+- Easy sharing to Facebook, Twitter, LinkedIn, Pinterest
+- WhatsApp sharing for mobile users
+- Custom sharing messages
+
+### Discovery Channels
+
+#### Organic Search (Google, Bing)
+- Target keywords: creator monetization, influencer marketing, social commerce
+- Content marketing: Blog posts ranking for long-tail queries
+- Local search: Target specific markets (US, UK, EU)
+
+#### AI Search Engines
+- **ChatGPT**: Cited in responses to creator/influencer queries
+- **Perplexity**: Appear in creator tool comparisons
+- **Gemini**: Included in monetization guides
+- **Claude**: Referenced for platform recommendations
+
+#### Social Media Discovery
+- **TikTok**: Creator testimonials and success stories (hashtags: #MyyShop, #CreatorEconomy)
+- **Instagram**: Visual content showcasing earnings and products
+- **YouTube**: Tutorial videos and creator interviews
+- **LinkedIn**: B2B content targeting brands and agencies
+
+#### Referral & Word-of-Mouth
+- Creator referral program drives organic signups
+- Testimonials on homepage and social proof
+- Case studies of successful creators
+
+#### Partnerships & Integrations
+- Integrate with social media management tools (Hootsuite, Buffer)
+- Partner with creator education platforms
+- Collaborate with influencer networks and MCNs
+
+### Conversion Optimization
+
+#### Landing Page Testing
+- A/B test hero messaging, CTAs, visuals
+- Optimize registration funnel
+- Reduce form fields for faster signup
+
+#### Trust Signals
+- Creator testimonials and success stories
+- Brand logos of partners
+- Security badges and certifications
+- Transparent earning examples
+- Customer support availability
+
+#### Clear CTAs
+- "Start Earning" buttons prominently placed
+- Multiple entry points (header, hero, sections)
+- Sticky navigation with signup option
+- Exit-intent popups (non-intrusive)
+
+---
+
+## Integration & APIs
+
+### Social Media Integrations
+
+#### TikTok
+- **OAuth Authentication**: Login with TikTok account
+- **Profile Sync**: Import username, avatar, follower count
+- **Analytics** (if available via TikTok API): Engagement metrics
+- **Limitations**: TikTok API access may be restricted; may rely on manual input
+
+#### Instagram
+- **OAuth via Facebook**: Login with Instagram Business/Creator account
+- **Profile Data**: Username, bio, profile picture, follower count
+- **Content Insights**: Posts, engagement rate (via Instagram Graph API)
+- **Story Links**: Track swipe-ups (if available)
+
+#### YouTube
+- **Google OAuth**: Login with YouTube account
+- **Channel Data**: Channel name, subscriber count, video count
+- **Video Performance**: Views, likes, watch time (YouTube Analytics API)
+
+#### Facebook
+- **OAuth**: Login and page connection
+- **Page Insights**: Likes, reach, engagement
+
+#### Twitter/X
+- **OAuth**: Account connection
+- **Profile Data**: Handle, follower count
+
+#### Pinterest
+- **OAuth**: Account connection
+- **Board Integration**: Sync product pins to Pinterest boards
+
+### Payment Gateway Integrations
+
+#### PayPal
+- **Payouts**: Send creator earnings via PayPal
+- **API**: PayPal Payouts API
+- **Features**: Batch payments, instant transfers, currency conversion
+
+#### Stripe
+- **Payment Processing**: Handle brand payments and subscriptions
+- **Payouts**: Stripe Connect for creator payouts
+- **Features**: ACH transfers, international payouts, tax documentation
+
+#### Bank Transfer
+- **Direct Deposit**: ACH (US), SEPA (EU), BACS (UK)
+- **Requirements**: Bank account verification
+- **Processing Time**: 3-5 business days
+
+### Email Service Integrations
+
+#### Transactional Emails
+- **Service**: SendGrid or AWS SES
+- **Use Cases**: Account verification, password reset, notifications
+- **Templates**: Branded email templates for each action
+
+#### Marketing Emails
+- **Service**: Mailchimp or ConvertKit
+- **Use Cases**: Newsletter, product updates, campaign announcements
+- **Segmentation**: Target creators based on activity and niche
+
+### Analytics Integrations
+
+#### Google Analytics 4 (GA4)
+- **Tracking**: Page views, user behavior, conversion funnels
+- **Goals**: Registration, Bio creation, first earning
+- **E-commerce Tracking**: Product clicks, purchases attributed to creators
+
+#### Google Tag Manager (GTM)
+- **Tag Management**: Centralized tracking code management
+- **Event Tracking**: Custom events (button clicks, video plays, form submissions)
+
+#### Custom Analytics
+- **Internal Dashboard**: Real-time metrics for creators
+- **Metrics**: Clicks, conversions, earnings, traffic sources
+
+### Error Tracking & Monitoring
+
+#### Sentry
+- **Error Tracking**: Capture JavaScript and server-side errors
+- **Performance Monitoring**: Track slow API calls and page loads
+- **User Context**: Attach user ID and actions to errors for debugging
+
+#### Logging
+- **Server Logs**: Nitro server logs for API requests
+- **Client Logs**: Console errors captured and reported
+
+### Webhook Support
+
+#### Platform Webhooks
+- **Events**: New collaboration approved, content submitted, payment processed
+- **Use Cases**: Notify brands, trigger external workflows, sync with CRM
+
+#### Brand Webhooks
+- **Events**: Opportunity created, creator applied, content approved
+- **Destination**: Brand's webhook endpoint for real-time updates
+
+### API for Partners (Planned)
+
+#### RESTful API
+- **Authentication**: API keys and OAuth
+- **Endpoints**:
+  - GET `/api/creators`: List creators (filtered by niche, followers)
+  - GET `/api/opportunities`: List opportunities
+  - POST `/api/opportunities`: Create new opportunity (brands)
+  - GET `/api/offers`: Retrieve offer status
+  - POST `/api/payouts`: Trigger payout (admin)
+- **Rate Limiting**: Prevent abuse
+- **Documentation**: Swagger/OpenAPI spec
+
+#### GraphQL API (Future)
+- Flexible querying for complex data needs
+- Real-time subscriptions for live updates
+
+---
+
+## Support & Resources
+
+### Creator Support
+
+#### Help Center
+- **Location**: Footer link or `/help`
+- **Content**: 
+  - Getting Started guides
+  - FAQ (How to create Bio, How to apply to opportunities, Payment info)
+  - Video tutorials
+  - Troubleshooting common issues
+
+#### In-Platform Chat
+- **Live Chat**: Real-time support during business hours
+- **Chatbot**: AI-powered chatbot for instant answers 24/7
+- **Ticket System**: Submit support requests for complex issues
+
+#### Email Support
+- **Email**: support@myyshop.com
+- **Response Time**: Within 24 hours on weekdays
+
+#### Community Forum (Planned)
+- Creator-to-creator discussions
+- Share tips and success stories
+- Platform updates and announcements
+
+#### Social Media Support
+- **Instagram**: @myyshop - DMs open for quick questions
+- **TikTok**: @myyshop - Creator success stories and tips
+- **Facebook**: MyyShop Community Group
+
+### Educational Resources
+
+#### Masterclasses
+- **Location**: `/event/masterclass`
+- **Topics**: 
+  - "Building Your Creator Brand"
+  - "Maximizing Affiliate Earnings"
+  - "Content Strategy for Conversions"
+  - "Negotiating Brand Deals"
+- **Format**: Webinars, recorded sessions, downloadable guides
+
+#### Book Circle
+- **Location**: `/event/bookcircle`
+- **Purpose**: Creator book club for continuous learning
+- **Books**: Curated list of creator economy and marketing books
+
+#### Blog Library
+- **Location**: `/blog`
+- **Content**: 
+  - How-to guides
+  - Case studies
+  - Industry news and trends
+  - Platform updates
+
+#### Video Tutorials
+- **Platform**: YouTube channel or embedded on site
+- **Content**: Step-by-step guides for all features
+
+### Official Resource Sites
+
+#### MyyShop Blog
+- **Location**: [www.myyshop.com/blog](https://www.myyshop.com/blog)
+- **Purpose**: Creator insights and platform content.
+
+#### MyyShop Academy
+- **Location**: [academy.myyshop.com](https://academy.myyshop.com/)
+- **Purpose**: Learning resources for creators.
+
+#### MyyShop Newsroom
+- **Location**: [newsroom.myyshop.com](https://newsroom.myyshop.com/)
+- **Purpose**: Official MyyShop news and stories.
+
+#### What's New
+- **Location**: [whatsnew.myyshop.com](https://whatsnew.myyshop.com/)
+- **Purpose**: Product and platform updates.
+
+### Brand Support
+
+#### Brand Onboarding
+- Dedicated account manager for new brands
+- Campaign setup assistance
+- Best practices for creator collaborations
+
+#### Brand Dashboard
+- Create and manage opportunities
+- Review creator applications
+- Approve content submissions
+- Track campaign performance
+
+#### Brand Resources
+- Creator vetting guidelines
+- Content brief templates
+- ROI calculation tools
+- Case studies of successful campaigns
+
+### Developer Documentation (Future)
+
+#### API Docs
+- Comprehensive endpoint documentation
+- Code examples in multiple languages (JavaScript, Python, cURL)
+- Authentication guides
+- Rate limits and best practices
+
+#### Webhook Guide
+- Event types and payload formats
+- Security and verification
+- Retry logic and error handling
+
+#### Integration Tutorials
+- Connect to third-party tools
+- Build custom dashboards
+- Automate workflows
+
+---
+
+## Platform Policies & Guidelines
+
+### Content Guidelines
+
+#### Acceptable Content
+- Authentic product reviews and recommendations
+- Educational and how-to content
+- Behind-the-scenes and personal stories
+- Product comparisons and lists
+- Lifestyle content featuring products
+
+#### Prohibited Content
+- Misleading or false claims about products
+- Undisclosed sponsored content (all sponsorships must be disclosed per FTC guidelines)
+- Offensive, hateful, or discriminatory content
+- Illegal or dangerous activities
+- Infringement of intellectual property
+
+### Disclosure Requirements
+
+#### FTC Compliance (US)
+- **Requirement**: Clear and conspicuous disclosure of material connections
+- **Examples**: #ad, #sponsored, "I was paid by [Brand] for this post"
+- **Placement**: Disclosure must be upfront, not buried in hashtags or "More" links
+
+#### Platform Assistance
+- Disclosure reminder in collaboration briefs
+- Automatic hashtag suggestions
+- Content review before brand submission
+
+### Data Privacy & Security
+
+#### User Data Protection
+- **GDPR Compliance** (EU users): Right to access, rectify, and delete data
+- **CCPA Compliance** (California users): Opt-out of data sale, access to collected data
+- **Data Encryption**: All sensitive data encrypted at rest and in transit
+- **Access Controls**: Role-based access, two-factor authentication
+
+#### Creator Data
+- Personal information used only for platform functionality
+- Social media data accessed with explicit permission
+- Earnings and financial data secured and private
+- Data sharing with brands requires opt-in consent
+
+#### Brand Data
+- Campaign information kept confidential
+- Creator applications and submissions secured
+- Performance data aggregated and anonymized for insights
+
+### Payment Terms
+
+#### Creator Payments
+- **Minimum Threshold**: $50 for payout
+- **Payout Frequency**: Monthly (first week of each month) or on-demand (instant for high earners)
+- **Payment Methods**: PayPal, bank transfer
+- **Currency**: USD (primary), EUR, GBP (supported)
+- **Taxes**: Creators responsible for tax reporting; platform provides earnings statements
+
+#### Refunds & Disputes
+- **Affiliate Sales**: Commission paid only on confirmed, non-refunded sales
+- **Disputed Sales**: Commission may be withheld pending resolution
+- **Chargebacks**: Creator not penalized for customer chargebacks
+
+### Termination & Suspension
+
+#### Account Suspension
+- **Reasons**: Violation of content guidelines, fraudulent activity, copyright infringement
+- **Process**: Warning first, then temporary suspension, then permanent ban (if severe)
+- **Appeal**: Creators can appeal suspensions via support
+
+#### Account Deletion
+- **Creator Request**: Creators can delete account anytime
+- **Data Retention**: Personal data deleted within 30 days; transaction records retained for legal requirements
+- **Pending Earnings**: Paid out before account deletion (if above minimum threshold)
+
+---
+
+## Future Roadmap (Planned Features)
+
+### Mobile App
+- Native iOS and Android apps
+- Push notifications for opportunities and earnings
+- Simplified content creation and posting
+- In-app chat with brands
+
+### Video Content Hub
+- Dedicated section for video tutorials
+- Creator-generated video content library
+- Shoppable videos (click products in video)
+
+### Advanced Analytics
+- Predictive earnings forecasts
+- Competitor benchmarking
+- Audience demographics deep dive
+- Content performance insights (which posts drive most sales)
+
+### Marketplace Expansion
+- International product sourcing
+- Dropshipping integration
+- Print-on-demand products
+- Digital products and courses
+
+### Enhanced AI Features
+- AI-generated content drafts (captions, scripts)
+- Image and video editing with AI
+- Voice-to-text for video transcriptions
+- Automated content scheduling
+
+### White-Label Solutions
+- Custom branding for MCN agencies
+- Dedicated dashboards for agency clients
+- API-first architecture for deep integrations
+
+### Blockchain & Web3 (Exploration)
+- NFT-based creator badges and achievements
+- Cryptocurrency payout options
+- Decentralized creator identity
+
+---
+
+## Contact & Support
+
+### General Inquiries
+- **Website**: https://www.myyshop.com
+- **Email**: hello@myyshop.com
+- **Support**: support@myyshop.com
+
+### Creator Support
+- **Help Center**: https://www.myyshop.com/help (future)
+- **Chat**: In-platform live chat
+- **Email**: creators@myyshop.com
+
+### Brand Partnerships
+- **Email**: brands@myyshop.com
+- **Sales**: sales@myyshop.com
+
+### Press & Media
+- **Email**: press@myyshop.com
+
+### Social Media
+- **Instagram**: @myyshop
+- **TikTok**: @myyshop
+- **YouTube**: MyyShop Official
+- **LinkedIn**: MyyShop
+- **Twitter**: @myyshop
+
+### Office Locations
+- **Los Angeles Office**: 6161 Santa Monica Blvd., Los Angeles, CA 90038
+
+---
+
+## About This Document
+
+**Purpose**: This document (`llms-full.txt`) provides comprehensive information about MyyShop for AI language models and assistants. It enables AI to understand the platform deeply and provide accurate, helpful responses to user queries about MyyShop.
+
+**Intended Audience**: 
+- AI language models (ChatGPT, Claude, Gemini, Perplexity, etc.)
+- AI-powered search engines
+- Developers integrating with MyyShop
+- Researchers studying creator economy platforms
+
+**Maintenance**: This document is updated regularly to reflect platform changes, new features, and updated information. Last updated: 2026-06-09.
+
+**Related Resources**:
+- [llms.txt](https://www.myyshop.com/llms.txt) - Concise platform summary
+- [sitemap.xml](https://www.myyshop.com/sitemap_index.xml) - Full site structure
+- [robots.txt](https://www.myyshop.com/robots.txt) - Crawler directives
+
+**Format**: Markdown for maximum readability by both humans and AI systems.
+
+---
+
+© 2024-2026 MyyShop. All rights reserved.

@@ -1,0 +1,46 @@
+{
+  "captured_at": "2026-08-24T20:24:33+08:00",
+  "collection_state": "captured",
+  "collector": {
+    "mode": "public_http",
+    "name": "geo-cowork-public-site",
+    "version": "0.3.0"
+  },
+  "expectations": {
+    "expected_http_statuses": [
+      200
+    ],
+    "target_path": "/earn-from-every-view-myyfinds"
+  },
+  "http": {
+    "headers": {
+      "content-type": "text/html; charset=utf-8"
+    },
+    "status": 200
+  },
+  "schema_version": "m4-site-manifest-v1",
+  "snapshots": [
+    {
+      "media_type": "text/html",
+      "path": "runs/RUN-MYYSHOP-M4-PUBLIC-COLLECTION-20260824/raw/public-site/earn-from-every-view-myyfinds.html",
+      "role": "html",
+      "sha256": "1dbc0200be0a4c18271e19ddf4d9de09cc9340d7521f67ab92abce2409e8fe2c"
+    },
+    {
+      "media_type": "text/plain",
+      "path": "runs/RUN-MYYSHOP-M4-PUBLIC-COLLECTION-20260824/raw/public-site/robots.txt",
+      "role": "robots",
+      "sha256": "61f72bad0b67837d7d85213ad4ee4f588bfa076bc06ff40260435a55df7051c4"
+    },
+    {
+      "media_type": "text/xml",
+      "path": "runs/RUN-MYYSHOP-M4-PUBLIC-COLLECTION-20260824/raw/public-site/sitemap-pages.xml",
+      "role": "sitemap",
+      "sha256": "9a3e677d4d396a9cb4cdb6059a186749a343c640c520cc2a73a4a2d6f3075f72"
+    }
+  ],
+  "target": {
+    "asset_ref": "AST-MYYSHOP-MYYFINDS-001",
+    "locator": "https://www.myyshop.com/earn-from-every-view-myyfinds"
+  }
+}

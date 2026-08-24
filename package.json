@@ -12,6 +12,9 @@
     "test:m2-contract": "node --test tests/m2-*.test.mjs",
     "test:m3-knowledge-query": "node --test tests/m3-knowledge-query.test.mjs",
     "test:m4-diagnosis": "node --test tests/m4-*.test.mjs",
+    "collect:m4-public": "node plugins/geo-expert/scripts/collect-public-site.mjs",
+    "prepare:m4-public-inputs": "node plugins/geo-expert/scripts/prepare-public-site-m4-inputs.mjs",
+    "check:docs": "node plugins/geo-expert/scripts/check-doc-links.mjs",
     "validate:plugin": "node plugins/geo-expert/scripts/validate-plugin.mjs"
   },
   "dependencies": {

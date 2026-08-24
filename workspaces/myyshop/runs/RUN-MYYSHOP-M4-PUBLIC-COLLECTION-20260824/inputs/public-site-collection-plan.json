@@ -1,0 +1,115 @@
+{
+  "schema_version": "1.0.0",
+  "run_id": "RUN-MYYSHOP-M4-PUBLIC-COLLECTION-20260824",
+  "origin": "https://www.myyshop.com",
+  "development_fixture": false,
+  "collector": {
+    "name": "geo-cowork-public-site",
+    "version": "0.3.0",
+    "mode": "public_http"
+  },
+  "request": {
+    "user_agent": "geo-cowork-m4/0.3.0",
+    "accept_language": "en-US,en;q=0.9",
+    "concurrency": 1,
+    "request_interval_ms": 1000,
+    "timeout_ms": 20000,
+    "max_retries": 2,
+    "max_redirects": 5,
+    "max_response_bytes": 5242880
+  },
+  "raw_retention_days": 90,
+  "reviewer_role": "MyyShop Owner",
+  "allowlist": [
+    "/",
+    "/about-us",
+    "/for-creators",
+    "/brand-deals-opportunies",
+    "/earn-from-every-view-myyfinds",
+    "/robots.txt",
+    "/llms.txt",
+    "/llms-full.txt",
+    "/sitemap_index.xml",
+    "/__sitemap__/pages.xml",
+    "/__sitemap__/blogs.xml"
+  ],
+  "targets": [
+    {
+      "id": "homepage",
+      "path": "/",
+      "file": "homepage.html",
+      "expected_statuses": [200],
+      "expected_media_types": ["text/html"]
+    },
+    {
+      "id": "about-us",
+      "path": "/about-us",
+      "file": "about-us.html",
+      "expected_statuses": [200],
+      "expected_media_types": ["text/html"]
+    },
+    {
+      "id": "for-creators",
+      "path": "/for-creators",
+      "file": "for-creators.html",
+      "expected_statuses": [200],
+      "expected_media_types": ["text/html"]
+    },
+    {
+      "id": "brand-deals-opportunies",
+      "path": "/brand-deals-opportunies",
+      "file": "brand-deals-opportunies.html",
+      "expected_statuses": [200],
+      "expected_media_types": ["text/html"]
+    },
+    {
+      "id": "earn-from-every-view-myyfinds",
+      "path": "/earn-from-every-view-myyfinds",
+      "file": "earn-from-every-view-myyfinds.html",
+      "expected_statuses": [200],
+      "expected_media_types": ["text/html"]
+    },
+    {
+      "id": "robots",
+      "path": "/robots.txt",
+      "file": "robots.txt",
+      "expected_statuses": [200],
+      "expected_media_types": ["text/plain"]
+    },
+    {
+      "id": "llms",
+      "path": "/llms.txt",
+      "file": "llms.txt",
+      "expected_statuses": [200],
+      "expected_media_types": ["text/plain"]
+    },
+    {
+      "id": "llms-full",
+      "path": "/llms-full.txt",
+      "file": "llms-full.txt",
+      "expected_statuses": [200],
+      "expected_media_types": ["text/plain"]
+    },
+    {
+      "id": "sitemap-index",
+      "path": "/sitemap_index.xml",
+      "file": "sitemap-index.xml",
+      "expected_statuses": [200],
+      "expected_media_types": ["application/xml", "text/xml"]
+    },
+    {
+      "id": "sitemap-pages",
+      "path": "/__sitemap__/pages.xml",
+      "file": "sitemap-pages.xml",
+      "expected_statuses": [200],
+      "expected_media_types": ["application/xml", "text/xml"]
+    },
+    {
+      "id": "sitemap-blogs",
+      "path": "/__sitemap__/blogs.xml",
+      "file": "sitemap-blogs.xml",
+      "expected_statuses": [200],
+      "expected_media_types": ["application/xml", "text/xml"]
+    }
+  ]
+}

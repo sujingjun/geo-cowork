@@ -14,7 +14,7 @@ import {
 import { validateDiagnosisObject } from './diagnosis-profile.mjs';
 import { stableStringify } from './workspace-paths.mjs';
 
-export const SITE_DETECTOR_VERSION = 'm4-site-detectors-v1';
+export const SITE_DETECTOR_VERSION = 'm4-site-detectors-v1.0.2';
 export const SITE_CODES = Object.freeze([
   'HTTP_STATUS',
   'CANONICAL',
@@ -158,8 +158,12 @@ function schemaSyntax(html) {
 
 function sitemapCheck(sitemap, locator) {
   if (sitemap === null) return { state: 'unverifiable', message: '缺少 sitemap snapshot' };
-  const validRoot = /^(?:<\?xml\b[^?]*\?>\s*)?<(urlset|sitemapindex)\b[^>]*>[\s\S]*<\/\1>\s*$/i
-    .test(sitemap.trim());
+  const normalized = sitemap.trim()
+    .replace(/^<\?xml\b[\s\S]*?\?>\s*/i, '')
+    .replace(/^(?:(?:<\?[\s\S]*?\?>|<!--[\s\S]*?-->)\s*)*/, '')
+    .replace(/(?:(?:<\?[\s\S]*?\?>|<!--[\s\S]*?-->)\s*)*$/, '');
+  const validRoot = /^<(urlset|sitemapindex)\b[^>]*>[\s\S]*<\/\1>\s*$/i
+    .test(normalized);
   if (!validRoot) return { state: 'fail', message: 'sitemap 语法不可解析' };
   const locators = [...sitemap.matchAll(/<loc\b[^>]*>\s*([^<]+?)\s*<\/loc>/gi)]
     .map((match) => match[1].replaceAll('&amp;', '&').trim());

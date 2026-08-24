@@ -68,14 +68,22 @@ npm test                                                 # 全量 node:test
 npm run test:m2-contract                                 # M2 专项测试
 npm run test:m3-knowledge-query                          # M3 Knowledge/Query 专项测试
 npm run test:m4-diagnosis                               # M4 Diagnosis/Site/Asset 专项测试
+npm run check:docs                                      # 仓库 Markdown 本地链接检查
 npm run validate:plugin                                  # 插件包契约自检
 node plugins/geo-expert/scripts/build-index.mjs --workspace workspaces/myyshop --check
 node plugins/geo-expert/scripts/knowledge-query.mjs validate --workspace workspaces/myyshop
 node plugins/geo-expert/scripts/diagnosis.mjs validate --workspace workspaces/myyshop
 ```
 
+真实公开 HTTP snapshot 必须另有逐项授权并使用显式 plan；采集和 M4 输入桥接命令为：
+
+```bash
+npm run collect:m4-public -- --workspace <workspace> --plan <collection-plan.json>
+npm run prepare:m4-public-inputs -- --workspace <workspace> --summary <workspace-relative-summary> --mapping <input-map.json>
+```
+
 要求 Node.js 20+。协作规则见 `AGENTS.md` 与 `docs/workflow.md`；文档导航见 `docs/README.md`。
 
 ## 边界
 
-本仓库不做：云端 SaaS、MCP 服务、数据库、自动发布、自动审批、CRM 写入、社区运营或默认浏览器采集。M4 站点与研究能力只读取显式本地 manifest/snapshot；真实 MyyShop 站点、账号、GA4/GSC、消费者平台或第三方 API 仍需逐项授权。未经当次明确授权，任何 Agent 不 commit、不 push、不创建 PR。
+本仓库不做：云端 SaaS、MCP 服务、数据库、自动发布、自动审批、CRM 写入、社区运营或默认浏览器采集。M4 Site/Research 诊断仍只读取显式本地 manifest/snapshot；独立 public collector 只接受同源 allowlist、只读 GET 和 create-only raw。MyyShop Owner 于 2026-08-24 仅授权并完成 11 个官网公开端点的首批采集；该授权不覆盖登录区、GA4/GSC、消费者平台、第三方 API 或外部写入。未经当次明确授权，任何 Agent 不 commit、不 push、不创建 PR。

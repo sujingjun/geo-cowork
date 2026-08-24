@@ -15,6 +15,94 @@
       "status": "active",
       "updated_at": "2026-08-23T17:13:17.000Z",
       "version": "1.0.0"
+    },
+    {
+      "id": "SRC-MYYSHOP-WEB-ABOUT-001",
+      "path": "evidence/sources/src-myyshop-web-about-001.md",
+      "refs": [],
+      "status": "active",
+      "updated_at": "2026-08-24T12:21:53.000Z",
+      "version": "1.0.0"
+    },
+    {
+      "id": "SRC-MYYSHOP-WEB-BRAND-DEALS-001",
+      "path": "evidence/sources/src-myyshop-web-brand-deals-001.md",
+      "refs": [],
+      "status": "active",
+      "updated_at": "2026-08-24T12:21:53.000Z",
+      "version": "1.0.0"
+    },
+    {
+      "id": "SRC-MYYSHOP-WEB-FOR-CREATORS-001",
+      "path": "evidence/sources/src-myyshop-web-for-creators-001.md",
+      "refs": [],
+      "status": "active",
+      "updated_at": "2026-08-24T12:21:53.000Z",
+      "version": "1.0.0"
+    },
+    {
+      "id": "SRC-MYYSHOP-WEB-HOMEPAGE-001",
+      "path": "evidence/sources/src-myyshop-web-homepage-001.md",
+      "refs": [],
+      "status": "active",
+      "updated_at": "2026-08-24T12:21:53.000Z",
+      "version": "1.0.0"
+    },
+    {
+      "id": "SRC-MYYSHOP-WEB-LLMS-001",
+      "path": "evidence/sources/src-myyshop-web-llms-001.md",
+      "refs": [],
+      "status": "active",
+      "updated_at": "2026-08-24T12:21:53.000Z",
+      "version": "1.0.0"
+    },
+    {
+      "id": "SRC-MYYSHOP-WEB-LLMS-FULL-001",
+      "path": "evidence/sources/src-myyshop-web-llms-full-001.md",
+      "refs": [],
+      "status": "active",
+      "updated_at": "2026-08-24T12:21:53.000Z",
+      "version": "1.0.0"
+    },
+    {
+      "id": "SRC-MYYSHOP-WEB-MYYFINDS-001",
+      "path": "evidence/sources/src-myyshop-web-myyfinds-001.md",
+      "refs": [],
+      "status": "active",
+      "updated_at": "2026-08-24T12:21:53.000Z",
+      "version": "1.0.0"
+    },
+    {
+      "id": "SRC-MYYSHOP-WEB-ROBOTS-001",
+      "path": "evidence/sources/src-myyshop-web-robots-001.md",
+      "refs": [],
+      "status": "active",
+      "updated_at": "2026-08-24T12:21:53.000Z",
+      "version": "1.0.0"
+    },
+    {
+      "id": "SRC-MYYSHOP-WEB-SITEMAP-BLOGS-001",
+      "path": "evidence/sources/src-myyshop-web-sitemap-blogs-001.md",
+      "refs": [],
+      "status": "active",
+      "updated_at": "2026-08-24T12:21:53.000Z",
+      "version": "1.0.0"
+    },
+    {
+      "id": "SRC-MYYSHOP-WEB-SITEMAP-INDEX-001",
+      "path": "evidence/sources/src-myyshop-web-sitemap-index-001.md",
+      "refs": [],
+      "status": "active",
+      "updated_at": "2026-08-24T12:21:53.000Z",
+      "version": "1.0.0"
+    },
+    {
+      "id": "SRC-MYYSHOP-WEB-SITEMAP-PAGES-001",
+      "path": "evidence/sources/src-myyshop-web-sitemap-pages-001.md",
+      "refs": [],
+      "status": "active",
+      "updated_at": "2026-08-24T12:21:53.000Z",
+      "version": "1.0.0"
     }
   ],
   "record_type": "source",

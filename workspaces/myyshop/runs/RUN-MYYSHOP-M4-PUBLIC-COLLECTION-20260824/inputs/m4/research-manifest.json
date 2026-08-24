@@ -1,0 +1,176 @@
+{
+  "captured_at": "2026-08-24T20:24:33+08:00",
+  "collector": {
+    "mode": "public_http",
+    "name": "geo-cowork-public-site",
+    "version": "0.3.0"
+  },
+  "observations": [
+    {
+      "access_state": "accessible",
+      "confidence": "medium",
+      "confidence_reason": "MyyShop 官网首页公开原文已按 checksum 采集；其对现有 Claim 的支持范围仍待人工 reviewer 逐条核验。",
+      "counter_evidence_refs": [],
+      "independent_support_refs": [],
+      "original_content_state": "captured",
+      "snapshot": {
+        "media_type": "text/html",
+        "path": "runs/RUN-MYYSHOP-M4-PUBLIC-COLLECTION-20260824/raw/public-site/homepage.html",
+        "sha256": "d4e31e38b70d17083740e4a60c50159bdde2c97defe932a6b9db4fcbd09da467"
+      },
+      "source_ref": "SRC-MYYSHOP-WEB-HOMEPAGE-001",
+      "support_kind": "first_party"
+    },
+    {
+      "access_state": "accessible",
+      "confidence": "medium",
+      "confidence_reason": "MyyShop About Us 公开原文已按 checksum 采集；品牌与能力陈述仍须结合 Claim Scope 人工复核。",
+      "counter_evidence_refs": [],
+      "independent_support_refs": [],
+      "original_content_state": "captured",
+      "snapshot": {
+        "media_type": "text/html",
+        "path": "runs/RUN-MYYSHOP-M4-PUBLIC-COLLECTION-20260824/raw/public-site/about-us.html",
+        "sha256": "4dde7c1962f57c0038399f1fadb68723cc760b85fc58f0b1479b2f22b12caaed"
+      },
+      "source_ref": "SRC-MYYSHOP-WEB-ABOUT-001",
+      "support_kind": "first_party"
+    },
+    {
+      "access_state": "accessible",
+      "confidence": "medium",
+      "confidence_reason": "MyyShop For Creators 公开原文已按 checksum 采集；地区、资格、服务可用性与效果边界仍待人工复核。",
+      "counter_evidence_refs": [],
+      "independent_support_refs": [],
+      "original_content_state": "captured",
+      "snapshot": {
+        "media_type": "text/html",
+        "path": "runs/RUN-MYYSHOP-M4-PUBLIC-COLLECTION-20260824/raw/public-site/for-creators.html",
+        "sha256": "4e3d941c17e63562dd11a1ef16cfbc13580a2e0bfe7c87259e54d31bbc63ba9a"
+      },
+      "source_ref": "SRC-MYYSHOP-WEB-FOR-CREATORS-001",
+      "support_kind": "first_party"
+    },
+    {
+      "access_state": "accessible",
+      "confidence": "medium",
+      "confidence_reason": "MyyShop Brand Deals 公开原文已按 checksum 采集；营销陈述不作为效果保证，Claim 支持范围待人工复核。",
+      "counter_evidence_refs": [],
+      "independent_support_refs": [],
+      "original_content_state": "captured",
+      "snapshot": {
+        "media_type": "text/html",
+        "path": "runs/RUN-MYYSHOP-M4-PUBLIC-COLLECTION-20260824/raw/public-site/brand-deals-opportunies.html",
+        "sha256": "7ede9ff46af61af4459c706cca93d29d7ee3e42b44019dda357be4ac8970b499"
+      },
+      "source_ref": "SRC-MYYSHOP-WEB-BRAND-DEALS-001",
+      "support_kind": "first_party"
+    },
+    {
+      "access_state": "accessible",
+      "confidence": "medium",
+      "confidence_reason": "MyyShop MyyFinds 公开原文已按 checksum 采集；收益、地区、资格与可用条件必须由人工 reviewer 保留限定。",
+      "counter_evidence_refs": [],
+      "independent_support_refs": [],
+      "original_content_state": "captured",
+      "snapshot": {
+        "media_type": "text/html",
+        "path": "runs/RUN-MYYSHOP-M4-PUBLIC-COLLECTION-20260824/raw/public-site/earn-from-every-view-myyfinds.html",
+        "sha256": "1dbc0200be0a4c18271e19ddf4d9de09cc9340d7521f67ab92abce2409e8fe2c"
+      },
+      "source_ref": "SRC-MYYSHOP-WEB-MYYFINDS-001",
+      "support_kind": "first_party"
+    },
+    {
+      "access_state": "accessible",
+      "confidence": "high",
+      "confidence_reason": "官方 robots.txt 原文已按 checksum 采集；它只证明该时点声明，不证明任何平台实际抓取或引用。",
+      "counter_evidence_refs": [],
+      "independent_support_refs": [],
+      "original_content_state": "captured",
+      "snapshot": {
+        "media_type": "text/plain",
+        "path": "runs/RUN-MYYSHOP-M4-PUBLIC-COLLECTION-20260824/raw/public-site/robots.txt",
+        "sha256": "61f72bad0b67837d7d85213ad4ee4f588bfa076bc06ff40260435a55df7051c4"
+      },
+      "source_ref": "SRC-MYYSHOP-WEB-ROBOTS-001",
+      "support_kind": "first_party"
+    },
+    {
+      "access_state": "accessible",
+      "confidence": "medium",
+      "confidence_reason": "官方 llms.txt 原文已按 checksum 采集；文件存在不等于消费者平台采用，Claim 支持范围仍待人工复核。",
+      "counter_evidence_refs": [],
+      "independent_support_refs": [],
+      "original_content_state": "captured",
+      "snapshot": {
+        "media_type": "text/plain",
+        "path": "runs/RUN-MYYSHOP-M4-PUBLIC-COLLECTION-20260824/raw/public-site/llms.txt",
+        "sha256": "d5657c772c7ff0b4064bf27d80d1f466d11b246297680671894ba9cc788a5173"
+      },
+      "source_ref": "SRC-MYYSHOP-WEB-LLMS-001",
+      "support_kind": "first_party"
+    },
+    {
+      "access_state": "accessible",
+      "confidence": "medium",
+      "confidence_reason": "官方 llms-full.txt 原文已按 checksum 采集；长文本的事实、限定与 Claim 支持范围仍待人工复核。",
+      "counter_evidence_refs": [],
+      "independent_support_refs": [],
+      "original_content_state": "captured",
+      "snapshot": {
+        "media_type": "text/plain",
+        "path": "runs/RUN-MYYSHOP-M4-PUBLIC-COLLECTION-20260824/raw/public-site/llms-full.txt",
+        "sha256": "85f95a7bcdb103a38655e63ab3fdb71e715d2c7c72a0bc55e4cefe6265ab4b4c"
+      },
+      "source_ref": "SRC-MYYSHOP-WEB-LLMS-FULL-001",
+      "support_kind": "first_party"
+    },
+    {
+      "access_state": "accessible",
+      "confidence": "high",
+      "confidence_reason": "官方 sitemap index 已按 checksum 采集；它只证明该时点索引声明，不扩展本轮 URL 授权。",
+      "counter_evidence_refs": [],
+      "independent_support_refs": [],
+      "original_content_state": "captured",
+      "snapshot": {
+        "media_type": "text/xml",
+        "path": "runs/RUN-MYYSHOP-M4-PUBLIC-COLLECTION-20260824/raw/public-site/sitemap-index.xml",
+        "sha256": "c236bb1913fe5722129ac7334e3aa1f80d12fa0ce53fa7d8d5b70889196bda99"
+      },
+      "source_ref": "SRC-MYYSHOP-WEB-SITEMAP-INDEX-001",
+      "support_kind": "first_party"
+    },
+    {
+      "access_state": "accessible",
+      "confidence": "high",
+      "confidence_reason": "官方 pages sitemap 已按 checksum 采集；它用于获授权页面检查，不把其中其他 URL 变成已授权目标。",
+      "counter_evidence_refs": [],
+      "independent_support_refs": [],
+      "original_content_state": "captured",
+      "snapshot": {
+        "media_type": "text/xml",
+        "path": "runs/RUN-MYYSHOP-M4-PUBLIC-COLLECTION-20260824/raw/public-site/sitemap-pages.xml",
+        "sha256": "9a3e677d4d396a9cb4cdb6059a186749a343c640c520cc2a73a4a2d6f3075f72"
+      },
+      "source_ref": "SRC-MYYSHOP-WEB-SITEMAP-PAGES-001",
+      "support_kind": "first_party"
+    },
+    {
+      "access_state": "accessible",
+      "confidence": "high",
+      "confidence_reason": "官方 blogs sitemap 已按 checksum 采集；博客 URL 未在本轮自动展开或读取。",
+      "counter_evidence_refs": [],
+      "independent_support_refs": [],
+      "original_content_state": "captured",
+      "snapshot": {
+        "media_type": "text/xml",
+        "path": "runs/RUN-MYYSHOP-M4-PUBLIC-COLLECTION-20260824/raw/public-site/sitemap-blogs.xml",
+        "sha256": "49a97542ec3f27145fb295222f2f4fa3c7c0601ccb85b9789499206fa73e38e7"
+      },
+      "source_ref": "SRC-MYYSHOP-WEB-SITEMAP-BLOGS-001",
+      "support_kind": "first_party"
+    }
+  ],
+  "schema_version": "m4-research-manifest-v1"
+}

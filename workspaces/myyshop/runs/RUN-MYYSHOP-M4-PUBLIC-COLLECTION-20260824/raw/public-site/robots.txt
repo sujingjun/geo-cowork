@@ -1,0 +1,59 @@
+# Common Patterns
+User-agent: *
+Allow: /*?utm_source
+Disallow: /manage
+Disallow: /admin
+Disallow: *?dspm*
+
+# OpenAI OAI-搜索机器人
+User-agent: OAI-SearchBot
+Allow: /
+
+# OpenAI ChatGPT-用户
+User-agent: ChatGPT-User
+Allow: /
+
+# OpenAI GPTBot
+User-agent: GPTBot
+Allow: /
+
+# Anthropic ClaudeBot
+User-agent: ClaudeBot
+Allow: /
+
+# Anthropic ClaudeBot
+User-agent: ClaudeBot
+Allow: /
+
+# Anthropic Claude-Web
+User-agent: Claude-Web
+Allow: /
+
+# Perplexity AI爬虫
+User-agent: PerplexityBot
+Allow: /
+
+# CCBot (Common Crawl - 用于AI训练)
+User-agent: CCBot
+Disallow: /
+
+# Google Extended (AI训练)
+User-agent: Google-Extended
+Disallow: /
+
+# LLM Resources
+# Learn more: https://llmstxt.org/
+User-agent: ChatGPT-User
+Allow: /llms.txt
+Allow: /llms-full.txt
+
+User-agent: Claude-Web
+Allow: /llms.txt
+Allow: /llms-full.txt
+
+User-agent: PerplexityBot
+Allow: /llms.txt
+Allow: /llms-full.txt
+
+# Sitemaps and Discovery
+Sitemap: https://www.myyshop.com/sitemap_index.xml

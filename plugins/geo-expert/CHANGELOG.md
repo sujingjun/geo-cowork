@@ -4,7 +4,9 @@
 
 - 新增五个 M4 Skill、M4 Schema/模板、`diagnosis.mjs` 与确定性 profile/trace；
 - 新增本地 site/research manifest、九项 detector、Asset Proposal、draft Adoption/Publication 与 Technical Retest；
-- 不包含网络抓取、真实 MyyShop 采集、自动采用、自动发布或新插件版本发布；Manifest 保持 0.3.0。
+- 后续经单独授权新增显式同源 allowlist public collector、M4 input bridge 与文档链接检查；完成 MyyShop 11 个公开端点首批快照；
+- sitemap detector 支持 processing instruction 与根节点后的生成器 comment，规则版本为 `m4-site-detectors-v1.0.2`；
+- 不包含登录/账号、GA4/GSC、消费者平台、自动采用、自动发布或新插件版本发布；Manifest 保持 0.3.0。
 
 ## 0.3.0 — 2026-08-24（M2 Contract Kernel + M3 Knowledge/Query）
 

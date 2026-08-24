@@ -181,7 +181,8 @@ async function checkRuntime() {
   for (const file of [
     'build-index.mjs', 'run-lifecycle.mjs', 'legacy-ops-geo-import.mjs',
     'knowledge-query.mjs', 'workspace-init.mjs', 'workspace-validate.mjs',
-    'diagnosis.mjs',
+    'diagnosis.mjs', 'collect-public-site.mjs', 'prepare-public-site-m4-inputs.mjs',
+    'check-doc-links.mjs',
   ]) {
     const p = path.join(PLUGIN_ROOT, 'scripts', file);
     try {
@@ -195,6 +196,8 @@ async function checkRuntime() {
     'knowledge-query.mjs', 'knowledge-trace.mjs',
     'diagnosis-io.mjs', 'diagnosis-profile.mjs', 'diagnosis-trace.mjs',
     'site-audit.mjs', 'research-input.mjs', 'asset-proposal.mjs',
+    'public-site-collection-plan.mjs', 'public-site-collector.mjs',
+    'public-site-m4-inputs.mjs',
   ]) {
     const p = path.join(PLUGIN_ROOT, 'scripts', 'lib', file);
     try {

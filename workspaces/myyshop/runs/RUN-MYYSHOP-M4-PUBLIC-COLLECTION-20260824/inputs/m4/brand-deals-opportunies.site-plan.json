@@ -1,0 +1,127 @@
+{
+  "asset_refs": [
+    "AST-MYYSHOP-BRAND-DEALS-001"
+  ],
+  "development_fixture": false,
+  "goal_refs": [
+    "GOAL-MYYSHOP-DEFINITION-001"
+  ],
+  "input_versions": {
+    "AST-MYYSHOP-BRAND-DEALS-001": "1.0.0",
+    "CLM-MYYSHOP-AUDIENCE-001": "1.0.1",
+    "CLM-MYYSHOP-LIFECYCLE-SERVICE-001": "1.0.1",
+    "GOAL-MYYSHOP-DEFINITION-001": "1.0.1",
+    "KR-MYYSHOP-DEFINITION-001": "1.0.1",
+    "QS-MYYSHOP-DEFINITION-001": "1.0.1",
+    "SRC-MYYSHOP-WEB-BRAND-DEALS-001": "1.0.0"
+  },
+  "knowledge_release_versions": [
+    {
+      "ref": "KR-MYYSHOP-DEFINITION-001",
+      "version": "1.0.1"
+    }
+  ],
+  "outputs": {
+    "CANONICAL": {
+      "evidence": {
+        "id": "EVD-MYYSHOP-SITE-BRAND-DEALS-20260824-CANONICAL",
+        "path": "evidence/records/evd-myyshop-site-brand-deals-20260824-canonical.md"
+      },
+      "finding": {
+        "id": "FND-MYYSHOP-SITE-BRAND-DEALS-20260824-CANONICAL",
+        "path": "findings/fnd-myyshop-site-brand-deals-20260824-canonical.md"
+      }
+    },
+    "CRAWLABILITY": {
+      "evidence": {
+        "id": "EVD-MYYSHOP-SITE-BRAND-DEALS-20260824-CRAWLABILITY",
+        "path": "evidence/records/evd-myyshop-site-brand-deals-20260824-crawlability.md"
+      },
+      "finding": {
+        "id": "FND-MYYSHOP-SITE-BRAND-DEALS-20260824-CRAWLABILITY",
+        "path": "findings/fnd-myyshop-site-brand-deals-20260824-crawlability.md"
+      }
+    },
+    "HEADING_PRESENT": {
+      "evidence": {
+        "id": "EVD-MYYSHOP-SITE-BRAND-DEALS-20260824-HEADING-PRESENT",
+        "path": "evidence/records/evd-myyshop-site-brand-deals-20260824-heading-present.md"
+      },
+      "finding": {
+        "id": "FND-MYYSHOP-SITE-BRAND-DEALS-20260824-HEADING-PRESENT",
+        "path": "findings/fnd-myyshop-site-brand-deals-20260824-heading-present.md"
+      }
+    },
+    "HTTP_STATUS": {
+      "evidence": {
+        "id": "EVD-MYYSHOP-SITE-BRAND-DEALS-20260824-HTTP-STATUS",
+        "path": "evidence/records/evd-myyshop-site-brand-deals-20260824-http-status.md"
+      },
+      "finding": {
+        "id": "FND-MYYSHOP-SITE-BRAND-DEALS-20260824-HTTP-STATUS",
+        "path": "findings/fnd-myyshop-site-brand-deals-20260824-http-status.md"
+      }
+    },
+    "META_DESCRIPTION_PRESENT": {
+      "evidence": {
+        "id": "EVD-MYYSHOP-SITE-BRAND-DEALS-20260824-META-DESCRIPTION-PRESENT",
+        "path": "evidence/records/evd-myyshop-site-brand-deals-20260824-meta-description-present.md"
+      },
+      "finding": {
+        "id": "FND-MYYSHOP-SITE-BRAND-DEALS-20260824-META-DESCRIPTION-PRESENT",
+        "path": "findings/fnd-myyshop-site-brand-deals-20260824-meta-description-present.md"
+      }
+    },
+    "ROBOTS": {
+      "evidence": {
+        "id": "EVD-MYYSHOP-SITE-BRAND-DEALS-20260824-ROBOTS",
+        "path": "evidence/records/evd-myyshop-site-brand-deals-20260824-robots.md"
+      },
+      "finding": {
+        "id": "FND-MYYSHOP-SITE-BRAND-DEALS-20260824-ROBOTS",
+        "path": "findings/fnd-myyshop-site-brand-deals-20260824-robots.md"
+      }
+    },
+    "SCHEMA_SYNTAX": {
+      "evidence": {
+        "id": "EVD-MYYSHOP-SITE-BRAND-DEALS-20260824-SCHEMA-SYNTAX",
+        "path": "evidence/records/evd-myyshop-site-brand-deals-20260824-schema-syntax.md"
+      },
+      "finding": {
+        "id": "FND-MYYSHOP-SITE-BRAND-DEALS-20260824-SCHEMA-SYNTAX",
+        "path": "findings/fnd-myyshop-site-brand-deals-20260824-schema-syntax.md"
+      }
+    },
+    "SITEMAP": {
+      "evidence": {
+        "id": "EVD-MYYSHOP-SITE-BRAND-DEALS-20260824-SITEMAP",
+        "path": "evidence/records/evd-myyshop-site-brand-deals-20260824-sitemap.md"
+      },
+      "finding": {
+        "id": "FND-MYYSHOP-SITE-BRAND-DEALS-20260824-SITEMAP",
+        "path": "findings/fnd-myyshop-site-brand-deals-20260824-sitemap.md"
+      }
+    },
+    "TITLE_PRESENT": {
+      "evidence": {
+        "id": "EVD-MYYSHOP-SITE-BRAND-DEALS-20260824-TITLE-PRESENT",
+        "path": "evidence/records/evd-myyshop-site-brand-deals-20260824-title-present.md"
+      },
+      "finding": {
+        "id": "FND-MYYSHOP-SITE-BRAND-DEALS-20260824-TITLE-PRESENT",
+        "path": "findings/fnd-myyshop-site-brand-deals-20260824-title-present.md"
+      }
+    }
+  },
+  "query_set_versions": [
+    {
+      "ref": "QS-MYYSHOP-DEFINITION-001",
+      "version": "1.0.1"
+    }
+  ],
+  "run": {
+    "id": "RUN-MYYSHOP-M4-SITE-BRAND-DEALS-20260824",
+    "path": "runs/RUN-MYYSHOP-M4-SITE-BRAND-DEALS-20260824/run.md"
+  },
+  "source_ref": "SRC-MYYSHOP-WEB-BRAND-DEALS-001"
+}

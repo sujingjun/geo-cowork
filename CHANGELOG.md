@@ -1,5 +1,13 @@
 # geo-cowork 变更记录
 
+## 2026-08-24 - M2–M4 优化与 MyyShop 首批公开采集（本地未发布）
+
+- 新增同源 allowlist public collector：单并发、限速、超时/重试、重定向/容量上限、敏感 header 脱敏、raw/metadata SHA 与 create-only 恢复；
+- 新增 collection summary 到 M4 Site/Research manifest/plan 的确定性桥接器，以及仓库级 Markdown 链接检查；
+- 经 Owner 明确授权采集 11 个 MyyShop 公开端点，生成 11 份 candidate 一方 Evidence 和 5 页 Site Run；未读取 GA4/GSC、账号或消费者平台；
+- 真实 sitemap 暴露 processing instruction/尾部 comment 假阳性，红测修复并将 detector 升为 `m4-site-detectors-v1.0.2`；旧 Run 保留为修复轨迹；
+- 没有自动批准 Evidence、更新 Claim、确认 Gap、生成 Proposal、采用、外部发布、commit、push、PR 或部署。
+
 ## 2026-08-24 - M4 Diagnosis, Site & Asset Proposal（本地未发布）
 
 - 新增 M4 Schema/profile、三类 Gap 前置、Asset Proposal/Adoption/Publication 对象、三类派生 index 与 Proposal trace；

@@ -1,0 +1,147 @@
+{
+  "asset_refs": [
+    "AST-MYYSHOP-HOMEPAGE-001",
+    "AST-MYYSHOP-ABOUT-001",
+    "AST-MYYSHOP-FOR-CREATORS-001",
+    "AST-MYYSHOP-BRAND-DEALS-001",
+    "AST-MYYSHOP-MYYFINDS-001",
+    "AST-MYYSHOP-LLMS-001",
+    "AST-MYYSHOP-LLMS-FULL-001"
+  ],
+  "development_fixture": false,
+  "findings": [],
+  "goal_refs": [
+    "GOAL-MYYSHOP-DEFINITION-001"
+  ],
+  "input_versions": {
+    "AST-MYYSHOP-ABOUT-001": "1.0.0",
+    "AST-MYYSHOP-BRAND-DEALS-001": "1.0.0",
+    "AST-MYYSHOP-FOR-CREATORS-001": "1.0.0",
+    "AST-MYYSHOP-HOMEPAGE-001": "1.0.0",
+    "AST-MYYSHOP-LLMS-001": "1.0.0",
+    "AST-MYYSHOP-LLMS-FULL-001": "1.0.0",
+    "AST-MYYSHOP-MYYFINDS-001": "1.0.0",
+    "CLM-MYYSHOP-AUDIENCE-001": "1.0.1",
+    "CLM-MYYSHOP-LIFECYCLE-SERVICE-001": "1.0.1",
+    "GOAL-MYYSHOP-DEFINITION-001": "1.0.1",
+    "KR-MYYSHOP-DEFINITION-001": "1.0.1",
+    "QS-MYYSHOP-DEFINITION-001": "1.0.1",
+    "SRC-MYYSHOP-WEB-ABOUT-001": "1.0.0",
+    "SRC-MYYSHOP-WEB-BRAND-DEALS-001": "1.0.0",
+    "SRC-MYYSHOP-WEB-FOR-CREATORS-001": "1.0.0",
+    "SRC-MYYSHOP-WEB-HOMEPAGE-001": "1.0.0",
+    "SRC-MYYSHOP-WEB-LLMS-001": "1.0.0",
+    "SRC-MYYSHOP-WEB-LLMS-FULL-001": "1.0.0",
+    "SRC-MYYSHOP-WEB-MYYFINDS-001": "1.0.0",
+    "SRC-MYYSHOP-WEB-ROBOTS-001": "1.0.0",
+    "SRC-MYYSHOP-WEB-SITEMAP-BLOGS-001": "1.0.0",
+    "SRC-MYYSHOP-WEB-SITEMAP-INDEX-001": "1.0.0",
+    "SRC-MYYSHOP-WEB-SITEMAP-PAGES-001": "1.0.0"
+  },
+  "knowledge_release_versions": [
+    {
+      "ref": "KR-MYYSHOP-DEFINITION-001",
+      "version": "1.0.1"
+    }
+  ],
+  "observations": [
+    {
+      "claim_refs": [
+        "CLM-MYYSHOP-AUDIENCE-001",
+        "CLM-MYYSHOP-LIFECYCLE-SERVICE-001"
+      ],
+      "id": "EVD-MYYSHOP-WEB-HOMEPAGE-20260824",
+      "path": "evidence/records/evd-myyshop-web-homepage-20260824.md",
+      "source_ref": "SRC-MYYSHOP-WEB-HOMEPAGE-001"
+    },
+    {
+      "claim_refs": [
+        "CLM-MYYSHOP-AUDIENCE-001",
+        "CLM-MYYSHOP-LIFECYCLE-SERVICE-001"
+      ],
+      "id": "EVD-MYYSHOP-WEB-ABOUT-20260824",
+      "path": "evidence/records/evd-myyshop-web-about-20260824.md",
+      "source_ref": "SRC-MYYSHOP-WEB-ABOUT-001"
+    },
+    {
+      "claim_refs": [
+        "CLM-MYYSHOP-AUDIENCE-001",
+        "CLM-MYYSHOP-LIFECYCLE-SERVICE-001"
+      ],
+      "id": "EVD-MYYSHOP-WEB-FOR-CREATORS-20260824",
+      "path": "evidence/records/evd-myyshop-web-for-creators-20260824.md",
+      "source_ref": "SRC-MYYSHOP-WEB-FOR-CREATORS-001"
+    },
+    {
+      "claim_refs": [
+        "CLM-MYYSHOP-AUDIENCE-001",
+        "CLM-MYYSHOP-LIFECYCLE-SERVICE-001"
+      ],
+      "id": "EVD-MYYSHOP-WEB-BRAND-DEALS-20260824",
+      "path": "evidence/records/evd-myyshop-web-brand-deals-20260824.md",
+      "source_ref": "SRC-MYYSHOP-WEB-BRAND-DEALS-001"
+    },
+    {
+      "claim_refs": [
+        "CLM-MYYSHOP-AUDIENCE-001",
+        "CLM-MYYSHOP-LIFECYCLE-SERVICE-001"
+      ],
+      "id": "EVD-MYYSHOP-WEB-MYYFINDS-20260824",
+      "path": "evidence/records/evd-myyshop-web-myyfinds-20260824.md",
+      "source_ref": "SRC-MYYSHOP-WEB-MYYFINDS-001"
+    },
+    {
+      "claim_refs": [],
+      "id": "EVD-MYYSHOP-WEB-ROBOTS-20260824",
+      "path": "evidence/records/evd-myyshop-web-robots-20260824.md",
+      "source_ref": "SRC-MYYSHOP-WEB-ROBOTS-001"
+    },
+    {
+      "claim_refs": [
+        "CLM-MYYSHOP-AUDIENCE-001",
+        "CLM-MYYSHOP-LIFECYCLE-SERVICE-001"
+      ],
+      "id": "EVD-MYYSHOP-WEB-LLMS-20260824",
+      "path": "evidence/records/evd-myyshop-web-llms-20260824.md",
+      "source_ref": "SRC-MYYSHOP-WEB-LLMS-001"
+    },
+    {
+      "claim_refs": [
+        "CLM-MYYSHOP-AUDIENCE-001",
+        "CLM-MYYSHOP-LIFECYCLE-SERVICE-001"
+      ],
+      "id": "EVD-MYYSHOP-WEB-LLMS-FULL-20260824",
+      "path": "evidence/records/evd-myyshop-web-llms-full-20260824.md",
+      "source_ref": "SRC-MYYSHOP-WEB-LLMS-FULL-001"
+    },
+    {
+      "claim_refs": [],
+      "id": "EVD-MYYSHOP-WEB-SITEMAP-INDEX-20260824",
+      "path": "evidence/records/evd-myyshop-web-sitemap-index-20260824.md",
+      "source_ref": "SRC-MYYSHOP-WEB-SITEMAP-INDEX-001"
+    },
+    {
+      "claim_refs": [],
+      "id": "EVD-MYYSHOP-WEB-SITEMAP-PAGES-20260824",
+      "path": "evidence/records/evd-myyshop-web-sitemap-pages-20260824.md",
+      "source_ref": "SRC-MYYSHOP-WEB-SITEMAP-PAGES-001"
+    },
+    {
+      "claim_refs": [],
+      "id": "EVD-MYYSHOP-WEB-SITEMAP-BLOGS-20260824",
+      "path": "evidence/records/evd-myyshop-web-sitemap-blogs-20260824.md",
+      "source_ref": "SRC-MYYSHOP-WEB-SITEMAP-BLOGS-001"
+    }
+  ],
+  "query_set_versions": [
+    {
+      "ref": "QS-MYYSHOP-DEFINITION-001",
+      "version": "1.0.1"
+    }
+  ],
+  "run": {
+    "id": "RUN-MYYSHOP-M4-RESEARCH-PUBLIC-WEB-20260824",
+    "path": "runs/RUN-MYYSHOP-M4-RESEARCH-PUBLIC-WEB-20260824/run.md"
+  },
+  "skill": "geo-reputation"
+}
