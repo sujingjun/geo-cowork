@@ -79,6 +79,15 @@
 | 公开采集与优化 Record | [`records/2026-08-24-m2-m4-optimization-and-myyshop-real-collection-record.md`](records/2026-08-24-m2-m4-optimization-and-myyshop-real-collection-record.md) | verified；11/11 快照、五页 Site Run、11 份 candidate 一方 Evidence；GA4/GSC/消费者平台/外部写入仍未授权 |
 | 整体优化 Handoff | [`handoff/2026-08-24-m2-m4-integrated-optimization-handoff.md`](handoff/2026-08-24-m2-m4-integrated-optimization-handoff.md) | proposed；记录已完成的直接优化、五层信源模型与 M5 P0；下一任务独立判断进入门 |
 
+## M2–M4 独立评审与 M5 Consumer Answer Testing / 持续信源体系（规划门通过）
+
+| 类别 | 工件 | 状态 |
+| --- | --- | --- |
+| 独立 Review Record | [`records/2026-08-24-m2-m4-completeness-and-m5-entry-gate-review.md`](records/2026-08-24-m2-m4-completeness-and-m5-entry-gate-review.md) | verified；PASS 仅限 M5 规划门，M5 实现门与真实采集门均 FAIL |
+| Requirement / PRD / Architecture | [`requirements/2026-08-24-m5-consumer-answer-testing.md`](requirements/2026-08-24-m5-consumer-answer-testing.md) / [`prd/2026-08-24-m5-consumer-answer-testing.md`](prd/2026-08-24-m5-consumer-answer-testing.md) / [`architecture/2026-08-24-consumer-answer-testing-architecture.md`](architecture/2026-08-24-consumer-answer-testing-architecture.md) | proposed；不得由 Review PASS 自动批准 |
+| Spec 0006 / Plan / Task | [`specs/0006-consumer-answer-testing.md`](specs/0006-consumer-answer-testing.md) / [`plans/2026-08-24-m5-consumer-answer-testing-plan.md`](plans/2026-08-24-m5-consumer-answer-testing-plan.md) / [`tasks/2026-08-24-m5-consumer-answer-testing.md`](tasks/2026-08-24-m5-consumer-answer-testing.md) | proposed；已完整设计 Citation-driven 持续 Source registry、Playwright base、逐平台真实 collector 与授权门；未进入代码、安装或采集 |
+| M5 信源/采集设计修订 Record | [`records/2026-08-25-m5-source-system-and-collector-design-record.md`](records/2026-08-25-m5-source-system-and-collector-design-record.md) | verified；记录无冷启动导入、Playwright/真实采集设计和本地验证；不是实现批准 |
+
 ## 历史提案与交接
 
 | 工件 | 位置 | 状态与用途 |
@@ -88,7 +97,7 @@
 | CodeBuddy 移除与 WorkBuddy 切换 Handoff | [`handoff/2026-08-20-milestone-1-hardening-workbuddy-china-handoff.md`](handoff/2026-08-20-milestone-1-hardening-workbuddy-china-handoff.md) | 历史 WorkBuddy 契约跟踪与 M1 收口基线 |
 | 原“Query 与知识” M2 Handoff | [`handoff/2026-08-20-query-and-knowledge-milestone-handoff.md`](handoff/2026-08-20-query-and-knowledge-milestone-handoff.md) | 已被 2026-08-23 产品基线重排；保留历史，不再作为当前 M2 启动指令 |
 
-M2–M4 的本地实现、公开只读执行与边界已有各自 Record；下一任务依据最终产品方案、全部 Records 与整体优化 Handoff 独立评审。Record/Handoff 都不能自行提升 Evidence/Gap 人工批准、M5 实现、消费者平台采样、发布或部署状态。
+M2–M4 独立评审已通过 M5 规划门，并形成六份 proposed M5 工件。M5 已将 Playwright/真实采集和持续信源维护纳入必要设计；Source 候选只能来自真实 Citation Observation，无外部榜单冷启动导入。实现门与真实采集门仍未通过；Review/Record/Handoff 都不能自行提升 M5 SDD、Evidence/Gap 人工批准、消费者平台采样、发布或部署状态。
 
 ## 现有目录
 

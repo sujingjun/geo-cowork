@@ -2,7 +2,8 @@
 
 - 状态：approved
 - 日期：2026-08-23
-- 来源：2026-08-23 苏格拉底式产品澄清、GitHub 开源研究与 Owner 本轮明确批准
+- 更新：2026-08-25，Owner 明确 M5 必须完整设计 Playwright 与真实消费者平台采集；持续信源体系只由真实 Citation Observation 维护，不做冷启动榜单导入
+- 来源：2026-08-23 苏格拉底式产品澄清、GitHub 开源研究与 Owner 批准；2026-08-25 Owner 信源与采集边界决定
 - 适用范围：里程碑 M2—M8、MyyShop 两个真实 GEO Cycle、本地跨宿主 GEO 专家 v1
 - 目标仓库：`sujingjun/geo-cowork`
 - 试点品牌：MyyShop
@@ -365,19 +366,29 @@ ChatGPT、Gemini、Perplexity、Google AI Overviews、Claude。
 
 正式样本只认消费者产品界面：Playwright / 浏览器自动化辅助；自动化不稳定则人工采集；API 第一版不进入正式采样体系。
 
+M5 必须设计 Playwright collector base 与 ChatGPT、Gemini、Perplexity、Google AI Mode/AI Overviews、Claude 逐平台 adapter：每次采样隔离 browser context，只访问获授权入口，使用版本化 selector/终态，保存完整回答与 Citation raw，最小化帐号信息，并对 timeout、refusal、no result、challenge 与 selector drift 显式失败。依赖安装、浏览器下载和逐平台真实运行仍是独立授权门。
+
 ### 7.5 Answer Sample Evidence
 
 每个样本保存 Query、完整回答、Citation URL + 对应位置、UI 截图、Collector Profile、capture time、login / web search 状态、success / refusal / timeout / no_result、manual / browser_automation、HTML / DOM / 页面导出（能获取则保存，否则 `unavailable`）。
 
 Raw sample 与 Review 分离，后续 Rubric 更新可以重评历史数据。
 
-### 7.6 正式 Review Rubric
+### 7.6 持续信源体系
+
+每个真实 Citation Observation 必须匹配或创建可追溯 Source identity，再独立建立 Source Classification 与 Claim Support Review。Source registry 持续保留 domain/publisher/channel/page 身份、first/last seen、观测次数、平台、Query Cluster 和时间窗；宿主域名不等于发布者或信源类型。
+
+五层角色为：官方事实源、制度权威源、独立专业源、社区经验源、内容传播源。分类可有副标签但只有一个主标签，`first_party | third_party | unknown` 与五层角色分开记录。分析链为 Query → Platform → Intent → Citation Domain → Source Identity → Source Type → Claim Supported。
+
+指标按行业、平台、Query Cluster 和时间窗计算 Top Citation Domains、Citation Share、Source Diversity、First-party vs Third-party Ratio 与 Source Volatility。候选 Source 只能由当前 Workspace 内获授权真实 Run 的 Citation Observation 发现；产品不建立外部综合榜、静态域名表或历史排名的冷启动 import 合同、命令或候选生成路径。
+
+### 7.7 正式 Review Rubric
 
 正式回归：实体识别、核心事实正确、当前定位正确、风险 / 红线命中、Citation 质量及是否支撑对应 Claim。
 
 探索性字段：比较维度、推荐理由、排除理由、竞品出现方式、来源结构、新的判断维度候选。探索字段不直接计入正式回归结果。
 
-### 7.7 Evaluation
+### 7.8 Evaluation
 
 确定性项目自动；语义项目由 GEO 专家初评；冲突、低置信度、关键风险、证据矛盾或直接影响 Cycle 结论的关键样本才要求人工确认。
 
@@ -669,11 +680,11 @@ Primary GEO Expert
 
 ### M5 — Consumer Answer Testing
 
-目标：建立真实消费者产品入口的可复现 Baseline / Retest。
+目标：建立真实消费者产品入口的可复现 Baseline / Retest，并建立只由真实 Citation Observation 驱动的持续信源体系。
 
-交付：Collector Profile；Playwright collector base；ChatGPT/Gemini/Perplexity/Google AIO/Claude collectors；manual fallback；Answer Sample Evidence package；core/exploratory Review；3-run aggregation；comparability；`geo-answer-cycle`。
+交付：Collector Profile；Playwright collector base；ChatGPT/Gemini/Perplexity/Google AI Mode/AI Overviews/Claude collectors；real `collect` 与 manual fallback；Answer Sample Evidence package；Citation-driven Source registry 与五层 Classification；Claim Support Review；core/exploratory Review；3-run aggregation；comparability；长任务恢复；逐平台授权/隐私矩阵；`geo-answer-cycle`。
 
-验收：正式样本来自消费者 UI；API 样本不混入；每 Query×Platform 3 次独立保留；raw answer/citation/screenshot/profile 与 review 分离；timeout/refusal/no-result 不静默丢弃；同一 raw sample 可重评。
+验收：正式样本来自消费者 UI；API 样本不混入；每 Query×Platform 3 次独立保留；raw answer/citation/screenshot/profile 与 review 分离；timeout/refusal/no-result/challenge/selector drift 不静默丢弃；同一 raw sample 可重评；Citation → Source identity → Classification → Claim Support 全链可追溯；五项信源指标可按行业/平台/Query Cluster/时间窗重算；系统无外部榜单冷启动导入路径。
 
 ### M6 — Analytics + Real GEO Cycle 1
 

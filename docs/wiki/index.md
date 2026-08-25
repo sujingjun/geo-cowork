@@ -15,7 +15,11 @@ sources:
   - docs/plans/2026-08-24-m4-diagnosis-site-asset-proposal-plan.md
   - docs/records/2026-08-24-m4-diagnosis-site-asset-proposal-record.md
   - docs/handoff/2026-08-24-m2-m4-integrated-optimization-handoff.md
-updated: 2026-08-24
+  - docs/records/2026-08-24-m2-m4-completeness-and-m5-entry-gate-review.md
+  - docs/records/2026-08-25-m5-source-system-and-collector-design-record.md
+  - docs/specs/0006-consumer-answer-testing.md
+  - docs/plans/2026-08-24-m5-consumer-answer-testing-plan.md
+updated: 2026-08-25
 ---
 
 # geo-cowork 知识库导航
@@ -26,7 +30,7 @@ updated: 2026-08-24
 
 | 页面 | kind | status | updated |
 | --- | --- | --- | --- |
-| [index.md](index.md)（本页） | index | verified | 2026-08-24 |
+| [index.md](index.md)（本页） | index | verified | 2026-08-25 |
 
 新 Wiki 页面按 `docs/workflow.md` 第 2 章 Frontmatter 要求建档后加入本索引；原始来源变更而未同步时须标明过期或更新 `updated`。
 
@@ -44,5 +48,9 @@ updated: 2026-08-24
 - M4 已批准实施计划：[`../plans/2026-08-24-m4-diagnosis-site-asset-proposal-plan.md`](../plans/2026-08-24-m4-diagnosis-site-asset-proposal-plan.md)
 - M4 本地离线验收：[`../records/2026-08-24-m4-diagnosis-site-asset-proposal-record.md`](../records/2026-08-24-m4-diagnosis-site-asset-proposal-record.md)
 - M2–M4 整体优化与 M5 进入门：[`../handoff/2026-08-24-m2-m4-integrated-optimization-handoff.md`](../handoff/2026-08-24-m2-m4-integrated-optimization-handoff.md)
+- M2–M4 独立评审与 M5 进入门结论：[`../records/2026-08-24-m2-m4-completeness-and-m5-entry-gate-review.md`](../records/2026-08-24-m2-m4-completeness-and-m5-entry-gate-review.md)
+- M5 持续信源与 Playwright/真实采集设计修订记录：[`../records/2026-08-25-m5-source-system-and-collector-design-record.md`](../records/2026-08-25-m5-source-system-and-collector-design-record.md)
+- M5 proposed Spec：[`../specs/0006-consumer-answer-testing.md`](../specs/0006-consumer-answer-testing.md)
+- M5 proposed Plan：[`../plans/2026-08-24-m5-consumer-answer-testing-plan.md`](../plans/2026-08-24-m5-consumer-answer-testing-plan.md)
 
 其他文档类别目录（架构、需求、PRD、原型、Spec、Plan、Task、Record、Runbook、Release、复盘、经验、Handoff）在首次出现 canonical 文档时创建，并由 `docs/README.md` 导航。
