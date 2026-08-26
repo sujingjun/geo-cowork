@@ -1,11 +1,13 @@
 ---
 title: M5 Consumer Answer Testing 与持续信源体系 PRD
-status: proposed
+status: approved
 created: 2026-08-24
 updated: 2026-08-25
 source:
   - docs/requirements/2026-08-24-m5-consumer-answer-testing.md
   - "2026-08-25 当前用户指令：持续维护信源体系，不做冷启动导入；完整设计 Playwright 与真实采集"
+  - "2026-08-25 当前用户指令：批准 M5 里程碑方案设计，并实施计划，完成目标"
+  - "2026-08-25 当前用户指令：Playwright 使用最新版并全局安装；五个平台统一授权 Owner Google 登录身份，按真实用户隐私，本地 artifact 保留 1 年"
 scope: M5 用户流程、Playwright/真实采样、持续信源维护、五层角色、指标、人工门与业务验收
 ---
 
@@ -142,4 +144,4 @@ Source Classification 先按具体页面、作者/机构与内容形态判断，
 
 ## 9. 非目标与当前边界
 
-本 PRD 完整定义 Playwright 与真实采集产品流程，但不批准代码实现、依赖安装、浏览器下载、消费者平台登录/采样、GA4/GSC、外部写入、发布、部署或业务效果判断。文档保持 `proposed`；本次 Owner 授权只覆盖文档 commit 与本地合入 `main`。
+本 PRD 已由 Owner 批准，并授权 T02—T08、本机全局 Playwright、五个平台 Owner-controlled Google 登录角色、隐私最小化和本地 artifact 365 天保留。账号授权不覆盖平台 Terms/robots：当前真实消费者 UI 自动采样仍受条款门阻塞，也不覆盖新 browser 下载、GA4/GSC、外部写入、commit、push、PR、发布、部署或业务效果判断。

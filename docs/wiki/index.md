@@ -17,6 +17,11 @@ sources:
   - docs/handoff/2026-08-24-m2-m4-integrated-optimization-handoff.md
   - docs/records/2026-08-24-m2-m4-completeness-and-m5-entry-gate-review.md
   - docs/records/2026-08-25-m5-source-system-and-collector-design-record.md
+  - docs/records/2026-08-25-m5-offline-consumer-answer-testing-record.md
+  - docs/records/2026-08-25-m5-playwright-runtime-and-platform-guard-record.md
+  - docs/records/2026-08-25-m5-chatgpt-manual-smoke-record.md
+  - docs/records/2026-08-25-m5-gemini-manual-smoke-record.md
+  - docs/requirements/2026-08-25-platform-automation-permission-backlog.md
   - docs/specs/0006-consumer-answer-testing.md
   - docs/plans/2026-08-24-m5-consumer-answer-testing-plan.md
 updated: 2026-08-25
@@ -50,7 +55,12 @@ updated: 2026-08-25
 - M2–M4 整体优化与 M5 进入门：[`../handoff/2026-08-24-m2-m4-integrated-optimization-handoff.md`](../handoff/2026-08-24-m2-m4-integrated-optimization-handoff.md)
 - M2–M4 独立评审与 M5 进入门结论：[`../records/2026-08-24-m2-m4-completeness-and-m5-entry-gate-review.md`](../records/2026-08-24-m2-m4-completeness-and-m5-entry-gate-review.md)
 - M5 持续信源与 Playwright/真实采集设计修订记录：[`../records/2026-08-25-m5-source-system-and-collector-design-record.md`](../records/2026-08-25-m5-source-system-and-collector-design-record.md)
-- M5 proposed Spec：[`../specs/0006-consumer-answer-testing.md`](../specs/0006-consumer-answer-testing.md)
-- M5 proposed Plan：[`../plans/2026-08-24-m5-consumer-answer-testing-plan.md`](../plans/2026-08-24-m5-consumer-answer-testing-plan.md)
+- M5 离线工程验收：[`../records/2026-08-25-m5-offline-consumer-answer-testing-record.md`](../records/2026-08-25-m5-offline-consumer-answer-testing-record.md)
+- M5 Playwright 与平台条款门验收：[`../records/2026-08-25-m5-playwright-runtime-and-platform-guard-record.md`](../records/2026-08-25-m5-playwright-runtime-and-platform-guard-record.md)
+- M5 ChatGPT 人工 Smoke：[`../records/2026-08-25-m5-chatgpt-manual-smoke-record.md`](../records/2026-08-25-m5-chatgpt-manual-smoke-record.md)
+- M5 Gemini 人工 Smoke：[`../records/2026-08-25-m5-gemini-manual-smoke-record.md`](../records/2026-08-25-m5-gemini-manual-smoke-record.md)
+- 平台许可需求池条目：[`../requirements/2026-08-25-platform-automation-permission-backlog.md`](../requirements/2026-08-25-platform-automation-permission-backlog.md)
+- M5 approved Spec：[`../specs/0006-consumer-answer-testing.md`](../specs/0006-consumer-answer-testing.md)
+- M5 approved Plan：[`../plans/2026-08-24-m5-consumer-answer-testing-plan.md`](../plans/2026-08-24-m5-consumer-answer-testing-plan.md)
 
 其他文档类别目录（架构、需求、PRD、原型、Spec、Plan、Task、Record、Runbook、Release、复盘、经验、Handoff）在首次出现 canonical 文档时创建，并由 `docs/README.md` 导航。

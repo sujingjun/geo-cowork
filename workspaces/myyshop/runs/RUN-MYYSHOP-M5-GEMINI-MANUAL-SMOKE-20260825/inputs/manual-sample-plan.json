@@ -1,0 +1,92 @@
+{
+  "authorization_ref": "workspace://cycles/preparation/decisions/2026-08-25-m5-playwright-and-consumer-platform-authorized.md",
+  "collector_contract": {
+    "collector_version": "manual-owner-copy-v1",
+    "schema_version": "1.0.0",
+    "tool_policy_version": "m5-manual-privacy-v1"
+  },
+  "goal_refs": [
+    "GOAL-MYYSHOP-DEFINITION-001"
+  ],
+  "input_versions": {
+    "CLM-MYYSHOP-AUDIENCE-001": "1.0.1",
+    "CLM-MYYSHOP-LIFECYCLE-SERVICE-001": "1.0.1",
+    "CPF-MYYSHOP-GEMINI-MANUAL-SMOKE-20260825": "1.0.0",
+    "GOAL-MYYSHOP-DEFINITION-001": "1.0.1",
+    "KR-MYYSHOP-DEFINITION-001": "1.0.1",
+    "Q-MYYSHOP-WHAT-IS-001": "1.0.1",
+    "QS-MYYSHOP-DEFINITION-001": "1.0.1"
+  },
+  "knowledge_release_versions": [
+    {
+      "ref": "KR-MYYSHOP-DEFINITION-001",
+      "version": "1.0.1"
+    }
+  ],
+  "profile": {
+    "data": {
+      "approval": {
+        "approved_at": "2026-08-25T18:07:44+08:00",
+        "approved_by": "MyyShop Owner",
+        "decision_ref": "workspace://cycles/preparation/decisions/2026-08-25-m5-playwright-and-consumer-platform-authorized.md"
+      },
+      "collection_method": "manual",
+      "conversation_state": "new",
+      "created_at": "2026-08-25T18:07:44+08:00",
+      "device": {
+        "browser": "Chrome",
+        "class": "desktop",
+        "os": "macOS",
+        "viewport": "unknown"
+      },
+      "id": "CPF-MYYSHOP-GEMINI-MANUAL-SMOKE-20260825",
+      "language": "zh-CN",
+      "login_state": "unknown",
+      "model_mode": "unknown",
+      "platform": "gemini",
+      "product_entry": "https://gemini.google.com/app",
+      "profile_fingerprint": "b470cce540df61242df2b550a7e391036670c4e6c3658ae9fcecff8aef1624b6",
+      "query_template_version": "1.0.0",
+      "record_type": "collector_profile",
+      "region": "unknown",
+      "sampling_count": 3,
+      "status": "frozen",
+      "time_window": {
+        "ends_at": "2026-08-26T00:00:00+08:00",
+        "id": "TW-MYYSHOP-GEMINI-SMOKE-20260825",
+        "starts_at": "2026-08-25T00:00:00+08:00"
+      },
+      "title": "MyyShop Gemini manual Smoke profile",
+      "updated_at": "2026-08-25T18:07:44+08:00",
+      "version": "1.0.0",
+      "web_search_state": "unknown"
+    },
+    "path": "cycles/m5/profiles/cpf-myyshop-gemini-manual-smoke-20260825.md"
+  },
+  "purpose": "exploratory",
+  "query_set_versions": [
+    {
+      "ref": "QS-MYYSHOP-DEFINITION-001",
+      "version": "1.0.1"
+    }
+  ],
+  "query_version": {
+    "ref": "Q-MYYSHOP-WHAT-IS-001",
+    "version": "1.0.1"
+  },
+  "run": {
+    "id": "RUN-MYYSHOP-M5-GEMINI-MANUAL-SMOKE-20260825"
+  },
+  "sample": {
+    "answer_output_path": "raw/slot-1/answer.md",
+    "captured_at": "2026-08-25T18:07:44+08:00",
+    "citations": [],
+    "id": "SMP-MYYSHOP-GEMINI-MANUAL-SMOKE-20260825",
+    "log_output_path": "raw/slot-1/collector-log.json",
+    "ordinal": 1,
+    "outcome": "success",
+    "path": "cycles/m5/samples/smp-myyshop-gemini-manual-smoke-20260825.md",
+    "temporary_chat": false
+  },
+  "schema_version": "m5-manual-sample-plan-v1"
+}

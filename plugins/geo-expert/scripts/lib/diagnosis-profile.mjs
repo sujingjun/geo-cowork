@@ -27,6 +27,7 @@ function addError(errors, code, object, details = {}) {
 }
 
 function isM4Object(data) {
+  if (data.record_type === 'run' && data.skill === 'geo-answer-cycle') return false;
   if (NEW_TYPES.has(data.record_type)) return true;
   return (M4_MARKERS[data.record_type] ?? []).some((field) => field in data);
 }

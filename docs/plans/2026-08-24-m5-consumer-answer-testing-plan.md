@@ -1,6 +1,6 @@
 ---
 title: M5 Consumer Answer Testing 与持续信源体系实施计划
-status: proposed
+status: approved
 created: 2026-08-24
 updated: 2026-08-25
 source:
@@ -8,6 +8,11 @@ source:
   - docs/plans/2026-08-23-geo-cowork-final-product-plan.md
   - docs/records/2026-08-24-m2-m4-completeness-and-m5-entry-gate-review.md
   - "2026-08-25 当前用户指令：持续维护信源体系，不做冷启动导入；M5 完整设计 Playwright 与真实采集"
+  - "2026-08-25 当前用户指令：批准 M5 里程碑方案设计，并实施计划，完成目标"
+  - "2026-08-25 当前用户指令：Playwright 使用最新版并全局安装；五个平台统一授权 Owner Google 登录身份，按真实用户隐私，本地 artifact 保留 1 年"
+  - workspaces/myyshop/cycles/preparation/decisions/2026-08-25-m5-playwright-and-consumer-platform-authorized.md
+  - "2026-08-25 当前用户指令：后续平台转为平台书面自动采集"
+  - "2026-08-25 当前用户指令：去除 Adapter written_permission_ref 限制；平台许可改为全部里程碑完成后的上线前待办"
 scope: M5 离线合同/Fixture/恢复/指标、持续 Source registry、Playwright base、逐平台真实 collector 与 Baseline/Retest
 ---
 
@@ -15,7 +20,7 @@ scope: M5 离线合同/Fixture/恢复/指标、持续 Source registry、Playwrig
 
 ## 1. 进入门结论与当前基线
 
-独立 Review 的结论是：通过 M5 **规划门**，不通过 M5 **实现门**或**真实采集门**。本 Plan 因而只冻结实施顺序、合同、验证与授权边界，状态保持 `proposed`。
+独立 Review 原结论是：通过 M5 **规划门**，不通过 M5 **实现门**或**真实采集门**。Owner 已于 2026-08-25 批准本 Plan 与六份 M5 工件，随后授权并完成 T02—T08；真实采集门仍因平台 Terms/robots 未通过。
 
 当前可继承事实：
 
@@ -31,17 +36,17 @@ scope: M5 离线合同/Fixture/恢复/指标、持续 Source registry、Playwrig
 
 ### 2.1 目标
 
-完整设计并分段实现 Spec 0006 的 M5 canonical 对象、不可变 raw/sample/review 边界、三次采样协议、由真实 Citation Observation 驱动的持续 Source registry、五项指标、comparability、长任务恢复、Playwright collector base、五个消费者平台 adapter、人工 fallback 与真实 Baseline/Retest。当前文档任务只冻结该设计与实施顺序；依赖、代码和真实运行仍分别过门。
+完整设计并分段实现 Spec 0006 的 M5 canonical 对象、不可变 raw/sample/review 边界、三次采样协议、由真实 Citation Observation 驱动的持续 Source registry、五项指标、comparability、长任务恢复、Playwright collector base、五个消费者平台 adapter、人工 fallback 与真实 Baseline/Retest。当前实施已完成 T02—T08；五个平台 guard adapter 已实现，真实 UI Smoke 与 Baseline 继续分别过门。
 
-### 2.2 当前计划成功标准
+### 2.2 本轮实施成功标准
 
-1. 六份 M5 SDD/Task 完整且状态均为 `proposed`；
+1. 六份 M5 SDD/Task 完整且状态均为 `approved`；
 2. P0-01、P0-03、P0-04、P0-05 的最小合同和验证门已在 Spec 0006 冻结；
 3. P0-02 的逐平台授权/隐私矩阵成为真实运行硬门；
 4. P0-06 的 Baseline 与 post-change Retest 前置关系明确；
 5. 五层信源、Source identity/lifecycle、分析链和五项指标有确定性定义，且唯一候选发现入口为真实 Citation Observation；
 6. Playwright base、五个平台 adapter、人工 fallback、真实 `collect` 入口与逐平台验收门设计完整；
-7. 不安装 Playwright、不下载浏览器、不实现代码、不访问真实平台，不建立外部榜单导入路径。
+7. T02—T08、专项测试与 M2—M4 全量回归通过；全局 Playwright 只运行 loopback fixture，不下载新浏览器、不访问真实平台，不建立外部榜单导入路径。
 
 ## 3. 实施顺序
 
@@ -89,11 +94,15 @@ Owner 审阅 Requirement、PRD、Architecture、Spec 0006、Plan 和 Task。若�
 
 本 Plan 与 Spec 0006 已冻结 base collector 的输入/输出、每 attempt 隔离 context、allowlist、版本化 selector/终态、artifact 最小化、禁止写入和失败语义。实施前另建依赖决定 Record，冻结 exact package/version、license、Node 支持、lockfile 影响、浏览器下载/缓存/清理、macOS/CI/宿主验收范围。package 写入与 browser binary 下载分别取得当次授权后，才允许实施。
 
-当前 Plan 不选择或安装具体 Playwright 版本；这是为了遵守当前无网络/无安装授权，不能以未核验版本制造假冻结。进入本 Slice 前 exact version 必须被 Owner 批准并写入决定。
+Owner 已批准使用最新版并全局安装。2026-08-25 实时核验 npm/GitHub `latest` 为 `playwright@1.62.1`（Apache-2.0、Node `>=20`），已安装到当前用户全局 npm 环境；仓库 package/lockfile 不变。浏览器策略复用已能被 1.62.1 成功启动的本机 Chrome for Testing `chromium-1234`，不下载新 binary；当前数据卷约 99% 使用，任何新下载需再次决定。T08 只验证本机 macOS 与 loopback fixture，CI/其他宿主不在本轮结论内。
 
 ### Slice I — 平台 adapter 与人工 fallback（逐平台批准后）
 
 ChatGPT、Gemini、Perplexity、Google AI Mode/AI Overviews、Claude 分别建立 adapter Task，不共享授权。每个 adapter 按 Spec 0006 实现入口 allowlist、可支持 Profile 状态、selector/detector 版本、Citation 提取、artifact 范围、禁止动作和停止条件。每个平台先用获授权的测试账号/入口做最小 Smoke，再验证选择器失败、终态、截图/DOM 最小化和 manual fallback；一个平台受阻不改变其他平台结果。
+
+Owner 已分别授权五个平台使用同一 Owner-controlled Google 登录角色，并批准本地 artifact 365 天保留；原始账号标识不落盘。官方 Terms/robots 复核后，ChatGPT、Perplexity、Google Search/AI 与 Claude 为 `terms_blocked`，Gemini 为 `manual_only`。因此当前只实现五个 guard adapter、入口/版本/artifact/停止合同和浏览器启动前 fail-loud；不访问登录态、不提交 Query、不提取 Output。真实 Smoke 继续 blocked，账号授权不能覆盖平台条款。
+
+后续 Owner 选择人工 fallback：ChatGPT 形成 1 个 `exploratory/manual` Sample 与 3 个 Citation；Gemini 形成 1 个无 Citation `exploratory/manual` Sample。Owner 随后去除 adapter `written_permission_ref` 运行时硬门，并把平台许可放入 Requirements 需求池，业务状态“待规划”；是否开启后续规范只由 Owner 决定。两个现有 Sample 都不构成三次采样 Baseline；当前自动执行仍受 adapter Terms/robots 状态控制。
 
 ### Slice J — 真实 Baseline（独立 Record）
 
@@ -103,7 +112,7 @@ ChatGPT、Gemini、Perplexity、Google AI Mode/AI Overviews、Claude 分别建�
 
 只有 M4 confirmed Publication 和对应 Technical Retest Run 存在时，才建立 `post_change_retest` plan。M5 只比较答案/Citation；业务观察仍交 M6。
 
-## 4. 目标文件（未来实现范围）
+## 4. 目标文件（T02—T08 已实现，T09 真实 Smoke 与 T10 待独立门）
 
 ### 4.1 Schema、Tool 与模板
 
@@ -122,7 +131,7 @@ ChatGPT、Gemini、Perplexity、Google AI Mode/AI Overviews、Claude 分别建�
 - `plugins/geo-expert/scripts/collectors/playwright-base.mjs`
 - `plugins/geo-expert/scripts/collectors/platforms/` 下逐平台 adapter
 
-只有 Slice H 获批后才增加 Playwright package 和 collector base；平台 adapters 在 Slice I 分别落文件。不得提前创建空壳 adapter 来暗示平台支持。
+Slice H 已实现全局 runtime resolver 与 collector base；Slice I 已落五个平台 guard adapter。guard adapter 明确表示 `terms_blocked/manual_only`，不得被解释为平台自动采集支持。
 
 ### 4.2 测试与 Fixture
 
@@ -154,18 +163,18 @@ ChatGPT、Gemini、Perplexity、Google AI Mode/AI Overviews、Claude 分别建�
 | 动作 | 当前状态 | 进入条件 |
 | --- | --- | --- |
 | 本次 M5 proposed 文档 commit 与本地合入 `main` | 已授权 | 仅本文档任务，不推导实现批准 |
-| M5 Schema/Tool/Fixture 代码 | 未授权 | 六份 SDD 获批 + 明确离线实现授权 |
-| 使用本地录制 Fixture | 未授权实现；设计允许 | 离线实现授权，且 Fixture 无真实账号/个人数据 |
-| 增加 Playwright package | 未授权 | exact package/version 决定 + 当次安装授权 |
-| 下载浏览器 binary | 未授权 | 独立下载/缓存/清理/容量决定 + 当次授权 |
-| ChatGPT 消费者 UI | 未授权 | 单独平台 decision，明确全部 Spec 0006 隐私字段 |
-| Gemini 消费者 UI | 未授权 | 同上，不能继承 ChatGPT 授权 |
-| Perplexity 消费者 UI | 未授权 | 同上 |
-| Google AI Mode/AI Overviews | 未授权 | 同上，入口与地区分别冻结 |
-| Claude 消费者 UI | 未授权 | 同上 |
-| 人工 fallback | 未授权 | 对应平台授权明确允许，并记录操作人/采集方式 |
+| M5 Schema/Tool/Fixture/base 代码 | 已授权 | T02—T08；真实平台由 guard adapter 先过条款门 |
+| 使用本地录制 Fixture | 已授权 | Fixture 无真实账号/个人数据且不联网 |
+| 全局 Playwright package | 已授权并安装 | `playwright@1.62.1`；全局环境，仓库 package/lock 不变 |
+| 下载浏览器 binary | 未授权且本轮不需要 | 复用兼容 `chromium-1234`；新下载需容量与清理决定 |
+| ChatGPT 消费者 UI | 账号授权；自动执行 blocked | OpenAI Terms 禁止自动/程序化提取 Output；只保留人工合同 |
+| Gemini 消费者 UI | 账号授权；`manual_only` | 未取得官方消费者 UI 自动采集许可；不冒险自动访问 Owner 账号 |
+| Perplexity 消费者 UI | 账号授权；自动/手工采集 blocked | 消费者 Terms 禁止 bot/scraper/自动采集及同目的手工流程 |
+| Google AI Mode/AI Overviews | 账号授权；自动执行 blocked | Google Terms + `robots.txt` 禁止通用自动访问 `/search` |
+| Claude 消费者 UI | 账号授权；自动执行 blocked | Consumer Terms 禁止非 API 自动访问与 crawl/scrape |
+| 平台许可候选需求 | Requirements 需求池 / 待规划 | 不再作为 adapter 运行时字段；Owner 决定是否启动后续规范 |
 | API 正式采样 | 禁止 | v1 正式体系不允许；仅可另建探索范围 |
-| 截图/DOM/HTML 保留 | 未授权 | 每平台 artifact 类型、保留期、访问角色、删除责任获批 |
+| 真实 artifact 本地保留 | 已授权 365 天 | 只限完整答案/Citation、裁剪截图、脱敏 log；完整 DOM/HTML 默认 unavailable |
 | 外部写入 | 禁止 | 不属于 M5 只读采样 |
 | GA4/GSC | 未授权/不属于 M5 | M6 独立决定 |
 | 后续代码 commit、push、PR、release、deploy | 未授权 | 各自需当次明确授权；本次不 push |
@@ -180,10 +189,11 @@ ChatGPT、Gemini、Perplexity、Google AI Mode/AI Overviews、Claude 分别建�
 | 故障 | 每 step 中断、stale lock、双进程、取消、半成品、input drift |
 | 端到端离线 | `.invalid` 录制 Fixture 三 slot 全链；no network/no browser |
 | 回归 | M2 25、M3 10、M4 27、全量、插件、Workspace/Knowledge/Diagnosis、trace/index/legacy/docs |
-| Playwright 合同 | 隔离 context、allowlist、selector drift、终态、artifact 最小化、adapter 隔离和 manual comparability |
-| 真实 Smoke | 仅逐平台授权后；不能写入离线 Record |
+| Playwright 合同 | 1.62.1 版本锁、隔离 context、allowlist、关闭、loopback runtime Smoke、adapter 隔离 |
+| 平台 guard Smoke | 五个平台均在浏览器启动前返回 `PLATFORM_TERMS_BLOCKED` |
+| 真实 Smoke | 账号已授权但受 Terms/robots 阻塞；不能写入真实 Baseline Record |
 
-未来离线验收命令至少包含：
+离线验收命令包含：
 
 ```bash
 npm run test:m5-answer
@@ -224,4 +234,4 @@ M5 离线工程不部署服务。新 canonical 对象和 raw create-only；index
 
 ## 10. 当前出口
 
-将六份 M5 `proposed` 工件、最终产品方案增补与本次 Record 提交并本地合入 `main`。合入后等待 Owner 对 M5 SDD 和离线实现给出独立批准；在此之前不执行 Slice B 及以后代码、安装或采集动作。
+T02—T08 已完成本地工程与本机 runtime 验收。T09 已有 ChatGPT/Gemini 各 1 个 manual exploratory Sample；`written_permission_ref` 已移除，但现有平台 Terms/robots guard 仍阻止自动执行。T10 没有正式 Baseline。平台许可候选只在 Requirements 需求池中保持“待规划”，不会自动开启；当前不 commit、push、PR、下载新 browser、继续访问消费者账号、采集、发布或部署。

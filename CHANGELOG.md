@@ -1,5 +1,18 @@
 # geo-cowork 变更记录
 
+## 2026-08-25 - M5 Consumer Answer Testing 离线工程（本地未发布）
+
+- Owner 批准 M5 Requirement、PRD、Architecture、Spec 0006、Plan 与 Task，并授权 T02—T07 本地离线实现；
+- 新增七类 M5 canonical 对象、七类派生 index、Profile fingerprint、三 slot Sample、create-only raw、Citation-driven Source 与双向闭包；
+- 新增 lease/stale takeover/未知提交状态停门、五层 Source Classification、Claim Support、同 raw 多 rubric Review、五项指标与 comparability；
+- 新增 `answer-cycle.mjs`、`geo-answer-cycle`、`geo-answer` 和 `.invalid` 录制 Fixture；外部榜单 import 与未授权真实 `collect` 均显式失败；
+- 后续按 Owner 授权全局安装 `playwright@1.62.1`，复用兼容 `chromium-1234`，完成 loopback base Smoke；未下载新 browser binary；
+- 新增五个平台 Terms/robots guard adapter；账号与本地 365 天保留已授权，但真实 UI Smoke 全部在浏览器启动前停止，未访问账号或采集 Output；
+- 后续由 Owner 在 ChatGPT Temporary Chat 手工完成 1 个 exploratory Smoke，生成 1 Sample、3 Citation 与 candidate Classification；未自动提取 Output，也未形成 Baseline；
+- Owner 另完成 1 个 Gemini 无 Citation manual exploratory Sample，随后将剩余平台切换为书面自动采集 permission ref 硬门；
+- 后续按 Owner 决定移除 adapter `written_permission_ref` 运行时硬门；平台许可改放 Requirements 需求池，业务状态“待规划”、是否开启规范仅由 Owner 决定，Terms/robots guard 保留；
+- 未 commit/push/PR/release/deploy，插件 Manifest 仍为 0.3.0。
+
 ## 2026-08-24 - M2–M4 优化与 MyyShop 首批公开采集（本地未发布）
 
 - 新增同源 allowlist public collector：单并发、限速、超时/重试、重定向/容量上限、敏感 header 脱敏、raw/metadata SHA 与 create-only 恢复；

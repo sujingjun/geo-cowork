@@ -1,18 +1,28 @@
 ---
 title: M5 Consumer Answer Testing 与持续信源体系任务清单
-status: proposed
+status: implemented
 created: 2026-08-24
 updated: 2026-08-25
 source:
   - docs/plans/2026-08-24-m5-consumer-answer-testing-plan.md
   - docs/specs/0006-consumer-answer-testing.md
+  - docs/records/2026-08-25-m5-offline-consumer-answer-testing-record.md
+  - docs/records/2026-08-25-m5-playwright-runtime-and-platform-guard-record.md
+  - docs/records/2026-08-25-m5-chatgpt-manual-smoke-record.md
+  - docs/records/2026-08-25-m5-gemini-manual-smoke-record.md
   - "2026-08-25 当前用户指令：持续维护信源体系，不做冷启动导入；M5 完整设计 Playwright 与真实采集"
+  - "2026-08-25 当前用户指令：批准 M5 里程碑方案设计，并实施计划，完成目标"
+  - "2026-08-25 当前用户指令：Playwright 使用最新版并全局安装；五个平台统一授权 Owner Google 登录身份，按真实用户隐私，本地 artifact 保留 1 年"
+  - workspaces/myyshop/cycles/preparation/decisions/2026-08-25-m5-playwright-and-consumer-platform-authorized.md
+  - "2026-08-25 当前用户指令：后续平台转为平台书面自动采集"
+  - "2026-08-25 当前用户指令：去除 Adapter written_permission_ref 限制；平台许可改为全部里程碑完成后的上线前待办"
+  - docs/requirements/2026-08-25-platform-automation-permission-backlog.md
 scope: M5 SDD 批准门、离线对象/恢复/指标、持续 Source registry、Playwright/平台 collector 与真实 Baseline 分段任务
 ---
 
 # M5 Consumer Answer Testing 与持续信源体系任务清单
 
-> 当前整份 Task 为 `proposed`。下列状态只说明待执行顺序，不授权代码、安装、浏览器或真实平台采集。
+> 当前整份 Task 已获 Owner 批准；T02—T08 获实现授权。五个平台账号与隐私范围已授权，但平台 Terms/robots 仍优先约束真实执行；T09 真实 Smoke 与 T10 Baseline 未通过。
 
 ## M5-T01 SDD 人工审阅与批准
 
@@ -25,7 +35,7 @@ scope: M5 SDD 批准门、离线对象/恢复/指标、持续 Source registry、
 - 测试要求：链接、状态、冲突、授权矩阵人工核对
 - 验证命令：`npm run check:docs`、`git diff --check`
 - 风险：把 Review PASS 当 Spec approval
-- 当前状态：proposed
+- 当前状态：verified
 
 ## M5-T02 Schema、Profile 与 index
 
@@ -36,9 +46,9 @@ scope: M5 SDD 批准门、离线对象/恢复/指标、持续 Source registry、
 - 前置依赖：M5-T01 approved + 离线实现授权
 - 目标文件：M5 Schema、profile、模板、index/object 最小注册、测试
 - 测试要求：不反向破坏 M2–M4；registry 多表变更以现有 index 字节等价回归约束
-- 验证命令：未来 `node --test tests/m5-schema-profile.test.mjs`
+- 验证命令：`node --test tests/m5-schema-profile.test.mjs`
 - 风险：把 P1 registry 重构扩大为前置工程
-- 当前状态：proposed
+- 当前状态：verified
 
 ## M5-T03 不可变 raw、Sample 与隐私门
 
@@ -49,9 +59,9 @@ scope: M5 SDD 批准门、离线对象/恢复/指标、持续 Source registry、
 - 前置依赖：M5-T02
 - 目标文件：sample materializer、Fixture、专项测试
 - 测试要求：answer_text/log/screenshot/DOM 分支、PII/credential 拒绝、重复/冲突
-- 验证命令：未来 `node --test tests/m5-sample-artifacts.test.mjs`
+- 验证命令：`node --test tests/m5-sample-artifacts.test.mjs`
 - 风险：为满足 artifact 完整性保存账号信息
-- 当前状态：proposed
+- 当前状态：verified
 
 ## M5-T04 长任务 Run、lease 与恢复
 
@@ -62,9 +72,9 @@ scope: M5 SDD 批准门、离线对象/恢复/指标、持续 Source registry、
 - 前置依赖：M5-T02、M5-T03
 - 目标文件：answer-run、Run profile、故障测试
 - 测试要求：不得用“最终有文件”代替不重复外部动作证明
-- 验证命令：未来 `node --test tests/m5-run-recovery.test.mjs`
+- 验证命令：`node --test tests/m5-run-recovery.test.mjs`
 - 风险：M2 manifest 更新无 CAS 导致并发丢 step；必须先以红测确定最小修复
-- 当前状态：proposed
+- 当前状态：verified
 
 ## M5-T05 Citation、持续 Source registry、五层分类与 Claim 支撑
 
@@ -75,9 +85,9 @@ scope: M5 SDD 批准门、离线对象/恢复/指标、持续 Source registry、
 - 前置依赖：M5-T03
 - 目标文件：citation-analysis、classification/support materializer、测试
 - 测试要求：无效 URL、平台托管来源、host 不等于生产主体/类型、官方多媒体、低置信度、Scope 不匹配、无 Citation 候选与外部榜单 import 显式失败
-- 验证命令：未来 `node --test tests/m5-citation-classification.test.mjs`
+- 验证命令：`node --test tests/m5-citation-classification.test.mjs`
 - 风险：把 Source Type 等同于 Claim 支撑
-- 当前状态：proposed
+- 当前状态：verified
 
 ## M5-T06 Review、聚合与 comparability
 
@@ -88,9 +98,9 @@ scope: M5 SDD 批准门、离线对象/恢复/指标、持续 Source registry、
 - 前置依赖：M5-T05
 - 目标文件：answer-review、answer-aggregation、rubric Fixture、测试
 - 测试要求：外部榜单无 import 入口且显式被拒绝；探索字段不进核心；Source/Classification/Review input drift 失败
-- 验证命令：未来 `node --test tests/m5-review-aggregation.test.mjs`
+- 验证命令：`node --test tests/m5-review-aggregation.test.mjs`
 - 风险：公式含糊导致跨窗不可复验
-- 当前状态：proposed
+- 当前状态：verified
 
 ## M5-T07 recorded Fixture Collector seam 与离线验收
 
@@ -103,7 +113,7 @@ scope: M5 SDD 批准门、离线对象/恢复/指标、持续 Source registry、
 - 测试要求：全量门与授权矩阵复核
 - 验证命令：Plan §7 全部离线命令
 - 风险：Fixture 被误写成真实 Baseline
-- 当前状态：proposed
+- 当前状态：verified
 
 ## M5-T08 Playwright 依赖与 base collector 实现
 
@@ -116,7 +126,7 @@ scope: M5 SDD 批准门、离线对象/恢复/指标、持续 Source registry、
 - 测试要求：no silent browser download、不复用会话、不改 Query、无外部写入、选择器/终态漂移 fail loud、隐私最小化
 - 验证命令：由获批依赖决定记录，不在当前 Plan 猜写版本命令
 - 风险：安装动作隐式下载大体积 binary 或扩大宿主范围
-- 当前状态：proposed
+- 当前状态：verified（全局 `playwright@1.62.1`、复用兼容 `chromium-1234`、base/allowlist/context/runtime loopback Smoke 通过；未下载新 binary）
 
 ## M5-T09 平台 adapter 与逐平台 Smoke
 
@@ -129,7 +139,7 @@ scope: M5 SDD 批准门、离线对象/恢复/指标、持续 Source registry、
 - 测试要求：一个平台受阻不伪装全平台完成；不得用 API、搜索摘要或其他平台补数；manual 必须保留完整回答/Citation 并降低 comparability
 - 验证命令：逐平台批准后在对应 Task 冻结
 - 风险：UI/地区/模型漂移造成假 comparability
-- 当前状态：proposed
+- 当前状态：blocked（ChatGPT/Gemini 各 1 个 manual exploratory Smoke；`written_permission_ref` 已移除，但五个平台现有 Terms/robots guard 仍未通过；全平台 Smoke 未完成）
 
 ## M5-T10 真实 Baseline 与未来 Retest
 
@@ -142,8 +152,8 @@ scope: M5 SDD 批准门、离线对象/恢复/指标、持续 Source registry、
 - 测试要求：Profile/comparability/隐私/保留期人工复核
 - 验证命令：每个平台 Task 单独记录实际命令，不能预写成功
 - 风险：失败样本被替换、Baseline 冒充 post-change Retest
-- 当前状态：proposed
+- 当前状态：blocked（真实 Baseline 前置未满足；Retest 另缺 M4 confirmed Publication 与 Technical Retest）
 
 ## 收口条件
 
-当前任务只完成 proposed Task 的建立、commit 与本地合入 `main`。任何子任务从 `proposed` 进入实施都需要满足其前置批准；T01 的批准不自动授权 T08—T10 的安装、下载、账号或真实采集，本次也不 push。
+T02—T08 已收口；整份 Task 因 T09 真实 Smoke 与 T10 Baseline/Retest 未完成而保持 `implemented`，不提升为整体 `verified`。Owner 账号授权不能覆盖平台 Terms/robots；本次也不 commit、push、PR、下载新 browser、发布或部署。

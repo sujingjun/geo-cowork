@@ -24,6 +24,7 @@ const COMMON = await loadSchema('common-object.schema.json');
 const M2 = await loadSchema('m2-record-types.schema.json');
 const M3 = await loadSchema('m3-record-types.schema.json');
 const M4 = await loadSchema('m4-record-types.schema.json');
+const M5 = await loadSchema('m5-record-types.schema.json');
 
 export class ObjectContractError extends Error {
   constructor(code, message, diagnostics = []) {
@@ -36,7 +37,7 @@ export class ObjectContractError extends Error {
 
 function mergeDefinitions() {
   const definitions = new Map();
-  for (const schema of [M2, M3, M4]) {
+  for (const schema of [M2, M3, M4, M5]) {
     for (const [recordType, definition] of Object.entries(schema.$defs)) {
       const prior = definitions.get(recordType);
       const existing = prior ?? {
@@ -44,6 +45,7 @@ function mergeDefinitions() {
         properties: {},
         statuses: [],
         idPrefix: null,
+        allOf: [],
       };
       definitions.set(recordType, {
         required: prior
@@ -52,6 +54,7 @@ function mergeDefinitions() {
         properties: { ...existing.properties, ...(definition.properties ?? {}) },
         statuses: definition['x-statuses'] ?? existing.statuses,
         idPrefix: definition['x-id-prefix'] ?? existing.idPrefix,
+        allOf: [...existing.allOf, ...(definition.allOf ?? [])],
       });
     }
   }
@@ -72,7 +75,12 @@ function localizeCommonRefs(value) {
 }
 
 const DEFINITIONS = mergeDefinitions();
-const ajv = new Ajv2020({ allErrors: true, strict: true, allowUnionTypes: true });
+const ajv = new Ajv2020({
+  allErrors: true,
+  strict: true,
+  strictRequired: false,
+  allowUnionTypes: true,
+});
 ajv.addSchema({ ...COMMON, $id: 'common' });
 
 const VALIDATORS = new Map();
@@ -88,6 +96,9 @@ for (const [recordType, definition] of DEFINITIONS.entries()) {
       record_type: { const: recordType },
       status: { enum: definition.statuses },
     },
+    ...(definition.allOf.length > 0
+      ? { allOf: localizeCommonRefs(definition.allOf) }
+      : {}),
     additionalProperties: false,
   }));
 }

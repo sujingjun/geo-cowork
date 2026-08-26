@@ -1,0 +1,209 @@
+{
+  "authorization_ref": "workspace://cycles/preparation/decisions/2026-08-25-m5-playwright-and-consumer-platform-authorized.md",
+  "collector_contract": {
+    "collector_version": "manual-owner-copy-v1",
+    "schema_version": "1.0.0",
+    "tool_policy_version": "m5-manual-privacy-v1"
+  },
+  "goal_refs": [
+    "GOAL-MYYSHOP-DEFINITION-001"
+  ],
+  "input_versions": {
+    "CLM-MYYSHOP-AUDIENCE-001": "1.0.1",
+    "CLM-MYYSHOP-LIFECYCLE-SERVICE-001": "1.0.1",
+    "CPF-MYYSHOP-CHATGPT-MANUAL-SMOKE-20260825": "1.0.0",
+    "GOAL-MYYSHOP-DEFINITION-001": "1.0.1",
+    "KR-MYYSHOP-DEFINITION-001": "1.0.1",
+    "Q-MYYSHOP-WHAT-IS-001": "1.0.1",
+    "QS-MYYSHOP-DEFINITION-001": "1.0.1"
+  },
+  "knowledge_release_versions": [
+    {
+      "ref": "KR-MYYSHOP-DEFINITION-001",
+      "version": "1.0.1"
+    }
+  ],
+  "profile": {
+    "data": {
+      "approval": {
+        "approved_at": "2026-08-25T18:01:06+08:00",
+        "approved_by": "MyyShop Owner",
+        "decision_ref": "workspace://cycles/preparation/decisions/2026-08-25-m5-playwright-and-consumer-platform-authorized.md"
+      },
+      "collection_method": "manual",
+      "conversation_state": "new",
+      "created_at": "2026-08-25T18:01:06+08:00",
+      "device": {
+        "browser": "Chrome",
+        "class": "desktop",
+        "os": "macOS",
+        "viewport": "unknown"
+      },
+      "id": "CPF-MYYSHOP-CHATGPT-MANUAL-SMOKE-20260825",
+      "language": "zh-CN",
+      "login_state": "logged_in",
+      "model_mode": "unknown",
+      "platform": "chatgpt",
+      "product_entry": "https://chatgpt.com/?temporary-chat=true",
+      "profile_fingerprint": "ae87e37e48a74832931e21b37de65545f68c1bfbe0d5394ec90d48af5b0abfd9",
+      "query_template_version": "1.0.0",
+      "record_type": "collector_profile",
+      "region": "unknown",
+      "sampling_count": 3,
+      "status": "frozen",
+      "time_window": {
+        "ends_at": "2026-08-26T00:00:00+08:00",
+        "id": "TW-MYYSHOP-CHATGPT-SMOKE-20260825",
+        "starts_at": "2026-08-25T00:00:00+08:00"
+      },
+      "title": "MyyShop ChatGPT manual Smoke profile",
+      "updated_at": "2026-08-25T18:01:06+08:00",
+      "version": "1.0.0",
+      "web_search_state": "unknown"
+    },
+    "path": "cycles/m5/profiles/cpf-myyshop-chatgpt-manual-smoke-20260825.md"
+  },
+  "purpose": "exploratory",
+  "query_set_versions": [
+    {
+      "ref": "QS-MYYSHOP-DEFINITION-001",
+      "version": "1.0.1"
+    }
+  ],
+  "query_version": {
+    "ref": "Q-MYYSHOP-WHAT-IS-001",
+    "version": "1.0.1"
+  },
+  "run": {
+    "id": "RUN-MYYSHOP-M5-CHATGPT-MANUAL-SMOKE-20260825"
+  },
+  "sample": {
+    "answer_output_path": "raw/slot-1/answer.md",
+    "captured_at": "2026-08-25T18:01:06+08:00",
+    "citations": [
+      {
+        "anchor_or_context": "ChatGPT cited the MyyShop About page.",
+        "classification": {
+          "basis": {
+            "content_form": "official",
+            "evidence": [
+              "Manual ChatGPT output exposed this first-party Citation; page support remains unreviewed."
+            ],
+            "page_owner": "MyyShop"
+          },
+          "confidence": "low",
+          "id": "SCL-MYYSHOP-CHATGPT-MANUAL-ABOUT-20260825",
+          "party_relation": "first_party",
+          "path": "cycles/m5/classifications/scl-myyshop-chatgpt-manual-about-20260825.md",
+          "primary_source_type": "official_fact",
+          "review_required": true,
+          "reviewer": {
+            "identifier": "m5-manual-smoke-v1",
+            "kind": "geo_expert"
+          },
+          "secondary_source_types": [],
+          "status": "candidate",
+          "subject_workspace": "myyshop"
+        },
+        "existing_source_ref": "SRC-MYYSHOP-WEB-ABOUT-001",
+        "id": "CIT-MYYSHOP-CHATGPT-MANUAL-ABOUT-20260825",
+        "occurrence_index": 1,
+        "path": "cycles/m5/citations/cit-myyshop-chatgpt-manual-about-20260825.md",
+        "position": {
+          "kind": "ui_order",
+          "order": 1
+        },
+        "url_raw": "https://www.myyshop.com/about-us?utm_source=chatgpt.com"
+      },
+      {
+        "anchor_or_context": "ChatGPT cited the MyyShop homepage.",
+        "classification": {
+          "basis": {
+            "content_form": "official",
+            "evidence": [
+              "Manual ChatGPT output exposed this first-party Citation; page support remains unreviewed."
+            ],
+            "page_owner": "MyyShop"
+          },
+          "confidence": "low",
+          "id": "SCL-MYYSHOP-CHATGPT-MANUAL-HOME-20260825",
+          "party_relation": "first_party",
+          "path": "cycles/m5/classifications/scl-myyshop-chatgpt-manual-home-20260825.md",
+          "primary_source_type": "official_fact",
+          "review_required": true,
+          "reviewer": {
+            "identifier": "m5-manual-smoke-v1",
+            "kind": "geo_expert"
+          },
+          "secondary_source_types": [],
+          "status": "candidate",
+          "subject_workspace": "myyshop"
+        },
+        "existing_source_ref": "SRC-MYYSHOP-WEB-HOMEPAGE-001",
+        "id": "CIT-MYYSHOP-CHATGPT-MANUAL-HOME-20260825",
+        "occurrence_index": 2,
+        "path": "cycles/m5/citations/cit-myyshop-chatgpt-manual-home-20260825.md",
+        "position": {
+          "kind": "ui_order",
+          "order": 2
+        },
+        "url_raw": "https://www.myyshop.com/?f=kol%7Cacquireconvert%7Cla&utm_source=chatgpt.com"
+      },
+      {
+        "anchor_or_context": "ChatGPT cited the MyyShop LinkedIn company page.",
+        "classification": {
+          "basis": {
+            "content_form": "social_post",
+            "evidence": [
+              "Manual ChatGPT output exposed this brand-controlled LinkedIn Citation; historical support remains unreviewed."
+            ],
+            "page_owner": "MyyShop"
+          },
+          "confidence": "low",
+          "id": "SCL-MYYSHOP-CHATGPT-MANUAL-LINKEDIN-20260825",
+          "party_relation": "first_party",
+          "path": "cycles/m5/classifications/scl-myyshop-chatgpt-manual-linkedin-20260825.md",
+          "primary_source_type": "official_fact",
+          "review_required": true,
+          "reviewer": {
+            "identifier": "m5-manual-smoke-v1",
+            "kind": "geo_expert"
+          },
+          "secondary_source_types": [
+            "content_distribution"
+          ],
+          "status": "candidate",
+          "subject_workspace": "myyshop"
+        },
+        "id": "CIT-MYYSHOP-CHATGPT-MANUAL-LINKEDIN-20260825",
+        "occurrence_index": 3,
+        "path": "cycles/m5/citations/cit-myyshop-chatgpt-manual-linkedin-20260825.md",
+        "position": {
+          "kind": "ui_order",
+          "order": 3
+        },
+        "source": {
+          "id": "SRC-MYYSHOP-LINKEDIN-COMPANY-001",
+          "identity": {
+            "citation_domain": "linkedin.com",
+            "host_platform": "linkedin",
+            "key": "linkedin:company:myyshop",
+            "level": "publisher",
+            "publisher_name": "MyyShop"
+          },
+          "locator": "https://www.linkedin.com/company/myyshop",
+          "name": "MyyShop LinkedIn company page",
+          "path": "evidence/sources/src-myyshop-linkedin-company-001.md"
+        },
+        "url_raw": "https://www.linkedin.com/company/myyshop?utm_source=chatgpt.com"
+      }
+    ],
+    "id": "SMP-MYYSHOP-CHATGPT-MANUAL-SMOKE-20260825",
+    "log_output_path": "raw/slot-1/collector-log.json",
+    "ordinal": 1,
+    "outcome": "success",
+    "path": "cycles/m5/samples/smp-myyshop-chatgpt-manual-smoke-20260825.md",
+    "temporary_chat": true
+  },
+  "schema_version": "m5-manual-sample-plan-v1"
+}

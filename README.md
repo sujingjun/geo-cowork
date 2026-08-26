@@ -68,11 +68,14 @@ npm test                                                 # 全量 node:test
 npm run test:m2-contract                                 # M2 专项测试
 npm run test:m3-knowledge-query                          # M3 Knowledge/Query 专项测试
 npm run test:m4-diagnosis                               # M4 Diagnosis/Site/Asset 专项测试
+npm run test:m5-answer                                 # M5 Answer/Citation/Source/聚合专项测试
+npm run smoke:m5-playwright                            # 全局 Playwright + loopback base Smoke
 npm run check:docs                                      # 仓库 Markdown 本地链接检查
 npm run validate:plugin                                  # 插件包契约自检
 node plugins/geo-expert/scripts/build-index.mjs --workspace workspaces/myyshop --check
 node plugins/geo-expert/scripts/knowledge-query.mjs validate --workspace workspaces/myyshop
 node plugins/geo-expert/scripts/diagnosis.mjs validate --workspace workspaces/myyshop
+node plugins/geo-expert/scripts/answer-cycle.mjs validate --workspace workspaces/myyshop
 ```
 
 真实公开 HTTP snapshot 必须另有逐项授权并使用显式 plan；采集和 M4 输入桥接命令为：
@@ -86,4 +89,4 @@ npm run prepare:m4-public-inputs -- --workspace <workspace> --summary <workspace
 
 ## 边界
 
-本仓库不做：云端 SaaS、MCP 服务、数据库、自动发布、自动审批、CRM 写入、社区运营或默认浏览器采集。M4 Site/Research 诊断仍只读取显式本地 manifest/snapshot；独立 public collector 只接受同源 allowlist、只读 GET 和 create-only raw。MyyShop Owner 于 2026-08-24 仅授权并完成 11 个官网公开端点的首批采集；该授权不覆盖登录区、GA4/GSC、消费者平台、第三方 API 或外部写入。未经当次明确授权，任何 Agent 不 commit、不 push、不创建 PR。
+本仓库不做：云端 SaaS、MCP 服务、数据库、自动发布、自动审批、CRM 写入、社区运营或无条款许可的消费者 UI 采集。M4 Site/Research 诊断仍只读取显式本地 manifest/snapshot；M5 的 Playwright base 只通过 loopback fixture 验证，五个平台 guard adapter 会以 `PLATFORM_TERMS_BLOCKED` 阻止自动执行。MyyShop Owner 的账号授权不覆盖平台 Terms、robots、challenge 或安全控制。未经当次明确授权，任何 Agent 不 commit、不 push、不创建 PR。

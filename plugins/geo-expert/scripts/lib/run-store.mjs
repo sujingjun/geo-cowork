@@ -140,7 +140,14 @@ export async function transitionRun({
   return { action: status === current.data.status ? 'kept' : 'updated', data };
 }
 
-export async function writeRunArtifact({ workspace, runId, relativePath, content }) {
+export async function writeRunArtifact({
+  workspace,
+  runId,
+  relativePath,
+  content,
+  idempotent = false,
+  conflictCode = 'ARTIFACT_EXISTS',
+}) {
   await readRun({ workspace, runId });
   const safe = assertSafeRelativePath(relativePath);
   if (!safe.startsWith('raw/') && !safe.startsWith('outputs/')) {
@@ -150,9 +157,10 @@ export async function writeRunArtifact({ workspace, runId, relativePath, content
     workspace,
     `runs/${runId}/${safe}`,
     content,
-    { conflictCode: 'ARTIFACT_EXISTS' },
+    { idempotent, conflictCode },
   );
   const run = await readRun({ workspace, runId });
+  if (run.data.output_artifacts.includes(safe)) return result;
   const outputArtifacts = [...new Set([...run.data.output_artifacts, safe])].sort();
   await transitionRun({
     workspace,

@@ -1,6 +1,6 @@
 ---
 title: Consumer Answer Testing 与持续信源体系架构
-status: proposed
+status: approved
 created: 2026-08-24
 updated: 2026-08-25
 source:
@@ -9,6 +9,8 @@ source:
   - docs/architecture/2026-08-24-knowledge-query-operating-system-architecture.md
   - docs/architecture/2026-08-24-diagnosis-site-asset-proposal-architecture.md
   - "2026-08-25 当前用户指令：持续维护信源体系，不做冷启动导入；完整设计 Playwright 与真实采集"
+  - "2026-08-25 当前用户指令：批准 M5 里程碑方案设计，并实施计划，完成目标"
+  - "2026-08-25 当前用户指令：Playwright 使用最新版并全局安装；五个平台统一授权 Owner Google 登录身份，按真实用户隐私，本地 artifact 保留 1 年"
 scope: M5 Profile、Playwright/真实采集、不可变 raw、持续 Source registry、Citation/Review、聚合与平台边界
 ---
 
@@ -159,4 +161,4 @@ M5 Baseline 可在独立采集授权后开始，不要求 M4 已发布。`post_c
 
 ## 11. 当前授权边界
 
-本架构保持 `proposed`。当前任务只授权文档 commit 与本地合入 `main`；未授权 M5 实现、Playwright/package 变更、浏览器下载、消费者平台访问、外部写入、push 或发布。
+本架构已由 Owner 批准，并授权 T02—T08、本机全局 `playwright@1.62.1`、五个平台 Owner-controlled Google 登录角色、隐私最小化和本地 artifact 365 天保留。浏览器策略为复用已兼容的本机 Chrome for Testing 缓存，不下载新 binary。平台 adapter 必须先执行 Terms/robots gate；当前五个平台自动执行均未获条款许可。外部写入、commit、push、PR 或发布仍未授权。

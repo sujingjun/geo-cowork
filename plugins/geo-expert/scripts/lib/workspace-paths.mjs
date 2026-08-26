@@ -154,8 +154,10 @@ export async function writeCreateOnly(
   } catch (error) {
     if (error.code !== 'EEXIST') throw error;
     await assertNoSymlinkPath(workspace, safe);
-    if (idempotent && (await readFile(target, 'utf8')) === content) {
-      return { action: 'kept', path: safe };
+    if (idempotent) {
+      const existing = await readFile(target);
+      const requested = Buffer.isBuffer(content) ? content : Buffer.from(content);
+      if (existing.equals(requested)) return { action: 'kept', path: safe };
     }
     throw new WorkspacePathError(conflictCode, '目标已存在且内容不同', { path: safe });
   }
@@ -176,4 +178,3 @@ export async function atomicWrite(workspace, relativePath, content) {
   }
   return safe;
 }
-

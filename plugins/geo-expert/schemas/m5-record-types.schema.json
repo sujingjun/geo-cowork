@@ -1,0 +1,458 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://geo-cowork.local/schemas/m5-record-types-v1.json",
+  "$defs": {
+    "collector_profile": {
+      "x-id-prefix": "CPF-",
+      "x-statuses": ["draft", "frozen", "superseded"],
+      "required": [
+        "platform", "product_entry", "region", "language", "login_state",
+        "conversation_state", "web_search_state", "model_mode",
+        "query_template_version", "sampling_count", "time_window", "device",
+        "collection_method", "profile_fingerprint"
+      ],
+      "properties": {
+        "platform": { "enum": ["chatgpt", "gemini", "perplexity", "google_ai", "claude"] },
+        "product_entry": { "type": "string", "minLength": 1 },
+        "region": { "type": "string", "minLength": 1 },
+        "language": { "type": "string", "minLength": 1 },
+        "login_state": { "enum": ["logged_out", "logged_in", "unknown"] },
+        "conversation_state": { "enum": ["new", "continued", "unknown"] },
+        "web_search_state": { "enum": ["on", "off", "automatic", "unavailable", "unknown"] },
+        "model_mode": { "type": "string", "minLength": 1 },
+        "query_template_version": { "type": "string", "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$" },
+        "sampling_count": { "const": 3 },
+        "time_window": {
+          "type": "object",
+          "required": ["id", "starts_at", "ends_at"],
+          "properties": {
+            "id": { "type": "string", "minLength": 1 },
+            "starts_at": { "$ref": "common#/$defs/rfc3339" },
+            "ends_at": { "$ref": "common#/$defs/rfc3339" }
+          },
+          "additionalProperties": false
+        },
+        "device": {
+          "type": "object",
+          "required": ["class", "os", "browser", "viewport"],
+          "properties": {
+            "class": { "enum": ["desktop", "mobile", "unknown"] },
+            "os": { "type": "string", "minLength": 1 },
+            "browser": { "type": "string", "minLength": 1 },
+            "viewport": { "type": "string", "minLength": 1 }
+          },
+          "additionalProperties": false
+        },
+        "collection_method": { "enum": ["browser_automation", "manual", "recorded_fixture"] },
+        "profile_fingerprint": { "$ref": "common#/$defs/sha256" },
+        "approval": { "$ref": "common#/$defs/approval" },
+        "supersedes_ref": { "type": "string", "pattern": "^CPF-(?:[A-Z0-9]+-)*[A-Z0-9]+$" }
+      },
+      "allOf": [
+        {
+          "if": { "properties": { "status": { "const": "frozen" } }, "required": ["status"] },
+          "then": { "required": ["approval"] }
+        }
+      ]
+    },
+    "answer_sample": {
+      "x-id-prefix": "SMP-",
+      "x-statuses": ["recorded", "superseded"],
+      "required": [
+        "purpose", "query_ref", "query_version", "query_set_ref", "query_set_version",
+        "intent", "platform", "collector_profile_ref", "collector_profile_version",
+        "run_ref", "slot_key", "ordinal", "attempt_no", "outcome", "captured_at",
+        "collection_method", "artifacts", "raw_manifest_sha256", "privacy"
+      ],
+      "properties": {
+        "purpose": { "enum": ["exploratory", "baseline", "post_change_retest"] },
+        "query_ref": { "type": "string", "pattern": "^Q-(?:[A-Z0-9]+-)*[A-Z0-9]+$" },
+        "query_version": { "type": "string", "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$" },
+        "query_set_ref": { "type": "string", "pattern": "^QS-(?:[A-Z0-9]+-)*[A-Z0-9]+$" },
+        "query_set_version": { "type": "string", "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$" },
+        "intent": { "type": "string", "minLength": 1 },
+        "platform": { "enum": ["chatgpt", "gemini", "perplexity", "google_ai", "claude"] },
+        "collector_profile_ref": { "type": "string", "pattern": "^CPF-(?:[A-Z0-9]+-)*[A-Z0-9]+$" },
+        "collector_profile_version": { "type": "string", "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$" },
+        "run_ref": { "type": "string", "pattern": "^RUN-(?:[A-Z0-9]+-)*[A-Z0-9]+$" },
+        "slot_key": { "$ref": "common#/$defs/sha256" },
+        "ordinal": { "enum": [1, 2, 3] },
+        "attempt_no": { "type": "integer", "minimum": 1 },
+        "retry_of_ref": { "type": "string", "pattern": "^SMP-(?:[A-Z0-9]+-)*[A-Z0-9]+$" },
+        "outcome": { "enum": ["success", "refusal", "timeout", "no_result", "challenge", "cancelled", "system_failure"] },
+        "captured_at": { "$ref": "common#/$defs/rfc3339" },
+        "collection_method": { "enum": ["browser_automation", "manual", "recorded_fixture"] },
+        "artifacts": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "required": ["role", "availability"],
+            "properties": {
+              "role": { "enum": ["answer_text", "screenshot", "dom", "html", "page_export", "collector_log"] },
+              "availability": { "enum": ["captured", "unavailable"] },
+              "path": { "type": "string", "minLength": 1 },
+              "sha256": { "$ref": "common#/$defs/sha256" },
+              "media_type": { "type": "string", "minLength": 1 },
+              "unavailable_reason": { "type": "string", "minLength": 1 }
+            },
+            "additionalProperties": false
+          }
+        },
+        "raw_manifest_sha256": { "$ref": "common#/$defs/sha256" },
+        "privacy": {
+          "type": "object",
+          "required": ["account_identifier_stored", "credentials_stored", "answer_region_only", "redaction_notes"],
+          "properties": {
+            "account_identifier_stored": { "const": false },
+            "credentials_stored": { "const": false },
+            "answer_region_only": { "type": "boolean" },
+            "redaction_notes": { "$ref": "common#/$defs/stringArray" }
+          },
+          "additionalProperties": false
+        },
+        "cancellation": {
+          "type": "object",
+          "required": ["source", "completed_steps", "reason"],
+          "properties": {
+            "source": { "enum": ["human", "system"] },
+            "completed_steps": { "$ref": "common#/$defs/stringArray" },
+            "reason": { "type": "string", "minLength": 1 }
+          },
+          "additionalProperties": false
+        },
+        "publication_refs": { "$ref": "common#/$defs/stringArray" },
+        "technical_retest_run_refs": { "$ref": "common#/$defs/stringArray" },
+        "baseline_aggregation_refs": { "$ref": "common#/$defs/stringArray" },
+        "supersedes_ref": { "type": "string", "pattern": "^SMP-(?:[A-Z0-9]+-)*[A-Z0-9]+$" }
+      },
+      "allOf": [
+        {
+          "if": { "properties": { "outcome": { "const": "cancelled" } }, "required": ["outcome"] },
+          "then": { "required": ["cancellation"] }
+        },
+        {
+          "if": { "properties": { "purpose": { "const": "post_change_retest" } }, "required": ["purpose"] },
+          "then": { "required": ["publication_refs", "technical_retest_run_refs", "baseline_aggregation_refs"] }
+        }
+      ]
+    },
+    "citation_observation": {
+      "x-id-prefix": "CIT-",
+      "x-statuses": ["observed", "superseded"],
+      "required": [
+        "sample_ref", "sample_raw_manifest_sha256", "occurrence_index", "position",
+        "url_raw", "url_normalized", "citation_domain", "source_ref", "anchor_or_context"
+      ],
+      "properties": {
+        "sample_ref": { "type": "string", "pattern": "^SMP-(?:[A-Z0-9]+-)*[A-Z0-9]+$" },
+        "sample_raw_manifest_sha256": { "$ref": "common#/$defs/sha256" },
+        "occurrence_index": { "type": "integer", "minimum": 1 },
+        "position": {
+          "type": "object",
+          "required": ["kind"],
+          "properties": {
+            "kind": { "enum": ["character_span", "ui_order", "unavailable"] },
+            "start": { "type": "integer", "minimum": 0 },
+            "end": { "type": "integer", "minimum": 0 },
+            "order": { "type": "integer", "minimum": 1 },
+            "unavailable_reason": { "type": "string", "minLength": 1 }
+          },
+          "additionalProperties": false
+        },
+        "url_raw": { "type": "string", "minLength": 1 },
+        "url_normalized": { "type": "string", "minLength": 1 },
+        "citation_domain": { "type": "string", "minLength": 1 },
+        "source_ref": { "type": "string", "pattern": "^SRC-(?:[A-Z0-9]+-)*[A-Z0-9]+$" },
+        "anchor_or_context": { "type": "string", "minLength": 1 },
+        "supersedes_ref": { "type": "string", "pattern": "^CIT-(?:[A-Z0-9]+-)*[A-Z0-9]+$" }
+      }
+    },
+    "source": {
+      "properties": {
+        "identity": {
+          "type": "object",
+          "required": ["level", "key", "citation_domain", "host_platform", "publisher_name"],
+          "properties": {
+            "level": { "enum": ["domain", "publisher", "channel", "page"] },
+            "key": { "type": "string", "minLength": 1 },
+            "citation_domain": { "type": "string", "minLength": 1 },
+            "host_platform": { "enum": ["youtube", "reddit", "linkedin", "instagram", "tiktok", "facebook", "other", "none"] },
+            "publisher_name": { "type": "string", "minLength": 1 }
+          },
+          "additionalProperties": false
+        },
+        "discovery": {
+          "type": "object",
+          "required": ["method", "citation_ref", "observed_at"],
+          "properties": {
+            "method": { "const": "consumer_citation" },
+            "citation_ref": { "type": "string", "pattern": "^CIT-(?:[A-Z0-9]+-)*[A-Z0-9]+$" },
+            "observed_at": { "$ref": "common#/$defs/rfc3339" }
+          },
+          "additionalProperties": false
+        }
+      }
+    },
+    "source_classification": {
+      "x-id-prefix": "SCL-",
+      "x-statuses": ["candidate", "reviewed", "superseded"],
+      "required": [
+        "source_ref", "citation_refs", "classification_key", "primary_source_type",
+        "secondary_source_types", "party_relation", "subject_workspace", "basis",
+        "confidence", "reviewer", "review_required"
+      ],
+      "properties": {
+        "source_ref": { "type": "string", "pattern": "^SRC-(?:[A-Z0-9]+-)*[A-Z0-9]+$" },
+        "citation_refs": { "$ref": "common#/$defs/stringArray", "type": "array", "minItems": 1 },
+        "classification_key": { "type": "string", "minLength": 1 },
+        "primary_source_type": { "enum": ["official_fact", "institutional_authority", "independent_professional", "community_experience", "content_distribution", "unknown"] },
+        "secondary_source_types": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": { "enum": ["official_fact", "institutional_authority", "independent_professional", "community_experience", "content_distribution"] }
+        },
+        "party_relation": { "enum": ["first_party", "third_party", "unknown"] },
+        "subject_workspace": { "type": "string", "minLength": 1 },
+        "basis": {
+          "type": "object",
+          "required": ["page_owner", "content_form", "evidence"],
+          "properties": {
+            "page_owner": { "type": "string", "minLength": 1 },
+            "content_form": { "enum": ["official", "editorial", "review", "community_post", "social_post", "video", "image", "podcast", "news", "government", "standard", "academic", "other", "unknown"] },
+            "evidence": { "$ref": "common#/$defs/stringArray", "type": "array", "minItems": 1 }
+          },
+          "additionalProperties": false
+        },
+        "confidence": { "enum": ["high", "medium", "low", "unknown"] },
+        "reviewer": {
+          "type": "object",
+          "required": ["kind", "identifier"],
+          "properties": {
+            "kind": { "enum": ["deterministic_rule", "geo_expert", "human"] },
+            "identifier": { "type": "string", "minLength": 1 }
+          },
+          "additionalProperties": false
+        },
+        "review_required": { "type": "boolean" },
+        "supersedes_ref": { "type": "string", "pattern": "^SCL-(?:[A-Z0-9]+-)*[A-Z0-9]+$" }
+      }
+    },
+    "claim_support_review": {
+      "x-id-prefix": "CSR-",
+      "x-statuses": ["candidate", "reviewed", "superseded"],
+      "required": [
+        "citation_ref", "classification_ref", "claim_ref", "claim_version", "verdict",
+        "support_scope", "rationale", "confidence", "reviewer", "review_required"
+      ],
+      "properties": {
+        "citation_ref": { "type": "string", "pattern": "^CIT-(?:[A-Z0-9]+-)*[A-Z0-9]+$" },
+        "classification_ref": { "type": "string", "pattern": "^SCL-(?:[A-Z0-9]+-)*[A-Z0-9]+$" },
+        "claim_ref": { "type": "string", "pattern": "^CLM-(?:[A-Z0-9]+-)*[A-Z0-9]+$" },
+        "claim_version": { "type": "string", "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$" },
+        "verdict": { "enum": ["supported", "partially_supported", "not_supported", "unverifiable"] },
+        "support_scope": { "type": "string", "minLength": 1 },
+        "rationale": { "type": "string", "minLength": 1 },
+        "confidence": { "enum": ["high", "medium", "low", "unknown"] },
+        "reviewer": {
+          "type": "object",
+          "required": ["kind", "identifier"],
+          "properties": {
+            "kind": { "enum": ["deterministic_rule", "geo_expert", "human"] },
+            "identifier": { "type": "string", "minLength": 1 }
+          },
+          "additionalProperties": false
+        },
+        "review_required": { "type": "boolean" },
+        "supersedes_ref": { "type": "string", "pattern": "^CSR-(?:[A-Z0-9]+-)*[A-Z0-9]+$" }
+      }
+    },
+    "answer_review": {
+      "x-id-prefix": "ARV-",
+      "x-statuses": ["candidate", "reviewed", "superseded"],
+      "required": [
+        "sample_ref", "sample_raw_manifest_sha256", "rubric", "claim_support_review_refs",
+        "core", "exploratory", "reviewer", "review_required"
+      ],
+      "properties": {
+        "sample_ref": { "type": "string", "pattern": "^SMP-(?:[A-Z0-9]+-)*[A-Z0-9]+$" },
+        "sample_raw_manifest_sha256": { "$ref": "common#/$defs/sha256" },
+        "rubric": {
+          "type": "object",
+          "required": ["version", "sha256"],
+          "properties": {
+            "version": { "type": "string", "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$" },
+            "sha256": { "$ref": "common#/$defs/sha256" }
+          },
+          "additionalProperties": false
+        },
+        "claim_support_review_refs": { "$ref": "common#/$defs/stringArray" },
+        "core": {
+          "type": "object",
+          "required": ["entity_recognition", "core_fact_accuracy", "current_positioning", "risk_boundary", "citation_quality"],
+          "properties": {
+            "entity_recognition": { "enum": ["pass", "partial", "fail", "not_applicable"] },
+            "core_fact_accuracy": { "enum": ["pass", "partial", "fail", "not_applicable"] },
+            "current_positioning": { "enum": ["pass", "partial", "fail", "not_applicable"] },
+            "risk_boundary": { "enum": ["pass", "partial", "fail", "not_applicable"] },
+            "citation_quality": { "enum": ["pass", "partial", "fail", "not_applicable"] }
+          },
+          "additionalProperties": false
+        },
+        "exploratory": {
+          "type": "object",
+          "required": ["comparison_dimensions", "recommendation_reasons", "exclusion_reasons", "competitor_mentions", "source_structure_notes", "decision_dimension_candidates"],
+          "properties": {
+            "comparison_dimensions": { "$ref": "common#/$defs/stringArray" },
+            "recommendation_reasons": { "$ref": "common#/$defs/stringArray" },
+            "exclusion_reasons": { "$ref": "common#/$defs/stringArray" },
+            "competitor_mentions": { "$ref": "common#/$defs/stringArray" },
+            "source_structure_notes": { "$ref": "common#/$defs/stringArray" },
+            "decision_dimension_candidates": { "$ref": "common#/$defs/stringArray" }
+          },
+          "additionalProperties": false
+        },
+        "reviewer": {
+          "type": "object",
+          "required": ["kind", "identifier"],
+          "properties": {
+            "kind": { "enum": ["deterministic_rule", "geo_expert", "human"] },
+            "identifier": { "type": "string", "minLength": 1 }
+          },
+          "additionalProperties": false
+        },
+        "review_required": { "type": "boolean" },
+        "supersedes_ref": { "type": "string", "pattern": "^ARV-(?:[A-Z0-9]+-)*[A-Z0-9]+$" }
+      }
+    },
+    "answer_aggregation": {
+      "x-id-prefix": "AGG-",
+      "x-statuses": ["draft", "computed", "superseded"],
+      "required": [
+        "purpose", "industry", "platform", "query_cluster", "time_window",
+        "profile_versions", "selected_sample_versions", "citation_versions",
+        "source_versions", "classification_versions", "claim_support_review_versions",
+        "answer_review_versions", "comparability", "metrics"
+      ],
+      "properties": {
+        "purpose": { "enum": ["exploratory", "baseline", "post_change_retest"] },
+        "industry": { "type": "string", "minLength": 1 },
+        "platform": { "enum": ["chatgpt", "gemini", "perplexity", "google_ai", "claude"] },
+        "query_cluster": {
+          "type": "object",
+          "required": ["id", "label", "query_versions"],
+          "properties": {
+            "id": { "type": "string", "minLength": 1 },
+            "label": { "type": "string", "minLength": 1 },
+            "query_versions": { "type": "array", "minItems": 1, "items": { "$ref": "common#/$defs/refVersion" } }
+          },
+          "additionalProperties": false
+        },
+        "time_window": {
+          "type": "object",
+          "required": ["id", "starts_at", "ends_at"],
+          "properties": {
+            "id": { "type": "string", "minLength": 1 },
+            "starts_at": { "$ref": "common#/$defs/rfc3339" },
+            "ends_at": { "$ref": "common#/$defs/rfc3339" }
+          },
+          "additionalProperties": false
+        },
+        "profile_versions": { "type": "array", "minItems": 1, "items": { "$ref": "common#/$defs/refVersion" } },
+        "selected_sample_versions": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "required": ["slot_key", "ref", "version", "raw_manifest_sha256"],
+            "properties": {
+              "slot_key": { "$ref": "common#/$defs/sha256" },
+              "ref": { "type": "string", "pattern": "^SMP-(?:[A-Z0-9]+-)*[A-Z0-9]+$" },
+              "version": { "type": "string", "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$" },
+              "raw_manifest_sha256": { "$ref": "common#/$defs/sha256" }
+            },
+            "additionalProperties": false
+          }
+        },
+        "citation_versions": { "type": "array", "items": { "$ref": "common#/$defs/refVersion" } },
+        "source_versions": { "type": "array", "items": { "$ref": "common#/$defs/refVersion" } },
+        "classification_versions": { "type": "array", "items": { "$ref": "common#/$defs/refVersion" } },
+        "claim_support_review_versions": { "type": "array", "items": { "$ref": "common#/$defs/refVersion" } },
+        "answer_review_versions": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "required": ["ref", "version", "rubric_sha256"],
+            "properties": {
+              "ref": { "type": "string", "pattern": "^ARV-(?:[A-Z0-9]+-)*[A-Z0-9]+$" },
+              "version": { "type": "string", "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$" },
+              "rubric_sha256": { "$ref": "common#/$defs/sha256" }
+            },
+            "additionalProperties": false
+          }
+        },
+        "comparability": {
+          "type": "object",
+          "required": ["result", "field_differences", "notes"],
+          "properties": {
+            "result": { "enum": [true, "partial", false] },
+            "compared_to_ref": { "type": "string", "pattern": "^AGG-(?:[A-Z0-9]+-)*[A-Z0-9]+$" },
+            "field_differences": { "type": "array", "items": { "type": "object" } },
+            "notes": { "$ref": "common#/$defs/stringArray" }
+          },
+          "additionalProperties": false
+        },
+        "metrics": { "type": "object" },
+        "supersedes_ref": { "type": "string", "pattern": "^AGG-(?:[A-Z0-9]+-)*[A-Z0-9]+$" }
+      }
+    },
+    "run": {
+      "properties": {
+        "authorization_ref": { "type": "string", "minLength": 1 },
+        "purpose": { "enum": ["exploratory", "baseline", "post_change_retest"] },
+        "profile_versions": { "type": "array", "items": { "$ref": "common#/$defs/refVersion" }, "uniqueItems": true },
+        "sample_slots": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["slot_key", "query_ref", "platform", "ordinal", "completed_steps", "step_proofs", "attempt_refs", "selected_sample_ref"],
+            "properties": {
+              "slot_key": { "$ref": "common#/$defs/sha256" },
+              "query_ref": { "type": "string", "pattern": "^Q-(?:[A-Z0-9]+-)*[A-Z0-9]+$" },
+              "platform": { "enum": ["chatgpt", "gemini", "perplexity", "google_ai", "claude"] },
+              "ordinal": { "enum": [1, 2, 3] },
+              "completed_steps": { "$ref": "common#/$defs/stringArray" },
+              "step_proofs": { "type": "object", "additionalProperties": { "type": "string", "minLength": 1 } },
+              "attempt_refs": { "$ref": "common#/$defs/stringArray" },
+              "selected_sample_ref": { "type": ["string", "null"], "pattern": "^SMP-(?:[A-Z0-9]+-)*[A-Z0-9]+$" }
+            },
+            "additionalProperties": false
+          }
+        },
+        "lease": {
+          "type": "object",
+          "required": ["scope_key", "owner_id", "acquired_at", "heartbeat_at", "expires_at"],
+          "properties": {
+            "scope_key": { "type": "string", "minLength": 1 },
+            "owner_id": { "type": "string", "minLength": 1 },
+            "acquired_at": { "$ref": "common#/$defs/rfc3339" },
+            "heartbeat_at": { "$ref": "common#/$defs/rfc3339" },
+            "expires_at": { "$ref": "common#/$defs/rfc3339" }
+          },
+          "additionalProperties": false
+        },
+        "collector_contract": {
+          "type": "object",
+          "required": ["schema_version", "collector_version", "tool_policy_version"],
+          "properties": {
+            "schema_version": { "type": "string", "minLength": 1 },
+            "collector_version": { "type": "string", "minLength": 1 },
+            "tool_policy_version": { "type": "string", "minLength": 1 }
+          },
+          "additionalProperties": false
+        }
+      }
+    }
+  }
+}

@@ -1,6 +1,6 @@
 ---
 title: Spec 0006 — Consumer Answer Testing 与持续信源体系
-status: proposed
+status: approved
 created: 2026-08-24
 updated: 2026-08-25
 source:
@@ -10,6 +10,10 @@ source:
   - docs/specs/0004-knowledge-query-operating-system.md
   - docs/specs/0005-diagnosis-site-asset-proposal.md
   - "2026-08-25 当前用户指令：持续维护信源体系，不做冷启动导入；完整设计 Playwright 与真实采集"
+  - "2026-08-25 当前用户指令：批准 M5 里程碑方案设计，并实施计划，完成目标"
+  - "2026-08-25 当前用户指令：Playwright 使用最新版并全局安装；五个平台统一授权 Owner Google 登录身份，按真实用户隐私，本地 artifact 保留 1 年"
+  - "2026-08-25 当前用户指令：后续平台转为平台书面自动采集"
+  - "2026-08-25 当前用户指令：去除 Adapter written_permission_ref 限制；平台许可改为全部里程碑完成后的上线前待办"
 scope: M5 Collector Profile、Playwright/真实采集、Answer Sample、持续 Source registry、Citation/Review、聚合、恢复与授权门
 ---
 
@@ -19,7 +23,7 @@ scope: M5 Collector Profile、Playwright/真实采集、Answer Sample、持续 S
 
 所有 M5 canonical 对象继承 Spec 0003 的公共字段、安全、stable ID、refs、checksum、index、Run、create-only artifact 和 supersede 原则，并读取 Spec 0004 的 Goal/Query/Query Set/Claim/Knowledge Release 精确版本。M5 的 `post_change_retest` 另读取 Spec 0005 的 confirmed Publication 与 Technical Retest Run。
 
-本 Spec 适用于未来的 `geo-answer-cycle`、M5 Schema/profile、Playwright collector base、逐平台真实 adapter、持续 Source registry、Citation/Review/aggregation Tool、离线录制 Fixture，以及获得逐平台授权后的消费者 UI Run。当前状态为 `proposed`：完整定义实现目标，但不授权安装、实现或真实采集。
+本 Spec 适用于 `geo-answer-cycle`、M5 Schema/profile、Playwright collector base、逐平台真实 adapter、持续 Source registry、Citation/Review/aggregation Tool、离线录制 Fixture，以及获得逐平台授权后的消费者 UI Run。当前状态为 `approved`：授权 T02—T08；T09 账号/隐私已授权但真实自动 Smoke 受 Terms/robots 阻塞，T10 未授权。
 
 ## 2. 新对象类型
 
@@ -477,6 +481,12 @@ PROFILE_NOT_FROZEN
 PROFILE_FINGERPRINT_MISMATCH
 COLLECTION_AUTHORIZATION_REQUIRED
 PLAYWRIGHT_GATE_NOT_APPROVED
+PLAYWRIGHT_RUNTIME_MISMATCH
+BROWSER_BINARY_UNAVAILABLE
+PLATFORM_ADAPTER_NOT_FOUND
+PLATFORM_ADAPTER_INVALID
+PLATFORM_ALLOWLIST_VIOLATION
+PLATFORM_TERMS_BLOCKED
 SAMPLE_SLOT_CONFLICT
 SAMPLE_NOT_INDEPENDENT
 RAW_ARTIFACT_REQUIRED
@@ -537,4 +547,4 @@ COMPARABILITY_PARTIAL
 
 ## 17. 非目标与当前授权
 
-本 Spec 完整设计 Playwright base、逐平台真实 collector 与持续信源维护，但不授权代码、依赖或浏览器安装，不授权任何消费者平台访问，不批准 M4 业务对象、GA4/GSC、外部写入、发布、部署或 Git 远端动作。当前 Owner 授权只覆盖这些文档的 commit 与本地合入 `main`；外部榜单、API 样本和探索性回答均不能创建持续 Source 候选或替代正式消费者 UI 数据。
+本 Spec 完整设计 Playwright base、逐平台真实 collector 与持续信源维护。Owner 已授权 T02—T08，并授权五个平台使用 Owner-controlled Google 登录身份、真实用户隐私最小化与本地 365 天保留；该账号授权不能覆盖平台 Terms、robots、challenge 或安全控制。ChatGPT/Gemini 已各完成 1 个 manual exploratory Smoke。Adapter 不再保存或强制 `written_permission_ref`；平台许可只进入 Requirements 需求池，`planning_state:待规划`，是否开启后续规范仅由 Owner 决定。当前真实自动采集仍由各 adapter 的 `terms_blocked/manual_only` 状态控制。不授权 M4 业务对象补写、GA4/GSC、外部写入、commit、push、PR、发布、部署或 Git 远端动作。外部榜单、API 样本和探索性回答均不能创建持续 Source 候选或替代正式消费者 UI 数据。

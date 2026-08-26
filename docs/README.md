@@ -79,14 +79,19 @@
 | 公开采集与优化 Record | [`records/2026-08-24-m2-m4-optimization-and-myyshop-real-collection-record.md`](records/2026-08-24-m2-m4-optimization-and-myyshop-real-collection-record.md) | verified；11/11 快照、五页 Site Run、11 份 candidate 一方 Evidence；GA4/GSC/消费者平台/外部写入仍未授权 |
 | 整体优化 Handoff | [`handoff/2026-08-24-m2-m4-integrated-optimization-handoff.md`](handoff/2026-08-24-m2-m4-integrated-optimization-handoff.md) | proposed；记录已完成的直接优化、五层信源模型与 M5 P0；下一任务独立判断进入门 |
 
-## M2–M4 独立评审与 M5 Consumer Answer Testing / 持续信源体系（规划门通过）
+## M5 Consumer Answer Testing / 持续信源体系（离线工程已验证）
 
 | 类别 | 工件 | 状态 |
 | --- | --- | --- |
-| 独立 Review Record | [`records/2026-08-24-m2-m4-completeness-and-m5-entry-gate-review.md`](records/2026-08-24-m2-m4-completeness-and-m5-entry-gate-review.md) | verified；PASS 仅限 M5 规划门，M5 实现门与真实采集门均 FAIL |
-| Requirement / PRD / Architecture | [`requirements/2026-08-24-m5-consumer-answer-testing.md`](requirements/2026-08-24-m5-consumer-answer-testing.md) / [`prd/2026-08-24-m5-consumer-answer-testing.md`](prd/2026-08-24-m5-consumer-answer-testing.md) / [`architecture/2026-08-24-consumer-answer-testing-architecture.md`](architecture/2026-08-24-consumer-answer-testing-architecture.md) | proposed；不得由 Review PASS 自动批准 |
-| Spec 0006 / Plan / Task | [`specs/0006-consumer-answer-testing.md`](specs/0006-consumer-answer-testing.md) / [`plans/2026-08-24-m5-consumer-answer-testing-plan.md`](plans/2026-08-24-m5-consumer-answer-testing-plan.md) / [`tasks/2026-08-24-m5-consumer-answer-testing.md`](tasks/2026-08-24-m5-consumer-answer-testing.md) | proposed；已完整设计 Citation-driven 持续 Source registry、Playwright base、逐平台真实 collector 与授权门；未进入代码、安装或采集 |
+| 独立 Review Record | [`records/2026-08-24-m2-m4-completeness-and-m5-entry-gate-review.md`](records/2026-08-24-m2-m4-completeness-and-m5-entry-gate-review.md) | verified；历史规划门结论，后续 Owner 已另行批准离线实现 |
+| Requirement / PRD / Architecture | [`requirements/2026-08-24-m5-consumer-answer-testing.md`](requirements/2026-08-24-m5-consumer-answer-testing.md) / [`prd/2026-08-24-m5-consumer-answer-testing.md`](prd/2026-08-24-m5-consumer-answer-testing.md) / [`architecture/2026-08-24-consumer-answer-testing-architecture.md`](architecture/2026-08-24-consumer-answer-testing-architecture.md) | approved；授权 T02—T08 与五平台账号/隐私范围，真实执行仍受 Terms/robots 限制 |
+| Spec 0006 / Plan / Task | [`specs/0006-consumer-answer-testing.md`](specs/0006-consumer-answer-testing.md) / [`plans/2026-08-24-m5-consumer-answer-testing-plan.md`](plans/2026-08-24-m5-consumer-answer-testing-plan.md) / [`tasks/2026-08-24-m5-consumer-answer-testing.md`](tasks/2026-08-24-m5-consumer-answer-testing.md) | approved / approved / implemented；T02—T08 verified，T09 真实 Smoke 与 T10 blocked |
 | M5 信源/采集设计修订 Record | [`records/2026-08-25-m5-source-system-and-collector-design-record.md`](records/2026-08-25-m5-source-system-and-collector-design-record.md) | verified；记录无冷启动导入、Playwright/真实采集设计和本地验证；不是实现批准 |
+| M5 离线工程 Record | [`records/2026-08-25-m5-offline-consumer-answer-testing-record.md`](records/2026-08-25-m5-offline-consumer-answer-testing-record.md) | verified；七类对象、recorded Fixture、恢复、Source/Review/聚合与回归；不是真实 Baseline |
+| M5 Playwright / 平台条款门 Record | [`records/2026-08-25-m5-playwright-runtime-and-platform-guard-record.md`](records/2026-08-25-m5-playwright-runtime-and-platform-guard-record.md) | T08 verified；T09 guard engineering 通过但真实 Smoke blocked；未访问账号或 UI |
+| ChatGPT 人工 Smoke Record | [`records/2026-08-25-m5-chatgpt-manual-smoke-record.md`](records/2026-08-25-m5-chatgpt-manual-smoke-record.md) | 1 个 Temporary Chat exploratory/manual Sample、3 Citation；不是 Baseline，Classification 待复核 |
+| Gemini 人工 Smoke Record | [`records/2026-08-25-m5-gemini-manual-smoke-record.md`](records/2026-08-25-m5-gemini-manual-smoke-record.md) | 1 个 exploratory/manual Sample、0 Citation；后续移除 permission ref 硬门 |
+| 平台许可需求池条目 | [`requirements/2026-08-25-platform-automation-permission-backlog.md`](requirements/2026-08-25-platform-automation-permission-backlog.md) | proposed / 待规划；是否启动规范仅由 Owner 决定 |
 
 ## 历史提案与交接
 
@@ -97,7 +102,7 @@
 | CodeBuddy 移除与 WorkBuddy 切换 Handoff | [`handoff/2026-08-20-milestone-1-hardening-workbuddy-china-handoff.md`](handoff/2026-08-20-milestone-1-hardening-workbuddy-china-handoff.md) | 历史 WorkBuddy 契约跟踪与 M1 收口基线 |
 | 原“Query 与知识” M2 Handoff | [`handoff/2026-08-20-query-and-knowledge-milestone-handoff.md`](handoff/2026-08-20-query-and-knowledge-milestone-handoff.md) | 已被 2026-08-23 产品基线重排；保留历史，不再作为当前 M2 启动指令 |
 
-M2–M4 独立评审已通过 M5 规划门，并形成六份 proposed M5 工件。M5 已将 Playwright/真实采集和持续信源维护纳入必要设计；Source 候选只能来自真实 Citation Observation，无外部榜单冷启动导入。实现门与真实采集门仍未通过；Review/Record/Handoff 都不能自行提升 M5 SDD、Evidence/Gap 人工批准、消费者平台采样、发布或部署状态。
+Owner 已批准六份 M5 工件、T02—T08 与五平台账号/隐私范围；离线对象、Fixture、恢复、Source/Review/聚合、全局 Playwright runtime/base 与回归已验证。五个平台 guard adapter 均在浏览器启动前执行 Terms/robots gate，真实 Smoke 未发生；离线 Record 不能替代消费者平台、发布或业务效果证据。
 
 ## 现有目录
 

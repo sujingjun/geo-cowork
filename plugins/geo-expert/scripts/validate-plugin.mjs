@@ -156,6 +156,9 @@ async function checkTemplates() {
     'document.md', 'answer-card.md', 'knowledge-release.md',
     'query-set.md', 'evidence-plan.md', 'perception-goal.md',
     'asset-proposal.md', 'adoption-record.md', 'asset-publication.md',
+    'collector-profile.md', 'answer-sample.md', 'citation-observation.md',
+    'source-classification.md', 'claim-support-review.md', 'answer-review.md',
+    'answer-aggregation.md',
   ]) {
     const p = path.join(PLUGIN_ROOT, 'assets', 'object-templates', file);
     try {
@@ -173,6 +176,7 @@ async function checkRuntime() {
   for (const file of [
     'common-object.schema.json', 'm2-record-types.schema.json', 'm3-record-types.schema.json',
     'm4-record-types.schema.json',
+    'm5-record-types.schema.json',
   ]) {
     const p = path.join(PLUGIN_ROOT, 'schemas', file);
     const data = await readJson(p);
@@ -183,6 +187,7 @@ async function checkRuntime() {
     'knowledge-query.mjs', 'workspace-init.mjs', 'workspace-validate.mjs',
     'diagnosis.mjs', 'collect-public-site.mjs', 'prepare-public-site-m4-inputs.mjs',
     'check-doc-links.mjs',
+    'answer-cycle.mjs',
   ]) {
     const p = path.join(PLUGIN_ROOT, 'scripts', file);
     try {
@@ -198,6 +203,10 @@ async function checkRuntime() {
     'site-audit.mjs', 'research-input.mjs', 'asset-proposal.mjs',
     'public-site-collection-plan.mjs', 'public-site-collector.mjs',
     'public-site-m4-inputs.mjs',
+    'answer-profile.mjs', 'answer-run.mjs', 'answer-sample.mjs',
+    'answer-manual.mjs',
+    'source-registry.mjs', 'citation-analysis.mjs', 'answer-review.mjs',
+    'answer-aggregation.mjs', 'answer-cycle.mjs',
   ]) {
     const p = path.join(PLUGIN_ROOT, 'scripts', 'lib', file);
     try {
@@ -205,6 +214,20 @@ async function checkRuntime() {
       checked.push(path.relative(REPO_ROOT, p));
     } catch {
       fail(`运行库缺失: ${path.relative(REPO_ROOT, p)}`);
+    }
+  }
+  for (const file of [
+    'playwright-base.mjs',
+    'platforms/chatgpt.mjs', 'platforms/gemini.mjs',
+    'platforms/perplexity.mjs', 'platforms/google-ai.mjs',
+    'platforms/claude.mjs', 'platforms/index.mjs',
+  ]) {
+    const p = path.join(PLUGIN_ROOT, 'scripts', 'collectors', file);
+    try {
+      await readFile(p, 'utf8');
+      checked.push(path.relative(REPO_ROOT, p));
+    } catch {
+      fail(`Collector 模块缺失: ${path.relative(REPO_ROOT, p)}`);
     }
   }
   const rootPackage = await readJson(path.join(REPO_ROOT, 'package.json'));

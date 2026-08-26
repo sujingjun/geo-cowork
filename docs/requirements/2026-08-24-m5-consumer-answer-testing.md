@@ -1,6 +1,6 @@
 ---
 title: M5 Consumer Answer Testing 与持续信源体系原始需求
-status: proposed
+status: approved
 created: 2026-08-24
 updated: 2026-08-25
 source:
@@ -9,6 +9,8 @@ source:
   - docs/records/2026-08-24-m2-m4-completeness-and-m5-entry-gate-review.md
   - "2026-08-24 当前用户指令：独立评审 M2–M4；通过时只制定 M5 proposed 工件，不实现、不采集消费者平台"
   - "2026-08-25 当前用户指令：持续维护信源体系，不需要冷启动导入；M5 必须设计 Playwright 与真实采集；文档合入 main，不进入实现"
+  - "2026-08-25 当前用户指令：批准 M5 里程碑方案设计，并实施计划，完成目标"
+  - "2026-08-25 当前用户指令：Playwright 使用最新版并全局安装；五个平台统一授权 Owner Google 登录身份，按真实用户隐私，本地 artifact 保留 1 年"
 scope: M5 正式消费者产品答案 Baseline/Retest、持续信源体系、Playwright collector 与真实采集设计
 ---
 
@@ -113,7 +115,7 @@ Query → Platform → Intent → Citation Domain → Source Identity → Source
 
 ## 5. 成功标准
 
-1. M5 Requirement、PRD、Architecture、Spec 0006、Plan 和 Task 职责分离且均保持 `proposed`，直到 Owner 单独批准。
+1. M5 Requirement、PRD、Architecture、Spec 0006、Plan 和 Task 职责分离，并由 Owner 明确批准进入本地离线实现。
 2. 合成 `.invalid`/本地录制 Fixture 可证明 Profile、Sample、Citation、分类、Claim 支撑、Review 和聚合 Schema 的正常/非法/边界行为。
 3. 三个 sample slot 全部保留；拒答、超时和无结果进入聚合的状态计数，不被成功重试覆盖或删除。
 4. 同一 raw sample 可由新 Rubric 产生独立 Review，raw checksum 和旧 Review 字节不变。
@@ -133,11 +135,11 @@ Query → Platform → Intent → Citation Domain → Source Identity → Source
 - Host/人工负责语义分类与 Claim 支撑判断；Tool 只校验、采集显式目标和计算确定性指标。
 - 不把 API 样本、探索性样本或平台 Observation 当企业事实 Evidence。
 - 不从少量回答、Citation 变化或域名排名推导因果、产品战略或业务效果。
-- 本次只授权 M5 文档 commit 并本地合入 `main`；未经单独授权不安装依赖、不下载浏览器、不读取账号数据、不写外部系统、不提交后续实现代码、不 push、PR、release 或 deploy。
+- 本次授权 M5 SDD、T02—T08、本机全局 `playwright@1.62.1`、五个平台 Owner-controlled Google 登录角色、隐私最小化与本地 artifact 365 天保留；不保存账号标识或凭据。平台 Terms/robots 禁止或未明确允许的真实 UI 自动采集继续 blocked；不下载新浏览器、不写外部业务系统、不 commit、push、PR、release 或 deploy。
 
 ## 7. 非目标
 
-- 当前任务的 M5 代码实现、Playwright 安装或真实消费者平台 Baseline；
+- 新 browser binary 下载或真实消费者平台 Baseline；
 - M4 Evidence/Gap/Proposal/Adoption/Publication/Technical Retest 的人工补写；
 - M6 GA4/GSC、真实 GEO Cycle 1 或因果归因；
 - M7 战略发现、自动社区运营或产品 PRD；
@@ -145,8 +147,6 @@ Query → Platform → Intent → Citation Domain → Source Identity → Source
 
 ## 8. 待人工决定
 
-- 本 Requirement、PRD、Architecture、Spec 0006、Plan 和 Task 是否批准进入离线实现；
-- Playwright 精确 package/version、浏览器安装策略和当前验收宿主；
-- 每个消费者平台的入口、账号/登录态、地区、语言、自动化/人工方式与平台条款边界；
-- 回答、截图、DOM/HTML 的保留期限、访问控制、脱敏和删除责任；
+- 五个平台在官方 Terms/robots 下能否取得自动采集书面许可；
+- Owner 在用户控制浏览器中完成登录后的实际登录态、地区、语言、模型/模式与人工 fallback 可用性；
 - 何时授权真实 Baseline，以及何时具备 M4 Publication 后 Retest 资格。

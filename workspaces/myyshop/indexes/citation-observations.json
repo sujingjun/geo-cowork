@@ -1,0 +1,39 @@
+{
+  "objects": [
+    {
+      "id": "CIT-MYYSHOP-CHATGPT-MANUAL-ABOUT-20260825",
+      "path": "cycles/m5/citations/cit-myyshop-chatgpt-manual-about-20260825.md",
+      "refs": [
+        "SMP-MYYSHOP-CHATGPT-MANUAL-SMOKE-20260825",
+        "SRC-MYYSHOP-WEB-ABOUT-001"
+      ],
+      "status": "observed",
+      "updated_at": "2026-08-25T18:01:06+08:00",
+      "version": "1.0.0"
+    },
+    {
+      "id": "CIT-MYYSHOP-CHATGPT-MANUAL-HOME-20260825",
+      "path": "cycles/m5/citations/cit-myyshop-chatgpt-manual-home-20260825.md",
+      "refs": [
+        "SMP-MYYSHOP-CHATGPT-MANUAL-SMOKE-20260825",
+        "SRC-MYYSHOP-WEB-HOMEPAGE-001"
+      ],
+      "status": "observed",
+      "updated_at": "2026-08-25T18:01:06+08:00",
+      "version": "1.0.0"
+    },
+    {
+      "id": "CIT-MYYSHOP-CHATGPT-MANUAL-LINKEDIN-20260825",
+      "path": "cycles/m5/citations/cit-myyshop-chatgpt-manual-linkedin-20260825.md",
+      "refs": [
+        "SMP-MYYSHOP-CHATGPT-MANUAL-SMOKE-20260825",
+        "SRC-MYYSHOP-LINKEDIN-COMPANY-001"
+      ],
+      "status": "observed",
+      "updated_at": "2026-08-25T18:01:06+08:00",
+      "version": "1.0.0"
+    }
+  ],
+  "record_type": "citation_observation",
+  "schema_version": "1.1.0"
+}

@@ -16,8 +16,10 @@
 | `geo-reputation` | 声誉研究输入、原文/阻断、独立支持、反证与置信度 |
 | `geo-competitor` | 竞品研究输入与 Product Gap 人工前置 |
 | `geo-content` | 单 Asset 完整 Proposal、multi-goal 合并与风险段落 |
+| `geo-answer-cycle` | M5 Profile、三次录制样本、Citation-driven Source、Review 与聚合编排 |
+| `geo-answer` | Citation/Source 分类、Claim 支撑、答案 rubric 与五项指标复核 |
 
-当前产品与里程碑基线见 `docs/plans/2026-08-23-geo-cowork-final-product-plan.md`。0.3.0 是当前已登记插件版本；其后的 M4 在本地源码中实现 Schema/profile、Site/Research、显式公开 HTTP snapshot、Asset Proposal、Adoption/Publication template 与 Retest，尚未发布新插件版本。MyyShop Owner 于 2026-08-24 单独批准 11 个官网公开端点的首批只读采集；账号、GA4/GSC、消费者平台、外部写入与发布仍未授权。M3 内部 `published` 也不表示任何外部内容、插件版本或生产环境已经发布。
+当前产品与里程碑基线见 `docs/plans/2026-08-23-geo-cowork-final-product-plan.md`。0.3.0 是当前已登记插件版本；其后的 M4 与 M5 T02—T08 已在本地源码实现，尚未发布新插件版本。M5 已验证 `.invalid` 录制 Fixture、不可变 raw/Review、持续 Source registry、恢复、确定性聚合和全局 Playwright loopback base；五个平台只提供条款感知 guard adapter，未访问真实账号或消费者 UI。M3 内部 `published` 也不表示任何外部内容、插件版本或生产环境已经发布。
 
 ## 结构
 
@@ -27,7 +29,7 @@
 skills/                       共享 GEO Skills（已适配宿主的单一事实来源）
 schemas/                      Markdown Object JSON Schema
 scripts/                      确定性脚本（Node 20+；依赖见仓库根 package-lock.json）
-assets/object-templates/      M2—M4 对象模板
+assets/object-templates/      M2—M5 对象模板
 assets/workspace-template/    工作区模板
 ```
 
@@ -40,9 +42,12 @@ npm install --ignore-scripts
 npm run test:m2-contract
 npm run test:m3-knowledge-query
 npm run test:m4-diagnosis
+npm run test:m5-answer
+npm run smoke:m5-playwright
 npm run check:docs
 npm run validate:plugin
 node plugins/geo-expert/scripts/diagnosis.mjs validate --workspace workspaces/myyshop
+node plugins/geo-expert/scripts/answer-cycle.mjs validate --workspace workspaces/myyshop
 ```
 
 ## 边界

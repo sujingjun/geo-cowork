@@ -33,11 +33,21 @@ const INDEX_NAMES = {
   asset_proposal: 'asset-proposals.json',
   adoption_record: 'adoption-records.json',
   asset_publication: 'asset-publications.json',
+  collector_profile: 'collector-profiles.json',
+  answer_sample: 'answer-samples.json',
+  citation_observation: 'citation-observations.json',
+  source_classification: 'source-classifications.json',
+  claim_support_review: 'claim-support-reviews.json',
+  answer_review: 'answer-reviews.json',
+  answer_aggregation: 'answer-aggregations.json',
 };
 const EXTENDED_INDEX_TYPES = new Set([
   'document', 'answer_card', 'knowledge_release',
   'query_set', 'evidence_plan', 'perception_goal',
   'asset_proposal', 'adoption_record', 'asset_publication',
+  'collector_profile', 'answer_sample', 'citation_observation',
+  'source_classification', 'claim_support_review', 'answer_review',
+  'answer_aggregation',
 ]);
 
 const REF_FIELDS = {
@@ -107,6 +117,42 @@ const REF_FIELDS = {
     adoption_ref: ['adoption_record'],
     asset_ref: ['asset'],
   },
+  collector_profile: { supersedes_ref: ['collector_profile'] },
+  answer_sample: {
+    query_ref: ['query'],
+    query_set_ref: ['query_set'],
+    collector_profile_ref: ['collector_profile'],
+    run_ref: ['run'],
+    retry_of_ref: ['answer_sample'],
+    publication_refs: ['asset_publication'],
+    technical_retest_run_refs: ['run'],
+    baseline_aggregation_refs: ['answer_aggregation'],
+    supersedes_ref: ['answer_sample'],
+  },
+  citation_observation: {
+    sample_ref: ['answer_sample'],
+    source_ref: ['source'],
+    supersedes_ref: ['citation_observation'],
+  },
+  source_classification: {
+    source_ref: ['source'],
+    citation_refs: ['citation_observation'],
+    supersedes_ref: ['source_classification'],
+  },
+  claim_support_review: {
+    citation_ref: ['citation_observation'],
+    classification_ref: ['source_classification'],
+    claim_ref: ['claim'],
+    supersedes_ref: ['claim_support_review'],
+  },
+  answer_review: {
+    sample_ref: ['answer_sample'],
+    claim_support_review_refs: ['claim_support_review'],
+    supersedes_ref: ['answer_review'],
+  },
+  answer_aggregation: {
+    supersedes_ref: ['answer_aggregation'],
+  },
 };
 
 const VERSION_FIELDS = {
@@ -120,13 +166,21 @@ const VERSION_FIELDS = {
     ['claim_versions', ['claim']],
     ['knowledge_release_versions', ['knowledge_release']],
   ],
-  run: [
-    ['query_set_versions', ['query_set']],
-    ['knowledge_release_versions', ['knowledge_release']],
-  ],
   asset_proposal: [
     ['claim_versions', ['claim']],
     ['knowledge_release_versions', ['knowledge_release']],
+  ],
+  run: [
+    ['query_set_versions', ['query_set']],
+    ['knowledge_release_versions', ['knowledge_release']],
+    ['profile_versions', ['collector_profile']],
+  ],
+  answer_aggregation: [
+    ['profile_versions', ['collector_profile']],
+    ['citation_versions', ['citation_observation']],
+    ['source_versions', ['source']],
+    ['classification_versions', ['source_classification']],
+    ['claim_support_review_versions', ['claim_support_review']],
   ],
 };
 
@@ -160,6 +214,53 @@ export function collectObjectReferences(data) {
   if (data.record_type === 'cycle') {
     for (const [field, entry] of Object.entries(data.core_versions ?? {})) {
       refs.push({ field: `core_versions.${field}`, ref: entry.ref, version: entry.version, allowedTypes: RECORD_TYPES });
+    }
+  }
+  if (data.record_type === 'source' && data.discovery?.citation_ref) {
+    refs.push({
+      field: 'discovery.citation_ref',
+      ref: data.discovery.citation_ref,
+      version: null,
+      allowedTypes: ['citation_observation'],
+    });
+  }
+  if (data.record_type === 'answer_sample') {
+    refs.push(
+      { field: 'query_version', ref: data.query_ref, version: data.query_version, allowedTypes: ['query'] },
+      { field: 'query_set_version', ref: data.query_set_ref, version: data.query_set_version, allowedTypes: ['query_set'] },
+      {
+        field: 'collector_profile_version',
+        ref: data.collector_profile_ref,
+        version: data.collector_profile_version,
+        allowedTypes: ['collector_profile'],
+      },
+    );
+  }
+  if (data.record_type === 'claim_support_review') {
+    refs.push({
+      field: 'claim_version',
+      ref: data.claim_ref,
+      version: data.claim_version,
+      allowedTypes: ['claim'],
+    });
+  }
+  if (data.record_type === 'answer_aggregation') {
+    for (const item of data.query_cluster?.query_versions ?? []) {
+      refs.push({ field: 'query_cluster.query_versions', ref: item.ref, version: item.version, allowedTypes: ['query'] });
+    }
+    for (const item of data.selected_sample_versions ?? []) {
+      refs.push({ field: 'selected_sample_versions', ref: item.ref, version: item.version, allowedTypes: ['answer_sample'] });
+    }
+    for (const item of data.answer_review_versions ?? []) {
+      refs.push({ field: 'answer_review_versions', ref: item.ref, version: item.version, allowedTypes: ['answer_review'] });
+    }
+    if (data.comparability?.compared_to_ref) {
+      refs.push({
+        field: 'comparability.compared_to_ref',
+        ref: data.comparability.compared_to_ref,
+        version: null,
+        allowedTypes: ['answer_aggregation'],
+      });
     }
   }
   return refs;

@@ -17,6 +17,16 @@
       "version": "1.0.0"
     },
     {
+      "id": "SRC-MYYSHOP-LINKEDIN-COMPANY-001",
+      "path": "evidence/sources/src-myyshop-linkedin-company-001.md",
+      "refs": [
+        "CIT-MYYSHOP-CHATGPT-MANUAL-LINKEDIN-20260825"
+      ],
+      "status": "active",
+      "updated_at": "2026-08-25T18:01:06+08:00",
+      "version": "1.0.0"
+    },
+    {
       "id": "SRC-MYYSHOP-WEB-ABOUT-001",
       "path": "evidence/sources/src-myyshop-web-about-001.md",
       "refs": [],
