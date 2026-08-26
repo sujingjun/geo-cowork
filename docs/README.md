@@ -91,6 +91,9 @@
 | M5 Playwright / 平台条款门 Record | [`records/2026-08-25-m5-playwright-runtime-and-platform-guard-record.md`](records/2026-08-25-m5-playwright-runtime-and-platform-guard-record.md) | T08 verified；T09 guard engineering 通过但真实 Smoke blocked；未访问账号或 UI |
 | ChatGPT 人工 Smoke Record | [`records/2026-08-25-m5-chatgpt-manual-smoke-record.md`](records/2026-08-25-m5-chatgpt-manual-smoke-record.md) | 1 个 Temporary Chat exploratory/manual Sample、3 Citation；不是 Baseline，Classification 待复核 |
 | Gemini 人工 Smoke Record | [`records/2026-08-25-m5-gemini-manual-smoke-record.md`](records/2026-08-25-m5-gemini-manual-smoke-record.md) | 1 个 exploratory/manual Sample、0 Citation；后续移除 permission ref 硬门 |
+| Google AI 人工共享 Smoke Record | [`records/2026-08-26-m5-google-ai-manual-share-smoke-record.md`](records/2026-08-26-m5-google-ai-manual-share-smoke-record.md) | 1 个 exploratory/manual Sample、9 Citation/Source/候选 Classification；不是 Baseline |
+| Claude CN/US 人工共享 Smoke Record | [`records/2026-08-26-m5-claude-manual-share-smoke-record.md`](records/2026-08-26-m5-claude-manual-share-smoke-record.md) | CN/US 各 1 个成功 exploratory Sample；只记采集基线差异，不作 IP 对比 |
+| Perplexity 用户导出 Markdown Smoke Record | [`records/2026-08-26-m5-perplexity-user-export-smoke-record.md`](records/2026-08-26-m5-perplexity-user-export-smoke-record.md) | 1 个 user-supplied-export/manual Sample、5 Citation；页面与自动化仍 blocked |
 | 平台许可需求池条目 | [`requirements/2026-08-25-platform-automation-permission-backlog.md`](requirements/2026-08-25-platform-automation-permission-backlog.md) | proposed / 待规划；是否启动规范仅由 Owner 决定 |
 
 ## 历史提案与交接
@@ -102,7 +105,7 @@
 | CodeBuddy 移除与 WorkBuddy 切换 Handoff | [`handoff/2026-08-20-milestone-1-hardening-workbuddy-china-handoff.md`](handoff/2026-08-20-milestone-1-hardening-workbuddy-china-handoff.md) | 历史 WorkBuddy 契约跟踪与 M1 收口基线 |
 | 原“Query 与知识” M2 Handoff | [`handoff/2026-08-20-query-and-knowledge-milestone-handoff.md`](handoff/2026-08-20-query-and-knowledge-milestone-handoff.md) | 已被 2026-08-23 产品基线重排；保留历史，不再作为当前 M2 启动指令 |
 
-Owner 已批准六份 M5 工件、T02—T08 与五平台账号/隐私范围；离线对象、Fixture、恢复、Source/Review/聚合、全局 Playwright runtime/base 与回归已验证。五个平台 guard adapter 均在浏览器启动前执行 Terms/robots gate，真实 Smoke 未发生；离线 Record 不能替代消费者平台、发布或业务效果证据。
+Owner 已批准六份 M5 工件、T02—T08 与五平台账号/隐私范围；离线对象、Fixture、恢复、Source/Review/聚合、全局 Playwright runtime/base 与回归已验证。ChatGPT、Gemini、Google AI 各形成 1 个 Owner manual exploratory Smoke，Claude 形成 CN/US 各 1 个成功 Sample，Perplexity 形成 1 个用户导出文件 Sample。Perplexity 页面 manual 与所有 browser automation guard 保持 blocked。上述 Record 不能替代正式 Baseline、对比实验、发布或业务效果证据。
 
 ## 现有目录
 

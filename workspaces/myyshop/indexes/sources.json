@@ -1,11 +1,121 @@
 {
   "objects": [
     {
+      "id": "SRC-MYYSHOP-CLAUDE-CIFNEWS-ARTICLE-001",
+      "path": "evidence/sources/src-myyshop-claude-cifnews-article-001.md",
+      "refs": [
+        "CIT-MYYSHOP-CLAUDE-MANUAL-CIFNEWS-1-20260826"
+      ],
+      "status": "active",
+      "updated_at": "2026-08-26T13:41:14+08:00",
+      "version": "1.0.0"
+    },
+    {
+      "id": "SRC-MYYSHOP-CLAUDE-US-APP-STORE-001",
+      "path": "evidence/sources/src-myyshop-claude-us-app-store-001.md",
+      "refs": [
+        "CIT-MYYSHOP-CLAUDE-US-MANUAL-APP-STORE-1-20260826"
+      ],
+      "status": "active",
+      "updated_at": "2026-08-26T14:03:13+08:00",
+      "version": "1.0.0"
+    },
+    {
       "id": "SRC-MYYSHOP-FINAL-PRODUCT-PLAN-001",
       "path": "evidence/sources/src-myyshop-final-product-plan-001.md",
       "refs": [],
       "status": "active",
       "updated_at": "2026-08-23T17:21:50.000Z",
+      "version": "1.0.0"
+    },
+    {
+      "id": "SRC-MYYSHOP-GOOGLE-AI-21JINGJI-001",
+      "path": "evidence/sources/src-myyshop-google-ai-21jingji-001.md",
+      "refs": [
+        "CIT-MYYSHOP-GOOGLE-AI-MANUAL-21JINGJI-20260826"
+      ],
+      "status": "active",
+      "updated_at": "2026-08-26T12:46:42+08:00",
+      "version": "1.0.0"
+    },
+    {
+      "id": "SRC-MYYSHOP-GOOGLE-AI-36DIANPING-001",
+      "path": "evidence/sources/src-myyshop-google-ai-36dianping-001.md",
+      "refs": [
+        "CIT-MYYSHOP-GOOGLE-AI-MANUAL-36DIANPING-20260826"
+      ],
+      "status": "active",
+      "updated_at": "2026-08-26T12:46:42+08:00",
+      "version": "1.0.0"
+    },
+    {
+      "id": "SRC-MYYSHOP-GOOGLE-AI-36KR-001",
+      "path": "evidence/sources/src-myyshop-google-ai-36kr-001.md",
+      "refs": [
+        "CIT-MYYSHOP-GOOGLE-AI-MANUAL-36KR-20260826"
+      ],
+      "status": "active",
+      "updated_at": "2026-08-26T12:46:42+08:00",
+      "version": "1.0.0"
+    },
+    {
+      "id": "SRC-MYYSHOP-GOOGLE-AI-AMZ123-001",
+      "path": "evidence/sources/src-myyshop-google-ai-amz123-001.md",
+      "refs": [
+        "CIT-MYYSHOP-GOOGLE-AI-MANUAL-AMZ123-20260826"
+      ],
+      "status": "active",
+      "updated_at": "2026-08-26T12:46:42+08:00",
+      "version": "1.0.0"
+    },
+    {
+      "id": "SRC-MYYSHOP-GOOGLE-AI-BAIDU-BAIKE-001",
+      "path": "evidence/sources/src-myyshop-google-ai-baidu-baike-001.md",
+      "refs": [
+        "CIT-MYYSHOP-GOOGLE-AI-MANUAL-BAIDU-BAIKE-20260826"
+      ],
+      "status": "active",
+      "updated_at": "2026-08-26T12:46:42+08:00",
+      "version": "1.0.0"
+    },
+    {
+      "id": "SRC-MYYSHOP-GOOGLE-AI-CIFNEWS-001",
+      "path": "evidence/sources/src-myyshop-google-ai-cifnews-001.md",
+      "refs": [
+        "CIT-MYYSHOP-GOOGLE-AI-MANUAL-CIFNEWS-20260826"
+      ],
+      "status": "active",
+      "updated_at": "2026-08-26T12:46:42+08:00",
+      "version": "1.0.0"
+    },
+    {
+      "id": "SRC-MYYSHOP-GOOGLE-AI-DHGATE-001",
+      "path": "evidence/sources/src-myyshop-google-ai-dhgate-001.md",
+      "refs": [
+        "CIT-MYYSHOP-GOOGLE-AI-MANUAL-DHGATE-20260826"
+      ],
+      "status": "active",
+      "updated_at": "2026-08-26T12:46:42+08:00",
+      "version": "1.0.0"
+    },
+    {
+      "id": "SRC-MYYSHOP-GOOGLE-AI-SINA-001",
+      "path": "evidence/sources/src-myyshop-google-ai-sina-001.md",
+      "refs": [
+        "CIT-MYYSHOP-GOOGLE-AI-MANUAL-SINA-20260826"
+      ],
+      "status": "active",
+      "updated_at": "2026-08-26T12:46:42+08:00",
+      "version": "1.0.0"
+    },
+    {
+      "id": "SRC-MYYSHOP-GOOGLE-AI-ZHIHU-001",
+      "path": "evidence/sources/src-myyshop-google-ai-zhihu-001.md",
+      "refs": [
+        "CIT-MYYSHOP-GOOGLE-AI-MANUAL-ZHIHU-20260826"
+      ],
+      "status": "active",
+      "updated_at": "2026-08-26T12:46:42+08:00",
       "version": "1.0.0"
     },
     {
@@ -24,6 +134,36 @@
       ],
       "status": "active",
       "updated_at": "2026-08-25T18:01:06+08:00",
+      "version": "1.0.0"
+    },
+    {
+      "id": "SRC-MYYSHOP-PERPLEXITY-REDDIT-001",
+      "path": "evidence/sources/src-myyshop-perplexity-reddit-001.md",
+      "refs": [
+        "CIT-MYYSHOP-PERPLEXITY-EXPORT-REDDIT-20260826"
+      ],
+      "status": "active",
+      "updated_at": "2026-08-26T14:22:01+08:00",
+      "version": "1.0.0"
+    },
+    {
+      "id": "SRC-MYYSHOP-PERPLEXITY-REGISTER-001",
+      "path": "evidence/sources/src-myyshop-perplexity-register-001.md",
+      "refs": [
+        "CIT-MYYSHOP-PERPLEXITY-EXPORT-REGISTER-20260826"
+      ],
+      "status": "active",
+      "updated_at": "2026-08-26T14:22:01+08:00",
+      "version": "1.0.0"
+    },
+    {
+      "id": "SRC-MYYSHOP-PERPLEXITY-WORDPRESS-001",
+      "path": "evidence/sources/src-myyshop-perplexity-wordpress-001.md",
+      "refs": [
+        "CIT-MYYSHOP-PERPLEXITY-EXPORT-WORDPRESS-20260826"
+      ],
+      "status": "active",
+      "updated_at": "2026-08-26T14:22:01+08:00",
       "version": "1.0.0"
     },
     {

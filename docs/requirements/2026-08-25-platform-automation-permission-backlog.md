@@ -48,6 +48,7 @@ scope: 全部里程碑完成后可能需要的平台许可、生产自动采集�
 - 当前 adapter 的 `terms_blocked/manual_only`、Terms/robots、challenge、隐私和账号安全边界继续有效；
 - Owner Chrome 登录、内部授权、付费订阅或 API key 不能自动证明 consumer UI 自动采集范围；
 - ChatGPT/Gemini 现有 manual exploratory Sample 继续只作平台 Observation，不是 Baseline；
+- 开发阶段 Google AI/Claude manual exploratory 与 Perplexity `user_supplied_export` ingestion 不属于本自动化许可需求；Perplexity 页面 manual 和 browser automation 继续 blocked；
 - 未经 Owner 决定，不得从本条目自动起草或批准后续规范。
 
 ## 非目标

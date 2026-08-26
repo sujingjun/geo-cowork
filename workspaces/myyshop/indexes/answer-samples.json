@@ -14,6 +14,46 @@
       "version": "1.0.0"
     },
     {
+      "id": "SMP-MYYSHOP-CLAUDE-MANUAL-SMOKE-20260826",
+      "path": "cycles/m5/samples/smp-myyshop-claude-manual-smoke-20260826.md",
+      "refs": [
+        "CPF-MYYSHOP-CLAUDE-MANUAL-SMOKE-20260826",
+        "Q-MYYSHOP-WHAT-IS-001",
+        "QS-MYYSHOP-DEFINITION-001",
+        "RUN-MYYSHOP-M5-CLAUDE-MANUAL-SMOKE-20260826"
+      ],
+      "status": "recorded",
+      "updated_at": "2026-08-26T13:41:14+08:00",
+      "version": "1.0.0"
+    },
+    {
+      "id": "SMP-MYYSHOP-CLAUDE-US-MANUAL-SMOKE-20260826",
+      "path": "cycles/m5/samples/smp-myyshop-claude-us-manual-smoke-20260826.md",
+      "refs": [
+        "CPF-MYYSHOP-CLAUDE-US-MANUAL-SMOKE-20260826",
+        "Q-MYYSHOP-WHAT-IS-EN-001",
+        "QS-MYYSHOP-DEFINITION-EN-US-001",
+        "RUN-MYYSHOP-M5-CLAUDE-US-MANUAL-SMOKE-20260826"
+      ],
+      "status": "recorded",
+      "updated_at": "2026-08-26T14:03:13+08:00",
+      "version": "1.0.0"
+    },
+    {
+      "id": "SMP-MYYSHOP-CLAUDE-US-MANUAL-SMOKE-RETRY-20260826",
+      "path": "cycles/m5/samples/smp-myyshop-claude-us-manual-smoke-retry-20260826.md",
+      "refs": [
+        "CPF-MYYSHOP-CLAUDE-US-MANUAL-SMOKE-20260826",
+        "Q-MYYSHOP-WHAT-IS-EN-001",
+        "QS-MYYSHOP-DEFINITION-EN-US-001",
+        "RUN-MYYSHOP-M5-CLAUDE-US-MANUAL-SMOKE-RETRY-20260826",
+        "SMP-MYYSHOP-CLAUDE-US-MANUAL-SMOKE-20260826"
+      ],
+      "status": "recorded",
+      "updated_at": "2026-08-26T14:03:13+08:00",
+      "version": "1.0.0"
+    },
+    {
       "id": "SMP-MYYSHOP-GEMINI-MANUAL-SMOKE-20260825",
       "path": "cycles/m5/samples/smp-myyshop-gemini-manual-smoke-20260825.md",
       "refs": [
@@ -24,6 +64,32 @@
       ],
       "status": "recorded",
       "updated_at": "2026-08-25T18:07:44+08:00",
+      "version": "1.0.0"
+    },
+    {
+      "id": "SMP-MYYSHOP-GOOGLE-AI-MANUAL-SMOKE-20260826",
+      "path": "cycles/m5/samples/smp-myyshop-google-ai-manual-smoke-20260826.md",
+      "refs": [
+        "CPF-MYYSHOP-GOOGLE-AI-MANUAL-SMOKE-20260826",
+        "Q-MYYSHOP-WHAT-IS-001",
+        "QS-MYYSHOP-DEFINITION-001",
+        "RUN-MYYSHOP-M5-GOOGLE-AI-MANUAL-SMOKE-20260826"
+      ],
+      "status": "recorded",
+      "updated_at": "2026-08-26T12:46:42+08:00",
+      "version": "1.0.0"
+    },
+    {
+      "id": "SMP-MYYSHOP-PERPLEXITY-USER-EXPORT-20260826",
+      "path": "cycles/m5/samples/smp-myyshop-perplexity-user-export-20260826.md",
+      "refs": [
+        "CPF-MYYSHOP-PERPLEXITY-USER-EXPORT-20260826",
+        "Q-MYYSHOP-WHAT-MYYSHOP-IS-001",
+        "QS-MYYSHOP-PERPLEXITY-EXPORT-EN-001",
+        "RUN-MYYSHOP-M5-PERPLEXITY-USER-EXPORT-20260826"
+      ],
+      "status": "recorded",
+      "updated_at": "2026-08-26T14:22:01+08:00",
       "version": "1.0.0"
     }
   ],

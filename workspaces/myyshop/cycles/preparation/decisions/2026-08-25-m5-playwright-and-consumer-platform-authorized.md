@@ -126,3 +126,27 @@ Owner 后续明确决定：
 `docs/requirements/2026-08-25-platform-automation-permission-backlog.md`
 
 该条目业务状态为“待规划”，是否开启 PRD/Spec/Plan/Task 仅由 Owner 另行决定。当前工程出口仍按平台 Terms guard 判断。
+
+## 8. 2026-08-26 开发阶段真实 UI manual adapter 路径
+
+Owner 明确决定开发阶段继续 Owner 手工操作、手工复制的 `manual exploratory` 采样，并先跑通对应真实 UI adapter；平台许可需求池仍只面向未来自动化/正式上线，状态保持“待规划”。
+
+当前 manual 路径：
+
+| platform | manual exploratory | automation |
+| --- | --- | --- |
+| ChatGPT | allowed；已完成 1 个 Temporary Chat Sample | `terms_blocked` |
+| Gemini | allowed；已完成 1 个无 Citation Sample | `manual_only` |
+| Google AI Mode/AI Overviews | allowed；由 Owner 手工访问 `/search`、提交和复制 | `terms_blocked` |
+| Claude | allowed；由 Owner 手工访问、提交和复制 | `terms_blocked` |
+| Perplexity | blocked；consumer Terms 限制同目的手工采集 | `terms_blocked` |
+
+“真实 UI adapter 跑通”在当前开发阶段固定指：
+
+1. Owner 在用户控制浏览器中手工打开 exact product entry；
+2. Owner 手工提交冻结 Query、等待终态并复制完整回答；
+3. Agent 只读取 Owner 主动复制到系统剪贴板的内容；
+4. manual materializer 校验平台 registry/entry、隐私、raw checksum、Citation/Source 关系并写入 exploratory Sample；
+5. 不使用 Playwright/DOM/selector 自动提交或提取，不形成正式 Baseline。
+
+本节覆盖 §6 中“不再请求 Google AI/Claude 人工操作”的历史策略；Perplexity 阻断保持。

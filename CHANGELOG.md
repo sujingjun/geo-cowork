@@ -11,6 +11,11 @@
 - 后续由 Owner 在 ChatGPT Temporary Chat 手工完成 1 个 exploratory Smoke，生成 1 Sample、3 Citation 与 candidate Classification；未自动提取 Output，也未形成 Baseline；
 - Owner 另完成 1 个 Gemini 无 Citation manual exploratory Sample，随后将剩余平台切换为书面自动采集 permission ref 硬门；
 - 后续按 Owner 决定移除 adapter `written_permission_ref` 运行时硬门；平台许可改放 Requirements 需求池，业务状态“待规划”、是否开启规范仅由 Owner 决定，Terms/robots guard 保留；
+- 2026-08-26 启用 Google AI/Claude Owner manual exploratory adapter，并把平台注册入口校验接入 manual materializer；Perplexity manual 继续 blocked，自动采集 guard 不变；
+- 2026-08-26 由 Owner 提供 Google AI 共享结果，材料化 1 个 exploratory/manual Sample、9 个 Citation、9 个新 Source 与 9 个待复核 candidate Classification；未创建 Claim Support/Review/Aggregation，不构成 Baseline；
+- 2026-08-26 由 Owner 提供 Claude 共享结果，材料化 1 个 exploratory/manual Sample、6 个 Citation、2 个唯一 Source（其中 1 个新建、1 个复用）与 6 个待复核 candidate Classification；未创建 Claim Support/Review/Aggregation，不构成 Baseline；
+- 2026-08-26 Owner 将首个 Claude Profile 直接指定为 `region: CN`，并批准独立英文 formal Query/Query Set 与 `region: US` 共享结果采集；美国成功重试形成 3 个 Citation、2 个唯一 Source 与 3 个待复核 Classification，只记录采集基线差异，不执行 IP 对比；首次枚举校验失败 Run/Attempt 保留为审计历史；
+- 2026-08-26 新增 Perplexity `user_supplied_export_only` manual 门：Owner 提供的导出 Markdown 以原文件 SHA 写入 1 个 exploratory Sample、5 个 Citation、3 个新 Source 与 5 个待复核 Classification；普通页面 manual 和 browser automation 继续 blocked；
 - 未 commit/push/PR/release/deploy，插件 Manifest 仍为 0.3.0。
 
 ## 2026-08-24 - M2–M4 优化与 MyyShop 首批公开采集（本地未发布）

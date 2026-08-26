@@ -16,6 +16,7 @@ source:
   - workspaces/myyshop/cycles/preparation/decisions/2026-08-25-m5-playwright-and-consumer-platform-authorized.md
   - "2026-08-25 当前用户指令：后续平台转为平台书面自动采集"
   - "2026-08-25 当前用户指令：去除 Adapter written_permission_ref 限制；平台许可改为全部里程碑完成后的上线前待办"
+  - "2026-08-26 当前用户指令：继续 Owner 手工操作/复制的 manual exploratory 采样；开发阶段先跑通对应真实 UI adapter"
   - docs/requirements/2026-08-25-platform-automation-permission-backlog.md
 scope: M5 SDD 批准门、离线对象/恢复/指标、持续 Source registry、Playwright/平台 collector 与真实 Baseline 分段任务
 ---
@@ -139,7 +140,7 @@ scope: M5 SDD 批准门、离线对象/恢复/指标、持续 Source registry、
 - 测试要求：一个平台受阻不伪装全平台完成；不得用 API、搜索摘要或其他平台补数；manual 必须保留完整回答/Citation 并降低 comparability
 - 验证命令：逐平台批准后在对应 Task 冻结
 - 风险：UI/地区/模型漂移造成假 comparability
-- 当前状态：blocked（ChatGPT/Gemini 各 1 个 manual exploratory Smoke；`written_permission_ref` 已移除，但五个平台现有 Terms/robots guard 仍未通过；全平台 Smoke 未完成）
+- 当前状态：implemented（ChatGPT/Gemini/Google AI manual Smoke、Claude CN/US baseline records 与 Perplexity user-supplied-export/manual Smoke verified；Perplexity 页面 manual 和 browser automation blocked；全平台正式 Smoke 未完成）
 
 ## M5-T10 真实 Baseline 与未来 Retest
 

@@ -1,0 +1,508 @@
+{
+  "authorization_ref": "workspace://cycles/preparation/decisions/2026-08-25-m5-playwright-and-consumer-platform-authorized.md",
+  "collector_contract": {
+    "collector_version": "manual-owner-share-v1",
+    "schema_version": "1.0.0",
+    "tool_policy_version": "m5-manual-privacy-v1"
+  },
+  "goal_refs": [
+    "GOAL-MYYSHOP-DEFINITION-001"
+  ],
+  "input_versions": {
+    "CLM-MYYSHOP-AUDIENCE-001": "1.0.1",
+    "CLM-MYYSHOP-LIFECYCLE-SERVICE-001": "1.0.1",
+    "CPF-MYYSHOP-GOOGLE-AI-MANUAL-SMOKE-20260826": "1.0.0",
+    "GOAL-MYYSHOP-DEFINITION-001": "1.0.1",
+    "KR-MYYSHOP-DEFINITION-001": "1.0.1",
+    "Q-MYYSHOP-WHAT-IS-001": "1.0.1",
+    "QS-MYYSHOP-DEFINITION-001": "1.0.1"
+  },
+  "knowledge_release_versions": [
+    {
+      "ref": "KR-MYYSHOP-DEFINITION-001",
+      "version": "1.0.1"
+    }
+  ],
+  "profile": {
+    "data": {
+      "approval": {
+        "approved_at": "2026-08-26T12:46:42+08:00",
+        "approved_by": "MyyShop Owner",
+        "decision_ref": "workspace://cycles/preparation/decisions/2026-08-25-m5-playwright-and-consumer-platform-authorized.md"
+      },
+      "collection_method": "manual",
+      "conversation_state": "new",
+      "created_at": "2026-08-26T12:46:42+08:00",
+      "device": {
+        "browser": "Chrome",
+        "class": "desktop",
+        "os": "macOS",
+        "viewport": "unknown"
+      },
+      "id": "CPF-MYYSHOP-GOOGLE-AI-MANUAL-SMOKE-20260826",
+      "language": "zh-CN",
+      "login_state": "logged_in",
+      "model_mode": "AI Mode",
+      "platform": "google_ai",
+      "product_entry": "https://www.google.com/search",
+      "profile_fingerprint": "47bf6a98d699f418066732871e53e5a7352e7c18ef3e7f19bc0377d0c4037506",
+      "query_template_version": "1.0.0",
+      "record_type": "collector_profile",
+      "region": "unknown",
+      "sampling_count": 3,
+      "status": "frozen",
+      "time_window": {
+        "ends_at": "2026-08-27T00:00:00+08:00",
+        "id": "TW-MYYSHOP-GOOGLE-AI-SMOKE-20260826",
+        "starts_at": "2026-08-26T00:00:00+08:00"
+      },
+      "title": "MyyShop Google AI manual share Smoke profile",
+      "updated_at": "2026-08-26T12:46:42+08:00",
+      "version": "1.0.0",
+      "web_search_state": "on"
+    },
+    "path": "cycles/m5/profiles/cpf-myyshop-google-ai-manual-smoke-20260826.md"
+  },
+  "purpose": "exploratory",
+  "query_set_versions": [
+    {
+      "ref": "QS-MYYSHOP-DEFINITION-001",
+      "version": "1.0.1"
+    }
+  ],
+  "query_version": {
+    "ref": "Q-MYYSHOP-WHAT-IS-001",
+    "version": "1.0.1"
+  },
+  "run": {
+    "id": "RUN-MYYSHOP-M5-GOOGLE-AI-MANUAL-SMOKE-20260826"
+  },
+  "sample": {
+    "answer_output_path": "raw/slot-1/answer.md",
+    "captured_at": "2026-08-26T12:46:42+08:00",
+    "citations": [
+      {
+        "anchor_or_context": "Google AI shared result listed 百度百科 as a source.",
+        "classification": {
+          "basis": {
+            "content_form": "editorial",
+            "evidence": [
+              "Google AI shared result exposed this Citation; publisher identity and Claim support remain unreviewed."
+            ],
+            "page_owner": "百度百科"
+          },
+          "confidence": "low",
+          "id": "SCL-MYYSHOP-GOOGLE-AI-MANUAL-BAIDU-BAIKE-20260826",
+          "party_relation": "unknown",
+          "path": "cycles/m5/classifications/scl-myyshop-google-ai-manual-baidu-baike-20260826.md",
+          "primary_source_type": "unknown",
+          "review_required": true,
+          "reviewer": {
+            "identifier": "m5-manual-share-v1",
+            "kind": "geo_expert"
+          },
+          "secondary_source_types": [],
+          "status": "candidate",
+          "subject_workspace": "myyshop"
+        },
+        "id": "CIT-MYYSHOP-GOOGLE-AI-MANUAL-BAIDU-BAIKE-20260826",
+        "occurrence_index": 1,
+        "path": "cycles/m5/citations/cit-myyshop-google-ai-manual-baidu-baike-20260826.md",
+        "position": {
+          "kind": "ui_order",
+          "order": 1
+        },
+        "source": {
+          "id": "SRC-MYYSHOP-GOOGLE-AI-BAIDU-BAIKE-001",
+          "identity": {
+            "citation_domain": "baike.baidu.com",
+            "host_platform": "other",
+            "key": "page:https://baike.baidu.com/item/MyyShop/61465570",
+            "level": "page",
+            "publisher_name": "百度百科"
+          },
+          "locator": "https://baike.baidu.com/item/MyyShop/61465570",
+          "name": "百度百科 MyyShop source",
+          "path": "evidence/sources/src-myyshop-google-ai-baidu-baike-001.md"
+        },
+        "url_raw": "https://baike.baidu.com/item/MyyShop/61465570"
+      },
+      {
+        "anchor_or_context": "Google AI shared result listed 21财经 as a source.",
+        "classification": {
+          "basis": {
+            "content_form": "news",
+            "evidence": [
+              "Google AI shared result exposed this Citation; publisher identity and Claim support remain unreviewed."
+            ],
+            "page_owner": "21财经"
+          },
+          "confidence": "low",
+          "id": "SCL-MYYSHOP-GOOGLE-AI-MANUAL-21JINGJI-20260826",
+          "party_relation": "unknown",
+          "path": "cycles/m5/classifications/scl-myyshop-google-ai-manual-21jingji-20260826.md",
+          "primary_source_type": "unknown",
+          "review_required": true,
+          "reviewer": {
+            "identifier": "m5-manual-share-v1",
+            "kind": "geo_expert"
+          },
+          "secondary_source_types": [],
+          "status": "candidate",
+          "subject_workspace": "myyshop"
+        },
+        "id": "CIT-MYYSHOP-GOOGLE-AI-MANUAL-21JINGJI-20260826",
+        "occurrence_index": 2,
+        "path": "cycles/m5/citations/cit-myyshop-google-ai-manual-21jingji-20260826.md",
+        "position": {
+          "kind": "ui_order",
+          "order": 2
+        },
+        "source": {
+          "id": "SRC-MYYSHOP-GOOGLE-AI-21JINGJI-001",
+          "identity": {
+            "citation_domain": "21jingji.com",
+            "host_platform": "other",
+            "key": "page:http://www.21jingji.com/article/20230705/herald/8b8e472ca0a35a81246cf0d7a4b31727.html",
+            "level": "page",
+            "publisher_name": "21财经"
+          },
+          "locator": "http://www.21jingji.com/article/20230705/herald/8b8e472ca0a35a81246cf0d7a4b31727.html",
+          "name": "21财经 MyyShop source",
+          "path": "evidence/sources/src-myyshop-google-ai-21jingji-001.md"
+        },
+        "url_raw": "http://www.21jingji.com/article/20230705/herald/8b8e472ca0a35a81246cf0d7a4b31727.html"
+      },
+      {
+        "anchor_or_context": "Google AI shared result listed AMZ123 as a source.",
+        "classification": {
+          "basis": {
+            "content_form": "editorial",
+            "evidence": [
+              "Google AI shared result exposed this Citation; publisher identity and Claim support remain unreviewed."
+            ],
+            "page_owner": "AMZ123"
+          },
+          "confidence": "low",
+          "id": "SCL-MYYSHOP-GOOGLE-AI-MANUAL-AMZ123-20260826",
+          "party_relation": "unknown",
+          "path": "cycles/m5/classifications/scl-myyshop-google-ai-manual-amz123-20260826.md",
+          "primary_source_type": "unknown",
+          "review_required": true,
+          "reviewer": {
+            "identifier": "m5-manual-share-v1",
+            "kind": "geo_expert"
+          },
+          "secondary_source_types": [],
+          "status": "candidate",
+          "subject_workspace": "myyshop"
+        },
+        "id": "CIT-MYYSHOP-GOOGLE-AI-MANUAL-AMZ123-20260826",
+        "occurrence_index": 3,
+        "path": "cycles/m5/citations/cit-myyshop-google-ai-manual-amz123-20260826.md",
+        "position": {
+          "kind": "ui_order",
+          "order": 3
+        },
+        "source": {
+          "id": "SRC-MYYSHOP-GOOGLE-AI-AMZ123-001",
+          "identity": {
+            "citation_domain": "m.amz123.com",
+            "host_platform": "other",
+            "key": "page:https://m.amz123.com/t/bKyJ0nBY",
+            "level": "page",
+            "publisher_name": "AMZ123"
+          },
+          "locator": "https://m.amz123.com/t/bKyJ0nBY",
+          "name": "AMZ123 MyyShop source",
+          "path": "evidence/sources/src-myyshop-google-ai-amz123-001.md"
+        },
+        "url_raw": "https://m.amz123.com/t/bKyJ0nBY"
+      },
+      {
+        "anchor_or_context": "Google AI shared result listed 36Kr as a source.",
+        "classification": {
+          "basis": {
+            "content_form": "news",
+            "evidence": [
+              "Google AI shared result exposed this Citation; publisher identity and Claim support remain unreviewed."
+            ],
+            "page_owner": "36Kr"
+          },
+          "confidence": "low",
+          "id": "SCL-MYYSHOP-GOOGLE-AI-MANUAL-36KR-20260826",
+          "party_relation": "unknown",
+          "path": "cycles/m5/classifications/scl-myyshop-google-ai-manual-36kr-20260826.md",
+          "primary_source_type": "unknown",
+          "review_required": true,
+          "reviewer": {
+            "identifier": "m5-manual-share-v1",
+            "kind": "geo_expert"
+          },
+          "secondary_source_types": [],
+          "status": "candidate",
+          "subject_workspace": "myyshop"
+        },
+        "id": "CIT-MYYSHOP-GOOGLE-AI-MANUAL-36KR-20260826",
+        "occurrence_index": 4,
+        "path": "cycles/m5/citations/cit-myyshop-google-ai-manual-36kr-20260826.md",
+        "position": {
+          "kind": "ui_order",
+          "order": 4
+        },
+        "source": {
+          "id": "SRC-MYYSHOP-GOOGLE-AI-36KR-001",
+          "identity": {
+            "citation_domain": "m.36kr.com",
+            "host_platform": "other",
+            "key": "page:https://m.36kr.com/p/2035469948365824",
+            "level": "page",
+            "publisher_name": "36Kr"
+          },
+          "locator": "https://m.36kr.com/p/2035469948365824",
+          "name": "36Kr MyyShop source",
+          "path": "evidence/sources/src-myyshop-google-ai-36kr-001.md"
+        },
+        "url_raw": "https://m.36kr.com/p/2035469948365824"
+      },
+      {
+        "anchor_or_context": "Google AI shared result listed DHgate as a source.",
+        "classification": {
+          "basis": {
+            "content_form": "official",
+            "evidence": [
+              "Google AI shared result exposed this Citation; publisher identity and Claim support remain unreviewed."
+            ],
+            "page_owner": "DHgate"
+          },
+          "confidence": "low",
+          "id": "SCL-MYYSHOP-GOOGLE-AI-MANUAL-DHGATE-20260826",
+          "party_relation": "unknown",
+          "path": "cycles/m5/classifications/scl-myyshop-google-ai-manual-dhgate-20260826.md",
+          "primary_source_type": "unknown",
+          "review_required": true,
+          "reviewer": {
+            "identifier": "m5-manual-share-v1",
+            "kind": "geo_expert"
+          },
+          "secondary_source_types": [],
+          "status": "candidate",
+          "subject_workspace": "myyshop"
+        },
+        "id": "CIT-MYYSHOP-GOOGLE-AI-MANUAL-DHGATE-20260826",
+        "occurrence_index": 5,
+        "path": "cycles/m5/citations/cit-myyshop-google-ai-manual-dhgate-20260826.md",
+        "position": {
+          "kind": "ui_order",
+          "order": 5
+        },
+        "source": {
+          "id": "SRC-MYYSHOP-GOOGLE-AI-DHGATE-001",
+          "identity": {
+            "citation_domain": "seller.dhgate.com",
+            "host_platform": "other",
+            "key": "page:https://seller.dhgate.com/promotion/myyshop.html",
+            "level": "page",
+            "publisher_name": "DHgate"
+          },
+          "locator": "https://seller.dhgate.com/promotion/myyshop.html",
+          "name": "DHgate MyyShop source",
+          "path": "evidence/sources/src-myyshop-google-ai-dhgate-001.md"
+        },
+        "url_raw": "https://seller.dhgate.com/promotion/myyshop.html"
+      },
+      {
+        "anchor_or_context": "Google AI shared result listed 36氪企服点评 as a source.",
+        "classification": {
+          "basis": {
+            "content_form": "review",
+            "evidence": [
+              "Google AI shared result exposed this Citation; publisher identity and Claim support remain unreviewed."
+            ],
+            "page_owner": "36氪企服点评"
+          },
+          "confidence": "low",
+          "id": "SCL-MYYSHOP-GOOGLE-AI-MANUAL-36DIANPING-20260826",
+          "party_relation": "unknown",
+          "path": "cycles/m5/classifications/scl-myyshop-google-ai-manual-36dianping-20260826.md",
+          "primary_source_type": "unknown",
+          "review_required": true,
+          "reviewer": {
+            "identifier": "m5-manual-share-v1",
+            "kind": "geo_expert"
+          },
+          "secondary_source_types": [],
+          "status": "candidate",
+          "subject_workspace": "myyshop"
+        },
+        "id": "CIT-MYYSHOP-GOOGLE-AI-MANUAL-36DIANPING-20260826",
+        "occurrence_index": 6,
+        "path": "cycles/m5/citations/cit-myyshop-google-ai-manual-36dianping-20260826.md",
+        "position": {
+          "kind": "ui_order",
+          "order": 6
+        },
+        "source": {
+          "id": "SRC-MYYSHOP-GOOGLE-AI-36DIANPING-001",
+          "identity": {
+            "citation_domain": "so.36dianping.com",
+            "host_platform": "other",
+            "key": "page:https://so.36dianping.com/site/11029.html",
+            "level": "page",
+            "publisher_name": "36氪企服点评"
+          },
+          "locator": "https://so.36dianping.com/site/11029.html",
+          "name": "36氪企服点评 MyyShop source",
+          "path": "evidence/sources/src-myyshop-google-ai-36dianping-001.md"
+        },
+        "url_raw": "https://so.36dianping.com/site/11029.html"
+      },
+      {
+        "anchor_or_context": "Google AI shared result listed 知乎 as a source.",
+        "classification": {
+          "basis": {
+            "content_form": "community_post",
+            "evidence": [
+              "Google AI shared result exposed this Citation; publisher identity and Claim support remain unreviewed."
+            ],
+            "page_owner": "知乎"
+          },
+          "confidence": "low",
+          "id": "SCL-MYYSHOP-GOOGLE-AI-MANUAL-ZHIHU-20260826",
+          "party_relation": "unknown",
+          "path": "cycles/m5/classifications/scl-myyshop-google-ai-manual-zhihu-20260826.md",
+          "primary_source_type": "unknown",
+          "review_required": true,
+          "reviewer": {
+            "identifier": "m5-manual-share-v1",
+            "kind": "geo_expert"
+          },
+          "secondary_source_types": [],
+          "status": "candidate",
+          "subject_workspace": "myyshop"
+        },
+        "id": "CIT-MYYSHOP-GOOGLE-AI-MANUAL-ZHIHU-20260826",
+        "occurrence_index": 7,
+        "path": "cycles/m5/citations/cit-myyshop-google-ai-manual-zhihu-20260826.md",
+        "position": {
+          "kind": "ui_order",
+          "order": 7
+        },
+        "source": {
+          "id": "SRC-MYYSHOP-GOOGLE-AI-ZHIHU-001",
+          "identity": {
+            "citation_domain": "zhuanlan.zhihu.com",
+            "host_platform": "other",
+            "key": "page:https://zhuanlan.zhihu.com/p/330385685",
+            "level": "page",
+            "publisher_name": "知乎"
+          },
+          "locator": "https://zhuanlan.zhihu.com/p/330385685",
+          "name": "知乎 MyyShop source",
+          "path": "evidence/sources/src-myyshop-google-ai-zhihu-001.md"
+        },
+        "url_raw": "https://zhuanlan.zhihu.com/p/330385685"
+      },
+      {
+        "anchor_or_context": "Google AI shared result listed 雨果跨境 as a source.",
+        "classification": {
+          "basis": {
+            "content_form": "editorial",
+            "evidence": [
+              "Google AI shared result exposed this Citation; publisher identity and Claim support remain unreviewed."
+            ],
+            "page_owner": "雨果跨境"
+          },
+          "confidence": "low",
+          "id": "SCL-MYYSHOP-GOOGLE-AI-MANUAL-CIFNEWS-20260826",
+          "party_relation": "unknown",
+          "path": "cycles/m5/classifications/scl-myyshop-google-ai-manual-cifnews-20260826.md",
+          "primary_source_type": "unknown",
+          "review_required": true,
+          "reviewer": {
+            "identifier": "m5-manual-share-v1",
+            "kind": "geo_expert"
+          },
+          "secondary_source_types": [],
+          "status": "candidate",
+          "subject_workspace": "myyshop"
+        },
+        "id": "CIT-MYYSHOP-GOOGLE-AI-MANUAL-CIFNEWS-20260826",
+        "occurrence_index": 8,
+        "path": "cycles/m5/citations/cit-myyshop-google-ai-manual-cifnews-20260826.md",
+        "position": {
+          "kind": "ui_order",
+          "order": 8
+        },
+        "source": {
+          "id": "SRC-MYYSHOP-GOOGLE-AI-CIFNEWS-001",
+          "identity": {
+            "citation_domain": "m.cifnews.com",
+            "host_platform": "other",
+            "key": "page:https://m.cifnews.com/tag/myyshop",
+            "level": "page",
+            "publisher_name": "雨果跨境"
+          },
+          "locator": "https://m.cifnews.com/tag/myyshop",
+          "name": "雨果跨境 MyyShop source",
+          "path": "evidence/sources/src-myyshop-google-ai-cifnews-001.md"
+        },
+        "url_raw": "https://m.cifnews.com/tag/myyshop"
+      },
+      {
+        "anchor_or_context": "Google AI shared result listed 新浪财经 as a source.",
+        "classification": {
+          "basis": {
+            "content_form": "news",
+            "evidence": [
+              "Google AI shared result exposed this Citation; publisher identity and Claim support remain unreviewed."
+            ],
+            "page_owner": "新浪财经"
+          },
+          "confidence": "low",
+          "id": "SCL-MYYSHOP-GOOGLE-AI-MANUAL-SINA-20260826",
+          "party_relation": "unknown",
+          "path": "cycles/m5/classifications/scl-myyshop-google-ai-manual-sina-20260826.md",
+          "primary_source_type": "unknown",
+          "review_required": true,
+          "reviewer": {
+            "identifier": "m5-manual-share-v1",
+            "kind": "geo_expert"
+          },
+          "secondary_source_types": [],
+          "status": "candidate",
+          "subject_workspace": "myyshop"
+        },
+        "id": "CIT-MYYSHOP-GOOGLE-AI-MANUAL-SINA-20260826",
+        "occurrence_index": 9,
+        "path": "cycles/m5/citations/cit-myyshop-google-ai-manual-sina-20260826.md",
+        "position": {
+          "kind": "ui_order",
+          "order": 9
+        },
+        "source": {
+          "id": "SRC-MYYSHOP-GOOGLE-AI-SINA-001",
+          "identity": {
+            "citation_domain": "finance.sina.com.cn",
+            "host_platform": "other",
+            "key": "page:https://finance.sina.com.cn/chanjing/gsnews/2020-09-21/doc-iivhuipp5613308.shtml",
+            "level": "page",
+            "publisher_name": "新浪财经"
+          },
+          "locator": "https://finance.sina.com.cn/chanjing/gsnews/2020-09-21/doc-iivhuipp5613308.shtml",
+          "name": "新浪财经 MyyShop source",
+          "path": "evidence/sources/src-myyshop-google-ai-sina-001.md"
+        },
+        "url_raw": "https://finance.sina.com.cn/chanjing/gsnews/2020-09-21/doc-iivhuipp5613308.shtml"
+      }
+    ],
+    "id": "SMP-MYYSHOP-GOOGLE-AI-MANUAL-SMOKE-20260826",
+    "log_output_path": "raw/slot-1/collector-log.json",
+    "ordinal": 1,
+    "outcome": "success",
+    "path": "cycles/m5/samples/smp-myyshop-google-ai-manual-smoke-20260826.md",
+    "shared_result_url": "https://share.google/aimode/xhW9tZs6RcGtrFvKU",
+    "temporary_chat": false
+  },
+  "schema_version": "m5-manual-sample-plan-v1"
+}

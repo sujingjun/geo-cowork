@@ -4,7 +4,10 @@ import { readFile, rm } from 'node:fs/promises';
 import path from 'node:path';
 
 import { ingestManualSample } from '../plugins/geo-expert/scripts/lib/answer-manual.mjs';
-import { validateAnswerWorkspace } from '../plugins/geo-expert/scripts/lib/answer-profile.mjs';
+import {
+  collectorProfileFingerprint,
+  validateAnswerWorkspace,
+} from '../plugins/geo-expert/scripts/lib/answer-profile.mjs';
 import { readMarkdownObject } from '../plugins/geo-expert/scripts/lib/object-contract.mjs';
 import { collectorProfile, m5ReadyWorkspace } from './helpers/m5-fixtures.mjs';
 
@@ -12,7 +15,7 @@ function manualPlan() {
   const profile = collectorProfile({
     id: 'CPF-TEST-MANUAL-001',
     title: 'Synthetic manual profile',
-    product_entry: 'https://consumer.example.invalid/manual',
+    product_entry: 'https://chatgpt.com/?temporary-chat=true',
     login_state: 'logged_in',
     web_search_state: 'unknown',
     model_mode: 'unknown',
@@ -162,5 +165,27 @@ test('manual import 同字节重试幂等，不同字节冲突且旧 raw 不变'
     await readFile(path.join(root, `runs/${plan.run.id}/${plan.sample.answer_output_path}`), 'utf8'),
     answer,
   );
+  await rm(root, { recursive: true });
+});
+
+test('manual materializer 拒绝 Perplexity 页面采集但允许用户导出文件', async () => {
+  const root = await m5ReadyWorkspace();
+  const plan = manualPlan();
+  plan.profile.data.platform = 'perplexity';
+  plan.profile.data.product_entry = 'https://www.perplexity.ai/';
+  plan.profile.data.profile_fingerprint = collectorProfileFingerprint(plan.profile.data);
+  await assert.rejects(
+    ingestManualSample({ workspace: root, plan, answerText: 'Synthetic answer.\n' }),
+    (error) => error.code === 'PLATFORM_MANUAL_COLLECTION_BLOCKED',
+  );
+  await assert.rejects(readFile(path.join(root, `runs/${plan.run.id}/run.md`)));
+
+  plan.manual_source = {
+    kind: 'user_supplied_export',
+    filename: 'perplexity-export.md',
+    sha256: 'a'.repeat(64),
+  };
+  const result = await ingestManualSample({ workspace: root, plan, answerText: 'Synthetic export.\n' });
+  assert.equal(result.sample_ref, plan.sample.id);
   await rm(root, { recursive: true });
 });

@@ -11,6 +11,28 @@
       "status": "formal",
       "updated_at": "2026-08-23T22:46:23.000Z",
       "version": "1.0.1"
+    },
+    {
+      "id": "Q-MYYSHOP-WHAT-IS-EN-001",
+      "path": "queries/formal/q-myyshop-what-is-en-001.md",
+      "refs": [
+        "GOAL-MYYSHOP-DEFINITION-001",
+        "SRC-MYYSHOP-FINAL-PRODUCT-PLAN-001"
+      ],
+      "status": "formal",
+      "updated_at": "2026-08-26T14:03:13+08:00",
+      "version": "1.0.0"
+    },
+    {
+      "id": "Q-MYYSHOP-WHAT-MYYSHOP-IS-001",
+      "path": "queries/formal/q-myyshop-what-myyshop-is-001.md",
+      "refs": [
+        "GOAL-MYYSHOP-DEFINITION-001",
+        "SRC-MYYSHOP-FINAL-PRODUCT-PLAN-001"
+      ],
+      "status": "formal",
+      "updated_at": "2026-08-26T14:49:12+08:00",
+      "version": "1.0.0"
     }
   ],
   "record_type": "query",

@@ -1,0 +1,308 @@
+{
+  "authorization_ref": "workspace://cycles/preparation/decisions/2026-08-25-m5-playwright-and-consumer-platform-authorized.md",
+  "collector_contract": {
+    "collector_version": "manual-owner-share-v1",
+    "schema_version": "1.0.0",
+    "tool_policy_version": "m5-manual-privacy-v1"
+  },
+  "goal_refs": [
+    "GOAL-MYYSHOP-DEFINITION-001"
+  ],
+  "input_versions": {
+    "CLM-MYYSHOP-AUDIENCE-001": "1.0.1",
+    "CLM-MYYSHOP-LIFECYCLE-SERVICE-001": "1.0.1",
+    "CPF-MYYSHOP-CLAUDE-MANUAL-SMOKE-20260826": "1.0.0",
+    "GOAL-MYYSHOP-DEFINITION-001": "1.0.1",
+    "KR-MYYSHOP-DEFINITION-001": "1.0.1",
+    "Q-MYYSHOP-WHAT-IS-001": "1.0.1",
+    "QS-MYYSHOP-DEFINITION-001": "1.0.1"
+  },
+  "knowledge_release_versions": [
+    {
+      "ref": "KR-MYYSHOP-DEFINITION-001",
+      "version": "1.0.1"
+    }
+  ],
+  "profile": {
+    "data": {
+      "approval": {
+        "approved_at": "2026-08-26T13:41:14+08:00",
+        "approved_by": "MyyShop Owner",
+        "decision_ref": "workspace://cycles/preparation/decisions/2026-08-25-m5-playwright-and-consumer-platform-authorized.md"
+      },
+      "collection_method": "manual",
+      "conversation_state": "new",
+      "created_at": "2026-08-26T13:41:14+08:00",
+      "device": {
+        "browser": "Chrome",
+        "class": "desktop",
+        "os": "macOS",
+        "viewport": "unknown"
+      },
+      "id": "CPF-MYYSHOP-CLAUDE-MANUAL-SMOKE-20260826",
+      "language": "zh-CN",
+      "login_state": "logged_in",
+      "model_mode": "unknown",
+      "platform": "claude",
+      "product_entry": "https://claude.ai/new",
+      "profile_fingerprint": "b7ca389d9ae38ee96650c9259277fbdd12e65cb3b94b98542120af3e6cd2c337",
+      "query_template_version": "1.0.0",
+      "record_type": "collector_profile",
+      "region": "CN",
+      "sampling_count": 3,
+      "status": "frozen",
+      "time_window": {
+        "ends_at": "2026-08-27T00:00:00+08:00",
+        "id": "TW-MYYSHOP-CLAUDE-SMOKE-20260826",
+        "starts_at": "2026-08-26T00:00:00+08:00"
+      },
+      "title": "MyyShop Claude manual share Smoke profile",
+      "updated_at": "2026-08-26T13:41:14+08:00",
+      "version": "1.0.0",
+      "web_search_state": "on"
+    },
+    "path": "cycles/m5/profiles/cpf-myyshop-claude-manual-smoke-20260826.md"
+  },
+  "purpose": "exploratory",
+  "query_set_versions": [
+    {
+      "ref": "QS-MYYSHOP-DEFINITION-001",
+      "version": "1.0.1"
+    }
+  ],
+  "query_version": {
+    "ref": "Q-MYYSHOP-WHAT-IS-001",
+    "version": "1.0.1"
+  },
+  "run": {
+    "id": "RUN-MYYSHOP-M5-CLAUDE-MANUAL-SMOKE-20260826"
+  },
+  "sample": {
+    "answer_output_path": "raw/slot-1/answer.md",
+    "captured_at": "2026-08-26T13:41:14+08:00",
+    "citations": [
+      {
+        "anchor_or_context": "Claude cited Cifnews for the platform positioning statement.",
+        "classification": {
+          "basis": {
+            "content_form": "news",
+            "evidence": [
+              "Claude shared result exposed this Citation; publisher identity and Claim support remain unreviewed."
+            ],
+            "page_owner": "雨果跨境"
+          },
+          "confidence": "low",
+          "id": "SCL-MYYSHOP-CLAUDE-MANUAL-CIFNEWS-1-20260826",
+          "party_relation": "unknown",
+          "path": "cycles/m5/classifications/scl-myyshop-claude-manual-cifnews-1-20260826.md",
+          "primary_source_type": "unknown",
+          "review_required": true,
+          "reviewer": {
+            "identifier": "m5-manual-share-v1",
+            "kind": "geo_expert"
+          },
+          "secondary_source_types": [],
+          "status": "candidate",
+          "subject_workspace": "myyshop"
+        },
+        "id": "CIT-MYYSHOP-CLAUDE-MANUAL-CIFNEWS-1-20260826",
+        "occurrence_index": 1,
+        "path": "cycles/m5/citations/cit-myyshop-claude-manual-cifnews-1-20260826.md",
+        "position": {
+          "kind": "ui_order",
+          "order": 1
+        },
+        "source": {
+          "id": "SRC-MYYSHOP-CLAUDE-CIFNEWS-ARTICLE-001",
+          "identity": {
+            "citation_domain": "cifnews.com",
+            "host_platform": "other",
+            "key": "page:https://www.cifnews.com/article/89319",
+            "level": "page",
+            "publisher_name": "雨果跨境"
+          },
+          "locator": "https://www.cifnews.com/article/89319",
+          "name": "雨果跨境 MyyShop article source",
+          "path": "evidence/sources/src-myyshop-claude-cifnews-article-001.md"
+        },
+        "url_raw": "https://www.cifnews.com/article/89319"
+      },
+      {
+        "anchor_or_context": "Claude cited Cifnews for the smart product-selection statement.",
+        "classification": {
+          "basis": {
+            "content_form": "news",
+            "evidence": [
+              "Claude shared result exposed this Citation; publisher identity and Claim support remain unreviewed."
+            ],
+            "page_owner": "雨果跨境"
+          },
+          "confidence": "low",
+          "id": "SCL-MYYSHOP-CLAUDE-MANUAL-CIFNEWS-2-20260826",
+          "party_relation": "unknown",
+          "path": "cycles/m5/classifications/scl-myyshop-claude-manual-cifnews-2-20260826.md",
+          "primary_source_type": "unknown",
+          "review_required": true,
+          "reviewer": {
+            "identifier": "m5-manual-share-v1",
+            "kind": "geo_expert"
+          },
+          "secondary_source_types": [],
+          "status": "candidate",
+          "subject_workspace": "myyshop"
+        },
+        "existing_source_ref": "SRC-MYYSHOP-CLAUDE-CIFNEWS-ARTICLE-001",
+        "id": "CIT-MYYSHOP-CLAUDE-MANUAL-CIFNEWS-2-20260826",
+        "occurrence_index": 2,
+        "path": "cycles/m5/citations/cit-myyshop-claude-manual-cifnews-2-20260826.md",
+        "position": {
+          "kind": "ui_order",
+          "order": 2
+        },
+        "url_raw": "https://www.cifnews.com/article/89319"
+      },
+      {
+        "anchor_or_context": "Claude cited Cifnews for the dropshipping and overseas-warehouse statement.",
+        "classification": {
+          "basis": {
+            "content_form": "news",
+            "evidence": [
+              "Claude shared result exposed this Citation; publisher identity and Claim support remain unreviewed."
+            ],
+            "page_owner": "雨果跨境"
+          },
+          "confidence": "low",
+          "id": "SCL-MYYSHOP-CLAUDE-MANUAL-CIFNEWS-3-20260826",
+          "party_relation": "unknown",
+          "path": "cycles/m5/classifications/scl-myyshop-claude-manual-cifnews-3-20260826.md",
+          "primary_source_type": "unknown",
+          "review_required": true,
+          "reviewer": {
+            "identifier": "m5-manual-share-v1",
+            "kind": "geo_expert"
+          },
+          "secondary_source_types": [],
+          "status": "candidate",
+          "subject_workspace": "myyshop"
+        },
+        "existing_source_ref": "SRC-MYYSHOP-CLAUDE-CIFNEWS-ARTICLE-001",
+        "id": "CIT-MYYSHOP-CLAUDE-MANUAL-CIFNEWS-3-20260826",
+        "occurrence_index": 3,
+        "path": "cycles/m5/citations/cit-myyshop-claude-manual-cifnews-3-20260826.md",
+        "position": {
+          "kind": "ui_order",
+          "order": 3
+        },
+        "url_raw": "https://www.cifnews.com/article/89319"
+      },
+      {
+        "anchor_or_context": "Claude cited Cifnews for the selected supply-chain statement.",
+        "classification": {
+          "basis": {
+            "content_form": "news",
+            "evidence": [
+              "Claude shared result exposed this Citation; publisher identity and Claim support remain unreviewed."
+            ],
+            "page_owner": "雨果跨境"
+          },
+          "confidence": "low",
+          "id": "SCL-MYYSHOP-CLAUDE-MANUAL-CIFNEWS-4-20260826",
+          "party_relation": "unknown",
+          "path": "cycles/m5/classifications/scl-myyshop-claude-manual-cifnews-4-20260826.md",
+          "primary_source_type": "unknown",
+          "review_required": true,
+          "reviewer": {
+            "identifier": "m5-manual-share-v1",
+            "kind": "geo_expert"
+          },
+          "secondary_source_types": [],
+          "status": "candidate",
+          "subject_workspace": "myyshop"
+        },
+        "existing_source_ref": "SRC-MYYSHOP-CLAUDE-CIFNEWS-ARTICLE-001",
+        "id": "CIT-MYYSHOP-CLAUDE-MANUAL-CIFNEWS-4-20260826",
+        "occurrence_index": 4,
+        "path": "cycles/m5/citations/cit-myyshop-claude-manual-cifnews-4-20260826.md",
+        "position": {
+          "kind": "ui_order",
+          "order": 4
+        },
+        "url_raw": "https://www.cifnews.com/article/89319"
+      },
+      {
+        "anchor_or_context": "Claude cited Cifnews for the after-sales guarantee statement.",
+        "classification": {
+          "basis": {
+            "content_form": "news",
+            "evidence": [
+              "Claude shared result exposed this Citation; publisher identity and Claim support remain unreviewed."
+            ],
+            "page_owner": "雨果跨境"
+          },
+          "confidence": "low",
+          "id": "SCL-MYYSHOP-CLAUDE-MANUAL-CIFNEWS-5-20260826",
+          "party_relation": "unknown",
+          "path": "cycles/m5/classifications/scl-myyshop-claude-manual-cifnews-5-20260826.md",
+          "primary_source_type": "unknown",
+          "review_required": true,
+          "reviewer": {
+            "identifier": "m5-manual-share-v1",
+            "kind": "geo_expert"
+          },
+          "secondary_source_types": [],
+          "status": "candidate",
+          "subject_workspace": "myyshop"
+        },
+        "existing_source_ref": "SRC-MYYSHOP-CLAUDE-CIFNEWS-ARTICLE-001",
+        "id": "CIT-MYYSHOP-CLAUDE-MANUAL-CIFNEWS-5-20260826",
+        "occurrence_index": 5,
+        "path": "cycles/m5/citations/cit-myyshop-claude-manual-cifnews-5-20260826.md",
+        "position": {
+          "kind": "ui_order",
+          "order": 5
+        },
+        "url_raw": "https://www.cifnews.com/article/89319"
+      },
+      {
+        "anchor_or_context": "Claude cited Baidu Baike for the founder, executive and operating-mechanism statement.",
+        "classification": {
+          "basis": {
+            "content_form": "editorial",
+            "evidence": [
+              "Claude shared result exposed this Citation; publisher identity and Claim support remain unreviewed."
+            ],
+            "page_owner": "百度百科"
+          },
+          "confidence": "low",
+          "id": "SCL-MYYSHOP-CLAUDE-MANUAL-BAIDU-BAIKE-20260826",
+          "party_relation": "unknown",
+          "path": "cycles/m5/classifications/scl-myyshop-claude-manual-baidu-baike-20260826.md",
+          "primary_source_type": "unknown",
+          "review_required": true,
+          "reviewer": {
+            "identifier": "m5-manual-share-v1",
+            "kind": "geo_expert"
+          },
+          "secondary_source_types": [],
+          "status": "candidate",
+          "subject_workspace": "myyshop"
+        },
+        "existing_source_ref": "SRC-MYYSHOP-GOOGLE-AI-BAIDU-BAIKE-001",
+        "id": "CIT-MYYSHOP-CLAUDE-MANUAL-BAIDU-BAIKE-20260826",
+        "occurrence_index": 6,
+        "path": "cycles/m5/citations/cit-myyshop-claude-manual-baidu-baike-20260826.md",
+        "position": {
+          "kind": "ui_order",
+          "order": 6
+        },
+        "url_raw": "https://baike.baidu.com/item/MyyShop/61465570"
+      }
+    ],
+    "id": "SMP-MYYSHOP-CLAUDE-MANUAL-SMOKE-20260826",
+    "log_output_path": "raw/slot-1/collector-log.json",
+    "ordinal": 1,
+    "outcome": "success",
+    "path": "cycles/m5/samples/smp-myyshop-claude-manual-smoke-20260826.md"
+  },
+  "schema_version": "m5-manual-sample-plan-v1"
+}

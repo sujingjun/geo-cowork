@@ -62,3 +62,22 @@ export function assertPlatformAutomationAllowed(adapter) {
   }
   return adapter;
 }
+
+export function assertPlatformManualAllowed(adapter, { manualSourceKind } = {}) {
+  validateAdapter(adapter);
+  const exportOnly = adapter.manual_fallback.mode === 'user_supplied_export_only';
+  if (!adapter.manual_fallback.allowed
+      || (exportOnly && manualSourceKind !== 'user_supplied_export')) {
+    throw new PlatformAdapterError(
+      'PLATFORM_MANUAL_COLLECTION_BLOCKED',
+      '平台 manual collection 未获允许',
+      {
+        platform: adapter.platform,
+        policy_url: adapter.automation.policy_url,
+        manual_mode: adapter.manual_fallback.mode ?? 'owner_manual',
+        requirements: adapter.manual_fallback.requirements,
+      },
+    );
+  }
+  return adapter;
+}

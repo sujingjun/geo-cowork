@@ -9,11 +9,43 @@
       "version": "1.0.0"
     },
     {
+      "id": "CPF-MYYSHOP-CLAUDE-MANUAL-SMOKE-20260826",
+      "path": "cycles/m5/profiles/cpf-myyshop-claude-manual-smoke-20260826.md",
+      "refs": [],
+      "status": "frozen",
+      "updated_at": "2026-08-26T13:41:14+08:00",
+      "version": "1.0.0"
+    },
+    {
+      "id": "CPF-MYYSHOP-CLAUDE-US-MANUAL-SMOKE-20260826",
+      "path": "cycles/m5/profiles/cpf-myyshop-claude-us-manual-smoke-20260826.md",
+      "refs": [],
+      "status": "frozen",
+      "updated_at": "2026-08-26T14:03:13+08:00",
+      "version": "1.0.0"
+    },
+    {
       "id": "CPF-MYYSHOP-GEMINI-MANUAL-SMOKE-20260825",
       "path": "cycles/m5/profiles/cpf-myyshop-gemini-manual-smoke-20260825.md",
       "refs": [],
       "status": "frozen",
       "updated_at": "2026-08-25T18:07:44+08:00",
+      "version": "1.0.0"
+    },
+    {
+      "id": "CPF-MYYSHOP-GOOGLE-AI-MANUAL-SMOKE-20260826",
+      "path": "cycles/m5/profiles/cpf-myyshop-google-ai-manual-smoke-20260826.md",
+      "refs": [],
+      "status": "frozen",
+      "updated_at": "2026-08-26T12:46:42+08:00",
+      "version": "1.0.0"
+    },
+    {
+      "id": "CPF-MYYSHOP-PERPLEXITY-USER-EXPORT-20260826",
+      "path": "cycles/m5/profiles/cpf-myyshop-perplexity-user-export-20260826.md",
+      "refs": [],
+      "status": "frozen",
+      "updated_at": "2026-08-26T14:22:01+08:00",
       "version": "1.0.0"
     }
   ],

@@ -14,6 +14,7 @@ source:
   - "2026-08-25 当前用户指令：Playwright 使用最新版并全局安装；五个平台统一授权 Owner Google 登录身份，按真实用户隐私，本地 artifact 保留 1 年"
   - "2026-08-25 当前用户指令：后续平台转为平台书面自动采集"
   - "2026-08-25 当前用户指令：去除 Adapter written_permission_ref 限制；平台许可改为全部里程碑完成后的上线前待办"
+  - "2026-08-26 当前用户指令：继续 Owner 手工操作/复制的 manual exploratory 采样；开发阶段先跑通对应真实 UI adapter"
 scope: M5 Collector Profile、Playwright/真实采集、Answer Sample、持续 Source registry、Citation/Review、聚合、恢复与授权门
 ---
 
@@ -547,4 +548,4 @@ COMPARABILITY_PARTIAL
 
 ## 17. 非目标与当前授权
 
-本 Spec 完整设计 Playwright base、逐平台真实 collector 与持续信源维护。Owner 已授权 T02—T08，并授权五个平台使用 Owner-controlled Google 登录身份、真实用户隐私最小化与本地 365 天保留；该账号授权不能覆盖平台 Terms、robots、challenge 或安全控制。ChatGPT/Gemini 已各完成 1 个 manual exploratory Smoke。Adapter 不再保存或强制 `written_permission_ref`；平台许可只进入 Requirements 需求池，`planning_state:待规划`，是否开启后续规范仅由 Owner 决定。当前真实自动采集仍由各 adapter 的 `terms_blocked/manual_only` 状态控制。不授权 M4 业务对象补写、GA4/GSC、外部写入、commit、push、PR、发布、部署或 Git 远端动作。外部榜单、API 样本和探索性回答均不能创建持续 Source 候选或替代正式消费者 UI 数据。
+本 Spec 完整设计 Playwright base、逐平台真实 collector 与持续信源维护。Owner 已授权 T02—T08，并授权五个平台使用 Owner-controlled Google 登录身份、真实用户隐私最小化与本地 365 天保留；该账号授权不能覆盖平台 Terms、robots、challenge 或安全控制。ChatGPT、Gemini、Google AI 已各完成 1 个 manual exploratory Smoke；Claude 完成 CN 中文 Query 与 US 英文 Query 各 1 个成功 Sample，只记录采集基线差异，不作 IP 对比；Perplexity 通过 Owner 提供的导出 Markdown 完成 1 个 `user_supplied_export/manual` Sample。开发阶段允许前四个平台通过 Owner 手工 UI 操作/共享 + manual materializer 跑通真实 UI adapter；Perplexity 只允许冻结文件名/SHA 的本地导出工件，页面 manual 与自动化继续 blocked。Adapter 不再保存或强制 `written_permission_ref`；平台许可只进入 Requirements 需求池，`planning_state:待规划`。自动采集仍由 `terms_blocked/manual_only` 控制。不授权 M4 业务对象补写、GA4/GSC、外部写入、commit、push、PR、发布、部署或 Git 远端动作。manual exploratory Sample 不能替代正式消费者 UI Baseline。

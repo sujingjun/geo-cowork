@@ -1,0 +1,303 @@
+{
+  "authorization_ref": "workspace://cycles/preparation/decisions/2026-08-26-m5-perplexity-user-export-authorized.md",
+  "collector_contract": {
+    "collector_version": "manual-user-export-v1",
+    "schema_version": "1.0.0",
+    "tool_policy_version": "m5-manual-privacy-v1"
+  },
+  "goal_refs": [
+    "GOAL-MYYSHOP-DEFINITION-001"
+  ],
+  "input_versions": {
+    "CLM-MYYSHOP-AUDIENCE-001": "1.0.1",
+    "CLM-MYYSHOP-LIFECYCLE-SERVICE-001": "1.0.1",
+    "CPF-MYYSHOP-PERPLEXITY-USER-EXPORT-20260826": "1.0.0",
+    "GOAL-MYYSHOP-DEFINITION-001": "1.0.1",
+    "KR-MYYSHOP-DEFINITION-001": "1.0.1",
+    "Q-MYYSHOP-WHAT-MYYSHOP-IS-001": "1.0.0",
+    "QS-MYYSHOP-PERPLEXITY-EXPORT-EN-001": "1.0.0"
+  },
+  "knowledge_release_versions": [
+    {
+      "ref": "KR-MYYSHOP-DEFINITION-001",
+      "version": "1.0.1"
+    }
+  ],
+  "manual_source": {
+    "filename": "What MyyShop is.md",
+    "kind": "user_supplied_export",
+    "sha256": "858cd949217e1704ebf4662f8a9de281ee3c8e48d34d3deceaaa4bb35ee051f2"
+  },
+  "profile": {
+    "data": {
+      "approval": {
+        "approved_at": "2026-08-26T14:49:12+08:00",
+        "approved_by": "MyyShop Owner",
+        "decision_ref": "workspace://cycles/preparation/decisions/2026-08-26-m5-perplexity-user-export-authorized.md"
+      },
+      "collection_method": "manual",
+      "conversation_state": "unknown",
+      "created_at": "2026-08-26T14:22:01+08:00",
+      "device": {
+        "browser": "unknown",
+        "class": "desktop",
+        "os": "macOS",
+        "viewport": "unknown"
+      },
+      "id": "CPF-MYYSHOP-PERPLEXITY-USER-EXPORT-20260826",
+      "language": "en-US",
+      "login_state": "unknown",
+      "model_mode": "unknown",
+      "platform": "perplexity",
+      "product_entry": "https://www.perplexity.ai/",
+      "profile_fingerprint": "eabb373599a17ec5c117ff63f68617b457ef842b5f1fb2a7496739d480904fe8",
+      "query_template_version": "1.0.0",
+      "record_type": "collector_profile",
+      "region": "unknown",
+      "sampling_count": 3,
+      "status": "frozen",
+      "time_window": {
+        "ends_at": "2026-08-27T00:00:00+08:00",
+        "id": "TW-MYYSHOP-PERPLEXITY-EXPORT-20260826",
+        "starts_at": "2026-08-26T00:00:00+08:00"
+      },
+      "title": "MyyShop Perplexity user export profile",
+      "updated_at": "2026-08-26T14:22:01+08:00",
+      "version": "1.0.0",
+      "web_search_state": "on"
+    },
+    "path": "cycles/m5/profiles/cpf-myyshop-perplexity-user-export-20260826.md"
+  },
+  "purpose": "exploratory",
+  "query_set_versions": [
+    {
+      "ref": "QS-MYYSHOP-PERPLEXITY-EXPORT-EN-001",
+      "version": "1.0.0"
+    }
+  ],
+  "query_version": {
+    "ref": "Q-MYYSHOP-WHAT-MYYSHOP-IS-001",
+    "version": "1.0.0"
+  },
+  "run": {
+    "id": "RUN-MYYSHOP-M5-PERPLEXITY-USER-EXPORT-20260826"
+  },
+  "sample": {
+    "answer_output_path": "raw/slot-1/answer.md",
+    "captured_at": "2026-08-26T14:22:01+08:00",
+    "citations": [
+      {
+        "anchor_or_context": "Perplexity export cited the MyyShop homepage for the creator-marketing definition.",
+        "classification": {
+          "basis": {
+            "content_form": "official",
+            "evidence": [
+              "User-supplied Perplexity export exposed this Citation; publisher identity and Claim support remain unreviewed."
+            ],
+            "page_owner": "MyyShop"
+          },
+          "confidence": "low",
+          "id": "SCL-MYYSHOP-PERPLEXITY-EXPORT-HOME-20260826",
+          "party_relation": "unknown",
+          "path": "cycles/m5/classifications/scl-myyshop-perplexity-export-home-20260826.md",
+          "primary_source_type": "unknown",
+          "review_required": true,
+          "reviewer": {
+            "identifier": "m5-user-export-v1",
+            "kind": "geo_expert"
+          },
+          "secondary_source_types": [],
+          "status": "candidate",
+          "subject_workspace": "myyshop"
+        },
+        "existing_source_ref": "SRC-MYYSHOP-WEB-HOMEPAGE-001",
+        "id": "CIT-MYYSHOP-PERPLEXITY-EXPORT-HOME-20260826",
+        "occurrence_index": 1,
+        "path": "cycles/m5/citations/cit-myyshop-perplexity-export-home-20260826.md",
+        "position": {
+          "kind": "ui_order",
+          "order": 1
+        },
+        "url_raw": "https://www.myyshop.com/"
+      },
+      {
+        "anchor_or_context": "Perplexity export cited a WordPress review for creator opportunity types.",
+        "classification": {
+          "basis": {
+            "content_form": "review",
+            "evidence": [
+              "User-supplied Perplexity export exposed this Citation; publisher identity and Claim support remain unreviewed."
+            ],
+            "page_owner": "Stuff to Talk"
+          },
+          "confidence": "low",
+          "id": "SCL-MYYSHOP-PERPLEXITY-EXPORT-WORDPRESS-20260826",
+          "party_relation": "unknown",
+          "path": "cycles/m5/classifications/scl-myyshop-perplexity-export-wordpress-20260826.md",
+          "primary_source_type": "unknown",
+          "review_required": true,
+          "reviewer": {
+            "identifier": "m5-user-export-v1",
+            "kind": "geo_expert"
+          },
+          "secondary_source_types": [],
+          "status": "candidate",
+          "subject_workspace": "myyshop"
+        },
+        "id": "CIT-MYYSHOP-PERPLEXITY-EXPORT-WORDPRESS-20260826",
+        "occurrence_index": 2,
+        "path": "cycles/m5/citations/cit-myyshop-perplexity-export-wordpress-20260826.md",
+        "position": {
+          "kind": "ui_order",
+          "order": 2
+        },
+        "source": {
+          "id": "SRC-MYYSHOP-PERPLEXITY-WORDPRESS-001",
+          "identity": {
+            "citation_domain": "stufftotalk.wordpress.com",
+            "host_platform": "other",
+            "key": "page:https://stufftotalk.wordpress.com/2025/11/30/everything-you-need-to-know-about-myyshop-review/",
+            "level": "page",
+            "publisher_name": "Stuff to Talk"
+          },
+          "locator": "https://stufftotalk.wordpress.com/2025/11/30/everything-you-need-to-know-about-myyshop-review/",
+          "name": "WordPress MyyShop review source",
+          "path": "evidence/sources/src-myyshop-perplexity-wordpress-001.md"
+        },
+        "url_raw": "https://stufftotalk.wordpress.com/2025/11/30/everything-you-need-to-know-about-myyshop-review/"
+      },
+      {
+        "anchor_or_context": "Perplexity export cited the US App Store listing.",
+        "classification": {
+          "basis": {
+            "content_form": "other",
+            "evidence": [
+              "User-supplied Perplexity export exposed this Citation; publisher identity and Claim support remain unreviewed."
+            ],
+            "page_owner": "Apple App Store"
+          },
+          "confidence": "low",
+          "id": "SCL-MYYSHOP-PERPLEXITY-EXPORT-APP-STORE-20260826",
+          "party_relation": "unknown",
+          "path": "cycles/m5/classifications/scl-myyshop-perplexity-export-app-store-20260826.md",
+          "primary_source_type": "unknown",
+          "review_required": true,
+          "reviewer": {
+            "identifier": "m5-user-export-v1",
+            "kind": "geo_expert"
+          },
+          "secondary_source_types": [],
+          "status": "candidate",
+          "subject_workspace": "myyshop"
+        },
+        "existing_source_ref": "SRC-MYYSHOP-CLAUDE-US-APP-STORE-001",
+        "id": "CIT-MYYSHOP-PERPLEXITY-EXPORT-APP-STORE-20260826",
+        "occurrence_index": 3,
+        "path": "cycles/m5/citations/cit-myyshop-perplexity-export-app-store-20260826.md",
+        "position": {
+          "kind": "ui_order",
+          "order": 3
+        },
+        "url_raw": "https://apps.apple.com/us/app/myyshop/id6449818392"
+      },
+      {
+        "anchor_or_context": "Perplexity export included a hidden Reddit Citation.",
+        "classification": {
+          "basis": {
+            "content_form": "community_post",
+            "evidence": [
+              "User-supplied Perplexity export exposed this Citation; publisher identity and Claim support remain unreviewed."
+            ],
+            "page_owner": "Reddit UGCcreators community"
+          },
+          "confidence": "low",
+          "id": "SCL-MYYSHOP-PERPLEXITY-EXPORT-REDDIT-20260826",
+          "party_relation": "unknown",
+          "path": "cycles/m5/classifications/scl-myyshop-perplexity-export-reddit-20260826.md",
+          "primary_source_type": "unknown",
+          "review_required": true,
+          "reviewer": {
+            "identifier": "m5-user-export-v1",
+            "kind": "geo_expert"
+          },
+          "secondary_source_types": [],
+          "status": "candidate",
+          "subject_workspace": "myyshop"
+        },
+        "id": "CIT-MYYSHOP-PERPLEXITY-EXPORT-REDDIT-20260826",
+        "occurrence_index": 4,
+        "path": "cycles/m5/citations/cit-myyshop-perplexity-export-reddit-20260826.md",
+        "position": {
+          "kind": "ui_order",
+          "order": 4
+        },
+        "source": {
+          "id": "SRC-MYYSHOP-PERPLEXITY-REDDIT-001",
+          "identity": {
+            "citation_domain": "reddit.com",
+            "host_platform": "other",
+            "key": "page:https://www.reddit.com/r/UGCcreators/comments/1ql5hi1/myyshop_is_it_legit/",
+            "level": "page",
+            "publisher_name": "Reddit UGCcreators community"
+          },
+          "locator": "https://www.reddit.com/r/UGCcreators/comments/1ql5hi1/myyshop_is_it_legit/",
+          "name": "Reddit MyyShop discussion source",
+          "path": "evidence/sources/src-myyshop-perplexity-reddit-001.md"
+        },
+        "url_raw": "https://www.reddit.com/r/UGCcreators/comments/1ql5hi1/myyshop_is_it_legit/"
+      },
+      {
+        "anchor_or_context": "Perplexity export included a hidden MyyShop registration-page Citation.",
+        "classification": {
+          "basis": {
+            "content_form": "official",
+            "evidence": [
+              "User-supplied Perplexity export exposed this Citation; publisher identity and Claim support remain unreviewed."
+            ],
+            "page_owner": "MyyShop"
+          },
+          "confidence": "low",
+          "id": "SCL-MYYSHOP-PERPLEXITY-EXPORT-REGISTER-20260826",
+          "party_relation": "unknown",
+          "path": "cycles/m5/classifications/scl-myyshop-perplexity-export-register-20260826.md",
+          "primary_source_type": "unknown",
+          "review_required": true,
+          "reviewer": {
+            "identifier": "m5-user-export-v1",
+            "kind": "geo_expert"
+          },
+          "secondary_source_types": [],
+          "status": "candidate",
+          "subject_workspace": "myyshop"
+        },
+        "id": "CIT-MYYSHOP-PERPLEXITY-EXPORT-REGISTER-20260826",
+        "occurrence_index": 5,
+        "path": "cycles/m5/citations/cit-myyshop-perplexity-export-register-20260826.md",
+        "position": {
+          "kind": "ui_order",
+          "order": 5
+        },
+        "source": {
+          "id": "SRC-MYYSHOP-PERPLEXITY-REGISTER-001",
+          "identity": {
+            "citation_domain": "myyshop.com",
+            "host_platform": "other",
+            "key": "page:https://www.myyshop.com/register",
+            "level": "page",
+            "publisher_name": "MyyShop"
+          },
+          "locator": "https://www.myyshop.com/register",
+          "name": "MyyShop registration source",
+          "path": "evidence/sources/src-myyshop-perplexity-register-001.md"
+        },
+        "url_raw": "https://www.myyshop.com/register"
+      }
+    ],
+    "id": "SMP-MYYSHOP-PERPLEXITY-USER-EXPORT-20260826",
+    "log_output_path": "raw/slot-1/collector-log.json",
+    "ordinal": 1,
+    "outcome": "success",
+    "path": "cycles/m5/samples/smp-myyshop-perplexity-user-export-20260826.md"
+  },
+  "schema_version": "m5-manual-sample-plan-v1"
+}

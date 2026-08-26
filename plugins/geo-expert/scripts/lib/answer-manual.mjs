@@ -10,6 +10,10 @@ import {
 } from './answer-sample.mjs';
 import { materializeSourceClassification } from './citation-analysis.mjs';
 import {
+  assertPlatformManualAllowed,
+  getPlatformAdapter,
+} from '../collectors/platforms/index.mjs';
+import {
   materializeCitationObservation,
   materializeCitationSourcePair,
 } from './source-registry.mjs';
@@ -37,6 +41,35 @@ function validateManualPlan(plan) {
   const serialized = stableStringify(plan);
   if (/[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}/i.test(serialized)) {
     throw new ManualAnswerError('PRIVACY_SCOPE_VIOLATION', 'manual plan 不得保存账号邮箱');
+  }
+  const adapter = assertPlatformManualAllowed(getPlatformAdapter(plan.profile.data.platform), {
+    manualSourceKind: plan.manual_source?.kind,
+  });
+  if (adapter.manual_fallback.mode === 'user_supplied_export_only'
+      && (!plan.manual_source?.filename
+        || /[\\/]/.test(plan.manual_source.filename)
+        || !/^[a-f0-9]{64}$/.test(plan.manual_source.sha256 ?? ''))) {
+    throw new ManualAnswerError(
+      'PLATFORM_MANUAL_COLLECTION_BLOCKED',
+      '用户导出文件必须冻结安全文件名与 SHA-256',
+    );
+  }
+  let profileUrl;
+  try {
+    profileUrl = new URL(plan.profile.data.product_entry);
+  } catch {
+    throw new ManualAnswerError('PLATFORM_ALLOWLIST_VIOLATION', 'manual Profile product entry 非法');
+  }
+  const allowed = adapter.product_entries.some((entry) => {
+    const allowedUrl = new URL(entry);
+    return allowedUrl.origin === profileUrl.origin && allowedUrl.pathname === profileUrl.pathname;
+  });
+  if (!allowed) {
+    throw new ManualAnswerError(
+      'PLATFORM_ALLOWLIST_VIOLATION',
+      'manual Profile product entry 不在平台注册入口',
+      { platform: adapter.platform, product_entry: plan.profile.data.product_entry },
+    );
   }
   const ids = new Set();
   const positions = new Set();

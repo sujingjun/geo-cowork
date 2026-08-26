@@ -1,0 +1,194 @@
+{
+  "authorization_ref": "workspace://cycles/preparation/decisions/2026-08-26-m5-claude-us-english-query-authorized.md",
+  "collector_contract": {
+    "collector_version": "manual-owner-share-v1",
+    "schema_version": "1.0.0",
+    "tool_policy_version": "m5-manual-privacy-v1"
+  },
+  "goal_refs": [
+    "GOAL-MYYSHOP-DEFINITION-001"
+  ],
+  "input_versions": {
+    "CLM-MYYSHOP-AUDIENCE-001": "1.0.1",
+    "CLM-MYYSHOP-LIFECYCLE-SERVICE-001": "1.0.1",
+    "CPF-MYYSHOP-CLAUDE-US-MANUAL-SMOKE-20260826": "1.0.0",
+    "GOAL-MYYSHOP-DEFINITION-001": "1.0.1",
+    "KR-MYYSHOP-DEFINITION-001": "1.0.1",
+    "Q-MYYSHOP-WHAT-IS-EN-001": "1.0.0",
+    "QS-MYYSHOP-DEFINITION-EN-US-001": "1.0.0"
+  },
+  "knowledge_release_versions": [
+    {
+      "ref": "KR-MYYSHOP-DEFINITION-001",
+      "version": "1.0.1"
+    }
+  ],
+  "profile": {
+    "data": {
+      "approval": {
+        "approved_at": "2026-08-26T14:03:13+08:00",
+        "approved_by": "MyyShop Owner",
+        "decision_ref": "workspace://cycles/preparation/decisions/2026-08-26-m5-claude-us-english-query-authorized.md"
+      },
+      "collection_method": "manual",
+      "conversation_state": "new",
+      "created_at": "2026-08-26T14:03:13+08:00",
+      "device": {
+        "browser": "Chrome",
+        "class": "desktop",
+        "os": "macOS",
+        "viewport": "unknown"
+      },
+      "id": "CPF-MYYSHOP-CLAUDE-US-MANUAL-SMOKE-20260826",
+      "language": "en-US",
+      "login_state": "logged_in",
+      "model_mode": "unknown",
+      "platform": "claude",
+      "product_entry": "https://claude.ai/new",
+      "profile_fingerprint": "db50a6d7086d904e0b03b2b37d7e831b6f137c2223bb71e4ccefe27881e4284c",
+      "query_template_version": "1.0.0",
+      "record_type": "collector_profile",
+      "region": "US",
+      "sampling_count": 3,
+      "status": "frozen",
+      "time_window": {
+        "ends_at": "2026-08-27T00:00:00+08:00",
+        "id": "TW-MYYSHOP-CLAUDE-US-SMOKE-20260826",
+        "starts_at": "2026-08-26T00:00:00+08:00"
+      },
+      "title": "MyyShop Claude US manual share Smoke profile",
+      "updated_at": "2026-08-26T14:03:13+08:00",
+      "version": "1.0.0",
+      "web_search_state": "on"
+    },
+    "path": "cycles/m5/profiles/cpf-myyshop-claude-us-manual-smoke-20260826.md"
+  },
+  "purpose": "exploratory",
+  "query_set_versions": [
+    {
+      "ref": "QS-MYYSHOP-DEFINITION-EN-US-001",
+      "version": "1.0.0"
+    }
+  ],
+  "query_version": {
+    "ref": "Q-MYYSHOP-WHAT-IS-EN-001",
+    "version": "1.0.0"
+  },
+  "run": {
+    "id": "RUN-MYYSHOP-M5-CLAUDE-US-MANUAL-SMOKE-RETRY-20260826"
+  },
+  "sample": {
+    "answer_output_path": "raw/slot-1/answer.md",
+    "captured_at": "2026-08-26T14:03:13+08:00",
+    "citations": [
+      {
+        "anchor_or_context": "Claude US shared result cited MyyShop for the current creator-marketing positioning.",
+        "classification": {
+          "basis": {
+            "content_form": "official",
+            "evidence": [
+              "Claude US shared result exposed this Citation; publisher identity and Claim support remain unreviewed."
+            ],
+            "page_owner": "MyyShop"
+          },
+          "confidence": "low",
+          "id": "SCL-MYYSHOP-CLAUDE-US-MANUAL-HOME-RETRY-20260826",
+          "party_relation": "unknown",
+          "path": "cycles/m5/classifications/scl-myyshop-claude-us-manual-home-retry-20260826.md",
+          "primary_source_type": "unknown",
+          "review_required": true,
+          "reviewer": {
+            "identifier": "m5-manual-share-v1",
+            "kind": "geo_expert"
+          },
+          "secondary_source_types": [],
+          "status": "candidate",
+          "subject_workspace": "myyshop"
+        },
+        "existing_source_ref": "SRC-MYYSHOP-WEB-HOMEPAGE-001",
+        "id": "CIT-MYYSHOP-CLAUDE-US-MANUAL-HOME-RETRY-20260826",
+        "occurrence_index": 1,
+        "path": "cycles/m5/citations/cit-myyshop-claude-us-manual-home-retry-20260826.md",
+        "position": {
+          "kind": "ui_order",
+          "order": 1
+        },
+        "url_raw": "https://www.myyshop.com/"
+      },
+      {
+        "anchor_or_context": "Claude US shared result cited the App Store for creator matching and support.",
+        "classification": {
+          "basis": {
+            "content_form": "other",
+            "evidence": [
+              "Claude US shared result exposed this Citation; publisher identity and Claim support remain unreviewed."
+            ],
+            "page_owner": "Apple App Store"
+          },
+          "confidence": "low",
+          "id": "SCL-MYYSHOP-CLAUDE-US-MANUAL-APP-STORE-1-RETRY-20260826",
+          "party_relation": "unknown",
+          "path": "cycles/m5/classifications/scl-myyshop-claude-us-manual-app-store-1-retry-20260826.md",
+          "primary_source_type": "unknown",
+          "review_required": true,
+          "reviewer": {
+            "identifier": "m5-manual-share-v1",
+            "kind": "geo_expert"
+          },
+          "secondary_source_types": [],
+          "status": "candidate",
+          "subject_workspace": "myyshop"
+        },
+        "existing_source_ref": "SRC-MYYSHOP-CLAUDE-US-APP-STORE-001",
+        "id": "CIT-MYYSHOP-CLAUDE-US-MANUAL-APP-STORE-1-RETRY-20260826",
+        "occurrence_index": 2,
+        "path": "cycles/m5/citations/cit-myyshop-claude-us-manual-app-store-1-retry-20260826.md",
+        "position": {
+          "kind": "ui_order",
+          "order": 2
+        },
+        "url_raw": "https://apps.apple.com/us/app/myyshop/id6449818392"
+      },
+      {
+        "anchor_or_context": "Claude US shared result cited the App Store again for creator eligibility and growth paths.",
+        "classification": {
+          "basis": {
+            "content_form": "other",
+            "evidence": [
+              "Claude US shared result exposed this Citation; publisher identity and Claim support remain unreviewed."
+            ],
+            "page_owner": "Apple App Store"
+          },
+          "confidence": "low",
+          "id": "SCL-MYYSHOP-CLAUDE-US-MANUAL-APP-STORE-2-RETRY-20260826",
+          "party_relation": "unknown",
+          "path": "cycles/m5/classifications/scl-myyshop-claude-us-manual-app-store-2-retry-20260826.md",
+          "primary_source_type": "unknown",
+          "review_required": true,
+          "reviewer": {
+            "identifier": "m5-manual-share-v1",
+            "kind": "geo_expert"
+          },
+          "secondary_source_types": [],
+          "status": "candidate",
+          "subject_workspace": "myyshop"
+        },
+        "existing_source_ref": "SRC-MYYSHOP-CLAUDE-US-APP-STORE-001",
+        "id": "CIT-MYYSHOP-CLAUDE-US-MANUAL-APP-STORE-2-RETRY-20260826",
+        "occurrence_index": 3,
+        "path": "cycles/m5/citations/cit-myyshop-claude-us-manual-app-store-2-retry-20260826.md",
+        "position": {
+          "kind": "ui_order",
+          "order": 3
+        },
+        "url_raw": "https://apps.apple.com/us/app/myyshop/id6449818392"
+      }
+    ],
+    "id": "SMP-MYYSHOP-CLAUDE-US-MANUAL-SMOKE-RETRY-20260826",
+    "log_output_path": "raw/slot-1/collector-log.json",
+    "ordinal": 1,
+    "outcome": "success",
+    "path": "cycles/m5/samples/smp-myyshop-claude-us-manual-smoke-retry-20260826.md"
+  },
+  "schema_version": "m5-manual-sample-plan-v1"
+}

@@ -3,6 +3,7 @@ import assert from 'node:assert/strict';
 
 import {
   assertPlatformAutomationAllowed,
+  assertPlatformManualAllowed,
   getPlatformAdapter,
   PLATFORM_IDS,
 } from '../plugins/geo-expert/scripts/collectors/platforms/index.mjs';
@@ -32,6 +33,19 @@ test('五个平台 adapter 分别冻结入口、版本、artifact 与条款状�
     assert.equal('account_email' in adapter, false);
     assert.equal('account_identifier' in adapter, false);
   }
+});
+
+test('真实 UI manual adapter 允许四个平台，Perplexity 仅允许用户导出文件', () => {
+  for (const platform of ['chatgpt', 'gemini', 'google_ai', 'claude']) {
+    assert.equal(assertPlatformManualAllowed(getPlatformAdapter(platform)).platform, platform);
+  }
+  assert.throws(
+    () => assertPlatformManualAllowed(getPlatformAdapter('perplexity')),
+    (error) => error.code === 'PLATFORM_MANUAL_COLLECTION_BLOCKED',
+  );
+  assert.equal(assertPlatformManualAllowed(getPlatformAdapter('perplexity'), {
+    manualSourceKind: 'user_supplied_export',
+  }).platform, 'perplexity');
 });
 
 test('adapter 不再以 written permission ref 作为运行时硬门', () => {

@@ -13,6 +13,7 @@ source:
   - workspaces/myyshop/cycles/preparation/decisions/2026-08-25-m5-playwright-and-consumer-platform-authorized.md
   - "2026-08-25 当前用户指令：后续平台转为平台书面自动采集"
   - "2026-08-25 当前用户指令：去除 Adapter written_permission_ref 限制；平台许可改为全部里程碑完成后的上线前待办"
+  - "2026-08-26 当前用户指令：继续 Owner 手工操作/复制的 manual exploratory 采样；开发阶段先跑通对应真实 UI adapter"
 scope: M5 离线合同/Fixture/恢复/指标、持续 Source registry、Playwright base、逐平台真实 collector 与 Baseline/Retest
 ---
 
@@ -102,7 +103,7 @@ ChatGPT、Gemini、Perplexity、Google AI Mode/AI Overviews、Claude 分别建�
 
 Owner 已分别授权五个平台使用同一 Owner-controlled Google 登录角色，并批准本地 artifact 365 天保留；原始账号标识不落盘。官方 Terms/robots 复核后，ChatGPT、Perplexity、Google Search/AI 与 Claude 为 `terms_blocked`，Gemini 为 `manual_only`。因此当前只实现五个 guard adapter、入口/版本/artifact/停止合同和浏览器启动前 fail-loud；不访问登录态、不提交 Query、不提取 Output。真实 Smoke 继续 blocked，账号授权不能覆盖平台条款。
 
-后续 Owner 选择人工 fallback：ChatGPT 形成 1 个 `exploratory/manual` Sample 与 3 个 Citation；Gemini 形成 1 个无 Citation `exploratory/manual` Sample。Owner 随后去除 adapter `written_permission_ref` 运行时硬门，并把平台许可放入 Requirements 需求池，业务状态“待规划”；是否开启后续规范只由 Owner 决定。两个现有 Sample 都不构成三次采样 Baseline；当前自动执行仍受 adapter Terms/robots 状态控制。
+后续 Owner 选择人工 fallback：ChatGPT 形成 1 个 `exploratory/manual` Sample 与 3 个 Citation；Gemini 形成 1 个无 Citation Sample；Google AI 形成 1 个 Sample、9 个 Citation；Claude 形成 CN 中文 Query 与 US 英文 Query 各 1 个成功 Sample；Perplexity 通过 Owner 提供并冻结哈希的导出 Markdown 形成 1 个 `user_supplied_export/manual` Sample 与 5 个 Citation。Claude 两次采集只记录基线差异，不执行 IP 单变量对比。Perplexity 页面 manual 与自动化保持 blocked。平台许可留在 Requirements 需求池、状态“待规划”；自动执行仍受 adapter Terms/robots 状态控制。所有 manual Sample 都不构成三次采样 Baseline。
 
 ### Slice J — 真实 Baseline（独立 Record）
 
@@ -172,6 +173,9 @@ Slice H 已实现全局 runtime resolver 与 collector base；Slice I 已落五�
 | Perplexity 消费者 UI | 账号授权；自动/手工采集 blocked | 消费者 Terms 禁止 bot/scraper/自动采集及同目的手工流程 |
 | Google AI Mode/AI Overviews | 账号授权；自动执行 blocked | Google Terms + `robots.txt` 禁止通用自动访问 `/search` |
 | Claude 消费者 UI | 账号授权；自动执行 blocked | Consumer Terms 禁止非 API 自动访问与 crawl/scrape |
+| Google AI / Claude manual exploratory | 已授权 | Owner 手工 UI + 完整复制 + manual materializer；不自动访问/提取 |
+| Perplexity 页面 manual exploratory | blocked | consumer Terms 限制同目的手工采集；不访问或复制页面 |
+| Perplexity 用户导出文件 ingestion | 已授权 | 仅 `user_supplied_export` + 文件名/SHA 冻结；不访问平台页面 |
 | 平台许可候选需求 | Requirements 需求池 / 待规划 | 不再作为 adapter 运行时字段；Owner 决定是否启动后续规范 |
 | API 正式采样 | 禁止 | v1 正式体系不允许；仅可另建探索范围 |
 | 真实 artifact 本地保留 | 已授权 365 天 | 只限完整答案/Citation、裁剪截图、脱敏 log；完整 DOM/HTML 默认 unavailable |

@@ -197,6 +197,54 @@
       "version": "1.0.15"
     },
     {
+      "id": "RUN-MYYSHOP-M5-CLAUDE-MANUAL-SMOKE-20260826",
+      "path": "runs/RUN-MYYSHOP-M5-CLAUDE-MANUAL-SMOKE-20260826/run.md",
+      "refs": [
+        "CLM-MYYSHOP-AUDIENCE-001",
+        "CLM-MYYSHOP-LIFECYCLE-SERVICE-001",
+        "CPF-MYYSHOP-CLAUDE-MANUAL-SMOKE-20260826",
+        "GOAL-MYYSHOP-DEFINITION-001",
+        "KR-MYYSHOP-DEFINITION-001",
+        "Q-MYYSHOP-WHAT-IS-001",
+        "QS-MYYSHOP-DEFINITION-001"
+      ],
+      "status": "completed",
+      "updated_at": "2026-08-26T13:41:14+08:00",
+      "version": "1.0.15"
+    },
+    {
+      "id": "RUN-MYYSHOP-M5-CLAUDE-US-MANUAL-SMOKE-20260826",
+      "path": "runs/RUN-MYYSHOP-M5-CLAUDE-US-MANUAL-SMOKE-20260826/run.md",
+      "refs": [
+        "CLM-MYYSHOP-AUDIENCE-001",
+        "CLM-MYYSHOP-LIFECYCLE-SERVICE-001",
+        "CPF-MYYSHOP-CLAUDE-US-MANUAL-SMOKE-20260826",
+        "GOAL-MYYSHOP-DEFINITION-001",
+        "KR-MYYSHOP-DEFINITION-001",
+        "Q-MYYSHOP-WHAT-IS-EN-001",
+        "QS-MYYSHOP-DEFINITION-EN-US-001"
+      ],
+      "status": "failed",
+      "updated_at": "2026-08-26T14:07:00+08:00",
+      "version": "1.0.13"
+    },
+    {
+      "id": "RUN-MYYSHOP-M5-CLAUDE-US-MANUAL-SMOKE-RETRY-20260826",
+      "path": "runs/RUN-MYYSHOP-M5-CLAUDE-US-MANUAL-SMOKE-RETRY-20260826/run.md",
+      "refs": [
+        "CLM-MYYSHOP-AUDIENCE-001",
+        "CLM-MYYSHOP-LIFECYCLE-SERVICE-001",
+        "CPF-MYYSHOP-CLAUDE-US-MANUAL-SMOKE-20260826",
+        "GOAL-MYYSHOP-DEFINITION-001",
+        "KR-MYYSHOP-DEFINITION-001",
+        "Q-MYYSHOP-WHAT-IS-EN-001",
+        "QS-MYYSHOP-DEFINITION-EN-US-001"
+      ],
+      "status": "completed",
+      "updated_at": "2026-08-26T14:03:13+08:00",
+      "version": "1.0.15"
+    },
+    {
       "id": "RUN-MYYSHOP-M5-GEMINI-MANUAL-SMOKE-20260825",
       "path": "runs/RUN-MYYSHOP-M5-GEMINI-MANUAL-SMOKE-20260825/run.md",
       "refs": [
@@ -210,6 +258,38 @@
       ],
       "status": "completed",
       "updated_at": "2026-08-25T18:07:44+08:00",
+      "version": "1.0.15"
+    },
+    {
+      "id": "RUN-MYYSHOP-M5-GOOGLE-AI-MANUAL-SMOKE-20260826",
+      "path": "runs/RUN-MYYSHOP-M5-GOOGLE-AI-MANUAL-SMOKE-20260826/run.md",
+      "refs": [
+        "CLM-MYYSHOP-AUDIENCE-001",
+        "CLM-MYYSHOP-LIFECYCLE-SERVICE-001",
+        "CPF-MYYSHOP-GOOGLE-AI-MANUAL-SMOKE-20260826",
+        "GOAL-MYYSHOP-DEFINITION-001",
+        "KR-MYYSHOP-DEFINITION-001",
+        "Q-MYYSHOP-WHAT-IS-001",
+        "QS-MYYSHOP-DEFINITION-001"
+      ],
+      "status": "completed",
+      "updated_at": "2026-08-26T12:46:42+08:00",
+      "version": "1.0.15"
+    },
+    {
+      "id": "RUN-MYYSHOP-M5-PERPLEXITY-USER-EXPORT-20260826",
+      "path": "runs/RUN-MYYSHOP-M5-PERPLEXITY-USER-EXPORT-20260826/run.md",
+      "refs": [
+        "CLM-MYYSHOP-AUDIENCE-001",
+        "CLM-MYYSHOP-LIFECYCLE-SERVICE-001",
+        "CPF-MYYSHOP-PERPLEXITY-USER-EXPORT-20260826",
+        "GOAL-MYYSHOP-DEFINITION-001",
+        "KR-MYYSHOP-DEFINITION-001",
+        "Q-MYYSHOP-WHAT-MYYSHOP-IS-001",
+        "QS-MYYSHOP-PERPLEXITY-EXPORT-EN-001"
+      ],
+      "status": "completed",
+      "updated_at": "2026-08-26T14:22:01+08:00",
       "version": "1.0.15"
     }
   ],

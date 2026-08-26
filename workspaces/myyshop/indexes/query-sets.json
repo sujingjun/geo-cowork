@@ -10,6 +10,28 @@
       "status": "frozen",
       "updated_at": "2026-08-23T22:46:23.000Z",
       "version": "1.0.1"
+    },
+    {
+      "id": "QS-MYYSHOP-DEFINITION-EN-US-001",
+      "path": "queries/sets/qs-myyshop-definition-en-us-001.md",
+      "refs": [
+        "GOAL-MYYSHOP-DEFINITION-001",
+        "Q-MYYSHOP-WHAT-IS-EN-001"
+      ],
+      "status": "frozen",
+      "updated_at": "2026-08-26T14:03:13+08:00",
+      "version": "1.0.0"
+    },
+    {
+      "id": "QS-MYYSHOP-PERPLEXITY-EXPORT-EN-001",
+      "path": "queries/sets/qs-myyshop-perplexity-export-en-001.md",
+      "refs": [
+        "GOAL-MYYSHOP-DEFINITION-001",
+        "Q-MYYSHOP-WHAT-MYYSHOP-IS-001"
+      ],
+      "status": "frozen",
+      "updated_at": "2026-08-26T14:49:12+08:00",
+      "version": "1.0.0"
     }
   ],
   "record_type": "query_set",
