@@ -1,0 +1,181 @@
+{
+  "schema_version": "m7-cycle-two-e2e-plan/1.0.0",
+  "merchant_ref": "TMT-M6-TEST-001",
+  "workspace_id": "ws_m6testmerchant000000000000",
+  "cycle_id": "CYC-M7-TEST-002",
+  "cycle_number": 2,
+  "cycle_path": "cycles/m7/cycle-2.md",
+  "run_id": "RUN-M7-CYCLE-2-001",
+  "snapshot_id": "CIS-M7-CYCLE-2-FREEZE-001",
+  "predecessor_review_version": null,
+  "goal_selection_version": null,
+  "selected_candidate_version": null,
+  "cycle_one_review_handoff": {
+    "review_snapshot_id": "CIS-M7-CYCLE-ONE-REVIEW-001",
+    "waiting_review": { "id": "CRV-M7-CYCLE-ONE-WAITING-001", "path": "cycles/m7/reviews/crv-m7-cycle-one-waiting-001.md" },
+    "decided_review": { "id": "CRV-M7-CYCLE-ONE-DECIDED-001", "path": "cycles/m7/reviews/crv-m7-cycle-one-decided-001.md" }
+  },
+  "strategy_materialization": {
+    "strategy_snapshot_id": "CIS-M7-STRATEGY-001",
+    "waiting_assessment": { "id": "STA-M7-WAITING-001", "path": "strategy/assessments/sta-m7-waiting-001.md" },
+    "decided_assessment": { "id": "STA-M7-DECIDED-001", "path": "strategy/assessments/sta-m7-decided-001.md" },
+    "candidate_dimension": { "id": "DDM-M7-CANDIDATE-001", "path": "strategy/dimensions/ddm-m7-candidate-001.md" },
+    "validated_dimension": { "id": "DDM-M7-VALIDATED-001", "path": "strategy/dimensions/ddm-m7-validated-001.md" },
+    "factor_dimension": { "id": "DDM-M7-FACTOR-001", "path": "strategy/dimensions/ddm-m7-factor-001.md" },
+    "strategy_output": { "id": "STO-M7-DRAFT-001", "path": "strategy/outputs/sto-m7-draft-001.md" },
+    "decision_files": ["decisions/strategy-proceed.json", "decisions/dimension-factor.json"]
+  },
+  "candidate_generator_rule_path": "tests/fixtures/m7-strategy-discovery/contracts/candidate-generator-rule.json",
+  "strategy_flow_plan": "plans/strategy-flow.json",
+  "strategy_decisions": ["decisions/strategy-proceed.json", "decisions/dimension-factor.json", "decisions/goal-selection.json"],
+  "new_goal": {
+    "id": "GOAL-M7-CYCLE-2-001",
+    "path": "cycles/m7/preparation/goal-cycle-2.md",
+    "statement": "Improve synthetic pricing clarity.",
+    "success_question": "Can the synthetic price range be represented accurately?",
+    "query_cluster_key": "m7-synthetic-pricing",
+    "approval": { "approved_by": "Fixture Goal Owner", "approved_at": "2026-08-27T00:03:00Z", "decision_ref": "fixture://decision/m7-cycle-2-goal-approval-001" }
+  },
+  "workspace_files": [
+    {
+      "path": "evidence/snapshots/m7-cycle-2-capability.txt",
+      "content": "Synthetic Cycle 2 pricing capability is limited to a documented range.\n",
+      "sha256": "ea490a8ac7244997bec23dbf52df41f63cecb08ffd2e95d78ee6683402e6621e"
+    }
+  ],
+  "source_objects": [
+    {
+      "path": "evidence/sources/src-m7-cycle-2-001.md",
+      "data": {
+        "id": "SRC-M7-CYCLE-2-001", "record_type": "source", "status": "active", "version": "1.0.0",
+        "created_at": "2026-08-27T00:03:00Z", "updated_at": "2026-08-27T00:03:00Z", "title": "Synthetic Cycle 2 source",
+        "test_scope": { "kind": "synthetic", "usage": "test_only", "merchant_ref": "TMT-M6-TEST-001", "workspace_id": "ws_m6testmerchant000000000000" },
+        "name": "Synthetic Cycle 2 first-party source", "source_kind": "first_party_document", "locator": "https://m6-test-merchant.invalid/cycle-2/source"
+      }
+    },
+    {
+      "path": "evidence/records/evd-m7-cycle-2-001.md",
+      "data": {
+        "id": "EVD-M7-CYCLE-2-001", "record_type": "evidence", "status": "approved", "version": "1.0.0",
+        "created_at": "2026-08-27T00:03:00Z", "updated_at": "2026-08-27T00:03:00Z", "title": "Synthetic Cycle 2 capability Evidence",
+        "test_scope": { "kind": "synthetic", "usage": "test_only", "merchant_ref": "TMT-M6-TEST-001", "workspace_id": "ws_m6testmerchant000000000000" },
+        "source_refs": ["SRC-M7-CYCLE-2-001"], "claim_refs": ["CLM-M7-CYCLE-2-001"],
+        "locator": "https://m6-test-merchant.invalid/cycle-2/source#pricing", "captured_at": "2026-08-27T00:03:00Z",
+        "snapshot": { "path": "evidence/snapshots/m7-cycle-2-capability.txt", "sha256": "ea490a8ac7244997bec23dbf52df41f63cecb08ffd2e95d78ee6683402e6621e", "media_type": "text/plain" },
+        "collector": { "name": "m7-cycle-2-fixture", "version": "1.0.0" }, "scope": "Synthetic Cycle 2 pricing clarity only.",
+        "approval": { "approved_by": "Fixture Evidence Owner", "approved_at": "2026-08-27T00:03:00Z", "decision_ref": "fixture://decision/m7-cycle-2-evidence-approval-001" }
+      }
+    },
+    {
+      "path": "knowledge/documents/doc-m7-cycle-2-001.md",
+      "data": {
+        "id": "DOC-M7-CYCLE-2-001", "record_type": "document", "status": "approved", "version": "1.0.0",
+        "created_at": "2026-08-27T00:03:00Z", "updated_at": "2026-08-27T00:03:00Z", "title": "Synthetic Cycle 2 pricing document",
+        "test_scope": { "kind": "synthetic", "usage": "test_only", "merchant_ref": "TMT-M6-TEST-001", "workspace_id": "ws_m6testmerchant000000000000" },
+        "scope": "Synthetic Cycle 2 pricing clarity only.", "source_refs": ["SRC-M7-CYCLE-2-001"], "claim_refs": ["CLM-M7-CYCLE-2-001"],
+        "approval": { "approved_by": "Fixture Knowledge Owner", "approved_at": "2026-08-27T00:03:00Z", "decision_ref": "fixture://decision/m7-cycle-2-document-approval-001" }
+      }
+    },
+    {
+      "path": "cycles/m7/preparation/goal-cycle-2.md",
+      "data": {
+        "id": "GOAL-M7-CYCLE-2-001", "record_type": "perception_goal", "status": "approved", "version": "1.0.0",
+        "created_at": "2026-08-27T00:03:00Z", "updated_at": "2026-08-27T00:03:00Z", "title": "Synthetic Cycle 2 Goal",
+        "test_scope": { "kind": "synthetic", "usage": "test_only", "merchant_ref": "TMT-M6-TEST-001", "workspace_id": "ws_m6testmerchant000000000000" },
+        "goal_statement": "Improve synthetic pricing clarity.", "success_question": "Can the synthetic price range be represented accurately?", "query_set_refs": ["QS-M7-CYCLE-2-001"],
+        "approval": { "approved_by": "Fixture Goal Owner", "approved_at": "2026-08-27T00:03:00Z", "decision_ref": "fixture://decision/m7-cycle-2-goal-approval-001" }
+      }
+    },
+    {
+      "path": "queries/formal/q-m7-cycle-2-001.md",
+      "data": {
+        "id": "Q-M7-CYCLE-2-001", "record_type": "query", "status": "formal", "version": "1.0.0",
+        "created_at": "2026-08-27T00:03:00Z", "updated_at": "2026-08-27T00:03:00Z", "title": "Synthetic Cycle 2 pricing query",
+        "test_scope": { "kind": "synthetic", "usage": "test_only", "merchant_ref": "TMT-M6-TEST-001", "workspace_id": "ws_m6testmerchant000000000000" },
+        "query_text": "How transparent is Synthetic Test Merchant pricing?", "language": "en-US", "normalized_text": "how transparent is synthetic test merchant pricing", "intent": "comparison", "priority": "P0",
+        "goal_refs": ["GOAL-M7-CYCLE-2-001"], "discovery_source_refs": ["SRC-M7-CYCLE-2-001"], "legacy_refs": [],
+        "approval": { "approved_by": "Fixture Query Owner", "approved_at": "2026-08-27T00:03:00Z", "decision_ref": "fixture://decision/m7-cycle-2-query-approval-001" }
+      }
+    },
+    {
+      "path": "knowledge/claims/clm-m7-cycle-2-001.md",
+      "data": {
+        "id": "CLM-M7-CYCLE-2-001", "record_type": "claim", "status": "published", "version": "1.0.0",
+        "created_at": "2026-08-27T00:03:00Z", "updated_at": "2026-08-27T00:03:00Z", "title": "Synthetic Cycle 2 pricing Claim",
+        "test_scope": { "kind": "synthetic", "usage": "test_only", "merchant_ref": "TMT-M6-TEST-001", "workspace_id": "ws_m6testmerchant000000000000" },
+        "statement": "Synthetic Test Merchant provides a documented pricing range.", "risk_type": "capability_fact", "risk_level": "low",
+        "evidence_refs": ["EVD-M7-CYCLE-2-001"], "document_refs": ["DOC-M7-CYCLE-2-001"], "scope": "Synthetic Cycle 2 pricing clarity only.",
+        "evidence_sufficiency": { "status": "sufficient", "rule_version": "m3-evidence-sufficiency-v1", "missing": [] }, "release_refs": ["KR-M7-CYCLE-2-001"],
+        "approval": { "approved_by": "Fixture Claim Owner", "approved_at": "2026-08-27T00:03:00Z", "decision_ref": "fixture://decision/m7-cycle-2-claim-approval-001" }
+      }
+    },
+    {
+      "path": "knowledge/answer-cards/ans-m7-cycle-2-001.md",
+      "data": {
+        "id": "ANS-M7-CYCLE-2-001", "record_type": "answer_card", "status": "published", "version": "1.0.0",
+        "created_at": "2026-08-27T00:03:00Z", "updated_at": "2026-08-27T00:03:00Z", "title": "Synthetic Cycle 2 pricing Answer Card",
+        "test_scope": { "kind": "synthetic", "usage": "test_only", "merchant_ref": "TMT-M6-TEST-001", "workspace_id": "ws_m6testmerchant000000000000" },
+        "query_refs": ["Q-M7-CYCLE-2-001"], "claim_versions": [{ "ref": "CLM-M7-CYCLE-2-001", "version": "1.0.0" }], "evidence_refs": ["EVD-M7-CYCLE-2-001"],
+        "direct_answer": "Synthetic Test Merchant provides a documented pricing range.", "limitations": ["Synthetic fixture only."], "forbidden_statements": ["Do not claim a real price or outcome."], "release_refs": ["KR-M7-CYCLE-2-001"],
+        "approval": { "approved_by": "Fixture Answer Owner", "approved_at": "2026-08-27T00:03:00Z", "decision_ref": "fixture://decision/m7-cycle-2-answer-approval-001" }
+      }
+    },
+    {
+      "path": "queries/sets/qs-m7-cycle-2-001.md",
+      "data": {
+        "id": "QS-M7-CYCLE-2-001", "record_type": "query_set", "status": "frozen", "version": "1.0.0",
+        "created_at": "2026-08-27T00:03:00Z", "updated_at": "2026-08-27T00:03:00Z", "title": "Synthetic Cycle 2 Query Set",
+        "test_scope": { "kind": "synthetic", "usage": "test_only", "merchant_ref": "TMT-M6-TEST-001", "workspace_id": "ws_m6testmerchant000000000000" },
+        "goal_refs": ["GOAL-M7-CYCLE-2-001"], "query_versions": [{ "ref": "Q-M7-CYCLE-2-001", "version": "1.0.0" }],
+        "frozen_at": "2026-08-27T00:03:00Z", "frozen_by": "Fixture Query Owner", "content_sha256": "8aa1e7e40864d61bbe9febbf603e6751befa25271814d66b327cb0cc666d0c89",
+        "approval": { "approved_by": "Fixture Query Owner", "approved_at": "2026-08-27T00:03:00Z", "decision_ref": "fixture://decision/m7-cycle-2-query-set-approval-001" }
+      }
+    },
+    {
+      "path": "knowledge/releases/kr-m7-cycle-2-001.md",
+      "data": {
+        "id": "KR-M7-CYCLE-2-001", "record_type": "knowledge_release", "status": "published", "version": "1.0.0",
+        "created_at": "2026-08-27T00:03:00Z", "updated_at": "2026-08-27T00:03:00Z", "title": "Synthetic Cycle 2 Knowledge Release",
+        "test_scope": { "kind": "synthetic", "usage": "test_only", "merchant_ref": "TMT-M6-TEST-001", "workspace_id": "ws_m6testmerchant000000000000" },
+        "release_version": "1.0.0", "claim_versions": [{ "ref": "CLM-M7-CYCLE-2-001", "version": "1.0.0" }], "answer_card_versions": [{ "ref": "ANS-M7-CYCLE-2-001", "version": "1.0.0" }], "readiness": "ready",
+        "approval": { "approved_by": "Fixture Release Owner", "approved_at": "2026-08-27T00:03:00Z", "decision_ref": "fixture://decision/m7-cycle-2-release-approval-001" }
+      }
+    },
+    {
+      "path": "assets/own/ast-m7-cycle-2-001.md",
+      "data": {
+        "id": "AST-M7-CYCLE-2-001", "record_type": "asset", "status": "active", "version": "1.0.0",
+        "created_at": "2026-08-27T00:03:00Z", "updated_at": "2026-08-27T00:03:00Z", "title": "Synthetic Cycle 2 pricing Asset",
+        "test_scope": { "kind": "synthetic", "usage": "test_only", "merchant_ref": "TMT-M6-TEST-001", "workspace_id": "ws_m6testmerchant000000000000" },
+        "asset_kind": "own", "locator": "https://m6-test-merchant.invalid/cycle-2/pricing", "source_refs": ["SRC-M7-CYCLE-2-001"], "asset_role": "faq", "control_scope": "own",
+        "goal_refs": ["GOAL-M7-CYCLE-2-001"], "query_refs": ["Q-M7-CYCLE-2-001"], "claim_versions": [{ "ref": "CLM-M7-CYCLE-2-001", "version": "1.0.0" }], "knowledge_release_versions": [{ "ref": "KR-M7-CYCLE-2-001", "version": "1.0.0" }]
+      }
+    },
+    {
+      "path": "cycles/m7/preparation/cpf-m7-cycle-2-001.md",
+      "data": {
+        "id": "CPF-M7-CYCLE-2-001", "record_type": "collector_profile", "status": "frozen", "version": "1.0.0",
+        "created_at": "2026-08-27T00:03:00Z", "updated_at": "2026-08-27T00:03:00Z", "title": "Synthetic Cycle 2 collector profile",
+        "test_scope": { "kind": "synthetic", "usage": "test_only", "merchant_ref": "TMT-M6-TEST-001", "workspace_id": "ws_m6testmerchant000000000000" },
+        "platform": "chatgpt", "product_entry": "https://consumer.m6-test-merchant.invalid/cycle-2", "region": "US", "language": "en-US", "login_state": "logged_out", "conversation_state": "new", "web_search_state": "on", "model_mode": "recorded-fixture", "query_template_version": "1.0.0", "sampling_count": 2,
+        "time_window": { "id": "TW-M7-CYCLE-2-001", "starts_at": "2026-08-27T00:00:00Z", "ends_at": "2026-08-28T00:00:00Z" }, "device": { "class": "desktop", "os": "fixture-os", "browser": "fixture-browser", "viewport": "1280x720" }, "collection_method": "recorded_fixture",
+        "profile_fingerprint": "23122329c5568bc7957c5ac3bb8c640d357d184dfc13b5afefd343b521086fad",
+        "approval": { "approved_by": "Fixture Cycle 2 Owner", "approved_at": "2026-08-27T00:03:00Z", "decision_ref": "fixture://decision/m7-cycle-2-profile-approval-001" }
+      }
+    }
+  ],
+  "source_paths": [
+    "cycles/preparation/test-merchant.md",
+    "cycles/m7/preparation/goal-cycle-2.md", "queries/formal/q-m7-cycle-2-001.md", "queries/sets/qs-m7-cycle-2-001.md",
+    "knowledge/documents/doc-m7-cycle-2-001.md", "knowledge/claims/clm-m7-cycle-2-001.md", "knowledge/answer-cards/ans-m7-cycle-2-001.md", "knowledge/releases/kr-m7-cycle-2-001.md",
+    "evidence/sources/src-m7-cycle-2-001.md", "evidence/records/evd-m7-cycle-2-001.md", "assets/own/ast-m7-cycle-2-001.md", "cycles/m7/preparation/cpf-m7-cycle-2-001.md"
+  ],
+  "artifact_paths": [
+    { "role": "measurement_contract", "path": "execution/contracts/measurement-contract.json", "media_type": "application/json" },
+    { "role": "signal_rule", "path": "execution/contracts/signal-rule.json", "media_type": "application/json" },
+    { "role": "sensitive_data_policy", "path": "execution/contracts/sensitive-data-policy.json", "media_type": "application/json" }
+  ],
+  "stages": ["baseline_recorded", "diagnosis_ready", "adoption_decided", "publication_confirmed", "technical_retest_completed", "answer_retest_completed", "analytics_recorded", "review_waiting_human", "review_decided"],
+  "network_access": false,
+  "real_execution_authorized": false
+}

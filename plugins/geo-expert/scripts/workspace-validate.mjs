@@ -8,6 +8,7 @@ import { REQUIRED_DIRS, REQUIRED_FILES } from './workspace-init.mjs';
 
 const ID_PATTERN = /^ws_[a-z0-9]{26}$/;
 const IDENTITY_FIELDS = ['schema_version', 'workspace_id', 'brand', 'created_at', 'created_by'];
+const TEST_IDENTITY_FIELDS = ['test_namespace', 'legal_entity', 'subject_locator'];
 
 async function isDir(p) {
   try {
@@ -40,6 +41,7 @@ export async function validateWorkspace(root, { objects = false } = {}) {
   const errors = [];
   let objectErrors = [];
   let warnings = [];
+  let workspaceIdentity = null;
 
   for (const dir of REQUIRED_DIRS) {
     if (!(await isDir(path.join(root, dir)))) missing.push(`${dir}/`);
@@ -58,25 +60,83 @@ export async function validateWorkspace(root, { objects = false } = {}) {
       parsed = null;
     }
     if (parsed) {
+      workspaceIdentity = parsed;
       for (const field of IDENTITY_FIELDS) {
         if (!(field in parsed)) errors.push(`workspace.json 缺少必需字段: ${field}`);
       }
       if (parsed.workspace_id && !ID_PATTERN.test(parsed.workspace_id)) {
         errors.push(`workspace_id 格式非法: ${parsed.workspace_id}`);
       }
+      const hasTestField = parsed.workspace_mode !== undefined
+        || TEST_IDENTITY_FIELDS.some((field) => parsed[field] !== undefined);
+      if (hasTestField) {
+        if (parsed.workspace_mode !== 'test_only') {
+          errors.push('workspace_mode 存在测试身份字段时必须为 test_only');
+        }
+        if (typeof parsed.test_namespace !== 'string'
+            || !/^[a-z0-9][a-z0-9-]*$/.test(parsed.test_namespace)) {
+          errors.push('test_namespace 格式非法');
+        }
+        if (parsed.legal_entity !== false) errors.push('test-only Workspace 的 legal_entity 必须为 false');
+        try {
+          const locator = new URL(parsed.subject_locator);
+          if (!locator.hostname.endsWith('.invalid')) {
+            errors.push('test-only Workspace 的 subject_locator 必须使用 .invalid 主机');
+          }
+        } catch {
+          errors.push('test-only Workspace 的 subject_locator 必须是合法 URL');
+        }
+      }
     }
   }
 
   if (objects) {
     try {
-      const { buildIndexes } = await import('./lib/index-builder.mjs');
+      const { buildIndexes, loadWorkspaceGraph } = await import('./lib/index-builder.mjs');
       const result = await buildIndexes({ workspace: root, write: false });
       warnings = result.warnings;
+      const graph = await loadWorkspaceGraph({ workspace: root });
+      const { validateM6Object } = await import('./lib/m6-profile.mjs');
+      for (const object of graph.objects) {
+        objectErrors.push(...validateM6Object(object, {
+          testWorkspace: workspaceIdentity?.workspace_mode === 'test_only',
+        }).errors);
+      }
+      try {
+        const { validateStrategyObject } = await import('./lib/strategy-profile.mjs');
+        for (const object of graph.objects) {
+          objectErrors.push(...validateStrategyObject(object.data).errors.map((error) => ({
+            ...error,
+            id: object.data.id,
+            path: object.path,
+          })));
+        }
+      } catch (error) {
+        if (error.code !== 'ERR_MODULE_NOT_FOUND') throw error;
+      }
+      const containsTestObjects = graph.objects.some((object) =>
+        object.data.test_scope
+        || ['test_merchant', 'cycle_input_snapshot', 'cycle_transition',
+          'analytics_observation', 'business_signal', 'cycle_review'].includes(
+          object.data.record_type,
+        ));
+      if (containsTestObjects && workspaceIdentity?.workspace_mode !== 'test_only') {
+        objectErrors.push({
+          code: 'SYNTHETIC_REAL_REF_CONTAMINATION',
+          path: 'workspace.json',
+          reason: 'test_objects_in_non_test_workspace',
+        });
+      } else if (workspaceIdentity?.workspace_mode === 'test_only') {
+        const { validateTestMerchantWorkspace } = await import('./lib/m6-test-merchant.mjs');
+        const testResult = await validateTestMerchantWorkspace({ workspace: root });
+        objectErrors.push(...testResult.errors);
+        warnings.push(...testResult.warnings);
+      }
     } catch (error) {
-      objectErrors = error.diagnostics ?? [{
+      objectErrors.push(...(error.diagnostics ?? [{
         code: error.code ?? 'OBJECT_VALIDATION_FAILED',
         message: error.message,
-      }];
+      }]));
     }
   }
 

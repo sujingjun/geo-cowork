@@ -1,0 +1,16 @@
+{
+  "schema_version": "m7-fixture-human-decision/1.0.0",
+  "decision_kind": "strategy_assessment",
+  "waiting_ref": "STA-M7-WAITING-001",
+  "decided_id": "STA-M7-DECIDED-001",
+  "decided_path": "strategy/assessments/sta-m7-decided-001.md",
+  "decision": "proceed",
+  "approval": {
+    "approved_by": "Fixture Strategy Reviewer",
+    "approved_at": "2026-08-27T00:00:00Z",
+    "decision_ref": "fixture://decision/m7-strategy-proceed-fresh-001"
+  },
+  "conversation_history_used": false,
+  "fresh_process_required": true,
+  "real_execution_authorized": false
+}

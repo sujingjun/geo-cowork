@@ -159,6 +159,11 @@ async function checkTemplates() {
     'collector-profile.md', 'answer-sample.md', 'citation-observation.md',
     'source-classification.md', 'claim-support-review.md', 'answer-review.md',
     'answer-aggregation.md',
+    'test-merchant.md', 'cycle-input-snapshot.md', 'cycle-transition.md',
+    'analytics-observation.md', 'business-signal.md', 'cycle-review.md',
+    'strategy-assessment.md', 'decision-dimension.md',
+    'cycle-goal-candidate-batch.md', 'cycle-goal-candidate.md',
+    'cycle-goal-selection.md', 'strategy-output.md',
   ]) {
     const p = path.join(PLUGIN_ROOT, 'assets', 'object-templates', file);
     try {
@@ -177,6 +182,8 @@ async function checkRuntime() {
     'common-object.schema.json', 'm2-record-types.schema.json', 'm3-record-types.schema.json',
     'm4-record-types.schema.json',
     'm5-record-types.schema.json',
+    'm6-record-types.schema.json',
+    'm7-record-types.schema.json',
   ]) {
     const p = path.join(PLUGIN_ROOT, 'schemas', file);
     const data = await readJson(p);
@@ -188,6 +195,7 @@ async function checkRuntime() {
     'diagnosis.mjs', 'collect-public-site.mjs', 'prepare-public-site-m4-inputs.mjs',
     'check-doc-links.mjs',
     'answer-cycle.mjs',
+    'geo-lifecycle.mjs', 'geo-analytics.mjs', 'geo-strategy-discovery.mjs',
   ]) {
     const p = path.join(PLUGIN_ROOT, 'scripts', file);
     try {
@@ -209,6 +217,14 @@ async function checkRuntime() {
     'm5-policy.mjs', 'source-batch.mjs',
     'source-registry.mjs', 'citation-analysis.mjs', 'answer-review.mjs',
     'answer-aggregation.mjs', 'answer-cycle.mjs',
+    'm6-profile.mjs', 'm6-test-merchant.mjs',
+    'cycle-snapshot.mjs', 'cycle-lock.mjs', 'cycle-gates.mjs',
+    'cycle-lifecycle.mjs', 'analytics-cycle.mjs', 'cycle-trace.mjs',
+    'strategy-assessment.mjs', 'decision-dimension.mjs',
+    'strategy-output.mjs', 'strategy-profile.mjs', 'strategy-trace.mjs',
+    'strategy-workflow.mjs', 'cycle-goal-candidates.mjs',
+    'cycle-goal-selection.mjs', 'cycle-two.mjs', 'cycle-two-workspace.mjs',
+    'cycle-two-proposal.mjs', 'cycle-two-apply.mjs',
   ]) {
     const p = path.join(PLUGIN_ROOT, 'scripts', 'lib', file);
     try {

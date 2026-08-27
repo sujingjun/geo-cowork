@@ -36,6 +36,23 @@
           "type": "string",
           "minLength": 1
         },
+        "test_scope": {
+          "type": "object",
+          "required": ["kind", "usage", "merchant_ref", "workspace_id"],
+          "properties": {
+            "kind": { "const": "synthetic" },
+            "usage": { "const": "test_only" },
+            "merchant_ref": {
+              "type": "string",
+              "pattern": "^TMT-(?:[A-Z0-9]+-)*[A-Z0-9]+$"
+            },
+            "workspace_id": {
+              "type": "string",
+              "pattern": "^ws_[a-z0-9]{26}$"
+            }
+          },
+          "additionalProperties": false
+        },
         "extensions": {
           "type": "object",
           "propertyNames": {
@@ -96,4 +113,3 @@
     }
   }
 }
-

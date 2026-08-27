@@ -69,6 +69,7 @@ npm run test:m2-contract                                 # M2 专项测试
 npm run test:m3-knowledge-query                          # M3 Knowledge/Query 专项测试
 npm run test:m4-diagnosis                               # M4 Diagnosis/Site/Asset 专项测试
 npm run test:m5-answer                                 # M5 Answer/Citation/Source/聚合专项测试
+npm run test:m6-cycle                                 # M6 测试商户 Cycle/Analytics/恢复专项测试
 npm run smoke:m5-playwright                            # 全局 Playwright + loopback base Smoke
 npm run check:docs                                      # 仓库 Markdown 本地链接检查
 npm run validate:plugin                                  # 插件包契约自检
@@ -76,6 +77,8 @@ node plugins/geo-expert/scripts/build-index.mjs --workspace workspaces/myyshop -
 node plugins/geo-expert/scripts/knowledge-query.mjs validate --workspace workspaces/myyshop
 node plugins/geo-expert/scripts/diagnosis.mjs validate --workspace workspaces/myyshop
 node plugins/geo-expert/scripts/answer-cycle.mjs validate --workspace workspaces/myyshop
+node plugins/geo-expert/scripts/geo-lifecycle.mjs validate --workspace <test-workspace>
+node plugins/geo-expert/scripts/geo-lifecycle.mjs trace --workspace <test-workspace> --cycle <CYC-ID>
 ```
 
 真实公开 HTTP snapshot 必须另有逐项授权并使用显式 plan；采集和 M4 输入桥接命令为：

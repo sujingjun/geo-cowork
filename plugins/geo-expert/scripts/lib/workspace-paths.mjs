@@ -37,6 +37,10 @@ export function stableStringify(value, spacing = 0) {
   return `${JSON.stringify(canonicalize(value), null, spacing)}${spacing ? '\n' : ''}`;
 }
 
+export function compareUtf8(left, right) {
+  return Buffer.compare(Buffer.from(String(left), 'utf8'), Buffer.from(String(right), 'utf8'));
+}
+
 export function assertSafeRelativePath(relativePath) {
   if (typeof relativePath !== 'string' || relativePath.length === 0) {
     throw new WorkspacePathError('PATH_ESCAPE', '路径必须是非空相对路径');
@@ -109,7 +113,7 @@ export async function walkMarkdownFiles(workspace, { ignore = () => false } = {}
       });
     }
     const entries = await readdir(absoluteDir, { withFileTypes: true });
-    entries.sort((a, b) => a.name.localeCompare(b.name));
+    entries.sort((a, b) => compareUtf8(a.name, b.name));
     for (const entry of entries) {
       const relative = relativeDir ? `${relativeDir}/${entry.name}` : entry.name;
       if (ignore(relative, entry)) continue;

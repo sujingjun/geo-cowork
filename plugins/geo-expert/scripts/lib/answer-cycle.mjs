@@ -58,8 +58,11 @@ export function planAnswerCycle(plan) {
     throw new AnswerCycleError('PLAYWRIGHT_GATE_NOT_APPROVED', '当前仅批准 recorded_fixture');
   }
   if (plan.purpose !== 'exploratory') {
+    if (plan.profile.data.sampling_count !== 2) {
+      throw new AnswerCycleError('SAMPLE_NOT_INDEPENDENT', '正式 plan 必须固定两个独立 slot');
+    }
     const ordinals = plan.samples.map((sample) => sample.ordinal).sort();
-    if (ordinals.join(',') !== expectedFormalOrdinals(plan.profile.data.sampling_count).join(',')) {
+    if (ordinals.join(',') !== expectedFormalOrdinals().join(',')) {
       throw new AnswerCycleError('SAMPLE_NOT_INDEPENDENT', '正式 plan 必须固定两个 ordinal');
     }
   }

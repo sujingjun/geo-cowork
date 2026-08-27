@@ -1,0 +1,26 @@
+{
+  "schema_version": "m7-cycle-goal-candidate-rule/1.0.0",
+  "id": "m7-cycle-goal-candidate-test-v1",
+  "version": "1.0.0",
+  "kind_order": {
+    "query_cluster": 1,
+    "content_gap": 2,
+    "evidence_gap": 3,
+    "severe_misperception": 4,
+    "recommendation_reason": 5,
+    "product_gap": 6
+  },
+  "sort": [
+    "priority_ascending",
+    "kind_order_ascending",
+    "candidate_content_key_ascii_ascending"
+  ],
+  "derived_fields": {
+    "rationale_template": "Cycle Review froze a {candidate_kind} input with approved source tuples.",
+    "limitations": [
+      "Synthetic test-only evidence; no real product or business conclusion."
+    ]
+  },
+  "hidden_score": false,
+  "real_execution_authorized": false
+}

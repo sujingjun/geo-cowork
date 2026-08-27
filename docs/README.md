@@ -102,6 +102,32 @@
 | M5 Baseline 收口与知识优化 Handoff | [`handoff/2026-08-26-m5-baseline-closeout-and-knowledge-optimization-handoff.md`](handoff/2026-08-26-m5-baseline-closeout-and-knowledge-optimization-handoff.md) | proposed；Owner Review → M3 新知识版本 → 100 Source 分类 → M4 发布/Retest |
 | 平台许可需求池条目 | [`requirements/2026-08-25-platform-automation-permission-backlog.md`](requirements/2026-08-25-platform-automation-permission-backlog.md) | proposed / 待规划；是否启动规范仅由 Owner 决定 |
 
+## M6—M8 测试商户系统工程闭环（Owner 已批准设计）
+
+| 类别 | 工件 | 状态与用途 |
+| --- | --- | --- |
+| Requirement | [`requirements/2026-08-27-m6-m8-test-merchant-engineering-closure.md`](requirements/2026-08-27-m6-m8-test-merchant-engineering-closure.md) | `approved`；原始诉求、测试/真实隔离与三道完成门 |
+| PRD | [`prd/2026-08-27-m6-m8-test-merchant-engineering-closure.md`](prd/2026-08-27-m6-m8-test-merchant-engineering-closure.md) | `approved`；测试商户双周期产品体验与业务验收 |
+| Architecture | [`architecture/2026-08-27-m6-m8-test-merchant-engineering-closure-architecture.md`](architecture/2026-08-27-m6-m8-test-merchant-engineering-closure-architecture.md) | `approved`；M6—M8 模块、隔离、数据流与兼容决策 |
+| Spec 0007 | [`specs/0007-cycle-analytics-test-merchant.md`](specs/0007-cycle-analytics-test-merchant.md) | `approved`；Test Merchant、Cycle/Analytics/Business Signal/Review 合同 |
+| Spec 0008 | [`specs/0008-strategy-discovery-cycle-two.md`](specs/0008-strategy-discovery-cycle-two.md) | `approved`；人工 invocation、strategy eligibility、GCD/GSEL 与 Cycle 2 |
+| Spec 0009 | [`specs/0009-cross-host-conformance-engineering-release.md`](specs/0009-cross-host-conformance-engineering-release.md) | `approved`；宿主边界、fail-loud conformance、session recovery 与 ERC |
+| Plan / Task | [`plans/2026-08-27-m6-m8-test-merchant-engineering-closure-plan.md`](plans/2026-08-27-m6-m8-test-merchant-engineering-closure-plan.md) / [`tasks/2026-08-27-m6-m8-test-merchant-engineering-closure.md`](tasks/2026-08-27-m6-m8-test-merchant-engineering-closure.md) | `approved / approved`；已批准实施顺序、任务依赖与独立 QA 门 |
+| SDD 准备 Record | [`records/2026-08-27-m6-m8-test-merchant-sdd-record.md`](records/2026-08-27-m6-m8-test-merchant-sdd-record.md) | `verified`；历史 SDD 准备与文档检查，不替代后续 Owner 批准 |
+| SDD 批准 Record | [`records/2026-08-27-m6-m8-sdd-approval-record.md`](records/2026-08-27-m6-m8-sdd-approval-record.md) | `verified`；记录 Owner 明确批准、Spec 0003/0004 继承基线与未授权边界 |
+| M5→M6 兼容性 Review Record | [`records/2026-08-27-m5-m6-two-slot-lease-compatibility-review.md`](records/2026-08-27-m5-m6-two-slot-lease-compatibility-review.md) | `verified`；两槽正式协议、历史 `sampling_count:3` parse 与 lease revision 的窄技术兼容决策；不是业务批准 |
+| M7 DDM 状态机 Review Record | [`records/2026-08-27-m7-decision-dimension-state-machine-review.md`](records/2026-08-27-m7-decision-dimension-state-machine-review.md) | `verified`；Owner 委派的 test-merchant engineering 独立技术决策，不是 MyyShop 业务批准 |
+| M7 Review 候选生成合同 Review Record | [`records/2026-08-28-m7-review-candidate-generation-contract-review.md`](records/2026-08-28-m7-review-candidate-generation-contract-review.md) | `verified`；明确 rationale/limitations 只由 Run outputs 中版本化规则派生，不扩大 CRV 或真实授权 |
+| M8 Conformance 合同闭包 Review Record | [`records/2026-08-27-m8-conformance-contract-closure-review.md`](records/2026-08-27-m8-conformance-contract-closure-review.md) | `verified`；Owner 委派的 CFP/Repository/Tool closure 技术决策，不是真实宿主或发布批准 |
+| Approval Handoff | [`handoff/2026-08-27-m6-m8-test-merchant-sdd-approval-handoff.md`](handoff/2026-08-27-m6-m8-test-merchant-sdd-approval-handoff.md) | `verified`；T01 已完成，后续从 T02 按批准 Plan 推进 |
+| M6 Cycle 1 Record | [`records/2026-08-28-m6-test-merchant-cycle1-engineering-record.md`](records/2026-08-28-m6-test-merchant-cycle1-engineering-record.md) | `verified`；仅 synthetic/test_only Cycle 1 工程、113 tests 与独立 final QA |
+| Owner M7 / Circle 1 范围调整 Record | [`records/2026-08-28-owner-m7-circle1-scope-amendment.md`](records/2026-08-28-owner-m7-circle1-scope-amendment.md) | `verified`；当前终点收缩为 Circle 1 人工接管，Strategy/Circle 2/M8 deferred |
+| M7 / Circle 1 独立 Final QA Record | [`records/2026-08-28-m7-circle1-final-qa-record.md`](records/2026-08-28-m7-circle1-final-qa-record.md) | `verified`；113/113、19/19、稳定 Workspace 与双 manifest 首尾一致，P0/P1/P2 为 0/0/0 |
+| M6 → M7 Handoff | [`handoff/2026-08-28-m6-to-m7-test-merchant-handoff.md`](handoff/2026-08-28-m6-to-m7-test-merchant-handoff.md) | `proposed`；M7 红测、ownership、Cycle 2 输入与停止条件 |
+| M6 人工内测 Runbook | [`runbooks/m6-test-merchant-internal-review.md`](runbooks/m6-test-merchant-internal-review.md) | `proposed`；生成独立 Review Workspace、人工对象链与产品方向检查 |
+| M6 人工内测暂停 Handoff | [`handoff/2026-08-28-m6-owner-internal-review-pause-handoff.md`](handoff/2026-08-28-m6-owner-internal-review-pause-handoff.md) | `verified`；Owner 最新范围调整后暂停门重新生效，保留为历史与人工内测入口 |
+| M7 / Circle 1 Owner 接管 Handoff | [`handoff/2026-08-28-m7-circle1-owner-internal-review-handoff.md`](handoff/2026-08-28-m7-circle1-owner-internal-review-handoff.md) | `verified`；Circle 1 工程与人工接管就绪，后续能力 deferred |
+
 ## 历史提案与交接
 
 | 工件 | 位置 | 状态与用途 |
@@ -126,6 +152,6 @@ Owner 已批准 M5 两槽英文主线、中文可选辅助、同对象语义合�
 | [`records/`](records/2026-08-20-plugin-initialization-acceptance.md) | 实际命令、结果、失败、修复与未验证项 |
 | [`runbooks/`](runbooks/geo-cowork-account-data-readiness.md) | 账号、数据、运行、恢复和发布前操作清单 |
 | [`wiki/`](wiki/index.md) | 项目知识库导航摘要 |
-| [`handoff/`](handoff/2026-08-24-m2-m4-integrated-optimization-handoff.md) | 跨 Session 或跨 Agent 的继承基线、第一动作和停止条件 |
+| [`handoff/`](handoff/2026-08-27-m6-m8-test-merchant-sdd-approval-handoff.md) | 跨 Session 或跨 Agent 的继承基线、第一动作和停止条件 |
 
 其余文档类别（原型、Runbook、Release、复盘和经验）的目录契约与建档规则见 `docs/workflow.md` 第 2 章；各类目录在首次出现 canonical 文档时创建并加入本导航。

@@ -8,6 +8,7 @@ import {
 import {
   assertSafeRelativePath,
   atomicWrite,
+  compareUtf8,
   sha256,
   stableStringify,
   writeCreateOnly,
@@ -34,7 +35,7 @@ export class RunStoreError extends Error {
 }
 
 function sortedInputVersions(inputVersions) {
-  return Object.fromEntries(Object.entries(inputVersions).sort(([a], [b]) => a.localeCompare(b)));
+  return Object.fromEntries(Object.entries(inputVersions).sort(([a], [b]) => compareUtf8(a, b)));
 }
 
 export function inputFingerprint(inputVersions) {

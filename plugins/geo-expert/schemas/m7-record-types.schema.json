@@ -1,0 +1,494 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://geo-cowork.local/schemas/m7-record-types-v1.json",
+  "$defs": {
+    "strategy_assessment": {
+      "x-id-prefix": "STA-",
+      "x-statuses": ["draft", "waiting_human", "decided", "superseded"],
+      "required": ["test_scope", "merchant_ref", "cycle_review_ref", "cycle_review_version", "strategy_input_snapshot_version", "human_invocation", "eligibility_inputs", "eligibility_checks", "eligibility_result", "eligibility_rule", "decision"],
+      "properties": {
+        "merchant_ref": { "type": "string", "pattern": "^TMT-(?:[A-Z0-9]+-)*[A-Z0-9]+$" },
+        "cycle_review_ref": { "type": "string", "pattern": "^CRV-(?:[A-Z0-9]+-)*[A-Z0-9]+$" },
+        "cycle_review_version": { "type": "string", "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$" },
+        "strategy_input_snapshot_version": { "$ref": "common#/$defs/refVersion" },
+        "human_invocation": {
+          "type": "object",
+          "required": ["decision_ref", "invoked_by", "invoked_at", "requested_scope"],
+          "properties": {
+            "decision_ref": { "type": "string", "minLength": 1 },
+            "invoked_by": { "type": "string", "minLength": 1 },
+            "invoked_at": { "$ref": "common#/$defs/rfc3339" },
+            "requested_scope": { "type": "string", "minLength": 1 }
+          },
+          "additionalProperties": false
+        },
+        "eligibility_inputs": {
+          "type": "object",
+          "required": [
+            "review_entry_keys", "evidence_entry_keys", "finding_entry_keys",
+            "product_gap_entry_key", "product_gap_identity"
+          ],
+          "properties": {
+            "review_entry_keys": { "type": "array", "minItems": 1, "uniqueItems": true, "items": { "$ref": "common#/$defs/sha256" } },
+            "evidence_entry_keys": { "type": "array", "minItems": 1, "uniqueItems": true, "items": { "$ref": "common#/$defs/sha256" } },
+            "finding_entry_keys": { "type": "array", "minItems": 1, "uniqueItems": true, "items": { "$ref": "common#/$defs/sha256" } },
+            "product_gap_entry_key": { "$ref": "common#/$defs/sha256" },
+            "product_gap_identity": {
+              "type": "object",
+              "required": ["object_id", "record_type", "object_version", "file_sha256"],
+              "properties": {
+                "object_id": { "type": "string", "pattern": "^FND-(?:[A-Z0-9]+-)*[A-Z0-9]+$" },
+                "record_type": { "const": "finding" },
+                "object_version": { "type": "string", "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$" },
+                "file_sha256": { "$ref": "common#/$defs/sha256" }
+              },
+              "additionalProperties": false
+            }
+          },
+          "additionalProperties": false
+        },
+        "eligibility_checks": {
+          "type": "object",
+          "required": [
+            "repeated_dimension", "user_interest_evidence", "comparison_impact",
+            "content_evidence_fix_insufficient"
+          ],
+          "properties": {
+            "repeated_dimension": {
+              "type": "object",
+              "required": ["state", "dimension_key", "query_entry_keys", "review_entry_keys"],
+              "properties": {
+                "state": { "enum": ["pass", "fail", "insufficient"] },
+                "dimension_key": { "type": "string" },
+                "query_entry_keys": { "type": "array", "uniqueItems": true, "items": { "$ref": "common#/$defs/sha256" } },
+                "review_entry_keys": { "type": "array", "uniqueItems": true, "items": { "$ref": "common#/$defs/sha256" } }
+              },
+              "additionalProperties": false
+            },
+            "user_interest_evidence": {
+              "type": "object",
+              "required": ["state", "evidence_entry_keys"],
+              "properties": {
+                "state": { "enum": ["pass", "fail", "insufficient"] },
+                "evidence_entry_keys": { "type": "array", "uniqueItems": true, "items": { "$ref": "common#/$defs/sha256" } }
+              },
+              "additionalProperties": false
+            },
+            "comparison_impact": {
+              "type": "object",
+              "required": ["state", "evidence_entry_keys", "review_entry_keys"],
+              "properties": {
+                "state": { "enum": ["pass", "fail", "insufficient"] },
+                "evidence_entry_keys": { "type": "array", "uniqueItems": true, "items": { "$ref": "common#/$defs/sha256" } },
+                "review_entry_keys": { "type": "array", "uniqueItems": true, "items": { "$ref": "common#/$defs/sha256" } }
+              },
+              "additionalProperties": false
+            },
+            "content_evidence_fix_insufficient": {
+              "type": "object",
+              "required": ["state", "finding_entry_keys"],
+              "properties": {
+                "state": { "enum": ["pass", "fail", "insufficient"] },
+                "finding_entry_keys": { "type": "array", "uniqueItems": true, "items": { "$ref": "common#/$defs/sha256" } }
+              },
+              "additionalProperties": false
+            }
+          },
+          "additionalProperties": false
+        },
+        "eligibility_result": { "enum": ["eligible", "ineligible", "insufficient"] },
+        "eligibility_rule": {
+          "type": "object",
+          "required": ["id", "version", "artifact_path", "artifact_entry_key", "sha256"],
+          "properties": {
+            "id": { "type": "string", "minLength": 1 },
+            "version": { "type": "string", "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$" },
+            "artifact_path": { "type": "string", "minLength": 1 },
+            "artifact_entry_key": { "$ref": "common#/$defs/sha256" },
+            "sha256": { "$ref": "common#/$defs/sha256" }
+          },
+          "additionalProperties": false
+        },
+        "decision": { "enum": ["proceed", "do_not_proceed", "needs_evidence", "pending"] },
+        "approval": { "$ref": "common#/$defs/approval" },
+        "supersedes_ref": { "type": "string", "pattern": "^STA-(?:[A-Z0-9]+-)*[A-Z0-9]+$" }
+      }
+    },
+    "decision_dimension": {
+      "x-id-prefix": "DDM-",
+      "x-statuses": ["candidate", "validated", "decision_factor", "deprecated"],
+      "required": ["test_scope", "merchant_ref", "strategy_assessment_version", "strategy_input_snapshot_version", "label", "definition", "query_entry_keys", "review_entry_keys", "evidence_entry_keys", "finding_entry_keys", "product_gap_entry_key", "product_gap_identity", "basis"],
+      "properties": {
+        "merchant_ref": { "type": "string", "pattern": "^TMT-(?:[A-Z0-9]+-)*[A-Z0-9]+$" },
+        "strategy_assessment_version": { "$ref": "common#/$defs/refVersion" },
+        "strategy_input_snapshot_version": { "$ref": "common#/$defs/refVersion" },
+        "label": { "type": "string", "minLength": 1 },
+        "definition": { "type": "string", "minLength": 1 },
+        "query_entry_keys": { "type": "array", "minItems": 1, "uniqueItems": true, "items": { "$ref": "common#/$defs/sha256" } },
+        "review_entry_keys": { "type": "array", "minItems": 1, "uniqueItems": true, "items": { "$ref": "common#/$defs/sha256" } },
+        "evidence_entry_keys": { "type": "array", "minItems": 1, "uniqueItems": true, "items": { "$ref": "common#/$defs/sha256" } },
+        "finding_entry_keys": { "type": "array", "minItems": 1, "uniqueItems": true, "items": { "$ref": "common#/$defs/sha256" } },
+        "product_gap_entry_key": { "$ref": "common#/$defs/sha256" },
+        "product_gap_identity": {
+          "type": "object",
+          "required": ["object_id", "record_type", "object_version", "file_sha256"],
+          "properties": {
+            "object_id": { "type": "string", "pattern": "^FND-(?:[A-Z0-9]+-)*[A-Z0-9]+$" },
+            "record_type": { "const": "finding" },
+            "object_version": { "type": "string", "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$" },
+            "file_sha256": { "$ref": "common#/$defs/sha256" }
+          },
+          "additionalProperties": false
+        },
+        "basis": {
+          "type": "object",
+          "required": [
+            "platforms", "query_clusters", "supporting_observations",
+            "counter_observations", "unresolved_conflicts"
+          ],
+          "properties": {
+            "platforms": { "type": "array", "minItems": 1, "uniqueItems": true, "items": { "type": "string", "minLength": 1 } },
+            "query_clusters": { "type": "array", "minItems": 1, "uniqueItems": true, "items": { "type": "string", "minLength": 1 } },
+            "supporting_observations": { "$ref": "common#/$defs/stringArray" },
+            "counter_observations": { "$ref": "common#/$defs/stringArray" },
+            "unresolved_conflicts": { "$ref": "common#/$defs/stringArray" }
+          },
+          "additionalProperties": false
+        },
+        "validation_decision": {
+          "type": "object",
+          "required": ["decided_by", "decided_at", "decision_ref", "verdict", "reason"],
+          "properties": {
+            "decided_by": { "type": "string", "minLength": 1 },
+            "decided_at": { "$ref": "common#/$defs/rfc3339" },
+            "decision_ref": { "type": "string", "minLength": 1 },
+            "verdict": { "enum": ["validated", "rejected"] },
+            "reason": { "type": "string", "minLength": 1 }
+          },
+          "additionalProperties": false
+        },
+        "factor_decision": {
+          "type": "object",
+          "required": ["decided_by", "decided_at", "decision_ref", "verdict", "reason"],
+          "properties": {
+            "decided_by": { "type": "string", "minLength": 1 },
+            "decided_at": { "$ref": "common#/$defs/rfc3339" },
+            "decision_ref": { "type": "string", "minLength": 1 },
+            "verdict": { "enum": ["promoted", "rejected"] },
+            "reason": { "type": "string", "minLength": 1 }
+          },
+          "additionalProperties": false
+        },
+        "deprecation_decision": {
+          "type": "object",
+          "required": ["decided_by", "decided_at", "decision_ref", "verdict", "reason"],
+          "properties": {
+            "decided_by": { "type": "string", "minLength": 1 },
+            "decided_at": { "$ref": "common#/$defs/rfc3339" },
+            "decision_ref": { "type": "string", "minLength": 1 },
+            "verdict": { "const": "deprecated" },
+            "reason": { "type": "string", "minLength": 1 }
+          },
+          "additionalProperties": false
+        },
+        "supersedes_ref": { "type": "string", "pattern": "^DDM-(?:[A-Z0-9]+-)*[A-Z0-9]+$" }
+      }
+    },
+    "cycle_goal_candidate_batch": {
+      "x-id-prefix": "GCB-",
+      "x-statuses": ["recorded"],
+      "required": ["test_scope", "merchant_ref", "source_cycle_review_version", "review_input_snapshot_version", "generator_rule", "batch_key", "ordered_candidates", "run_ref"],
+      "properties": {
+        "merchant_ref": { "type": "string", "pattern": "^TMT-(?:[A-Z0-9]+-)*[A-Z0-9]+$" },
+        "source_cycle_review_version": {
+          "type": "object",
+          "required": ["ref", "version", "file_sha256"],
+          "properties": {
+            "ref": { "type": "string", "pattern": "^CRV-(?:[A-Z0-9]+-)*[A-Z0-9]+$" },
+            "version": { "type": "string", "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$" },
+            "file_sha256": { "$ref": "common#/$defs/sha256" }
+          },
+          "additionalProperties": false
+        },
+        "review_input_snapshot_version": {
+          "type": "object",
+          "required": ["ref", "version", "fingerprint"],
+          "properties": {
+            "ref": { "type": "string", "pattern": "^CIS-(?:[A-Z0-9]+-)*[A-Z0-9]+$" },
+            "version": { "type": "string", "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$" },
+            "fingerprint": { "$ref": "common#/$defs/sha256" }
+          },
+          "additionalProperties": false
+        },
+        "generator_rule": {
+          "type": "object",
+          "required": ["id", "version", "artifact_path", "sha256"],
+          "properties": {
+            "id": { "type": "string", "minLength": 1 },
+            "version": { "type": "string", "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$" },
+            "artifact_path": { "type": "string", "minLength": 1 },
+            "sha256": { "$ref": "common#/$defs/sha256" }
+          },
+          "additionalProperties": false
+        },
+        "batch_key": { "$ref": "common#/$defs/sha256" },
+        "ordered_candidates": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "required": [
+              "candidate_content_key", "rank_inputs", "rank",
+              "candidate_instance_key", "candidate_version"
+            ],
+            "properties": {
+              "candidate_content_key": { "$ref": "common#/$defs/sha256" },
+              "rank_inputs": {
+                "type": "object",
+                "required": ["priority", "kind_order", "tie_break_key"],
+                "properties": {
+                  "priority": { "type": "integer", "minimum": 0 },
+                  "kind_order": { "type": "integer", "minimum": 1, "maximum": 6 },
+                  "tie_break_key": { "$ref": "common#/$defs/sha256" }
+                },
+                "additionalProperties": false
+              },
+              "rank": { "type": "integer", "minimum": 1 },
+              "candidate_instance_key": { "$ref": "common#/$defs/sha256" },
+              "candidate_version": { "$ref": "common#/$defs/refVersion" }
+            },
+            "additionalProperties": false
+          }
+        },
+        "run_ref": { "type": "string", "pattern": "^RUN-(?:[A-Z0-9]+-)*[A-Z0-9]+$" }
+      }
+    },
+    "cycle_goal_candidate": {
+      "x-id-prefix": "GCD-",
+      "x-statuses": ["candidate"],
+      "required": [
+        "test_scope", "merchant_ref", "candidate_batch_version",
+        "source_cycle_review_version", "review_input_snapshot_version",
+        "candidate_content_key", "candidate_instance_key", "candidate_kind",
+        "source_goal_entry_key", "source_entry_keys", "proposed_goal", "rationale",
+        "limitations", "evidence_gaps", "risks", "rank_inputs", "rank"
+      ],
+      "properties": {
+        "merchant_ref": { "type": "string", "pattern": "^TMT-(?:[A-Z0-9]+-)*[A-Z0-9]+$" },
+        "candidate_batch_version": { "$ref": "common#/$defs/refVersion" },
+        "source_cycle_review_version": {
+          "type": "object",
+          "required": ["ref", "version", "file_sha256"],
+          "properties": {
+            "ref": { "type": "string", "pattern": "^CRV-(?:[A-Z0-9]+-)*[A-Z0-9]+$" },
+            "version": { "type": "string", "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$" },
+            "file_sha256": { "$ref": "common#/$defs/sha256" }
+          },
+          "additionalProperties": false
+        },
+        "review_input_snapshot_version": {
+          "type": "object",
+          "required": ["ref", "version", "fingerprint"],
+          "properties": {
+            "ref": { "type": "string", "pattern": "^CIS-(?:[A-Z0-9]+-)*[A-Z0-9]+$" },
+            "version": { "type": "string", "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$" },
+            "fingerprint": { "$ref": "common#/$defs/sha256" }
+          },
+          "additionalProperties": false
+        },
+        "candidate_content_key": { "$ref": "common#/$defs/sha256" },
+        "candidate_instance_key": { "$ref": "common#/$defs/sha256" },
+        "candidate_kind": { "enum": ["query_cluster", "content_gap", "evidence_gap", "severe_misperception", "recommendation_reason", "product_gap"] },
+        "source_goal_entry_key": { "$ref": "common#/$defs/sha256" },
+        "source_entry_keys": { "type": "array", "minItems": 1, "uniqueItems": true, "items": { "$ref": "common#/$defs/sha256" } },
+        "proposed_goal": {
+          "type": "object",
+          "required": ["statement", "success_question", "query_cluster_key"],
+          "properties": {
+            "statement": { "type": "string", "minLength": 1 },
+            "success_question": { "type": "string", "minLength": 1 },
+            "query_cluster_key": { "type": "string", "minLength": 1 }
+          },
+          "additionalProperties": false
+        },
+        "rationale": { "type": "string", "minLength": 1 },
+        "limitations": { "type": "array", "minItems": 1, "items": { "type": "string", "minLength": 1 } },
+        "evidence_gaps": { "$ref": "common#/$defs/stringArray" },
+        "risks": { "$ref": "common#/$defs/stringArray" },
+        "rank_inputs": {
+          "type": "object",
+          "required": ["priority", "kind_order", "tie_break_key"],
+          "properties": {
+            "priority": { "type": "integer", "minimum": 0 },
+            "kind_order": { "type": "integer", "minimum": 1, "maximum": 6 },
+            "tie_break_key": { "$ref": "common#/$defs/sha256" }
+          },
+          "additionalProperties": false
+        },
+        "rank": { "type": "integer", "minimum": 1 },
+        "strategy_gate_versions": {
+          "type": "object",
+          "required": [
+            "strategy_input_snapshot_version", "review_product_gap_entry_key",
+            "strategy_product_gap_entry_key", "product_gap_identity",
+            "strategy_assessment_version", "decision_dimension_versions",
+            "strategy_output_version"
+          ],
+          "properties": {
+            "strategy_input_snapshot_version": { "$ref": "common#/$defs/refVersion" },
+            "review_product_gap_entry_key": { "$ref": "common#/$defs/sha256" },
+            "strategy_product_gap_entry_key": { "$ref": "common#/$defs/sha256" },
+            "product_gap_identity": {
+              "type": "object",
+              "required": ["object_id", "record_type", "object_version", "file_sha256"],
+              "properties": {
+                "object_id": { "type": "string", "pattern": "^FND-(?:[A-Z0-9]+-)*[A-Z0-9]+$" },
+                "record_type": { "const": "finding" },
+                "object_version": { "type": "string", "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$" },
+                "file_sha256": { "$ref": "common#/$defs/sha256" }
+              },
+              "additionalProperties": false
+            },
+            "strategy_assessment_version": { "$ref": "common#/$defs/refVersion" },
+            "decision_dimension_versions": { "type": "array", "minItems": 1, "uniqueItems": true, "items": { "$ref": "common#/$defs/refVersion" } },
+            "strategy_output_version": { "$ref": "common#/$defs/refVersion" }
+          },
+          "additionalProperties": false
+        }
+      }
+    },
+    "cycle_goal_selection": {
+      "x-id-prefix": "GSEL-",
+      "x-statuses": ["draft", "decided", "superseded"],
+      "required": [
+        "test_scope", "merchant_ref", "source_cycle_review_version",
+        "candidate_batch_version", "batch_key", "decision_key",
+        "candidate_versions", "decision"
+      ],
+      "properties": {
+        "merchant_ref": { "type": "string", "pattern": "^TMT-(?:[A-Z0-9]+-)*[A-Z0-9]+$" },
+        "source_cycle_review_version": {
+          "type": "object",
+          "required": ["ref", "version", "file_sha256"],
+          "properties": {
+            "ref": { "type": "string", "pattern": "^CRV-(?:[A-Z0-9]+-)*[A-Z0-9]+$" },
+            "version": { "type": "string", "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$" },
+            "file_sha256": { "$ref": "common#/$defs/sha256" }
+          },
+          "additionalProperties": false
+        },
+        "candidate_batch_version": { "$ref": "common#/$defs/refVersion" },
+        "batch_key": { "$ref": "common#/$defs/sha256" },
+        "decision_key": { "$ref": "common#/$defs/sha256" },
+        "candidate_versions": { "type": "array", "minItems": 1, "uniqueItems": true, "items": { "$ref": "common#/$defs/refVersion" } },
+        "decision": {
+          "type": "object",
+          "required": [
+            "selected_candidate_version", "rejected_candidate_versions",
+            "deferred_candidate_versions", "reason"
+          ],
+          "properties": {
+            "selected_candidate_version": {
+              "anyOf": [{ "$ref": "common#/$defs/refVersion" }, { "type": "null" }]
+            },
+            "rejected_candidate_versions": { "type": "array", "uniqueItems": true, "items": { "$ref": "common#/$defs/refVersion" } },
+            "deferred_candidate_versions": { "type": "array", "uniqueItems": true, "items": { "$ref": "common#/$defs/refVersion" } },
+            "reason": { "type": ["string", "null"] }
+          },
+          "additionalProperties": false
+        },
+        "approval": { "$ref": "common#/$defs/approval" },
+        "supersedes_ref": { "type": "string", "pattern": "^GSEL-(?:[A-Z0-9]+-)*[A-Z0-9]+$" }
+      }
+    },
+    "strategy_output": {
+      "x-id-prefix": "STO-",
+      "x-statuses": ["draft", "superseded"],
+      "required": [
+        "test_scope", "merchant_ref", "strategy_assessment_version",
+        "strategy_input_snapshot_version", "run_ref", "decision_dimension_versions",
+        "product_gap_entry_key", "product_gap_identity", "opportunity", "artifacts",
+        "validation_plan_contract", "body_sha256", "artifact_manifest_fingerprint"
+      ],
+      "properties": {
+        "merchant_ref": { "type": "string", "pattern": "^TMT-(?:[A-Z0-9]+-)*[A-Z0-9]+$" },
+        "strategy_assessment_version": { "$ref": "common#/$defs/refVersion" },
+        "strategy_input_snapshot_version": { "$ref": "common#/$defs/refVersion" },
+        "run_ref": { "type": "string", "pattern": "^RUN-(?:[A-Z0-9]+-)*[A-Z0-9]+$" },
+        "decision_dimension_versions": { "type": "array", "minItems": 1, "uniqueItems": true, "items": { "$ref": "common#/$defs/refVersion" } },
+        "product_gap_entry_key": { "$ref": "common#/$defs/sha256" },
+        "product_gap_identity": {
+          "type": "object",
+          "required": ["object_id", "record_type", "object_version", "file_sha256"],
+          "properties": {
+            "object_id": { "type": "string", "pattern": "^FND-(?:[A-Z0-9]+-)*[A-Z0-9]+$" },
+            "record_type": { "const": "finding" },
+            "object_version": { "type": "string", "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$" },
+            "file_sha256": { "$ref": "common#/$defs/sha256" }
+          },
+          "additionalProperties": false
+        },
+        "opportunity": {
+          "type": "object",
+          "required": [
+            "statement", "supporting_evidence_entry_keys",
+            "counter_evidence_entry_keys", "limitations"
+          ],
+          "properties": {
+            "statement": { "type": "string", "minLength": 1 },
+            "supporting_evidence_entry_keys": { "type": "array", "minItems": 1, "uniqueItems": true, "items": { "$ref": "common#/$defs/sha256" } },
+            "counter_evidence_entry_keys": { "type": "array", "uniqueItems": true, "items": { "$ref": "common#/$defs/sha256" } },
+            "limitations": { "type": "array", "minItems": 1, "items": { "type": "string", "minLength": 1 } }
+          },
+          "additionalProperties": false
+        },
+        "artifacts": {
+          "type": "array",
+          "minItems": 3,
+          "maxItems": 3,
+          "items": {
+            "type": "object",
+            "required": ["role", "path", "sha256", "media_type"],
+            "properties": {
+              "role": { "enum": ["opportunity_analysis", "prd_draft", "human_validation_plan"] },
+              "path": { "type": "string", "minLength": 1 },
+              "sha256": { "$ref": "common#/$defs/sha256" },
+              "media_type": { "const": "text/markdown" }
+            },
+            "additionalProperties": false
+          }
+        },
+        "validation_plan_contract": {
+          "type": "object",
+          "required": [
+            "hypothesis", "required_evidence", "method", "result_criteria", "owner",
+            "stop_conditions", "real_execution_authorized", "auto_approval"
+          ],
+          "properties": {
+            "hypothesis": { "type": "string", "minLength": 1 },
+            "required_evidence": { "type": "array", "minItems": 1, "items": { "type": "string", "minLength": 1 } },
+            "method": { "type": "string", "minLength": 1 },
+            "result_criteria": {
+              "type": "object",
+              "required": ["success", "fail", "inconclusive"],
+              "properties": {
+                "success": { "type": "string", "minLength": 1 },
+                "fail": { "type": "string", "minLength": 1 },
+                "inconclusive": { "type": "string", "minLength": 1 }
+              },
+              "additionalProperties": false
+            },
+            "owner": { "type": "string", "minLength": 1 },
+            "stop_conditions": { "type": "array", "minItems": 1, "items": { "type": "string", "minLength": 1 } },
+            "real_execution_authorized": { "const": false },
+            "auto_approval": { "const": false }
+          },
+          "additionalProperties": false
+        },
+        "body_sha256": { "$ref": "common#/$defs/sha256" },
+        "artifact_manifest_fingerprint": { "$ref": "common#/$defs/sha256" },
+        "supersedes_ref": { "type": "string", "pattern": "^STO-(?:[A-Z0-9]+-)*[A-Z0-9]+$" }
+      }
+    }
+  }
+}

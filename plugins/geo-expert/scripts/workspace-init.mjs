@@ -47,8 +47,36 @@ async function readIdentity(file) {
   throw error;
 }
 
+function assertTestOptions({ testOnly, testNamespace, subjectLocator }) {
+  if (testOnly) {
+    if (!testNamespace) throw new Error('--test-only 需要 --test-namespace');
+    if (!subjectLocator) throw new Error('--test-only 需要 --subject-locator');
+    if (!/^[a-z0-9][a-z0-9-]*$/.test(testNamespace)) {
+      throw new Error('--test-namespace 只允许小写字母、数字和连字符');
+    }
+    let locator;
+    try {
+      locator = new URL(subjectLocator);
+    } catch {
+      throw new Error('--subject-locator 必须是合法 URL');
+    }
+    if (!locator.hostname.endsWith('.invalid')) {
+      throw new Error('--subject-locator 必须使用 .invalid 主机');
+    }
+  } else if (testNamespace || subjectLocator) {
+    throw new Error('--test-namespace/--subject-locator 只能与 --test-only 一起使用');
+  }
+}
+
 function parseArgs(argv) {
-  const args = { workspace: null, brand: null, dryRun: false };
+  const args = {
+    workspace: null,
+    brand: null,
+    dryRun: false,
+    testOnly: false,
+    testNamespace: null,
+    subjectLocator: null,
+  };
   for (let i = 0; i < argv.length; i += 1) {
     const arg = argv[i];
     if (arg === '--workspace') {
@@ -57,6 +85,12 @@ function parseArgs(argv) {
       args.brand = argv[++i] ?? null;
     } else if (arg === '--dry-run') {
       args.dryRun = true;
+    } else if (arg === '--test-only') {
+      args.testOnly = true;
+    } else if (arg === '--test-namespace') {
+      args.testNamespace = argv[++i] ?? null;
+    } else if (arg === '--subject-locator') {
+      args.subjectLocator = argv[++i] ?? null;
     } else if (arg === '--help' || arg === '-h') {
       args.help = true;
     } else {
@@ -65,6 +99,7 @@ function parseArgs(argv) {
   }
   if (args.workspace === '') throw new Error('--workspace 需要路径值');
   if (args.brand === '') throw new Error('--brand 需要名称值');
+  assertTestOptions(args);
   return args;
 }
 
@@ -92,7 +127,26 @@ async function pluginVersion() {
   return manifest.version;
 }
 
-export async function initWorkspace({ workspace, brand, dryRun = false }) {
+function assertExistingTestIdentity(identity, { testNamespace, subjectLocator }) {
+  if (identity.workspace_mode !== 'test_only'
+      || identity.test_namespace !== testNamespace
+      || identity.legal_entity !== false
+      || identity.subject_locator !== subjectLocator) {
+    const error = new Error('workspace.json 测试身份与请求不一致，禁止事后转换');
+    error.code = 'IDENTITY_CONFLICT';
+    throw error;
+  }
+}
+
+export async function initWorkspace({
+  workspace,
+  brand,
+  dryRun = false,
+  testOnly = false,
+  testNamespace = null,
+  subjectLocator = null,
+}) {
+  assertTestOptions({ testOnly, testNamespace, subjectLocator });
   const root = path.resolve(workspace ?? process.cwd());
   const brandName = brand ?? path.basename(root);
   const created = [];
@@ -104,6 +158,7 @@ export async function initWorkspace({ workspace, brand, dryRun = false }) {
   if (await exists(wsJsonPath)) {
     // 已存在身份文件：校验必需字段，身份保持不变（Spec 0002 §5.2.4）
     const parsed = await readIdentity(wsJsonPath);
+    if (testOnly) assertExistingTestIdentity(parsed, { testNamespace, subjectLocator });
     workspaceId = parsed.workspace_id;
     kept.push('workspace.json');
   }
@@ -126,11 +181,21 @@ export async function initWorkspace({ workspace, brand, dryRun = false }) {
     const candidateId = generateWorkspaceId();
     const version = await pluginVersion();
     const template = await readFile(path.join(TEMPLATE_DIR, 'workspace.json'), 'utf8');
-    const candidate = template
+    let candidate = template
       .replaceAll('{{BRAND}}', brandName)
       .replaceAll('{{WORKSPACE_ID}}', candidateId)
       .replaceAll('{{CREATED_AT}}', new Date().toISOString())
       .replaceAll('{{PLUGIN_VERSION}}', version);
+    if (testOnly) {
+      const identity = JSON.parse(candidate);
+      Object.assign(identity, {
+        workspace_mode: 'test_only',
+        test_namespace: testNamespace,
+        legal_entity: false,
+        subject_locator: subjectLocator,
+      });
+      candidate = `${JSON.stringify(identity, null, 2)}\n`;
+    }
     try {
       await writeFile(wsJsonPath, candidate, { flag: 'wx' });
       workspaceId = candidateId;
@@ -138,6 +203,7 @@ export async function initWorkspace({ workspace, brand, dryRun = false }) {
     } catch (err) {
       if (err.code !== 'EEXIST') throw err;
       const actual = await readIdentity(wsJsonPath);
+      if (testOnly) assertExistingTestIdentity(actual, { testNamespace, subjectLocator });
       workspaceId = actual.workspace_id;
       kept.push('workspace.json');
     }
@@ -180,7 +246,13 @@ export async function initWorkspace({ workspace, brand, dryRun = false }) {
     }
   }
 
-  return { workspace: root, created, kept, workspace_id: workspaceId };
+  return {
+    workspace: root,
+    created,
+    kept,
+    workspace_id: workspaceId,
+    ...(testOnly ? { workspace_mode: 'test_only', test_namespace: testNamespace } : {}),
+  };
 }
 
 async function main() {
@@ -192,7 +264,7 @@ async function main() {
     process.exit(2);
   }
   if (args.help) {
-    console.log('用法: node workspace-init.mjs [--workspace <path>] [--brand <name>] [--dry-run]');
+    console.log('用法: node workspace-init.mjs [--workspace <path>] [--brand <name>] [--dry-run] [--test-only --test-namespace <id> --subject-locator <https://name.invalid/>]');
     process.exit(0);
   }
   try {

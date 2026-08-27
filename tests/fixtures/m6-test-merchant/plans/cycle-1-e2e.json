@@ -1,0 +1,184 @@
+{
+  "schema_version": "m6-cycle-1-e2e-plan/1.0.0",
+  "prepare": {
+    "schema_version": "m6-prepare-test-merchant-plan/1.0.0",
+    "brand": "M6 Synthetic Test Merchant",
+    "workspace_id": "ws_m6testmerchant000000000000",
+    "test_namespace": "m6-test-merchant-v1",
+    "subject_locator": "https://m6-test-merchant.invalid/",
+    "merchant_id": "TMT-M6-TEST-001",
+    "merchant_path": "cycles/preparation/test-merchant.md",
+    "decision_ref": "fixture://approval/m6-test-only-001"
+  },
+  "create_cycle": {
+    "schema_version": "m6-create-cycle-plan/1.0.0",
+    "cycle_id": "CYC-M6-TEST-001",
+    "cycle_path": "cycles/m6/cycle.md",
+    "run_id": "RUN-M6-CIS-001",
+    "snapshot_id": "CIS-M6-TEST-001",
+    "merchant_ref": "TMT-M6-TEST-001",
+    "goal_ref": "GOAL-M6-TEST-001",
+    "source_paths": [
+      "cycles/preparation/test-merchant.md",
+      "cycles/preparation/goal.md",
+      "queries/formal/query.md",
+      "queries/sets/query-set.md",
+      "knowledge/documents/document.md",
+      "knowledge/claims/claim.md",
+      "knowledge/answer-cards/answer.md",
+      "knowledge/releases/release.md",
+      "evidence/sources/source.md",
+      "evidence/records/evidence.md",
+      "assets/own/about.md",
+      "cycles/preparation/collector-profile.md"
+    ],
+    "artifact_paths": [
+      {
+        "role": "measurement_contract",
+        "path": "execution/contracts/measurement-contract.json",
+        "media_type": "application/json"
+      },
+      {
+        "role": "signal_rule",
+        "path": "execution/contracts/signal-rule.json",
+        "media_type": "application/json"
+      },
+      {
+        "role": "sensitive_data_policy",
+        "path": "execution/contracts/sensitive-data-policy.json",
+        "media_type": "application/json"
+      }
+    ]
+  },
+  "gates": [
+    {
+      "name": "baseline",
+      "transition_id": "CTR-M6-E2E-BASELINE-001",
+      "gate_snapshot_id": "CIS-M6-E2E-BASELINE-001",
+      "from_stage": "frozen",
+      "to_stage": "baseline_recorded",
+      "object_specs": [
+        { "id": "SMP-M6-BASE-S1-001", "record_type": "answer_sample", "status": "recorded", "version": "1.0.0", "path": "cycles/m6/answers/smp-m6-base-s1-001.md" },
+        { "id": "SMP-M6-BASE-S2-001", "record_type": "answer_sample", "status": "recorded", "version": "1.0.0", "path": "cycles/m6/answers/smp-m6-base-s2-001.md" },
+        { "id": "ARV-M6-BASE-S1-001", "record_type": "answer_review", "status": "reviewed", "version": "1.0.0", "path": "cycles/m6/reviews/arv-m6-base-s1-001.md" },
+        { "id": "ARV-M6-BASE-S2-001", "record_type": "answer_review", "status": "reviewed", "version": "1.0.0", "path": "cycles/m6/reviews/arv-m6-base-s2-001.md" },
+        { "id": "AGG-M6-BASE-001", "record_type": "answer_aggregation", "status": "computed", "version": "1.0.0", "path": "cycles/m6/aggregations/agg-m6-base-001.md" }
+      ]
+    },
+    {
+      "name": "diagnosis",
+      "transition_id": "CTR-M6-E2E-DIAGNOSIS-001",
+      "gate_snapshot_id": "CIS-M6-E2E-DIAGNOSIS-001",
+      "from_stage": "baseline_recorded",
+      "to_stage": "diagnosis_ready",
+      "object_specs": [
+        { "id": "FND-M6-CONTENT-GAP-001", "record_type": "finding", "status": "open", "version": "1.0.0", "path": "cycles/m6/findings/fnd-m6-content-gap-001.md" },
+        { "id": "PRP-M6-ASSET-001", "record_type": "asset_proposal", "status": "draft", "version": "1.0.0", "path": "cycles/m6/proposals/prp-m6-asset-001.md" }
+      ]
+    },
+    {
+      "name": "adoption",
+      "transition_id": "CTR-M6-E2E-ADOPTION-001",
+      "gate_snapshot_id": "CIS-M6-E2E-ADOPTION-001",
+      "from_stage": "diagnosis_ready",
+      "to_stage": "adoption_decided",
+      "object_specs": [
+        { "id": "ADR-M6-ASSET-001", "record_type": "adoption_record", "status": "decided", "version": "1.0.0", "path": "cycles/m6/adoptions/adr-m6-asset-001.md" }
+      ]
+    },
+    {
+      "name": "publication",
+      "transition_id": "CTR-M6-E2E-PUBLICATION-001",
+      "gate_snapshot_id": "CIS-M6-E2E-PUBLICATION-001",
+      "from_stage": "adoption_decided",
+      "to_stage": "publication_confirmed",
+      "object_specs": [
+        { "id": "PUB-M6-ASSET-001", "record_type": "asset_publication", "status": "confirmed", "version": "1.0.0", "path": "cycles/m6/publications/pub-m6-asset-001.md" }
+      ]
+    },
+    {
+      "name": "technical_retest",
+      "transition_id": "CTR-M6-E2E-TECHNICAL-001",
+      "gate_snapshot_id": "CIS-M6-E2E-TECHNICAL-001",
+      "from_stage": "publication_confirmed",
+      "to_stage": "technical_retest_completed",
+      "object_specs": [
+        { "id": "RUN-M6-TECHNICAL-RETEST-001", "record_type": "run", "status": "completed", "version": "1.0.0", "path": "runs/RUN-M6-TECHNICAL-RETEST-001/run.md" },
+        { "id": "FND-M6-TECHNICAL-RETEST-001", "record_type": "finding", "status": "resolved", "version": "1.0.0", "path": "cycles/m6/findings/fnd-m6-technical-retest-001.md" }
+      ]
+    },
+    {
+      "name": "answer_retest",
+      "transition_id": "CTR-M6-E2E-ANSWER-RETEST-001",
+      "gate_snapshot_id": "CIS-M6-E2E-ANSWER-RETEST-001",
+      "from_stage": "technical_retest_completed",
+      "to_stage": "answer_retest_completed",
+      "object_specs": [
+        { "id": "SMP-M6-RETEST-S1-001", "record_type": "answer_sample", "status": "recorded", "version": "1.0.0", "path": "cycles/m6/answers/smp-m6-retest-s1-001.md" },
+        { "id": "SMP-M6-RETEST-S2-001", "record_type": "answer_sample", "status": "recorded", "version": "1.0.0", "path": "cycles/m6/answers/smp-m6-retest-s2-001.md" },
+        { "id": "ARV-M6-RETEST-S1-001", "record_type": "answer_review", "status": "reviewed", "version": "1.0.0", "path": "cycles/m6/reviews/arv-m6-retest-s1-001.md" },
+        { "id": "ARV-M6-RETEST-S2-001", "record_type": "answer_review", "status": "reviewed", "version": "1.0.0", "path": "cycles/m6/reviews/arv-m6-retest-s2-001.md" },
+        { "id": "AGG-M6-RETEST-001", "record_type": "answer_aggregation", "status": "computed", "version": "1.0.0", "path": "cycles/m6/aggregations/agg-m6-retest-001.md" }
+      ]
+    },
+    {
+      "name": "analytics",
+      "transition_id": "CTR-M6-E2E-ANALYTICS-001",
+      "gate_snapshot_id": "CIS-M6-E2E-ANALYTICS-001",
+      "from_stage": "answer_retest_completed",
+      "to_stage": "analytics_recorded",
+      "object_specs": [
+        { "id": "ANO-M6-E2E-001", "record_type": "analytics_observation", "status": "recorded", "version": "1.0.0", "path": "cycles/m6/analytics/ano-m6-e2e-001.md" },
+        { "id": "BSIG-M6-E2E-001", "record_type": "business_signal", "status": "computed", "version": "1.0.0", "path": "cycles/m6/signals/bsig-m6-e2e-001.md" }
+      ]
+    },
+    {
+      "name": "review_waiting",
+      "transition_id": "CTR-M6-E2E-REVIEW-WAITING-001",
+      "gate_snapshot_id": "CIS-M6-E2E-REVIEW-WAITING-001",
+      "from_stage": "analytics_recorded",
+      "to_stage": "review_waiting_human",
+      "object_specs": [
+        { "id": "CRV-M6-E2E-WAITING-001", "record_type": "cycle_review", "status": "waiting_human", "version": "1.0.0", "path": "cycles/m6/reviews/crv-m6-e2e-waiting-001.md" }
+      ]
+    },
+    {
+      "name": "review_decided",
+      "transition_id": "CTR-M6-E2E-REVIEW-DECIDED-001",
+      "gate_snapshot_id": "CIS-M6-E2E-REVIEW-DECIDED-001",
+      "from_stage": "review_waiting_human",
+      "to_stage": "review_decided",
+      "object_specs": [
+        { "id": "CRV-M6-E2E-DECIDED-001", "record_type": "cycle_review", "status": "decided", "version": "1.0.0", "path": "cycles/m6/reviews/crv-m6-e2e-decided-001.md" }
+      ]
+    }
+  ],
+  "analytics": {
+    "observation": {
+      "id": "ANO-M6-E2E-001",
+      "path": "cycles/m6/analytics/ano-m6-e2e-001.md",
+      "input_path": "fixtures/analytics/complete.json",
+      "raw_output_path": "raw/analytics/ano-m6-e2e-001.json"
+    },
+    "signal": {
+      "id": "BSIG-M6-E2E-001",
+      "path": "cycles/m6/signals/bsig-m6-e2e-001.md"
+    }
+  },
+  "review": {
+    "snapshot_id": "CIS-M6-E2E-REVIEW-001",
+    "waiting_id": "CRV-M6-E2E-WAITING-001",
+    "waiting_path": "cycles/m6/reviews/crv-m6-e2e-waiting-001.md",
+    "decided_id": "CRV-M6-E2E-DECIDED-001",
+    "decided_path": "cycles/m6/reviews/crv-m6-e2e-decided-001.md",
+    "decision_ref": "fixture://approval/m6-cycle-review-001"
+  },
+  "expected": {
+    "status": "completed",
+    "aggregate_stage": "review_decided",
+    "completion_scope": "full",
+    "scope": "test_merchant_engineering",
+    "synthetic": true,
+    "real_myyshop_impact": false
+  }
+}

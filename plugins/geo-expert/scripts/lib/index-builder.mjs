@@ -10,6 +10,7 @@ import {
 } from './object-contract.mjs';
 import {
   atomicWrite,
+  compareUtf8,
   sha256,
   stableStringify,
   walkMarkdownFiles,
@@ -40,6 +41,18 @@ const INDEX_NAMES = {
   claim_support_review: 'claim-support-reviews.json',
   answer_review: 'answer-reviews.json',
   answer_aggregation: 'answer-aggregations.json',
+  test_merchant: 'test-merchants.json',
+  cycle_input_snapshot: 'cycle-input-snapshots.json',
+  cycle_transition: 'cycle-transitions.json',
+  analytics_observation: 'analytics-observations.json',
+  business_signal: 'business-signals.json',
+  cycle_review: 'cycle-reviews.json',
+  strategy_assessment: 'strategy-assessments.json',
+  decision_dimension: 'decision-dimensions.json',
+  cycle_goal_candidate_batch: 'cycle-goal-candidate-batches.json',
+  cycle_goal_candidate: 'cycle-goal-candidates.json',
+  cycle_goal_selection: 'cycle-goal-selections.json',
+  strategy_output: 'strategy-outputs.json',
 };
 const EXTENDED_INDEX_TYPES = new Set([
   'document', 'answer_card', 'knowledge_release',
@@ -48,6 +61,10 @@ const EXTENDED_INDEX_TYPES = new Set([
   'collector_profile', 'answer_sample', 'citation_observation',
   'source_classification', 'claim_support_review', 'answer_review',
   'answer_aggregation',
+  'test_merchant', 'cycle_input_snapshot', 'cycle_transition',
+  'analytics_observation', 'business_signal', 'cycle_review',
+  'strategy_assessment', 'decision_dimension', 'cycle_goal_candidate_batch',
+  'cycle_goal_candidate', 'cycle_goal_selection', 'strategy_output',
 ]);
 
 const REF_FIELDS = {
@@ -153,6 +170,60 @@ const REF_FIELDS = {
   answer_aggregation: {
     supersedes_ref: ['answer_aggregation'],
   },
+  test_merchant: { supersedes_ref: ['test_merchant'] },
+  cycle_input_snapshot: {
+    merchant_ref: ['test_merchant'],
+    cycle_ref: ['cycle'],
+    run_ref: ['run'],
+    supersedes_ref: ['cycle_input_snapshot'],
+  },
+  cycle_transition: {
+    cycle_ref: ['cycle'],
+    goal_ref: ['perception_goal'],
+    supersedes_ref: ['cycle_transition'],
+  },
+  analytics_observation: {
+    merchant_ref: ['test_merchant'],
+    cycle_ref: ['cycle'],
+    goal_ref: ['perception_goal'],
+    run_ref: ['run'],
+    supersedes_ref: ['analytics_observation'],
+  },
+  business_signal: {
+    merchant_ref: ['test_merchant'],
+    cycle_ref: ['cycle'],
+    goal_ref: ['perception_goal'],
+    run_ref: ['run'],
+    supersedes_ref: ['business_signal'],
+  },
+  cycle_review: {
+    merchant_ref: ['test_merchant'],
+    cycle_ref: ['cycle'],
+    supersedes_ref: ['cycle_review'],
+  },
+  strategy_assessment: {
+    merchant_ref: ['test_merchant'],
+    cycle_review_ref: ['cycle_review'],
+    supersedes_ref: ['strategy_assessment'],
+  },
+  decision_dimension: {
+    merchant_ref: ['test_merchant'],
+    supersedes_ref: ['decision_dimension'],
+  },
+  cycle_goal_candidate_batch: {
+    merchant_ref: ['test_merchant'],
+    run_ref: ['run'],
+  },
+  cycle_goal_candidate: { merchant_ref: ['test_merchant'] },
+  cycle_goal_selection: {
+    merchant_ref: ['test_merchant'],
+    supersedes_ref: ['cycle_goal_selection'],
+  },
+  strategy_output: {
+    merchant_ref: ['test_merchant'],
+    run_ref: ['run'],
+    supersedes_ref: ['strategy_output'],
+  },
 };
 
 const VERSION_FIELDS = {
@@ -182,6 +253,8 @@ const VERSION_FIELDS = {
     ['classification_versions', ['source_classification']],
     ['claim_support_review_versions', ['claim_support_review']],
   ],
+  business_signal: [['observation_versions', ['analytics_observation']]],
+  evidence: [['observation_versions', ['analytics_observation']]],
 };
 
 export class IndexValidationError extends Error {
@@ -200,6 +273,14 @@ function normalizeValues(value) {
 
 export function collectObjectReferences(data) {
   const refs = [];
+  if (data.test_scope?.merchant_ref) {
+    refs.push({
+      field: 'test_scope.merchant_ref',
+      ref: data.test_scope.merchant_ref,
+      allowedTypes: ['test_merchant'],
+      version: null,
+    });
+  }
   for (const [field, allowedTypes] of Object.entries(REF_FIELDS[data.record_type] ?? {})) {
     for (const ref of normalizeValues(data[field])) {
       refs.push({ field, ref, allowedTypes, version: null });
@@ -213,7 +294,160 @@ export function collectObjectReferences(data) {
   }
   if (data.record_type === 'cycle') {
     for (const [field, entry] of Object.entries(data.core_versions ?? {})) {
-      refs.push({ field: `core_versions.${field}`, ref: entry.ref, version: entry.version, allowedTypes: RECORD_TYPES });
+      const allowedTypes = data.scope === 'test_merchant_engineering' && field === 'input_snapshot'
+        ? ['cycle_input_snapshot']
+        : RECORD_TYPES;
+      refs.push({ field: `core_versions.${field}`, ref: entry.ref, version: entry.version, allowedTypes });
+    }
+    if (data.merchant_ref) refs.push({ field: 'merchant_ref', ref: data.merchant_ref, version: null, allowedTypes: ['test_merchant'] });
+    for (const ref of data.transition_refs ?? []) {
+      refs.push({ field: 'transition_refs', ref, version: null, allowedTypes: ['cycle_transition'] });
+    }
+    for (const [field, allowedTypes] of [
+      ['cycle_review_version', ['cycle_review']],
+      ['predecessor_review_version', ['cycle_review']],
+      ['goal_selection_version', ['cycle_goal_selection']],
+    ]) {
+      const entry = data[field];
+      if (entry?.ref) refs.push({ field, ref: entry.ref, version: entry.version, allowedTypes });
+    }
+    for (const [index, track] of (data.goal_tracks ?? []).entries()) {
+      for (const field of ['input_snapshot_version', 'review_input_snapshot_version']) {
+        const entry = track[field];
+        if (entry?.ref) refs.push({
+          field: `goal_tracks[${index}].${field}`,
+          ref: entry.ref,
+          version: entry.version,
+          allowedTypes: ['cycle_input_snapshot'],
+        });
+      }
+      for (const [field, allowedTypes] of [
+        ['baseline_aggregation_refs', ['answer_aggregation']],
+        ['finding_refs', ['finding']],
+        ['evidence_plan_refs', ['evidence_plan']],
+        ['asset_proposal_refs', ['asset_proposal']],
+        ['adoption_record_refs', ['adoption_record']],
+        ['publication_refs', ['asset_publication']],
+        ['technical_retest_run_refs', ['run']],
+        ['answer_retest_aggregation_refs', ['answer_aggregation']],
+        ['analytics_observation_refs', ['analytics_observation']],
+        ['business_signal_refs', ['business_signal']],
+      ]) {
+        for (const ref of track[field] ?? []) refs.push({
+          field: `goal_tracks[${index}].${field}`,
+          ref,
+          version: null,
+          allowedTypes,
+        });
+      }
+    }
+  }
+  if (data.record_type === 'cycle_input_snapshot') {
+    for (const field of ['base_freeze_snapshot_version']) {
+      const entry = data[field];
+      if (entry?.ref) refs.push({ field, ref: entry.ref, version: entry.version, allowedTypes: ['cycle_input_snapshot'] });
+    }
+    for (const entry of data.pre_review_transition_snapshot_versions ?? []) {
+      refs.push({
+        field: 'pre_review_transition_snapshot_versions',
+        ref: entry.ref,
+        version: entry.version,
+        allowedTypes: ['cycle_input_snapshot'],
+      });
+    }
+  }
+  if (data.record_type === 'cycle_transition') {
+    for (const field of ['input_snapshot_version', 'gate_snapshot_version']) {
+      const entry = data[field];
+      refs.push({ field, ref: entry.ref, version: entry.version, allowedTypes: ['cycle_input_snapshot'] });
+    }
+  }
+  if (data.record_type === 'cycle_review') {
+    const entry = data.review_input_snapshot_version;
+    refs.push({ field: 'review_input_snapshot_version', ref: entry.ref, version: entry.version, allowedTypes: ['cycle_input_snapshot'] });
+  }
+  if (data.record_type === 'strategy_assessment') {
+    refs.push({
+      field: 'cycle_review_version', ref: data.cycle_review_ref,
+      version: data.cycle_review_version, allowedTypes: ['cycle_review'],
+    });
+    const entry = data.strategy_input_snapshot_version;
+    refs.push({ field: 'strategy_input_snapshot_version', ref: entry.ref, version: entry.version, allowedTypes: ['cycle_input_snapshot'] });
+  }
+  if (data.record_type === 'decision_dimension') {
+    for (const [field, allowedTypes] of [
+      ['strategy_assessment_version', ['strategy_assessment']],
+      ['strategy_input_snapshot_version', ['cycle_input_snapshot']],
+    ]) {
+      const entry = data[field];
+      refs.push({ field, ref: entry.ref, version: entry.version, allowedTypes });
+    }
+  }
+  if (data.record_type === 'cycle_goal_candidate_batch') {
+    for (const [field, allowedTypes] of [
+      ['source_cycle_review_version', ['cycle_review']],
+      ['review_input_snapshot_version', ['cycle_input_snapshot']],
+    ]) {
+      const entry = data[field];
+      refs.push({ field, ref: entry.ref, version: entry.version, allowedTypes });
+    }
+    for (const [index, item] of (data.ordered_candidates ?? []).entries()) {
+      const entry = item.candidate_version;
+      refs.push({ field: `ordered_candidates[${index}].candidate_version`, ref: entry.ref, version: entry.version, allowedTypes: ['cycle_goal_candidate'] });
+    }
+  }
+  if (data.record_type === 'cycle_goal_candidate') {
+    for (const [field, allowedTypes] of [
+      ['candidate_batch_version', ['cycle_goal_candidate_batch']],
+      ['source_cycle_review_version', ['cycle_review']],
+      ['review_input_snapshot_version', ['cycle_input_snapshot']],
+    ]) {
+      const entry = data[field];
+      refs.push({ field, ref: entry.ref, version: entry.version, allowedTypes });
+    }
+    const gate = data.strategy_gate_versions;
+    if (gate) {
+      for (const [field, allowedTypes] of [
+        ['strategy_input_snapshot_version', ['cycle_input_snapshot']],
+        ['strategy_assessment_version', ['strategy_assessment']],
+        ['strategy_output_version', ['strategy_output']],
+      ]) {
+        const entry = gate[field];
+        refs.push({ field: `strategy_gate_versions.${field}`, ref: entry.ref, version: entry.version, allowedTypes });
+      }
+      for (const [index, entry] of (gate.decision_dimension_versions ?? []).entries()) {
+        refs.push({ field: `strategy_gate_versions.decision_dimension_versions[${index}]`, ref: entry.ref, version: entry.version, allowedTypes: ['decision_dimension'] });
+      }
+    }
+  }
+  if (data.record_type === 'cycle_goal_selection') {
+    for (const [field, allowedTypes] of [
+      ['source_cycle_review_version', ['cycle_review']],
+      ['candidate_batch_version', ['cycle_goal_candidate_batch']],
+    ]) {
+      const entry = data[field];
+      refs.push({ field, ref: entry.ref, version: entry.version, allowedTypes });
+    }
+    const candidateEntries = [
+      ...(data.candidate_versions ?? []),
+      ...(data.decision?.selected_candidate_version ? [data.decision.selected_candidate_version] : []),
+      ...(data.decision?.rejected_candidate_versions ?? []),
+      ...(data.decision?.deferred_candidate_versions ?? []),
+    ];
+    for (const [index, entry] of candidateEntries.entries()) {
+      refs.push({ field: `candidate_decisions[${index}]`, ref: entry.ref, version: entry.version, allowedTypes: ['cycle_goal_candidate'] });
+    }
+  }
+  if (data.record_type === 'strategy_output') {
+    for (const [field, allowedTypes] of [
+      ['strategy_assessment_version', ['strategy_assessment']],
+      ['strategy_input_snapshot_version', ['cycle_input_snapshot']],
+    ]) {
+      const entry = data[field];
+      refs.push({ field, ref: entry.ref, version: entry.version, allowedTypes });
+    }
+    for (const [index, entry] of (data.decision_dimension_versions ?? []).entries()) {
+      refs.push({ field: `decision_dimension_versions[${index}]`, ref: entry.ref, version: entry.version, allowedTypes: ['decision_dimension'] });
     }
   }
   if (data.record_type === 'source' && data.discovery?.citation_ref) {
@@ -374,8 +608,8 @@ export async function loadWorkspaceGraph({ workspace }) {
   }
 
   if (diagnostics.length > 0) throw new IndexValidationError(diagnostics);
-  objects.sort((a, b) => a.data.id.localeCompare(b.data.id) || a.path.localeCompare(b.path));
-  legacy.sort((a, b) => a.id.localeCompare(b.id) || a.path.localeCompare(b.path));
+  objects.sort((a, b) => compareUtf8(a.data.id, b.data.id) || compareUtf8(a.path, b.path));
+  legacy.sort((a, b) => compareUtf8(a.id, b.id) || compareUtf8(a.path, b.path));
   return { root, objects, legacy, byId, warnings };
 }
 
@@ -412,7 +646,7 @@ export async function buildIndexes({ workspace, write = true }) {
 
   const written = [];
   if (write) {
-    for (const [name, content] of [...indexes.entries()].sort(([a], [b]) => a.localeCompare(b))) {
+    for (const [name, content] of [...indexes.entries()].sort(([a], [b]) => compareUtf8(a, b))) {
       written.push(await atomicWrite(graph.root, `indexes/${name}`, content));
     }
   }
