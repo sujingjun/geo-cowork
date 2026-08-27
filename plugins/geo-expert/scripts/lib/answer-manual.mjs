@@ -18,6 +18,8 @@ import {
   materializeCitationSourcePair,
 } from './source-registry.mjs';
 import { readRun, transitionRun } from './run-store.mjs';
+import { M5_PRIMARY_LANGUAGE, M5_SOURCE_CLASSIFICATION_THRESHOLD } from './m5-policy.mjs';
+import { archiveObservedSourcesForBatchClassification } from './source-batch.mjs';
 import { stableStringify, writeCreateOnly } from './workspace-paths.mjs';
 
 export class ManualAnswerError extends Error {
@@ -30,13 +32,35 @@ export class ManualAnswerError extends Error {
 }
 
 function validateManualPlan(plan) {
-  if (plan.schema_version !== 'm5-manual-sample-plan-v1'
-      || plan.purpose !== 'exploratory'
+  const isLegacy = plan.schema_version === 'm5-manual-sample-plan-v1';
+  const isBaseline = plan.schema_version === 'm5-manual-baseline-plan-v2';
+  if ((!isLegacy && !isBaseline)
       || plan.profile?.data?.collection_method !== 'manual'
       || !plan.authorization_ref?.startsWith('workspace://')
       || !plan.sample?.id
       || !Array.isArray(plan.sample.citations)) {
     throw new ManualAnswerError('M5_FIELD_REQUIRED', 'manual Sample plan 合同不完整');
+  }
+  if (isLegacy && plan.purpose !== 'exploratory') {
+    throw new ManualAnswerError('SAMPLE_NOT_INDEPENDENT', 'legacy manual plan 只能是 exploratory');
+  }
+  if (isBaseline) {
+    const ordinals = (plan.samples ?? []).map((sample) => sample.ordinal).sort();
+    if (plan.purpose !== 'baseline'
+        || plan.profile.data.sampling_count !== 2
+        || ordinals.join(',') !== '1,2'
+        || !ordinals.includes(plan.sample.ordinal)
+        || plan.classification_policy?.mode !== 'batch_at_source_threshold'
+        || plan.classification_policy?.threshold !== M5_SOURCE_CLASSIFICATION_THRESHOLD
+        || !plan.classification_policy?.decision_ref?.startsWith('workspace://')
+        || plan.language_contract?.role !== 'primary'
+        || plan.language_contract?.primary_language !== M5_PRIMARY_LANGUAGE
+        || plan.language_contract?.primary_query_ref !== plan.query_version.ref
+        || plan.profile.data.language !== M5_PRIMARY_LANGUAGE
+        || plan.manual_source?.kind !== 'user_supplied_result_url'
+        || plan.manual_source?.capture_surface !== 'chrome_extension') {
+      throw new ManualAnswerError('M5_FIELD_REQUIRED', 'manual baseline v2 合同不完整');
+    }
   }
   const serialized = stableStringify(plan);
   if (/[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}/i.test(serialized)) {
@@ -45,7 +69,7 @@ function validateManualPlan(plan) {
   const adapter = assertPlatformManualAllowed(getPlatformAdapter(plan.profile.data.platform), {
     manualSourceKind: plan.manual_source?.kind,
   });
-  if (adapter.manual_fallback.mode === 'user_supplied_export_only'
+  if (plan.manual_source?.kind === 'user_supplied_export'
       && (!plan.manual_source?.filename
         || /[\\/]/.test(plan.manual_source.filename)
         || !/^[a-f0-9]{64}$/.test(plan.manual_source.sha256 ?? ''))) {
@@ -53,6 +77,17 @@ function validateManualPlan(plan) {
       'PLATFORM_MANUAL_COLLECTION_BLOCKED',
       '用户导出文件必须冻结安全文件名与 SHA-256',
     );
+  }
+  if (plan.manual_source?.kind === 'user_supplied_result_url') {
+    let resultUrl;
+    try {
+      resultUrl = new URL(plan.manual_source.result_url);
+    } catch {
+      throw new ManualAnswerError('PLATFORM_ALLOWLIST_VIOLATION', '人工结果 URL 非法');
+    }
+    if (!(adapter.manual_fallback.result_url_origins ?? []).includes(resultUrl.origin)) {
+      throw new ManualAnswerError('PLATFORM_ALLOWLIST_VIOLATION', '人工结果 URL 不属于平台允许来源');
+    }
   }
   let profileUrl;
   try {
@@ -100,8 +135,11 @@ async function complete({ workspace, runId, ownerId, slotKey, step, proof, now, 
 
 export async function ingestManualSample({ workspace, plan, answerText }) {
   validateManualPlan(plan);
+  const deferredClassification = plan.schema_version === 'm5-manual-baseline-plan-v2';
   assertManualAnswerPrivacy(answerText);
-  const inputPath = `runs/${plan.run.id}/inputs/manual-sample-plan.json`;
+  const inputPath = deferredClassification
+    ? `runs/${plan.run.id}/inputs/manual-sample-plan-slot-${plan.sample.ordinal}.json`
+    : `runs/${plan.run.id}/inputs/manual-sample-plan.json`;
   await writeCreateOnly(
     workspace,
     inputPath,
@@ -109,6 +147,41 @@ export async function ingestManualSample({ workspace, plan, answerText }) {
     { idempotent: true, conflictCode: 'AGGREGATION_INPUT_DRIFT' },
   );
   await initializeAnswerRun({ workspace, plan, now: plan.sample.captured_at });
+  const initializedRun = await readRun({ workspace, runId: plan.run.id });
+  const initializedSlot = initializedRun.data.sample_slots
+    .find((item) => item.ordinal === plan.sample.ordinal);
+  if (!initializedSlot) {
+    throw new ManualAnswerError('SAMPLE_SLOT_CONFLICT', 'manual Sample 未匹配预分配 slot');
+  }
+  if (initializedSlot.selected_sample_ref) {
+    if (initializedSlot.selected_sample_ref !== plan.sample.id) {
+      throw new ManualAnswerError('SAMPLE_SLOT_CONFLICT', 'manual slot 已选择另一 Sample');
+    }
+    const existingSample = await materializeManualSample({ workspace, plan, answerText });
+    const existingSourceArchive = deferredClassification
+      ? await archiveObservedSourcesForBatchClassification({
+        workspace,
+        decisionRef: plan.classification_policy.decision_ref,
+        now: plan.sample.captured_at,
+        threshold: plan.classification_policy.threshold,
+      })
+      : null;
+    return {
+      ok: true,
+      run_ref: plan.run.id,
+      sample_ref: existingSample.id,
+      citation_refs: plan.sample.citations.map((item) => item.id),
+      source_refs: [...new Set(plan.sample.citations
+        .map((item) => item.existing_source_ref ?? item.source?.id))].sort(),
+      classification_refs: deferredClassification
+        ? []
+        : plan.sample.citations.map((item) => item.classification.id),
+      purpose: plan.purpose,
+      collection_method: 'manual',
+      ...(existingSourceArchive ? { source_archive: existingSourceArchive } : {}),
+      action: 'kept',
+    };
+  }
   const ownerId = `manual-import-${process.pid}`;
   await acquireAnswerLease({
     workspace,
@@ -121,9 +194,11 @@ export async function ingestManualSample({ workspace, plan, answerText }) {
   const sourceRefs = [];
   const classificationRefs = [];
   let sample;
+  let sourceArchive;
   try {
     const run = await readRun({ workspace, runId: plan.run.id });
-    const slot = run.data.sample_slots[0];
+    const slot = run.data.sample_slots.find((item) => item.ordinal === plan.sample.ordinal);
+    if (!slot) throw new ManualAnswerError('SAMPLE_SLOT_CONFLICT', 'manual Sample 未匹配预分配 slot');
     for (const [step, proof] of [
       ['profile_validated', `profile:${plan.profile.data.profile_fingerprint}`],
       ['authorization_checked', plan.authorization_ref],
@@ -164,15 +239,25 @@ export async function ingestManualSample({ workspace, plan, answerText }) {
       const sourceId = occurrence.existing_source_ref ?? materialized.source_ref;
       citationRefs.push(occurrence.id);
       sourceRefs.push(sourceId);
-      const classification = await materializeSourceClassification({
-        workspace,
-        sourceId,
-        citationIds: [occurrence.id],
-        plan: occurrence.classification,
-        now: plan.sample.captured_at,
-      });
-      classificationRefs.push(classification.id);
+      if (!deferredClassification) {
+        const classification = await materializeSourceClassification({
+          workspace,
+          sourceId,
+          citationIds: [occurrence.id],
+          plan: occurrence.classification,
+          now: plan.sample.captured_at,
+        });
+        classificationRefs.push(classification.id);
+      }
     }
+    sourceArchive = deferredClassification
+      ? await archiveObservedSourcesForBatchClassification({
+        workspace,
+        decisionRef: plan.classification_policy.decision_ref,
+        now: plan.sample.captured_at,
+        threshold: plan.classification_policy.threshold,
+      })
+      : null;
     await complete({
       workspace, runId: plan.run.id, ownerId, slotKey: slot.slot_key,
       step: 'citations_and_sources_materialized',
@@ -182,22 +267,27 @@ export async function ingestManualSample({ workspace, plan, answerText }) {
     await complete({
       workspace, runId: plan.run.id, ownerId, slotKey: slot.slot_key,
       step: 'candidate_classifications_materialized',
-      proof: `classification-count:${classificationRefs.length}`,
+      proof: deferredClassification
+        ? `classification-deferred:${sourceArchive.unique_source_count}/${sourceArchive.threshold}`
+        : `classification-count:${classificationRefs.length}`,
       now: plan.sample.captured_at,
     });
   } finally {
     await releaseAnswerLease({ workspace, runId: plan.run.id, ownerId });
   }
   const current = await readRun({ workspace, runId: plan.run.id });
+  const allSlotsComplete = current.data.sample_slots.every((slot) => slot.selected_sample_ref);
   if (current.data.status !== 'completed') {
     await transitionRun({
       workspace,
       runId: plan.run.id,
-      status: 'completed',
+      status: allSlotsComplete ? 'completed' : 'waiting_human',
       businessResult: 'partial',
       now: plan.sample.captured_at,
       patch: {
-        next_action: 'human review manual exploratory sample; do not aggregate as baseline',
+        next_action: allSlotsComplete
+          ? 'review two-slot baseline; source classification remains deferred until 100 sources'
+          : 'collect remaining independent manual baseline slot',
       },
     });
   }
@@ -208,7 +298,8 @@ export async function ingestManualSample({ workspace, plan, answerText }) {
     citation_refs: citationRefs,
     source_refs: [...new Set(sourceRefs)].sort(),
     classification_refs: classificationRefs,
-    purpose: 'exploratory',
+    purpose: plan.purpose,
     collection_method: 'manual',
+    ...(sourceArchive ? { source_archive: sourceArchive } : {}),
   };
 }

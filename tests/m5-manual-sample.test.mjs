@@ -9,6 +9,7 @@ import {
   validateAnswerWorkspace,
 } from '../plugins/geo-expert/scripts/lib/answer-profile.mjs';
 import { readMarkdownObject } from '../plugins/geo-expert/scripts/lib/object-contract.mjs';
+import { readRun } from '../plugins/geo-expert/scripts/lib/run-store.mjs';
 import { collectorProfile, m5ReadyWorkspace } from './helpers/m5-fixtures.mjs';
 
 function manualPlan() {
@@ -117,6 +118,50 @@ function manualPlan() {
   };
 }
 
+function baselineManualPlan({ ordinal = 1, runId = 'RUN-TEST-M5-MANUAL-BASELINE-001' } = {}) {
+  const plan = manualPlan();
+  plan.schema_version = 'm5-manual-baseline-plan-v2';
+  plan.purpose = 'baseline';
+  plan.classification_policy = {
+    mode: 'batch_at_source_threshold',
+    threshold: 100,
+    decision_ref: 'workspace://cycles/preparation/decisions/m5-two-slot-source-batch-approved.md',
+  };
+  plan.language_contract = {
+    role: 'primary',
+    object_key: 'myyshop-definition',
+    primary_language: 'en-US',
+    primary_query_ref: 'Q-TEST-001',
+    semantic_contract_ref: 'workspace://cycles/preparation/decisions/m5-two-slot-source-batch-approved.md',
+  };
+  plan.manual_source = {
+    kind: 'user_supplied_result_url',
+    result_url: 'https://chatgpt.com/share/test-result',
+    capture_surface: 'chrome_extension',
+  };
+  plan.profile.data.id = 'CPF-TEST-MANUAL-BASELINE-001';
+  plan.profile.data.title = 'Synthetic two-slot manual baseline profile';
+  plan.profile.data.language = 'en-US';
+  plan.profile.data.language_contract = plan.language_contract;
+  plan.profile.data.sampling_count = 2;
+  plan.profile.data.profile_fingerprint = collectorProfileFingerprint(plan.profile.data);
+  plan.profile.path = 'cycles/m5/profiles/cpf-test-manual-baseline-001.md';
+  delete plan.input_versions['CPF-TEST-MANUAL-001'];
+  plan.input_versions['CPF-TEST-MANUAL-BASELINE-001'] = '1.0.0';
+  plan.run.id = runId;
+  plan.samples = [{ ordinal: 1 }, { ordinal: 2 }];
+  plan.sample = {
+    ...plan.sample,
+    id: `SMP-TEST-MANUAL-BASELINE-00${ordinal}`,
+    path: `cycles/m5/samples/smp-test-manual-baseline-00${ordinal}.md`,
+    ordinal,
+    answer_output_path: `raw/slot-${ordinal}/answer.md`,
+    log_output_path: `raw/slot-${ordinal}/collector-log.json`,
+    citations: ordinal === 1 ? plan.sample.citations : [],
+  };
+  return plan;
+}
+
 test('manual exploratory Sample 落盘 raw/Citation/Source/classification 且不保存账号标识', async () => {
   const root = await m5ReadyWorkspace();
   const plan = manualPlan();
@@ -187,5 +232,51 @@ test('manual materializer 拒绝 Perplexity 页面采集但允许用户导出文
   };
   const result = await ingestManualSample({ workspace: root, plan, answerText: 'Synthetic export.\n' });
   assert.equal(result.sample_ref, plan.sample.id);
+  await rm(root, { recursive: true });
+});
+
+test('manual baseline v2 固定两个独立 slot，并在第二槽前保持 waiting_human', async () => {
+  const root = await m5ReadyWorkspace();
+  const firstPlan = baselineManualPlan();
+  const first = await ingestManualSample({
+    workspace: root,
+    plan: firstPlan,
+    answerText: 'Synthetic English baseline answer one.\n',
+  });
+  assert.equal(first.purpose, 'baseline');
+  assert.equal(first.classification_refs.length, 0);
+  assert.equal(first.source_archive.threshold, 100);
+  assert.equal(first.source_archive.unique_source_count, 2);
+  assert.equal(first.source_archive.remaining_to_batch, 98);
+  const waitingRun = await readRun({ workspace: root, runId: firstPlan.run.id });
+  assert.equal(waitingRun.data.status, 'waiting_human');
+  assert.equal(waitingRun.data.lease, undefined);
+  const repeatedFirst = await ingestManualSample({
+    workspace: root,
+    plan: firstPlan,
+    answerText: 'Synthetic English baseline answer one.\n',
+  });
+  assert.equal(repeatedFirst.action, 'kept');
+  assert.equal((await readRun({ workspace: root, runId: firstPlan.run.id })).original, waitingRun.original);
+
+  const queuedSource = await readMarkdownObject(
+    path.join(root, 'evidence/sources/src-test-manual-community-001.md'),
+    { workspace: root },
+  );
+  assert.equal(queuedSource.data.classification_queue.status, 'archived_unclassified');
+  assert.equal(queuedSource.data.classification_queue.threshold, 100);
+  await assert.rejects(readFile(path.join(
+    root,
+    'cycles/m5/classifications/scl-test-manual-002.md',
+  )));
+
+  const secondPlan = baselineManualPlan({ ordinal: 2 });
+  const second = await ingestManualSample({
+    workspace: root,
+    plan: secondPlan,
+    answerText: 'Synthetic English baseline answer two.\n',
+  });
+  assert.equal(second.purpose, 'baseline');
+  assert.equal((await readRun({ workspace: root, runId: secondPlan.run.id })).data.status, 'completed');
   await rm(root, { recursive: true });
 });

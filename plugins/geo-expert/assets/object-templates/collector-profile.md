@@ -9,13 +9,19 @@ title: Collector Profile 示例
 platform: chatgpt
 product_entry: https://consumer.example.invalid/chat
 region: unknown
-language: zh-CN
+language: en-US
 login_state: logged_out
 conversation_state: new
 web_search_state: unknown
 model_mode: unknown
 query_template_version: 1.0.0
-sampling_count: 3
+sampling_count: 2
+language_contract:
+  role: primary
+  object_key: brand-definition
+  primary_language: en-US
+  primary_query_ref: Q-EXAMPLE-001
+  semantic_contract_ref: workspace://cycles/preparation/decisions/example.md
 time_window:
   id: TW-EXAMPLE-001
   starts_at: 2026-01-01T00:00:00Z

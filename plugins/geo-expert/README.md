@@ -16,10 +16,10 @@
 | `geo-reputation` | 声誉研究输入、原文/阻断、独立支持、反证与置信度 |
 | `geo-competitor` | 竞品研究输入与 Product Gap 人工前置 |
 | `geo-content` | 单 Asset 完整 Proposal、multi-goal 合并与风险段落 |
-| `geo-answer-cycle` | M5 Profile、三次录制样本、Citation-driven Source、Review 与聚合编排 |
+| `geo-answer-cycle` | M5 Profile、两次独立样本、Citation-driven Source 归档、100 Source 批量分类、Review 与聚合编排 |
 | `geo-answer` | Citation/Source 分类、Claim 支撑、答案 rubric 与五项指标复核 |
 
-当前产品与里程碑基线见 `docs/plans/2026-08-23-geo-cowork-final-product-plan.md`。0.3.0 是当前已登记插件版本；其后的 M4 与 M5 T02—T08 已在本地源码实现，尚未发布新插件版本。M5 已验证 `.invalid` 录制 Fixture、不可变 raw/Review、持续 Source registry、恢复、确定性聚合和全局 Playwright loopback base；五个平台只提供条款感知 guard adapter，未访问真实账号或消费者 UI。M3 内部 `published` 也不表示任何外部内容、插件版本或生产环境已经发布。
+当前产品与里程碑基线见 `docs/plans/2026-08-23-geo-cowork-final-product-plan.md`。0.3.0 是当前已登记插件版本；其后的 M4/M5 源码尚未发布新插件版本。M5 已验证 `.invalid` 两槽 Fixture、不可变 raw/Review、持续 Source registry、100 Source 批量分类门、恢复、确定性聚合和全局 Playwright loopback base；五个平台自动化仍由条款感知 guard 阻止。Owner 提供的 exact result URL 已用于五个平台第 1 个正式英文 manual slot，但未由 Agent 自动提交 Query，且五个平台都等待第 2 槽。M3 内部 `published` 也不表示任何外部内容、插件版本或生产环境已经发布。
 
 ## 结构
 

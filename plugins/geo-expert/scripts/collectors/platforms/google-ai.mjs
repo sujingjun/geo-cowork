@@ -14,6 +14,7 @@ export const googleAiAdapter = Object.freeze({
   },
   manual_fallback: {
     allowed: true,
+    result_url_origins: ['https://share.google', 'https://www.google.com'],
     requirements: [
       'Owner-controlled browser',
       'manual Query submission and copy',

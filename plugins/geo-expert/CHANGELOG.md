@@ -1,5 +1,13 @@
 # geo-expert 变更记录
 
+## Unreleased — M5 两槽人工 Baseline 与 Source 批量分类门
+
+- 正式采样改为每平台两个独立英文 manual slot；中文可选辅助、同对象语义一致但分别聚合；
+- 新增 `classification_queue`、33/100 Source 进度与阈值前 Classification/Claim Support deferred 语义；
+- 新增 `collect-manual-batch`、`review-manual-batch`、Run 1/2 `waiting_human` 与重入幂等；
+- 五平台第 1 槽与 candidate Review 已落盘；自动化 guard、外部发布和插件版本 0.3.0 保持不变。
+- 五平台第 2 槽随后完成，新增 `aggregate-manual-batch`；每平台 2/2、computed Aggregation，分类依赖指标保持 partial/null。
+
 ## Unreleased — M4 Diagnosis, Site & Asset Proposal
 
 - 新增五个 M4 Skill、M4 Schema/模板、`diagnosis.mjs` 与确定性 profile/trace；

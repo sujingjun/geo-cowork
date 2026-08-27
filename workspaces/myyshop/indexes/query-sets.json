@@ -12,13 +12,24 @@
       "version": "1.0.1"
     },
     {
+      "id": "QS-MYYSHOP-DEFINITION-EN-BASELINE-001",
+      "path": "queries/sets/qs-myyshop-definition-en-baseline-001.md",
+      "refs": [
+        "GOAL-MYYSHOP-DEFINITION-001",
+        "Q-MYYSHOP-WHAT-IS-EN-BASELINE-001"
+      ],
+      "status": "frozen",
+      "updated_at": "2026-08-26T19:10:37+08:00",
+      "version": "1.0.0"
+    },
+    {
       "id": "QS-MYYSHOP-DEFINITION-EN-US-001",
       "path": "queries/sets/qs-myyshop-definition-en-us-001.md",
       "refs": [
         "GOAL-MYYSHOP-DEFINITION-001",
         "Q-MYYSHOP-WHAT-IS-EN-001"
       ],
-      "status": "frozen",
+      "status": "superseded",
       "updated_at": "2026-08-26T14:03:13+08:00",
       "version": "1.0.0"
     },

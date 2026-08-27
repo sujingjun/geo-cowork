@@ -14,11 +14,13 @@ export const perplexityAdapter = Object.freeze({
   },
   manual_fallback: {
     allowed: true,
-    mode: 'user_supplied_export_only',
+    mode: 'user_supplied_result',
+    allowed_source_kinds: ['user_supplied_export', 'user_supplied_result_url'],
+    result_url_origins: ['https://www.perplexity.ai'],
     requirements: [
-      'Owner supplies a platform-exported local artifact',
-      'artifact filename and checksum are frozen before ingestion',
-      'no Perplexity page access, browser extraction or manual copy by the Agent',
+      'Owner supplies a platform-exported artifact or exact result URL',
+      'the source file checksum or result URL is frozen before ingestion',
+      'no automated Query submission or unrestricted browsing',
     ],
   },
   stop_conditions: ['terms_blocked', 'source_not_user_supplied_export', 'privacy_minimization_failed'],

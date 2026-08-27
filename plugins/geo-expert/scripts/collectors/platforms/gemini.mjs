@@ -14,6 +14,7 @@ export const geminiAdapter = Object.freeze({
   },
   manual_fallback: {
     allowed: true,
+    result_url_origins: ['https://gemini.google.com', 'https://share.gemini.google'],
     requirements: ['Owner-controlled browser', 'no Connected Apps', 'complete answer and Citation raw'],
   },
   stop_conditions: ['challenge', 'account_warning', 'region_unavailable', 'privacy_minimization_failed'],

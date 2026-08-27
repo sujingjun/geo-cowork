@@ -2,12 +2,13 @@
 title: M5 Consumer Answer Testing 与持续信源体系 PRD
 status: approved
 created: 2026-08-24
-updated: 2026-08-25
+updated: 2026-08-26
 source:
   - docs/requirements/2026-08-24-m5-consumer-answer-testing.md
   - "2026-08-25 当前用户指令：持续维护信源体系，不做冷启动导入；完整设计 Playwright 与真实采集"
   - "2026-08-25 当前用户指令：批准 M5 里程碑方案设计，并实施计划，完成目标"
   - "2026-08-25 当前用户指令：Playwright 使用最新版并全局安装；五个平台统一授权 Owner Google 登录身份，按真实用户隐私，本地 artifact 保留 1 年"
+  - "2026-08-26 当前用户指令：100 个 Source 后统一分类；每平台两次独立人工采样；英文主线、中文辅助且同对象语义一致；确认当前定位与五个平台首轮结果"
 scope: M5 用户流程、Playwright/真实采样、持续信源维护、五层角色、指标、人工门与业务验收
 ---
 
@@ -32,7 +33,8 @@ GEO 专家负责准备候选 Profile、执行获授权的采样、复核新来�
 1. 用户选择 approved Goal、frozen Query Set、published/ready Knowledge Release 的精确版本。
 2. 用户为每个平台选择一个 Collector Profile，明确入口、地区、语言、登录/会话/搜索状态、可见模型/模式、设备/浏览器和时间窗。
 3. 任一不可控制字段记录 `unknown`；存在关键 `unknown` 时后续比较最高只能为 `partial`。
-4. 系统生成每个平台 × 每条 Query × 三个 ordinal 的固定 sample slot，不在运行中静默增删。
+4. 系统生成每个平台 × 每条 Query × 两个 ordinal 的固定 sample slot，不在运行中静默增删。
+5. 英文是首期正式主线；中文为可选辅助。中英文针对同一对象时必须绑定同一语义合同，但因语言不同分别聚合，comparability 不得输出 `true`。
 
 ### 3.2 授权与启动
 
@@ -42,7 +44,7 @@ GEO 专家负责准备候选 Profile、执行获授权的采样、复核新来�
 
 真实自动采集使用 Playwright base：每个 slot 创建隔离 browser context，按冻结入口和 Profile 设置 locale/viewport，使用版本化 selector 识别回答终态，截取答案/Citation 区域并在写入前最小化账号信息。平台 adapter 只负责导航、提交、等待、Citation 提取与失败诊断；不得改变 Query、自动重试平台观察结果或执行消息、点赞、评论、表单等外部写入。
 
-### 3.3 三次独立采样
+### 3.3 两次独立采样
 
 每个 sample slot 使用新的会话上下文提交同一冻结 Query 模板。一次 slot 的业务终态为：
 
@@ -57,8 +59,8 @@ success | refusal | timeout | no_result | challenge | cancelled | system_failure
 采集完成后先创建不可变 Answer Sample，再独立创建：
 
 1. Citation Observation：引用出现位置、原始/规范化 URL、域名和 Source ref；
-2. Source registry：匹配已有域名/发布者/频道/页面身份，或从首次 Citation 创建新 Source；
-3. Source Classification：绑定 Source 的五层主/副标签与依据；
+2. Source registry：匹配已有域名/发布者/频道/页面身份，或从首次 Citation 创建新 Source，并归档为未分类；
+3. Source Classification：只有唯一 Source 达到 100 条后才由独立批量任务统一创建；
 4. Claim Support Review：Citation 是否支持某个 Claim；
 5. Answer Review：实体、核心事实、当前定位、风险、Citation 质量和探索字段；
 6. Answer Aggregation：只对锁定的样本和 Review 版本计算指标。
@@ -67,13 +69,13 @@ Rubric 或分类规则更新时创建新对象，不改 raw。关键、低置信
 
 ### 3.5 Baseline、探索与 Retest
 
-- `exploratory`：可用于发现问题，不能进入正式趋势；采样数可少于三次但必须显式标注。
-- `baseline`：具备批准采集授权且每个平台 × Query 固定三个 sample slot；无需假装已发生 M4 Publication。
+- `exploratory`：可用于发现问题，不能进入正式趋势；采样数可少于两次但必须显式标注。
+- `baseline`：具备批准采集授权且每个平台 × Query 固定两个 sample slot；无需假装已发生 M4 Publication。
 - `post_change_retest`：除上述条件外，必须引用 confirmed M4 Publication 和对应 Technical Retest Run；否则拒绝使用该标签。
 
 ### 3.6 持续维护信源
 
-每次 Run 完成后，系统把 Citation 匹配到现有 Source。首次出现的身份创建 Source 和 candidate Classification；低置信度、平台托管主体不明或关键指标受影响时进入人工队列。后续 Run 只追加 Observation，并派生首次/最近出现、平台、Query Cluster、窗口和出现次数，不回写历史。
+每次 Run 完成后，系统把 Citation 匹配到现有 Source。首次出现的身份只创建 Source 并进入 `archived_unclassified` 队列；后续 Run 只追加 Observation，并派生首次/最近出现、平台、Query Cluster、窗口和出现次数，不回写历史。唯一 Source 达到 100 个后状态变为 `batch_ready`，再启动一次统一分类任务；阈值前不创建当前有效 Classification。
 
 外部综合榜、静态域名表或历史排名不进入导入流程，也不能预生成 Source/Classification。没有真实 Citation 的域名不属于 M5 候选信源。
 
@@ -103,11 +105,13 @@ Source Classification 先按具体页面、作者/机构与内容形态判断，
 
 同时展示样本总数、各终态数、无 Citation 样本数、new/returning Source 数、candidate/reviewed/unresolved 分类数和 comparability。分母不足或不可比较时显示 `null + reason`，不补零。
 
+100 个唯一 Source 前，Top Citation Domains、Citation Share 与域名数量可以计算；依赖 Source Type 或主体关系的 diversity、first/third-party 与 Claim Support 指标必须显示 `partial/null + SOURCE_CLASSIFICATION_DEFERRED`，不能为了填满指标提前分类。
+
 产品不提供外部域名榜或静态清单导入。所有指标、候选和维护视图只读取当前 Workspace 的真实 Citation Observation。
 
 ## 6. 可比性业务规则
 
-- `true`：关键 Profile、Query/模板版本、采样协议、三个 slot 和 Review/分类规则均一致，且没有关键 `unknown`。
+- `true`：关键 Profile、Query/模板版本、采样协议、两个 slot 和 Review/分类规则均一致，且没有关键 `unknown`。
 - `partial`：仍可解释方向，但采集方式、可见模型/模式、设备或其他变量存在已记录的未知/差异。
 - `false`：产品入口、平台、地区、语言、登录/搜索状态、Query/模板版本、正式/探索协议或样本集合发生硬差异。
 
@@ -116,7 +120,7 @@ Source Classification 先按具体页面、作者/机构与内容形态判断，
 ## 7. 业务规则
 
 1. 正式样本只认消费者 UI；API 只能进入独立探索数据集。
-2. 三个 sample slot 是三个独立观察，不把一次回答复制或重试成三次。
+2. 两个 sample slot 是两个独立观察，不把一次回答复制或重试成两次。
 3. 同一回答重复相同规范化 URL 的 Citation 在 raw 中全部保留，聚合时每个 sample + URL 只计一个 Citation 单元。
 4. 无 Citation 的回答保留并计入 `no_citation_sample_count`；Citation Share 分母为零时不计算份额。
 5. Source Type 允许多标签，但主标签唯一；主标签未人工/规则确定时进入 `unknown`，不得强行归类。
@@ -130,7 +134,7 @@ Source Classification 先按具体页面、作者/机构与内容形态判断，
 
 ### 8.1 离线工程验收
 
-- 本地录制 Fixture 可跑通 Profile → 三个 sample slot → Citation → Source 匹配/候选 → 分类 → Claim 支撑 → Review → 聚合；
+- 本地录制 Fixture 可跑通 Profile → 两个 sample slot → Citation → Source 匹配/候选 → 分类 → Claim 支撑 → Review → 聚合；真实 manual 路径则在 100 个 Source 前停止于 Source 归档；
 - success/refusal/timeout/no_result/challenge/system_failure 均可复验且不丢失；
 - 同一 raw 可被两个 Rubric 独立 Review，旧字节与 checksum 不变；
 - 五项指标的分子、分母、排序、零分母和跨窗不可比较场景有确定性测试；
@@ -140,7 +144,7 @@ Source Classification 先按具体页面、作者/机构与内容形态判断，
 
 ### 8.2 真实业务验收门
 
-真实 Baseline Record 必须逐平台证明：授权仍有效、消费者 UI 入口正确、三个独立样本完整、Profile 和隐私最小化可审阅、失败没有被替换、Review/聚合可追溯。未满足的平台保持 blocked，不影响其他平台事实，但不能被称为全平台 Baseline 完成。
+真实 Baseline Record 必须逐平台证明：授权仍有效、消费者 UI 入口正确、两个独立样本完整、Profile 和隐私最小化可审阅、失败没有被替换、Review/聚合可追溯。未满足的平台保持 `waiting_human/blocked`，不影响其他平台事实，但不能被称为全平台 Baseline 完成。
 
 ## 9. 非目标与当前边界
 

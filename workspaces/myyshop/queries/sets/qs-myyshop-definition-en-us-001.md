@@ -1,7 +1,7 @@
 ---
 id: QS-MYYSHOP-DEFINITION-EN-US-001
 record_type: query_set
-status: frozen
+status: superseded
 version: 1.0.0
 created_at: '2026-08-26T14:03:13+08:00'
 updated_at: '2026-08-26T14:03:13+08:00'
@@ -21,4 +21,4 @@ approval:
 ---
 # MyyShop English Definition Query Set
 
-Owner 已批准并冻结该英文 Query Set；仅用于本次美国 IP exploratory 采集记录。
+Owner 原批准并冻结该英文 Query Set；仅用于美国 IP exploratory 采集记录。2026-08-26 已由 `QS-MYYSHOP-DEFINITION-EN-BASELINE-001` 替代，本对象保留为 `superseded` 历史。

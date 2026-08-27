@@ -1,6 +1,32 @@
 {
   "objects": [
     {
+      "id": "SMP-MYYSHOP-CHATGPT-EN-BASELINE-S1-20260826",
+      "path": "cycles/m5/samples/smp-myyshop-chatgpt-en-baseline-s1-20260826.md",
+      "refs": [
+        "CPF-MYYSHOP-CHATGPT-EN-BASELINE-20260826",
+        "Q-MYYSHOP-WHAT-IS-EN-BASELINE-001",
+        "QS-MYYSHOP-DEFINITION-EN-BASELINE-001",
+        "RUN-MYYSHOP-M5-CHATGPT-EN-BASELINE-20260826"
+      ],
+      "status": "recorded",
+      "updated_at": "2026-08-26T19:10:37+08:00",
+      "version": "1.0.0"
+    },
+    {
+      "id": "SMP-MYYSHOP-CHATGPT-EN-BASELINE-S2-20260826",
+      "path": "cycles/m5/samples/smp-myyshop-chatgpt-en-baseline-s2-20260826.md",
+      "refs": [
+        "CPF-MYYSHOP-CHATGPT-EN-BASELINE-20260826",
+        "Q-MYYSHOP-WHAT-IS-EN-BASELINE-001",
+        "QS-MYYSHOP-DEFINITION-EN-BASELINE-001",
+        "RUN-MYYSHOP-M5-CHATGPT-EN-BASELINE-20260826"
+      ],
+      "status": "recorded",
+      "updated_at": "2026-08-26T20:59:39+08:00",
+      "version": "1.0.0"
+    },
+    {
       "id": "SMP-MYYSHOP-CHATGPT-MANUAL-SMOKE-20260825",
       "path": "cycles/m5/samples/smp-myyshop-chatgpt-manual-smoke-20260825.md",
       "refs": [
@@ -11,6 +37,32 @@
       ],
       "status": "recorded",
       "updated_at": "2026-08-25T18:01:06+08:00",
+      "version": "1.0.0"
+    },
+    {
+      "id": "SMP-MYYSHOP-CLAUDE-EN-BASELINE-S1-20260826",
+      "path": "cycles/m5/samples/smp-myyshop-claude-en-baseline-s1-20260826.md",
+      "refs": [
+        "CPF-MYYSHOP-CLAUDE-EN-BASELINE-20260826",
+        "Q-MYYSHOP-WHAT-IS-EN-BASELINE-001",
+        "QS-MYYSHOP-DEFINITION-EN-BASELINE-001",
+        "RUN-MYYSHOP-M5-CLAUDE-EN-BASELINE-20260826"
+      ],
+      "status": "recorded",
+      "updated_at": "2026-08-26T19:10:37+08:00",
+      "version": "1.0.0"
+    },
+    {
+      "id": "SMP-MYYSHOP-CLAUDE-EN-BASELINE-S2-20260826",
+      "path": "cycles/m5/samples/smp-myyshop-claude-en-baseline-s2-20260826.md",
+      "refs": [
+        "CPF-MYYSHOP-CLAUDE-EN-BASELINE-20260826",
+        "Q-MYYSHOP-WHAT-IS-EN-BASELINE-001",
+        "QS-MYYSHOP-DEFINITION-EN-BASELINE-001",
+        "RUN-MYYSHOP-M5-CLAUDE-EN-BASELINE-20260826"
+      ],
+      "status": "recorded",
+      "updated_at": "2026-08-26T20:59:39+08:00",
       "version": "1.0.0"
     },
     {
@@ -54,6 +106,32 @@
       "version": "1.0.0"
     },
     {
+      "id": "SMP-MYYSHOP-GEMINI-EN-BASELINE-S1-20260826",
+      "path": "cycles/m5/samples/smp-myyshop-gemini-en-baseline-s1-20260826.md",
+      "refs": [
+        "CPF-MYYSHOP-GEMINI-EN-BASELINE-20260826",
+        "Q-MYYSHOP-WHAT-IS-EN-BASELINE-001",
+        "QS-MYYSHOP-DEFINITION-EN-BASELINE-001",
+        "RUN-MYYSHOP-M5-GEMINI-EN-BASELINE-20260826"
+      ],
+      "status": "recorded",
+      "updated_at": "2026-08-26T19:10:37+08:00",
+      "version": "1.0.0"
+    },
+    {
+      "id": "SMP-MYYSHOP-GEMINI-EN-BASELINE-S2-20260826",
+      "path": "cycles/m5/samples/smp-myyshop-gemini-en-baseline-s2-20260826.md",
+      "refs": [
+        "CPF-MYYSHOP-GEMINI-EN-BASELINE-20260826",
+        "Q-MYYSHOP-WHAT-IS-EN-BASELINE-001",
+        "QS-MYYSHOP-DEFINITION-EN-BASELINE-001",
+        "RUN-MYYSHOP-M5-GEMINI-EN-BASELINE-20260826"
+      ],
+      "status": "recorded",
+      "updated_at": "2026-08-26T20:59:39+08:00",
+      "version": "1.0.0"
+    },
+    {
       "id": "SMP-MYYSHOP-GEMINI-MANUAL-SMOKE-20260825",
       "path": "cycles/m5/samples/smp-myyshop-gemini-manual-smoke-20260825.md",
       "refs": [
@@ -67,6 +145,32 @@
       "version": "1.0.0"
     },
     {
+      "id": "SMP-MYYSHOP-GOOGLE-AI-EN-BASELINE-S1-20260826",
+      "path": "cycles/m5/samples/smp-myyshop-google-ai-en-baseline-s1-20260826.md",
+      "refs": [
+        "CPF-MYYSHOP-GOOGLE-AI-EN-BASELINE-20260826",
+        "Q-MYYSHOP-WHAT-IS-EN-BASELINE-001",
+        "QS-MYYSHOP-DEFINITION-EN-BASELINE-001",
+        "RUN-MYYSHOP-M5-GOOGLE-AI-EN-BASELINE-20260826"
+      ],
+      "status": "recorded",
+      "updated_at": "2026-08-26T19:10:37+08:00",
+      "version": "1.0.0"
+    },
+    {
+      "id": "SMP-MYYSHOP-GOOGLE-AI-EN-BASELINE-S2-20260826",
+      "path": "cycles/m5/samples/smp-myyshop-google-ai-en-baseline-s2-20260826.md",
+      "refs": [
+        "CPF-MYYSHOP-GOOGLE-AI-EN-BASELINE-20260826",
+        "Q-MYYSHOP-WHAT-IS-EN-BASELINE-001",
+        "QS-MYYSHOP-DEFINITION-EN-BASELINE-001",
+        "RUN-MYYSHOP-M5-GOOGLE-AI-EN-BASELINE-20260826"
+      ],
+      "status": "recorded",
+      "updated_at": "2026-08-26T20:59:39+08:00",
+      "version": "1.0.0"
+    },
+    {
       "id": "SMP-MYYSHOP-GOOGLE-AI-MANUAL-SMOKE-20260826",
       "path": "cycles/m5/samples/smp-myyshop-google-ai-manual-smoke-20260826.md",
       "refs": [
@@ -77,6 +181,32 @@
       ],
       "status": "recorded",
       "updated_at": "2026-08-26T12:46:42+08:00",
+      "version": "1.0.0"
+    },
+    {
+      "id": "SMP-MYYSHOP-PERPLEXITY-EN-BASELINE-S1-20260826",
+      "path": "cycles/m5/samples/smp-myyshop-perplexity-en-baseline-s1-20260826.md",
+      "refs": [
+        "CPF-MYYSHOP-PERPLEXITY-EN-BASELINE-20260826",
+        "Q-MYYSHOP-WHAT-IS-EN-BASELINE-001",
+        "QS-MYYSHOP-DEFINITION-EN-BASELINE-001",
+        "RUN-MYYSHOP-M5-PERPLEXITY-EN-BASELINE-20260826"
+      ],
+      "status": "recorded",
+      "updated_at": "2026-08-26T19:10:37+08:00",
+      "version": "1.0.0"
+    },
+    {
+      "id": "SMP-MYYSHOP-PERPLEXITY-EN-BASELINE-S2-20260826",
+      "path": "cycles/m5/samples/smp-myyshop-perplexity-en-baseline-s2-20260826.md",
+      "refs": [
+        "CPF-MYYSHOP-PERPLEXITY-EN-BASELINE-20260826",
+        "Q-MYYSHOP-WHAT-IS-EN-BASELINE-001",
+        "QS-MYYSHOP-DEFINITION-EN-BASELINE-001",
+        "RUN-MYYSHOP-M5-PERPLEXITY-EN-BASELINE-20260826"
+      ],
+      "status": "recorded",
+      "updated_at": "2026-08-26T20:59:39+08:00",
       "version": "1.0.0"
     },
     {

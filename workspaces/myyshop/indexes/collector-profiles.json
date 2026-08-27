@@ -1,11 +1,27 @@
 {
   "objects": [
     {
+      "id": "CPF-MYYSHOP-CHATGPT-EN-BASELINE-20260826",
+      "path": "cycles/m5/profiles/cpf-myyshop-chatgpt-en-baseline-20260826.md",
+      "refs": [],
+      "status": "frozen",
+      "updated_at": "2026-08-26T19:10:37+08:00",
+      "version": "1.0.0"
+    },
+    {
       "id": "CPF-MYYSHOP-CHATGPT-MANUAL-SMOKE-20260825",
       "path": "cycles/m5/profiles/cpf-myyshop-chatgpt-manual-smoke-20260825.md",
       "refs": [],
       "status": "frozen",
       "updated_at": "2026-08-25T18:01:06+08:00",
+      "version": "1.0.0"
+    },
+    {
+      "id": "CPF-MYYSHOP-CLAUDE-EN-BASELINE-20260826",
+      "path": "cycles/m5/profiles/cpf-myyshop-claude-en-baseline-20260826.md",
+      "refs": [],
+      "status": "frozen",
+      "updated_at": "2026-08-26T19:10:37+08:00",
       "version": "1.0.0"
     },
     {
@@ -25,6 +41,14 @@
       "version": "1.0.0"
     },
     {
+      "id": "CPF-MYYSHOP-GEMINI-EN-BASELINE-20260826",
+      "path": "cycles/m5/profiles/cpf-myyshop-gemini-en-baseline-20260826.md",
+      "refs": [],
+      "status": "frozen",
+      "updated_at": "2026-08-26T19:10:37+08:00",
+      "version": "1.0.0"
+    },
+    {
       "id": "CPF-MYYSHOP-GEMINI-MANUAL-SMOKE-20260825",
       "path": "cycles/m5/profiles/cpf-myyshop-gemini-manual-smoke-20260825.md",
       "refs": [],
@@ -33,11 +57,27 @@
       "version": "1.0.0"
     },
     {
+      "id": "CPF-MYYSHOP-GOOGLE-AI-EN-BASELINE-20260826",
+      "path": "cycles/m5/profiles/cpf-myyshop-google-ai-en-baseline-20260826.md",
+      "refs": [],
+      "status": "frozen",
+      "updated_at": "2026-08-26T19:10:37+08:00",
+      "version": "1.0.0"
+    },
+    {
       "id": "CPF-MYYSHOP-GOOGLE-AI-MANUAL-SMOKE-20260826",
       "path": "cycles/m5/profiles/cpf-myyshop-google-ai-manual-smoke-20260826.md",
       "refs": [],
       "status": "frozen",
       "updated_at": "2026-08-26T12:46:42+08:00",
+      "version": "1.0.0"
+    },
+    {
+      "id": "CPF-MYYSHOP-PERPLEXITY-EN-BASELINE-20260826",
+      "path": "cycles/m5/profiles/cpf-myyshop-perplexity-en-baseline-20260826.md",
+      "refs": [],
+      "status": "frozen",
+      "updated_at": "2026-08-26T19:10:37+08:00",
       "version": "1.0.0"
     },
     {

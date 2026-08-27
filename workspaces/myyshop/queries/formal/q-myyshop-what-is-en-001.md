@@ -1,7 +1,7 @@
 ---
 id: Q-MYYSHOP-WHAT-IS-EN-001
 record_type: query
-status: formal
+status: stale
 version: 1.0.0
 created_at: '2026-08-26T14:03:13+08:00'
 updated_at: '2026-08-26T14:03:13+08:00'
@@ -23,4 +23,4 @@ approval:
 ---
 # What is MyyShop
 
-Owner 批准该英文 Query 仅用于 Claude 美国 IP manual exploratory 采集记录；不与中文 Query 作 IP 单变量对比。
+Owner 原批准该英文 Query 仅用于 Claude 美国 IP manual exploratory 采集记录；不与中文 Query 作 IP 单变量对比。2026-08-26 新正式英文主线改用 `Q-MYYSHOP-WHAT-IS-EN-BASELINE-001`，本对象保留为 `stale` 历史。

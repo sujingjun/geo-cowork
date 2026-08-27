@@ -17,11 +17,17 @@ import {
   getPlatformAdapter,
 } from './collectors/platforms/index.mjs';
 import { smokeGlobalPlaywright } from './collectors/playwright-base.mjs';
+import { ingestManualBaselineBatch } from './lib/manual-baseline-batch.mjs';
+import { reviewManualBaselineBatch } from './lib/manual-review-batch.mjs';
+import { aggregateManualBaselineBatch } from './lib/manual-aggregation-batch.mjs';
 
 const COMMANDS = new Set([
   'validate', 'plan', 'collect-fixture', 'collect', 'normalize-citations',
   'review', 'aggregate', 'resume',
   'runtime-smoke', 'platform-smoke',
+  'collect-manual-batch',
+  'review-manual-batch',
+  'aggregate-manual-batch',
 ]);
 
 function invalid(message) {
@@ -77,6 +83,15 @@ export async function execute(args) {
     return normalizeSampleCitations({ workspace, sampleId: args.sample });
   }
   const plan = await requiredPlan(args);
+  if (args.command === 'collect-manual-batch') {
+    return ingestManualBaselineBatch({ workspace, manifest: plan });
+  }
+  if (args.command === 'review-manual-batch') {
+    return reviewManualBaselineBatch({ workspace, manifest: plan });
+  }
+  if (args.command === 'aggregate-manual-batch') {
+    return aggregateManualBaselineBatch({ workspace, manifest: plan });
+  }
   if (args.command === 'plan') return planAnswerCycle(plan);
   if (args.command === 'collect-fixture') return collectFixtureCycle({ workspace, plan });
   if (args.command === 'review') return reviewFixtureCycle({ workspace, plan });

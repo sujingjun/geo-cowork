@@ -1,0 +1,11 @@
+{
+  "account_identifier_stored": false,
+  "capture_surface": "chrome_extension",
+  "collection_method": "manual",
+  "copied_by_user": true,
+  "credentials_stored": false,
+  "manual_source_kind": "user_supplied_result_url",
+  "operator_role": "MyyShop Owner",
+  "result_url": "https://www.perplexity.ai/search/d867ab1c-b1c5-4324-9a3a-6cfec141ed36",
+  "temporary_chat": false
+}

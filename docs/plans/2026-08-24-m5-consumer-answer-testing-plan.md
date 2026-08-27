@@ -2,7 +2,7 @@
 title: M5 Consumer Answer Testing 与持续信源体系实施计划
 status: approved
 created: 2026-08-24
-updated: 2026-08-25
+updated: 2026-08-26
 source:
   - docs/specs/0006-consumer-answer-testing.md
   - docs/plans/2026-08-23-geo-cowork-final-product-plan.md
@@ -14,6 +14,7 @@ source:
   - "2026-08-25 当前用户指令：后续平台转为平台书面自动采集"
   - "2026-08-25 当前用户指令：去除 Adapter written_permission_ref 限制；平台许可改为全部里程碑完成后的上线前待办"
   - "2026-08-26 当前用户指令：继续 Owner 手工操作/复制的 manual exploratory 采样；开发阶段先跑通对应真实 UI adapter"
+  - "2026-08-26 当前用户指令：信源归档未分类，100 Source 后批量分类；每平台两个独立英文人工 Sample；中文可选辅助且语义一致；提供五平台第 1 槽 URL"
 scope: M5 离线合同/Fixture/恢复/指标、持续 Source registry、Playwright base、逐平台真实 collector 与 Baseline/Retest
 ---
 
@@ -37,7 +38,7 @@ scope: M5 离线合同/Fixture/恢复/指标、持续 Source registry、Playwrig
 
 ### 2.1 目标
 
-完整设计并分段实现 Spec 0006 的 M5 canonical 对象、不可变 raw/sample/review 边界、三次采样协议、由真实 Citation Observation 驱动的持续 Source registry、五项指标、comparability、长任务恢复、Playwright collector base、五个消费者平台 adapter、人工 fallback 与真实 Baseline/Retest。当前实施已完成 T02—T08；五个平台 guard adapter 已实现，真实 UI Smoke 与 Baseline 继续分别过门。
+完整设计并分段实现 Spec 0006 的 M5 canonical 对象、不可变 raw/sample/review 边界、两次采样协议、英文主线/中文辅助语义合同、由真实 Citation Observation 驱动的持续 Source registry、100 Source 批量分类门、五项指标、comparability、长任务恢复、Playwright collector base、五个消费者平台 adapter、人工 fallback 与真实 Baseline/Retest。当前实施已完成 T02—T08；五个平台 guard adapter 与第 1 个正式英文 manual slot 已实现，第 2 槽继续等待 Owner 人工采集。
 
 ### 2.2 本轮实施成功标准
 
@@ -61,7 +62,7 @@ Owner 审阅 Requirement、PRD、Architecture、Spec 0006、Plan 和 Task。若�
 
 在获批后，先写红测再注册七类新对象及 refs/version refs/index，并为现有 Source 增加只对 M5 新对象生效的可选 profile。M5 profile validator 不能反向要求 M2–M4 历史 Source 或其他对象补字段。
 
-重点验证：Profile fingerprint、new-ID revision、Query/Set/KR 精确版本、三 slot、outcome、artifact checksum、Source identity/ref、Source Classification 主/副标签、Review/Rubric pin、Aggregation 输入闭包。
+重点验证：Profile fingerprint、new-ID revision、Query/Set/KR 精确版本、两 slot、英文/中文语义合同、outcome、artifact checksum、Source identity/ref、100 Source 分类门、Review/Rubric pin、Aggregation 输入闭包。
 
 ### Slice C — 不可变 raw 与 Sample materialize
 
@@ -77,7 +78,7 @@ Owner 审阅 Requirement、PRD、Architecture、Spec 0006、Plan 和 Task。若�
 
 ### Slice E — Citation、持续 Source registry、五层分类与 Claim Support
 
-实现 URL/domain 规范化、Citation occurrence 保存、sample+URL 聚合去重，以及 Citation 驱动的 Source 匹配/创建、候选 Classification 和 Claim Support Review。只有获授权真实 Run 的 Citation 可创建候选 Source；不实现综合榜、静态域名表或历史排名 import。
+实现 URL/domain 规范化、Citation occurrence 保存、sample+URL 聚合去重，以及 Citation 驱动的 Source 匹配/创建与归档。只有获授权真实 Run 的 Citation 可创建候选 Source；唯一 Source 达到 100 个后另启批量 Classification/Claim Support Task；不实现综合榜、静态域名表或历史排名 import。
 
 重点验证：IDN/default port/fragment/`www.`、无效 URL、同 URL 重复、同域不同 URL、Citation/Source 双向 ref 预分配、闭包校验与半成品恢复、domain/publisher/channel/page identity、host 不等于生产主体或类型、new/returning 派生、无观测候选拒绝、五层多标签+唯一主标签、first/third/unknown、低置信度与人工门。
 
@@ -101,13 +102,13 @@ Owner 已批准使用最新版并全局安装。2026-08-25 实时核验 npm/GitH
 
 ChatGPT、Gemini、Perplexity、Google AI Mode/AI Overviews、Claude 分别建立 adapter Task，不共享授权。每个 adapter 按 Spec 0006 实现入口 allowlist、可支持 Profile 状态、selector/detector 版本、Citation 提取、artifact 范围、禁止动作和停止条件。每个平台先用获授权的测试账号/入口做最小 Smoke，再验证选择器失败、终态、截图/DOM 最小化和 manual fallback；一个平台受阻不改变其他平台结果。
 
-Owner 已分别授权五个平台使用同一 Owner-controlled Google 登录角色，并批准本地 artifact 365 天保留；原始账号标识不落盘。官方 Terms/robots 复核后，ChatGPT、Perplexity、Google Search/AI 与 Claude 为 `terms_blocked`，Gemini 为 `manual_only`。因此当前只实现五个 guard adapter、入口/版本/artifact/停止合同和浏览器启动前 fail-loud；不访问登录态、不提交 Query、不提取 Output。真实 Smoke 继续 blocked，账号授权不能覆盖平台条款。
+Owner 已分别授权五个平台使用 Owner-controlled 浏览器路径，并批准本地 artifact 365 天保留；原始账号标识不落盘。自动化仍按 Terms/robots 保持 `terms_blocked/manual_only`。2026-08-26 Owner 提供五个平台 exact result URL，允许 Agent 只读取结果正文与 Citation 并物化 manual Sample；这不授权 Agent 自动提交 Query、自由浏览、读取账号存储或解除自动化 guard。
 
-后续 Owner 选择人工 fallback：ChatGPT 形成 1 个 `exploratory/manual` Sample 与 3 个 Citation；Gemini 形成 1 个无 Citation Sample；Google AI 形成 1 个 Sample、9 个 Citation；Claude 形成 CN 中文 Query 与 US 英文 Query 各 1 个成功 Sample；Perplexity 通过 Owner 提供并冻结哈希的导出 Markdown 形成 1 个 `user_supplied_export/manual` Sample 与 5 个 Citation。Claude 两次采集只记录基线差异，不执行 IP 单变量对比。Perplexity 页面 manual 与自动化保持 blocked。平台许可留在 Requirements 需求池、状态“待规划”；自动执行仍受 adapter Terms/robots 状态控制。所有 manual Sample 都不构成三次采样 Baseline。
+历史 manual fallback 已形成 ChatGPT/Gemini/Google AI/Claude/Perplexity exploratory Sample，全部保留为历史 Observation，不改名复用。2026-08-26 Owner 另行提供五个平台同一英文 Query 的第 1 个结果 URL，并将正式协议改为两个独立 manual slot；这批新 Sample 使用独立 Profile/Run/ID。自动执行仍受 adapter Terms/robots 状态控制；历史 exploratory Sample 不构成两次采样 Baseline。
 
 ### Slice J — 真实 Baseline（独立 Record）
 
-只在对应平台授权、隐私策略、Profile、依赖和 adapter 验收通过后运行。每个平台 × Query 三个独立 Sample；失败原样保留。完成后建立真实 Baseline Record，不称为 post-change Retest。
+只在对应平台授权、隐私策略、Profile、依赖和 adapter 验收通过后运行。每个平台 × Query 两个独立英文 Sample；中文可选且单独聚合。失败原样保留。完成后建立真实 Baseline Record，不称为 post-change Retest。
 
 ### Slice K — post-change Retest（未来）
 
@@ -125,6 +126,11 @@ Owner 已分别授权五个平台使用同一 Owner-controlled Google 登录角�
 - `plugins/geo-expert/scripts/lib/citation-analysis.mjs`
 - `plugins/geo-expert/scripts/lib/answer-review.mjs`
 - `plugins/geo-expert/scripts/lib/answer-aggregation.mjs`
+- `plugins/geo-expert/scripts/lib/m5-policy.mjs`
+- `plugins/geo-expert/scripts/lib/source-batch.mjs`
+- `plugins/geo-expert/scripts/lib/manual-baseline-batch.mjs`
+- `plugins/geo-expert/scripts/lib/manual-review-batch.mjs`
+- `plugins/geo-expert/scripts/lib/manual-aggregation-batch.mjs`
 - `plugins/geo-expert/scripts/answer-cycle.mjs`
 - `plugins/geo-expert/assets/object-templates/` 下七类 M5 模板
 - `plugins/geo-expert/skills/geo-answer-cycle/SKILL.md`
@@ -170,15 +176,15 @@ Slice H 已实现全局 runtime resolver 与 collector base；Slice I 已落五�
 | 下载浏览器 binary | 未授权且本轮不需要 | 复用兼容 `chromium-1234`；新下载需容量与清理决定 |
 | ChatGPT 消费者 UI | 账号授权；自动执行 blocked | OpenAI Terms 禁止自动/程序化提取 Output；只保留人工合同 |
 | Gemini 消费者 UI | 账号授权；`manual_only` | 未取得官方消费者 UI 自动采集许可；不冒险自动访问 Owner 账号 |
-| Perplexity 消费者 UI | 账号授权；自动/手工采集 blocked | 消费者 Terms 禁止 bot/scraper/自动采集及同目的手工流程 |
+| Perplexity 消费者 UI | 自动执行 blocked；Owner exact result URL ingestion 已授权 | 只读取 Owner 提供的结果 URL；不由 Agent 提交 Query 或扩大浏览 |
 | Google AI Mode/AI Overviews | 账号授权；自动执行 blocked | Google Terms + `robots.txt` 禁止通用自动访问 `/search` |
 | Claude 消费者 UI | 账号授权；自动执行 blocked | Consumer Terms 禁止非 API 自动访问与 crawl/scrape |
 | Google AI / Claude manual exploratory | 已授权 | Owner 手工 UI + 完整复制 + manual materializer；不自动访问/提取 |
-| Perplexity 页面 manual exploratory | blocked | consumer Terms 限制同目的手工采集；不访问或复制页面 |
+| Perplexity Owner 结果 URL | 已授权 | exact URL + 完整答案/Citation；不自动提交 Query、不读取账号历史 |
 | Perplexity 用户导出文件 ingestion | 已授权 | 仅 `user_supplied_export` + 文件名/SHA 冻结；不访问平台页面 |
 | 平台许可候选需求 | Requirements 需求池 / 待规划 | 不再作为 adapter 运行时字段；Owner 决定是否启动后续规范 |
 | API 正式采样 | 禁止 | v1 正式体系不允许；仅可另建探索范围 |
-| 真实 artifact 本地保留 | 已授权 365 天 | 只限完整答案/Citation、裁剪截图、脱敏 log；完整 DOM/HTML 默认 unavailable |
+| 真实 artifact 本地保留 | 已授权 365 天 | 只限完整答案/Citation、结果 URL、裁剪截图、脱敏 log；账号 chrome、完整 DOM/HTML 默认 unavailable |
 | 外部写入 | 禁止 | 不属于 M5 只读采样 |
 | GA4/GSC | 未授权/不属于 M5 | M6 独立决定 |
 | 后续代码 commit、push、PR、release、deploy | 未授权 | 各自需当次明确授权；本次不 push |
@@ -191,7 +197,7 @@ Slice H 已实现全局 runtime resolver 与 collector base；Slice I 已落五�
 | 单元 | URL/domain、Source identity/lifecycle、五层分类约束、外部榜单导入禁止、指标公式、comparability |
 | 集成 | Run/artifact/lease/recovery、index/trace、同 raw 多 Review |
 | 故障 | 每 step 中断、stale lock、双进程、取消、半成品、input drift |
-| 端到端离线 | `.invalid` 录制 Fixture 三 slot 全链；no network/no browser |
+| 端到端离线 | `.invalid` 录制 Fixture 两 slot 全链；no network/no browser |
 | 回归 | M2 25、M3 10、M4 27、全量、插件、Workspace/Knowledge/Diagnosis、trace/index/legacy/docs |
 | Playwright 合同 | 1.62.1 版本锁、隔离 context、allowlist、关闭、loopback runtime Smoke、adapter 隔离 |
 | 平台 guard Smoke | 五个平台均在浏览器启动前返回 `PLATFORM_TERMS_BLOCKED` |
@@ -238,4 +244,4 @@ M5 离线工程不部署服务。新 canonical 对象和 raw create-only；index
 
 ## 10. 当前出口
 
-T02—T08 已完成本地工程与本机 runtime 验收。T09 已有 ChatGPT/Gemini 各 1 个 manual exploratory Sample；`written_permission_ref` 已移除，但现有平台 Terms/robots guard 仍阻止自动执行。T10 没有正式 Baseline。平台许可候选只在 Requirements 需求池中保持“待规划”，不会自动开启；当前不 commit、push、PR、下载新 browser、继续访问消费者账号、采集、发布或部署。
+T02—T09 与五平台正式英文两槽 Baseline 已完成本地验收：每个平台 2/2、Run completed、两个 candidate Review、一个 computed Aggregation；因 Profile unknown/软差异，comparability 均为 partial。当前 40/100 个唯一 Source 统一归档未分类，达到 100 后再启动批量 Classification/Claim Support。post-change Retest 仍等待 M4 Publication/Technical Retest；自动执行仍受 Terms/robots guard 约束；当前不 commit、push、PR、下载新 browser、自动提交新 Query、发布或部署。

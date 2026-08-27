@@ -204,7 +204,9 @@ async function checkRuntime() {
     'public-site-collection-plan.mjs', 'public-site-collector.mjs',
     'public-site-m4-inputs.mjs',
     'answer-profile.mjs', 'answer-run.mjs', 'answer-sample.mjs',
-    'answer-manual.mjs',
+    'answer-manual.mjs', 'manual-baseline-batch.mjs', 'manual-review-batch.mjs',
+    'manual-aggregation-batch.mjs',
+    'm5-policy.mjs', 'source-batch.mjs',
     'source-registry.mjs', 'citation-analysis.mjs', 'answer-review.mjs',
     'answer-aggregation.mjs', 'answer-cycle.mjs',
   ]) {

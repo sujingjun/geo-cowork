@@ -34,7 +34,7 @@ export function collectorProfile(overrides = {}) {
     web_search_state: 'on',
     model_mode: 'recorded-fixture',
     query_template_version: '1.0.0',
-    sampling_count: 3,
+    sampling_count: 2,
     time_window: {
       id: 'TW-TEST-20260825',
       starts_at: '2026-08-25T00:00:00+08:00',
@@ -241,21 +241,6 @@ export function m5FixturePlan() {
         }],
         citations: [],
         answer_review: answerReview('SMP-TEST-002'),
-      },
-      {
-        id: 'SMP-TEST-003',
-        path: 'cycles/m5/samples/smp-test-003.md',
-        ordinal: 3,
-        outcome: 'timeout',
-        captured_at: '2026-08-25T01:10:00+08:00',
-        artifacts: [{
-          role: 'collector_log',
-          source_path: 'fixtures/m5/slot-3-timeout-log.json',
-          output_path: 'raw/slot-3/collector-log.json',
-          media_type: 'application/json',
-        }],
-        citations: [],
-        answer_review: answerReview('SMP-TEST-003'),
       },
     ],
     aggregation: {

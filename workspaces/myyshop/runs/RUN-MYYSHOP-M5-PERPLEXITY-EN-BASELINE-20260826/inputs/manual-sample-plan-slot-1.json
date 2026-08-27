@@ -1,0 +1,197 @@
+{
+  "authorization_ref": "workspace://cycles/preparation/decisions/2026-08-26-m5-two-slot-source-batch-and-positioning-approved.md",
+  "classification_policy": {
+    "decision_ref": "workspace://cycles/preparation/decisions/2026-08-26-m5-two-slot-source-batch-and-positioning-approved.md",
+    "mode": "batch_at_source_threshold",
+    "threshold": 100
+  },
+  "collector_contract": {
+    "collector_version": "manual-chrome-result-v2",
+    "schema_version": "2.0.0",
+    "tool_policy_version": "m5-two-slot-source-batch-v1"
+  },
+  "goal_refs": [
+    "GOAL-MYYSHOP-DEFINITION-001"
+  ],
+  "input_versions": {
+    "CLM-MYYSHOP-AUDIENCE-001": "1.0.1",
+    "CLM-MYYSHOP-LIFECYCLE-SERVICE-001": "1.0.1",
+    "CPF-MYYSHOP-PERPLEXITY-EN-BASELINE-20260826": "1.0.0",
+    "GOAL-MYYSHOP-DEFINITION-001": "1.0.1",
+    "KR-MYYSHOP-DEFINITION-001": "1.0.1",
+    "Q-MYYSHOP-WHAT-IS-EN-BASELINE-001": "1.0.0",
+    "QS-MYYSHOP-DEFINITION-EN-BASELINE-001": "1.0.0"
+  },
+  "knowledge_release_versions": [
+    {
+      "ref": "KR-MYYSHOP-DEFINITION-001",
+      "version": "1.0.1"
+    }
+  ],
+  "language_contract": {
+    "object_key": "myyshop-brand-definition",
+    "primary_language": "en-US",
+    "primary_query_ref": "Q-MYYSHOP-WHAT-IS-EN-BASELINE-001",
+    "role": "primary",
+    "semantic_contract_ref": "workspace://cycles/preparation/decisions/2026-08-26-m5-two-slot-source-batch-and-positioning-approved.md"
+  },
+  "manual_source": {
+    "capture_surface": "chrome_extension",
+    "kind": "user_supplied_result_url",
+    "result_url": "https://www.perplexity.ai/search/f0d54976-ff47-48df-9c5b-fc46dd4e308b"
+  },
+  "profile": {
+    "data": {
+      "approval": {
+        "approved_at": "2026-08-26T19:10:37+08:00",
+        "approved_by": "MyyShop Owner",
+        "decision_ref": "workspace://cycles/preparation/decisions/2026-08-26-m5-two-slot-source-batch-and-positioning-approved.md"
+      },
+      "collection_method": "manual",
+      "conversation_state": "new",
+      "created_at": "2026-08-26T19:10:37+08:00",
+      "device": {
+        "browser": "Chrome with user-approved extension",
+        "class": "desktop",
+        "os": "macOS",
+        "viewport": "unknown"
+      },
+      "id": "CPF-MYYSHOP-PERPLEXITY-EN-BASELINE-20260826",
+      "language": "en-US",
+      "language_contract": {
+        "object_key": "myyshop-brand-definition",
+        "primary_language": "en-US",
+        "primary_query_ref": "Q-MYYSHOP-WHAT-IS-EN-BASELINE-001",
+        "role": "primary",
+        "semantic_contract_ref": "workspace://cycles/preparation/decisions/2026-08-26-m5-two-slot-source-batch-and-positioning-approved.md"
+      },
+      "login_state": "logged_in",
+      "model_mode": "unknown",
+      "platform": "perplexity",
+      "product_entry": "https://www.perplexity.ai/",
+      "profile_fingerprint": "99f853625b114e7ee324cabb4b1d1d232122df4631d88ef9b41462d49c3809b5",
+      "query_template_version": "1.0.0",
+      "record_type": "collector_profile",
+      "region": "unknown",
+      "sampling_count": 2,
+      "status": "frozen",
+      "time_window": {
+        "ends_at": "2026-08-31T23:59:59+08:00",
+        "id": "TW-MYYSHOP-M5-EN-BASELINE-20260826",
+        "starts_at": "2026-08-26T00:00:00+08:00"
+      },
+      "title": "perplexity English two-slot manual baseline profile",
+      "updated_at": "2026-08-26T19:10:37+08:00",
+      "version": "1.0.0",
+      "web_search_state": "on"
+    },
+    "path": "cycles/m5/profiles/cpf-myyshop-perplexity-en-baseline-20260826.md"
+  },
+  "purpose": "baseline",
+  "query_set_versions": [
+    {
+      "ref": "QS-MYYSHOP-DEFINITION-EN-BASELINE-001",
+      "version": "1.0.0"
+    }
+  ],
+  "query_version": {
+    "language": "en-US",
+    "ref": "Q-MYYSHOP-WHAT-IS-EN-BASELINE-001",
+    "version": "1.0.0"
+  },
+  "run": {
+    "id": "RUN-MYYSHOP-M5-PERPLEXITY-EN-BASELINE-20260826"
+  },
+  "sample": {
+    "answer_output_path": "raw/slot-1/answer.md",
+    "captured_at": "2026-08-26T19:10:37+08:00",
+    "citations": [
+      {
+        "anchor_or_context": "Perplexity source panel: MyyShop homepage.",
+        "existing_source_ref": "SRC-MYYSHOP-WEB-HOMEPAGE-001",
+        "id": "CIT-MYYSHOP-PERPLEXITY-EN-BASELINE-S1-001",
+        "occurrence_index": 1,
+        "path": "cycles/m5/citations/cit-myyshop-perplexity-en-baseline-s1-001.md",
+        "position": {
+          "kind": "ui_order",
+          "order": 1
+        },
+        "url_raw": "https://www.myyshop.com/"
+      },
+      {
+        "anchor_or_context": "Perplexity source panel: MyyShop About page.",
+        "existing_source_ref": "SRC-MYYSHOP-WEB-ABOUT-001",
+        "id": "CIT-MYYSHOP-PERPLEXITY-EN-BASELINE-S1-002",
+        "occurrence_index": 2,
+        "path": "cycles/m5/citations/cit-myyshop-perplexity-en-baseline-s1-002.md",
+        "position": {
+          "kind": "ui_order",
+          "order": 2
+        },
+        "url_raw": "https://www.myyshop.com/about-us"
+      },
+      {
+        "anchor_or_context": "Perplexity source panel: WordPress review.",
+        "existing_source_ref": "SRC-MYYSHOP-PERPLEXITY-WORDPRESS-001",
+        "id": "CIT-MYYSHOP-PERPLEXITY-EN-BASELINE-S1-003",
+        "occurrence_index": 3,
+        "path": "cycles/m5/citations/cit-myyshop-perplexity-en-baseline-s1-003.md",
+        "position": {
+          "kind": "ui_order",
+          "order": 3
+        },
+        "url_raw": "https://stufftotalk.wordpress.com/2025/11/30/everything-you-need-to-know-about-myyshop-review/"
+      },
+      {
+        "anchor_or_context": "Perplexity source panel: Apple App Store.",
+        "existing_source_ref": "SRC-MYYSHOP-CLAUDE-US-APP-STORE-001",
+        "id": "CIT-MYYSHOP-PERPLEXITY-EN-BASELINE-S1-004",
+        "occurrence_index": 4,
+        "path": "cycles/m5/citations/cit-myyshop-perplexity-en-baseline-s1-004.md",
+        "position": {
+          "kind": "ui_order",
+          "order": 4
+        },
+        "url_raw": "https://apps.apple.com/us/app/myyshop/id6449818392"
+      },
+      {
+        "anchor_or_context": "Perplexity source panel: Reddit discussion.",
+        "existing_source_ref": "SRC-MYYSHOP-PERPLEXITY-REDDIT-001",
+        "id": "CIT-MYYSHOP-PERPLEXITY-EN-BASELINE-S1-005",
+        "occurrence_index": 5,
+        "path": "cycles/m5/citations/cit-myyshop-perplexity-en-baseline-s1-005.md",
+        "position": {
+          "kind": "ui_order",
+          "order": 5
+        },
+        "url_raw": "https://www.reddit.com/r/UGCcreators/comments/1ql5hi1/myyshop_is_it_legit/"
+      },
+      {
+        "anchor_or_context": "Perplexity source panel: MyyShop registration page.",
+        "existing_source_ref": "SRC-MYYSHOP-PERPLEXITY-REGISTER-001",
+        "id": "CIT-MYYSHOP-PERPLEXITY-EN-BASELINE-S1-006",
+        "occurrence_index": 6,
+        "path": "cycles/m5/citations/cit-myyshop-perplexity-en-baseline-s1-006.md",
+        "position": {
+          "kind": "ui_order",
+          "order": 6
+        },
+        "url_raw": "https://www.myyshop.com/register"
+      }
+    ],
+    "id": "SMP-MYYSHOP-PERPLEXITY-EN-BASELINE-S1-20260826",
+    "log_output_path": "raw/slot-1/collector-log.json",
+    "ordinal": 1,
+    "outcome": "success",
+    "path": "cycles/m5/samples/smp-myyshop-perplexity-en-baseline-s1-20260826.md"
+  },
+  "samples": [
+    {
+      "ordinal": 1
+    },
+    {
+      "ordinal": 2
+    }
+  ],
+  "schema_version": "m5-manual-baseline-plan-v2"
+}

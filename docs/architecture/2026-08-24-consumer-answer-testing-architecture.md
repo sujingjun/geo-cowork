@@ -2,7 +2,7 @@
 title: Consumer Answer Testing 与持续信源体系架构
 status: approved
 created: 2026-08-24
-updated: 2026-08-25
+updated: 2026-08-26
 source:
   - docs/prd/2026-08-24-m5-consumer-answer-testing.md
   - docs/architecture/2026-08-23-contract-provenance-kernel-architecture.md
@@ -11,6 +11,7 @@ source:
   - "2026-08-25 当前用户指令：持续维护信源体系，不做冷启动导入；完整设计 Playwright 与真实采集"
   - "2026-08-25 当前用户指令：批准 M5 里程碑方案设计，并实施计划，完成目标"
   - "2026-08-25 当前用户指令：Playwright 使用最新版并全局安装；五个平台统一授权 Owner Google 登录身份，按真实用户隐私，本地 artifact 保留 1 年"
+  - "2026-08-26 当前用户指令：100 Source 后批量分类、每平台两次独立人工采样、英文主线与中英语义一致、当前定位与五平台首轮结果"
 scope: M5 Profile、Playwright/真实采集、不可变 raw、持续 Source registry、Citation/Review、聚合与平台边界
 ---
 
@@ -67,13 +68,14 @@ Host 负责采样目标、语义 Review 和人工门；Collector 只操作获授
 
 ```text
 approved M3 inputs + authorized Collector Profile
-  → fixed three-slot sample plan
+  → fixed two-slot sample plan
   → consumer UI attempt
   → create-only raw artifacts
   → immutable Answer Sample
   → Citation Observations
   → match/create Source identity
-  → Source Classifications + Claim Support Reviews
+  → archive Source as unclassified
+  → after 100 unique observed Sources: batch Classification + Claim Support Reviews
   → Answer Reviews
   → version-pinned Answer Aggregation
 ```
@@ -103,7 +105,7 @@ Playwright base 为每个 sample attempt 创建独立 browser context，不复�
 
 ### 5.2 平台差异
 
-ChatGPT、Gemini、Perplexity、Google AI Mode/AI Overviews、Claude 各自拥有独立 adapter。adapter 只声明允许入口、登录/搜索/模式可见状态、版本化 selector、提交动作、终态 detector、Citation 提取和平台诊断；平台名称、状态和三次采样语义由 Spec 0006 共享。选择器失效必须 fail loud，不能退化为 API、搜索摘要或另一个平台。
+ChatGPT、Gemini、Perplexity、Google AI Mode/AI Overviews、Claude 各自拥有独立 adapter。adapter 只声明允许入口、登录/搜索/模式可见状态、版本化 selector、提交动作、终态 detector、Citation 提取和平台诊断；平台名称、状态和两次采样语义由 Spec 0006 共享。选择器失效必须 fail loud，不能退化为 API、搜索摘要或另一个平台。
 
 人工 fallback 只在平台授权明确允许时使用，仍输出同一 Sample/raw/Citation 合同并记录操作角色、步骤和 `collection_method:manual`；不得手工概述替代完整回答。自动与人工方式不同时 comparability 最高为 `partial`。
 
@@ -137,13 +139,13 @@ Citation URL 先规范化为：协议与 hostname 小写、国际域名 ASCII �
 
 每次引用出现创建 Citation Observation；聚合以 `(sample_ref, normalized_url)` 去重。Citation 必须匹配一个既有 Source，或以首次 Citation 为 provenance 创建 Source。identity key 区分域名、宿主平台、发布者/频道和具体页面；YouTube、Reddit、LinkedIn 等宿主域名不能自动决定发布者或 Source Type。
 
-新 Source 同时创建 candidate Source Classification；后续 Observation 继续引用相同 identity，分类变化创建新 ID + `supersedes_ref`。Source Classification 按当前页面/生产主体/内容角色选择一个主类型和零到多个副标签；Claim Support Review 以 `supported | partially_supported | not_supported | unverifiable` 记录结论、引用片段和理由。
+新 Source 只写入 registry，并设置 `classification_queue.status: archived_unclassified`。计数口径为被当前 M5 Citation 引用的唯一 `source_ref`；达到 100 条后统一切换为 `batch_ready`，由独立分类任务创建新 Classification。阈值前历史 candidate Classification 退出当前口径但保留审计历史。Source Classification 按当前页面/生产主体/内容角色选择一个主类型和零到多个副标签；Claim Support Review 在批量分类后以 `supported | partially_supported | not_supported | unverifiable` 记录结论、引用片段和理由。
 
 first seen、last seen、出现平台、Query Cluster、时间窗和 observation count 全部由不可变 Citation 派生。`Source.status` 只控制 registry 生命周期，不表达权威、Evidence 批准或 Claim 支撑。外部综合榜、静态域名表和历史排名没有导入 adapter、Schema 或 candidate materializer。
 
 ## 8. 聚合与可比性
 
-Aggregation 输入固定为 Query refs、Profile refs、Sample refs、Citation refs、Source refs、Classification refs、Claim Support Review refs、Answer Review refs 与 rubric checksum。聚合器只计算 Spec 0006 冻结公式，并输出新出现、重复出现、candidate/reviewed/unresolved Source 维护信息；不存在外部榜单输入。
+Aggregation 输入固定为 Query refs、Profile refs、Sample refs、Citation refs、Source refs、Classification refs、Claim Support Review refs、Answer Review refs 与 rubric checksum。100 Source 阈值前 Classification/Claim Support refs 可以为空，依赖分类的指标必须为 partial/null；域名/Citation 指标继续可算。聚合器只计算 Spec 0006 冻结公式，并输出新出现、重复出现、归档未分类与 batch-ready Source 维护信息；不存在外部榜单输入。
 
 比较器先做字段级 diff，再输出 `true/partial/false` 和 notes。关键 `unknown` 只允许 `partial`；入口、地区、语言、登录/搜索状态、Query/模板、正式协议或样本集合的硬差异直接为 `false`。
 

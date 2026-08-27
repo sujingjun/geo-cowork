@@ -79,13 +79,13 @@
 | 公开采集与优化 Record | [`records/2026-08-24-m2-m4-optimization-and-myyshop-real-collection-record.md`](records/2026-08-24-m2-m4-optimization-and-myyshop-real-collection-record.md) | verified；11/11 快照、五页 Site Run、11 份 candidate 一方 Evidence；GA4/GSC/消费者平台/外部写入仍未授权 |
 | 整体优化 Handoff | [`handoff/2026-08-24-m2-m4-integrated-optimization-handoff.md`](handoff/2026-08-24-m2-m4-integrated-optimization-handoff.md) | proposed；记录已完成的直接优化、五层信源模型与 M5 P0；下一任务独立判断进入门 |
 
-## M5 Consumer Answer Testing / 持续信源体系（离线工程已验证）
+## M5 Consumer Answer Testing / 持续信源体系（五平台正式英文两槽 Baseline 已验证）
 
 | 类别 | 工件 | 状态 |
 | --- | --- | --- |
 | 独立 Review Record | [`records/2026-08-24-m2-m4-completeness-and-m5-entry-gate-review.md`](records/2026-08-24-m2-m4-completeness-and-m5-entry-gate-review.md) | verified；历史规划门结论，后续 Owner 已另行批准离线实现 |
 | Requirement / PRD / Architecture | [`requirements/2026-08-24-m5-consumer-answer-testing.md`](requirements/2026-08-24-m5-consumer-answer-testing.md) / [`prd/2026-08-24-m5-consumer-answer-testing.md`](prd/2026-08-24-m5-consumer-answer-testing.md) / [`architecture/2026-08-24-consumer-answer-testing-architecture.md`](architecture/2026-08-24-consumer-answer-testing-architecture.md) | approved；授权 T02—T08 与五平台账号/隐私范围，真实执行仍受 Terms/robots 限制 |
-| Spec 0006 / Plan / Task | [`specs/0006-consumer-answer-testing.md`](specs/0006-consumer-answer-testing.md) / [`plans/2026-08-24-m5-consumer-answer-testing-plan.md`](plans/2026-08-24-m5-consumer-answer-testing-plan.md) / [`tasks/2026-08-24-m5-consumer-answer-testing.md`](tasks/2026-08-24-m5-consumer-answer-testing.md) | approved / approved / implemented；T02—T08 verified，T09 真实 Smoke 与 T10 blocked |
+| Spec 0006 / Plan / Task | [`specs/0006-consumer-answer-testing.md`](specs/0006-consumer-answer-testing.md) / [`plans/2026-08-24-m5-consumer-answer-testing-plan.md`](plans/2026-08-24-m5-consumer-answer-testing-plan.md) / [`tasks/2026-08-24-m5-consumer-answer-testing.md`](tasks/2026-08-24-m5-consumer-answer-testing.md) | approved / approved / implemented；五平台正式英文两槽 Baseline verified，整体仍有人工 Review、100 Source 分类与 Retest 门 |
 | M5 信源/采集设计修订 Record | [`records/2026-08-25-m5-source-system-and-collector-design-record.md`](records/2026-08-25-m5-source-system-and-collector-design-record.md) | verified；记录无冷启动导入、Playwright/真实采集设计和本地验证；不是实现批准 |
 | M5 离线工程 Record | [`records/2026-08-25-m5-offline-consumer-answer-testing-record.md`](records/2026-08-25-m5-offline-consumer-answer-testing-record.md) | verified；七类对象、recorded Fixture、恢复、Source/Review/聚合与回归；不是真实 Baseline |
 | M5 Playwright / 平台条款门 Record | [`records/2026-08-25-m5-playwright-runtime-and-platform-guard-record.md`](records/2026-08-25-m5-playwright-runtime-and-platform-guard-record.md) | T08 verified；T09 guard engineering 通过但真实 Smoke blocked；未访问账号或 UI |
@@ -94,6 +94,10 @@
 | Google AI 人工共享 Smoke Record | [`records/2026-08-26-m5-google-ai-manual-share-smoke-record.md`](records/2026-08-26-m5-google-ai-manual-share-smoke-record.md) | 1 个 exploratory/manual Sample、9 Citation/Source/候选 Classification；不是 Baseline |
 | Claude CN/US 人工共享 Smoke Record | [`records/2026-08-26-m5-claude-manual-share-smoke-record.md`](records/2026-08-26-m5-claude-manual-share-smoke-record.md) | CN/US 各 1 个成功 exploratory Sample；只记采集基线差异，不作 IP 对比 |
 | Perplexity 用户导出 Markdown Smoke Record | [`records/2026-08-26-m5-perplexity-user-export-smoke-record.md`](records/2026-08-26-m5-perplexity-user-export-smoke-record.md) | 1 个 user-supplied-export/manual Sample、5 Citation；页面与自动化仍 blocked |
+| M5 两槽英文 Baseline 第 1 槽 Record | [`records/2026-08-26-m5-two-slot-english-baseline-slot1-record.md`](records/2026-08-26-m5-two-slot-english-baseline-slot1-record.md) | verified；五平台各 1 个正式英文 slot、52 个新 Citation、33/100 唯一 Source、5 个 candidate Review；Run 均 waiting_human 1/2 |
+| M5 两槽英文 Baseline Record | [`records/2026-08-26-m5-two-slot-english-baseline-record.md`](records/2026-08-26-m5-two-slot-english-baseline-record.md) | verified；五平台均 2/2、10 candidate Review、5 computed Aggregation、40/100 Source；整体 M5 仍有人工审核/分类/Retest 门 |
+| M5 两槽继续执行 Handoff | [`handoff/2026-08-26-m5-two-slot-baseline-continuation-handoff.md`](handoff/2026-08-26-m5-two-slot-baseline-continuation-handoff.md) | verified；第 2 槽任务已执行，当前出口转为人工 Review、60 个 Source 与 M3/M4 后续门 |
+| M5 Baseline 收口与知识优化 Handoff | [`handoff/2026-08-26-m5-baseline-closeout-and-knowledge-optimization-handoff.md`](handoff/2026-08-26-m5-baseline-closeout-and-knowledge-optimization-handoff.md) | proposed；Owner Review → M3 新知识版本 → 100 Source 分类 → M4 发布/Retest |
 | 平台许可需求池条目 | [`requirements/2026-08-25-platform-automation-permission-backlog.md`](requirements/2026-08-25-platform-automation-permission-backlog.md) | proposed / 待规划；是否启动规范仅由 Owner 决定 |
 
 ## 历史提案与交接
@@ -105,7 +109,7 @@
 | CodeBuddy 移除与 WorkBuddy 切换 Handoff | [`handoff/2026-08-20-milestone-1-hardening-workbuddy-china-handoff.md`](handoff/2026-08-20-milestone-1-hardening-workbuddy-china-handoff.md) | 历史 WorkBuddy 契约跟踪与 M1 收口基线 |
 | 原“Query 与知识” M2 Handoff | [`handoff/2026-08-20-query-and-knowledge-milestone-handoff.md`](handoff/2026-08-20-query-and-knowledge-milestone-handoff.md) | 已被 2026-08-23 产品基线重排；保留历史，不再作为当前 M2 启动指令 |
 
-Owner 已批准六份 M5 工件、T02—T08 与五平台账号/隐私范围；离线对象、Fixture、恢复、Source/Review/聚合、全局 Playwright runtime/base 与回归已验证。ChatGPT、Gemini、Google AI 各形成 1 个 Owner manual exploratory Smoke，Claude 形成 CN/US 各 1 个成功 Sample，Perplexity 形成 1 个用户导出文件 Sample。Perplexity 页面 manual 与所有 browser automation guard 保持 blocked。上述 Record 不能替代正式 Baseline、对比实验、发布或业务效果证据。
+Owner 已批准 M5 两槽英文主线、中文可选辅助、同对象语义合同和 100 Source 批量分类门。历史 exploratory Sample 全部保留；ChatGPT、Gemini、Google AI、Perplexity、Claude 已各完成两个正式英文 manual slot、两个 candidate Review 和一个 computed Aggregation。当前 40/100 个唯一 Source 统一归档未分类；上述 Record 不能替代 Review 人工确认、外部发布或业务效果证据。
 
 ## 现有目录
 

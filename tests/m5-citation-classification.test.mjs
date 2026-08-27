@@ -14,6 +14,7 @@ import {
   materializeCitationSourcePair,
   normalizeCitationUrl,
 } from '../plugins/geo-expert/scripts/lib/source-registry.mjs';
+import { sourceClassificationQueueStatus } from '../plugins/geo-expert/scripts/lib/m5-policy.mjs';
 import { m5FixturePlan, m5ReadyWorkspace } from './helpers/m5-fixtures.mjs';
 
 test('Citation URL 规范化保留 path/query 并处理 IDN、默认端口、fragment 与 www', () => {
@@ -135,4 +136,10 @@ test('后续 Citation 复用既有 Source，不改写首次 discovery 字节', a
   assert.equal(graph.byId.get(first.source.id).data.discovery.citation_ref, first.id);
   assert.equal(graph.byId.get(later.id).data.source_ref, first.source.id);
   await rm(root, { recursive: true });
+});
+
+test('Source 分类队列在 100 个唯一 Source 时才进入 batch_ready', () => {
+  assert.equal(sourceClassificationQueueStatus(0), 'archived_unclassified');
+  assert.equal(sourceClassificationQueueStatus(99), 'archived_unclassified');
+  assert.equal(sourceClassificationQueueStatus(100), 'batch_ready');
 });

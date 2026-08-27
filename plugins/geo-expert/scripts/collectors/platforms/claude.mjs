@@ -14,6 +14,7 @@ export const claudeAdapter = Object.freeze({
   },
   manual_fallback: {
     allowed: true,
+    result_url_origins: ['https://claude.ai'],
     requirements: [
       'Owner-controlled browser',
       'manual Query submission and copy',

@@ -2,7 +2,7 @@
 
 - 状态：approved
 - 日期：2026-08-23
-- 更新：2026-08-25，Owner 明确 M5 必须完整设计 Playwright 与真实消费者平台采集；持续信源体系只由真实 Citation Observation 维护，不做冷启动榜单导入
+- 更新：2026-08-26，Owner 修订 M5 为每平台两个独立英文人工样本、中文可选辅助；Source 先统一归档未分类，100 个唯一 Source 后批量分类；确认当前 MyyShop 定位
 - 来源：2026-08-23 苏格拉底式产品澄清、GitHub 开源研究与 Owner 批准；2026-08-25 Owner 信源与采集边界决定
 - 适用范围：里程碑 M2—M8、MyyShop 两个真实 GEO Cycle、本地跨宿主 GEO 专家 v1
 - 目标仓库：`sujingjun/geo-cowork`
@@ -66,10 +66,10 @@ v1 不建设：
 
 ```text
 品牌总定位
-MyyShop 是面向全球达人的全生命周期服务容器
+MyyShop 是面向全球内容创作者的达人服务平台
 
 当前阶段战略
-优先建设面向中小网红的共创商业容器
+从以达人商业化为主的服务，扩展为覆盖达人加入、成长、活跃与商业化的更完整服务体系
 
 长期生态愿景
 形成中小网红 Skill 共生、互补和商业化的“热带雨林”
@@ -79,13 +79,17 @@ MyyShop 是面向全球达人的全生命周期服务容器
 
 ### 2.2 当前对外主叙事
 
-> MyyShop 正在从达人流量变现平台升级为面向全球达人的全生命周期服务容器，目前已提供画像报告、品牌商单和 MyyFinds，并在探索课程、数字代言人、社交涨粉等成长能力或工具。
+> MyyShop 是面向全球内容创作者的达人服务平台，正在从以达人商业化为主的服务，扩展为覆盖达人加入、成长、活跃与商业化的更完整服务体系。
+>
+> 当前对外可保留的能力类别包括品牌合作机会、MyyFinds 及达人侧工具与服务。具体功能、开放状态、地区、资格、费用和结算规则，应以对应官方页面和最新业务确认信息为准。
+>
+> MyyShop 正在探索 AI 辅助分析、推荐与匹配，以及课程、数字代言人和达人协作增长等能力；这些属于持续建设或规划中的方向，不代表全部已经上线，也不保证达人收入、涨粉或商业结果。
 
 ### 2.3 关键风险提示
 
 系统必须显式提示但不代替人工决策：
 
-- 不应把“全生命周期”描述为全部服务已经上线；
+- 不应把“更完整服务体系”描述为全部服务已经上线；
 - 不应把课程、数字代言人、社交涨粉等探索能力描述为正式上线；
 - 不应保证商单、涨粉或收入结果；
 - 不应把 MyyShop 描述为 MCN；
@@ -392,7 +396,7 @@ Raw sample 与 Review 分离，后续 Rubric 更新可以重评历史数据。
 
 确定性项目自动；语义项目由 GEO 专家初评；冲突、低置信度、关键风险、证据矛盾或直接影响 Cycle 结论的关键样本才要求人工确认。
 
-3 次样本保留 pass / partial / fail、brand_mention、official_citation、legacy_positioning、citation_source_distribution、stability。Perception Goal 最终由人工综合判断 `achieved | partial | not_achieved`，v1 不设置数学阈值。
+2 次样本保留 pass / partial / fail、brand_mention、official_citation、legacy_positioning、citation_source_distribution、stability。Perception Goal 最终由人工综合判断 `achieved | partial | not_achieved`，v1 不设置数学阈值。
 
 ---
 
@@ -682,9 +686,9 @@ Primary GEO Expert
 
 目标：建立真实消费者产品入口的可复现 Baseline / Retest，并建立只由真实 Citation Observation 驱动的持续信源体系。
 
-交付：Collector Profile；Playwright collector base；ChatGPT/Gemini/Perplexity/Google AI Mode/AI Overviews/Claude collectors；real `collect` 与 manual fallback；Answer Sample Evidence package；Citation-driven Source registry 与五层 Classification；Claim Support Review；core/exploratory Review；3-run aggregation；comparability；长任务恢复；逐平台授权/隐私矩阵；`geo-answer-cycle`。
+交付：Collector Profile；Playwright collector base；ChatGPT/Gemini/Perplexity/Google AI Mode/AI Overviews/Claude collectors；real `collect` 与 manual fallback；Answer Sample Evidence package；Citation-driven Source registry；100 Source 批量 Classification；Claim Support Review；core/exploratory Review；2-run aggregation；英文主线/中文辅助语义合同；comparability；长任务恢复；逐平台授权/隐私矩阵；`geo-answer-cycle`。
 
-验收：正式样本来自消费者 UI；API 样本不混入；每 Query×Platform 3 次独立保留；raw answer/citation/screenshot/profile 与 review 分离；timeout/refusal/no-result/challenge/selector drift 不静默丢弃；同一 raw sample 可重评；Citation → Source identity → Classification → Claim Support 全链可追溯；五项信源指标可按行业/平台/Query Cluster/时间窗重算；系统无外部榜单冷启动导入路径。
+验收：正式样本来自消费者 UI；API 样本不混入；每 Query×Platform 2 次独立保留；英文主线与中文辅助分别采样、同对象语义一致；raw answer/citation/screenshot/profile 与 review 分离；timeout/refusal/no-result/challenge/selector drift 不静默丢弃；同一 raw sample 可重评；Citation → Source identity 可追溯，100 个唯一 Source 后 Classification → Claim Support 全链可追溯；五项信源指标可按行业/平台/Query Cluster/时间窗重算；系统无外部榜单冷启动导入路径。
 
 ### M6 — Analytics + Real GEO Cycle 1
 

@@ -1,9 +1,20 @@
 # geo-cowork 变更记录
 
+## 2026-08-26 - M5 两槽英文 Baseline 第 1 槽（本地未发布）
+
+- Owner 将正式协议修订为每平台两个独立英文 manual Sample；中文仅作可选辅助并绑定同一语义合同；
+- Source 只归档未分类，按 M5 Citation 引用的唯一 `source_ref` 计数，达到 100 后另启批量 Classification/Claim Support Task；
+- 新增 manual baseline v2、Source batch queue、两槽 Run 恢复、低于阈值的 partial/unknown 聚合，以及批量采集/Review CLI；
+- ChatGPT、Gemini、Google AI、Perplexity、Claude 各完成第 1 槽，共新增 52 个 Citation；当前累计 33/100 个唯一 Source，五个 Run 均为 `waiting_human` 1/2；
+- 新增 5 个 candidate Answer Review；Gemini 当前定位为 fail，其余为 partial；最新完整业务知识库、Source 分类、第 2 槽和 Aggregation 仍待后续；
+- Owner 随后提供五平台第 2 槽：新增 53 个 Citation，五个 Run 均 completed 2/2；形成 10 个 candidate Review 与 5 个 computed Aggregation；当前 40/100 Source、comparability 均 partial；
+- Gemini 官方共享入口 `share.gemini.google` 只加入 manual result allowlist；自动 Query/Playwright guard 不变；
+- 自动采集 guard、外部写入、发布、部署与 Git 远端门保持；未 commit/push/PR/release/deploy。
+
 ## 2026-08-25 - M5 Consumer Answer Testing 离线工程（本地未发布）
 
 - Owner 批准 M5 Requirement、PRD、Architecture、Spec 0006、Plan 与 Task，并授权 T02—T07 本地离线实现；
-- 新增七类 M5 canonical 对象、七类派生 index、Profile fingerprint、三 slot Sample、create-only raw、Citation-driven Source 与双向闭包；
+- 新增七类 M5 canonical 对象、七类派生 index、Profile fingerprint、当时的三 slot Sample、create-only raw、Citation-driven Source 与双向闭包；该采样数已由 2026-08-26 Owner 决定修订为两槽；
 - 新增 lease/stale takeover/未知提交状态停门、五层 Source Classification、Claim Support、同 raw 多 rubric Review、五项指标与 comparability；
 - 新增 `answer-cycle.mjs`、`geo-answer-cycle`、`geo-answer` 和 `.invalid` 录制 Fixture；外部榜单 import 与未授权真实 `collect` 均显式失败；
 - 后续按 Owner 授权全局安装 `playwright@1.62.1`，复用兼容 `chromium-1234`，完成 loopback base Smoke；未下载新 browser binary；

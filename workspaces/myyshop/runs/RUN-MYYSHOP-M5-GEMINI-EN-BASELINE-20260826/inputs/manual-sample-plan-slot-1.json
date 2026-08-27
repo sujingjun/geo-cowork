@@ -1,0 +1,293 @@
+{
+  "authorization_ref": "workspace://cycles/preparation/decisions/2026-08-26-m5-two-slot-source-batch-and-positioning-approved.md",
+  "classification_policy": {
+    "decision_ref": "workspace://cycles/preparation/decisions/2026-08-26-m5-two-slot-source-batch-and-positioning-approved.md",
+    "mode": "batch_at_source_threshold",
+    "threshold": 100
+  },
+  "collector_contract": {
+    "collector_version": "manual-chrome-result-v2",
+    "schema_version": "2.0.0",
+    "tool_policy_version": "m5-two-slot-source-batch-v1"
+  },
+  "goal_refs": [
+    "GOAL-MYYSHOP-DEFINITION-001"
+  ],
+  "input_versions": {
+    "CLM-MYYSHOP-AUDIENCE-001": "1.0.1",
+    "CLM-MYYSHOP-LIFECYCLE-SERVICE-001": "1.0.1",
+    "CPF-MYYSHOP-GEMINI-EN-BASELINE-20260826": "1.0.0",
+    "GOAL-MYYSHOP-DEFINITION-001": "1.0.1",
+    "KR-MYYSHOP-DEFINITION-001": "1.0.1",
+    "Q-MYYSHOP-WHAT-IS-EN-BASELINE-001": "1.0.0",
+    "QS-MYYSHOP-DEFINITION-EN-BASELINE-001": "1.0.0"
+  },
+  "knowledge_release_versions": [
+    {
+      "ref": "KR-MYYSHOP-DEFINITION-001",
+      "version": "1.0.1"
+    }
+  ],
+  "language_contract": {
+    "object_key": "myyshop-brand-definition",
+    "primary_language": "en-US",
+    "primary_query_ref": "Q-MYYSHOP-WHAT-IS-EN-BASELINE-001",
+    "role": "primary",
+    "semantic_contract_ref": "workspace://cycles/preparation/decisions/2026-08-26-m5-two-slot-source-batch-and-positioning-approved.md"
+  },
+  "manual_source": {
+    "capture_surface": "chrome_extension",
+    "kind": "user_supplied_result_url",
+    "result_url": "https://gemini.google.com/app/d9268cd1f0666ca6"
+  },
+  "profile": {
+    "data": {
+      "approval": {
+        "approved_at": "2026-08-26T19:10:37+08:00",
+        "approved_by": "MyyShop Owner",
+        "decision_ref": "workspace://cycles/preparation/decisions/2026-08-26-m5-two-slot-source-batch-and-positioning-approved.md"
+      },
+      "collection_method": "manual",
+      "conversation_state": "new",
+      "created_at": "2026-08-26T19:10:37+08:00",
+      "device": {
+        "browser": "Chrome with user-approved extension",
+        "class": "desktop",
+        "os": "macOS",
+        "viewport": "unknown"
+      },
+      "id": "CPF-MYYSHOP-GEMINI-EN-BASELINE-20260826",
+      "language": "en-US",
+      "language_contract": {
+        "object_key": "myyshop-brand-definition",
+        "primary_language": "en-US",
+        "primary_query_ref": "Q-MYYSHOP-WHAT-IS-EN-BASELINE-001",
+        "role": "primary",
+        "semantic_contract_ref": "workspace://cycles/preparation/decisions/2026-08-26-m5-two-slot-source-batch-and-positioning-approved.md"
+      },
+      "login_state": "logged_in",
+      "model_mode": "Flash",
+      "platform": "gemini",
+      "product_entry": "https://gemini.google.com/app",
+      "profile_fingerprint": "f879643b53ddd3662a8085cfe48f492ff5f3633b83cbbe5c54d8b1aa5292eb6a",
+      "query_template_version": "1.0.0",
+      "record_type": "collector_profile",
+      "region": "unknown",
+      "sampling_count": 2,
+      "status": "frozen",
+      "time_window": {
+        "ends_at": "2026-08-31T23:59:59+08:00",
+        "id": "TW-MYYSHOP-M5-EN-BASELINE-20260826",
+        "starts_at": "2026-08-26T00:00:00+08:00"
+      },
+      "title": "gemini English two-slot manual baseline profile",
+      "updated_at": "2026-08-26T19:10:37+08:00",
+      "version": "1.0.0",
+      "web_search_state": "unknown"
+    },
+    "path": "cycles/m5/profiles/cpf-myyshop-gemini-en-baseline-20260826.md"
+  },
+  "purpose": "baseline",
+  "query_set_versions": [
+    {
+      "ref": "QS-MYYSHOP-DEFINITION-EN-BASELINE-001",
+      "version": "1.0.0"
+    }
+  ],
+  "query_version": {
+    "language": "en-US",
+    "ref": "Q-MYYSHOP-WHAT-IS-EN-BASELINE-001",
+    "version": "1.0.0"
+  },
+  "run": {
+    "id": "RUN-MYYSHOP-M5-GEMINI-EN-BASELINE-20260826"
+  },
+  "sample": {
+    "answer_output_path": "raw/slot-1/answer.md",
+    "captured_at": "2026-08-26T19:10:37+08:00",
+    "citations": [
+      {
+        "anchor_or_context": "Gemini source detail: Influencer Marketing Hub.",
+        "id": "CIT-MYYSHOP-GEMINI-EN-BASELINE-S1-001",
+        "occurrence_index": 1,
+        "path": "cycles/m5/citations/cit-myyshop-gemini-en-baseline-s1-001.md",
+        "position": {
+          "kind": "ui_order",
+          "order": 1
+        },
+        "source": {
+          "id": "SRC-MYYSHOP-INFLUENCER-MARKETING-HUB-001",
+          "identity": {
+            "citation_domain": "influencermarketinghub.com",
+            "host_platform": "none",
+            "key": "page:https://influencermarketinghub.com/myyshop/",
+            "level": "page",
+            "publisher_name": "Influencer Marketing Hub"
+          },
+          "locator": "https://influencermarketinghub.com/myyshop/",
+          "name": "Influencer Marketing Hub MyyShop review",
+          "path": "evidence/sources/src-myyshop-influencer-marketing-hub-001.md"
+        },
+        "url_raw": "https://influencermarketinghub.com/myyshop/"
+      },
+      {
+        "anchor_or_context": "Gemini source detail: Influencer Marketing Hub.",
+        "existing_source_ref": "SRC-MYYSHOP-INFLUENCER-MARKETING-HUB-001",
+        "id": "CIT-MYYSHOP-GEMINI-EN-BASELINE-S1-002",
+        "occurrence_index": 2,
+        "path": "cycles/m5/citations/cit-myyshop-gemini-en-baseline-s1-002.md",
+        "position": {
+          "kind": "ui_order",
+          "order": 2
+        },
+        "url_raw": "https://influencermarketinghub.com/myyshop/"
+      },
+      {
+        "anchor_or_context": "Gemini source detail: Influencer Marketing Hub.",
+        "existing_source_ref": "SRC-MYYSHOP-INFLUENCER-MARKETING-HUB-001",
+        "id": "CIT-MYYSHOP-GEMINI-EN-BASELINE-S1-003",
+        "occurrence_index": 3,
+        "path": "cycles/m5/citations/cit-myyshop-gemini-en-baseline-s1-003.md",
+        "position": {
+          "kind": "ui_order",
+          "order": 3
+        },
+        "url_raw": "https://influencermarketinghub.com/myyshop/"
+      },
+      {
+        "anchor_or_context": "Gemini source detail: Business Wire launch article.",
+        "id": "CIT-MYYSHOP-GEMINI-EN-BASELINE-S1-004",
+        "occurrence_index": 4,
+        "path": "cycles/m5/citations/cit-myyshop-gemini-en-baseline-s1-004.md",
+        "position": {
+          "kind": "ui_order",
+          "order": 4
+        },
+        "source": {
+          "id": "SRC-MYYSHOP-BUSINESS-WIRE-LAUNCH-001",
+          "identity": {
+            "citation_domain": "businesswire.com",
+            "host_platform": "none",
+            "key": "page:https://www.businesswire.com/news/home/20200921005309/en/DHgate-Launches-MyyShop-to-Build-a-Decentralized-Ecosystem",
+            "level": "page",
+            "publisher_name": "Business Wire"
+          },
+          "locator": "https://www.businesswire.com/news/home/20200921005309/en/DHgate-Launches-MyyShop-to-Build-a-Decentralized-Ecosystem",
+          "name": "Business Wire MyyShop launch article",
+          "path": "evidence/sources/src-myyshop-business-wire-launch-001.md"
+        },
+        "url_raw": "https://www.businesswire.com/news/home/20200921005309/en/DHgate-Launches-MyyShop-to-Build-a-Decentralized-Ecosystem"
+      },
+      {
+        "anchor_or_context": "Gemini source detail: Business Wire launch article.",
+        "existing_source_ref": "SRC-MYYSHOP-BUSINESS-WIRE-LAUNCH-001",
+        "id": "CIT-MYYSHOP-GEMINI-EN-BASELINE-S1-005",
+        "occurrence_index": 5,
+        "path": "cycles/m5/citations/cit-myyshop-gemini-en-baseline-s1-005.md",
+        "position": {
+          "kind": "ui_order",
+          "order": 5
+        },
+        "url_raw": "https://www.businesswire.com/news/home/20200921005309/en/DHgate-Launches-MyyShop-to-Build-a-Decentralized-Ecosystem"
+      },
+      {
+        "anchor_or_context": "Gemini repeated source detail: Influencer Marketing Hub.",
+        "existing_source_ref": "SRC-MYYSHOP-INFLUENCER-MARKETING-HUB-001",
+        "id": "CIT-MYYSHOP-GEMINI-EN-BASELINE-S1-006",
+        "occurrence_index": 6,
+        "path": "cycles/m5/citations/cit-myyshop-gemini-en-baseline-s1-006.md",
+        "position": {
+          "kind": "ui_order",
+          "order": 6
+        },
+        "url_raw": "https://influencermarketinghub.com/myyshop/"
+      },
+      {
+        "anchor_or_context": "Gemini repeated source detail: Influencer Marketing Hub.",
+        "existing_source_ref": "SRC-MYYSHOP-INFLUENCER-MARKETING-HUB-001",
+        "id": "CIT-MYYSHOP-GEMINI-EN-BASELINE-S1-007",
+        "occurrence_index": 7,
+        "path": "cycles/m5/citations/cit-myyshop-gemini-en-baseline-s1-007.md",
+        "position": {
+          "kind": "ui_order",
+          "order": 7
+        },
+        "url_raw": "https://influencermarketinghub.com/myyshop/"
+      },
+      {
+        "anchor_or_context": "Gemini repeated source detail: Influencer Marketing Hub.",
+        "existing_source_ref": "SRC-MYYSHOP-INFLUENCER-MARKETING-HUB-001",
+        "id": "CIT-MYYSHOP-GEMINI-EN-BASELINE-S1-008",
+        "occurrence_index": 8,
+        "path": "cycles/m5/citations/cit-myyshop-gemini-en-baseline-s1-008.md",
+        "position": {
+          "kind": "ui_order",
+          "order": 8
+        },
+        "url_raw": "https://influencermarketinghub.com/myyshop/"
+      },
+      {
+        "anchor_or_context": "Gemini repeated source detail: Influencer Marketing Hub.",
+        "existing_source_ref": "SRC-MYYSHOP-INFLUENCER-MARKETING-HUB-001",
+        "id": "CIT-MYYSHOP-GEMINI-EN-BASELINE-S1-009",
+        "occurrence_index": 9,
+        "path": "cycles/m5/citations/cit-myyshop-gemini-en-baseline-s1-009.md",
+        "position": {
+          "kind": "ui_order",
+          "order": 9
+        },
+        "url_raw": "https://influencermarketinghub.com/myyshop/"
+      },
+      {
+        "anchor_or_context": "Gemini source detail: GlobeNewswire CPM announcement.",
+        "id": "CIT-MYYSHOP-GEMINI-EN-BASELINE-S1-010",
+        "occurrence_index": 10,
+        "path": "cycles/m5/citations/cit-myyshop-gemini-en-baseline-s1-010.md",
+        "position": {
+          "kind": "ui_order",
+          "order": 10
+        },
+        "source": {
+          "id": "SRC-MYYSHOP-GLOBENEWSWIRE-CPM-001",
+          "identity": {
+            "citation_domain": "globenewswire.com",
+            "host_platform": "none",
+            "key": "page:https://www.globenewswire.com/news-release/2026/08/12/3343441/0/en/myyshop-launches-paid-for-every-view-tiktok-cpm-model-to-give-creators-faster-more-transparent-monetization-opportunities.html",
+            "level": "page",
+            "publisher_name": "GlobeNewswire"
+          },
+          "locator": "https://www.globenewswire.com/news-release/2026/08/12/3343441/0/en/myyshop-launches-paid-for-every-view-tiktok-cpm-model-to-give-creators-faster-more-transparent-monetization-opportunities.html",
+          "name": "GlobeNewswire MyyShop CPM announcement",
+          "path": "evidence/sources/src-myyshop-globenewswire-cpm-001.md"
+        },
+        "url_raw": "https://www.globenewswire.com/news-release/2026/08/12/3343441/0/en/myyshop-launches-paid-for-every-view-tiktok-cpm-model-to-give-creators-faster-more-transparent-monetization-opportunities.html"
+      },
+      {
+        "anchor_or_context": "Gemini repeated source detail: Business Wire.",
+        "existing_source_ref": "SRC-MYYSHOP-BUSINESS-WIRE-LAUNCH-001",
+        "id": "CIT-MYYSHOP-GEMINI-EN-BASELINE-S1-011",
+        "occurrence_index": 11,
+        "path": "cycles/m5/citations/cit-myyshop-gemini-en-baseline-s1-011.md",
+        "position": {
+          "kind": "ui_order",
+          "order": 11
+        },
+        "url_raw": "https://www.businesswire.com/news/home/20200921005309/en/DHgate-Launches-MyyShop-to-Build-a-Decentralized-Ecosystem"
+      }
+    ],
+    "id": "SMP-MYYSHOP-GEMINI-EN-BASELINE-S1-20260826",
+    "log_output_path": "raw/slot-1/collector-log.json",
+    "ordinal": 1,
+    "outcome": "success",
+    "path": "cycles/m5/samples/smp-myyshop-gemini-en-baseline-s1-20260826.md"
+  },
+  "samples": [
+    {
+      "ordinal": 1
+    },
+    {
+      "ordinal": 2
+    }
+  ],
+  "schema_version": "m5-manual-baseline-plan-v2"
+}

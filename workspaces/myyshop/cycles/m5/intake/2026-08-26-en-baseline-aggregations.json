@@ -1,0 +1,44 @@
+{
+  "schema_version": "m5-manual-aggregation-batch-v1",
+  "computed_at": "2026-08-26T20:59:39+08:00",
+  "industry": "creator-services",
+  "query_cluster": {
+    "id": "QC-MYYSHOP-BRAND-DEFINITION-EN",
+    "label": "What is MyyShop English brand definition",
+    "query_versions": [
+      { "ref": "Q-MYYSHOP-WHAT-IS-EN-BASELINE-001", "version": "1.0.0" }
+    ]
+  },
+  "entries": [
+    {
+      "platform": "chatgpt",
+      "profile_ref": "CPF-MYYSHOP-CHATGPT-EN-BASELINE-20260826",
+      "sample_refs": ["SMP-MYYSHOP-CHATGPT-EN-BASELINE-S1-20260826", "SMP-MYYSHOP-CHATGPT-EN-BASELINE-S2-20260826"],
+      "aggregation_id": "AGG-MYYSHOP-CHATGPT-EN-BASELINE-20260826"
+    },
+    {
+      "platform": "gemini",
+      "profile_ref": "CPF-MYYSHOP-GEMINI-EN-BASELINE-20260826",
+      "sample_refs": ["SMP-MYYSHOP-GEMINI-EN-BASELINE-S1-20260826", "SMP-MYYSHOP-GEMINI-EN-BASELINE-S2-20260826"],
+      "aggregation_id": "AGG-MYYSHOP-GEMINI-EN-BASELINE-20260826"
+    },
+    {
+      "platform": "google_ai",
+      "profile_ref": "CPF-MYYSHOP-GOOGLE-AI-EN-BASELINE-20260826",
+      "sample_refs": ["SMP-MYYSHOP-GOOGLE-AI-EN-BASELINE-S1-20260826", "SMP-MYYSHOP-GOOGLE-AI-EN-BASELINE-S2-20260826"],
+      "aggregation_id": "AGG-MYYSHOP-GOOGLE-AI-EN-BASELINE-20260826"
+    },
+    {
+      "platform": "perplexity",
+      "profile_ref": "CPF-MYYSHOP-PERPLEXITY-EN-BASELINE-20260826",
+      "sample_refs": ["SMP-MYYSHOP-PERPLEXITY-EN-BASELINE-S1-20260826", "SMP-MYYSHOP-PERPLEXITY-EN-BASELINE-S2-20260826"],
+      "aggregation_id": "AGG-MYYSHOP-PERPLEXITY-EN-BASELINE-20260826"
+    },
+    {
+      "platform": "claude",
+      "profile_ref": "CPF-MYYSHOP-CLAUDE-EN-BASELINE-20260826",
+      "sample_refs": ["SMP-MYYSHOP-CLAUDE-EN-BASELINE-S1-20260826", "SMP-MYYSHOP-CLAUDE-EN-BASELINE-S2-20260826"],
+      "aggregation_id": "AGG-MYYSHOP-CLAUDE-EN-BASELINE-20260826"
+    }
+  ]
+}

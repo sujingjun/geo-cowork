@@ -1,14 +1,34 @@
 {
   "objects": [
     {
+      "id": "SRC-MYYSHOP-AI-CREATOR-BLOG-001",
+      "path": "evidence/sources/src-myyshop-ai-creator-blog-001.md",
+      "refs": [
+        "CIT-MYYSHOP-CHATGPT-EN-BASELINE-S1-015"
+      ],
+      "status": "active",
+      "updated_at": "2026-08-26T19:10:37+08:00",
+      "version": "1.0.1"
+    },
+    {
+      "id": "SRC-MYYSHOP-BUSINESS-WIRE-LAUNCH-001",
+      "path": "evidence/sources/src-myyshop-business-wire-launch-001.md",
+      "refs": [
+        "CIT-MYYSHOP-GEMINI-EN-BASELINE-S1-004"
+      ],
+      "status": "active",
+      "updated_at": "2026-08-26T19:10:37+08:00",
+      "version": "1.0.1"
+    },
+    {
       "id": "SRC-MYYSHOP-CLAUDE-CIFNEWS-ARTICLE-001",
       "path": "evidence/sources/src-myyshop-claude-cifnews-article-001.md",
       "refs": [
         "CIT-MYYSHOP-CLAUDE-MANUAL-CIFNEWS-1-20260826"
       ],
       "status": "active",
-      "updated_at": "2026-08-26T13:41:14+08:00",
-      "version": "1.0.0"
+      "updated_at": "2026-08-26T19:10:37+08:00",
+      "version": "1.0.1"
     },
     {
       "id": "SRC-MYYSHOP-CLAUDE-US-APP-STORE-001",
@@ -17,8 +37,48 @@
         "CIT-MYYSHOP-CLAUDE-US-MANUAL-APP-STORE-1-20260826"
       ],
       "status": "active",
-      "updated_at": "2026-08-26T14:03:13+08:00",
-      "version": "1.0.0"
+      "updated_at": "2026-08-26T19:10:37+08:00",
+      "version": "1.0.1"
+    },
+    {
+      "id": "SRC-MYYSHOP-CREATOR-COLLAB-BLOG-001",
+      "path": "evidence/sources/src-myyshop-creator-collab-blog-001.md",
+      "refs": [
+        "CIT-MYYSHOP-CHATGPT-EN-BASELINE-S1-022"
+      ],
+      "status": "active",
+      "updated_at": "2026-08-26T19:10:37+08:00",
+      "version": "1.0.1"
+    },
+    {
+      "id": "SRC-MYYSHOP-CROSS-BORDER-BLOG-001",
+      "path": "evidence/sources/src-myyshop-cross-border-blog-001.md",
+      "refs": [
+        "CIT-MYYSHOP-CHATGPT-EN-BASELINE-S1-006"
+      ],
+      "status": "active",
+      "updated_at": "2026-08-26T19:10:37+08:00",
+      "version": "1.0.1"
+    },
+    {
+      "id": "SRC-MYYSHOP-DHGATE-DROPSHIPPING-BLOG-001",
+      "path": "evidence/sources/src-myyshop-dhgate-dropshipping-blog-001.md",
+      "refs": [
+        "CIT-MYYSHOP-GEMINI-EN-BASELINE-S2-003"
+      ],
+      "status": "active",
+      "updated_at": "2026-08-26T20:59:39+08:00",
+      "version": "1.0.1"
+    },
+    {
+      "id": "SRC-MYYSHOP-FACEBOOK-OFFICIAL-001",
+      "path": "evidence/sources/src-myyshop-facebook-official-001.md",
+      "refs": [
+        "CIT-MYYSHOP-GOOGLE-AI-EN-BASELINE-S1-005"
+      ],
+      "status": "active",
+      "updated_at": "2026-08-26T19:10:37+08:00",
+      "version": "1.0.1"
     },
     {
       "id": "SRC-MYYSHOP-FINAL-PRODUCT-PLAN-001",
@@ -29,14 +89,24 @@
       "version": "1.0.0"
     },
     {
+      "id": "SRC-MYYSHOP-GLOBENEWSWIRE-CPM-001",
+      "path": "evidence/sources/src-myyshop-globenewswire-cpm-001.md",
+      "refs": [
+        "CIT-MYYSHOP-GEMINI-EN-BASELINE-S1-010"
+      ],
+      "status": "active",
+      "updated_at": "2026-08-26T19:10:37+08:00",
+      "version": "1.0.1"
+    },
+    {
       "id": "SRC-MYYSHOP-GOOGLE-AI-21JINGJI-001",
       "path": "evidence/sources/src-myyshop-google-ai-21jingji-001.md",
       "refs": [
         "CIT-MYYSHOP-GOOGLE-AI-MANUAL-21JINGJI-20260826"
       ],
       "status": "active",
-      "updated_at": "2026-08-26T12:46:42+08:00",
-      "version": "1.0.0"
+      "updated_at": "2026-08-26T19:10:37+08:00",
+      "version": "1.0.1"
     },
     {
       "id": "SRC-MYYSHOP-GOOGLE-AI-36DIANPING-001",
@@ -45,8 +115,8 @@
         "CIT-MYYSHOP-GOOGLE-AI-MANUAL-36DIANPING-20260826"
       ],
       "status": "active",
-      "updated_at": "2026-08-26T12:46:42+08:00",
-      "version": "1.0.0"
+      "updated_at": "2026-08-26T19:10:37+08:00",
+      "version": "1.0.1"
     },
     {
       "id": "SRC-MYYSHOP-GOOGLE-AI-36KR-001",
@@ -55,8 +125,8 @@
         "CIT-MYYSHOP-GOOGLE-AI-MANUAL-36KR-20260826"
       ],
       "status": "active",
-      "updated_at": "2026-08-26T12:46:42+08:00",
-      "version": "1.0.0"
+      "updated_at": "2026-08-26T19:10:37+08:00",
+      "version": "1.0.1"
     },
     {
       "id": "SRC-MYYSHOP-GOOGLE-AI-AMZ123-001",
@@ -65,8 +135,8 @@
         "CIT-MYYSHOP-GOOGLE-AI-MANUAL-AMZ123-20260826"
       ],
       "status": "active",
-      "updated_at": "2026-08-26T12:46:42+08:00",
-      "version": "1.0.0"
+      "updated_at": "2026-08-26T19:10:37+08:00",
+      "version": "1.0.1"
     },
     {
       "id": "SRC-MYYSHOP-GOOGLE-AI-BAIDU-BAIKE-001",
@@ -75,8 +145,8 @@
         "CIT-MYYSHOP-GOOGLE-AI-MANUAL-BAIDU-BAIKE-20260826"
       ],
       "status": "active",
-      "updated_at": "2026-08-26T12:46:42+08:00",
-      "version": "1.0.0"
+      "updated_at": "2026-08-26T19:10:37+08:00",
+      "version": "1.0.1"
     },
     {
       "id": "SRC-MYYSHOP-GOOGLE-AI-CIFNEWS-001",
@@ -85,8 +155,8 @@
         "CIT-MYYSHOP-GOOGLE-AI-MANUAL-CIFNEWS-20260826"
       ],
       "status": "active",
-      "updated_at": "2026-08-26T12:46:42+08:00",
-      "version": "1.0.0"
+      "updated_at": "2026-08-26T19:10:37+08:00",
+      "version": "1.0.1"
     },
     {
       "id": "SRC-MYYSHOP-GOOGLE-AI-DHGATE-001",
@@ -95,8 +165,8 @@
         "CIT-MYYSHOP-GOOGLE-AI-MANUAL-DHGATE-20260826"
       ],
       "status": "active",
-      "updated_at": "2026-08-26T12:46:42+08:00",
-      "version": "1.0.0"
+      "updated_at": "2026-08-26T19:10:37+08:00",
+      "version": "1.0.1"
     },
     {
       "id": "SRC-MYYSHOP-GOOGLE-AI-SINA-001",
@@ -105,8 +175,8 @@
         "CIT-MYYSHOP-GOOGLE-AI-MANUAL-SINA-20260826"
       ],
       "status": "active",
-      "updated_at": "2026-08-26T12:46:42+08:00",
-      "version": "1.0.0"
+      "updated_at": "2026-08-26T19:10:37+08:00",
+      "version": "1.0.1"
     },
     {
       "id": "SRC-MYYSHOP-GOOGLE-AI-ZHIHU-001",
@@ -115,8 +185,18 @@
         "CIT-MYYSHOP-GOOGLE-AI-MANUAL-ZHIHU-20260826"
       ],
       "status": "active",
-      "updated_at": "2026-08-26T12:46:42+08:00",
-      "version": "1.0.0"
+      "updated_at": "2026-08-26T19:10:37+08:00",
+      "version": "1.0.1"
+    },
+    {
+      "id": "SRC-MYYSHOP-INFLUENCER-MARKETING-HUB-001",
+      "path": "evidence/sources/src-myyshop-influencer-marketing-hub-001.md",
+      "refs": [
+        "CIT-MYYSHOP-GEMINI-EN-BASELINE-S1-001"
+      ],
+      "status": "active",
+      "updated_at": "2026-08-26T19:10:37+08:00",
+      "version": "1.0.1"
     },
     {
       "id": "SRC-MYYSHOP-LEGACY-KNOWLEDGE-001",
@@ -127,14 +207,74 @@
       "version": "1.0.0"
     },
     {
+      "id": "SRC-MYYSHOP-LINE-SHOP-001",
+      "path": "evidence/sources/src-myyshop-line-shop-001.md",
+      "refs": [
+        "CIT-MYYSHOP-CHATGPT-EN-BASELINE-S2-020"
+      ],
+      "status": "active",
+      "updated_at": "2026-08-26T20:59:39+08:00",
+      "version": "1.0.1"
+    },
+    {
       "id": "SRC-MYYSHOP-LINKEDIN-COMPANY-001",
       "path": "evidence/sources/src-myyshop-linkedin-company-001.md",
       "refs": [
         "CIT-MYYSHOP-CHATGPT-MANUAL-LINKEDIN-20260825"
       ],
       "status": "active",
-      "updated_at": "2026-08-25T18:01:06+08:00",
-      "version": "1.0.0"
+      "updated_at": "2026-08-26T19:10:37+08:00",
+      "version": "1.0.1"
+    },
+    {
+      "id": "SRC-MYYSHOP-LINKEDIN-US-OPERATIONS-POST-001",
+      "path": "evidence/sources/src-myyshop-linkedin-us-operations-post-001.md",
+      "refs": [
+        "CIT-MYYSHOP-CHATGPT-EN-BASELINE-S2-021"
+      ],
+      "status": "active",
+      "updated_at": "2026-08-26T20:59:39+08:00",
+      "version": "1.0.1"
+    },
+    {
+      "id": "SRC-MYYSHOP-LINKTREE-001",
+      "path": "evidence/sources/src-myyshop-linktree-001.md",
+      "refs": [
+        "CIT-MYYSHOP-CHATGPT-EN-BASELINE-S1-024"
+      ],
+      "status": "active",
+      "updated_at": "2026-08-26T19:10:37+08:00",
+      "version": "1.0.1"
+    },
+    {
+      "id": "SRC-MYYSHOP-LOGIN-001",
+      "path": "evidence/sources/src-myyshop-login-001.md",
+      "refs": [
+        "CIT-MYYSHOP-CHATGPT-EN-BASELINE-S1-017"
+      ],
+      "status": "active",
+      "updated_at": "2026-08-26T19:10:37+08:00",
+      "version": "1.0.1"
+    },
+    {
+      "id": "SRC-MYYSHOP-NEWSROOM-001",
+      "path": "evidence/sources/src-myyshop-newsroom-001.md",
+      "refs": [
+        "CIT-MYYSHOP-CHATGPT-EN-BASELINE-S2-017"
+      ],
+      "status": "active",
+      "updated_at": "2026-08-26T20:59:39+08:00",
+      "version": "1.0.1"
+    },
+    {
+      "id": "SRC-MYYSHOP-NO-COMMISSION-BLOG-001",
+      "path": "evidence/sources/src-myyshop-no-commission-blog-001.md",
+      "refs": [
+        "CIT-MYYSHOP-CHATGPT-EN-BASELINE-S2-004"
+      ],
+      "status": "active",
+      "updated_at": "2026-08-26T20:59:39+08:00",
+      "version": "1.0.1"
     },
     {
       "id": "SRC-MYYSHOP-PERPLEXITY-REDDIT-001",
@@ -143,8 +283,8 @@
         "CIT-MYYSHOP-PERPLEXITY-EXPORT-REDDIT-20260826"
       ],
       "status": "active",
-      "updated_at": "2026-08-26T14:22:01+08:00",
-      "version": "1.0.0"
+      "updated_at": "2026-08-26T19:10:37+08:00",
+      "version": "1.0.1"
     },
     {
       "id": "SRC-MYYSHOP-PERPLEXITY-REGISTER-001",
@@ -153,8 +293,8 @@
         "CIT-MYYSHOP-PERPLEXITY-EXPORT-REGISTER-20260826"
       ],
       "status": "active",
-      "updated_at": "2026-08-26T14:22:01+08:00",
-      "version": "1.0.0"
+      "updated_at": "2026-08-26T19:10:37+08:00",
+      "version": "1.0.1"
     },
     {
       "id": "SRC-MYYSHOP-PERPLEXITY-WORDPRESS-001",
@@ -163,16 +303,96 @@
         "CIT-MYYSHOP-PERPLEXITY-EXPORT-WORDPRESS-20260826"
       ],
       "status": "active",
-      "updated_at": "2026-08-26T14:22:01+08:00",
-      "version": "1.0.0"
+      "updated_at": "2026-08-26T19:10:37+08:00",
+      "version": "1.0.1"
+    },
+    {
+      "id": "SRC-MYYSHOP-PRNEWSWIRE-AWARD-001",
+      "path": "evidence/sources/src-myyshop-prnewswire-award-001.md",
+      "refs": [
+        "CIT-MYYSHOP-GEMINI-EN-BASELINE-S2-001"
+      ],
+      "status": "active",
+      "updated_at": "2026-08-26T20:59:39+08:00",
+      "version": "1.0.1"
+    },
+    {
+      "id": "SRC-MYYSHOP-RANTIETHNICITY-001",
+      "path": "evidence/sources/src-myyshop-rantiethnicity-001.md",
+      "refs": [
+        "CIT-MYYSHOP-CHATGPT-EN-BASELINE-S1-008"
+      ],
+      "status": "active",
+      "updated_at": "2026-08-26T19:10:37+08:00",
+      "version": "1.0.1"
+    },
+    {
+      "id": "SRC-MYYSHOP-RESTRICT-001",
+      "path": "evidence/sources/src-myyshop-restrict-001.md",
+      "refs": [
+        "CIT-MYYSHOP-CHATGPT-EN-BASELINE-S1-018"
+      ],
+      "status": "active",
+      "updated_at": "2026-08-26T19:10:37+08:00",
+      "version": "1.0.1"
+    },
+    {
+      "id": "SRC-MYYSHOP-SHOP-ADMIN-001",
+      "path": "evidence/sources/src-myyshop-shop-admin-001.md",
+      "refs": [
+        "CIT-MYYSHOP-CHATGPT-EN-BASELINE-S1-016"
+      ],
+      "status": "active",
+      "updated_at": "2026-08-26T19:10:37+08:00",
+      "version": "1.0.1"
+    },
+    {
+      "id": "SRC-MYYSHOP-SHOP-CREATE-001",
+      "path": "evidence/sources/src-myyshop-shop-create-001.md",
+      "refs": [
+        "CIT-MYYSHOP-CHATGPT-EN-BASELINE-S1-004"
+      ],
+      "status": "active",
+      "updated_at": "2026-08-26T19:10:37+08:00",
+      "version": "1.0.1"
+    },
+    {
+      "id": "SRC-MYYSHOP-SHOP-PREVIEW-001",
+      "path": "evidence/sources/src-myyshop-shop-preview-001.md",
+      "refs": [
+        "CIT-MYYSHOP-CHATGPT-EN-BASELINE-S1-020"
+      ],
+      "status": "active",
+      "updated_at": "2026-08-26T19:10:37+08:00",
+      "version": "1.0.1"
+    },
+    {
+      "id": "SRC-MYYSHOP-SHOP-PRODUCTS-001",
+      "path": "evidence/sources/src-myyshop-shop-products-001.md",
+      "refs": [
+        "CIT-MYYSHOP-CHATGPT-EN-BASELINE-S1-021"
+      ],
+      "status": "active",
+      "updated_at": "2026-08-26T19:10:37+08:00",
+      "version": "1.0.1"
+    },
+    {
+      "id": "SRC-MYYSHOP-WBOC-CPM-001",
+      "path": "evidence/sources/src-myyshop-wboc-cpm-001.md",
+      "refs": [
+        "CIT-MYYSHOP-CHATGPT-EN-BASELINE-S2-006"
+      ],
+      "status": "active",
+      "updated_at": "2026-08-26T20:59:39+08:00",
+      "version": "1.0.1"
     },
     {
       "id": "SRC-MYYSHOP-WEB-ABOUT-001",
       "path": "evidence/sources/src-myyshop-web-about-001.md",
       "refs": [],
       "status": "active",
-      "updated_at": "2026-08-24T12:21:53.000Z",
-      "version": "1.0.0"
+      "updated_at": "2026-08-26T19:10:37+08:00",
+      "version": "1.0.1"
     },
     {
       "id": "SRC-MYYSHOP-WEB-BRAND-DEALS-001",
@@ -195,8 +415,8 @@
       "path": "evidence/sources/src-myyshop-web-homepage-001.md",
       "refs": [],
       "status": "active",
-      "updated_at": "2026-08-24T12:21:53.000Z",
-      "version": "1.0.0"
+      "updated_at": "2026-08-26T19:10:37+08:00",
+      "version": "1.0.1"
     },
     {
       "id": "SRC-MYYSHOP-WEB-LLMS-001",
@@ -253,6 +473,16 @@
       "status": "active",
       "updated_at": "2026-08-24T12:21:53.000Z",
       "version": "1.0.0"
+    },
+    {
+      "id": "SRC-MYYSHOP-WHATSNEW-001",
+      "path": "evidence/sources/src-myyshop-whatsnew-001.md",
+      "refs": [
+        "CIT-MYYSHOP-CHATGPT-EN-BASELINE-S1-005"
+      ],
+      "status": "active",
+      "updated_at": "2026-08-26T19:10:37+08:00",
+      "version": "1.0.1"
     }
   ],
   "record_type": "source",

@@ -99,7 +99,8 @@ function slotsFor(plan) {
 export async function initializeAnswerRun({ workspace, plan, now = plan.profile.data.updated_at }) {
   const isRecorded = plan.schema_version === 'm5-recorded-fixture-plan-v1';
   const isManual = plan.schema_version === 'm5-manual-sample-plan-v1';
-  if (!isRecorded && !isManual) {
+  const isManualBaseline = plan.schema_version === 'm5-manual-baseline-plan-v2';
+  if (!isRecorded && !isManual && !isManualBaseline) {
     throw new AnswerRunError('M5_FIELD_REQUIRED', '未知 M5 plan schema_version');
   }
   const authorizationMatches = isRecorded
@@ -117,6 +118,11 @@ export async function initializeAnswerRun({ workspace, plan, now = plan.profile.
   }
   if (isManual && plan.purpose !== 'exploratory') {
     throw new AnswerRunError('SAMPLE_NOT_INDEPENDENT', '单次 manual Smoke 只能标记 exploratory');
+  }
+  if (isManualBaseline && (plan.purpose !== 'baseline'
+      || plan.profile.data.sampling_count !== 2
+      || (plan.samples ?? []).map((sample) => sample.ordinal).sort().join(',') !== '1,2')) {
+    throw new AnswerRunError('SAMPLE_NOT_INDEPENDENT', 'manual baseline v2 必须预分配两个独立 slot');
   }
   if (plan.profile.data.profile_fingerprint !== collectorProfileFingerprint(plan.profile.data)) {
     throw new AnswerRunError('PROFILE_FINGERPRINT_MISMATCH', 'Collector Profile fingerprint 不一致');
@@ -146,6 +152,10 @@ export async function initializeAnswerRun({ workspace, plan, now = plan.profile.
       profile_versions: [{ ref: plan.profile.data.id, version: plan.profile.data.version }],
       query_set_versions: plan.query_set_versions,
       collector_contract: plan.collector_contract,
+      ...(isManualBaseline ? {
+        classification_policy: plan.classification_policy,
+        language_contract: plan.language_contract,
+      } : {}),
     });
     const actual = stableStringify({
       authorization_ref: run.data.authorization_ref,
@@ -153,6 +163,10 @@ export async function initializeAnswerRun({ workspace, plan, now = plan.profile.
       profile_versions: run.data.profile_versions,
       query_set_versions: run.data.query_set_versions,
       collector_contract: run.data.collector_contract,
+      ...(isManualBaseline ? {
+        classification_policy: run.data.classification_policy,
+        language_contract: run.data.language_contract,
+      } : {}),
     });
     if (expected !== actual) throw new AnswerRunError('RUN_CONFLICT', 'M5 Run 对应不同 plan');
     return { action: 'kept', data: run.data };
@@ -167,7 +181,13 @@ export async function initializeAnswerRun({ workspace, plan, now = plan.profile.
     knowledge_release_versions: plan.knowledge_release_versions,
     sample_slots: slotsFor(plan),
     collector_contract: plan.collector_contract,
-    next_action: isRecorded ? 'collect recorded fixture' : 'ingest manual sample',
+    ...(isManualBaseline ? {
+      classification_policy: plan.classification_policy,
+      language_contract: plan.language_contract,
+    } : {}),
+    next_action: isRecorded
+      ? 'collect recorded fixture'
+      : isManualBaseline ? 'collect manual baseline slot 1 of 2' : 'ingest manual sample',
   };
   const result = await transitionRun({
     workspace,
@@ -253,6 +273,16 @@ export async function releaseAnswerLease({ workspace, runId, ownerId }) {
     throw new AnswerRunError('LEASE_ACTIVE', '只有当前 owner 可释放 lease');
   }
   await rm(resolveWithin(workspace, leaseRelative(runId)), { recursive: true });
+  const run = await readRun({ workspace, runId });
+  if (run.data.lease) {
+    await transitionRun({
+      workspace,
+      runId,
+      status: run.data.status,
+      now: run.data.updated_at,
+      patch: { lease: undefined },
+    });
+  }
   return { action: 'released', owner_id: ownerId };
 }
 

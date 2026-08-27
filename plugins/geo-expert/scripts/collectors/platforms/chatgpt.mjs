@@ -14,6 +14,7 @@ export const chatgptAdapter = Object.freeze({
   },
   manual_fallback: {
     allowed: true,
+    result_url_origins: ['https://chatgpt.com'],
     requirements: ['Owner-controlled browser', 'Temporary Chat preferred', 'complete answer and Citation raw'],
   },
   stop_conditions: ['challenge', 'account_warning', 'terms_change', 'privacy_minimization_failed'],

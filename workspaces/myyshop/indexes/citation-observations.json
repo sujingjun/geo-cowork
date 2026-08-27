@@ -1,6 +1,501 @@
 {
   "objects": [
     {
+      "id": "CIT-MYYSHOP-CHATGPT-EN-BASELINE-S1-001",
+      "path": "cycles/m5/citations/cit-myyshop-chatgpt-en-baseline-s1-001.md",
+      "refs": [
+        "SMP-MYYSHOP-CHATGPT-EN-BASELINE-S1-20260826",
+        "SRC-MYYSHOP-WEB-HOMEPAGE-001"
+      ],
+      "status": "observed",
+      "updated_at": "2026-08-26T19:10:37+08:00",
+      "version": "1.0.0"
+    },
+    {
+      "id": "CIT-MYYSHOP-CHATGPT-EN-BASELINE-S1-002",
+      "path": "cycles/m5/citations/cit-myyshop-chatgpt-en-baseline-s1-002.md",
+      "refs": [
+        "SMP-MYYSHOP-CHATGPT-EN-BASELINE-S1-20260826",
+        "SRC-MYYSHOP-WEB-ABOUT-001"
+      ],
+      "status": "observed",
+      "updated_at": "2026-08-26T19:10:37+08:00",
+      "version": "1.0.0"
+    },
+    {
+      "id": "CIT-MYYSHOP-CHATGPT-EN-BASELINE-S1-003",
+      "path": "cycles/m5/citations/cit-myyshop-chatgpt-en-baseline-s1-003.md",
+      "refs": [
+        "SMP-MYYSHOP-CHATGPT-EN-BASELINE-S1-20260826",
+        "SRC-MYYSHOP-CLAUDE-US-APP-STORE-001"
+      ],
+      "status": "observed",
+      "updated_at": "2026-08-26T19:10:37+08:00",
+      "version": "1.0.0"
+    },
+    {
+      "id": "CIT-MYYSHOP-CHATGPT-EN-BASELINE-S1-004",
+      "path": "cycles/m5/citations/cit-myyshop-chatgpt-en-baseline-s1-004.md",
+      "refs": [
+        "SMP-MYYSHOP-CHATGPT-EN-BASELINE-S1-20260826",
+        "SRC-MYYSHOP-SHOP-CREATE-001"
+      ],
+      "status": "observed",
+      "updated_at": "2026-08-26T19:10:37+08:00",
+      "version": "1.0.0"
+    },
+    {
+      "id": "CIT-MYYSHOP-CHATGPT-EN-BASELINE-S1-005",
+      "path": "cycles/m5/citations/cit-myyshop-chatgpt-en-baseline-s1-005.md",
+      "refs": [
+        "SMP-MYYSHOP-CHATGPT-EN-BASELINE-S1-20260826",
+        "SRC-MYYSHOP-WHATSNEW-001"
+      ],
+      "status": "observed",
+      "updated_at": "2026-08-26T19:10:37+08:00",
+      "version": "1.0.0"
+    },
+    {
+      "id": "CIT-MYYSHOP-CHATGPT-EN-BASELINE-S1-006",
+      "path": "cycles/m5/citations/cit-myyshop-chatgpt-en-baseline-s1-006.md",
+      "refs": [
+        "SMP-MYYSHOP-CHATGPT-EN-BASELINE-S1-20260826",
+        "SRC-MYYSHOP-CROSS-BORDER-BLOG-001"
+      ],
+      "status": "observed",
+      "updated_at": "2026-08-26T19:10:37+08:00",
+      "version": "1.0.0"
+    },
+    {
+      "id": "CIT-MYYSHOP-CHATGPT-EN-BASELINE-S1-007",
+      "path": "cycles/m5/citations/cit-myyshop-chatgpt-en-baseline-s1-007.md",
+      "refs": [
+        "SMP-MYYSHOP-CHATGPT-EN-BASELINE-S1-20260826",
+        "SRC-MYYSHOP-WHATSNEW-001"
+      ],
+      "status": "observed",
+      "updated_at": "2026-08-26T19:10:37+08:00",
+      "version": "1.0.0"
+    },
+    {
+      "id": "CIT-MYYSHOP-CHATGPT-EN-BASELINE-S1-008",
+      "path": "cycles/m5/citations/cit-myyshop-chatgpt-en-baseline-s1-008.md",
+      "refs": [
+        "SMP-MYYSHOP-CHATGPT-EN-BASELINE-S1-20260826",
+        "SRC-MYYSHOP-RANTIETHNICITY-001"
+      ],
+      "status": "observed",
+      "updated_at": "2026-08-26T19:10:37+08:00",
+      "version": "1.0.0"
+    },
+    {
+      "id": "CIT-MYYSHOP-CHATGPT-EN-BASELINE-S1-009",
+      "path": "cycles/m5/citations/cit-myyshop-chatgpt-en-baseline-s1-009.md",
+      "refs": [
+        "SMP-MYYSHOP-CHATGPT-EN-BASELINE-S1-20260826",
+        "SRC-MYYSHOP-CLAUDE-US-APP-STORE-001"
+      ],
+      "status": "observed",
+      "updated_at": "2026-08-26T19:10:37+08:00",
+      "version": "1.0.0"
+    },
+    {
+      "id": "CIT-MYYSHOP-CHATGPT-EN-BASELINE-S1-010",
+      "path": "cycles/m5/citations/cit-myyshop-chatgpt-en-baseline-s1-010.md",
+      "refs": [
+        "SMP-MYYSHOP-CHATGPT-EN-BASELINE-S1-20260826",
+        "SRC-MYYSHOP-CLAUDE-US-APP-STORE-001"
+      ],
+      "status": "observed",
+      "updated_at": "2026-08-26T19:10:37+08:00",
+      "version": "1.0.0"
+    },
+    {
+      "id": "CIT-MYYSHOP-CHATGPT-EN-BASELINE-S1-011",
+      "path": "cycles/m5/citations/cit-myyshop-chatgpt-en-baseline-s1-011.md",
+      "refs": [
+        "SMP-MYYSHOP-CHATGPT-EN-BASELINE-S1-20260826",
+        "SRC-MYYSHOP-CLAUDE-US-APP-STORE-001"
+      ],
+      "status": "observed",
+      "updated_at": "2026-08-26T19:10:37+08:00",
+      "version": "1.0.0"
+    },
+    {
+      "id": "CIT-MYYSHOP-CHATGPT-EN-BASELINE-S1-012",
+      "path": "cycles/m5/citations/cit-myyshop-chatgpt-en-baseline-s1-012.md",
+      "refs": [
+        "SMP-MYYSHOP-CHATGPT-EN-BASELINE-S1-20260826",
+        "SRC-MYYSHOP-CLAUDE-US-APP-STORE-001"
+      ],
+      "status": "observed",
+      "updated_at": "2026-08-26T19:10:37+08:00",
+      "version": "1.0.0"
+    },
+    {
+      "id": "CIT-MYYSHOP-CHATGPT-EN-BASELINE-S1-013",
+      "path": "cycles/m5/citations/cit-myyshop-chatgpt-en-baseline-s1-013.md",
+      "refs": [
+        "SMP-MYYSHOP-CHATGPT-EN-BASELINE-S1-20260826",
+        "SRC-MYYSHOP-CLAUDE-US-APP-STORE-001"
+      ],
+      "status": "observed",
+      "updated_at": "2026-08-26T19:10:37+08:00",
+      "version": "1.0.0"
+    },
+    {
+      "id": "CIT-MYYSHOP-CHATGPT-EN-BASELINE-S1-014",
+      "path": "cycles/m5/citations/cit-myyshop-chatgpt-en-baseline-s1-014.md",
+      "refs": [
+        "SMP-MYYSHOP-CHATGPT-EN-BASELINE-S1-20260826",
+        "SRC-MYYSHOP-WEB-HOMEPAGE-001"
+      ],
+      "status": "observed",
+      "updated_at": "2026-08-26T19:10:37+08:00",
+      "version": "1.0.0"
+    },
+    {
+      "id": "CIT-MYYSHOP-CHATGPT-EN-BASELINE-S1-015",
+      "path": "cycles/m5/citations/cit-myyshop-chatgpt-en-baseline-s1-015.md",
+      "refs": [
+        "SMP-MYYSHOP-CHATGPT-EN-BASELINE-S1-20260826",
+        "SRC-MYYSHOP-AI-CREATOR-BLOG-001"
+      ],
+      "status": "observed",
+      "updated_at": "2026-08-26T19:10:37+08:00",
+      "version": "1.0.0"
+    },
+    {
+      "id": "CIT-MYYSHOP-CHATGPT-EN-BASELINE-S1-016",
+      "path": "cycles/m5/citations/cit-myyshop-chatgpt-en-baseline-s1-016.md",
+      "refs": [
+        "SMP-MYYSHOP-CHATGPT-EN-BASELINE-S1-20260826",
+        "SRC-MYYSHOP-SHOP-ADMIN-001"
+      ],
+      "status": "observed",
+      "updated_at": "2026-08-26T19:10:37+08:00",
+      "version": "1.0.0"
+    },
+    {
+      "id": "CIT-MYYSHOP-CHATGPT-EN-BASELINE-S1-017",
+      "path": "cycles/m5/citations/cit-myyshop-chatgpt-en-baseline-s1-017.md",
+      "refs": [
+        "SMP-MYYSHOP-CHATGPT-EN-BASELINE-S1-20260826",
+        "SRC-MYYSHOP-LOGIN-001"
+      ],
+      "status": "observed",
+      "updated_at": "2026-08-26T19:10:37+08:00",
+      "version": "1.0.0"
+    },
+    {
+      "id": "CIT-MYYSHOP-CHATGPT-EN-BASELINE-S1-018",
+      "path": "cycles/m5/citations/cit-myyshop-chatgpt-en-baseline-s1-018.md",
+      "refs": [
+        "SMP-MYYSHOP-CHATGPT-EN-BASELINE-S1-20260826",
+        "SRC-MYYSHOP-RESTRICT-001"
+      ],
+      "status": "observed",
+      "updated_at": "2026-08-26T19:10:37+08:00",
+      "version": "1.0.0"
+    },
+    {
+      "id": "CIT-MYYSHOP-CHATGPT-EN-BASELINE-S1-019",
+      "path": "cycles/m5/citations/cit-myyshop-chatgpt-en-baseline-s1-019.md",
+      "refs": [
+        "SMP-MYYSHOP-CHATGPT-EN-BASELINE-S1-20260826",
+        "SRC-MYYSHOP-SHOP-ADMIN-001"
+      ],
+      "status": "observed",
+      "updated_at": "2026-08-26T19:10:37+08:00",
+      "version": "1.0.0"
+    },
+    {
+      "id": "CIT-MYYSHOP-CHATGPT-EN-BASELINE-S1-020",
+      "path": "cycles/m5/citations/cit-myyshop-chatgpt-en-baseline-s1-020.md",
+      "refs": [
+        "SMP-MYYSHOP-CHATGPT-EN-BASELINE-S1-20260826",
+        "SRC-MYYSHOP-SHOP-PREVIEW-001"
+      ],
+      "status": "observed",
+      "updated_at": "2026-08-26T19:10:37+08:00",
+      "version": "1.0.0"
+    },
+    {
+      "id": "CIT-MYYSHOP-CHATGPT-EN-BASELINE-S1-021",
+      "path": "cycles/m5/citations/cit-myyshop-chatgpt-en-baseline-s1-021.md",
+      "refs": [
+        "SMP-MYYSHOP-CHATGPT-EN-BASELINE-S1-20260826",
+        "SRC-MYYSHOP-SHOP-PRODUCTS-001"
+      ],
+      "status": "observed",
+      "updated_at": "2026-08-26T19:10:37+08:00",
+      "version": "1.0.0"
+    },
+    {
+      "id": "CIT-MYYSHOP-CHATGPT-EN-BASELINE-S1-022",
+      "path": "cycles/m5/citations/cit-myyshop-chatgpt-en-baseline-s1-022.md",
+      "refs": [
+        "SMP-MYYSHOP-CHATGPT-EN-BASELINE-S1-20260826",
+        "SRC-MYYSHOP-CREATOR-COLLAB-BLOG-001"
+      ],
+      "status": "observed",
+      "updated_at": "2026-08-26T19:10:37+08:00",
+      "version": "1.0.0"
+    },
+    {
+      "id": "CIT-MYYSHOP-CHATGPT-EN-BASELINE-S1-023",
+      "path": "cycles/m5/citations/cit-myyshop-chatgpt-en-baseline-s1-023.md",
+      "refs": [
+        "SMP-MYYSHOP-CHATGPT-EN-BASELINE-S1-20260826",
+        "SRC-MYYSHOP-CROSS-BORDER-BLOG-001"
+      ],
+      "status": "observed",
+      "updated_at": "2026-08-26T19:10:37+08:00",
+      "version": "1.0.0"
+    },
+    {
+      "id": "CIT-MYYSHOP-CHATGPT-EN-BASELINE-S1-024",
+      "path": "cycles/m5/citations/cit-myyshop-chatgpt-en-baseline-s1-024.md",
+      "refs": [
+        "SMP-MYYSHOP-CHATGPT-EN-BASELINE-S1-20260826",
+        "SRC-MYYSHOP-LINKTREE-001"
+      ],
+      "status": "observed",
+      "updated_at": "2026-08-26T19:10:37+08:00",
+      "version": "1.0.0"
+    },
+    {
+      "id": "CIT-MYYSHOP-CHATGPT-EN-BASELINE-S2-001",
+      "path": "cycles/m5/citations/cit-myyshop-chatgpt-en-baseline-s2-001.md",
+      "refs": [
+        "SMP-MYYSHOP-CHATGPT-EN-BASELINE-S2-20260826",
+        "SRC-MYYSHOP-WEB-HOMEPAGE-001"
+      ],
+      "status": "observed",
+      "updated_at": "2026-08-26T20:59:39+08:00",
+      "version": "1.0.0"
+    },
+    {
+      "id": "CIT-MYYSHOP-CHATGPT-EN-BASELINE-S2-002",
+      "path": "cycles/m5/citations/cit-myyshop-chatgpt-en-baseline-s2-002.md",
+      "refs": [
+        "SMP-MYYSHOP-CHATGPT-EN-BASELINE-S2-20260826",
+        "SRC-MYYSHOP-WEB-ABOUT-001"
+      ],
+      "status": "observed",
+      "updated_at": "2026-08-26T20:59:39+08:00",
+      "version": "1.0.0"
+    },
+    {
+      "id": "CIT-MYYSHOP-CHATGPT-EN-BASELINE-S2-003",
+      "path": "cycles/m5/citations/cit-myyshop-chatgpt-en-baseline-s2-003.md",
+      "refs": [
+        "SMP-MYYSHOP-CHATGPT-EN-BASELINE-S2-20260826",
+        "SRC-MYYSHOP-CLAUDE-US-APP-STORE-001"
+      ],
+      "status": "observed",
+      "updated_at": "2026-08-26T20:59:39+08:00",
+      "version": "1.0.0"
+    },
+    {
+      "id": "CIT-MYYSHOP-CHATGPT-EN-BASELINE-S2-004",
+      "path": "cycles/m5/citations/cit-myyshop-chatgpt-en-baseline-s2-004.md",
+      "refs": [
+        "SMP-MYYSHOP-CHATGPT-EN-BASELINE-S2-20260826",
+        "SRC-MYYSHOP-NO-COMMISSION-BLOG-001"
+      ],
+      "status": "observed",
+      "updated_at": "2026-08-26T20:59:39+08:00",
+      "version": "1.0.0"
+    },
+    {
+      "id": "CIT-MYYSHOP-CHATGPT-EN-BASELINE-S2-005",
+      "path": "cycles/m5/citations/cit-myyshop-chatgpt-en-baseline-s2-005.md",
+      "refs": [
+        "SMP-MYYSHOP-CHATGPT-EN-BASELINE-S2-20260826",
+        "SRC-MYYSHOP-WHATSNEW-001"
+      ],
+      "status": "observed",
+      "updated_at": "2026-08-26T20:59:39+08:00",
+      "version": "1.0.0"
+    },
+    {
+      "id": "CIT-MYYSHOP-CHATGPT-EN-BASELINE-S2-006",
+      "path": "cycles/m5/citations/cit-myyshop-chatgpt-en-baseline-s2-006.md",
+      "refs": [
+        "SMP-MYYSHOP-CHATGPT-EN-BASELINE-S2-20260826",
+        "SRC-MYYSHOP-WBOC-CPM-001"
+      ],
+      "status": "observed",
+      "updated_at": "2026-08-26T20:59:39+08:00",
+      "version": "1.0.0"
+    },
+    {
+      "id": "CIT-MYYSHOP-CHATGPT-EN-BASELINE-S2-007",
+      "path": "cycles/m5/citations/cit-myyshop-chatgpt-en-baseline-s2-007.md",
+      "refs": [
+        "SMP-MYYSHOP-CHATGPT-EN-BASELINE-S2-20260826",
+        "SRC-MYYSHOP-LINKTREE-001"
+      ],
+      "status": "observed",
+      "updated_at": "2026-08-26T20:59:39+08:00",
+      "version": "1.0.0"
+    },
+    {
+      "id": "CIT-MYYSHOP-CHATGPT-EN-BASELINE-S2-008",
+      "path": "cycles/m5/citations/cit-myyshop-chatgpt-en-baseline-s2-008.md",
+      "refs": [
+        "SMP-MYYSHOP-CHATGPT-EN-BASELINE-S2-20260826",
+        "SRC-MYYSHOP-WBOC-CPM-001"
+      ],
+      "status": "observed",
+      "updated_at": "2026-08-26T20:59:39+08:00",
+      "version": "1.0.0"
+    },
+    {
+      "id": "CIT-MYYSHOP-CHATGPT-EN-BASELINE-S2-009",
+      "path": "cycles/m5/citations/cit-myyshop-chatgpt-en-baseline-s2-009.md",
+      "refs": [
+        "SMP-MYYSHOP-CHATGPT-EN-BASELINE-S2-20260826",
+        "SRC-MYYSHOP-RANTIETHNICITY-001"
+      ],
+      "status": "observed",
+      "updated_at": "2026-08-26T20:59:39+08:00",
+      "version": "1.0.0"
+    },
+    {
+      "id": "CIT-MYYSHOP-CHATGPT-EN-BASELINE-S2-010",
+      "path": "cycles/m5/citations/cit-myyshop-chatgpt-en-baseline-s2-010.md",
+      "refs": [
+        "SMP-MYYSHOP-CHATGPT-EN-BASELINE-S2-20260826",
+        "SRC-MYYSHOP-CLAUDE-US-APP-STORE-001"
+      ],
+      "status": "observed",
+      "updated_at": "2026-08-26T20:59:39+08:00",
+      "version": "1.0.0"
+    },
+    {
+      "id": "CIT-MYYSHOP-CHATGPT-EN-BASELINE-S2-011",
+      "path": "cycles/m5/citations/cit-myyshop-chatgpt-en-baseline-s2-011.md",
+      "refs": [
+        "SMP-MYYSHOP-CHATGPT-EN-BASELINE-S2-20260826",
+        "SRC-MYYSHOP-CLAUDE-US-APP-STORE-001"
+      ],
+      "status": "observed",
+      "updated_at": "2026-08-26T20:59:39+08:00",
+      "version": "1.0.0"
+    },
+    {
+      "id": "CIT-MYYSHOP-CHATGPT-EN-BASELINE-S2-012",
+      "path": "cycles/m5/citations/cit-myyshop-chatgpt-en-baseline-s2-012.md",
+      "refs": [
+        "SMP-MYYSHOP-CHATGPT-EN-BASELINE-S2-20260826",
+        "SRC-MYYSHOP-CLAUDE-US-APP-STORE-001"
+      ],
+      "status": "observed",
+      "updated_at": "2026-08-26T20:59:39+08:00",
+      "version": "1.0.0"
+    },
+    {
+      "id": "CIT-MYYSHOP-CHATGPT-EN-BASELINE-S2-013",
+      "path": "cycles/m5/citations/cit-myyshop-chatgpt-en-baseline-s2-013.md",
+      "refs": [
+        "SMP-MYYSHOP-CHATGPT-EN-BASELINE-S2-20260826",
+        "SRC-MYYSHOP-CLAUDE-US-APP-STORE-001"
+      ],
+      "status": "observed",
+      "updated_at": "2026-08-26T20:59:39+08:00",
+      "version": "1.0.0"
+    },
+    {
+      "id": "CIT-MYYSHOP-CHATGPT-EN-BASELINE-S2-014",
+      "path": "cycles/m5/citations/cit-myyshop-chatgpt-en-baseline-s2-014.md",
+      "refs": [
+        "SMP-MYYSHOP-CHATGPT-EN-BASELINE-S2-20260826",
+        "SRC-MYYSHOP-CLAUDE-US-APP-STORE-001"
+      ],
+      "status": "observed",
+      "updated_at": "2026-08-26T20:59:39+08:00",
+      "version": "1.0.0"
+    },
+    {
+      "id": "CIT-MYYSHOP-CHATGPT-EN-BASELINE-S2-015",
+      "path": "cycles/m5/citations/cit-myyshop-chatgpt-en-baseline-s2-015.md",
+      "refs": [
+        "SMP-MYYSHOP-CHATGPT-EN-BASELINE-S2-20260826",
+        "SRC-MYYSHOP-CLAUDE-US-APP-STORE-001"
+      ],
+      "status": "observed",
+      "updated_at": "2026-08-26T20:59:39+08:00",
+      "version": "1.0.0"
+    },
+    {
+      "id": "CIT-MYYSHOP-CHATGPT-EN-BASELINE-S2-016",
+      "path": "cycles/m5/citations/cit-myyshop-chatgpt-en-baseline-s2-016.md",
+      "refs": [
+        "SMP-MYYSHOP-CHATGPT-EN-BASELINE-S2-20260826",
+        "SRC-MYYSHOP-CLAUDE-US-APP-STORE-001"
+      ],
+      "status": "observed",
+      "updated_at": "2026-08-26T20:59:39+08:00",
+      "version": "1.0.0"
+    },
+    {
+      "id": "CIT-MYYSHOP-CHATGPT-EN-BASELINE-S2-017",
+      "path": "cycles/m5/citations/cit-myyshop-chatgpt-en-baseline-s2-017.md",
+      "refs": [
+        "SMP-MYYSHOP-CHATGPT-EN-BASELINE-S2-20260826",
+        "SRC-MYYSHOP-NEWSROOM-001"
+      ],
+      "status": "observed",
+      "updated_at": "2026-08-26T20:59:39+08:00",
+      "version": "1.0.0"
+    },
+    {
+      "id": "CIT-MYYSHOP-CHATGPT-EN-BASELINE-S2-018",
+      "path": "cycles/m5/citations/cit-myyshop-chatgpt-en-baseline-s2-018.md",
+      "refs": [
+        "SMP-MYYSHOP-CHATGPT-EN-BASELINE-S2-20260826",
+        "SRC-MYYSHOP-WEB-HOMEPAGE-001"
+      ],
+      "status": "observed",
+      "updated_at": "2026-08-26T20:59:39+08:00",
+      "version": "1.0.0"
+    },
+    {
+      "id": "CIT-MYYSHOP-CHATGPT-EN-BASELINE-S2-019",
+      "path": "cycles/m5/citations/cit-myyshop-chatgpt-en-baseline-s2-019.md",
+      "refs": [
+        "SMP-MYYSHOP-CHATGPT-EN-BASELINE-S2-20260826",
+        "SRC-MYYSHOP-NO-COMMISSION-BLOG-001"
+      ],
+      "status": "observed",
+      "updated_at": "2026-08-26T20:59:39+08:00",
+      "version": "1.0.0"
+    },
+    {
+      "id": "CIT-MYYSHOP-CHATGPT-EN-BASELINE-S2-020",
+      "path": "cycles/m5/citations/cit-myyshop-chatgpt-en-baseline-s2-020.md",
+      "refs": [
+        "SMP-MYYSHOP-CHATGPT-EN-BASELINE-S2-20260826",
+        "SRC-MYYSHOP-LINE-SHOP-001"
+      ],
+      "status": "observed",
+      "updated_at": "2026-08-26T20:59:39+08:00",
+      "version": "1.0.0"
+    },
+    {
+      "id": "CIT-MYYSHOP-CHATGPT-EN-BASELINE-S2-021",
+      "path": "cycles/m5/citations/cit-myyshop-chatgpt-en-baseline-s2-021.md",
+      "refs": [
+        "SMP-MYYSHOP-CHATGPT-EN-BASELINE-S2-20260826",
+        "SRC-MYYSHOP-LINKEDIN-US-OPERATIONS-POST-001"
+      ],
+      "status": "observed",
+      "updated_at": "2026-08-26T20:59:39+08:00",
+      "version": "1.0.0"
+    },
+    {
       "id": "CIT-MYYSHOP-CHATGPT-MANUAL-ABOUT-20260825",
       "path": "cycles/m5/citations/cit-myyshop-chatgpt-manual-about-20260825.md",
       "refs": [
@@ -31,6 +526,72 @@
       ],
       "status": "observed",
       "updated_at": "2026-08-25T18:01:06+08:00",
+      "version": "1.0.0"
+    },
+    {
+      "id": "CIT-MYYSHOP-CLAUDE-EN-BASELINE-S1-001",
+      "path": "cycles/m5/citations/cit-myyshop-claude-en-baseline-s1-001.md",
+      "refs": [
+        "SMP-MYYSHOP-CLAUDE-EN-BASELINE-S1-20260826",
+        "SRC-MYYSHOP-BUSINESS-WIRE-LAUNCH-001"
+      ],
+      "status": "observed",
+      "updated_at": "2026-08-26T19:10:37+08:00",
+      "version": "1.0.0"
+    },
+    {
+      "id": "CIT-MYYSHOP-CLAUDE-EN-BASELINE-S1-002",
+      "path": "cycles/m5/citations/cit-myyshop-claude-en-baseline-s1-002.md",
+      "refs": [
+        "SMP-MYYSHOP-CLAUDE-EN-BASELINE-S1-20260826",
+        "SRC-MYYSHOP-BUSINESS-WIRE-LAUNCH-001"
+      ],
+      "status": "observed",
+      "updated_at": "2026-08-26T19:10:37+08:00",
+      "version": "1.0.0"
+    },
+    {
+      "id": "CIT-MYYSHOP-CLAUDE-EN-BASELINE-S1-003",
+      "path": "cycles/m5/citations/cit-myyshop-claude-en-baseline-s1-003.md",
+      "refs": [
+        "SMP-MYYSHOP-CLAUDE-EN-BASELINE-S1-20260826",
+        "SRC-MYYSHOP-CLAUDE-US-APP-STORE-001"
+      ],
+      "status": "observed",
+      "updated_at": "2026-08-26T19:10:37+08:00",
+      "version": "1.0.0"
+    },
+    {
+      "id": "CIT-MYYSHOP-CLAUDE-EN-BASELINE-S1-004",
+      "path": "cycles/m5/citations/cit-myyshop-claude-en-baseline-s1-004.md",
+      "refs": [
+        "SMP-MYYSHOP-CLAUDE-EN-BASELINE-S1-20260826",
+        "SRC-MYYSHOP-WEB-HOMEPAGE-001"
+      ],
+      "status": "observed",
+      "updated_at": "2026-08-26T19:10:37+08:00",
+      "version": "1.0.0"
+    },
+    {
+      "id": "CIT-MYYSHOP-CLAUDE-EN-BASELINE-S2-001",
+      "path": "cycles/m5/citations/cit-myyshop-claude-en-baseline-s2-001.md",
+      "refs": [
+        "SMP-MYYSHOP-CLAUDE-EN-BASELINE-S2-20260826",
+        "SRC-MYYSHOP-BUSINESS-WIRE-LAUNCH-001"
+      ],
+      "status": "observed",
+      "updated_at": "2026-08-26T20:59:39+08:00",
+      "version": "1.0.0"
+    },
+    {
+      "id": "CIT-MYYSHOP-CLAUDE-EN-BASELINE-S2-002",
+      "path": "cycles/m5/citations/cit-myyshop-claude-en-baseline-s2-002.md",
+      "refs": [
+        "SMP-MYYSHOP-CLAUDE-EN-BASELINE-S2-20260826",
+        "SRC-MYYSHOP-CLAUDE-US-APP-STORE-001"
+      ],
+      "status": "observed",
+      "updated_at": "2026-08-26T20:59:39+08:00",
       "version": "1.0.0"
     },
     {
@@ -155,6 +716,457 @@
       "version": "1.0.0"
     },
     {
+      "id": "CIT-MYYSHOP-GEMINI-EN-BASELINE-S1-001",
+      "path": "cycles/m5/citations/cit-myyshop-gemini-en-baseline-s1-001.md",
+      "refs": [
+        "SMP-MYYSHOP-GEMINI-EN-BASELINE-S1-20260826",
+        "SRC-MYYSHOP-INFLUENCER-MARKETING-HUB-001"
+      ],
+      "status": "observed",
+      "updated_at": "2026-08-26T19:10:37+08:00",
+      "version": "1.0.0"
+    },
+    {
+      "id": "CIT-MYYSHOP-GEMINI-EN-BASELINE-S1-002",
+      "path": "cycles/m5/citations/cit-myyshop-gemini-en-baseline-s1-002.md",
+      "refs": [
+        "SMP-MYYSHOP-GEMINI-EN-BASELINE-S1-20260826",
+        "SRC-MYYSHOP-INFLUENCER-MARKETING-HUB-001"
+      ],
+      "status": "observed",
+      "updated_at": "2026-08-26T19:10:37+08:00",
+      "version": "1.0.0"
+    },
+    {
+      "id": "CIT-MYYSHOP-GEMINI-EN-BASELINE-S1-003",
+      "path": "cycles/m5/citations/cit-myyshop-gemini-en-baseline-s1-003.md",
+      "refs": [
+        "SMP-MYYSHOP-GEMINI-EN-BASELINE-S1-20260826",
+        "SRC-MYYSHOP-INFLUENCER-MARKETING-HUB-001"
+      ],
+      "status": "observed",
+      "updated_at": "2026-08-26T19:10:37+08:00",
+      "version": "1.0.0"
+    },
+    {
+      "id": "CIT-MYYSHOP-GEMINI-EN-BASELINE-S1-004",
+      "path": "cycles/m5/citations/cit-myyshop-gemini-en-baseline-s1-004.md",
+      "refs": [
+        "SMP-MYYSHOP-GEMINI-EN-BASELINE-S1-20260826",
+        "SRC-MYYSHOP-BUSINESS-WIRE-LAUNCH-001"
+      ],
+      "status": "observed",
+      "updated_at": "2026-08-26T19:10:37+08:00",
+      "version": "1.0.0"
+    },
+    {
+      "id": "CIT-MYYSHOP-GEMINI-EN-BASELINE-S1-005",
+      "path": "cycles/m5/citations/cit-myyshop-gemini-en-baseline-s1-005.md",
+      "refs": [
+        "SMP-MYYSHOP-GEMINI-EN-BASELINE-S1-20260826",
+        "SRC-MYYSHOP-BUSINESS-WIRE-LAUNCH-001"
+      ],
+      "status": "observed",
+      "updated_at": "2026-08-26T19:10:37+08:00",
+      "version": "1.0.0"
+    },
+    {
+      "id": "CIT-MYYSHOP-GEMINI-EN-BASELINE-S1-006",
+      "path": "cycles/m5/citations/cit-myyshop-gemini-en-baseline-s1-006.md",
+      "refs": [
+        "SMP-MYYSHOP-GEMINI-EN-BASELINE-S1-20260826",
+        "SRC-MYYSHOP-INFLUENCER-MARKETING-HUB-001"
+      ],
+      "status": "observed",
+      "updated_at": "2026-08-26T19:10:37+08:00",
+      "version": "1.0.0"
+    },
+    {
+      "id": "CIT-MYYSHOP-GEMINI-EN-BASELINE-S1-007",
+      "path": "cycles/m5/citations/cit-myyshop-gemini-en-baseline-s1-007.md",
+      "refs": [
+        "SMP-MYYSHOP-GEMINI-EN-BASELINE-S1-20260826",
+        "SRC-MYYSHOP-INFLUENCER-MARKETING-HUB-001"
+      ],
+      "status": "observed",
+      "updated_at": "2026-08-26T19:10:37+08:00",
+      "version": "1.0.0"
+    },
+    {
+      "id": "CIT-MYYSHOP-GEMINI-EN-BASELINE-S1-008",
+      "path": "cycles/m5/citations/cit-myyshop-gemini-en-baseline-s1-008.md",
+      "refs": [
+        "SMP-MYYSHOP-GEMINI-EN-BASELINE-S1-20260826",
+        "SRC-MYYSHOP-INFLUENCER-MARKETING-HUB-001"
+      ],
+      "status": "observed",
+      "updated_at": "2026-08-26T19:10:37+08:00",
+      "version": "1.0.0"
+    },
+    {
+      "id": "CIT-MYYSHOP-GEMINI-EN-BASELINE-S1-009",
+      "path": "cycles/m5/citations/cit-myyshop-gemini-en-baseline-s1-009.md",
+      "refs": [
+        "SMP-MYYSHOP-GEMINI-EN-BASELINE-S1-20260826",
+        "SRC-MYYSHOP-INFLUENCER-MARKETING-HUB-001"
+      ],
+      "status": "observed",
+      "updated_at": "2026-08-26T19:10:37+08:00",
+      "version": "1.0.0"
+    },
+    {
+      "id": "CIT-MYYSHOP-GEMINI-EN-BASELINE-S1-010",
+      "path": "cycles/m5/citations/cit-myyshop-gemini-en-baseline-s1-010.md",
+      "refs": [
+        "SMP-MYYSHOP-GEMINI-EN-BASELINE-S1-20260826",
+        "SRC-MYYSHOP-GLOBENEWSWIRE-CPM-001"
+      ],
+      "status": "observed",
+      "updated_at": "2026-08-26T19:10:37+08:00",
+      "version": "1.0.0"
+    },
+    {
+      "id": "CIT-MYYSHOP-GEMINI-EN-BASELINE-S1-011",
+      "path": "cycles/m5/citations/cit-myyshop-gemini-en-baseline-s1-011.md",
+      "refs": [
+        "SMP-MYYSHOP-GEMINI-EN-BASELINE-S1-20260826",
+        "SRC-MYYSHOP-BUSINESS-WIRE-LAUNCH-001"
+      ],
+      "status": "observed",
+      "updated_at": "2026-08-26T19:10:37+08:00",
+      "version": "1.0.0"
+    },
+    {
+      "id": "CIT-MYYSHOP-GEMINI-EN-BASELINE-S2-001",
+      "path": "cycles/m5/citations/cit-myyshop-gemini-en-baseline-s2-001.md",
+      "refs": [
+        "SMP-MYYSHOP-GEMINI-EN-BASELINE-S2-20260826",
+        "SRC-MYYSHOP-PRNEWSWIRE-AWARD-001"
+      ],
+      "status": "observed",
+      "updated_at": "2026-08-26T20:59:39+08:00",
+      "version": "1.0.0"
+    },
+    {
+      "id": "CIT-MYYSHOP-GEMINI-EN-BASELINE-S2-002",
+      "path": "cycles/m5/citations/cit-myyshop-gemini-en-baseline-s2-002.md",
+      "refs": [
+        "SMP-MYYSHOP-GEMINI-EN-BASELINE-S2-20260826",
+        "SRC-MYYSHOP-PRNEWSWIRE-AWARD-001"
+      ],
+      "status": "observed",
+      "updated_at": "2026-08-26T20:59:39+08:00",
+      "version": "1.0.0"
+    },
+    {
+      "id": "CIT-MYYSHOP-GEMINI-EN-BASELINE-S2-003",
+      "path": "cycles/m5/citations/cit-myyshop-gemini-en-baseline-s2-003.md",
+      "refs": [
+        "SMP-MYYSHOP-GEMINI-EN-BASELINE-S2-20260826",
+        "SRC-MYYSHOP-DHGATE-DROPSHIPPING-BLOG-001"
+      ],
+      "status": "observed",
+      "updated_at": "2026-08-26T20:59:39+08:00",
+      "version": "1.0.0"
+    },
+    {
+      "id": "CIT-MYYSHOP-GEMINI-EN-BASELINE-S2-004",
+      "path": "cycles/m5/citations/cit-myyshop-gemini-en-baseline-s2-004.md",
+      "refs": [
+        "SMP-MYYSHOP-GEMINI-EN-BASELINE-S2-20260826",
+        "SRC-MYYSHOP-BUSINESS-WIRE-LAUNCH-001"
+      ],
+      "status": "observed",
+      "updated_at": "2026-08-26T20:59:39+08:00",
+      "version": "1.0.0"
+    },
+    {
+      "id": "CIT-MYYSHOP-GEMINI-EN-BASELINE-S2-005",
+      "path": "cycles/m5/citations/cit-myyshop-gemini-en-baseline-s2-005.md",
+      "refs": [
+        "SMP-MYYSHOP-GEMINI-EN-BASELINE-S2-20260826",
+        "SRC-MYYSHOP-PRNEWSWIRE-AWARD-001"
+      ],
+      "status": "observed",
+      "updated_at": "2026-08-26T20:59:39+08:00",
+      "version": "1.0.0"
+    },
+    {
+      "id": "CIT-MYYSHOP-GEMINI-EN-BASELINE-S2-006",
+      "path": "cycles/m5/citations/cit-myyshop-gemini-en-baseline-s2-006.md",
+      "refs": [
+        "SMP-MYYSHOP-GEMINI-EN-BASELINE-S2-20260826",
+        "SRC-MYYSHOP-BUSINESS-WIRE-LAUNCH-001"
+      ],
+      "status": "observed",
+      "updated_at": "2026-08-26T20:59:39+08:00",
+      "version": "1.0.0"
+    },
+    {
+      "id": "CIT-MYYSHOP-GEMINI-EN-BASELINE-S2-007",
+      "path": "cycles/m5/citations/cit-myyshop-gemini-en-baseline-s2-007.md",
+      "refs": [
+        "SMP-MYYSHOP-GEMINI-EN-BASELINE-S2-20260826",
+        "SRC-MYYSHOP-PRNEWSWIRE-AWARD-001"
+      ],
+      "status": "observed",
+      "updated_at": "2026-08-26T20:59:39+08:00",
+      "version": "1.0.0"
+    },
+    {
+      "id": "CIT-MYYSHOP-GOOGLE-AI-EN-BASELINE-S1-001",
+      "path": "cycles/m5/citations/cit-myyshop-google-ai-en-baseline-s1-001.md",
+      "refs": [
+        "SMP-MYYSHOP-GOOGLE-AI-EN-BASELINE-S1-20260826",
+        "SRC-MYYSHOP-WEB-HOMEPAGE-001"
+      ],
+      "status": "observed",
+      "updated_at": "2026-08-26T19:10:37+08:00",
+      "version": "1.0.0"
+    },
+    {
+      "id": "CIT-MYYSHOP-GOOGLE-AI-EN-BASELINE-S1-002",
+      "path": "cycles/m5/citations/cit-myyshop-google-ai-en-baseline-s1-002.md",
+      "refs": [
+        "SMP-MYYSHOP-GOOGLE-AI-EN-BASELINE-S1-20260826",
+        "SRC-MYYSHOP-WEB-ABOUT-001"
+      ],
+      "status": "observed",
+      "updated_at": "2026-08-26T19:10:37+08:00",
+      "version": "1.0.0"
+    },
+    {
+      "id": "CIT-MYYSHOP-GOOGLE-AI-EN-BASELINE-S1-003",
+      "path": "cycles/m5/citations/cit-myyshop-google-ai-en-baseline-s1-003.md",
+      "refs": [
+        "SMP-MYYSHOP-GOOGLE-AI-EN-BASELINE-S1-20260826",
+        "SRC-MYYSHOP-LINKEDIN-COMPANY-001"
+      ],
+      "status": "observed",
+      "updated_at": "2026-08-26T19:10:37+08:00",
+      "version": "1.0.0"
+    },
+    {
+      "id": "CIT-MYYSHOP-GOOGLE-AI-EN-BASELINE-S1-004",
+      "path": "cycles/m5/citations/cit-myyshop-google-ai-en-baseline-s1-004.md",
+      "refs": [
+        "SMP-MYYSHOP-GOOGLE-AI-EN-BASELINE-S1-20260826",
+        "SRC-MYYSHOP-PERPLEXITY-REDDIT-001"
+      ],
+      "status": "observed",
+      "updated_at": "2026-08-26T19:10:37+08:00",
+      "version": "1.0.0"
+    },
+    {
+      "id": "CIT-MYYSHOP-GOOGLE-AI-EN-BASELINE-S1-005",
+      "path": "cycles/m5/citations/cit-myyshop-google-ai-en-baseline-s1-005.md",
+      "refs": [
+        "SMP-MYYSHOP-GOOGLE-AI-EN-BASELINE-S1-20260826",
+        "SRC-MYYSHOP-FACEBOOK-OFFICIAL-001"
+      ],
+      "status": "observed",
+      "updated_at": "2026-08-26T19:10:37+08:00",
+      "version": "1.0.0"
+    },
+    {
+      "id": "CIT-MYYSHOP-GOOGLE-AI-EN-BASELINE-S1-006",
+      "path": "cycles/m5/citations/cit-myyshop-google-ai-en-baseline-s1-006.md",
+      "refs": [
+        "SMP-MYYSHOP-GOOGLE-AI-EN-BASELINE-S1-20260826",
+        "SRC-MYYSHOP-INFLUENCER-MARKETING-HUB-001"
+      ],
+      "status": "observed",
+      "updated_at": "2026-08-26T19:10:37+08:00",
+      "version": "1.0.0"
+    },
+    {
+      "id": "CIT-MYYSHOP-GOOGLE-AI-EN-BASELINE-S1-007",
+      "path": "cycles/m5/citations/cit-myyshop-google-ai-en-baseline-s1-007.md",
+      "refs": [
+        "SMP-MYYSHOP-GOOGLE-AI-EN-BASELINE-S1-20260826",
+        "SRC-MYYSHOP-CLAUDE-US-APP-STORE-001"
+      ],
+      "status": "observed",
+      "updated_at": "2026-08-26T19:10:37+08:00",
+      "version": "1.0.0"
+    },
+    {
+      "id": "CIT-MYYSHOP-GOOGLE-AI-EN-BASELINE-S2-001",
+      "path": "cycles/m5/citations/cit-myyshop-google-ai-en-baseline-s2-001.md",
+      "refs": [
+        "SMP-MYYSHOP-GOOGLE-AI-EN-BASELINE-S2-20260826",
+        "SRC-MYYSHOP-WEB-HOMEPAGE-001"
+      ],
+      "status": "observed",
+      "updated_at": "2026-08-26T20:59:39+08:00",
+      "version": "1.0.0"
+    },
+    {
+      "id": "CIT-MYYSHOP-GOOGLE-AI-EN-BASELINE-S2-002",
+      "path": "cycles/m5/citations/cit-myyshop-google-ai-en-baseline-s2-002.md",
+      "refs": [
+        "SMP-MYYSHOP-GOOGLE-AI-EN-BASELINE-S2-20260826",
+        "SRC-MYYSHOP-PERPLEXITY-REDDIT-001"
+      ],
+      "status": "observed",
+      "updated_at": "2026-08-26T20:59:39+08:00",
+      "version": "1.0.0"
+    },
+    {
+      "id": "CIT-MYYSHOP-GOOGLE-AI-EN-BASELINE-S2-003",
+      "path": "cycles/m5/citations/cit-myyshop-google-ai-en-baseline-s2-003.md",
+      "refs": [
+        "SMP-MYYSHOP-GOOGLE-AI-EN-BASELINE-S2-20260826",
+        "SRC-MYYSHOP-WEB-HOMEPAGE-001"
+      ],
+      "status": "observed",
+      "updated_at": "2026-08-26T20:59:39+08:00",
+      "version": "1.0.0"
+    },
+    {
+      "id": "CIT-MYYSHOP-GOOGLE-AI-EN-BASELINE-S2-004",
+      "path": "cycles/m5/citations/cit-myyshop-google-ai-en-baseline-s2-004.md",
+      "refs": [
+        "SMP-MYYSHOP-GOOGLE-AI-EN-BASELINE-S2-20260826",
+        "SRC-MYYSHOP-WEB-HOMEPAGE-001"
+      ],
+      "status": "observed",
+      "updated_at": "2026-08-26T20:59:39+08:00",
+      "version": "1.0.0"
+    },
+    {
+      "id": "CIT-MYYSHOP-GOOGLE-AI-EN-BASELINE-S2-005",
+      "path": "cycles/m5/citations/cit-myyshop-google-ai-en-baseline-s2-005.md",
+      "refs": [
+        "SMP-MYYSHOP-GOOGLE-AI-EN-BASELINE-S2-20260826",
+        "SRC-MYYSHOP-WEB-HOMEPAGE-001"
+      ],
+      "status": "observed",
+      "updated_at": "2026-08-26T20:59:39+08:00",
+      "version": "1.0.0"
+    },
+    {
+      "id": "CIT-MYYSHOP-GOOGLE-AI-EN-BASELINE-S2-006",
+      "path": "cycles/m5/citations/cit-myyshop-google-ai-en-baseline-s2-006.md",
+      "refs": [
+        "SMP-MYYSHOP-GOOGLE-AI-EN-BASELINE-S2-20260826",
+        "SRC-MYYSHOP-PERPLEXITY-REDDIT-001"
+      ],
+      "status": "observed",
+      "updated_at": "2026-08-26T20:59:39+08:00",
+      "version": "1.0.0"
+    },
+    {
+      "id": "CIT-MYYSHOP-GOOGLE-AI-EN-BASELINE-S2-007",
+      "path": "cycles/m5/citations/cit-myyshop-google-ai-en-baseline-s2-007.md",
+      "refs": [
+        "SMP-MYYSHOP-GOOGLE-AI-EN-BASELINE-S2-20260826",
+        "SRC-MYYSHOP-WEB-HOMEPAGE-001"
+      ],
+      "status": "observed",
+      "updated_at": "2026-08-26T20:59:39+08:00",
+      "version": "1.0.0"
+    },
+    {
+      "id": "CIT-MYYSHOP-GOOGLE-AI-EN-BASELINE-S2-008",
+      "path": "cycles/m5/citations/cit-myyshop-google-ai-en-baseline-s2-008.md",
+      "refs": [
+        "SMP-MYYSHOP-GOOGLE-AI-EN-BASELINE-S2-20260826",
+        "SRC-MYYSHOP-WEB-HOMEPAGE-001"
+      ],
+      "status": "observed",
+      "updated_at": "2026-08-26T20:59:39+08:00",
+      "version": "1.0.0"
+    },
+    {
+      "id": "CIT-MYYSHOP-GOOGLE-AI-EN-BASELINE-S2-009",
+      "path": "cycles/m5/citations/cit-myyshop-google-ai-en-baseline-s2-009.md",
+      "refs": [
+        "SMP-MYYSHOP-GOOGLE-AI-EN-BASELINE-S2-20260826",
+        "SRC-MYYSHOP-WEB-ABOUT-001"
+      ],
+      "status": "observed",
+      "updated_at": "2026-08-26T20:59:39+08:00",
+      "version": "1.0.0"
+    },
+    {
+      "id": "CIT-MYYSHOP-GOOGLE-AI-EN-BASELINE-S2-010",
+      "path": "cycles/m5/citations/cit-myyshop-google-ai-en-baseline-s2-010.md",
+      "refs": [
+        "SMP-MYYSHOP-GOOGLE-AI-EN-BASELINE-S2-20260826",
+        "SRC-MYYSHOP-CLAUDE-US-APP-STORE-001"
+      ],
+      "status": "observed",
+      "updated_at": "2026-08-26T20:59:39+08:00",
+      "version": "1.0.0"
+    },
+    {
+      "id": "CIT-MYYSHOP-GOOGLE-AI-EN-BASELINE-S2-011",
+      "path": "cycles/m5/citations/cit-myyshop-google-ai-en-baseline-s2-011.md",
+      "refs": [
+        "SMP-MYYSHOP-GOOGLE-AI-EN-BASELINE-S2-20260826",
+        "SRC-MYYSHOP-FACEBOOK-OFFICIAL-001"
+      ],
+      "status": "observed",
+      "updated_at": "2026-08-26T20:59:39+08:00",
+      "version": "1.0.0"
+    },
+    {
+      "id": "CIT-MYYSHOP-GOOGLE-AI-EN-BASELINE-S2-012",
+      "path": "cycles/m5/citations/cit-myyshop-google-ai-en-baseline-s2-012.md",
+      "refs": [
+        "SMP-MYYSHOP-GOOGLE-AI-EN-BASELINE-S2-20260826",
+        "SRC-MYYSHOP-INFLUENCER-MARKETING-HUB-001"
+      ],
+      "status": "observed",
+      "updated_at": "2026-08-26T20:59:39+08:00",
+      "version": "1.0.0"
+    },
+    {
+      "id": "CIT-MYYSHOP-GOOGLE-AI-EN-BASELINE-S2-013",
+      "path": "cycles/m5/citations/cit-myyshop-google-ai-en-baseline-s2-013.md",
+      "refs": [
+        "SMP-MYYSHOP-GOOGLE-AI-EN-BASELINE-S2-20260826",
+        "SRC-MYYSHOP-CLAUDE-US-APP-STORE-001"
+      ],
+      "status": "observed",
+      "updated_at": "2026-08-26T20:59:39+08:00",
+      "version": "1.0.0"
+    },
+    {
+      "id": "CIT-MYYSHOP-GOOGLE-AI-EN-BASELINE-S2-014",
+      "path": "cycles/m5/citations/cit-myyshop-google-ai-en-baseline-s2-014.md",
+      "refs": [
+        "SMP-MYYSHOP-GOOGLE-AI-EN-BASELINE-S2-20260826",
+        "SRC-MYYSHOP-PERPLEXITY-REDDIT-001"
+      ],
+      "status": "observed",
+      "updated_at": "2026-08-26T20:59:39+08:00",
+      "version": "1.0.0"
+    },
+    {
+      "id": "CIT-MYYSHOP-GOOGLE-AI-EN-BASELINE-S2-015",
+      "path": "cycles/m5/citations/cit-myyshop-google-ai-en-baseline-s2-015.md",
+      "refs": [
+        "SMP-MYYSHOP-GOOGLE-AI-EN-BASELINE-S2-20260826",
+        "SRC-MYYSHOP-WEB-HOMEPAGE-001"
+      ],
+      "status": "observed",
+      "updated_at": "2026-08-26T20:59:39+08:00",
+      "version": "1.0.0"
+    },
+    {
+      "id": "CIT-MYYSHOP-GOOGLE-AI-EN-BASELINE-S2-016",
+      "path": "cycles/m5/citations/cit-myyshop-google-ai-en-baseline-s2-016.md",
+      "refs": [
+        "SMP-MYYSHOP-GOOGLE-AI-EN-BASELINE-S2-20260826",
+        "SRC-MYYSHOP-WEB-ABOUT-001"
+      ],
+      "status": "observed",
+      "updated_at": "2026-08-26T20:59:39+08:00",
+      "version": "1.0.0"
+    },
+    {
       "id": "CIT-MYYSHOP-GOOGLE-AI-MANUAL-21JINGJI-20260826",
       "path": "cycles/m5/citations/cit-myyshop-google-ai-manual-21jingji-20260826.md",
       "refs": [
@@ -251,6 +1263,149 @@
       ],
       "status": "observed",
       "updated_at": "2026-08-26T12:46:42+08:00",
+      "version": "1.0.0"
+    },
+    {
+      "id": "CIT-MYYSHOP-PERPLEXITY-EN-BASELINE-S1-001",
+      "path": "cycles/m5/citations/cit-myyshop-perplexity-en-baseline-s1-001.md",
+      "refs": [
+        "SMP-MYYSHOP-PERPLEXITY-EN-BASELINE-S1-20260826",
+        "SRC-MYYSHOP-WEB-HOMEPAGE-001"
+      ],
+      "status": "observed",
+      "updated_at": "2026-08-26T19:10:37+08:00",
+      "version": "1.0.0"
+    },
+    {
+      "id": "CIT-MYYSHOP-PERPLEXITY-EN-BASELINE-S1-002",
+      "path": "cycles/m5/citations/cit-myyshop-perplexity-en-baseline-s1-002.md",
+      "refs": [
+        "SMP-MYYSHOP-PERPLEXITY-EN-BASELINE-S1-20260826",
+        "SRC-MYYSHOP-WEB-ABOUT-001"
+      ],
+      "status": "observed",
+      "updated_at": "2026-08-26T19:10:37+08:00",
+      "version": "1.0.0"
+    },
+    {
+      "id": "CIT-MYYSHOP-PERPLEXITY-EN-BASELINE-S1-003",
+      "path": "cycles/m5/citations/cit-myyshop-perplexity-en-baseline-s1-003.md",
+      "refs": [
+        "SMP-MYYSHOP-PERPLEXITY-EN-BASELINE-S1-20260826",
+        "SRC-MYYSHOP-PERPLEXITY-WORDPRESS-001"
+      ],
+      "status": "observed",
+      "updated_at": "2026-08-26T19:10:37+08:00",
+      "version": "1.0.0"
+    },
+    {
+      "id": "CIT-MYYSHOP-PERPLEXITY-EN-BASELINE-S1-004",
+      "path": "cycles/m5/citations/cit-myyshop-perplexity-en-baseline-s1-004.md",
+      "refs": [
+        "SMP-MYYSHOP-PERPLEXITY-EN-BASELINE-S1-20260826",
+        "SRC-MYYSHOP-CLAUDE-US-APP-STORE-001"
+      ],
+      "status": "observed",
+      "updated_at": "2026-08-26T19:10:37+08:00",
+      "version": "1.0.0"
+    },
+    {
+      "id": "CIT-MYYSHOP-PERPLEXITY-EN-BASELINE-S1-005",
+      "path": "cycles/m5/citations/cit-myyshop-perplexity-en-baseline-s1-005.md",
+      "refs": [
+        "SMP-MYYSHOP-PERPLEXITY-EN-BASELINE-S1-20260826",
+        "SRC-MYYSHOP-PERPLEXITY-REDDIT-001"
+      ],
+      "status": "observed",
+      "updated_at": "2026-08-26T19:10:37+08:00",
+      "version": "1.0.0"
+    },
+    {
+      "id": "CIT-MYYSHOP-PERPLEXITY-EN-BASELINE-S1-006",
+      "path": "cycles/m5/citations/cit-myyshop-perplexity-en-baseline-s1-006.md",
+      "refs": [
+        "SMP-MYYSHOP-PERPLEXITY-EN-BASELINE-S1-20260826",
+        "SRC-MYYSHOP-PERPLEXITY-REGISTER-001"
+      ],
+      "status": "observed",
+      "updated_at": "2026-08-26T19:10:37+08:00",
+      "version": "1.0.0"
+    },
+    {
+      "id": "CIT-MYYSHOP-PERPLEXITY-EN-BASELINE-S2-001",
+      "path": "cycles/m5/citations/cit-myyshop-perplexity-en-baseline-s2-001.md",
+      "refs": [
+        "SMP-MYYSHOP-PERPLEXITY-EN-BASELINE-S2-20260826",
+        "SRC-MYYSHOP-WEB-HOMEPAGE-001"
+      ],
+      "status": "observed",
+      "updated_at": "2026-08-26T20:59:39+08:00",
+      "version": "1.0.0"
+    },
+    {
+      "id": "CIT-MYYSHOP-PERPLEXITY-EN-BASELINE-S2-002",
+      "path": "cycles/m5/citations/cit-myyshop-perplexity-en-baseline-s2-002.md",
+      "refs": [
+        "SMP-MYYSHOP-PERPLEXITY-EN-BASELINE-S2-20260826",
+        "SRC-MYYSHOP-WEB-ABOUT-001"
+      ],
+      "status": "observed",
+      "updated_at": "2026-08-26T20:59:39+08:00",
+      "version": "1.0.0"
+    },
+    {
+      "id": "CIT-MYYSHOP-PERPLEXITY-EN-BASELINE-S2-003",
+      "path": "cycles/m5/citations/cit-myyshop-perplexity-en-baseline-s2-003.md",
+      "refs": [
+        "SMP-MYYSHOP-PERPLEXITY-EN-BASELINE-S2-20260826",
+        "SRC-MYYSHOP-PERPLEXITY-WORDPRESS-001"
+      ],
+      "status": "observed",
+      "updated_at": "2026-08-26T20:59:39+08:00",
+      "version": "1.0.0"
+    },
+    {
+      "id": "CIT-MYYSHOP-PERPLEXITY-EN-BASELINE-S2-004",
+      "path": "cycles/m5/citations/cit-myyshop-perplexity-en-baseline-s2-004.md",
+      "refs": [
+        "SMP-MYYSHOP-PERPLEXITY-EN-BASELINE-S2-20260826",
+        "SRC-MYYSHOP-CLAUDE-US-APP-STORE-001"
+      ],
+      "status": "observed",
+      "updated_at": "2026-08-26T20:59:39+08:00",
+      "version": "1.0.0"
+    },
+    {
+      "id": "CIT-MYYSHOP-PERPLEXITY-EN-BASELINE-S2-005",
+      "path": "cycles/m5/citations/cit-myyshop-perplexity-en-baseline-s2-005.md",
+      "refs": [
+        "SMP-MYYSHOP-PERPLEXITY-EN-BASELINE-S2-20260826",
+        "SRC-MYYSHOP-PERPLEXITY-REDDIT-001"
+      ],
+      "status": "observed",
+      "updated_at": "2026-08-26T20:59:39+08:00",
+      "version": "1.0.0"
+    },
+    {
+      "id": "CIT-MYYSHOP-PERPLEXITY-EN-BASELINE-S2-006",
+      "path": "cycles/m5/citations/cit-myyshop-perplexity-en-baseline-s2-006.md",
+      "refs": [
+        "SMP-MYYSHOP-PERPLEXITY-EN-BASELINE-S2-20260826",
+        "SRC-MYYSHOP-SHOP-ADMIN-001"
+      ],
+      "status": "observed",
+      "updated_at": "2026-08-26T20:59:39+08:00",
+      "version": "1.0.0"
+    },
+    {
+      "id": "CIT-MYYSHOP-PERPLEXITY-EN-BASELINE-S2-007",
+      "path": "cycles/m5/citations/cit-myyshop-perplexity-en-baseline-s2-007.md",
+      "refs": [
+        "SMP-MYYSHOP-PERPLEXITY-EN-BASELINE-S2-20260826",
+        "SRC-MYYSHOP-PERPLEXITY-REGISTER-001"
+      ],
+      "status": "observed",
+      "updated_at": "2026-08-26T20:59:39+08:00",
       "version": "1.0.0"
     },
     {

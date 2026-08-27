@@ -21,7 +21,19 @@
         "web_search_state": { "enum": ["on", "off", "automatic", "unavailable", "unknown"] },
         "model_mode": { "type": "string", "minLength": 1 },
         "query_template_version": { "type": "string", "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$" },
-        "sampling_count": { "const": 3 },
+        "sampling_count": { "enum": [2, 3] },
+        "language_contract": {
+          "type": "object",
+          "required": ["role", "object_key", "primary_language", "primary_query_ref", "semantic_contract_ref"],
+          "properties": {
+            "role": { "enum": ["primary", "auxiliary"] },
+            "object_key": { "type": "string", "minLength": 1 },
+            "primary_language": { "const": "en-US" },
+            "primary_query_ref": { "type": "string", "pattern": "^Q-(?:[A-Z0-9]+-)*[A-Z0-9]+$" },
+            "semantic_contract_ref": { "type": "string", "pattern": "^workspace://" }
+          },
+          "additionalProperties": false
+        },
         "time_window": {
           "type": "object",
           "required": ["id", "starts_at", "ends_at"],
@@ -170,6 +182,16 @@
     },
     "source": {
       "properties": {
+        "classification_queue": {
+          "type": "object",
+          "required": ["status", "threshold", "decision_ref"],
+          "properties": {
+            "status": { "enum": ["archived_unclassified", "batch_ready", "classified"] },
+            "threshold": { "const": 100 },
+            "decision_ref": { "type": "string", "pattern": "^workspace://" }
+          },
+          "additionalProperties": false
+        },
         "identity": {
           "type": "object",
           "required": ["level", "key", "citation_domain", "host_platform", "publisher_name"],
@@ -449,6 +471,28 @@
             "schema_version": { "type": "string", "minLength": 1 },
             "collector_version": { "type": "string", "minLength": 1 },
             "tool_policy_version": { "type": "string", "minLength": 1 }
+          },
+          "additionalProperties": false
+        },
+        "classification_policy": {
+          "type": "object",
+          "required": ["mode", "threshold", "decision_ref"],
+          "properties": {
+            "mode": { "const": "batch_at_source_threshold" },
+            "threshold": { "const": 100 },
+            "decision_ref": { "type": "string", "pattern": "^workspace://" }
+          },
+          "additionalProperties": false
+        },
+        "language_contract": {
+          "type": "object",
+          "required": ["role", "object_key", "primary_language", "primary_query_ref", "semantic_contract_ref"],
+          "properties": {
+            "role": { "enum": ["primary", "auxiliary"] },
+            "object_key": { "type": "string", "minLength": 1 },
+            "primary_language": { "const": "en-US" },
+            "primary_query_ref": { "type": "string", "pattern": "^Q-(?:[A-Z0-9]+-)*[A-Z0-9]+$" },
+            "semantic_contract_ref": { "type": "string", "pattern": "^workspace://" }
           },
           "additionalProperties": false
         }

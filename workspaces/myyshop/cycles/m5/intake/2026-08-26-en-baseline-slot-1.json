@@ -1,0 +1,300 @@
+{
+  "schema_version": "m5-manual-baseline-batch-v1",
+  "ordinal": 1,
+  "captured_at": "2026-08-26T19:10:37+08:00",
+  "profile_frozen_at": "2026-08-26T19:10:37+08:00",
+  "time_window": {
+    "id": "TW-MYYSHOP-M5-EN-BASELINE-20260826",
+    "starts_at": "2026-08-26T00:00:00+08:00",
+    "ends_at": "2026-08-31T23:59:59+08:00"
+  },
+  "object_key": "myyshop-brand-definition",
+  "decision_ref": "workspace://cycles/preparation/decisions/2026-08-26-m5-two-slot-source-batch-and-positioning-approved.md",
+  "goal": { "ref": "GOAL-MYYSHOP-DEFINITION-001", "version": "1.0.1" },
+  "query": { "ref": "Q-MYYSHOP-WHAT-IS-EN-BASELINE-001", "version": "1.0.0", "language": "en-US" },
+  "query_set": { "ref": "QS-MYYSHOP-DEFINITION-EN-BASELINE-001", "version": "1.0.0" },
+  "knowledge_release": { "ref": "KR-MYYSHOP-DEFINITION-001", "version": "1.0.1" },
+  "claims": [
+    { "ref": "CLM-MYYSHOP-AUDIENCE-001", "version": "1.0.1" },
+    { "ref": "CLM-MYYSHOP-LIFECYCLE-SERVICE-001", "version": "1.0.1" }
+  ],
+  "entries": [
+    {
+      "platform": "chatgpt",
+      "profile_id": "CPF-MYYSHOP-CHATGPT-EN-BASELINE-20260826",
+      "run_id": "RUN-MYYSHOP-M5-CHATGPT-EN-BASELINE-20260826",
+      "sample_id": "SMP-MYYSHOP-CHATGPT-EN-BASELINE-S1-20260826",
+      "product_entry": "https://chatgpt.com/",
+      "result_url": "https://chatgpt.com/share/6a8ec472-a10c-83e9-95db-1029298cba9d",
+      "login_state": "unknown",
+      "web_search_state": "on",
+      "model_mode": "unknown",
+      "answer_text": "MyyShop is an AI-driven global creator marketing platform that helps creators turn their content, audience, and social influence into income by connecting them with brands and providing monetization tools. This is also how MyyShop currently defines itself on its official site.\n\nIts core model can be understood as:\n\nCreator → AI matching → Brand opportunities → Content creation/promotion → Performance tracking → Earnings\n\nCreators can connect accounts such as TikTok, Instagram, YouTube, Reddit, Facebook, and X, discover brand collaboration opportunities, create sponsored or promotional content, and receive payouts after completing campaigns. MyyShop says creators can join even with 0 followers, while higher-value opportunities can become available as their audience and commercial value grow.\n\nBeyond conventional brand deals, MyyShop is expanding into a broader creator monetization system. For example, MyyFinds lets creators curate products and links and earn based on traffic/views; the platform has also introduced CPM campaigns where eligible creators can earn based on TikTok video views.\n\nFrom the brand side, MyyShop functions as creator-marketing infrastructure: it uses AI to help match brands with relevant creators and supports campaign execution, content delivery, performance measurement, and creator payouts. MyyShop states that its AI capabilities draw on data covering 33M+ SKUs and 1.66M creators.\n\nSo a concise description would be:\n\nMyyShop is an AI-driven global creator marketing platform where creators discover brand opportunities, monetize their content and influence, and build sustainable creator businesses.\n\nThis distinction matters because MyyShop today should not simply be described as an e-commerce storefront or dropshipping tool. Some older/public content still associates it with cross-border social commerce and store-building—reflecting its historical positioning—but its current homepage, About page, and App Store description consistently emphasize creator marketing and creator monetization.\n",
+      "citations": [
+        { "url": "https://www.myyshop.com/?utm_source=chatgpt.com", "source_ref": "SRC-MYYSHOP-WEB-HOMEPAGE-001", "context": "ChatGPT source panel: MyyShop homepage." },
+        { "url": "https://www.myyshop.com/about-us?utm_source=chatgpt.com", "source_ref": "SRC-MYYSHOP-WEB-ABOUT-001", "context": "ChatGPT source panel: MyyShop About page." },
+        { "url": "https://apps.apple.com/us/app/myyshop/id6449818392?utm_source=chatgpt.com", "source_ref": "SRC-MYYSHOP-CLAUDE-US-APP-STORE-001", "context": "ChatGPT source panel: Apple App Store." },
+        {
+          "url": "https://www.myyshop.com/shop/create/?utm_source=chatgpt.com",
+          "context": "ChatGPT source panel: MyyFinds create page.",
+          "source": {
+            "id": "SRC-MYYSHOP-SHOP-CREATE-001",
+            "path": "evidence/sources/src-myyshop-shop-create-001.md",
+            "name": "MyyShop MyyFinds create page",
+            "locator": "https://www.myyshop.com/shop/create/",
+            "identity": { "level": "page", "key": "page:https://www.myyshop.com/shop/create/", "citation_domain": "myyshop.com", "host_platform": "none", "publisher_name": "MyyShop" }
+          }
+        },
+        {
+          "url": "https://whatsnew.myyshop.com/?utm_source=chatgpt.com",
+          "context": "ChatGPT source panel: MyyShop What's New.",
+          "source": {
+            "id": "SRC-MYYSHOP-WHATSNEW-001",
+            "path": "evidence/sources/src-myyshop-whatsnew-001.md",
+            "name": "MyyShop What's New",
+            "locator": "https://whatsnew.myyshop.com/",
+            "identity": { "level": "page", "key": "page:https://whatsnew.myyshop.com/", "citation_domain": "whatsnew.myyshop.com", "host_platform": "none", "publisher_name": "MyyShop" }
+          }
+        },
+        {
+          "url": "https://www.myyshop.com/blog/global-cross-border-social-commerce-trends-how-myyshop-empowers-seller-creator?utm_source=chatgpt.com",
+          "context": "ChatGPT source panel: MyyShop cross-border social commerce article.",
+          "source": {
+            "id": "SRC-MYYSHOP-CROSS-BORDER-BLOG-001",
+            "path": "evidence/sources/src-myyshop-cross-border-blog-001.md",
+            "name": "MyyShop cross-border social commerce article",
+            "locator": "https://www.myyshop.com/blog/global-cross-border-social-commerce-trends-how-myyshop-empowers-seller-creator",
+            "identity": { "level": "page", "key": "page:https://www.myyshop.com/blog/global-cross-border-social-commerce-trends-how-myyshop-empowers-seller-creator", "citation_domain": "myyshop.com", "host_platform": "none", "publisher_name": "MyyShop" }
+          }
+        },
+        { "url": "https://whatsnew.myyshop.com/?utm_source=chatgpt.com", "source_ref": "SRC-MYYSHOP-WHATSNEW-001", "context": "ChatGPT source panel repeated What's New source." },
+        {
+          "url": "https://rantiethnicity.com/from-influence-to-infrastructure-how-myyshop-is-building-the/?utm_source=chatgpt.com",
+          "context": "ChatGPT source panel: third-party creator commerce article.",
+          "source": {
+            "id": "SRC-MYYSHOP-RANTIETHNICITY-001",
+            "path": "evidence/sources/src-myyshop-rantiethnicity-001.md",
+            "name": "RantiEthnicity MyyShop creator commerce article",
+            "locator": "https://rantiethnicity.com/from-influence-to-infrastructure-how-myyshop-is-building-the/",
+            "identity": { "level": "page", "key": "page:https://rantiethnicity.com/from-influence-to-infrastructure-how-myyshop-is-building-the/", "citation_domain": "rantiethnicity.com", "host_platform": "none", "publisher_name": "RantiEthnicity" }
+          }
+        },
+        { "url": "https://apps.apple.com/us/app/myyshop/id6449818392?utm_source=chatgpt.com", "source_ref": "SRC-MYYSHOP-CLAUDE-US-APP-STORE-001", "context": "ChatGPT source panel repeated App Store source." },
+        { "url": "https://apps.apple.com/us/app/myyshop/id6449818392?platform=watch&utm_source=chatgpt.com", "source_ref": "SRC-MYYSHOP-CLAUDE-US-APP-STORE-001", "context": "ChatGPT source panel App Store watch URL variant." },
+        { "url": "https://apps.apple.com/us/app/myyshop/id6449818392?platform=vision&utm_source=chatgpt.com", "source_ref": "SRC-MYYSHOP-CLAUDE-US-APP-STORE-001", "context": "ChatGPT source panel App Store vision URL variant." },
+        { "url": "https://apps.apple.com/us/app/myyshop/id6449818392?platform=tv&utm_source=chatgpt.com", "source_ref": "SRC-MYYSHOP-CLAUDE-US-APP-STORE-001", "context": "ChatGPT source panel App Store tv URL variant." },
+        { "url": "https://apps.apple.com/ca/app/myyshop/id6449818392?utm_source=chatgpt.com", "source_ref": "SRC-MYYSHOP-CLAUDE-US-APP-STORE-001", "context": "ChatGPT source panel App Store Canada URL variant." },
+        { "url": "https://www.myyshop.com/?f=US%7C&utm_source=chatgpt.com", "source_ref": "SRC-MYYSHOP-WEB-HOMEPAGE-001", "context": "ChatGPT source panel MyyShop homepage URL variant." },
+        {
+          "url": "https://www.myyshop.com/blog/how-ai-driven-creator-platform-redefines-global-cross-border-ecommerce?utm_source=chatgpt.com",
+          "context": "ChatGPT source panel: MyyShop AI creator article.",
+          "source": {
+            "id": "SRC-MYYSHOP-AI-CREATOR-BLOG-001",
+            "path": "evidence/sources/src-myyshop-ai-creator-blog-001.md",
+            "name": "MyyShop AI creator platform article",
+            "locator": "https://www.myyshop.com/blog/how-ai-driven-creator-platform-redefines-global-cross-border-ecommerce",
+            "identity": { "level": "page", "key": "page:https://www.myyshop.com/blog/how-ai-driven-creator-platform-redefines-global-cross-border-ecommerce", "citation_domain": "myyshop.com", "host_platform": "none", "publisher_name": "MyyShop" }
+          }
+        },
+        {
+          "url": "https://www.myyshop.com/shop/admin/?utm_source=chatgpt.com",
+          "context": "ChatGPT source panel: MyyShop shop admin page.",
+          "source": {
+            "id": "SRC-MYYSHOP-SHOP-ADMIN-001",
+            "path": "evidence/sources/src-myyshop-shop-admin-001.md",
+            "name": "MyyShop shop admin page",
+            "locator": "https://www.myyshop.com/shop/admin/",
+            "identity": { "level": "page", "key": "page:https://www.myyshop.com/shop/admin/", "citation_domain": "myyshop.com", "host_platform": "none", "publisher_name": "MyyShop" }
+          }
+        },
+        {
+          "url": "https://www.myyshop.com/login/?utm_source=chatgpt.com",
+          "context": "ChatGPT source panel: MyyShop login page.",
+          "source": {
+            "id": "SRC-MYYSHOP-LOGIN-001",
+            "path": "evidence/sources/src-myyshop-login-001.md",
+            "name": "MyyShop login page",
+            "locator": "https://www.myyshop.com/login/",
+            "identity": { "level": "page", "key": "page:https://www.myyshop.com/login/", "citation_domain": "myyshop.com", "host_platform": "none", "publisher_name": "MyyShop" }
+          }
+        },
+        {
+          "url": "https://www.myyshop.com/restrict/?utm_source=chatgpt.com",
+          "context": "ChatGPT source panel: MyyShop restricted access page.",
+          "source": {
+            "id": "SRC-MYYSHOP-RESTRICT-001",
+            "path": "evidence/sources/src-myyshop-restrict-001.md",
+            "name": "MyyShop restricted access page",
+            "locator": "https://www.myyshop.com/restrict/",
+            "identity": { "level": "page", "key": "page:https://www.myyshop.com/restrict/", "citation_domain": "myyshop.com", "host_platform": "none", "publisher_name": "MyyShop" }
+          }
+        },
+        { "url": "https://www.myyshop.com/shop/admin?utm_source=chatgpt.com", "source_ref": "SRC-MYYSHOP-SHOP-ADMIN-001", "context": "ChatGPT source panel shop admin URL variant." },
+        {
+          "url": "https://www.myyshop.com/shop/preview/?utm_source=chatgpt.com",
+          "context": "ChatGPT source panel: MyyShop preview page.",
+          "source": {
+            "id": "SRC-MYYSHOP-SHOP-PREVIEW-001",
+            "path": "evidence/sources/src-myyshop-shop-preview-001.md",
+            "name": "MyyShop shop preview page",
+            "locator": "https://www.myyshop.com/shop/preview/",
+            "identity": { "level": "page", "key": "page:https://www.myyshop.com/shop/preview/", "citation_domain": "myyshop.com", "host_platform": "none", "publisher_name": "MyyShop" }
+          }
+        },
+        {
+          "url": "https://www.myyshop.com/shop/products?utm_source=chatgpt.com",
+          "context": "ChatGPT source panel: MyyShop products page.",
+          "source": {
+            "id": "SRC-MYYSHOP-SHOP-PRODUCTS-001",
+            "path": "evidence/sources/src-myyshop-shop-products-001.md",
+            "name": "MyyShop products page",
+            "locator": "https://www.myyshop.com/shop/products",
+            "identity": { "level": "page", "key": "page:https://www.myyshop.com/shop/products", "citation_domain": "myyshop.com", "host_platform": "none", "publisher_name": "MyyShop" }
+          }
+        },
+        {
+          "url": "https://www.myyshop.com/blog/the-rise-of-stream2026-creator-collaboration-platform-boomer-and-content-creator-booking-platforms?utm_source=chatgpt.com",
+          "context": "ChatGPT source panel: creator collaboration platform article.",
+          "source": {
+            "id": "SRC-MYYSHOP-CREATOR-COLLAB-BLOG-001",
+            "path": "evidence/sources/src-myyshop-creator-collab-blog-001.md",
+            "name": "MyyShop creator collaboration platform article",
+            "locator": "https://www.myyshop.com/blog/the-rise-of-stream2026-creator-collaboration-platform-boomer-and-content-creator-booking-platforms",
+            "identity": { "level": "page", "key": "page:https://www.myyshop.com/blog/the-rise-of-stream2026-creator-collaboration-platform-boomer-and-content-creator-booking-platforms", "citation_domain": "myyshop.com", "host_platform": "none", "publisher_name": "MyyShop" }
+          }
+        },
+        { "url": "https://www.myyshop.com/blog/global-cross-border-social-commerce-trends-how-myyshop-empowers-seller-creator?utm_source=chatgpt.com", "source_ref": "SRC-MYYSHOP-CROSS-BORDER-BLOG-001", "context": "ChatGPT source panel repeated cross-border article." },
+        {
+          "url": "https://linktr.ee/myyshopcreators?utm_source=chatgpt.com",
+          "context": "ChatGPT source panel: MyyShop creator Linktree.",
+          "source": {
+            "id": "SRC-MYYSHOP-LINKTREE-001",
+            "path": "evidence/sources/src-myyshop-linktree-001.md",
+            "name": "MyyShop creator Linktree",
+            "locator": "https://linktr.ee/myyshopcreators",
+            "identity": { "level": "page", "key": "page:https://linktr.ee/myyshopcreators", "citation_domain": "linktr.ee", "host_platform": "other", "publisher_name": "MyyShop" }
+          }
+        }
+      ]
+    },
+    {
+      "platform": "gemini",
+      "profile_id": "CPF-MYYSHOP-GEMINI-EN-BASELINE-20260826",
+      "run_id": "RUN-MYYSHOP-M5-GEMINI-EN-BASELINE-20260826",
+      "sample_id": "SMP-MYYSHOP-GEMINI-EN-BASELINE-S1-20260826",
+      "product_entry": "https://gemini.google.com/app",
+      "result_url": "https://gemini.google.com/app/d9268cd1f0666ca6",
+      "login_state": "logged_in",
+      "web_search_state": "unknown",
+      "model_mode": "Flash",
+      "answer_text": "MyyShop is an AI-driven social commerce and creator marketing platform launched in 2020 by DHgate Group. It bridges global suppliers (primarily Chinese manufacturers) with social media influencers, micro-creators, and digital entrepreneurs to monetize online traffic through dropshipping, affiliate marketing, and brand collaborations.\n\nCore Features & How It Works\n\nAI-Powered Creator Matching: Brands use AI tools on the platform to match their products with creators whose niche, audience demographics, and engagement style align with campaign goals.\n\nDropshipping & Store Creation: Users can quickly build customized storefronts or integrate MyyShop’s catalog directly into existing channels like Shopify, eBay, TikTok Shop, or private social media groups. Orders placed by end-consumers are automatically fulfilled and shipped directly from suppliers.\n\nCross-Border Supply Chain Integration: Built on DHgate’s B2B infrastructure, the platform provides access to millions of wholesale-priced products, global warehousing, automated fulfillment, and smart logistics management.\n\nTikTok & Social Commerce Optimization: MyyShop specializes in multi-channel commerce, offering features like product seeding, livestream shopping tools, affiliate links, and automated content distribution across platforms like TikTok, Instagram, and Facebook.\n\nMonetization Options for Creators\n\nCreators join MyyShop for free and can earn money through multiple revenue streams.\n\nAffiliate & Sales Commissions: Earn a percentage on completed product sales generated via social store links or campaign tracking.\n\nImpression-Based Earnings (CPM / MyyFinds): Monetize views directly rather than relying solely on finalized sales. Programs like Paid for Every View allow approved TikTok creators to earn set rates.\n\nDropshipping Margins: Set custom retail prices on curated store items and keep the markup difference above the wholesale supply cost.\n",
+      "citations": [
+        {
+          "url": "https://influencermarketinghub.com/myyshop/",
+          "repeat": 3,
+          "context": "Gemini source detail: Influencer Marketing Hub.",
+          "source": {
+            "id": "SRC-MYYSHOP-INFLUENCER-MARKETING-HUB-001",
+            "path": "evidence/sources/src-myyshop-influencer-marketing-hub-001.md",
+            "name": "Influencer Marketing Hub MyyShop review",
+            "locator": "https://influencermarketinghub.com/myyshop/",
+            "identity": { "level": "page", "key": "page:https://influencermarketinghub.com/myyshop/", "citation_domain": "influencermarketinghub.com", "host_platform": "none", "publisher_name": "Influencer Marketing Hub" }
+          }
+        },
+        {
+          "url": "https://www.businesswire.com/news/home/20200921005309/en/DHgate-Launches-MyyShop-to-Build-a-Decentralized-Ecosystem",
+          "repeat": 2,
+          "context": "Gemini source detail: Business Wire launch article.",
+          "source": {
+            "id": "SRC-MYYSHOP-BUSINESS-WIRE-LAUNCH-001",
+            "path": "evidence/sources/src-myyshop-business-wire-launch-001.md",
+            "name": "Business Wire MyyShop launch article",
+            "locator": "https://www.businesswire.com/news/home/20200921005309/en/DHgate-Launches-MyyShop-to-Build-a-Decentralized-Ecosystem",
+            "identity": { "level": "page", "key": "page:https://www.businesswire.com/news/home/20200921005309/en/DHgate-Launches-MyyShop-to-Build-a-Decentralized-Ecosystem", "citation_domain": "businesswire.com", "host_platform": "none", "publisher_name": "Business Wire" }
+          }
+        },
+        { "url": "https://influencermarketinghub.com/myyshop/", "repeat": 4, "source_ref": "SRC-MYYSHOP-INFLUENCER-MARKETING-HUB-001", "context": "Gemini repeated source detail: Influencer Marketing Hub." },
+        {
+          "url": "https://www.globenewswire.com/news-release/2026/08/12/3343441/0/en/myyshop-launches-paid-for-every-view-tiktok-cpm-model-to-give-creators-faster-more-transparent-monetization-opportunities.html",
+          "context": "Gemini source detail: GlobeNewswire CPM announcement.",
+          "source": {
+            "id": "SRC-MYYSHOP-GLOBENEWSWIRE-CPM-001",
+            "path": "evidence/sources/src-myyshop-globenewswire-cpm-001.md",
+            "name": "GlobeNewswire MyyShop CPM announcement",
+            "locator": "https://www.globenewswire.com/news-release/2026/08/12/3343441/0/en/myyshop-launches-paid-for-every-view-tiktok-cpm-model-to-give-creators-faster-more-transparent-monetization-opportunities.html",
+            "identity": { "level": "page", "key": "page:https://www.globenewswire.com/news-release/2026/08/12/3343441/0/en/myyshop-launches-paid-for-every-view-tiktok-cpm-model-to-give-creators-faster-more-transparent-monetization-opportunities.html", "citation_domain": "globenewswire.com", "host_platform": "none", "publisher_name": "GlobeNewswire" }
+          }
+        },
+        { "url": "https://www.businesswire.com/news/home/20200921005309/en/DHgate-Launches-MyyShop-to-Build-a-Decentralized-Ecosystem", "source_ref": "SRC-MYYSHOP-BUSINESS-WIRE-LAUNCH-001", "context": "Gemini repeated source detail: Business Wire." }
+      ]
+    },
+    {
+      "platform": "google_ai",
+      "profile_id": "CPF-MYYSHOP-GOOGLE-AI-EN-BASELINE-20260826",
+      "run_id": "RUN-MYYSHOP-M5-GOOGLE-AI-EN-BASELINE-20260826",
+      "sample_id": "SMP-MYYSHOP-GOOGLE-AI-EN-BASELINE-S1-20260826",
+      "product_entry": "https://www.google.com/search",
+      "result_url": "https://share.google/aimode/XBcz8OzqjKI0wbL75",
+      "login_state": "logged_in",
+      "web_search_state": "on",
+      "model_mode": "AI Mode",
+      "answer_text": "MyyShop is a legitimate AI-driven global creator marketing and social commerce platform launched by DHgate Group. It connects content creators and influencers of all sizes—even those with zero followers—with paid brand collaborations, product sourcing, and dropshipping tools.\n\nCore Features & How It Works\n\nAI Brand Matching: Algorithms analyze data to pair creators with matching brand campaigns for unboxing reviews, videos, and social posts.\n\nZero-Barrier Entry: Open to beginners or accounts with 0 followers on platforms like TikTok, Instagram, YouTube, and X, scaling to higher-paying links as follower counts grow.\n\nEarning & Payouts: Offers cash payouts, content creation fees, and affiliate models with transparent tracking and a $50 minimum withdrawal threshold.\n\nE-Commerce & Dropshipping: Originally built around supply chain access and store creation, it also assists merchants with automation and logistics integrations like Shopify.\n\nUser Perspectives & Limitations\n\nOpinions on Reddit are mixed regarding user experience. Some creators report successfully completing paid collaborations, finding free samples, and cashing out earnings. Other users cite technical glitches, difficulty finding support, and opaque onboarding.\n",
+      "citations": [
+        { "url": "https://www.myyshop.com/", "source_ref": "SRC-MYYSHOP-WEB-HOMEPAGE-001", "context": "Google AI related result: MyyShop homepage." },
+        { "url": "https://www.myyshop.com/about-us", "source_ref": "SRC-MYYSHOP-WEB-ABOUT-001", "context": "Google AI related result: MyyShop About page." },
+        { "url": "https://www.linkedin.com/company/myyshop", "source_ref": "SRC-MYYSHOP-LINKEDIN-COMPANY-001", "context": "Google AI related result: LinkedIn company page." },
+        { "url": "https://www.reddit.com/r/UGCcreators/comments/1ql5hi1/myyshop_is_it_legit/", "source_ref": "SRC-MYYSHOP-PERPLEXITY-REDDIT-001", "context": "Google AI related result: Reddit discussion." },
+        {
+          "url": "https://www.facebook.com/MyyShopOfficial/",
+          "context": "Google AI related result: MyyShop Facebook page.",
+          "source": {
+            "id": "SRC-MYYSHOP-FACEBOOK-OFFICIAL-001",
+            "path": "evidence/sources/src-myyshop-facebook-official-001.md",
+            "name": "MyyShop Facebook page",
+            "locator": "https://www.facebook.com/MyyShopOfficial/",
+            "identity": { "level": "page", "key": "page:https://www.facebook.com/MyyShopOfficial/", "citation_domain": "facebook.com", "host_platform": "facebook", "publisher_name": "MyyShop" }
+          }
+        },
+        { "url": "https://influencermarketinghub.com/myyshop/", "source_ref": "SRC-MYYSHOP-INFLUENCER-MARKETING-HUB-001", "context": "Google AI related result: Influencer Marketing Hub." },
+        { "url": "https://apps.apple.com/us/app/myyshop/id6449818392", "source_ref": "SRC-MYYSHOP-CLAUDE-US-APP-STORE-001", "context": "Google AI related result: Apple App Store." }
+      ]
+    },
+    {
+      "platform": "perplexity",
+      "profile_id": "CPF-MYYSHOP-PERPLEXITY-EN-BASELINE-20260826",
+      "run_id": "RUN-MYYSHOP-M5-PERPLEXITY-EN-BASELINE-20260826",
+      "sample_id": "SMP-MYYSHOP-PERPLEXITY-EN-BASELINE-S1-20260826",
+      "product_entry": "https://www.perplexity.ai/",
+      "result_url": "https://www.perplexity.ai/search/f0d54976-ff47-48df-9c5b-fc46dd4e308b",
+      "login_state": "logged_in",
+      "web_search_state": "on",
+      "model_mode": "unknown",
+      "answer_text": "MyyShop is an AI-powered creator-marketing platform that connects social-media creators with brands for collaborations and monetization opportunities. Creators can find sponsored content campaigns, promote products, earn affiliate commissions, and use tools such as MyyFinds and free value reports.\n\nIt is aimed at creators ranging from beginners to large influencers and supports opportunities across areas such as fashion, beauty, lifestyle, and other consumer categories. Some campaigns may pay for posted content, while others offer products or commissions based on sales.\n\nMyyShop also has an iPad app listed in Apple’s App Store. Like any creator platform, review each campaign’s requirements, compensation, product-shipping terms, and privacy or payment conditions before participating.\n",
+      "citations": [
+        { "url": "https://www.myyshop.com/", "source_ref": "SRC-MYYSHOP-WEB-HOMEPAGE-001", "context": "Perplexity source panel: MyyShop homepage." },
+        { "url": "https://www.myyshop.com/about-us", "source_ref": "SRC-MYYSHOP-WEB-ABOUT-001", "context": "Perplexity source panel: MyyShop About page." },
+        { "url": "https://stufftotalk.wordpress.com/2025/11/30/everything-you-need-to-know-about-myyshop-review/", "source_ref": "SRC-MYYSHOP-PERPLEXITY-WORDPRESS-001", "context": "Perplexity source panel: WordPress review." },
+        { "url": "https://apps.apple.com/us/app/myyshop/id6449818392", "source_ref": "SRC-MYYSHOP-CLAUDE-US-APP-STORE-001", "context": "Perplexity source panel: Apple App Store." },
+        { "url": "https://www.reddit.com/r/UGCcreators/comments/1ql5hi1/myyshop_is_it_legit/", "source_ref": "SRC-MYYSHOP-PERPLEXITY-REDDIT-001", "context": "Perplexity source panel: Reddit discussion." },
+        { "url": "https://www.myyshop.com/register", "source_ref": "SRC-MYYSHOP-PERPLEXITY-REGISTER-001", "context": "Perplexity source panel: MyyShop registration page." }
+      ]
+    },
+    {
+      "platform": "claude",
+      "profile_id": "CPF-MYYSHOP-CLAUDE-EN-BASELINE-20260826",
+      "run_id": "RUN-MYYSHOP-M5-CLAUDE-EN-BASELINE-20260826",
+      "sample_id": "SMP-MYYSHOP-CLAUDE-EN-BASELINE-S1-20260826",
+      "product_entry": "https://claude.ai/new",
+      "result_url": "https://claude.ai/share/67fe4c86-1b1c-46f0-a967-790c6b7b0d00",
+      "login_state": "unknown",
+      "web_search_state": "on",
+      "model_mode": "unknown",
+      "answer_text": "MyyShop was originally launched in 2020 by DHgate, a major B2B cross-border e-commerce marketplace in China, as a SaaS platform for decentralized cross-border e-commerce focused on online store creation and dropshipping services for social-commerce influencers and private-domain traffic monetizers. The idea was to let people with social followings build online stores or connect products to existing stores, with MyyShop handling supplier vetting, AI-based product recommendations, logistics, and customer support.\n\nThe platform appears to have evolved since then. Today, MyyShop describes itself as an AI-driven global creator marketing platform connecting creators with brand collaborations, letting them monetize content with zero platform fees. It is open to creators at any stage, even with zero followers, and supports content across TikTok, Instagram, YouTube, Reddit, Facebook, and X.\n\nSo in short: it started as a dropshipping/store-building tool tied to DHgate, and has since positioned itself more as an influencer/creator marketing marketplace pairing brands with content creators.\n",
+      "citations": [
+        { "url": "https://www.businesswire.com/news/home/20200921005309/en/DHgate-Launches-MyyShop-to-Build-a-Decentralized-Ecosystem", "repeat": 2, "source_ref": "SRC-MYYSHOP-BUSINESS-WIRE-LAUNCH-001", "context": "Claude inline citation: Business Wire launch article." },
+        { "url": "https://apps.apple.com/us/app/myyshop/id6449818392", "source_ref": "SRC-MYYSHOP-CLAUDE-US-APP-STORE-001", "context": "Claude inline citation: Apple App Store." },
+        { "url": "https://www.myyshop.com/", "source_ref": "SRC-MYYSHOP-WEB-HOMEPAGE-001", "context": "Claude inline citation: MyyShop homepage." }
+      ]
+    }
+  ]
+}

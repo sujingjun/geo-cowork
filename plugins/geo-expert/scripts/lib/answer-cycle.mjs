@@ -24,6 +24,7 @@ import {
 } from './citation-analysis.mjs';
 import { loadWorkspaceGraph } from './index-builder.mjs';
 import { readRun, transitionRun } from './run-store.mjs';
+import { expectedFormalOrdinals } from './m5-policy.mjs';
 import {
   materializeCitationSourcePair,
   normalizeCitationUrl,
@@ -58,8 +59,8 @@ export function planAnswerCycle(plan) {
   }
   if (plan.purpose !== 'exploratory') {
     const ordinals = plan.samples.map((sample) => sample.ordinal).sort();
-    if (ordinals.join(',') !== '1,2,3') {
-      throw new AnswerCycleError('SAMPLE_NOT_INDEPENDENT', '正式 plan 必须固定三个 ordinal');
+    if (ordinals.join(',') !== expectedFormalOrdinals(plan.profile.data.sampling_count).join(',')) {
+      throw new AnswerCycleError('SAMPLE_NOT_INDEPENDENT', '正式 plan 必须固定两个 ordinal');
     }
   }
   for (const sample of plan.samples) {

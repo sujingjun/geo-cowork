@@ -15,12 +15,12 @@ import { validateAnswerWorkspace } from '../plugins/geo-expert/scripts/lib/answe
 import { readMarkdownObject } from '../plugins/geo-expert/scripts/lib/object-contract.mjs';
 import { m5FixturePlan, m5ReadyWorkspace } from './helpers/m5-fixtures.mjs';
 
-test('recorded Fixture 保留三 slot、终态与 create-only raw checksum', async () => {
+test('recorded Fixture 保留两个 slot、终态与 create-only raw checksum', async () => {
   const root = await m5ReadyWorkspace();
   const plan = m5FixturePlan();
   const result = await collectFixtureCycle({ workspace: root, plan });
-  assert.equal(result.samples.length, 3);
-  assert.deepEqual(result.samples.map((item) => item.outcome), ['success', 'refusal', 'timeout']);
+  assert.equal(result.samples.length, 2);
+  assert.deepEqual(result.samples.map((item) => item.outcome), ['success', 'refusal']);
 
   const sample = await readMarkdownObject(
     path.join(root, 'cycles/m5/samples/smp-test-001.md'),
@@ -31,7 +31,7 @@ test('recorded Fixture 保留三 slot、终态与 create-only raw checksum', asy
   const before = await readFile(answerPath, 'utf8');
 
   const repeated = await collectFixtureCycle({ workspace: root, plan });
-  assert.equal(repeated.samples.length, 3);
+  assert.equal(repeated.samples.length, 2);
   assert.equal(await readFile(answerPath, 'utf8'), before);
 
   await writeFile(path.join(root, 'fixtures/m5/slot-1-answer.txt'), 'changed fixture bytes\n');
@@ -57,7 +57,7 @@ test('Sample outcome 与 artifact 门拒绝缺 answer、日志及敏感输入', 
     (error) => error.code === 'RAW_ARTIFACT_REQUIRED',
   );
 
-  const sensitive = structuredClone(plan.samples[2]);
+  const sensitive = structuredClone(plan.samples[1]);
   sensitive.id = 'SMP-TEST-098';
   sensitive.path = 'cycles/m5/samples/smp-test-098.md';
   sensitive.cookie = 'forbidden-secret-value';
@@ -73,7 +73,7 @@ test('no_result、challenge、cancelled 与 system_failure 均作为独立终态
     const root = await m5ReadyWorkspace();
     const plan = m5FixturePlan();
     await initializeAnswerRun({ workspace: root, plan });
-    const sample = structuredClone(plan.samples[2]);
+    const sample = structuredClone(plan.samples[1]);
     sample.id = `SMP-TEST-20${index}`;
     sample.path = `cycles/m5/samples/smp-test-20${index}.md`;
     sample.outcome = outcome;
@@ -100,7 +100,7 @@ test('cancelled Sample 缺少取消来源与已完成步骤时拒绝', async () 
   const root = await m5ReadyWorkspace();
   const plan = m5FixturePlan();
   await initializeAnswerRun({ workspace: root, plan });
-  const cancelled = structuredClone(plan.samples[2]);
+  const cancelled = structuredClone(plan.samples[1]);
   cancelled.id = 'SMP-TEST-250';
   cancelled.path = 'cycles/m5/samples/smp-test-250.md';
   cancelled.outcome = 'cancelled';

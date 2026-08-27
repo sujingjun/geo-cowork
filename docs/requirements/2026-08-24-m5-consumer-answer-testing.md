@@ -2,7 +2,7 @@
 title: M5 Consumer Answer Testing 与持续信源体系原始需求
 status: approved
 created: 2026-08-24
-updated: 2026-08-25
+updated: 2026-08-26
 source:
   - docs/plans/2026-08-23-geo-cowork-final-product-plan.md
   - docs/handoff/2026-08-24-m2-m4-integrated-optimization-handoff.md
@@ -11,6 +11,7 @@ source:
   - "2026-08-25 当前用户指令：持续维护信源体系，不需要冷启动导入；M5 必须设计 Playwright 与真实采集；文档合入 main，不进入实现"
   - "2026-08-25 当前用户指令：批准 M5 里程碑方案设计，并实施计划，完成目标"
   - "2026-08-25 当前用户指令：Playwright 使用最新版并全局安装；五个平台统一授权 Owner Google 登录身份，按真实用户隐私，本地 artifact 保留 1 年"
+  - "2026-08-26 当前用户指令：信源统一归档未分类，累计 100 个 Source 后批量分类；每平台改为两次独立人工采样；英文为主、中文可选且同对象语义一致；确认当前 MyyShop 定位并提供五个平台首轮结果 URL"
 scope: M5 正式消费者产品答案 Baseline/Retest、持续信源体系、Playwright collector 与真实采集设计
 ---
 
@@ -63,7 +64,8 @@ M5 必须按被引用页面及其内容生产主体分类，不允许仅凭域�
 
 - 版本化冻结 platform、product entry、region、language、login state、conversation state、web search state、可见 model/mode、Query template version、sampling count、time window、device/browser 和 `unknown`。
 - 正式样本只来自消费者 UI；API、搜索摘要、第三方转述与探索性样本必须分开。
-- 每个平台 × 每条 formal Query 固定三个独立 sample slot；每个 slot 使用新会话上下文，保留成功、拒答、超时、无结果、challenge、取消和系统失败。
+- 每个平台 × 每条 formal Query 固定两个独立 sample slot；每个 slot 使用新会话上下文，保留成功、拒答、超时、无结果、challenge、取消和系统失败。
+- 英文 `en-US` 是首期正式主线；中文 `zh-CN` 只作为可选辅助采样。同一品牌对象的中英文 Query 必须绑定同一语义合同，分别保存、分别聚合，不把语言差异伪装为平台变化。
 - 自动化不稳定时允许人工 fallback，但必须记录采集方式；人工与自动采样不能静默视为完全可比。
 - Playwright base 必须设计隔离 browser context、入口 allowlist、版本化 selector、终态识别、答案区域截图/DOM 最小化、timeout/challenge 停门、artifact checksum 与显式失败；平台 adapter 只处理平台差异，不决定采样语义。
 
@@ -83,13 +85,14 @@ Query → Platform → Intent → Citation Domain → Source Identity → Source
 
 - Citation Observation 保存每次引用出现的位置、规范化 URL、域名和 `source_ref`；同一回答中的重复引用不从 raw 中删除。
 - M5 复用 M2 `Source` registry 持久化域名、发布者、频道或页面身份；新 Source 必须引用首次真实 Citation Observation，不能由榜单或人工域名清单预填。
-- Source Classification 独立于 Citation Observation，并绑定 `source_ref`；新发现来源先进入 candidate classification，可在不修改 raw 或 Source identity 的情况下新增分类 revision。
+- Source Classification 独立于 Citation Observation，并绑定 `source_ref`。当前阶段新发现 Source 只进入 `archived_unclassified` 队列；当 Workspace 中被 M5 Citation 引用的唯一 Source 达到 100 个后，才启动统一批量分类 Task。
 - Claim Support Review 独立判断某 Citation 是否支持具体 Claim；来源类别不能代替支撑判断。
 - Answer Review 绑定 raw sample checksum 与 rubric version；Rubric 更新时创建新 Review，不回写 Sample。
 
 ### 4.4 持续信源维护
 
-- 每次获授权 Run 将 Citation 匹配到既有 Source；无法匹配时，以可审计 identity key 创建新 Source 和 candidate Source Classification。
+- 每次获授权 Run 将 Citation 匹配到既有 Source；无法匹配时，以可审计 identity key 创建新 Source。采集阶段不创建或自动推进 Source Classification。
+- 100 条阈值按当前 Workspace 中被非 superseded M5 Citation 引用的唯一 `source_ref` 计数，不按 Citation occurrence、URL 变体或域名数量计数。
 - 系统从不可变 Observation 派生 first seen、last seen、出现平台、Query Cluster、时间窗、observation count，以及 new/returning/unresolved/reviewed 状态；不得回写旧 Observation。
 - `Source.status:active/stale/deprecated` 只表示 registry 生命周期，不表示可信、已批准或支持 Claim；分类和 Claim Support 分别复核。
 - 外部综合榜、静态域名表和历史排名不导入 Workspace，不生成 Source、Classification、Citation 或聚合输入。
@@ -117,9 +120,9 @@ Query → Platform → Intent → Citation Domain → Source Identity → Source
 
 1. M5 Requirement、PRD、Architecture、Spec 0006、Plan 和 Task 职责分离，并由 Owner 明确批准进入本地离线实现。
 2. 合成 `.invalid`/本地录制 Fixture 可证明 Profile、Sample、Citation、分类、Claim 支撑、Review 和聚合 Schema 的正常/非法/边界行为。
-3. 三个 sample slot 全部保留；拒答、超时和无结果进入聚合的状态计数，不被成功重试覆盖或删除。
+3. 两个 sample slot 全部保留；拒答、超时和无结果进入聚合的状态计数，不被成功重试覆盖或删除。
 4. 同一 raw sample 可由新 Rubric 产生独立 Review，raw checksum 和旧 Review 字节不变。
-5. 五层信源主/副标签、域名/发布者/频道身份、candidate→reviewed 分类、无 Citation、重复引用和 Claim 粒度规则可确定性复验。
+5. Source 归档、唯一 Source 计数、100 条阈值、批量分类准备状态、无 Citation、重复引用和 Claim 粒度规则可确定性复验；五层分类在阈值达到后的独立 Task 验收。
 6. 五项指标在行业、平台、Query Cluster 和时间窗维度有明确分子、分母、排序和不可计算条件。
 7. comparability 的 `true/partial/false` 由冻结字段决定；`unknown` 不作为通配符。
 8. crash、timeout、stale lock、重复启动、取消和 supersede 的本地故障测试证明 Run 收敛且 artifact 不覆盖。
@@ -132,7 +135,7 @@ Query → Platform → Intent → Citation Domain → Source Identity → Source
 
 - Markdown 是 canonical 业务事实；indexes 只读且可重建；raw Run artifacts create-only。
 - Node.js 继续是确定性内核；不新增数据库、队列或第四套 Agent Runtime。
-- Host/人工负责语义分类与 Claim 支撑判断；Tool 只校验、采集显式目标和计算确定性指标。
+- Host/人工负责语义分类与 Claim 支撑判断；Tool 只校验、采集显式目标和计算确定性指标。阈值未达到前不得为了补齐指标提前分类。
 - 不把 API 样本、探索性样本或平台 Observation 当企业事实 Evidence。
 - 不从少量回答、Citation 变化或域名排名推导因果、产品战略或业务效果。
 - 本次授权 M5 SDD、T02—T08、本机全局 `playwright@1.62.1`、五个平台 Owner-controlled Google 登录角色、隐私最小化与本地 artifact 365 天保留；不保存账号标识或凭据。平台 Terms/robots 禁止或未明确允许的真实 UI 自动采集继续 blocked；不下载新浏览器、不写外部业务系统、不 commit、push、PR、release 或 deploy。
@@ -149,4 +152,5 @@ Query → Platform → Intent → Citation Domain → Source Identity → Source
 
 - 五个平台在官方 Terms/robots 下能否取得自动采集书面许可；
 - Owner 在用户控制浏览器中完成登录后的实际登录态、地区、语言、模型/模式与人工 fallback 可用性；
-- 何时授权真实 Baseline，以及何时具备 M4 Publication 后 Retest 资格。
+- 五个平台第 2 个独立英文 Sample 的具体采集时间与结果 URL；在第二槽完成前各平台 Baseline 保持 `waiting_human`。
+- 何时具备 M4 Publication 后 Retest 资格。

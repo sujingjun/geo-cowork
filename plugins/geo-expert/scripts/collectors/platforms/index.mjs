@@ -65,9 +65,9 @@ export function assertPlatformAutomationAllowed(adapter) {
 
 export function assertPlatformManualAllowed(adapter, { manualSourceKind } = {}) {
   validateAdapter(adapter);
-  const exportOnly = adapter.manual_fallback.mode === 'user_supplied_export_only';
+  const allowedKinds = adapter.manual_fallback.allowed_source_kinds;
   if (!adapter.manual_fallback.allowed
-      || (exportOnly && manualSourceKind !== 'user_supplied_export')) {
+      || (Array.isArray(allowedKinds) && !allowedKinds.includes(manualSourceKind))) {
     throw new PlatformAdapterError(
       'PLATFORM_MANUAL_COLLECTION_BLOCKED',
       '平台 manual collection 未获允许',

@@ -89,4 +89,4 @@ npm run prepare:m4-public-inputs -- --workspace <workspace> --summary <workspace
 
 ## 边界
 
-本仓库不做：云端 SaaS、MCP 服务、数据库、自动发布、自动审批、CRM 写入、社区运营或无条款许可的消费者 UI 采集。M4 Site/Research 诊断仍只读取显式本地 manifest/snapshot；M5 的 Playwright base 只通过 loopback fixture 验证，五个平台 guard adapter 会以 `PLATFORM_TERMS_BLOCKED` 阻止自动执行。MyyShop Owner 的账号授权不覆盖平台 Terms、robots、challenge 或安全控制。未经当次明确授权，任何 Agent 不 commit、不 push、不创建 PR。
+本仓库不做：云端 SaaS、MCP 服务、数据库、自动发布、自动审批、CRM 写入、社区运营或无条款许可的消费者 UI 自动采集。M4 Site/Research 诊断仍只读取显式本地 manifest/snapshot；M5 的 Playwright base 只通过 loopback fixture 验证，五个平台 guard adapter 会以 `PLATFORM_TERMS_BLOCKED` 阻止自动执行。Owner 可提供 exact result URL 进入受限 manual Sample；这不授权 Agent 自动提交 Query、读取账号存储或扩大浏览范围。未经当次明确授权，任何 Agent 不 commit、不 push、不创建 PR。

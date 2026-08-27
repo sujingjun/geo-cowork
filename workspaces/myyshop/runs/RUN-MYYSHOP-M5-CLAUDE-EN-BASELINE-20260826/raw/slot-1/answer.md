@@ -1,0 +1,5 @@
+MyyShop was originally launched in 2020 by DHgate, a major B2B cross-border e-commerce marketplace in China, as a SaaS platform for decentralized cross-border e-commerce focused on online store creation and dropshipping services for social-commerce influencers and private-domain traffic monetizers. The idea was to let people with social followings build online stores or connect products to existing stores, with MyyShop handling supplier vetting, AI-based product recommendations, logistics, and customer support.
+
+The platform appears to have evolved since then. Today, MyyShop describes itself as an AI-driven global creator marketing platform connecting creators with brand collaborations, letting them monetize content with zero platform fees. It is open to creators at any stage, even with zero followers, and supports content across TikTok, Instagram, YouTube, Reddit, Facebook, and X.
+
+So in short: it started as a dropshipping/store-building tool tied to DHgate, and has since positioned itself more as an influencer/creator marketing marketplace pairing brands with content creators.

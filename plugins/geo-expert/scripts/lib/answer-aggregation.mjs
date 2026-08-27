@@ -190,12 +190,13 @@ export function sourceVolatility({
   return { value, reason: null };
 }
 
-function assertFormalSlots(samples, purpose) {
+function assertFormalSlots(samples, purpose, expectedCount) {
   if (purpose === 'exploratory') return;
-  if (samples.length !== 3
-      || samples.map((sample) => sample.ordinal).sort().join(',') !== '1,2,3'
-      || new Set(samples.map((sample) => sample.slot_key)).size !== 3) {
-    throw new AnswerAggregationError('SAMPLE_NOT_INDEPENDENT', '正式 Aggregation 必须包含三个独立 slot');
+  const expectedOrdinals = Array.from({ length: expectedCount }, (_value, index) => index + 1);
+  if (samples.length !== expectedCount
+      || samples.map((sample) => sample.ordinal).sort().join(',') !== expectedOrdinals.join(',')
+      || new Set(samples.map((sample) => sample.slot_key)).size !== expectedCount) {
+    throw new AnswerAggregationError('SAMPLE_NOT_INDEPENDENT', '正式 Aggregation 必须包含两个独立 slot');
   }
 }
 
@@ -205,7 +206,9 @@ export async function materializeAnswerAggregation({ workspace, plan, now }) {
   if (samples.some((sample) => !sample || sample.record_type !== 'answer_sample')) {
     throw new AnswerAggregationError('ANALYSIS_CHAIN_INCOMPLETE', 'Aggregation 缺少 Sample');
   }
-  assertFormalSlots(samples, plan.purpose);
+  const profile = graph.byId.get(plan.profile.data.id)?.data;
+  if (!profile) throw new AnswerAggregationError('PROFILE_NOT_FROZEN', 'Aggregation 缺少 Profile');
+  assertFormalSlots(samples, plan.purpose, profile.sampling_count);
   const sampleIds = new Set(samples.map((sample) => sample.id));
   const citations = currentObjects(graph, 'citation_observation')
     .map(({ data }) => data)
@@ -224,13 +227,16 @@ export async function materializeAnswerAggregation({ workspace, plan, now }) {
   const reviews = currentObjects(graph, 'answer_review')
     .filter(({ data }) => sampleIds.has(data.sample_ref));
   const reviewBySample = new Map(reviews.map(({ data }) => [data.sample_ref, data]));
-  if (units.some((unit) => !classificationsBySource.has(unit.source_ref)
-      || !supportByCitation.has(unit.id))
+  const sourceById = new Map(sources.map(({ data }) => [data.id, data]));
+  const classificationDeferred = (sourceId) => [
+    'archived_unclassified', 'batch_ready',
+  ].includes(sourceById.get(sourceId)?.classification_queue?.status);
+  if (units.some((unit) => !classificationDeferred(unit.source_ref)
+      && (!classificationsBySource.has(unit.source_ref) || !supportByCitation.has(unit.id)))
       || samples.some((sample) => !reviewBySample.has(sample.id))) {
     throw new AnswerAggregationError('ANALYSIS_CHAIN_INCOMPLETE', 'Aggregation 分析链不完整');
   }
 
-  const profile = graph.byId.get(plan.profile.data.id)?.data;
   let comparability = compareCollectorProfiles(profile, profile);
   const domains = domainMetrics(units);
   let volatility = { value: null, reason: 'NO_COMPARISON_BASELINE' };
@@ -270,7 +276,7 @@ export async function materializeAnswerAggregation({ workspace, plan, now }) {
       : 'new';
   });
   const metrics = {
-    expected_sample_count: plan.purpose === 'exploratory' ? samples.length : 3,
+    expected_sample_count: plan.purpose === 'exploratory' ? samples.length : profile.sampling_count,
     selected_sample_count: samples.length,
     outcome_counts: outcomeCounts(samples),
     system_failure_attempt_count: samples.filter((sample) => sample.outcome === 'system_failure').length,
@@ -293,6 +299,10 @@ export async function materializeAnswerAggregation({ workspace, plan, now }) {
       reviewed: classifications.filter(({ data }) => data.status === 'reviewed').length,
       unresolved: classifications.filter(({ data }) =>
         data.primary_source_type === 'unknown' || data.review_required).length,
+      archived_unclassified: sources.filter(({ data }) =>
+        ['archived_unclassified', 'batch_ready'].includes(
+          data.classification_queue?.status,
+        )).length,
     },
     review_required_count: [
       ...classifications.map(({ data }) => data),

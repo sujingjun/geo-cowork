@@ -1,0 +1,437 @@
+{
+  "authorization_ref": "workspace://cycles/preparation/decisions/2026-08-26-m5-two-slot-source-batch-and-positioning-approved.md",
+  "classification_policy": {
+    "decision_ref": "workspace://cycles/preparation/decisions/2026-08-26-m5-two-slot-source-batch-and-positioning-approved.md",
+    "mode": "batch_at_source_threshold",
+    "threshold": 100
+  },
+  "collector_contract": {
+    "collector_version": "manual-chrome-result-v2",
+    "schema_version": "2.0.0",
+    "tool_policy_version": "m5-two-slot-source-batch-v1"
+  },
+  "goal_refs": [
+    "GOAL-MYYSHOP-DEFINITION-001"
+  ],
+  "input_versions": {
+    "CLM-MYYSHOP-AUDIENCE-001": "1.0.1",
+    "CLM-MYYSHOP-LIFECYCLE-SERVICE-001": "1.0.1",
+    "CPF-MYYSHOP-CHATGPT-EN-BASELINE-20260826": "1.0.0",
+    "GOAL-MYYSHOP-DEFINITION-001": "1.0.1",
+    "KR-MYYSHOP-DEFINITION-001": "1.0.1",
+    "Q-MYYSHOP-WHAT-IS-EN-BASELINE-001": "1.0.0",
+    "QS-MYYSHOP-DEFINITION-EN-BASELINE-001": "1.0.0"
+  },
+  "knowledge_release_versions": [
+    {
+      "ref": "KR-MYYSHOP-DEFINITION-001",
+      "version": "1.0.1"
+    }
+  ],
+  "language_contract": {
+    "object_key": "myyshop-brand-definition",
+    "primary_language": "en-US",
+    "primary_query_ref": "Q-MYYSHOP-WHAT-IS-EN-BASELINE-001",
+    "role": "primary",
+    "semantic_contract_ref": "workspace://cycles/preparation/decisions/2026-08-26-m5-two-slot-source-batch-and-positioning-approved.md"
+  },
+  "manual_source": {
+    "capture_surface": "chrome_extension",
+    "kind": "user_supplied_result_url",
+    "result_url": "https://chatgpt.com/share/6a8ee261-50f0-83ea-a281-dfa7608c0f84"
+  },
+  "profile": {
+    "data": {
+      "approval": {
+        "approved_at": "2026-08-26T19:10:37+08:00",
+        "approved_by": "MyyShop Owner",
+        "decision_ref": "workspace://cycles/preparation/decisions/2026-08-26-m5-two-slot-source-batch-and-positioning-approved.md"
+      },
+      "collection_method": "manual",
+      "conversation_state": "new",
+      "created_at": "2026-08-26T19:10:37+08:00",
+      "device": {
+        "browser": "Chrome with user-approved extension",
+        "class": "desktop",
+        "os": "macOS",
+        "viewport": "unknown"
+      },
+      "id": "CPF-MYYSHOP-CHATGPT-EN-BASELINE-20260826",
+      "language": "en-US",
+      "language_contract": {
+        "object_key": "myyshop-brand-definition",
+        "primary_language": "en-US",
+        "primary_query_ref": "Q-MYYSHOP-WHAT-IS-EN-BASELINE-001",
+        "role": "primary",
+        "semantic_contract_ref": "workspace://cycles/preparation/decisions/2026-08-26-m5-two-slot-source-batch-and-positioning-approved.md"
+      },
+      "login_state": "unknown",
+      "model_mode": "unknown",
+      "platform": "chatgpt",
+      "product_entry": "https://chatgpt.com/",
+      "profile_fingerprint": "862f412e543360f918bf4104c56e97b366fd318f7f6c8bb33de7111afdbe349b",
+      "query_template_version": "1.0.0",
+      "record_type": "collector_profile",
+      "region": "unknown",
+      "sampling_count": 2,
+      "status": "frozen",
+      "time_window": {
+        "ends_at": "2026-08-31T23:59:59+08:00",
+        "id": "TW-MYYSHOP-M5-EN-BASELINE-20260826",
+        "starts_at": "2026-08-26T00:00:00+08:00"
+      },
+      "title": "chatgpt English two-slot manual baseline profile",
+      "updated_at": "2026-08-26T19:10:37+08:00",
+      "version": "1.0.0",
+      "web_search_state": "on"
+    },
+    "path": "cycles/m5/profiles/cpf-myyshop-chatgpt-en-baseline-20260826.md"
+  },
+  "purpose": "baseline",
+  "query_set_versions": [
+    {
+      "ref": "QS-MYYSHOP-DEFINITION-EN-BASELINE-001",
+      "version": "1.0.0"
+    }
+  ],
+  "query_version": {
+    "language": "en-US",
+    "ref": "Q-MYYSHOP-WHAT-IS-EN-BASELINE-001",
+    "version": "1.0.0"
+  },
+  "run": {
+    "id": "RUN-MYYSHOP-M5-CHATGPT-EN-BASELINE-20260826"
+  },
+  "sample": {
+    "answer_output_path": "raw/slot-2/answer.md",
+    "captured_at": "2026-08-26T20:59:39+08:00",
+    "citations": [
+      {
+        "anchor_or_context": "ChatGPT slot 2 source panel: MyyShop homepage.",
+        "existing_source_ref": "SRC-MYYSHOP-WEB-HOMEPAGE-001",
+        "id": "CIT-MYYSHOP-CHATGPT-EN-BASELINE-S2-001",
+        "occurrence_index": 1,
+        "path": "cycles/m5/citations/cit-myyshop-chatgpt-en-baseline-s2-001.md",
+        "position": {
+          "kind": "ui_order",
+          "order": 1
+        },
+        "url_raw": "https://www.myyshop.com/?utm_source=chatgpt.com"
+      },
+      {
+        "anchor_or_context": "ChatGPT slot 2 source panel: MyyShop About page.",
+        "existing_source_ref": "SRC-MYYSHOP-WEB-ABOUT-001",
+        "id": "CIT-MYYSHOP-CHATGPT-EN-BASELINE-S2-002",
+        "occurrence_index": 2,
+        "path": "cycles/m5/citations/cit-myyshop-chatgpt-en-baseline-s2-002.md",
+        "position": {
+          "kind": "ui_order",
+          "order": 2
+        },
+        "url_raw": "https://www.myyshop.com/about-us?utm_source=chatgpt.com"
+      },
+      {
+        "anchor_or_context": "ChatGPT slot 2 source panel: Apple App Store.",
+        "existing_source_ref": "SRC-MYYSHOP-CLAUDE-US-APP-STORE-001",
+        "id": "CIT-MYYSHOP-CHATGPT-EN-BASELINE-S2-003",
+        "occurrence_index": 3,
+        "path": "cycles/m5/citations/cit-myyshop-chatgpt-en-baseline-s2-003.md",
+        "position": {
+          "kind": "ui_order",
+          "order": 3
+        },
+        "url_raw": "https://apps.apple.com/us/app/myyshop/id6449818392?utm_source=chatgpt.com"
+      },
+      {
+        "anchor_or_context": "ChatGPT slot 2 source panel: MyyShop no-commission policy article.",
+        "id": "CIT-MYYSHOP-CHATGPT-EN-BASELINE-S2-004",
+        "occurrence_index": 4,
+        "path": "cycles/m5/citations/cit-myyshop-chatgpt-en-baseline-s2-004.md",
+        "position": {
+          "kind": "ui_order",
+          "order": 4
+        },
+        "source": {
+          "id": "SRC-MYYSHOP-NO-COMMISSION-BLOG-001",
+          "identity": {
+            "citation_domain": "myyshop.com",
+            "host_platform": "none",
+            "key": "page:https://www.myyshop.com/blog/myyshop-no-commission-policy",
+            "level": "page",
+            "publisher_name": "MyyShop"
+          },
+          "locator": "https://www.myyshop.com/blog/myyshop-no-commission-policy",
+          "name": "MyyShop no-commission policy article",
+          "path": "evidence/sources/src-myyshop-no-commission-blog-001.md"
+        },
+        "url_raw": "https://www.myyshop.com/blog/myyshop-no-commission-policy?utm_source=chatgpt.com"
+      },
+      {
+        "anchor_or_context": "ChatGPT slot 2 source panel: MyyShop What's New.",
+        "existing_source_ref": "SRC-MYYSHOP-WHATSNEW-001",
+        "id": "CIT-MYYSHOP-CHATGPT-EN-BASELINE-S2-005",
+        "occurrence_index": 5,
+        "path": "cycles/m5/citations/cit-myyshop-chatgpt-en-baseline-s2-005.md",
+        "position": {
+          "kind": "ui_order",
+          "order": 5
+        },
+        "url_raw": "https://whatsnew.myyshop.com/?utm_source=chatgpt.com"
+      },
+      {
+        "anchor_or_context": "ChatGPT slot 2 source panel: WBOC repost of CPM announcement.",
+        "id": "CIT-MYYSHOP-CHATGPT-EN-BASELINE-S2-006",
+        "occurrence_index": 6,
+        "path": "cycles/m5/citations/cit-myyshop-chatgpt-en-baseline-s2-006.md",
+        "position": {
+          "kind": "ui_order",
+          "order": 6
+        },
+        "source": {
+          "id": "SRC-MYYSHOP-WBOC-CPM-001",
+          "identity": {
+            "citation_domain": "wboc.com",
+            "host_platform": "none",
+            "key": "page:https://www.wboc.com/online_features/press_releases/myyshop-launches-paid-for-every-view-tiktok-cpm-model-to-give-creators-faster-more-transparent/article_d46a41e2-6cfc-59c9-afe7-02412e7a5875.html",
+            "level": "page",
+            "publisher_name": "WBOC"
+          },
+          "locator": "https://www.wboc.com/online_features/press_releases/myyshop-launches-paid-for-every-view-tiktok-cpm-model-to-give-creators-faster-more-transparent/article_d46a41e2-6cfc-59c9-afe7-02412e7a5875.html",
+          "name": "WBOC MyyShop CPM announcement",
+          "path": "evidence/sources/src-myyshop-wboc-cpm-001.md"
+        },
+        "url_raw": "https://www.wboc.com/online_features/press_releases/myyshop-launches-paid-for-every-view-tiktok-cpm-model-to-give-creators-faster-more-transparent/article_d46a41e2-6cfc-59c9-afe7-02412e7a5875.html?utm_source=chatgpt.com"
+      },
+      {
+        "anchor_or_context": "ChatGPT slot 2 source panel: MyyShop Linktree.",
+        "existing_source_ref": "SRC-MYYSHOP-LINKTREE-001",
+        "id": "CIT-MYYSHOP-CHATGPT-EN-BASELINE-S2-007",
+        "occurrence_index": 7,
+        "path": "cycles/m5/citations/cit-myyshop-chatgpt-en-baseline-s2-007.md",
+        "position": {
+          "kind": "ui_order",
+          "order": 7
+        },
+        "url_raw": "https://linktr.ee/myyshopcreators?utm_source=chatgpt.com"
+      },
+      {
+        "anchor_or_context": "ChatGPT slot 2 repeated WBOC source.",
+        "existing_source_ref": "SRC-MYYSHOP-WBOC-CPM-001",
+        "id": "CIT-MYYSHOP-CHATGPT-EN-BASELINE-S2-008",
+        "occurrence_index": 8,
+        "path": "cycles/m5/citations/cit-myyshop-chatgpt-en-baseline-s2-008.md",
+        "position": {
+          "kind": "ui_order",
+          "order": 8
+        },
+        "url_raw": "https://www.wboc.com/online_features/press_releases/myyshop-launches-paid-for-every-view-tiktok-cpm-model-to-give-creators-faster-more-transparent/article_d46a41e2-6cfc-59c9-afe7-02412e7a5875.html?utm_source=chatgpt.com"
+      },
+      {
+        "anchor_or_context": "ChatGPT slot 2 source panel: RantiEthnicity article.",
+        "existing_source_ref": "SRC-MYYSHOP-RANTIETHNICITY-001",
+        "id": "CIT-MYYSHOP-CHATGPT-EN-BASELINE-S2-009",
+        "occurrence_index": 9,
+        "path": "cycles/m5/citations/cit-myyshop-chatgpt-en-baseline-s2-009.md",
+        "position": {
+          "kind": "ui_order",
+          "order": 9
+        },
+        "url_raw": "https://rantiethnicity.com/from-influence-to-infrastructure-how-myyshop-is-building-the/?utm_source=chatgpt.com"
+      },
+      {
+        "anchor_or_context": "ChatGPT slot 2 repeated App Store source.",
+        "existing_source_ref": "SRC-MYYSHOP-CLAUDE-US-APP-STORE-001",
+        "id": "CIT-MYYSHOP-CHATGPT-EN-BASELINE-S2-010",
+        "occurrence_index": 10,
+        "path": "cycles/m5/citations/cit-myyshop-chatgpt-en-baseline-s2-010.md",
+        "position": {
+          "kind": "ui_order",
+          "order": 10
+        },
+        "url_raw": "https://apps.apple.com/us/app/myyshop/id6449818392?utm_source=chatgpt.com"
+      },
+      {
+        "anchor_or_context": "ChatGPT slot 2 App Store tv URL variant.",
+        "existing_source_ref": "SRC-MYYSHOP-CLAUDE-US-APP-STORE-001",
+        "id": "CIT-MYYSHOP-CHATGPT-EN-BASELINE-S2-011",
+        "occurrence_index": 11,
+        "path": "cycles/m5/citations/cit-myyshop-chatgpt-en-baseline-s2-011.md",
+        "position": {
+          "kind": "ui_order",
+          "order": 11
+        },
+        "url_raw": "https://apps.apple.com/us/app/myyshop/id6449818392?platform=tv&utm_source=chatgpt.com"
+      },
+      {
+        "anchor_or_context": "ChatGPT slot 2 App Store vision URL variant.",
+        "existing_source_ref": "SRC-MYYSHOP-CLAUDE-US-APP-STORE-001",
+        "id": "CIT-MYYSHOP-CHATGPT-EN-BASELINE-S2-012",
+        "occurrence_index": 12,
+        "path": "cycles/m5/citations/cit-myyshop-chatgpt-en-baseline-s2-012.md",
+        "position": {
+          "kind": "ui_order",
+          "order": 12
+        },
+        "url_raw": "https://apps.apple.com/us/app/myyshop/id6449818392?platform=vision&utm_source=chatgpt.com"
+      },
+      {
+        "anchor_or_context": "ChatGPT slot 2 App Store Cyprus URL variant.",
+        "existing_source_ref": "SRC-MYYSHOP-CLAUDE-US-APP-STORE-001",
+        "id": "CIT-MYYSHOP-CHATGPT-EN-BASELINE-S2-013",
+        "occurrence_index": 13,
+        "path": "cycles/m5/citations/cit-myyshop-chatgpt-en-baseline-s2-013.md",
+        "position": {
+          "kind": "ui_order",
+          "order": 13
+        },
+        "url_raw": "https://apps.apple.com/cy/app/myyshop/id6449818392?utm_source=chatgpt.com"
+      },
+      {
+        "anchor_or_context": "ChatGPT slot 2 App Store watch URL variant.",
+        "existing_source_ref": "SRC-MYYSHOP-CLAUDE-US-APP-STORE-001",
+        "id": "CIT-MYYSHOP-CHATGPT-EN-BASELINE-S2-014",
+        "occurrence_index": 14,
+        "path": "cycles/m5/citations/cit-myyshop-chatgpt-en-baseline-s2-014.md",
+        "position": {
+          "kind": "ui_order",
+          "order": 14
+        },
+        "url_raw": "https://apps.apple.com/us/app/myyshop/id6449818392?platform=watch&utm_source=chatgpt.com"
+      },
+      {
+        "anchor_or_context": "ChatGPT slot 2 App Store Malaysia URL variant.",
+        "existing_source_ref": "SRC-MYYSHOP-CLAUDE-US-APP-STORE-001",
+        "id": "CIT-MYYSHOP-CHATGPT-EN-BASELINE-S2-015",
+        "occurrence_index": 15,
+        "path": "cycles/m5/citations/cit-myyshop-chatgpt-en-baseline-s2-015.md",
+        "position": {
+          "kind": "ui_order",
+          "order": 15
+        },
+        "url_raw": "https://apps.apple.com/my/app/myyshop/id6449818392?l=ms&platform=watch&utm_source=chatgpt.com"
+      },
+      {
+        "anchor_or_context": "ChatGPT slot 2 App Store Macau URL variant.",
+        "existing_source_ref": "SRC-MYYSHOP-CLAUDE-US-APP-STORE-001",
+        "id": "CIT-MYYSHOP-CHATGPT-EN-BASELINE-S2-016",
+        "occurrence_index": 16,
+        "path": "cycles/m5/citations/cit-myyshop-chatgpt-en-baseline-s2-016.md",
+        "position": {
+          "kind": "ui_order",
+          "order": 16
+        },
+        "url_raw": "https://apps.apple.com/mo/app/myyshop/id6449818392?l=en-GB&utm_source=chatgpt.com"
+      },
+      {
+        "anchor_or_context": "ChatGPT slot 2 source panel: MyyShop newsroom.",
+        "id": "CIT-MYYSHOP-CHATGPT-EN-BASELINE-S2-017",
+        "occurrence_index": 17,
+        "path": "cycles/m5/citations/cit-myyshop-chatgpt-en-baseline-s2-017.md",
+        "position": {
+          "kind": "ui_order",
+          "order": 17
+        },
+        "source": {
+          "id": "SRC-MYYSHOP-NEWSROOM-001",
+          "identity": {
+            "citation_domain": "newsroom.myyshop.com",
+            "host_platform": "none",
+            "key": "page:https://newsroom.myyshop.com/",
+            "level": "page",
+            "publisher_name": "MyyShop"
+          },
+          "locator": "https://newsroom.myyshop.com/",
+          "name": "MyyShop newsroom",
+          "path": "evidence/sources/src-myyshop-newsroom-001.md"
+        },
+        "url_raw": "https://newsroom.myyshop.com/?utm_source=chatgpt.com"
+      },
+      {
+        "anchor_or_context": "ChatGPT slot 2 homepage URL variant.",
+        "existing_source_ref": "SRC-MYYSHOP-WEB-HOMEPAGE-001",
+        "id": "CIT-MYYSHOP-CHATGPT-EN-BASELINE-S2-018",
+        "occurrence_index": 18,
+        "path": "cycles/m5/citations/cit-myyshop-chatgpt-en-baseline-s2-018.md",
+        "position": {
+          "kind": "ui_order",
+          "order": 18
+        },
+        "url_raw": "https://www.myyshop.com/?f=US%7C&utm_source=chatgpt.com"
+      },
+      {
+        "anchor_or_context": "ChatGPT slot 2 repeated no-commission article.",
+        "existing_source_ref": "SRC-MYYSHOP-NO-COMMISSION-BLOG-001",
+        "id": "CIT-MYYSHOP-CHATGPT-EN-BASELINE-S2-019",
+        "occurrence_index": 19,
+        "path": "cycles/m5/citations/cit-myyshop-chatgpt-en-baseline-s2-019.md",
+        "position": {
+          "kind": "ui_order",
+          "order": 19
+        },
+        "url_raw": "https://www.myyshop.com/blog/myyshop-no-commission-policy?utm_source=chatgpt.com"
+      },
+      {
+        "anchor_or_context": "ChatGPT slot 2 source panel: LINE SHOPPING MyyShop page.",
+        "id": "CIT-MYYSHOP-CHATGPT-EN-BASELINE-S2-020",
+        "occurrence_index": 20,
+        "path": "cycles/m5/citations/cit-myyshop-chatgpt-en-baseline-s2-020.md",
+        "position": {
+          "kind": "ui_order",
+          "order": 20
+        },
+        "source": {
+          "id": "SRC-MYYSHOP-LINE-SHOP-001",
+          "identity": {
+            "citation_domain": "shop.line.me",
+            "host_platform": "other",
+            "key": "page:https://shop.line.me/%40myyshop",
+            "level": "page",
+            "publisher_name": "unknown"
+          },
+          "locator": "https://shop.line.me/%40myyshop",
+          "name": "LINE SHOPPING MyyShop page",
+          "path": "evidence/sources/src-myyshop-line-shop-001.md"
+        },
+        "url_raw": "https://shop.line.me/%40myyshop?utm_source=chatgpt.com"
+      },
+      {
+        "anchor_or_context": "ChatGPT slot 2 source panel: LinkedIn MyyShop operations post.",
+        "id": "CIT-MYYSHOP-CHATGPT-EN-BASELINE-S2-021",
+        "occurrence_index": 21,
+        "path": "cycles/m5/citations/cit-myyshop-chatgpt-en-baseline-s2-021.md",
+        "position": {
+          "kind": "ui_order",
+          "order": 21
+        },
+        "source": {
+          "id": "SRC-MYYSHOP-LINKEDIN-US-OPERATIONS-POST-001",
+          "identity": {
+            "citation_domain": "linkedin.com",
+            "host_platform": "linkedin",
+            "key": "page:https://www.linkedin.com/posts/kenanheppe_im-excited-to-announce-that-as-of-november-activity-7412953828951556096-SVJk",
+            "level": "page",
+            "publisher_name": "unknown"
+          },
+          "locator": "https://www.linkedin.com/posts/kenanheppe_im-excited-to-announce-that-as-of-november-activity-7412953828951556096-SVJk",
+          "name": "LinkedIn MyyShop US operations post",
+          "path": "evidence/sources/src-myyshop-linkedin-us-operations-post-001.md"
+        },
+        "url_raw": "https://www.linkedin.com/posts/kenanheppe_im-excited-to-announce-that-as-of-november-activity-7412953828951556096-SVJk?utm_source=chatgpt.com"
+      }
+    ],
+    "id": "SMP-MYYSHOP-CHATGPT-EN-BASELINE-S2-20260826",
+    "log_output_path": "raw/slot-2/collector-log.json",
+    "ordinal": 2,
+    "outcome": "success",
+    "path": "cycles/m5/samples/smp-myyshop-chatgpt-en-baseline-s2-20260826.md"
+  },
+  "samples": [
+    {
+      "ordinal": 1
+    },
+    {
+      "ordinal": 2
+    }
+  ],
+  "schema_version": "m5-manual-baseline-plan-v2"
+}

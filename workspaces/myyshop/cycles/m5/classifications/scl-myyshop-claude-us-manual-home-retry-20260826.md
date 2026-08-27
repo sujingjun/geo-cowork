@@ -1,10 +1,10 @@
 ---
 id: SCL-MYYSHOP-CLAUDE-US-MANUAL-HOME-RETRY-20260826
 record_type: source_classification
-status: candidate
-version: 1.0.0
+status: superseded
+version: 1.0.1
 created_at: '2026-08-26T14:03:13+08:00'
-updated_at: '2026-08-26T14:03:13+08:00'
+updated_at: '2026-08-26T19:10:37+08:00'
 title: Classification SRC-MYYSHOP-WEB-HOMEPAGE-001
 source_ref: SRC-MYYSHOP-WEB-HOMEPAGE-001
 citation_refs:

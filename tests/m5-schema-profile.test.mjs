@@ -73,6 +73,6 @@ test('M5 全链对象生成七类 index，workspace profile 无错误', async ()
     'answer-reviews.json', 'answer-aggregations.json',
   ]) assert.ok(built.indexes.includes(name), name);
   const samples = JSON.parse(await readFile(path.join(root, 'indexes/answer-samples.json'), 'utf8'));
-  assert.equal(samples.objects.length, 3);
+  assert.equal(samples.objects.length, 2);
   await rm(root, { recursive: true });
 });

@@ -1,0 +1,11 @@
+{
+  "account_identifier_stored": false,
+  "capture_surface": "chrome_extension",
+  "collection_method": "manual",
+  "copied_by_user": true,
+  "credentials_stored": false,
+  "manual_source_kind": "user_supplied_result_url",
+  "operator_role": "MyyShop Owner",
+  "result_url": "https://gemini.google.com/app/d9268cd1f0666ca6",
+  "temporary_chat": false
+}

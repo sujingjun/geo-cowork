@@ -7,9 +7,9 @@
         "CIT-MYYSHOP-CHATGPT-MANUAL-ABOUT-20260825",
         "SRC-MYYSHOP-WEB-ABOUT-001"
       ],
-      "status": "candidate",
-      "updated_at": "2026-08-25T18:01:06+08:00",
-      "version": "1.0.0"
+      "status": "superseded",
+      "updated_at": "2026-08-26T19:10:37+08:00",
+      "version": "1.0.1"
     },
     {
       "id": "SCL-MYYSHOP-CHATGPT-MANUAL-HOME-20260825",
@@ -18,9 +18,9 @@
         "CIT-MYYSHOP-CHATGPT-MANUAL-HOME-20260825",
         "SRC-MYYSHOP-WEB-HOMEPAGE-001"
       ],
-      "status": "candidate",
-      "updated_at": "2026-08-25T18:01:06+08:00",
-      "version": "1.0.0"
+      "status": "superseded",
+      "updated_at": "2026-08-26T19:10:37+08:00",
+      "version": "1.0.1"
     },
     {
       "id": "SCL-MYYSHOP-CHATGPT-MANUAL-LINKEDIN-20260825",
@@ -29,9 +29,9 @@
         "CIT-MYYSHOP-CHATGPT-MANUAL-LINKEDIN-20260825",
         "SRC-MYYSHOP-LINKEDIN-COMPANY-001"
       ],
-      "status": "candidate",
-      "updated_at": "2026-08-25T18:01:06+08:00",
-      "version": "1.0.0"
+      "status": "superseded",
+      "updated_at": "2026-08-26T19:10:37+08:00",
+      "version": "1.0.1"
     },
     {
       "id": "SCL-MYYSHOP-CLAUDE-MANUAL-BAIDU-BAIKE-20260826",
@@ -40,9 +40,9 @@
         "CIT-MYYSHOP-CLAUDE-MANUAL-BAIDU-BAIKE-20260826",
         "SRC-MYYSHOP-GOOGLE-AI-BAIDU-BAIKE-001"
       ],
-      "status": "candidate",
-      "updated_at": "2026-08-26T13:41:14+08:00",
-      "version": "1.0.0"
+      "status": "superseded",
+      "updated_at": "2026-08-26T19:10:37+08:00",
+      "version": "1.0.1"
     },
     {
       "id": "SCL-MYYSHOP-CLAUDE-MANUAL-CIFNEWS-1-20260826",
@@ -51,9 +51,9 @@
         "CIT-MYYSHOP-CLAUDE-MANUAL-CIFNEWS-1-20260826",
         "SRC-MYYSHOP-CLAUDE-CIFNEWS-ARTICLE-001"
       ],
-      "status": "candidate",
-      "updated_at": "2026-08-26T13:41:14+08:00",
-      "version": "1.0.0"
+      "status": "superseded",
+      "updated_at": "2026-08-26T19:10:37+08:00",
+      "version": "1.0.1"
     },
     {
       "id": "SCL-MYYSHOP-CLAUDE-MANUAL-CIFNEWS-2-20260826",
@@ -62,9 +62,9 @@
         "CIT-MYYSHOP-CLAUDE-MANUAL-CIFNEWS-2-20260826",
         "SRC-MYYSHOP-CLAUDE-CIFNEWS-ARTICLE-001"
       ],
-      "status": "candidate",
-      "updated_at": "2026-08-26T13:41:14+08:00",
-      "version": "1.0.0"
+      "status": "superseded",
+      "updated_at": "2026-08-26T19:10:37+08:00",
+      "version": "1.0.1"
     },
     {
       "id": "SCL-MYYSHOP-CLAUDE-MANUAL-CIFNEWS-3-20260826",
@@ -73,9 +73,9 @@
         "CIT-MYYSHOP-CLAUDE-MANUAL-CIFNEWS-3-20260826",
         "SRC-MYYSHOP-CLAUDE-CIFNEWS-ARTICLE-001"
       ],
-      "status": "candidate",
-      "updated_at": "2026-08-26T13:41:14+08:00",
-      "version": "1.0.0"
+      "status": "superseded",
+      "updated_at": "2026-08-26T19:10:37+08:00",
+      "version": "1.0.1"
     },
     {
       "id": "SCL-MYYSHOP-CLAUDE-MANUAL-CIFNEWS-4-20260826",
@@ -84,9 +84,9 @@
         "CIT-MYYSHOP-CLAUDE-MANUAL-CIFNEWS-4-20260826",
         "SRC-MYYSHOP-CLAUDE-CIFNEWS-ARTICLE-001"
       ],
-      "status": "candidate",
-      "updated_at": "2026-08-26T13:41:14+08:00",
-      "version": "1.0.0"
+      "status": "superseded",
+      "updated_at": "2026-08-26T19:10:37+08:00",
+      "version": "1.0.1"
     },
     {
       "id": "SCL-MYYSHOP-CLAUDE-MANUAL-CIFNEWS-5-20260826",
@@ -95,9 +95,9 @@
         "CIT-MYYSHOP-CLAUDE-MANUAL-CIFNEWS-5-20260826",
         "SRC-MYYSHOP-CLAUDE-CIFNEWS-ARTICLE-001"
       ],
-      "status": "candidate",
-      "updated_at": "2026-08-26T13:41:14+08:00",
-      "version": "1.0.0"
+      "status": "superseded",
+      "updated_at": "2026-08-26T19:10:37+08:00",
+      "version": "1.0.1"
     },
     {
       "id": "SCL-MYYSHOP-CLAUDE-US-MANUAL-APP-STORE-1-RETRY-20260826",
@@ -106,9 +106,9 @@
         "CIT-MYYSHOP-CLAUDE-US-MANUAL-APP-STORE-1-RETRY-20260826",
         "SRC-MYYSHOP-CLAUDE-US-APP-STORE-001"
       ],
-      "status": "candidate",
-      "updated_at": "2026-08-26T14:03:13+08:00",
-      "version": "1.0.0"
+      "status": "superseded",
+      "updated_at": "2026-08-26T19:10:37+08:00",
+      "version": "1.0.1"
     },
     {
       "id": "SCL-MYYSHOP-CLAUDE-US-MANUAL-APP-STORE-2-RETRY-20260826",
@@ -117,9 +117,9 @@
         "CIT-MYYSHOP-CLAUDE-US-MANUAL-APP-STORE-2-RETRY-20260826",
         "SRC-MYYSHOP-CLAUDE-US-APP-STORE-001"
       ],
-      "status": "candidate",
-      "updated_at": "2026-08-26T14:03:13+08:00",
-      "version": "1.0.0"
+      "status": "superseded",
+      "updated_at": "2026-08-26T19:10:37+08:00",
+      "version": "1.0.1"
     },
     {
       "id": "SCL-MYYSHOP-CLAUDE-US-MANUAL-HOME-20260826",
@@ -128,9 +128,9 @@
         "CIT-MYYSHOP-CLAUDE-US-MANUAL-HOME-20260826",
         "SRC-MYYSHOP-WEB-HOMEPAGE-001"
       ],
-      "status": "candidate",
-      "updated_at": "2026-08-26T14:03:13+08:00",
-      "version": "1.0.0"
+      "status": "superseded",
+      "updated_at": "2026-08-26T19:10:37+08:00",
+      "version": "1.0.1"
     },
     {
       "id": "SCL-MYYSHOP-CLAUDE-US-MANUAL-HOME-RETRY-20260826",
@@ -139,9 +139,9 @@
         "CIT-MYYSHOP-CLAUDE-US-MANUAL-HOME-RETRY-20260826",
         "SRC-MYYSHOP-WEB-HOMEPAGE-001"
       ],
-      "status": "candidate",
-      "updated_at": "2026-08-26T14:03:13+08:00",
-      "version": "1.0.0"
+      "status": "superseded",
+      "updated_at": "2026-08-26T19:10:37+08:00",
+      "version": "1.0.1"
     },
     {
       "id": "SCL-MYYSHOP-GOOGLE-AI-MANUAL-21JINGJI-20260826",
@@ -150,9 +150,9 @@
         "CIT-MYYSHOP-GOOGLE-AI-MANUAL-21JINGJI-20260826",
         "SRC-MYYSHOP-GOOGLE-AI-21JINGJI-001"
       ],
-      "status": "candidate",
-      "updated_at": "2026-08-26T12:46:42+08:00",
-      "version": "1.0.0"
+      "status": "superseded",
+      "updated_at": "2026-08-26T19:10:37+08:00",
+      "version": "1.0.1"
     },
     {
       "id": "SCL-MYYSHOP-GOOGLE-AI-MANUAL-36DIANPING-20260826",
@@ -161,9 +161,9 @@
         "CIT-MYYSHOP-GOOGLE-AI-MANUAL-36DIANPING-20260826",
         "SRC-MYYSHOP-GOOGLE-AI-36DIANPING-001"
       ],
-      "status": "candidate",
-      "updated_at": "2026-08-26T12:46:42+08:00",
-      "version": "1.0.0"
+      "status": "superseded",
+      "updated_at": "2026-08-26T19:10:37+08:00",
+      "version": "1.0.1"
     },
     {
       "id": "SCL-MYYSHOP-GOOGLE-AI-MANUAL-36KR-20260826",
@@ -172,9 +172,9 @@
         "CIT-MYYSHOP-GOOGLE-AI-MANUAL-36KR-20260826",
         "SRC-MYYSHOP-GOOGLE-AI-36KR-001"
       ],
-      "status": "candidate",
-      "updated_at": "2026-08-26T12:46:42+08:00",
-      "version": "1.0.0"
+      "status": "superseded",
+      "updated_at": "2026-08-26T19:10:37+08:00",
+      "version": "1.0.1"
     },
     {
       "id": "SCL-MYYSHOP-GOOGLE-AI-MANUAL-AMZ123-20260826",
@@ -183,9 +183,9 @@
         "CIT-MYYSHOP-GOOGLE-AI-MANUAL-AMZ123-20260826",
         "SRC-MYYSHOP-GOOGLE-AI-AMZ123-001"
       ],
-      "status": "candidate",
-      "updated_at": "2026-08-26T12:46:42+08:00",
-      "version": "1.0.0"
+      "status": "superseded",
+      "updated_at": "2026-08-26T19:10:37+08:00",
+      "version": "1.0.1"
     },
     {
       "id": "SCL-MYYSHOP-GOOGLE-AI-MANUAL-BAIDU-BAIKE-20260826",
@@ -194,9 +194,9 @@
         "CIT-MYYSHOP-GOOGLE-AI-MANUAL-BAIDU-BAIKE-20260826",
         "SRC-MYYSHOP-GOOGLE-AI-BAIDU-BAIKE-001"
       ],
-      "status": "candidate",
-      "updated_at": "2026-08-26T12:46:42+08:00",
-      "version": "1.0.0"
+      "status": "superseded",
+      "updated_at": "2026-08-26T19:10:37+08:00",
+      "version": "1.0.1"
     },
     {
       "id": "SCL-MYYSHOP-GOOGLE-AI-MANUAL-CIFNEWS-20260826",
@@ -205,9 +205,9 @@
         "CIT-MYYSHOP-GOOGLE-AI-MANUAL-CIFNEWS-20260826",
         "SRC-MYYSHOP-GOOGLE-AI-CIFNEWS-001"
       ],
-      "status": "candidate",
-      "updated_at": "2026-08-26T12:46:42+08:00",
-      "version": "1.0.0"
+      "status": "superseded",
+      "updated_at": "2026-08-26T19:10:37+08:00",
+      "version": "1.0.1"
     },
     {
       "id": "SCL-MYYSHOP-GOOGLE-AI-MANUAL-DHGATE-20260826",
@@ -216,9 +216,9 @@
         "CIT-MYYSHOP-GOOGLE-AI-MANUAL-DHGATE-20260826",
         "SRC-MYYSHOP-GOOGLE-AI-DHGATE-001"
       ],
-      "status": "candidate",
-      "updated_at": "2026-08-26T12:46:42+08:00",
-      "version": "1.0.0"
+      "status": "superseded",
+      "updated_at": "2026-08-26T19:10:37+08:00",
+      "version": "1.0.1"
     },
     {
       "id": "SCL-MYYSHOP-GOOGLE-AI-MANUAL-SINA-20260826",
@@ -227,9 +227,9 @@
         "CIT-MYYSHOP-GOOGLE-AI-MANUAL-SINA-20260826",
         "SRC-MYYSHOP-GOOGLE-AI-SINA-001"
       ],
-      "status": "candidate",
-      "updated_at": "2026-08-26T12:46:42+08:00",
-      "version": "1.0.0"
+      "status": "superseded",
+      "updated_at": "2026-08-26T19:10:37+08:00",
+      "version": "1.0.1"
     },
     {
       "id": "SCL-MYYSHOP-GOOGLE-AI-MANUAL-ZHIHU-20260826",
@@ -238,9 +238,9 @@
         "CIT-MYYSHOP-GOOGLE-AI-MANUAL-ZHIHU-20260826",
         "SRC-MYYSHOP-GOOGLE-AI-ZHIHU-001"
       ],
-      "status": "candidate",
-      "updated_at": "2026-08-26T12:46:42+08:00",
-      "version": "1.0.0"
+      "status": "superseded",
+      "updated_at": "2026-08-26T19:10:37+08:00",
+      "version": "1.0.1"
     },
     {
       "id": "SCL-MYYSHOP-PERPLEXITY-EXPORT-APP-STORE-20260826",
@@ -249,9 +249,9 @@
         "CIT-MYYSHOP-PERPLEXITY-EXPORT-APP-STORE-20260826",
         "SRC-MYYSHOP-CLAUDE-US-APP-STORE-001"
       ],
-      "status": "candidate",
-      "updated_at": "2026-08-26T14:22:01+08:00",
-      "version": "1.0.0"
+      "status": "superseded",
+      "updated_at": "2026-08-26T19:10:37+08:00",
+      "version": "1.0.1"
     },
     {
       "id": "SCL-MYYSHOP-PERPLEXITY-EXPORT-HOME-20260826",
@@ -260,9 +260,9 @@
         "CIT-MYYSHOP-PERPLEXITY-EXPORT-HOME-20260826",
         "SRC-MYYSHOP-WEB-HOMEPAGE-001"
       ],
-      "status": "candidate",
-      "updated_at": "2026-08-26T14:22:01+08:00",
-      "version": "1.0.0"
+      "status": "superseded",
+      "updated_at": "2026-08-26T19:10:37+08:00",
+      "version": "1.0.1"
     },
     {
       "id": "SCL-MYYSHOP-PERPLEXITY-EXPORT-REDDIT-20260826",
@@ -271,9 +271,9 @@
         "CIT-MYYSHOP-PERPLEXITY-EXPORT-REDDIT-20260826",
         "SRC-MYYSHOP-PERPLEXITY-REDDIT-001"
       ],
-      "status": "candidate",
-      "updated_at": "2026-08-26T14:22:01+08:00",
-      "version": "1.0.0"
+      "status": "superseded",
+      "updated_at": "2026-08-26T19:10:37+08:00",
+      "version": "1.0.1"
     },
     {
       "id": "SCL-MYYSHOP-PERPLEXITY-EXPORT-REGISTER-20260826",
@@ -282,9 +282,9 @@
         "CIT-MYYSHOP-PERPLEXITY-EXPORT-REGISTER-20260826",
         "SRC-MYYSHOP-PERPLEXITY-REGISTER-001"
       ],
-      "status": "candidate",
-      "updated_at": "2026-08-26T14:22:01+08:00",
-      "version": "1.0.0"
+      "status": "superseded",
+      "updated_at": "2026-08-26T19:10:37+08:00",
+      "version": "1.0.1"
     },
     {
       "id": "SCL-MYYSHOP-PERPLEXITY-EXPORT-WORDPRESS-20260826",
@@ -293,9 +293,9 @@
         "CIT-MYYSHOP-PERPLEXITY-EXPORT-WORDPRESS-20260826",
         "SRC-MYYSHOP-PERPLEXITY-WORDPRESS-001"
       ],
-      "status": "candidate",
-      "updated_at": "2026-08-26T14:22:01+08:00",
-      "version": "1.0.0"
+      "status": "superseded",
+      "updated_at": "2026-08-26T19:10:37+08:00",
+      "version": "1.0.1"
     }
   ],
   "record_type": "source_classification",

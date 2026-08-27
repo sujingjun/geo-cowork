@@ -1,0 +1,11 @@
+{
+  "account_identifier_stored": false,
+  "capture_surface": "chrome_extension",
+  "collection_method": "manual",
+  "copied_by_user": true,
+  "credentials_stored": false,
+  "manual_source_kind": "user_supplied_result_url",
+  "operator_role": "MyyShop Owner",
+  "result_url": "https://claude.ai/share/ba4f9d5d-4f6b-4195-91d2-b242a2280761",
+  "temporary_chat": false
+}

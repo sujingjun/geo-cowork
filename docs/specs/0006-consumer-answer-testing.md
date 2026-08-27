@@ -2,7 +2,7 @@
 title: Spec 0006 — Consumer Answer Testing 与持续信源体系
 status: approved
 created: 2026-08-24
-updated: 2026-08-25
+updated: 2026-08-26
 source:
   - docs/prd/2026-08-24-m5-consumer-answer-testing.md
   - docs/architecture/2026-08-24-consumer-answer-testing-architecture.md
@@ -15,6 +15,7 @@ source:
   - "2026-08-25 当前用户指令：后续平台转为平台书面自动采集"
   - "2026-08-25 当前用户指令：去除 Adapter written_permission_ref 限制；平台许可改为全部里程碑完成后的上线前待办"
   - "2026-08-26 当前用户指令：继续 Owner 手工操作/复制的 manual exploratory 采样；开发阶段先跑通对应真实 UI adapter"
+  - "2026-08-26 当前用户指令：信源统一归档未分类，100 个唯一 Source 后批量分类；每平台两次独立人工采样；英文主线、中文辅助且同对象语义一致；确认当前定位并提供五平台首轮结果 URL"
 scope: M5 Collector Profile、Playwright/真实采集、Answer Sample、持续 Source registry、Citation/Review、聚合、恢复与授权门
 ---
 
@@ -56,7 +57,7 @@ conversation_state: new | continued | unknown
 web_search_state: on | off | automatic | unavailable | unknown
 model_mode: <界面可见模型/模式或 unknown>
 query_template_version: <semver>
-sampling_count: 3
+sampling_count: 2
 time_window:
   id: <stable window id>
   starts_at: <RFC3339>
@@ -69,6 +70,12 @@ device:
 collection_method: browser_automation | manual | recorded_fixture
 profile_fingerprint: <sha256>
 approval: <human approval> # frozen 时必需，只批准配置
+language_contract:
+  role: primary | auxiliary
+  object_key: <同一业务对象稳定 key>
+  primary_language: en-US
+  primary_query_ref: Q-...
+  semantic_contract_ref: workspace://...
 ```
 
 `profile_fingerprint` 对除 `approval`、公共时间和 title 外的 Profile 采样字段做稳定 JSON SHA-256。`frozen` Profile 内容不得原地改变；任何字段变化创建新 ID。
@@ -82,7 +89,7 @@ Profile approval 不等于真实采集授权。真实 Run 还必须提供当前�
 
 ## 4. Sample plan 与独立性
 
-正式 `baseline` 或 `post_change_retest` 对每个 Query × Platform 创建 ordinal `1..3` 的固定 slot。slot key 为以下稳定 JSON 的 SHA-256：
+正式 `baseline` 或 `post_change_retest` 对每个 Query × Platform 创建 ordinal `1..2` 的固定 slot。slot key 为以下稳定 JSON 的 SHA-256：
 
 ```text
 purpose + query ref/version + platform + collector profile ref/version
@@ -91,11 +98,12 @@ purpose + query ref/version + platform + collector profile ref/version
 
 约束：
 
-1. ordinal 唯一且连续为 1、2、3；同一回答或同一会话上下文不能复用到多个 slot。
+1. ordinal 唯一且连续为 1、2；同一回答或同一会话上下文不能复用到多个 slot。
 2. 每个 slot 使用 `conversation_state:new`；平台无法保证时 Profile 必须写明并使 comparability 至多为 `partial`。
-3. `exploratory` 可少于三次，但不得与正式集合混入同一 Aggregation。
-4. 一个 slot 出现 `success/refusal/timeout/no_result/challenge` 后视为已有平台观察，不得在同一正式 Run 中用成功重试替换。
-5. 只有未形成平台观察的 `system_failure` 可以在授权仍有效时重试；新 Sample 使用新 ID、同 slot key、递增 `attempt_no` 和 `retry_of_ref`，旧 attempt 永久保留。
+3. `exploratory` 可少于两次，但不得与正式集合混入同一 Aggregation。
+4. 英文 `en-US` 为首期正式主线；中文 `zh-CN` 是可选辅助。中英文同一对象必须绑定相同 `object_key` 与 `semantic_contract_ref`，但按语言分别聚合。
+5. 一个 slot 出现 `success/refusal/timeout/no_result/challenge` 后视为已有平台观察，不得在同一正式 Run 中用成功重试替换。
+6. 只有未形成平台观察的 `system_failure` 可以在授权仍有效时重试；新 Sample 使用新 ID、同 slot key、递增 `attempt_no` 和 `retry_of_ref`，旧 attempt 永久保留。
 
 ## 5. Answer Sample
 
@@ -113,7 +121,7 @@ collector_profile_ref: CPF-...
 collector_profile_version: <semver>
 run_ref: RUN-...
 slot_key: <sha256>
-ordinal: 1 | 2 | 3
+ordinal: 1 | 2
 attempt_no: <positive integer>
 retry_of_ref: SMP-... # 可选，仅 system_failure 重试
 outcome: success | refusal | timeout | no_result | challenge | cancelled | system_failure
@@ -198,11 +206,17 @@ discovery:
   method: consumer_citation
   citation_ref: CIT-...
   observed_at: <RFC3339>
+classification_queue:
+  status: archived_unclassified | batch_ready | classified
+  threshold: 100
+  decision_ref: workspace://...
 ```
 
 约束：
 
 - 新 Source 只能由当前 Workspace 中获授权 M5 Run 的 Citation Observation 触发；外部综合榜、静态域名表、历史排名和手工预填清单均不得创建 Source 或 Classification。
+- 当前采集阶段只归档 Source，不创建当前有效 Classification。阈值按被非 superseded M5 Citation 引用的唯一 `source_ref` 计数；达到 100 个后统一标记 `batch_ready` 并启动独立批量分类 Task。
+- 100 个 Source 前，历史 candidate Classification 可保留为 `superseded` 审计对象，但不得进入当前 Aggregation、coverage 或 Claim Support。
 - identity key 优先使用可验证发布者、频道或页面身份；只能取得域名时建立 `level:domain` 且分类必须 `review_required:true`。
 - YouTube、Reddit、LinkedIn 等是 host/domain，不自动代表生产主体或 Source Type。更具体身份出现时创建新 Source ID 并保留原 domain Source，不原地改写旧 Observation。
 - `Source.status:active` 只表示 registry 身份当前可用；不表示权威、Evidence approved、分类 reviewed 或 Claim supported。
@@ -316,7 +330,7 @@ comparability:
 metrics: <§10.2>
 ```
 
-正式 Aggregation 必须每个 Query version 恰有三个 slot、ordinal 1..3，且每个 slot 恰有一个 selected Sample。所有 attempts 继续可追溯；`system_failure` 重试只选择符合 §4 的最终 attempt。
+正式 Aggregation 必须每个 Query version 恰有两个 slot、ordinal 1..2，且每个 slot 恰有一个 selected Sample。所有 attempts 继续可追溯；`system_failure` 重试只选择符合 §4 的最终 attempt。
 
 分析链由 refs 强制形成：
 
@@ -329,7 +343,7 @@ Query/version
 → Claim Support Review.claim_ref + verdict
 ```
 
-任一边缺失返回 `ANALYSIS_CHAIN_INCOMPLETE`。无 Citation Sample 可以没有后三条边，但必须进入状态计数。
+任一边缺失通常返回 `ANALYSIS_CHAIN_INCOMPLETE`。唯一例外是 Source 仍处于 `archived_unclassified/batch_ready`：100 条阈值前允许分析链暂时停在 Source Identity，Classification/Claim Support refs 为空，相关指标必须显示 `partial/null + SOURCE_CLASSIFICATION_DEFERRED`。无 Citation Sample 可以没有后三条边，但必须进入状态计数。
 
 ### 10.2 指标公式
 
@@ -346,7 +360,7 @@ Query/version
 3. **Source Diversity**
    - `distinct_source_types` = 已知主标签数量；
    - `distinct_citation_domains` = Citation domain 数量；
-   - `classification_coverage = known_primary_units / total_citation_units`；
+   - `classification_coverage = known_primary_units / total_citation_units`；阈值前为 0 或 partial，不得补分类；
    - `normalized_source_type_entropy = -Σ(p_i * ln p_i) / ln(5)`；只有已知主标签单元且总数大于 0 时计算，否则 `null`。coverage 小于 1 时 metric 状态为 `partial`。
 4. **First-party vs Third-party Ratio**
    - 按 `party_relation` 统计 first/third/unknown 单元；
@@ -358,7 +372,7 @@ Query/version
    - 任一窗口无 Citation 或 comparability 非 true 时为 `null + reason`；
    - 可同时输出头部域名集合的 Jaccard distance 作为辅助，不替代主公式。
 
-Aggregation 另必须输出：expected/selected sample 数、各 outcome 数、system failure attempt 数、`no_citation_answer_count`、unknown classification 数、人工待复核数、metric coverage，以及当前时间窗的 new/returning Source 数、candidate/reviewed/unresolved classification 数。
+Aggregation 另必须输出：expected/selected sample 数、各 outcome 数、system failure attempt 数、`no_citation_answer_count`、unknown classification 数、`archived_unclassified` 数、人工待复核数、metric coverage，以及当前时间窗的 new/returning Source 数、candidate/reviewed/unresolved classification 数。
 
 ### 10.3 外部榜单不导入
 
@@ -371,7 +385,7 @@ M5 不定义外部综合榜、静态域名表或历史排名的 Schema、CLI、a
 - 硬条件：platform、product_entry、region、language、login_state、web_search_state、Query ref/version、Query template version、purpose、正式 sampling_count/slot 完整性、time window 口径；任一已知值不同即 `false`。
 - 软条件：可见 model/mode、device/browser、collection_method、conversation_state 的已记录差异；没有硬差异时结果为 `partial`。
 - 任一硬条件为 `unknown` 时最高 `partial`；不得把两个 unknown 判成相等并输出 true。
-- `true` 要求硬条件完全相同、无硬条件 unknown、三个 slot 完整、collection_method 相同，且 Rubric/分类规则对所比较指标一致。
+- `true` 要求硬条件完全相同、无硬条件 unknown、两个 slot 完整、collection_method 相同，且 Rubric/分类规则对所比较指标一致。中英文因 `language` 硬差异不得互判为 `true`，即使语义合同一致。
 
 比较输出必须列出所有字段差异；调用方不能通过传入布尔值覆盖计算结果。
 
@@ -388,7 +402,7 @@ sample_slots:
   - slot_key: <sha256>
     query_ref: Q-...
     platform: <value>
-    ordinal: 1 | 2 | 3
+    ordinal: 1 | 2
     completed_steps: [<collector step>]
     attempt_refs: [SMP-...]
     selected_sample_ref: SMP-... | null
@@ -464,13 +478,16 @@ answer-cycle.mjs validate --workspace <path>
 answer-cycle.mjs plan --workspace <path> --plan <json>
 answer-cycle.mjs collect-fixture --workspace <path> --plan <json>
 answer-cycle.mjs collect --workspace <path> --plan <json> --platform <platform>
+answer-cycle.mjs collect-manual-batch --workspace <path> --plan <json>
 answer-cycle.mjs normalize-citations --workspace <path> --sample <SMP-ID>
 answer-cycle.mjs review --workspace <path> --plan <json>
+answer-cycle.mjs review-manual-batch --workspace <path> --plan <json>
 answer-cycle.mjs aggregate --workspace <path> --plan <json>
+answer-cycle.mjs aggregate-manual-batch --workspace <path> --plan <json>
 answer-cycle.mjs resume --workspace <path> --run <RUN-ID>
 ```
 
-`collect-fixture` 只允许 `.invalid`/Workspace-local 录制输入。`collect` 是 M5 设计的真实入口，但只有在 Playwright package/browser 与对应平台 authorization/adapter/Smoke 全部通过后才可执行；必须由 `--platform` 选择已注册 adapter，不接受通用 URL，不得绕过 allowlist。M5 不提供外部榜单 import 命令。
+`collect-fixture` 只允许 `.invalid`/Workspace-local 录制输入。`collect-manual-batch` 只接受 Owner 决定引用、exact result URL、英文主线语义合同与两个预分配 slot；它不提交 Query。`review-manual-batch` 创建 checksum-pinned Answer Review；`aggregate-manual-batch` 只在两个 slot 和对应 Review 完整时创建逐平台 Aggregation。`collect` 是 M5 设计的自动入口，但只有在 Playwright package/browser 与对应平台 authorization/adapter/Smoke 全部通过后才可执行；必须由 `--platform` 选择已注册 adapter，不接受通用 URL，不得绕过 allowlist。M5 不提供外部榜单 import 命令。
 
 ## 15. 错误与 warning
 
@@ -519,6 +536,8 @@ PROFILE_FIELD_UNKNOWN
 MANUAL_FALLBACK_USED
 NO_CITATIONS
 SOURCE_TYPE_UNKNOWN
+SOURCE_CLASSIFICATION_DEFERRED
+SOURCE_CLASSIFICATION_BATCH_READY
 SOURCE_IDENTITY_UNRESOLVED
 CLASSIFICATION_REVIEW_REQUIRED
 CLAIM_SUPPORT_REVIEW_REQUIRED
@@ -531,7 +550,9 @@ COMPARABILITY_PARTIAL
 
 - 新对象 Schema、未知字段、空集合、ID/status/refs/version/checksum；
 - Profile fingerprint、unknown 与 frozen/new-ID 规则；
-- 三个 slot、独立会话、全部 outcome、system failure retry 与失败保留；
+- 两个 slot、独立会话、全部 outcome、system failure retry 与失败保留；
+- 英文主线、中文辅助与同对象语义合同；
+- Source 归档、历史 Classification supersede、唯一 Source 计数和 100 条 batch-ready 门；
 - raw create-only、半成品恢复、隐私禁止字段和 artifact unavailable；
 - Citation URL/domain 规范化、重复引用、无 Citation 和无效 URL；
 - Citation 触发 Source 匹配/创建、双向 ref 预分配/闭包/半成品恢复、host/publisher/channel/page identity、new/returning 派生、无观测候选拒绝和外部榜单导入禁止；
@@ -548,4 +569,4 @@ COMPARABILITY_PARTIAL
 
 ## 17. 非目标与当前授权
 
-本 Spec 完整设计 Playwright base、逐平台真实 collector 与持续信源维护。Owner 已授权 T02—T08，并授权五个平台使用 Owner-controlled Google 登录身份、真实用户隐私最小化与本地 365 天保留；该账号授权不能覆盖平台 Terms、robots、challenge 或安全控制。ChatGPT、Gemini、Google AI 已各完成 1 个 manual exploratory Smoke；Claude 完成 CN 中文 Query 与 US 英文 Query 各 1 个成功 Sample，只记录采集基线差异，不作 IP 对比；Perplexity 通过 Owner 提供的导出 Markdown 完成 1 个 `user_supplied_export/manual` Sample。开发阶段允许前四个平台通过 Owner 手工 UI 操作/共享 + manual materializer 跑通真实 UI adapter；Perplexity 只允许冻结文件名/SHA 的本地导出工件，页面 manual 与自动化继续 blocked。Adapter 不再保存或强制 `written_permission_ref`；平台许可只进入 Requirements 需求池，`planning_state:待规划`。自动采集仍由 `terms_blocked/manual_only` 控制。不授权 M4 业务对象补写、GA4/GSC、外部写入、commit、push、PR、发布、部署或 Git 远端动作。manual exploratory Sample 不能替代正式消费者 UI Baseline。
+本 Spec 完整设计 Playwright base、逐平台真实 collector 与持续信源维护。Owner 已授权 T02—T08，并授权五个平台使用 Owner-controlled 浏览器路径、真实用户隐私最小化与本地 365 天保留；该账号授权不能覆盖平台 Terms、robots、challenge 或安全控制。2026-08-26 Owner 将正式协议修订为每平台两个独立英文 manual Sample，并提供五个平台第 1 槽 exact result URL；中文仅作可选辅助且不得与英文混聚合。所有 Citation Source 先归档未分类，唯一 Source 达 100 个后再统一分类。自动采集仍由 `terms_blocked/manual_only` 控制。不授权 M4 业务对象补写、GA4/GSC、外部写入、commit、push、PR、发布、部署或 Git 远端动作；第 2 槽未完成前不得称平台 Baseline 完成。

@@ -13,6 +13,7 @@ import {
   sourceVolatility,
 } from '../plugins/geo-expert/scripts/lib/answer-aggregation.mjs';
 import { materializeAnswerReview } from '../plugins/geo-expert/scripts/lib/answer-review.mjs';
+import { archiveObservedSourcesForBatchClassification } from '../plugins/geo-expert/scripts/lib/source-batch.mjs';
 import { readMarkdownObject } from '../plugins/geo-expert/scripts/lib/object-contract.mjs';
 import { collectorProfile, m5FixturePlan, m5ReadyWorkspace } from './helpers/m5-fixtures.mjs';
 
@@ -54,7 +55,7 @@ test('五项指标、状态计数和零分母按手算 Fixture 确定', async ()
   const metrics = aggregation.data.metrics;
   assert.equal(metrics.total_citation_units, 2);
   assert.deepEqual(metrics.outcome_counts, {
-    success: 1, refusal: 1, timeout: 1, no_result: 0,
+    success: 1, refusal: 1, timeout: 0, no_result: 0,
     challenge: 0, cancelled: 0, system_failure: 0,
   });
   assert.equal(metrics.top_citation_domains[0].count, 1);
@@ -64,7 +65,7 @@ test('五项指标、状态计数和零分母按手算 Fixture 确定', async ()
   assert.equal(metrics.party_relation.first_party_count, 1);
   assert.equal(metrics.party_relation.third_party_count, 1);
   assert.equal(metrics.party_relation.ratio, 1);
-  assert.equal(metrics.no_citation_answer_count, 2);
+  assert.equal(metrics.no_citation_answer_count, 1);
   await rm(root, { recursive: true });
 });
 
@@ -106,5 +107,29 @@ test('无 Citation 使用 null + reason，Source Volatility 按 total variation 
       starts_at: '2026-08-24T00:00:00Z', ends_at: '2026-08-25T00:00:00Z',
     },
   }), { value: 0.5, reason: null });
+  await rm(root, { recursive: true });
+});
+
+test('100 Source 前允许两槽聚合保留分类指标为 partial/unknown', async () => {
+  const root = await m5ReadyWorkspace();
+  const plan = m5FixturePlan();
+  await collectFixtureCycle({ workspace: root, plan });
+  await reviewFixtureCycle({ workspace: root, plan });
+  await archiveObservedSourcesForBatchClassification({
+    workspace: root,
+    decisionRef: 'workspace://cycles/preparation/decisions/m5-source-batch-approved.md',
+    now: '2026-08-25T02:00:00+08:00',
+  });
+  await aggregateFixtureCycle({ workspace: root, plan });
+  const aggregation = await readMarkdownObject(
+    path.join(root, plan.aggregation.path), { workspace: root },
+  );
+  assert.equal(aggregation.data.metrics.expected_sample_count, 2);
+  assert.equal(aggregation.data.metrics.source_diversity.classification_coverage, 0);
+  assert.equal(aggregation.data.metrics.source_diversity.status, 'partial');
+  assert.equal(aggregation.data.metrics.party_relation.unknown_count, 2);
+  assert.equal(aggregation.data.metrics.classification_counts.archived_unclassified, 2);
+  assert.deepEqual(aggregation.data.classification_versions, []);
+  assert.deepEqual(aggregation.data.claim_support_review_versions, []);
   await rm(root, { recursive: true });
 });

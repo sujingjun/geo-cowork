@@ -2,7 +2,7 @@
 title: M5 Consumer Answer Testing 与持续信源体系任务清单
 status: implemented
 created: 2026-08-24
-updated: 2026-08-25
+updated: 2026-08-26
 source:
   - docs/plans/2026-08-24-m5-consumer-answer-testing-plan.md
   - docs/specs/0006-consumer-answer-testing.md
@@ -18,6 +18,7 @@ source:
   - "2026-08-25 当前用户指令：去除 Adapter written_permission_ref 限制；平台许可改为全部里程碑完成后的上线前待办"
   - "2026-08-26 当前用户指令：继续 Owner 手工操作/复制的 manual exploratory 采样；开发阶段先跑通对应真实 UI adapter"
   - docs/requirements/2026-08-25-platform-automation-permission-backlog.md
+  - "2026-08-26 当前用户指令：100 Source 后批量分类；每平台两个独立英文人工样本；中文可选辅助且语义一致；确认当前定位并提供五平台第 1 槽结果"
 scope: M5 SDD 批准门、离线对象/恢复/指标、持续 Source registry、Playwright/平台 collector 与真实 Baseline 分段任务
 ---
 
@@ -42,7 +43,7 @@ scope: M5 SDD 批准门、离线对象/恢复/指标、持续 Source registry、
 
 - 对应：Spec 0006 §2—§4、§13
 - 任务目标：注册七类新对象、现有 Source 的 M5 可选 profile 和 M5 index/refs
-- 成功标准：正常、非法、空字段、status、refs/version/checksum/Profile fingerprint/三 slot/Source identity 全部红绿
+- 成功标准：正常、非法、空字段、status、refs/version/checksum/Profile fingerprint/两 slot/语言合同/Source identity 全部红绿
 - 范围外：Collector、Playwright、真实样本
 - 前置依赖：M5-T01 approved + 离线实现授权
 - 目标文件：M5 Schema、profile、模板、index/object 最小注册、测试
@@ -80,8 +81,8 @@ scope: M5 SDD 批准门、离线对象/恢复/指标、持续 Source registry、
 ## M5-T05 Citation、持续 Source registry、五层分类与 Claim 支撑
 
 - 对应：Spec 0006 §6—§8
-- 任务目标：形成 Query→Platform→Intent→Domain→Source Identity→Source Type→Claim Supported 链，且由真实 Citation 持续发现/维护 Source
-- 成功标准：URL/domain、重复引用、Citation/Source 双向 ref 预分配/闭包/半成品恢复、Source 匹配/创建、host/publisher/channel/page identity、new/returning 派生、五层主/副标签、party relation、support verdict 与人工门通过
+- 任务目标：形成 Query→Platform→Intent→Domain→Source Identity 链，由真实 Citation 持续发现/维护 Source；达到 100 个唯一 Source 后再启动 Source Type→Claim Supported 批量任务
+- 成功标准：URL/domain、重复引用、Citation/Source 双向 ref 预分配/闭包/半成品恢复、Source 匹配/创建、host/publisher/channel/page identity、new/returning 派生、归档未分类、唯一 Source 计数与 100 条 batch-ready 门通过
 - 范围外：外部榜单/静态域名表/历史排名导入、自动业务批准
 - 前置依赖：M5-T03
 - 目标文件：citation-analysis、classification/support materializer、测试
@@ -106,8 +107,8 @@ scope: M5 SDD 批准门、离线对象/恢复/指标、持续 Source registry、
 ## M5-T07 recorded Fixture Collector seam 与离线验收
 
 - 对应：Plan Slice G；Spec 0006 §14—§16
-- 任务目标：在无 Playwright、无网络下跑通三 slot 全链
-- 成功标准：CLI 跨 cwd、no-network、Source 链闭包、全部 M5 + M2–M4 回归和 index/legacy 稳定性通过
+- 任务目标：在无 Playwright、无网络下跑通两个 slot 全链
+- 成功标准：CLI 跨 cwd、no-network、Source 链闭包、两个 slot、全部 M5 + M2–M4 回归和 index/legacy 稳定性通过
 - 范围外：Playwright package、browser binary、平台 adapter
 - 前置依赖：M5-T02—T06
 - 目标文件：answer-cycle CLI、geo-answer Skills、recorded adapter、离线 Record
@@ -140,21 +141,21 @@ scope: M5 SDD 批准门、离线对象/恢复/指标、持续 Source registry、
 - 测试要求：一个平台受阻不伪装全平台完成；不得用 API、搜索摘要或其他平台补数；manual 必须保留完整回答/Citation 并降低 comparability
 - 验证命令：逐平台批准后在对应 Task 冻结
 - 风险：UI/地区/模型漂移造成假 comparability
-- 当前状态：implemented（ChatGPT/Gemini/Google AI manual Smoke、Claude CN/US baseline records 与 Perplexity user-supplied-export/manual Smoke verified；Perplexity 页面 manual 和 browser automation blocked；全平台正式 Smoke 未完成）
+- 当前状态：verified（manual 路径；历史 exploratory 全部保留；ChatGPT/Gemini/Google AI/Claude/Perplexity 各完成两个正式英文 slot 与两个 candidate Answer Review；browser automation 继续 blocked，不在本结论范围）
 
 ## M5-T10 真实 Baseline 与未来 Retest
 
 - 对应：Plan Slice J/K；Spec 0006 §5.3、§10—§13
 - 任务目标：在全部前置满足后形成正式 Baseline；Publication 后另建 Retest
-- 成功标准：每 Query×Platform 三次独立、失败保留、raw/review/aggregation 可追溯；Retest 前置不混淆
+- 成功标准：每 Query×Platform 两次独立英文采样、失败保留、raw/review/aggregation 可追溯；中文辅助与英文语义一致但独立聚合；Retest 前置不混淆
 - 范围外：GA4/GSC、因果与 Cycle 业务结论
 - 前置依赖：M5-T09；逐平台授权；Retest 另需 M4 Publication/Technical Retest
 - 目标文件：真实 Workspace objects、Run artifacts、Baseline/Retest Records
 - 测试要求：Profile/comparability/隐私/保留期人工复核
 - 验证命令：每个平台 Task 单独记录实际命令，不能预写成功
 - 风险：失败样本被替换、Baseline 冒充 post-change Retest
-- 当前状态：blocked（真实 Baseline 前置未满足；Retest 另缺 M4 confirmed Publication 与 Technical Retest）
+- 当前状态：Baseline `verified`；post-change Retest `blocked`（五个平台正式英文两槽 Baseline、raw、Review、逐平台 Aggregation 已完成；comparability 均为 partial，分类指标 deferred。Retest 另缺 M4 confirmed Publication 与 Technical Retest）
 
 ## 收口条件
 
-T02—T08 已收口；整份 Task 因 T09 真实 Smoke 与 T10 Baseline/Retest 未完成而保持 `implemented`，不提升为整体 `verified`。Owner 账号授权不能覆盖平台 Terms/robots；本次也不 commit、push、PR、下载新 browser、发布或部署。
+T02—T09 与 T10 的正式英文 Baseline 已收口；Source 分类统一推迟到唯一 Source 达 100 个后的独立 Task，当前 40/100；10 个 Answer Review 仍是 candidate；post-change Retest 仍缺 M4 Publication/Technical Retest。因此整份 Task 继续保持 `implemented`，不提升为整体 `verified`；本次也不 commit、push、PR、下载新 browser、自动提交新 Query、发布或部署。

@@ -131,6 +131,9 @@ export async function transitionRun({
       : bumpPatch(current.data.version),
     ...(businessResult === undefined ? {} : { business_result: businessResult }),
   };
+  for (const [key, value] of Object.entries(data)) {
+    if (value === undefined) delete data[key];
+  }
   validateObjectData(data, { path: runRelativePath(runId) });
   await atomicWrite(
     workspace,

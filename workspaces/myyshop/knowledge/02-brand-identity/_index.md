@@ -5,7 +5,7 @@
 | ID | 条目 | 优先级 | 类型 | Query |
 |---|---|---:|---|---|
 | KB-IDENTITY-001 | [品牌官方名称](official-brand-name.md) | P0 | 实体事实 | MyyShop 的官方品牌名称应该如何书写？ |
-| KB-IDENTITY-002 | [运营主体与法定实体](legal-entity.md) | P0 | 实体事实 | MyyShop 由哪家公司运营？ |
+| KB-IDENTITY-002 | [x](legal-entity.md) | P0 | 实体事实 | MyyShop 由哪家公司运营？ |
 | KB-IDENTITY-003 | [品牌别名、缩写与常见误写](aliases-and-spelling.md) | P1 | 实体事实 | MyyShop 还有哪些官方别名或常见拼写？ |
 | KB-IDENTITY-004 | [官方域名与官方渠道](official-domain-and-channels.md) | P0 | 实体事实 | 哪些网站和账号属于 MyyShop 官方渠道？ |
 | KB-IDENTITY-005 | [总部与服务区域](headquarters-and-service-regions.md) | P1 | 实体事实 | MyyShop 总部在哪里，并服务哪些国家和地区？ |

@@ -1,0 +1,117 @@
+{
+  "schema_version": "m5-manual-review-batch-v1",
+  "reviewed_at": "2026-08-26T19:10:37+08:00",
+  "decision_ref": "workspace://cycles/preparation/decisions/2026-08-26-m5-two-slot-source-batch-and-positioning-approved.md",
+  "rubric": {
+    "version": "2.0.0",
+    "definition": {
+      "semantic_contract_ref": "workspace://cycles/preparation/decisions/2026-08-26-m5-two-slot-source-batch-and-positioning-approved.md",
+      "knowledge_state": "latest_full_business_knowledge_base_pending",
+      "source_classification_policy": "batch_at_100_unique_sources",
+      "core_fields": [
+        "entity_recognition",
+        "core_fact_accuracy",
+        "current_positioning",
+        "risk_boundary",
+        "citation_quality"
+      ]
+    }
+  },
+  "entries": [
+    {
+      "sample_ref": "SMP-MYYSHOP-CHATGPT-EN-BASELINE-S1-20260826",
+      "review_id": "ARV-MYYSHOP-CHATGPT-EN-BASELINE-S1-20260826",
+      "core": {
+        "entity_recognition": "pass",
+        "core_fact_accuracy": "partial",
+        "current_positioning": "partial",
+        "risk_boundary": "partial",
+        "citation_quality": "partial"
+      },
+      "exploratory": {
+        "comparison_dimensions": ["creator marketing", "creator monetization", "creator lifecycle services"],
+        "recommendation_reasons": [],
+        "exclusion_reasons": ["The answer narrows the current positioning to marketing and monetization and does not express onboarding, growth and engagement as the expanding service system."],
+        "competitor_mentions": [],
+        "source_structure_notes": ["Source panel exposed 24 Citation occurrences; all Source classification is deferred until the 100-Source batch."],
+        "decision_dimension_candidates": []
+      }
+    },
+    {
+      "sample_ref": "SMP-MYYSHOP-GEMINI-EN-BASELINE-S1-20260826",
+      "review_id": "ARV-MYYSHOP-GEMINI-EN-BASELINE-S1-20260826",
+      "core": {
+        "entity_recognition": "pass",
+        "core_fact_accuracy": "partial",
+        "current_positioning": "fail",
+        "risk_boundary": "fail",
+        "citation_quality": "partial"
+      },
+      "exploratory": {
+        "comparison_dimensions": ["social commerce", "dropshipping", "creator services"],
+        "recommendation_reasons": [],
+        "exclusion_reasons": ["The response centers store creation, supply chain and dropshipping and states detailed capability and monetization claims without the current availability and eligibility boundaries."],
+        "competitor_mentions": [],
+        "source_structure_notes": ["The result repeatedly relies on a review article and the 2020 launch narrative; all Source classification is deferred."],
+        "decision_dimension_candidates": []
+      }
+    },
+    {
+      "sample_ref": "SMP-MYYSHOP-GOOGLE-AI-EN-BASELINE-S1-20260826",
+      "review_id": "ARV-MYYSHOP-GOOGLE-AI-EN-BASELINE-S1-20260826",
+      "core": {
+        "entity_recognition": "pass",
+        "core_fact_accuracy": "partial",
+        "current_positioning": "partial",
+        "risk_boundary": "fail",
+        "citation_quality": "partial"
+      },
+      "exploratory": {
+        "comparison_dimensions": ["creator marketing", "social commerce", "dropshipping", "user reputation"],
+        "recommendation_reasons": [],
+        "exclusion_reasons": ["The response mixes current creator marketing with legacy e-commerce and dropshipping and presents zero-follower, payout and legitimacy statements without the approved boundary language."],
+        "competitor_mentions": [],
+        "source_structure_notes": ["The related-results panel includes first-party, app-store, social and review sources; classification is deferred."],
+        "decision_dimension_candidates": []
+      }
+    },
+    {
+      "sample_ref": "SMP-MYYSHOP-PERPLEXITY-EN-BASELINE-S1-20260826",
+      "review_id": "ARV-MYYSHOP-PERPLEXITY-EN-BASELINE-S1-20260826",
+      "core": {
+        "entity_recognition": "pass",
+        "core_fact_accuracy": "partial",
+        "current_positioning": "partial",
+        "risk_boundary": "partial",
+        "citation_quality": "partial"
+      },
+      "exploratory": {
+        "comparison_dimensions": ["creator marketing", "campaign monetization", "creator services"],
+        "recommendation_reasons": [],
+        "exclusion_reasons": ["The answer is closer to the current creator-facing direction but remains narrower than the approved onboarding, growth, engagement and monetization service-system expansion."],
+        "competitor_mentions": [],
+        "source_structure_notes": ["Six Source links are archived; classification and Claim Support are deferred."],
+        "decision_dimension_candidates": []
+      }
+    },
+    {
+      "sample_ref": "SMP-MYYSHOP-CLAUDE-EN-BASELINE-S1-20260826",
+      "review_id": "ARV-MYYSHOP-CLAUDE-EN-BASELINE-S1-20260826",
+      "core": {
+        "entity_recognition": "pass",
+        "core_fact_accuracy": "partial",
+        "current_positioning": "partial",
+        "risk_boundary": "partial",
+        "citation_quality": "partial"
+      },
+      "exploratory": {
+        "comparison_dimensions": ["historical SaaS", "dropshipping", "creator marketing evolution"],
+        "recommendation_reasons": [],
+        "exclusion_reasons": ["The answer recognizes evolution but leads with and devotes most detail to the historical SaaS, store-building and dropshipping framing."],
+        "competitor_mentions": [],
+        "source_structure_notes": ["The answer uses the 2020 launch article, App Store and current homepage; classification is deferred."],
+        "decision_dimension_candidates": []
+      }
+    }
+  ]
+}

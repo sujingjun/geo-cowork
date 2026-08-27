@@ -221,6 +221,12 @@ export async function materializeManualSample({ workspace, plan, answerText }) {
     account_identifier_stored: false,
     credentials_stored: false,
     copied_by_user: true,
+    manual_source_kind: plan.manual_source?.kind ?? 'owner_manual_copy',
+    capture_surface: plan.manual_source?.capture_surface ?? 'owner_browser',
+    result_url: plan.manual_source?.result_url ?? null,
+    ...(plan.manual_source?.observed_model_mode
+      ? { observed_model_mode: plan.manual_source.observed_model_mode }
+      : {}),
   }, 2);
   const logBytes = Buffer.from(logContent);
   await writeRunArtifact({
@@ -264,8 +270,8 @@ export async function materializeManualSample({ workspace, plan, answerText }) {
     version: '1.0.0',
     created_at: plan.sample.captured_at,
     updated_at: plan.sample.captured_at,
-    title: `Manual ${profile.platform} exploratory sample`,
-    purpose: 'exploratory',
+    title: `Manual ${profile.platform} ${plan.purpose} sample ${plan.sample.ordinal}`,
+    purpose: plan.purpose,
     query_ref: query.id,
     query_version: query.version,
     query_set_ref: querySet.id,
@@ -276,7 +282,7 @@ export async function materializeManualSample({ workspace, plan, answerText }) {
     collector_profile_version: profile.version,
     run_ref: run.id,
     slot_key: sampleSlotKey({
-      purpose: 'exploratory',
+      purpose: plan.purpose,
       queryRef: query.id,
       queryVersion: query.version,
       platform: profile.platform,
@@ -287,7 +293,7 @@ export async function materializeManualSample({ workspace, plan, answerText }) {
       ordinal: plan.sample.ordinal,
     }),
     ordinal: plan.sample.ordinal,
-    attempt_no: 1,
+    attempt_no: plan.sample.attempt_no ?? 1,
     outcome: plan.sample.outcome,
     captured_at: plan.sample.captured_at,
     collection_method: 'manual',
@@ -298,7 +304,7 @@ export async function materializeManualSample({ workspace, plan, answerText }) {
       credentials_stored: false,
       answer_region_only: true,
       redaction_notes: [
-        'Owner manually copied the complete answer.',
+        'Owner supplied the complete result through the approved Chrome/manual path.',
         'No account chrome, email, cookie, storage, screenshot or DOM retained.',
       ],
     },

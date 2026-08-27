@@ -216,7 +216,7 @@ export async function smokeGlobalPlaywright({ expectedVersion = '1.62.1' } = {})
       web_search_state: 'unavailable',
       model_mode: 'local-fixture',
       query_template_version: '1.0.0',
-      sampling_count: 3,
+      sampling_count: 2,
       time_window: {
         id: 'TW-LOCAL-PLAYWRIGHT-SMOKE-001',
         starts_at: '2026-08-25T00:00:00+08:00',

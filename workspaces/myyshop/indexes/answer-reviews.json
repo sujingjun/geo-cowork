@@ -1,5 +1,106 @@
 {
-  "objects": [],
+  "objects": [
+    {
+      "id": "ARV-MYYSHOP-CHATGPT-EN-BASELINE-S1-20260826",
+      "path": "cycles/m5/reviews/arv-myyshop-chatgpt-en-baseline-s1-20260826.md",
+      "refs": [
+        "SMP-MYYSHOP-CHATGPT-EN-BASELINE-S1-20260826"
+      ],
+      "status": "candidate",
+      "updated_at": "2026-08-26T19:10:37+08:00",
+      "version": "1.0.0"
+    },
+    {
+      "id": "ARV-MYYSHOP-CHATGPT-EN-BASELINE-S2-20260826",
+      "path": "cycles/m5/reviews/arv-myyshop-chatgpt-en-baseline-s2-20260826.md",
+      "refs": [
+        "SMP-MYYSHOP-CHATGPT-EN-BASELINE-S2-20260826"
+      ],
+      "status": "candidate",
+      "updated_at": "2026-08-26T20:59:39+08:00",
+      "version": "1.0.0"
+    },
+    {
+      "id": "ARV-MYYSHOP-CLAUDE-EN-BASELINE-S1-20260826",
+      "path": "cycles/m5/reviews/arv-myyshop-claude-en-baseline-s1-20260826.md",
+      "refs": [
+        "SMP-MYYSHOP-CLAUDE-EN-BASELINE-S1-20260826"
+      ],
+      "status": "candidate",
+      "updated_at": "2026-08-26T19:10:37+08:00",
+      "version": "1.0.0"
+    },
+    {
+      "id": "ARV-MYYSHOP-CLAUDE-EN-BASELINE-S2-20260826",
+      "path": "cycles/m5/reviews/arv-myyshop-claude-en-baseline-s2-20260826.md",
+      "refs": [
+        "SMP-MYYSHOP-CLAUDE-EN-BASELINE-S2-20260826"
+      ],
+      "status": "candidate",
+      "updated_at": "2026-08-26T20:59:39+08:00",
+      "version": "1.0.0"
+    },
+    {
+      "id": "ARV-MYYSHOP-GEMINI-EN-BASELINE-S1-20260826",
+      "path": "cycles/m5/reviews/arv-myyshop-gemini-en-baseline-s1-20260826.md",
+      "refs": [
+        "SMP-MYYSHOP-GEMINI-EN-BASELINE-S1-20260826"
+      ],
+      "status": "candidate",
+      "updated_at": "2026-08-26T19:10:37+08:00",
+      "version": "1.0.0"
+    },
+    {
+      "id": "ARV-MYYSHOP-GEMINI-EN-BASELINE-S2-20260826",
+      "path": "cycles/m5/reviews/arv-myyshop-gemini-en-baseline-s2-20260826.md",
+      "refs": [
+        "SMP-MYYSHOP-GEMINI-EN-BASELINE-S2-20260826"
+      ],
+      "status": "candidate",
+      "updated_at": "2026-08-26T20:59:39+08:00",
+      "version": "1.0.0"
+    },
+    {
+      "id": "ARV-MYYSHOP-GOOGLE-AI-EN-BASELINE-S1-20260826",
+      "path": "cycles/m5/reviews/arv-myyshop-google-ai-en-baseline-s1-20260826.md",
+      "refs": [
+        "SMP-MYYSHOP-GOOGLE-AI-EN-BASELINE-S1-20260826"
+      ],
+      "status": "candidate",
+      "updated_at": "2026-08-26T19:10:37+08:00",
+      "version": "1.0.0"
+    },
+    {
+      "id": "ARV-MYYSHOP-GOOGLE-AI-EN-BASELINE-S2-20260826",
+      "path": "cycles/m5/reviews/arv-myyshop-google-ai-en-baseline-s2-20260826.md",
+      "refs": [
+        "SMP-MYYSHOP-GOOGLE-AI-EN-BASELINE-S2-20260826"
+      ],
+      "status": "candidate",
+      "updated_at": "2026-08-26T20:59:39+08:00",
+      "version": "1.0.0"
+    },
+    {
+      "id": "ARV-MYYSHOP-PERPLEXITY-EN-BASELINE-S1-20260826",
+      "path": "cycles/m5/reviews/arv-myyshop-perplexity-en-baseline-s1-20260826.md",
+      "refs": [
+        "SMP-MYYSHOP-PERPLEXITY-EN-BASELINE-S1-20260826"
+      ],
+      "status": "candidate",
+      "updated_at": "2026-08-26T19:10:37+08:00",
+      "version": "1.0.0"
+    },
+    {
+      "id": "ARV-MYYSHOP-PERPLEXITY-EN-BASELINE-S2-20260826",
+      "path": "cycles/m5/reviews/arv-myyshop-perplexity-en-baseline-s2-20260826.md",
+      "refs": [
+        "SMP-MYYSHOP-PERPLEXITY-EN-BASELINE-S2-20260826"
+      ],
+      "status": "candidate",
+      "updated_at": "2026-08-26T20:59:39+08:00",
+      "version": "1.0.0"
+    }
+  ],
   "record_type": "answer_review",
   "schema_version": "1.1.0"
 }

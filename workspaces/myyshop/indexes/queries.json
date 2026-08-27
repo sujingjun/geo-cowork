@@ -19,8 +19,19 @@
         "GOAL-MYYSHOP-DEFINITION-001",
         "SRC-MYYSHOP-FINAL-PRODUCT-PLAN-001"
       ],
-      "status": "formal",
+      "status": "stale",
       "updated_at": "2026-08-26T14:03:13+08:00",
+      "version": "1.0.0"
+    },
+    {
+      "id": "Q-MYYSHOP-WHAT-IS-EN-BASELINE-001",
+      "path": "queries/formal/q-myyshop-what-is-en-baseline-001.md",
+      "refs": [
+        "GOAL-MYYSHOP-DEFINITION-001",
+        "SRC-MYYSHOP-FINAL-PRODUCT-PLAN-001"
+      ],
+      "status": "formal",
+      "updated_at": "2026-08-26T19:10:37+08:00",
       "version": "1.0.0"
     },
     {

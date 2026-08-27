@@ -30,7 +30,8 @@ export class AnswerProfileError extends Error {
 }
 
 export function collectorProfileFingerprint(data) {
-  const payload = Object.fromEntries(PROFILE_FIELDS.map((field) => [field, data[field]]));
+  const fields = data.language_contract ? [...PROFILE_FIELDS, 'language_contract'] : PROFILE_FIELDS;
+  const payload = Object.fromEntries(fields.map((field) => [field, data[field]]));
   return sha256(stableStringify(payload));
 }
 
@@ -52,6 +53,16 @@ export function validateCollectorProfileData(data) {
     throw new AnswerProfileError('PROFILE_NOT_FROZEN', 'frozen Profile 缺少人工批准', {
       id: data.id,
     });
+  }
+  if (data.language_contract) {
+    if (data.sampling_count !== 2
+        || data.language_contract.primary_language !== 'en-US'
+        || data.language_contract.role === 'primary' && data.language !== 'en-US') {
+      throw new AnswerProfileError('M5_FIELD_REQUIRED', 'M5 当前语言合同要求英文主线使用两个正式 slot', {
+        id: data.id,
+        field: 'language_contract',
+      });
+    }
   }
   return data;
 }
@@ -202,6 +213,7 @@ function validateClassification(graph, object, errors, warnings) {
   if (data.citation_refs.some((ref) => graph.byId.get(ref)?.data.source_ref !== data.source_ref)) {
     addError(errors, 'SOURCE_CANDIDATE_UNOBSERVED', object);
   }
+  if (data.status === 'superseded') return;
   if (data.primary_source_type === 'unknown') warnings.push({
     code: 'SOURCE_TYPE_UNKNOWN', id: data.id, path: object.path,
   });
@@ -297,6 +309,27 @@ export async function validateAnswerWorkspace({ workspace }) {
     const previous = attempts.get(key);
     if (previous) addError(errors, 'SAMPLE_SLOT_CONFLICT', object, { duplicate_of: previous.data.id });
     else attempts.set(key, object);
+  }
+  const sourceIds = new Set(graph.objects
+    .filter(({ data }) => data.record_type === 'citation_observation'
+      && data.status !== 'superseded')
+    .map(({ data }) => data.source_ref));
+  if (sourceIds.size > 0) {
+    const queued = [...sourceIds]
+      .map((id) => graph.byId.get(id)?.data)
+      .filter((source) => source?.classification_queue
+        && source.classification_queue.status !== 'classified');
+    if (queued.length > 0) {
+      const threshold = queued[0].classification_queue.threshold;
+      warnings.push({
+        code: sourceIds.size >= threshold
+          ? 'SOURCE_CLASSIFICATION_BATCH_READY'
+          : 'SOURCE_CLASSIFICATION_DEFERRED',
+        unique_source_count: sourceIds.size,
+        threshold,
+        remaining_to_batch: Math.max(0, threshold - sourceIds.size),
+      });
+    }
   }
   return { errors, warnings };
 }
