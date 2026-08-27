@@ -1,0 +1,24 @@
+{
+  "schema_version": "m7-fixture-human-decision/1.0.0",
+  "decision_kind": "decision_dimension",
+  "candidate_ref": "DDM-M7-CANDIDATE-001",
+  "validated_id": "DDM-M7-VALIDATED-001",
+  "factor_id": "DDM-M7-FACTOR-001",
+  "validation_decision": {
+    "decided_by": "Fixture Dimension Reviewer",
+    "decided_at": "2026-08-27T00:00:00Z",
+    "decision_ref": "fixture://decision/m7-ddm-validation-fresh-001",
+    "verdict": "validated",
+    "reason": "Two synthetic reviewed observations support the dimension."
+  },
+  "factor_decision": {
+    "decided_by": "Fixture Factor Reviewer",
+    "decided_at": "2026-08-27T00:01:00Z",
+    "decision_ref": "fixture://decision/m7-ddm-factor-fresh-001",
+    "verdict": "promoted",
+    "reason": "The dimension affects a synthetic recommendation and exclusion."
+  },
+  "conversation_history_used": false,
+  "fresh_process_required": true,
+  "real_execution_authorized": false
+}

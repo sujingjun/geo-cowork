@@ -88,7 +88,7 @@
         "collector_profile_version": { "type": "string", "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$" },
         "run_ref": { "type": "string", "pattern": "^RUN-(?:[A-Z0-9]+-)*[A-Z0-9]+$" },
         "slot_key": { "$ref": "common#/$defs/sha256" },
-        "ordinal": { "enum": [1, 2, 3] },
+        "ordinal": { "enum": [1, 2] },
         "attempt_no": { "type": "integer", "minimum": 1 },
         "retry_of_ref": { "type": "string", "pattern": "^SMP-(?:[A-Z0-9]+-)*[A-Z0-9]+$" },
         "outcome": { "enum": ["success", "refusal", "timeout", "no_result", "challenge", "cancelled", "system_failure"] },
@@ -443,7 +443,7 @@
               "slot_key": { "$ref": "common#/$defs/sha256" },
               "query_ref": { "type": "string", "pattern": "^Q-(?:[A-Z0-9]+-)*[A-Z0-9]+$" },
               "platform": { "enum": ["chatgpt", "gemini", "perplexity", "google_ai", "claude"] },
-              "ordinal": { "enum": [1, 2, 3] },
+              "ordinal": { "enum": [1, 2] },
               "completed_steps": { "$ref": "common#/$defs/stringArray" },
               "step_proofs": { "type": "object", "additionalProperties": { "type": "string", "minLength": 1 } },
               "attempt_refs": { "$ref": "common#/$defs/stringArray" },
@@ -458,6 +458,7 @@
           "properties": {
             "scope_key": { "type": "string", "minLength": 1 },
             "owner_id": { "type": "string", "minLength": 1 },
+            "revision": { "type": "integer", "minimum": 1 },
             "acquired_at": { "$ref": "common#/$defs/rfc3339" },
             "heartbeat_at": { "$ref": "common#/$defs/rfc3339" },
             "expires_at": { "$ref": "common#/$defs/rfc3339" }

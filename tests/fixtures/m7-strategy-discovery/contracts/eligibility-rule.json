@@ -1,0 +1,22 @@
+{
+  "schema_version": "m7-strategy-eligibility-rule/1.0.0",
+  "id": "m7-strategy-eligibility-test-v1",
+  "version": "1.0.0",
+  "scope": "synthetic-pricing-clarity",
+  "dimension_normalization": {
+    "source_field": "answer_review.exploratory.decision_dimension_candidates",
+    "unicode": "NFC",
+    "trim": true,
+    "case": "lower_ascii",
+    "empty": "insufficient"
+  },
+  "minimums": {
+    "related_formal_queries": 2,
+    "distinct_platforms": 2,
+    "user_interest_evidence_status": "approved",
+    "product_gap_status": "open",
+    "product_gap_approval_required": true
+  },
+  "caller_reported_checks": "reject",
+  "real_execution_authorized": false
+}

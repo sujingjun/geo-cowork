@@ -1,0 +1,20 @@
+{
+  "schema_version": "m7-strategy-flow-plan/1.0.0",
+  "workspace_scope": "test_only",
+  "merchant_ref": "TMT-M6-TEST-001",
+  "cycle_review_ref": "CRV-M6-CYCLE-ONE-DECIDED-001",
+  "strategy_snapshot_ref": "CIS-M7-STRATEGY-001",
+  "commands": [
+    "assess",
+    "propose-dimensions",
+    "assemble-output",
+    "trace"
+  ],
+  "human_decisions": [
+    "decisions/strategy-proceed.json",
+    "decisions/dimension-factor.json",
+    "decisions/goal-selection.json"
+  ],
+  "network_access": false,
+  "real_execution_authorized": false
+}

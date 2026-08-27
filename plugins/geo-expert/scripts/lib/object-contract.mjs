@@ -8,6 +8,7 @@ import matter from 'gray-matter';
 import {
   assertNoSymlinkPath,
   assertSafeRelativePath,
+  compareUtf8,
   resolveWithin,
   sha256,
   stableStringify,
@@ -25,6 +26,8 @@ const M2 = await loadSchema('m2-record-types.schema.json');
 const M3 = await loadSchema('m3-record-types.schema.json');
 const M4 = await loadSchema('m4-record-types.schema.json');
 const M5 = await loadSchema('m5-record-types.schema.json');
+const M6 = await loadSchema('m6-record-types.schema.json');
+const M7 = await loadSchema('m7-record-types.schema.json');
 
 export class ObjectContractError extends Error {
   constructor(code, message, diagnostics = []) {
@@ -37,7 +40,7 @@ export class ObjectContractError extends Error {
 
 function mergeDefinitions() {
   const definitions = new Map();
-  for (const schema of [M2, M3, M4, M5]) {
+  for (const schema of [M2, M3, M4, M5, M6, M7]) {
     for (const [recordType, definition] of Object.entries(schema.$defs)) {
       const prior = definitions.get(recordType);
       const existing = prior ?? {
@@ -200,7 +203,7 @@ export function validateObjectData(input, { path: pathLabel = '<memory>' } = {})
   }
   if (data.record_type === 'run') {
     const refs = [...data.input_refs].sort();
-    const versionEntries = Object.entries(data.input_versions).sort(([a], [b]) => a.localeCompare(b));
+    const versionEntries = Object.entries(data.input_versions).sort(([a], [b]) => compareUtf8(a, b));
     const versionRefs = versionEntries.map(([ref]) => ref);
     if (stableStringify(refs) !== stableStringify(versionRefs)) {
       throw new ObjectContractError('INVALID_INPUT_VERSIONS', `Run input_refs 与 input_versions 不一致（${pathLabel}）`, [{

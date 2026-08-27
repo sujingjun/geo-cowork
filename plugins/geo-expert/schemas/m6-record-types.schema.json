@@ -1,0 +1,450 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://geo-cowork.local/schemas/m6-record-types-v1.json",
+  "$defs": {
+    "test_merchant": {
+      "x-id-prefix": "TMT-",
+      "x-statuses": ["draft", "frozen", "superseded"],
+      "required": [
+        "test_scope", "workspace_id", "workspace_namespace", "display_name",
+        "identity", "provenance", "real_workspace_forbidden"
+      ],
+      "properties": {
+        "workspace_id": { "type": "string", "pattern": "^ws_[a-z0-9]{26}$" },
+        "workspace_namespace": { "type": "string", "pattern": "^[a-z0-9][a-z0-9-]*$" },
+        "display_name": { "type": "string", "minLength": 1 },
+        "identity": {
+          "type": "object",
+          "required": ["legal_entity_kind", "canonical_locator", "real_brand_identity_claimed"],
+          "properties": {
+            "legal_entity_kind": { "const": "fictitious" },
+            "canonical_locator": { "type": "string", "pattern": "^https://[^/]+\\.invalid(?:/|$)" },
+            "real_brand_identity_claimed": { "const": false }
+          },
+          "additionalProperties": false
+        },
+        "provenance": {
+          "type": "object",
+          "required": ["kind", "usage", "decision_ref"],
+          "properties": {
+            "kind": { "const": "synthetic" },
+            "usage": { "const": "test_only" },
+            "decision_ref": { "type": "string", "minLength": 1 },
+            "semantic_projection_ref": { "type": "string", "minLength": 1 }
+          },
+          "additionalProperties": false
+        },
+        "real_workspace_forbidden": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": { "type": "string", "minLength": 1 }
+        },
+        "approval": { "$ref": "common#/$defs/approval" },
+        "supersedes_ref": { "type": "string", "pattern": "^TMT-(?:[A-Z0-9]+-)*[A-Z0-9]+$" }
+      },
+      "allOf": [
+        {
+          "if": { "properties": { "status": { "const": "frozen" } }, "required": ["status"] },
+          "then": { "required": ["approval"] }
+        }
+      ]
+    },
+    "cycle_input_snapshot": {
+      "x-id-prefix": "CIS-",
+      "x-statuses": ["recorded", "superseded"],
+      "required": [
+        "test_scope", "merchant_ref", "cycle_ref", "snapshot_kind", "manifest",
+        "source_entries", "artifact_entries", "run_ref"
+      ],
+      "properties": {
+        "merchant_ref": { "type": "string", "pattern": "^TMT-(?:[A-Z0-9]+-)*[A-Z0-9]+$" },
+        "cycle_ref": { "type": "string", "pattern": "^CYC-(?:[A-Z0-9]+-)*[A-Z0-9]+$" },
+        "snapshot_kind": { "enum": ["freeze", "transition", "review", "strategy"] },
+        "manifest": {
+          "type": "object",
+          "required": ["schema_version", "artifact_path", "sha256", "fingerprint"],
+          "properties": {
+            "schema_version": { "const": "cycle-input-snapshot/1.0.0" },
+            "artifact_path": { "type": "string", "minLength": 1 },
+            "sha256": { "$ref": "common#/$defs/sha256" },
+            "fingerprint": { "$ref": "common#/$defs/sha256" }
+          },
+          "additionalProperties": false
+        },
+        "source_entries": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "required": [
+              "entry_key", "object_id", "record_type", "object_version", "object_path",
+              "content_sha256", "file_sha256", "snapshot_path", "snapshot_sha256"
+            ],
+            "properties": {
+              "entry_key": { "$ref": "common#/$defs/sha256" },
+              "object_id": { "type": "string", "pattern": "^[A-Z][A-Z0-9]*(?:-[A-Z0-9]+)+$" },
+              "record_type": { "type": "string", "minLength": 1 },
+              "object_version": { "type": "string", "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$" },
+              "object_path": { "type": "string", "minLength": 1 },
+              "content_sha256": { "$ref": "common#/$defs/sha256" },
+              "file_sha256": { "$ref": "common#/$defs/sha256" },
+              "snapshot_path": { "type": "string", "minLength": 1 },
+              "snapshot_sha256": { "$ref": "common#/$defs/sha256" }
+            },
+            "additionalProperties": false
+          }
+        },
+        "artifact_entries": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "required": [
+              "entry_key", "role", "source_path", "snapshot_path", "media_type",
+              "source_sha256", "snapshot_sha256"
+            ],
+            "properties": {
+              "entry_key": { "$ref": "common#/$defs/sha256" },
+              "role": {
+                "enum": [
+                  "measurement_contract", "signal_rule", "sensitive_data_policy",
+                  "raw_manifest", "rubric", "other_contract"
+                ]
+              },
+              "source_path": { "type": "string", "minLength": 1 },
+              "snapshot_path": { "type": "string", "minLength": 1 },
+              "media_type": { "type": "string", "minLength": 1 },
+              "source_sha256": { "$ref": "common#/$defs/sha256" },
+              "snapshot_sha256": { "$ref": "common#/$defs/sha256" }
+            },
+            "additionalProperties": false
+          }
+        },
+        "base_freeze_snapshot_version": { "$ref": "common#/$defs/refVersion" },
+        "pre_review_transition_snapshot_versions": {
+          "type": "array",
+          "items": { "$ref": "common#/$defs/refVersion" }
+        },
+        "pre_review_entry_keys": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": { "$ref": "common#/$defs/sha256" }
+        },
+        "run_ref": { "type": "string", "pattern": "^RUN-(?:[A-Z0-9]+-)*[A-Z0-9]+$" },
+        "supersedes_ref": { "type": "string", "pattern": "^CIS-(?:[A-Z0-9]+-)*[A-Z0-9]+$" }
+      },
+      "allOf": [
+        {
+          "if": { "properties": { "snapshot_kind": { "const": "review" } }, "required": ["snapshot_kind"] },
+          "then": {
+            "required": [
+              "base_freeze_snapshot_version", "pre_review_transition_snapshot_versions",
+              "pre_review_entry_keys"
+            ]
+          }
+        }
+      ]
+    },
+    "cycle_transition": {
+      "x-id-prefix": "CTR-",
+      "x-statuses": ["recorded", "superseded"],
+      "required": [
+        "test_scope", "cycle_ref", "goal_ref", "operation_id", "operation_fingerprint",
+        "expected_cycle_version", "input_snapshot_version", "gate_snapshot_version",
+        "from_status", "to_status", "from_stage", "to_stage", "required_gate_entry_keys",
+        "lease_revision", "actor"
+      ],
+      "properties": {
+        "cycle_ref": { "type": "string", "pattern": "^CYC-(?:[A-Z0-9]+-)*[A-Z0-9]+$" },
+        "goal_ref": { "type": ["string", "null"], "pattern": "^GOAL-(?:[A-Z0-9]+-)*[A-Z0-9]+$" },
+        "supersedes_ref": { "type": "string", "pattern": "^CTR-(?:[A-Z0-9]+-)*[A-Z0-9]+$" },
+        "operation_id": { "type": "string", "minLength": 1 },
+        "operation_fingerprint": { "$ref": "common#/$defs/sha256" },
+        "expected_cycle_version": { "type": "string", "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$" },
+        "input_snapshot_version": { "$ref": "common#/$defs/refVersion" },
+        "gate_snapshot_version": { "$ref": "common#/$defs/refVersion" },
+        "from_status": { "enum": ["proposed", "active", "waiting_human", "completed", "cancelled", "superseded"] },
+        "to_status": { "enum": ["proposed", "active", "waiting_human", "completed", "cancelled", "superseded"] },
+        "from_stage": { "type": "string", "minLength": 1 },
+        "to_stage": { "type": "string", "minLength": 1 },
+        "required_gate_entry_keys": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": { "$ref": "common#/$defs/sha256" }
+        },
+        "lease_revision": { "type": "integer", "minimum": 1 },
+        "actor": {
+          "type": "object",
+          "required": ["kind"],
+          "properties": {
+            "kind": { "enum": ["deterministic_tool", "fixture_human"] },
+            "decision_ref": { "type": "string", "minLength": 1 }
+          },
+          "additionalProperties": false
+        }
+      }
+    },
+    "analytics_observation": {
+      "x-id-prefix": "ANO-",
+      "x-statuses": ["recorded", "superseded"],
+      "required": [
+        "test_scope", "merchant_ref", "cycle_ref", "goal_ref", "run_ref", "adapter",
+        "measurement_contract", "sensitive_data_policy", "time_window", "metrics",
+        "artifacts", "quality", "causal_claim"
+      ],
+      "properties": {
+        "merchant_ref": { "type": "string", "pattern": "^TMT-(?:[A-Z0-9]+-)*[A-Z0-9]+$" },
+        "cycle_ref": { "type": "string", "pattern": "^CYC-(?:[A-Z0-9]+-)*[A-Z0-9]+$" },
+        "goal_ref": { "type": "string", "pattern": "^GOAL-(?:[A-Z0-9]+-)*[A-Z0-9]+$" },
+        "run_ref": { "type": "string", "pattern": "^RUN-(?:[A-Z0-9]+-)*[A-Z0-9]+$" },
+        "adapter": {
+          "type": "object",
+          "required": ["kind", "name", "version", "access_mode", "authorization_ref"],
+          "properties": {
+            "kind": { "enum": ["fixture", "ga4", "gsc", "business_file", "server_log"] },
+            "name": { "type": "string", "minLength": 1 },
+            "version": { "type": "string", "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$" },
+            "access_mode": { "enum": ["fixture", "read_only"] },
+            "authorization_ref": { "type": "string", "minLength": 1 }
+          },
+          "additionalProperties": false
+        },
+        "measurement_contract": {
+          "type": "object",
+          "required": ["version", "artifact_path", "artifact_entry_key", "sha256"],
+          "properties": {
+            "version": { "type": "string", "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$" },
+            "artifact_path": { "type": "string", "minLength": 1 },
+            "artifact_entry_key": { "$ref": "common#/$defs/sha256" },
+            "sha256": { "$ref": "common#/$defs/sha256" }
+          },
+          "additionalProperties": false
+        },
+        "sensitive_data_policy": {
+          "type": "object",
+          "required": ["id", "version", "artifact_entry_key", "sha256"],
+          "properties": {
+            "id": { "type": "string", "minLength": 1 },
+            "version": { "type": "string", "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$" },
+            "artifact_entry_key": { "$ref": "common#/$defs/sha256" },
+            "sha256": { "$ref": "common#/$defs/sha256" }
+          },
+          "additionalProperties": false
+        },
+        "time_window": {
+          "type": "object",
+          "required": ["starts_at", "ends_at", "as_of"],
+          "properties": {
+            "starts_at": { "$ref": "common#/$defs/rfc3339" },
+            "ends_at": { "$ref": "common#/$defs/rfc3339" },
+            "as_of": { "$ref": "common#/$defs/rfc3339" }
+          },
+          "additionalProperties": false
+        },
+        "metrics": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "required": ["metric_id", "definition", "value", "unit", "dimensions", "state", "limitation"],
+            "properties": {
+              "metric_id": { "type": "string", "minLength": 1 },
+              "definition": { "type": "string", "minLength": 1 },
+              "value": { "type": ["number", "null"] },
+              "unit": { "type": "string", "minLength": 1 },
+              "dimensions": {
+                "type": "object",
+                "additionalProperties": { "type": ["string", "number", "boolean", "null"] }
+              },
+              "state": { "enum": ["observed", "unavailable", "partial"] },
+              "limitation": { "type": ["string", "null"] }
+            },
+            "additionalProperties": false
+          }
+        },
+        "artifacts": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "required": ["path", "sha256", "media_type"],
+            "properties": {
+              "path": { "type": "string", "minLength": 1 },
+              "sha256": { "$ref": "common#/$defs/sha256" },
+              "media_type": { "type": "string", "minLength": 1 }
+            },
+            "additionalProperties": false
+          }
+        },
+        "quality": {
+          "type": "object",
+          "required": ["completeness", "warnings"],
+          "properties": {
+            "completeness": { "enum": ["complete", "partial", "unavailable"] },
+            "warnings": { "$ref": "common#/$defs/stringArray" }
+          },
+          "additionalProperties": false
+        },
+        "causal_claim": { "const": false },
+        "supersedes_ref": { "type": "string", "pattern": "^ANO-(?:[A-Z0-9]+-)*[A-Z0-9]+$" }
+      }
+    },
+    "business_signal": {
+      "x-id-prefix": "BSIG-",
+      "x-statuses": ["computed", "superseded"],
+      "required": [
+        "test_scope", "merchant_ref", "cycle_ref", "goal_ref", "run_ref",
+        "observation_versions", "measurement_contract", "rule", "signal_kind",
+        "denominator", "calculation", "causal_claim"
+      ],
+      "properties": {
+        "merchant_ref": { "type": "string", "pattern": "^TMT-(?:[A-Z0-9]+-)*[A-Z0-9]+$" },
+        "cycle_ref": { "type": "string", "pattern": "^CYC-(?:[A-Z0-9]+-)*[A-Z0-9]+$" },
+        "goal_ref": { "type": "string", "pattern": "^GOAL-(?:[A-Z0-9]+-)*[A-Z0-9]+$" },
+        "run_ref": { "type": "string", "pattern": "^RUN-(?:[A-Z0-9]+-)*[A-Z0-9]+$" },
+        "observation_versions": {
+          "type": "array", "minItems": 1, "items": { "$ref": "common#/$defs/refVersion" }
+        },
+        "measurement_contract": {
+          "type": "object",
+          "required": ["version", "artifact_path", "artifact_entry_key", "sha256"],
+          "properties": {
+            "version": { "type": "string", "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$" },
+            "artifact_path": { "type": "string", "minLength": 1 },
+            "artifact_entry_key": { "$ref": "common#/$defs/sha256" },
+            "sha256": { "$ref": "common#/$defs/sha256" }
+          },
+          "additionalProperties": false
+        },
+        "rule": {
+          "type": "object",
+          "required": ["id", "version", "artifact_path", "artifact_entry_key", "sha256"],
+          "properties": {
+            "id": { "type": "string", "minLength": 1 },
+            "version": { "type": "string", "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$" },
+            "artifact_path": { "type": "string", "minLength": 1 },
+            "artifact_entry_key": { "$ref": "common#/$defs/sha256" },
+            "sha256": { "$ref": "common#/$defs/sha256" }
+          },
+          "additionalProperties": false
+        },
+        "signal_kind": {
+          "enum": ["ai_visit", "ai_registration", "registration_trend", "search_visibility", "server_referrer", "custom"]
+        },
+        "denominator": {
+          "type": "object",
+          "required": ["definition", "value", "state"],
+          "properties": {
+            "definition": { "type": "string", "minLength": 1 },
+            "value": { "type": ["number", "null"] },
+            "state": { "enum": ["known", "zero", "unknown", "not_applicable"] }
+          },
+          "additionalProperties": false
+        },
+        "calculation": {
+          "type": "object",
+          "required": ["value", "unit", "state", "explanation"],
+          "properties": {
+            "value": { "type": ["number", "null"] },
+            "unit": { "type": "string", "minLength": 1 },
+            "state": { "enum": ["signal_observed", "no_signal", "insufficient_data", "negative", "unavailable"] },
+            "explanation": { "type": "string", "minLength": 1 }
+          },
+          "additionalProperties": false
+        },
+        "causal_claim": { "const": false },
+        "supersedes_ref": { "type": "string", "pattern": "^BSIG-(?:[A-Z0-9]+-)*[A-Z0-9]+$" }
+      }
+    },
+    "cycle_review": {
+      "x-id-prefix": "CRV-",
+      "x-statuses": ["draft", "waiting_human", "decided", "superseded"],
+      "required": [
+        "test_scope", "merchant_ref", "cycle_ref", "reviewed_cycle_input_version",
+        "review_input_snapshot_version", "review_input_fingerprint", "goal_results",
+        "next_cycle_candidate_inputs"
+      ],
+      "properties": {
+        "merchant_ref": { "type": "string", "pattern": "^TMT-(?:[A-Z0-9]+-)*[A-Z0-9]+$" },
+        "cycle_ref": { "type": "string", "pattern": "^CYC-(?:[A-Z0-9]+-)*[A-Z0-9]+$" },
+        "reviewed_cycle_input_version": { "type": "string", "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$" },
+        "review_input_snapshot_version": { "$ref": "common#/$defs/refVersion" },
+        "review_input_fingerprint": { "$ref": "common#/$defs/sha256" },
+        "goal_results": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "required": [
+              "goal_entry_key", "perception_goal", "observations",
+              "business_signal_entry_keys", "limitations", "forbidden_conclusions"
+            ],
+            "properties": {
+              "goal_entry_key": { "$ref": "common#/$defs/sha256" },
+              "perception_goal": { "enum": ["achieved", "partial", "not_achieved", "inconclusive"] },
+              "observations": { "$ref": "common#/$defs/stringArray", "type": "array", "minItems": 1 },
+              "business_signal_entry_keys": {
+                "type": "array", "minItems": 1, "items": { "$ref": "common#/$defs/sha256" }
+              },
+              "limitations": { "$ref": "common#/$defs/stringArray", "type": "array", "minItems": 1 },
+              "forbidden_conclusions": { "$ref": "common#/$defs/stringArray", "type": "array", "minItems": 1 }
+            },
+            "additionalProperties": false
+          }
+        },
+        "next_cycle_candidate_inputs": {
+          "type": "array",
+          "items": { "type": "object" }
+        },
+        "approval": { "$ref": "common#/$defs/approval" },
+        "supersedes_ref": { "type": "string", "pattern": "^CRV-(?:[A-Z0-9]+-)*[A-Z0-9]+$" }
+      },
+      "allOf": [
+        {
+          "if": { "properties": { "status": { "const": "decided" } }, "required": ["status"] },
+          "then": { "required": ["approval", "supersedes_ref"] }
+        }
+      ]
+    },
+    "cycle": {
+      "properties": {
+        "scope": { "enum": ["test_merchant_engineering"] },
+        "merchant_ref": { "type": "string", "pattern": "^TMT-(?:[A-Z0-9]+-)*[A-Z0-9]+$" },
+        "cycle_number": { "type": "integer", "minimum": 1 },
+        "aggregate_stage": {
+          "enum": [
+            "prepared", "frozen", "baseline_recorded", "diagnosis_ready",
+            "adoption_decided", "publication_confirmed", "technical_retest_completed",
+            "answer_retest_completed", "analytics_recorded", "review_waiting_human",
+            "review_decided", "cancelled_no_adoption", "mixed"
+          ]
+        },
+        "completion_scope": { "enum": ["none", "full", "partial"] },
+        "goal_tracks": { "type": "array", "minItems": 1, "items": { "type": "object" } },
+        "transition_refs": { "$ref": "common#/$defs/stringArray" },
+        "cycle_review_version": { "type": ["object", "null"] },
+        "predecessor_review_version": { "type": ["object", "null"] },
+        "goal_selection_version": { "type": ["object", "null"] }
+      }
+    },
+    "evidence": {
+      "properties": {
+        "observation_versions": {
+          "type": "array",
+          "minItems": 1,
+          "items": { "$ref": "common#/$defs/refVersion" }
+        }
+      }
+    },
+    "run": {
+      "properties": {
+        "merchant_ref": { "type": "string", "pattern": "^TMT-(?:[A-Z0-9]+-)*[A-Z0-9]+$" },
+        "cycle_ref": { "type": "string", "pattern": "^CYC-(?:[A-Z0-9]+-)*[A-Z0-9]+$" },
+        "cycle_version": { "type": "string", "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$" },
+        "transition_plan_sha256": { "$ref": "common#/$defs/sha256" }
+      }
+    }
+  }
+}

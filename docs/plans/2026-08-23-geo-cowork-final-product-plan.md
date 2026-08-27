@@ -358,7 +358,7 @@ ChatGPT、Gemini、Perplexity、Google AI Overviews、Claude。
 
 探索性研究可单次采样，不进入正式趋势。
 
-正式 Baseline / Retest：每个平台 × 每条 Query 独立采样 3 次。
+正式 Baseline / Retest：每个平台 × 每条 Query 独立采样 2 次。
 
 ### 7.3 Collector Profile
 

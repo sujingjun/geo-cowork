@@ -1,0 +1,15 @@
+{
+  "schema_version": "m7-fixture-human-decision/1.0.0",
+  "decision_kind": "cycle_goal_selection",
+  "draft_ref": "GSEL-M7-DRAFT-001",
+  "selected_candidate_ref": "GCD-M7-PRODUCT-001",
+  "reason": "Fixture human selected one Product Gap candidate for Cycle 2.",
+  "approval": {
+    "approved_by": "Fixture Cycle Reviewer",
+    "approved_at": "2026-08-27T00:02:00Z",
+    "decision_ref": "fixture://decision/m7-goal-selection-fresh-001"
+  },
+  "conversation_history_used": false,
+  "fresh_process_required": true,
+  "real_execution_authorized": false
+}
