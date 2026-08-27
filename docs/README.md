@@ -44,6 +44,8 @@
 | --- | --- | --- |
 | 最终产品方案 | [`plans/2026-08-23-geo-cowork-final-product-plan.md`](plans/2026-08-23-geo-cowork-final-product-plan.md) | `approved`；M2—M8 当前 Owner 批准产品基线，覆盖知识治理、Gap 模型、真实消费者平台测试、GEO Cycle、Agent/Skill/Tool 与开源吸收方案 |
 | M2 启动 Handoff | [`handoff/2026-08-23-m2-contract-provenance-kernel-handoff.md`](handoff/2026-08-23-m2-contract-provenance-kernel-handoff.md) | `approved` 历史执行输入；实际结果见 M2 Record |
+| M6—M8 测试商户总 Lead Handoff | [`handoff/2026-08-27-m6-m8-test-merchant-engineering-lead-handoff.md`](handoff/2026-08-27-m6-m8-test-merchant-engineering-lead-handoff.md) | `proposed`；独立测试商户工程闭环、总 Lead 委派、Spec 人工门和真实 MyyShop 隔离控制面 |
+| 账号与数据准备 Runbook | [`runbooks/geo-cowork-account-data-readiness.md`](runbooks/geo-cowork-account-data-readiness.md) | `proposed`；测试商户、真实 MyyShop 内测、M5/M6/M8 的最小账号权限、数据包、安全和授权 Checklist |
 
 ## M2 Contract & Provenance Kernel（本地开发验收完成）
 
@@ -122,6 +124,7 @@ Owner 已批准 M5 两槽英文主线、中文可选辅助、同对象语义合�
 | [`plans/`](plans/2026-08-23-geo-cowork-final-product-plan.md) | 产品方案、实施顺序、技术方案、测试和停止条件 |
 | [`tasks/`](tasks/2026-08-20-plugin-initialization.md) | 可独立执行、验证和交接的最小工作单元 |
 | [`records/`](records/2026-08-20-plugin-initialization-acceptance.md) | 实际命令、结果、失败、修复与未验证项 |
+| [`runbooks/`](runbooks/geo-cowork-account-data-readiness.md) | 账号、数据、运行、恢复和发布前操作清单 |
 | [`wiki/`](wiki/index.md) | 项目知识库导航摘要 |
 | [`handoff/`](handoff/2026-08-24-m2-m4-integrated-optimization-handoff.md) | 跨 Session 或跨 Agent 的继承基线、第一动作和停止条件 |
 
