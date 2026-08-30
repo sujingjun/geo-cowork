@@ -1,0 +1,43 @@
+{
+  "version": "1.0.0",
+  "status": "proposed",
+  "updated": "2026-08-30",
+  "counts": {
+    "knowledge_entries": 120,
+    "source_facts": 94,
+    "derived_answer_cards": 26,
+    "site_pages": 31,
+    "pr_topics": 12
+  },
+  "canonical_format": "markdown",
+  "workspace_path": "workspaces/myyshop/strategy/business-brand-knowledge-v1",
+  "files": [
+    "01-business-input-template.md",
+    "05-circle1-business-readiness.md",
+    "06-source-notes.md",
+    "README.md",
+    "checklist/01-brand-identity.md",
+    "checklist/02-positioning-strategy.md",
+    "checklist/03-audience-lifecycle.md",
+    "checklist/04-products-services.md",
+    "checklist/05-commercial-rules.md",
+    "checklist/06-trust-safety.md",
+    "checklist/07-proof-authority.md",
+    "checklist/08-voice-messaging.md",
+    "checklist/09-answer-cards-1.md",
+    "checklist/09-answer-cards-2.md",
+    "checklist/09-answer-cards-3.md",
+    "checklist/README.md",
+    "data/knowledge-checklist-index.csv",
+    "deliverables/README.md",
+    "pr/README.md",
+    "pr/flagship-positioning-upgrade-draft.md",
+    "pr/topics-01-06.md",
+    "pr/topics-07-12.md",
+    "site/README.md",
+    "site/pages-01-08.md",
+    "site/pages-09-16.md",
+    "site/pages-17-24.md",
+    "site/pages-25-31.md"
+  ]
+}

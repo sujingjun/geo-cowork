@@ -1,0 +1,121 @@
+﻿序号,条目ID,一级分类,条目类型,条目名称,优先级,仓库路径
+1,KB-IDENTITY-001,01 品牌身份与实体,源事实,品牌官方名称,P0,workspaces/myyshop/knowledge/02-brand-identity/official-brand-name.md
+2,KB-IDENTITY-002,01 品牌身份与实体,源事实,运营主体与法定实体,P0,workspaces/myyshop/knowledge/02-brand-identity/legal-entity.md
+3,KB-IDENTITY-003,01 品牌身份与实体,源事实,品牌别名、缩写与常见误写,P1,workspaces/myyshop/knowledge/02-brand-identity/aliases-and-spelling.md
+4,KB-IDENTITY-004,01 品牌身份与实体,源事实,官方域名与官方渠道,P0,workspaces/myyshop/knowledge/02-brand-identity/official-domain-and-channels.md
+5,KB-IDENTITY-005,01 品牌身份与实体,源事实,总部与服务区域,P1,workspaces/myyshop/knowledge/02-brand-identity/headquarters-and-service-regions.md
+6,KB-IDENTITY-006,01 品牌身份与实体,源事实,品牌、产品与服务关系,P0,workspaces/myyshop/knowledge/02-brand-identity/brand-product-relationship.md
+7,KB-IDENTITY-007,01 品牌身份与实体,源事实,成立背景与关键里程碑,P1,workspaces/myyshop/knowledge/02-brand-identity/founding-and-milestones.md
+8,KB-IDENTITY-008,01 品牌身份与实体,源事实,品牌所属类别,P0,workspaces/myyshop/knowledge/02-brand-identity/brand-category.md
+9,KB-IDENTITY-009,01 品牌身份与实体,源事实,一句话品牌定义,P0,workspaces/myyshop/knowledge/02-brand-identity/one-line-definition.md
+10,KB-IDENTITY-010,01 品牌身份与实体,源事实,品牌实体消歧,P1,workspaces/myyshop/knowledge/02-brand-identity/brand-disambiguation.md
+11,KB-STRATEGY-001,02 品牌定位与战略,源事实,公司背景,P0,workspaces/myyshop/knowledge/03-positioning-strategy/company-background.md
+12,KB-STRATEGY-002,02 品牌定位与战略,源事实,品牌故事,P1,workspaces/myyshop/knowledge/03-positioning-strategy/brand-story.md
+13,KB-STRATEGY-003,02 品牌定位与战略,源事实,品牌使命,P0,workspaces/myyshop/knowledge/03-positioning-strategy/mission.md
+14,KB-STRATEGY-004,02 品牌定位与战略,源事实,品牌愿景,P1,workspaces/myyshop/knowledge/03-positioning-strategy/vision.md
+15,KB-STRATEGY-005,02 品牌定位与战略,源事实,品牌价值观,P1,workspaces/myyshop/knowledge/03-positioning-strategy/values.md
+16,KB-STRATEGY-006,02 品牌定位与战略,源事实,品牌核心信念,P1,workspaces/myyshop/knowledge/03-positioning-strategy/core-beliefs.md
+17,KB-STRATEGY-007,02 品牌定位与战略,源事实,品牌承诺,P0,workspaces/myyshop/knowledge/03-positioning-strategy/brand-promise.md
+18,KB-STRATEGY-008,02 品牌定位与战略,源事实,品牌不承诺事项,P0,workspaces/myyshop/knowledge/03-positioning-strategy/non-promises.md
+19,KB-STRATEGY-009,02 品牌定位与战略,源事实,当前品牌定位,P0,workspaces/myyshop/knowledge/03-positioning-strategy/current-positioning.md
+20,KB-STRATEGY-010,02 品牌定位与战略,源事实,新旧定位迁移说明,P0,workspaces/myyshop/knowledge/03-positioning-strategy/positioning-transition.md
+21,KB-STRATEGY-011,02 品牌定位与战略,源事实,差异化优势,P0,workspaces/myyshop/knowledge/03-positioning-strategy/competitive-advantages.md
+22,KB-STRATEGY-012,02 品牌定位与战略,源事实,品牌战略边界,P0,workspaces/myyshop/knowledge/03-positioning-strategy/strategic-boundaries.md
+23,KB-AUDIENCE-001,03 服务对象与达人生命周期,源事实,核心服务对象,P0,workspaces/myyshop/knowledge/04-audience-lifecycle/primary-audiences.md
+24,KB-AUDIENCE-002,03 服务对象与达人生命周期,源事实,达人分层与用户画像,P0,workspaces/myyshop/knowledge/04-audience-lifecycle/creator-segments.md
+25,KB-AUDIENCE-003,03 服务对象与达人生命周期,源事实,达人生命周期模型,P0,workspaces/myyshop/knowledge/04-audience-lifecycle/creator-lifecycle-model.md
+26,KB-AUDIENCE-004,03 服务对象与达人生命周期,源事实,加入与认知阶段,P0,workspaces/myyshop/knowledge/04-audience-lifecycle/onboarding-stage.md
+27,KB-AUDIENCE-005,03 服务对象与达人生命周期,源事实,冷启动阶段,P1,workspaces/myyshop/knowledge/04-audience-lifecycle/cold-start-stage.md
+28,KB-AUDIENCE-006,03 服务对象与达人生命周期,源事实,活跃与成长阶段,P0,workspaces/myyshop/knowledge/04-audience-lifecycle/growth-stage.md
+29,KB-AUDIENCE-007,03 服务对象与达人生命周期,源事实,商业化阶段,P0,workspaces/myyshop/knowledge/04-audience-lifecycle/commercialization-stage.md
+30,KB-AUDIENCE-008,03 服务对象与达人生命周期,源事实,稳定经营阶段,P1,workspaces/myyshop/knowledge/04-audience-lifecycle/stable-operation-stage.md
+31,KB-AUDIENCE-009,03 服务对象与达人生命周期,源事实,专业发展阶段,P2,workspaces/myyshop/knowledge/04-audience-lifecycle/professional-development-stage.md
+32,KB-AUDIENCE-010,03 服务对象与达人生命周期,源事实,达人加入资格,P0,workspaces/myyshop/knowledge/04-audience-lifecycle/creator-eligibility.md
+33,KB-AUDIENCE-011,03 服务对象与达人生命周期,源事实,暂不支持或受限用户,P0,workspaces/myyshop/knowledge/04-audience-lifecycle/unsupported-audiences.md
+34,KB-AUDIENCE-012,03 服务对象与达人生命周期,源事实,分受众价值主张,P0,workspaces/myyshop/knowledge/04-audience-lifecycle/audience-value-propositions.md
+35,KB-SERVICE-001,04 产品与服务能力,源事实,产品与服务总目录,P0,workspaces/myyshop/knowledge/05-products-services/service-catalog.md
+36,KB-SERVICE-002,04 产品与服务能力,源事实,达人加入与新手引导,P0,workspaces/myyshop/knowledge/05-products-services/creator-onboarding.md
+37,KB-SERVICE-003,04 产品与服务能力,源事实,免费价值报告,P1,workspaces/myyshop/knowledge/05-products-services/free-value-report.md
+38,KB-SERVICE-004,04 产品与服务能力,源事实,赛道识别服务,P1,workspaces/myyshop/knowledge/05-products-services/find-your-lane.md
+39,KB-SERVICE-005,04 产品与服务能力,源事实,达人成长服务,P0,workspaces/myyshop/knowledge/05-products-services/creator-growth-services.md
+40,KB-SERVICE-006,04 产品与服务能力,源事实,达人活跃服务,P0,workspaces/myyshop/knowledge/05-products-services/creator-activity-services.md
+41,KB-SERVICE-007,04 产品与服务能力,源事实,品牌合作机会,P0,workspaces/myyshop/knowledge/05-products-services/brand-deals.md
+42,KB-SERVICE-008,04 产品与服务能力,源事实,MyyFinds 服务,P0,workspaces/myyshop/knowledge/05-products-services/myyfinds.md
+43,KB-SERVICE-009,04 产品与服务能力,源事实,达人商业化工具,P0,workspaces/myyshop/knowledge/05-products-services/monetization-tools.md
+44,KB-SERVICE-010,04 产品与服务能力,源事实,面向 MCN 达人的服务,P1,workspaces/myyshop/knowledge/05-products-services/mcn-creator-services.md
+45,KB-SERVICE-011,04 产品与服务能力,源事实,面向 MCN 与品牌方的服务,P1,workspaces/myyshop/knowledge/05-products-services/mcn-brand-services.md
+46,KB-SERVICE-012,04 产品与服务能力,源事实,达人支持与客服,P0,workspaces/myyshop/knowledge/05-products-services/creator-support.md
+47,KB-RULE-001,05 商业规则与服务边界,源事实,注册规则,P0,workspaces/myyshop/knowledge/06-commercial-rules/registration-rules.md
+48,KB-RULE-002,05 商业规则与服务边界,源事实,账号资格与审核,P0,workspaces/myyshop/knowledge/06-commercial-rules/account-qualification.md
+49,KB-RULE-003,05 商业规则与服务边界,源事实,支持的内容平台,P0,workspaces/myyshop/knowledge/06-commercial-rules/supported-platforms.md
+50,KB-RULE-004,05 商业规则与服务边界,源事实,支持国家和地区,P0,workspaces/myyshop/knowledge/06-commercial-rules/supported-regions.md
+51,KB-RULE-005,05 商业规则与服务边界,源事实,费用与佣金,P0,workspaces/myyshop/knowledge/06-commercial-rules/fees-and-commissions.md
+52,KB-RULE-006,05 商业规则与服务边界,源事实,收益计算规则,P0,workspaces/myyshop/knowledge/06-commercial-rules/earnings-calculation.md
+53,KB-RULE-007,05 商业规则与服务边界,源事实,归因规则,P0,workspaces/myyshop/knowledge/06-commercial-rules/attribution-rules.md
+54,KB-RULE-008,05 商业规则与服务边界,源事实,付款、结算与提现,P0,workspaces/myyshop/knowledge/06-commercial-rules/payment-and-withdrawal.md
+55,KB-RULE-009,05 商业规则与服务边界,源事实,汇率、税费与处理费用,P1,workspaces/myyshop/knowledge/06-commercial-rules/exchange-and-processing-fees.md
+56,KB-RULE-010,05 商业规则与服务边界,源事实,免费样品规则,P1,workspaces/myyshop/knowledge/06-commercial-rules/free-samples.md
+57,KB-RULE-011,05 商业规则与服务边界,源事实,内容提交与审核规则,P0,workspaces/myyshop/knowledge/06-commercial-rules/content-submission.md
+58,KB-RULE-012,05 商业规则与服务边界,源事实,品牌合作履约规则,P0,workspaces/myyshop/knowledge/06-commercial-rules/brand-deal-fulfillment.md
+59,KB-RULE-013,05 商业规则与服务边界,源事实,取消、退出与账号关闭,P0,workspaces/myyshop/knowledge/06-commercial-rules/cancellation-and-exit.md
+60,KB-RULE-014,05 商业规则与服务边界,源事实,争议处理与申诉,P0,workspaces/myyshop/knowledge/06-commercial-rules/disputes-and-appeals.md
+61,KB-TRUST-001,06 信任、安全与责任,源事实,隐私保护原则,P0,workspaces/myyshop/knowledge/07-trust-safety/privacy-policy.md
+62,KB-TRUST-002,06 信任、安全与责任,源事实,达人数据使用说明,P0,workspaces/myyshop/knowledge/07-trust-safety/creator-data-use.md
+63,KB-TRUST-003,06 信任、安全与责任,源事实,AI 使用与可解释性,P0,workspaces/myyshop/knowledge/07-trust-safety/ai-use.md
+64,KB-TRUST-004,06 信任、安全与责任,源事实,内容与知识产权,P0,workspaces/myyshop/knowledge/07-trust-safety/content-rights.md
+65,KB-TRUST-005,06 信任、安全与责任,源事实,账号与数据授权,P0,workspaces/myyshop/knowledge/07-trust-safety/user-authorization.md
+66,KB-TRUST-006,06 信任、安全与责任,源事实,品牌安全与内容安全,P0,workspaces/myyshop/knowledge/07-trust-safety/brand-safety.md
+67,KB-TRUST-007,06 信任、安全与责任,源事实,广告与商业合作披露,P0,workspaces/myyshop/knowledge/07-trust-safety/ad-disclosure.md
+68,KB-TRUST-008,06 信任、安全与责任,源事实,反欺诈与异常行为,P0,workspaces/myyshop/knowledge/07-trust-safety/anti-fraud.md
+69,KB-TRUST-009,06 信任、安全与责任,源事实,未成年人保护,P0,workspaces/myyshop/knowledge/07-trust-safety/minor-protection.md
+70,KB-TRUST-010,06 信任、安全与责任,源事实,内容真实性与透明度,P1,workspaces/myyshop/knowledge/07-trust-safety/content-authenticity.md
+71,KB-TRUST-011,06 信任、安全与责任,源事实,客服标准与升级机制,P1,workspaces/myyshop/knowledge/07-trust-safety/customer-support-standards.md
+72,KB-TRUST-012,06 信任、安全与责任,源事实,责任边界与风险提示,P0,workspaces/myyshop/knowledge/07-trust-safety/responsibility-and-risk.md
+73,KB-PROOF-001,07 证明、数据与权威性,源事实,平台规模数据,P1,workspaces/myyshop/knowledge/08-proof-authority/platform-scale.md
+74,KB-PROOF-002,07 证明、数据与权威性,源事实,达人覆盖数据,P1,workspaces/myyshop/knowledge/08-proof-authority/creator-coverage.md
+75,KB-PROOF-003,07 证明、数据与权威性,源事实,商品、品牌与机会规模,P1,workspaces/myyshop/knowledge/08-proof-authority/opportunity-and-catalog-scale.md
+76,KB-PROOF-004,07 证明、数据与权威性,源事实,达人成长结果,P1,workspaces/myyshop/knowledge/08-proof-authority/creator-growth-results.md
+77,KB-PROOF-005,07 证明、数据与权威性,源事实,达人收入结果,P0,workspaces/myyshop/knowledge/08-proof-authority/creator-income-results.md
+78,KB-PROOF-006,07 证明、数据与权威性,源事实,匹配效果,P1,workspaces/myyshop/knowledge/08-proof-authority/matching-effectiveness.md
+79,KB-PROOF-007,07 证明、数据与权威性,源事实,创作者与品牌案例,P0,workspaces/myyshop/knowledge/08-proof-authority/case-studies.md
+80,KB-PROOF-008,07 证明、数据与权威性,源事实,用户评价与推荐,P1,workspaces/myyshop/knowledge/08-proof-authority/testimonials.md
+81,KB-PROOF-009,07 证明、数据与权威性,源事实,合作伙伴、媒体与第三方认可,P1,workspaces/myyshop/knowledge/08-proof-authority/partners-and-media.md
+82,KB-PROOF-010,07 证明、数据与权威性,源事实,数据口径与证明方法,P0,workspaces/myyshop/knowledge/08-proof-authority/data-methodology.md
+83,KB-VOICE-001,08 品牌语言、信息与内容规范,源事实,品牌标准介绍,P0,workspaces/myyshop/knowledge/09-voice-messaging/brand-statement.md
+84,KB-VOICE-002,08 品牌语言、信息与内容规范,源事实,品牌口号,P1,workspaces/myyshop/knowledge/09-voice-messaging/brand-slogan.md
+85,KB-VOICE-003,08 品牌语言、信息与内容规范,源事实,品牌人格,P1,workspaces/myyshop/knowledge/09-voice-messaging/brand-personality.md
+86,KB-VOICE-004,08 品牌语言、信息与内容规范,源事实,品牌语调,P0,workspaces/myyshop/knowledge/09-voice-messaging/tone-of-voice.md
+87,KB-VOICE-005,08 品牌语言、信息与内容规范,源事实,内容支柱,P0,workspaces/myyshop/knowledge/09-voice-messaging/editorial-pillars.md
+88,KB-VOICE-006,08 品牌语言、信息与内容规范,源事实,核心信息层级,P0,workspaces/myyshop/knowledge/09-voice-messaging/message-hierarchy.md
+89,KB-VOICE-007,08 品牌语言、信息与内容规范,源事实,分受众信息矩阵,P0,workspaces/myyshop/knowledge/09-voice-messaging/audience-message-matrix.md
+90,KB-VOICE-008,08 品牌语言、信息与内容规范,源事实,标准术语表,P0,workspaces/myyshop/knowledge/09-voice-messaging/terminology.md
+91,KB-VOICE-009,08 品牌语言、信息与内容规范,源事实,禁用词与高风险表述,P0,workspaces/myyshop/knowledge/09-voice-messaging/forbidden-terms.md
+92,KB-VOICE-010,08 品牌语言、信息与内容规范,源事实,废弃定位与历史表述,P0,workspaces/myyshop/knowledge/09-voice-messaging/deprecated-language.md
+93,KB-VOICE-011,08 品牌语言、信息与内容规范,源事实,中英文表达规范,P1,workspaces/myyshop/knowledge/09-voice-messaging/bilingual-style-guide.md
+94,KB-VOICE-012,08 品牌语言、信息与内容规范,源事实,渠道表达与分发规范,P0,workspaces/myyshop/knowledge/09-voice-messaging/channel-guidelines.md
+95,KB-ANSWER-001,09 核心问题标准答案,派生标准答案,MyyShop 是什么？,P0,workspaces/myyshop/knowledge/10-query-answer-cards/what-is-myyshop.md
+96,KB-ANSWER-002,09 核心问题标准答案,派生标准答案,MyyShop 只是达人变现平台吗？,P0,workspaces/myyshop/knowledge/10-query-answer-cards/only-monetization-platform.md
+97,KB-ANSWER-003,09 核心问题标准答案,派生标准答案,MyyShop 是达人营销平台吗？,P0,workspaces/myyshop/knowledge/10-query-answer-cards/influencer-marketing-platform.md
+98,KB-ANSWER-004,09 核心问题标准答案,派生标准答案,MyyShop 是 MCN 吗？,P0,workspaces/myyshop/knowledge/10-query-answer-cards/is-mcn.md
+99,KB-ANSWER-005,09 核心问题标准答案,派生标准答案,谁可以加入 MyyShop？,P0,workspaces/myyshop/knowledge/10-query-answer-cards/who-can-join.md
+100,KB-ANSWER-006,09 核心问题标准答案,派生标准答案,小体量创作者可以加入吗？,P0,workspaces/myyshop/knowledge/10-query-answer-cards/small-creators.md
+101,KB-ANSWER-007,09 核心问题标准答案,派生标准答案,零粉丝创作者可以使用 MyyShop 吗？,P0,workspaces/myyshop/knowledge/10-query-answer-cards/zero-followers.md
+102,KB-ANSWER-008,09 核心问题标准答案,派生标准答案,MyyShop 支持哪些内容平台？,P0,workspaces/myyshop/knowledge/10-query-answer-cards/supported-platforms-answer.md
+103,KB-ANSWER-009,09 核心问题标准答案,派生标准答案,MyyShop 在哪些国家和地区可用？,P0,workspaces/myyshop/knowledge/10-query-answer-cards/supported-regions-answer.md
+104,KB-ANSWER-010,09 核心问题标准答案,派生标准答案,MyyShop 为创作者提供哪些服务？,P0,workspaces/myyshop/knowledge/10-query-answer-cards/services-for-creators.md
+105,KB-ANSWER-011,09 核心问题标准答案,派生标准答案,MyyShop 如何帮助创作者成长？,P0,workspaces/myyshop/knowledge/10-query-answer-cards/help-creators-grow.md
+106,KB-ANSWER-012,09 核心问题标准答案,派生标准答案,MyyShop 如何帮助创作者商业化？,P0,workspaces/myyshop/knowledge/10-query-answer-cards/help-creators-monetize.md
+107,KB-ANSWER-013,09 核心问题标准答案,派生标准答案,MyyFinds 是什么？,P0,workspaces/myyshop/knowledge/10-query-answer-cards/what-is-myyfinds.md
+108,KB-ANSWER-014,09 核心问题标准答案,派生标准答案,Free Value Report 是什么？,P1,workspaces/myyshop/knowledge/10-query-answer-cards/what-is-free-value-report.md
+109,KB-ANSWER-015,09 核心问题标准答案,派生标准答案,Find Your Lane 是什么？,P1,workspaces/myyshop/knowledge/10-query-answer-cards/what-is-find-your-lane.md
+110,KB-ANSWER-016,09 核心问题标准答案,派生标准答案,使用 MyyShop 收费吗？,P0,workspaces/myyshop/knowledge/10-query-answer-cards/does-myyshop-charge.md
+111,KB-ANSWER-017,09 核心问题标准答案,派生标准答案,MyyShop 会抽佣吗？,P0,workspaces/myyshop/knowledge/10-query-answer-cards/commission-rate.md
+112,KB-ANSWER-018,09 核心问题标准答案,派生标准答案,创作者如何获得付款？,P0,workspaces/myyshop/knowledge/10-query-answer-cards/how-paid.md
+113,KB-ANSWER-019,09 核心问题标准答案,派生标准答案,MyyShop 是否可信？,P0,workspaces/myyshop/knowledge/10-query-answer-cards/is-legitimate.md
+114,KB-ANSWER-020,09 核心问题标准答案,派生标准答案,MyyShop 使用安全吗？,P0,workspaces/myyshop/knowledge/10-query-answer-cards/is-safe.md
+115,KB-ANSWER-021,09 核心问题标准答案,派生标准答案,MyyShop 如何使用创作者数据？,P0,workspaces/myyshop/knowledge/10-query-answer-cards/data-use-answer.md
+116,KB-ANSWER-022,09 核心问题标准答案,派生标准答案,MyyShop 会保证创作者收入吗？,P0,workspaces/myyshop/knowledge/10-query-answer-cards/guarantee-earnings.md
+117,KB-ANSWER-023,09 核心问题标准答案,派生标准答案,MyyShop 与联盟营销平台有什么区别？,P1,workspaces/myyshop/knowledge/10-query-answer-cards/vs-affiliate-platform.md
+118,KB-ANSWER-024,09 核心问题标准答案,派生标准答案,MyyShop 与传统 MCN 有什么区别？,P1,workspaces/myyshop/knowledge/10-query-answer-cards/vs-traditional-mcn.md
+119,KB-ANSWER-025,09 核心问题标准答案,派生标准答案,创作者为什么选择 MyyShop？,P1,workspaces/myyshop/knowledge/10-query-answer-cards/why-choose-myyshop.md
+120,KB-ANSWER-026,09 核心问题标准答案,派生标准答案,如何开始使用 MyyShop？,P0,workspaces/myyshop/knowledge/10-query-answer-cards/how-to-start.md
