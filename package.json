@@ -15,6 +15,9 @@
     "test:m5-answer": "node --test tests/m5-*.test.mjs",
     "test:m6-cycle": "node --test tests/m6-*.test.mjs",
     "test:m7-strategy": "node --test tests/m7-*.test.mjs",
+    "test:analytics-readonly": "node --test tests/analytics-readonly*.test.mjs",
+    "analytics:readonly": "node plugins/geo-expert/scripts/geo-analytics-readonly.mjs",
+    "setup:analytics-readonly": "bash plugins/geo-expert/scripts/setup-google-analytics-readonly.sh",
     "smoke:m5-playwright": "node plugins/geo-expert/scripts/answer-cycle.mjs runtime-smoke --workspace workspaces/myyshop --version 1.62.1",
     "collect:m4-public": "node plugins/geo-expert/scripts/collect-public-site.mjs",
     "prepare:m4-public-inputs": "node plugins/geo-expert/scripts/prepare-public-site-m4-inputs.mjs",
@@ -23,6 +26,7 @@
   },
   "dependencies": {
     "ajv": "8.20.0",
+    "google-auth-library": "10.9.1",
     "gray-matter": "4.0.3"
   }
 }

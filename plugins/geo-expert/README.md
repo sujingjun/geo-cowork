@@ -21,6 +21,8 @@
 | `geo-lifecycle` | M6 测试商户、Cycle 冻结/阶段门、恢复、Review 与 trace |
 | `geo-analytics` | M6 fixture Observation、Business Signal 与 candidate Evidence 分离 |
 
+真实 GA4/GSC 读取不放入上述 fixture Skill。经精确 Workspace 授权后，使用独立 `geo-analytics-readonly.mjs` CLI 做固定资源、固定字段、临时产物的最小只读读取；它不创建真实 Observation、Evidence、Claim 或因果结论。
+
 当前产品与里程碑基线见 `docs/plans/2026-08-23-geo-cowork-final-product-plan.md`。0.3.0 是当前已登记插件版本；其后的 M4—M6 源码尚未发布新插件版本。M5 已验证 `.invalid` 两槽 Fixture、不可变 raw/Review、持续 Source registry、100 Source 批量分类门、恢复、确定性聚合和全局 Playwright loopback base；五个平台自动化仍由条款感知 guard 阻止。Owner 提供的 exact result URL 已完成五个平台两个正式英文 manual slot，但 10 个 Answer Review、100 Source 分类与 post-change Retest 仍各有独立门。M6 当前只实现独立 synthetic/test_only 测试商户的本地 Cycle/Analytics 工程，不代表真实 MyyShop Publication、Analytics 或业务效果。M3 内部 `published` 也不表示任何外部内容、插件版本或生产环境已经发布。
 
 ## 结构
@@ -46,6 +48,7 @@ npm run test:m3-knowledge-query
 npm run test:m4-diagnosis
 npm run test:m5-answer
 npm run test:m6-cycle
+npm run test:analytics-readonly
 npm run smoke:m5-playwright
 npm run check:docs
 npm run validate:plugin
@@ -53,6 +56,7 @@ node plugins/geo-expert/scripts/diagnosis.mjs validate --workspace workspaces/my
 node plugins/geo-expert/scripts/answer-cycle.mjs validate --workspace workspaces/myyshop
 node plugins/geo-expert/scripts/geo-lifecycle.mjs validate --workspace <test-workspace>
 node plugins/geo-expert/scripts/geo-lifecycle.mjs trace --workspace <test-workspace> --cycle <CYC-ID>
+npm run analytics:readonly -- dry-run --workspace workspaces/myyshop --plan <approved-plan.json>
 ```
 
 ## 边界

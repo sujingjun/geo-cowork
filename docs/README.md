@@ -46,6 +46,7 @@
 | M2 启动 Handoff | [`handoff/2026-08-23-m2-contract-provenance-kernel-handoff.md`](handoff/2026-08-23-m2-contract-provenance-kernel-handoff.md) | `approved` 历史执行输入；实际结果见 M2 Record |
 | M6—M8 测试商户总 Lead Handoff | [`handoff/2026-08-27-m6-m8-test-merchant-engineering-lead-handoff.md`](handoff/2026-08-27-m6-m8-test-merchant-engineering-lead-handoff.md) | `proposed`；独立测试商户工程闭环、总 Lead 委派、Spec 人工门和真实 MyyShop 隔离控制面 |
 | 账号与数据准备 Runbook | [`runbooks/geo-cowork-account-data-readiness.md`](runbooks/geo-cowork-account-data-readiness.md) | `proposed`；测试商户、真实 MyyShop 内测、M5/M6/M8 的最小账号权限、数据包、安全和授权 Checklist |
+| GA4/GSC 只读接入 Runbook | [`runbooks/ga4-gsc-readonly-analytics.md`](runbooks/ga4-gsc-readonly-analytics.md) | `implemented`；OAuth/ADC、exact plan、dry-run、真实 smoke、临时数据与撤销 |
 
 ## M2 Contract & Provenance Kernel（本地开发验收完成）
 
@@ -127,6 +128,16 @@
 | M6 人工内测 Runbook | [`runbooks/m6-test-merchant-internal-review.md`](runbooks/m6-test-merchant-internal-review.md) | `proposed`；生成独立 Review Workspace、人工对象链与产品方向检查 |
 | M6 人工内测暂停 Handoff | [`handoff/2026-08-28-m6-owner-internal-review-pause-handoff.md`](handoff/2026-08-28-m6-owner-internal-review-pause-handoff.md) | `verified`；Owner 最新范围调整后暂停门重新生效，保留为历史与人工内测入口 |
 | M7 / Circle 1 Owner 接管 Handoff | [`handoff/2026-08-28-m7-circle1-owner-internal-review-handoff.md`](handoff/2026-08-28-m7-circle1-owner-internal-review-handoff.md) | `verified`；Circle 1 工程与人工接管就绪，后续能力 deferred |
+
+## GA4/GSC 真实只读分析接入
+
+| 类别 | 工件 | 状态与用途 |
+| --- | --- | --- |
+| Requirement / PRD | [`requirements/2026-09-01-ga4-gsc-readonly-analytics.md`](requirements/2026-09-01-ga4-gsc-readonly-analytics.md) / [`prd/2026-09-01-ga4-gsc-readonly-analytics.md`](prd/2026-09-01-ga4-gsc-readonly-analytics.md) | `approved`；精确 Property、低维度聚合 smoke 与非目标 |
+| Architecture / Spec 0010 | [`architecture/2026-09-01-ga4-gsc-readonly-analytics-architecture.md`](architecture/2026-09-01-ga4-gsc-readonly-analytics-architecture.md) / [`specs/0010-ga4-gsc-readonly-analytics.md`](specs/0010-ga4-gsc-readonly-analytics.md) | `approved`；独立真实读取入口、ADC、请求/响应与临时数据合同 |
+| Plan / Task | [`plans/2026-09-01-ga4-gsc-readonly-analytics-plan.md`](plans/2026-09-01-ga4-gsc-readonly-analytics-plan.md) / [`tasks/2026-09-01-ga4-gsc-readonly-analytics.md`](tasks/2026-09-01-ga4-gsc-readonly-analytics.md) | `approved`；TDD、认证向导、回归、真实 smoke 与 Record |
+| Runbook | [`runbooks/ga4-gsc-readonly-analytics.md`](runbooks/ga4-gsc-readonly-analytics.md) | `implemented`；setup、doctor、dry-run、smoke、故障与撤销 |
+| Record | [`records/2026-09-01-ga4-gsc-readonly-analytics-record.md`](records/2026-09-01-ga4-gsc-readonly-analytics-record.md) | `verified`；认证、固定请求、7+7 行真实只读 smoke 与边界 |
 
 ## 历史提案与交接
 
