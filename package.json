@@ -15,6 +15,7 @@
     "test:m5-answer": "node --test tests/m5-*.test.mjs",
     "test:m6-cycle": "node --test tests/m6-*.test.mjs",
     "test:m7-strategy": "node --test tests/m7-*.test.mjs",
+    "test:query-portfolio": "node --test tests/query-portfolio*.test.mjs",
     "test:analytics-readonly": "node --test tests/analytics-readonly*.test.mjs",
     "analytics:readonly": "node plugins/geo-expert/scripts/geo-analytics-readonly.mjs",
     "setup:analytics-readonly": "bash plugins/geo-expert/scripts/setup-google-analytics-readonly.sh",

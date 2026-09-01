@@ -1,0 +1,18 @@
+{
+  "schema_version": "qp-intake-plan/1.0.0",
+  "run_id": "RUN-QP-TEST-INTAKE-001",
+  "goal_ref": "GOAL-QP-TEST-001",
+  "sources": [
+    {
+      "source_ref": "SRC-QP-TEST-001",
+      "source_class": "generative_platform_observation",
+      "observed_at": "2026-09-01T00:00:00Z",
+      "entries": [
+        { "query_text": "What is QP Test Merchant?", "language": "en-US" },
+        { "query_text": "what is qp test merchant platform", "language": "en-US" },
+        { "query_text": "is qp test merchant legit", "language": "en-US" },
+        { "query_text": "qp test merchant pricing", "language": "en-US" }
+      ]
+    }
+  ]
+}
