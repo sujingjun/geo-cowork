@@ -3,8 +3,8 @@
   "run_id": "RUN-MYYSHOP-GA4-GSC-SMOKE-20260901",
   "workspace_id": "ws_myyshop2026082400000000000",
   "authorization": {
-    "ref": "workspace://cycles/preparation/decisions/2026-09-01-ga4-gsc-readonly-smoke-authorized.md",
-    "sha256": "e833ccebda62ab211e2ddb5c1854bb045c6ba41a9b39b1792fead011219fd9f1",
+    "ref": "workspace://cycles/preparation/decisions/2026-09-01-ga4-gsc-readonly-smoke-authorized-v2.md",
+    "sha256": "f3677932e90407089c88b4d2a54159149e9a4c3cd7cc8746a0adbff683661107",
     "expires_at": "2026-09-02T00:00:00+08:00"
   },
   "time_window": {

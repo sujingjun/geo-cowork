@@ -7,6 +7,8 @@ source:
   - docs/specs/0010-ga4-gsc-readonly-analytics.md
   - docs/plans/2026-09-01-ga4-gsc-readonly-analytics-plan.md
   - workspaces/myyshop/cycles/preparation/decisions/2026-09-01-ga4-gsc-readonly-smoke-authorized.md
+  - workspaces/myyshop/cycles/preparation/decisions/2026-09-01-ga4-gsc-adc-bootstrap-scope-authorized.md
+  - workspaces/myyshop/cycles/preparation/decisions/2026-09-01-ga4-gsc-readonly-smoke-authorized-v2.md
 scope: 本机 OAuth/ADC 准备、preflight、dry-run、真实 smoke、故障和撤销
 ---
 
@@ -37,7 +39,7 @@ npm run setup:analytics-readonly
 
 向导只把非秘密 Project ID 和 OAuth client 文件路径写到被 Git 忽略的 `.env`。Desktop OAuth client JSON 与 gcloud ADC 都必须留在仓库之外；不要把内容、Token、账号邮箱、Cookie 或浏览器 Profile 发到聊天或日志。
 
-向导要求只确认以下 scope：
+gcloud 建立 ADC 时还要求 `cloud-platform` 作为认证引导基础 scope；它不改变 API 请求合同。实际 GA4/GSC 数据请求仍只使用以下两个 read-only scope：
 
 ```text
 https://www.googleapis.com/auth/analytics.readonly
@@ -46,7 +48,7 @@ https://www.googleapis.com/auth/webmasters.readonly
 
 官方参考：[Application Default Credentials](https://cloud.google.com/docs/authentication/provide-credentials-adc)、[GA4 runReport](https://developers.google.com/analytics/devguides/reporting/data/v1/rest/v1beta/properties/runReport)、[GSC Search Analytics](https://developers.google.com/webmaster-tools/v1/searchanalytics/query)。
 
-## 3. 真实 smokex x
+## 3. 真实 smoke
 
 只有 exact plan、授权 bytes、日期、资源与专项/回归均未漂移时执行：
 
@@ -86,4 +88,3 @@ gcloud auth application-default revoke
 ```
 
 撤销 OAuth client、GA4/GSC 角色或 Google Cloud Project 属外部资源变更，需要新的明确授权；不要由脚本自动执行。
-

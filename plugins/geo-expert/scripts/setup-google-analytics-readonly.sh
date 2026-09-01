@@ -203,6 +203,11 @@ finish() {
 TOTAL_STAGES=4
 : "$RED"
 
+if [[ -z "${TERM:-}" ]]; then
+  TERM=xterm-256color
+  export TERM
+fi
+
 banner "MyyShop GA4/GSC read-only OAuth setup"
 
 stage "选择 Google Cloud Project"
@@ -238,14 +243,14 @@ esac
 write_env GOOGLE_OAUTH_CLIENT_FILE "$GOOGLE_OAUTH_CLIENT_FILE"
 
 stage "建立只读 Application Default Credentials"
-say "接下来由 gcloud 打开系统浏览器；请用具备目标 GA4 Viewer 与 GSC read 权限的账号确认。"
+say "接下来由 gcloud 打开系统浏览器；cloud-platform 仅用于 ADC 引导，实际数据请求仍限定为两个 read-only scope。"
 if ! command -v gcloud >/dev/null 2>&1; then
   warn "未找到 gcloud。先安装 Google Cloud CLI 后重新运行本向导。"
   exit 1
 fi
 gcloud auth application-default login \
   --client-id-file="$GOOGLE_OAUTH_CLIENT_FILE" \
-  --scopes="https://www.googleapis.com/auth/analytics.readonly,https://www.googleapis.com/auth/webmasters.readonly"
+  --scopes="https://www.googleapis.com/auth/cloud-platform,https://www.googleapis.com/auth/analytics.readonly,https://www.googleapis.com/auth/webmasters.readonly"
 if gcloud auth application-default print-access-token >/dev/null 2>&1; then
   say "ADC 已建立；access token 未打印。"
 else

@@ -507,6 +507,14 @@ function isLegacyExcluded(relative) {
     || relative.endsWith('/_index.md');
 }
 
+const PLANNING_DOCUMENT_PREFIXES = Object.freeze([
+  'strategy/business-brand-knowledge-v1/',
+]);
+
+function isPlanningDocument(relative) {
+  return PLANNING_DOCUMENT_PREFIXES.some((prefix) => relative.startsWith(prefix));
+}
+
 function shouldIgnore(relative) {
   return relative === 'indexes'
     || relative.startsWith('indexes/')
@@ -538,6 +546,7 @@ export async function loadWorkspaceGraph({ workspace }) {
       diagnostics.push({ code: 'INVALID_FRONTMATTER', path: relative });
       continue;
     }
+    if (isPlanningDocument(relative)) continue;
     if (frontmatter.record_type === 'knowledge_entry' && !isLegacyExcluded(relative)) {
       if (frontmatter.id && frontmatter.query_id && frontmatter.status && frontmatter.version) {
         legacy.push({

@@ -6,6 +6,7 @@ updated: 2026-09-01
 source:
   - docs/requirements/2026-09-01-ga4-gsc-readonly-analytics.md
   - docs/runbooks/geo-cowork-account-data-readiness.md
+  - workspaces/myyshop/cycles/preparation/decisions/2026-09-01-ga4-gsc-readonly-smoke-authorized-v2.md
   - 2026-09-01 当前用户明确指令：完成基建，执行真实读取冒烟测试
 scope: 真实只读连接的用户旅程、业务规则、验收与非目标
 ---
@@ -38,7 +39,7 @@ MyyShop 数据负责人和 GEO 负责人需要确认“账号与 API 真的可�
 | 编号 | 场景 | 通过条件 |
 | --- | --- | --- |
 | BA-01 | dry-run | 无网络、无凭据即可看到稳定且脱敏的两个请求摘要 |
-| BA-02 | 最小权限 | 仅申请两项 read-only scope，写 scope 或未知 scope 被拒绝 |
+| BA-02 | 最小权限 | 数据 API 请求仅使用两项 read-only scope，写 scope 或未知数据 scope 被拒绝；ADC 引导 scope 由独立授权决定覆盖 |
 | BA-03 | GA4 smoke | 固定 Property 的 `runReport` 成功并归一化 |
 | BA-04 | GSC smoke | 固定 URL-prefix Property 的 `searchAnalytics.query` 成功并归一化 |
 | BA-05 | 数据边界 | 无账号、Token、Cookie、用户级或高基数明细进入输出与 Git |
@@ -47,4 +48,3 @@ MyyShop 数据负责人和 GEO 负责人需要确认“账号与 API 真的可�
 ## 5. 非目标与完成边界
 
 本次完成最多证明真实只读接口基础设施和指定 Property 的最小读取可用，不证明 GA4/GSC 数据质量完整、GEO 提升、注册改善、真实 Cycle 完成或生产发布。
-

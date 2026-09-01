@@ -1,5 +1,6 @@
 import assert from 'node:assert/strict';
 import { execFile } from 'node:child_process';
+import { readFile } from 'node:fs/promises';
 import path from 'node:path';
 import { promisify } from 'node:util';
 import { fileURLToPath } from 'node:url';
@@ -10,12 +11,29 @@ import { execute } from '../plugins/geo-expert/scripts/geo-analytics-readonly.mj
 const exec = promisify(execFile);
 const REPO_ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const CLI = path.join(REPO_ROOT, 'plugins/geo-expert/scripts/geo-analytics-readonly.mjs');
+const SETUP_WIZARD = path.join(
+  REPO_ROOT,
+  'plugins/geo-expert/scripts/setup-google-analytics-readonly.sh',
+);
+const RUNBOOK = path.join(REPO_ROOT, 'docs/runbooks/ga4-gsc-readonly-analytics.md');
 
 test('真实只读 CLI 公开 doctor/dry-run/smoke 三个命令', async () => {
   const { stdout } = await exec(process.execPath, [CLI, '--help'], { cwd: REPO_ROOT });
   for (const command of ['doctor', 'dry-run', 'smoke']) {
     assert.ok(stdout.includes(command), command);
   }
+});
+
+test('setup 向导包含 ADC 基础 scope、无 TERM 兜底且文档入口无错字', async () => {
+  const source = await readFile(SETUP_WIZARD, 'utf8');
+  const runbook = await readFile(RUNBOOK, 'utf8');
+  assert.match(source, /TERM=xterm-256color[\s\S]*export TERM/);
+  assert.match(
+    source,
+    /https:\/\/www\.googleapis\.com\/auth\/cloud-platform,https:\/\/www\.googleapis\.com\/auth\/analytics\.readonly,https:\/\/www\.googleapis\.com\/auth\/webmasters\.readonly/,
+  );
+  assert.match(runbook, /cloud-platform/);
+  assert.doesNotMatch(runbook, /真实 smokex x/);
 });
 
 test('dry-run 无凭据无网络地输出获授权请求摘要', async () => {

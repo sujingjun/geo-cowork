@@ -154,3 +154,26 @@ test('legacy knowledge 进入兼容索引，模板与治理文件被排除', asy
   assert.equal(index.objects[0].contract_status, 'legacy');
   await rm(root, { recursive: true });
 });
+
+test('业务品牌准备资料包作为规划文档排除，不进入对象索引', async () => {
+  const root = await validGraph();
+  const packageFiles = [
+    '01-business-input-template.md',
+    '05-circle1-business-readiness.md',
+    '06-source-notes.md',
+    'README.md',
+    'pr/README.md',
+    'site/README.md',
+  ];
+  for (const relative of packageFiles) {
+    const target = path.join(root, 'strategy/business-brand-knowledge-v1', relative);
+    await mkdir(path.dirname(target), { recursive: true });
+    await writeFile(target, `---\ntitle: Planning document\nstatus: proposed\n---\n\n# Planning\n`);
+  }
+  await writeObject(root, 'strategy/operational/source.md', source({ id: 'SRC-TEST-002' }));
+
+  const result = await buildIndexes({ workspace: root, write: false });
+  assert.equal(result.object_count, 6);
+  assert.equal(result.legacy_count, 0);
+  await rm(root, { recursive: true });
+});

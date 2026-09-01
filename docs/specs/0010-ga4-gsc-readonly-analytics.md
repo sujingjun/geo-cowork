@@ -8,6 +8,8 @@ source:
   - docs/architecture/2026-09-01-ga4-gsc-readonly-analytics-architecture.md
   - docs/specs/0007-cycle-analytics-test-merchant.md
   - docs/runbooks/geo-cowork-account-data-readiness.md
+  - workspaces/myyshop/cycles/preparation/decisions/2026-09-01-ga4-gsc-adc-bootstrap-scope-authorized.md
+  - workspaces/myyshop/cycles/preparation/decisions/2026-09-01-ga4-gsc-readonly-smoke-authorized-v2.md
   - 2026-09-01 当前用户明确指令：完成基建，执行真实读取冒烟测试
 scope: MyyShop GA4/GSC 精确资源的真实只读 preflight、请求、归一化与临时结果合同
 ---
@@ -27,7 +29,7 @@ scope: MyyShop GA4/GSC 精确资源的真实只读 preflight、请求、归一�
   "run_id": "RUN-MYYSHOP-GA4-GSC-SMOKE-20260901",
   "workspace_id": "ws_myyshop2026082400000000000",
   "authorization": {
-    "ref": "workspace://cycles/preparation/decisions/2026-09-01-ga4-gsc-readonly-smoke-authorized.md",
+    "ref": "workspace://cycles/preparation/decisions/2026-09-01-ga4-gsc-readonly-smoke-authorized-v2.md",
     "sha256": "<64 hex>",
     "expires_at": "2026-09-02T00:00:00+08:00"
   },
@@ -64,6 +66,8 @@ scope: MyyShop GA4/GSC 精确资源的真实只读 preflight、请求、归一�
 - `POST https://www.googleapis.com/webmasters/v3/sites/https%3A%2F%2Fwww.myyshop.com%2F/searchAnalytics/query`
 - OAuth scope：`https://www.googleapis.com/auth/webmasters.readonly`
 - body 只包含固定 start/end、`dimensions:[date]`、`type:web`、`aggregationType:byProperty`、`dataState:final`、`rowLimit:10`、`startRow:0`。
+
+以上两项是 GA4/GSC 数据 API 的请求 scope。gcloud 建立 ADC 时可能要求额外的 `https://www.googleapis.com/auth/cloud-platform` 认证引导 scope；该 scope 必须由独立授权决定覆盖，不得作为数据 API 请求 scope，也不得因此扩大数据字段或写入能力。
 
 API Key、write scope、Cookie、浏览器 Session、任意 endpoint override 均禁止。
 
@@ -116,4 +120,3 @@ geo-analytics-readonly.mjs smoke --workspace <path> --plan <json> --output <path
 - 单元测试使用 injected request seam，不访问 Google；先红后绿。
 - CLI dry-run、授权漂移、scope/host/字段/输出路径/重复 bytes 正负例通过。
 - live smoke 只在 TDD 与回归通过后执行；Record 区分 API 连通、数据存在和业务结论。
-

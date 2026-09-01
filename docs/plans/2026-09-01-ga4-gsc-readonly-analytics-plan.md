@@ -5,6 +5,7 @@ created: 2026-09-01
 updated: 2026-09-01
 source:
   - docs/specs/0010-ga4-gsc-readonly-analytics.md
+  - workspaces/myyshop/cycles/preparation/decisions/2026-09-01-ga4-gsc-readonly-smoke-authorized-v2.md
   - 2026-09-01 当前用户明确指令：完成基建，执行真实读取冒烟测试
 scope: Spec 0010 的最小代码、测试、认证向导、真实 smoke 与 Record
 ---
@@ -51,4 +52,3 @@ npm run check:docs
 node plugins/geo-expert/scripts/workspace-validate.mjs --workspace workspaces/myyshop --objects
 node plugins/geo-expert/scripts/build-index.mjs --workspace workspaces/myyshop --check
 ```
-

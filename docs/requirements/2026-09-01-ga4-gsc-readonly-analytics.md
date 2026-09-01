@@ -6,6 +6,7 @@ updated: 2026-09-01
 source:
   - docs/specs/0007-cycle-analytics-test-merchant.md
   - docs/runbooks/geo-cowork-account-data-readiness.md
+  - workspaces/myyshop/cycles/preparation/decisions/2026-09-01-ga4-gsc-readonly-smoke-authorized-v2.md
   - 2026-09-01 当前用户明确指令：完成 GA4/GSC 基建，执行真实读取冒烟测试
 scope: MyyShop GA4/GSC 真实只读连接基建与最小聚合冒烟；不含完整业务分析、Evidence 批准或外部写入
 ---
@@ -31,7 +32,7 @@ scope: MyyShop GA4/GSC 真实只读连接基建与最小聚合冒烟；不含完
 - 时间窗：`2026-08-23` 至 `2026-08-29`，均为完整日期。
 - GA4：`date`；`sessions`、`activeUsers`、`screenPageViews`。
 - GSC：`date`；`clicks`、`impressions`、`ctr`、`position`；`type:web`、`dataState:final`、property 聚合。
-- 只允许 `analytics.readonly` 与 `webmasters.readonly`。
+- GA4/GSC 数据 API 请求只允许 `analytics.readonly` 与 `webmasters.readonly`；gcloud 建立 ADC 所需的 `cloud-platform` 由独立授权决定覆盖，不进入数据请求合同。
 
 ## 4. 成功标准
 
@@ -48,4 +49,3 @@ scope: MyyShop GA4/GSC 真实只读连接基建与最小聚合冒烟；不含完
 - 完整 56 天分析、GEO 效果归因、注册漏斗或跨源用户关联；
 - 自动 Evidence materialization、批准、Claim、Publication 或因果判断；
 - commit、push、PR、发布或部署。
-

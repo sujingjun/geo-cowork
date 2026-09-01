@@ -1,6 +1,6 @@
 ---
 title: GA4/GSC 真实只读分析接入任务
-status: approved
+status: verified
 created: 2026-09-01
 updated: 2026-09-01
 source:
@@ -36,4 +36,3 @@ scope: 当前会话内的 TDD、实现、验证、真实 smoke 与 Record
 
 - 成功标准：记录 checkout、branch/HEAD、dirty/remote、实际命令、退出码、row count/checksum、临时文件处置、未验证项和外部门。
 - 范围外：commit、push、PR、发布、业务效果结论。
-
