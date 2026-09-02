@@ -1,0 +1,249 @@
+:root {
+  color-scheme: light;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: #17202a;
+  background: #f4f7f5;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 280px;
+  background:
+    radial-gradient(circle at top right, rgb(92 184 131 / 16%), transparent 45%),
+    #f4f7f5;
+}
+
+button,
+a {
+  font: inherit;
+}
+
+.panel-shell {
+  display: grid;
+  gap: 18px;
+  padding: 24px 18px;
+}
+
+.panel-header h1,
+.page-card h2,
+.panel-header p {
+  margin: 0;
+}
+
+.eyebrow {
+  color: #18794e;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.panel-header {
+  display: grid;
+  gap: 8px;
+}
+
+.panel-header h1 {
+  font-size: 26px;
+  letter-spacing: -0.03em;
+}
+
+.description,
+.boundary {
+  color: #5f6b66;
+  font-size: 13px;
+  line-height: 1.55;
+}
+
+.page-card,
+.task-card {
+  display: grid;
+  gap: 14px;
+  padding: 16px;
+  border: 1px solid #dce6df;
+  border-radius: 16px;
+  background: rgb(255 255 255 / 92%);
+  box-shadow: 0 12px 30px rgb(34 74 52 / 8%);
+}
+
+.card-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.page-card h2,
+.task-card h2 {
+  font-size: 15px;
+}
+
+button {
+  padding: 7px 11px;
+  border: 1px solid #bed8c8;
+  border-radius: 9px;
+  color: #12633f;
+  background: #effaf3;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #e2f4e9;
+}
+
+button:focus-visible,
+a:focus-visible {
+  outline: 3px solid rgb(24 121 78 / 28%);
+  outline-offset: 2px;
+}
+
+.status {
+  margin: 0;
+  color: #18794e;
+  font-size: 12px;
+}
+
+.status[data-state="error"] {
+  color: #b42318;
+}
+
+.task-card label,
+.task-card form {
+  display: grid;
+  gap: 7px;
+  color: #4b5851;
+  font-size: 12px;
+  font-weight: 650;
+}
+
+.task-card form {
+  gap: 12px;
+  padding-top: 4px;
+  border-top: 1px solid #e6ece8;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 9px 10px;
+  border: 1px solid #cad8cf;
+  border-radius: 9px;
+  color: #17202a;
+  background: #fff;
+  font: inherit;
+  font-weight: 400;
+  resize: vertical;
+}
+
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid rgb(24 121 78 / 20%);
+  border-color: #18794e;
+}
+
+blockquote {
+  margin: 0;
+  padding: 13px 14px;
+  border-left: 3px solid #53a874;
+  border-radius: 0 10px 10px 0;
+  background: #f3faf5;
+  font-size: 14px;
+  line-height: 1.55;
+  white-space: pre-wrap;
+}
+
+.pill {
+  padding: 4px 8px;
+  border-radius: 999px;
+  color: #5f6b66;
+  background: #edf1ee;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.pill[data-state="ready"],
+.pill[data-state="completed"] {
+  color: #12633f;
+  background: #e2f4e9;
+}
+
+.pill[data-state="running"] {
+  color: #175cd3;
+  background: #eaf2ff;
+}
+
+.pill[data-state="error"],
+.pill[data-state="failed"] {
+  color: #b42318;
+  background: #feeceb;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.danger {
+  border-color: #f0b4ad;
+  color: #b42318;
+  background: #fff3f2;
+}
+
+.mono,
+code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+}
+
+.mono {
+  margin: 0;
+  color: #748079;
+  font-size: 11px;
+  overflow-wrap: anywhere;
+}
+
+[hidden] {
+  display: none !important;
+}
+
+dl {
+  display: grid;
+  gap: 14px;
+  margin: 0;
+}
+
+dl div {
+  display: grid;
+  gap: 4px;
+}
+
+dt {
+  color: #748079;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+dd {
+  min-width: 0;
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.45;
+  overflow-wrap: anywhere;
+}
+
+a {
+  color: #12633f;
+}
+
+.boundary {
+  margin: 0;
+  padding-inline: 4px;
+}

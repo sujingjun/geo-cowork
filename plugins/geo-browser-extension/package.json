@@ -7,12 +7,15 @@
   },
   "scripts": {
     "build": "nuxt build",
+    "build:extension": "node scripts/build-extension.mjs",
     "dev": "nuxt dev",
+    "fixture:extension": "node scripts/fixture-platform-server.mjs",
     "start": "node .output/server/index.mjs",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
     "lint": "eslint .",
     "typecheck": "nuxt typecheck",
+    "test:extension": "node --test tests/bootstrap.test.mjs",
     "db:generate": "nuxt db generate",
     "db:migrate": "nuxt db migrate",
     "db:sql": "node scripts/db-sql.mjs",
@@ -26,7 +29,7 @@
     "vercel:deploy:prebuilt:prod": "pnpm dlx vercel@54.14.0 deploy --prebuilt --prod --yes",
     "deploy:prod": "pnpm vercel:pull:prod && pnpm check:env:production && pnpm typecheck && pnpm vercel:deploy:prod",
     "deploy:prod:prebuilt": "pnpm vercel:pull:prod && pnpm check:env:production && pnpm typecheck && pnpm vercel:build:prod && pnpm vercel:deploy:prebuilt:prod",
-    "test:deepseek": "node scripts/test-deepseek.mjs"
+    "test:deepseek": "node scripts/check-deepseek.mjs"
   },
   "dependencies": {
     "@ai-sdk/anthropic": "^3.0.78",

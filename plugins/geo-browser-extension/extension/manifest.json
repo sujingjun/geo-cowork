@@ -1,0 +1,26 @@
+{
+  "manifest_version": 3,
+  "name": "GEO Browser Assistant",
+  "version": "0.1.0",
+  "description": "在浏览器侧辅助人工完成 GEO 工作。",
+  "minimum_chrome_version": "114",
+  "permissions": [
+    "clipboardWrite",
+    "sidePanel",
+    "scripting",
+    "tabs"
+  ],
+  "host_permissions": [
+    "http://127.0.0.1/*"
+  ],
+  "background": {
+    "service_worker": "service-worker.js",
+    "type": "module"
+  },
+  "action": {
+    "default_title": "打开 GEO Browser Assistant"
+  },
+  "side_panel": {
+    "default_path": "sidepanel/index.html"
+  }
+}
