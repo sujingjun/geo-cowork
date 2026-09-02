@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>达人画像识别</title>
+    <link rel="stylesheet" href="popup.css">
+    <script src="popup.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <strong>达人画像识别</strong>
+      <button id="open-workbench" type="button">打开工作台</button>
+    </header>
+    <main>
+      <p id="status">正在读取分析结果…</p>
+      <section id="discovery-summary" aria-label="TikTok 最近页面发现摘要">
+        <div><strong id="discovered-count">0</strong><span>发现</span></div>
+        <div><strong id="inserted-count">0</strong><span>新增</span></div>
+        <div><strong id="updated-count">0</strong><span>完善</span></div>
+        <div><strong id="pending-comment-count">0</strong><span>待分析</span></div>
+      </section>
+      <section id="creator-list" aria-label="全部达人" aria-live="polite"></section>
+      <p id="pool-count"></p>
+      <button id="retry" type="button">重新分析当前页</button>
+    </main>
+  </body>
+</html>
