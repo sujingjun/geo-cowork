@@ -1,6 +1,6 @@
 ---
 title: Knowledge-Independent GEO Lifecycle Readiness 任务清单
-status: implemented
+status: verified
 created: 2026-09-02
 updated: 2026-09-02
 source:
@@ -37,7 +37,7 @@ scope: T01—T08 本地实现与验收
 
 ## T05 — Analytics 与业务文件
 
-- 当前状态：`implemented`；fixture/injected/安全测试全部通过，真实 `collect-observe` 因 ADC 需要交互式重新登录而在网络前停止；没有真实业务文件。
+- 当前状态：`verified`；fixture/injected/安全测试通过，真实 `collect-observe` 完成 GA4/GSC 各一个请求并形成 ANO/非因果 BSIG/candidate EVD；没有真实业务文件，adapter 的缺文件门已验证。
 - 成功标准：GA4/GSC → ANO → BSIG → candidate EVD；JSON/CSV adapter；无自动批准/因果/PII。
 - 验证：injected requester、文件 adapter、授权漂移、幂等与冲突测试；当次授权真实 smoke。
 
@@ -55,6 +55,6 @@ scope: T01—T08 本地实现与验收
 
 ## T08 — 最终验收与 Runbook
 
-- 当前状态：`implemented`；最终全量 333/333 通过，等待 T05 外部 ADC 门收口后决定是否提升整体 Task。
+- 当前状态：`verified`；最终全量回归、真实 Analytics 物化、Workspace/index 和文档验收均通过。
 - 成功标准：Knowledge-Independent readiness Record、真实启动 Runbook、所有未验证边界及 Git 状态完整。
 - 验证：完整测试、docs/plugin 校验、真实 Workspace 只读回归。

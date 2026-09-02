@@ -243,7 +243,8 @@ export async function materializeRealAnalyticsBundle({ workspace, readonlyPlan, 
     readContract(root, plan.contracts.sensitive_data_policy),
     readContract(root, plan.contracts.signal_rule),
   ]);
-  const metrics = normalizeReadonlyResultToMetrics(result);
+  const persistedResult = { ...result, persisted_to_workspace: true };
+  const metrics = normalizeReadonlyResultToMetrics(persistedResult);
   const declaredMetrics = new Set(measurement.data.metrics?.map(({ metric_id: id }) => id) ?? []);
   if (metrics.some(({ metric_id: id }) => !declaredMetrics.has(id))
       || policy.data.aggregate_only !== true
@@ -254,12 +255,12 @@ export async function materializeRealAnalyticsBundle({ workspace, readonlyPlan, 
     );
   }
   const createdAt = result.captured_at;
-  const rawBytes = Buffer.from(stableStringify(result, 2));
+  const rawBytes = Buffer.from(stableStringify(persistedResult, 2));
   const rawSha = sha256(rawBytes);
   const sourceObjects = plan.sources.map((descriptor) =>
     sourceData(descriptor, plan, readonlyPlan, createdAt));
   const observations = plan.observations.map((descriptor) => observationData({
-    descriptor, plan, result, metrics, measurement, policy, createdAt,
+    descriptor, plan, result: persistedResult, metrics, measurement, policy, createdAt,
   }));
   const signal = signalData({ plan, observations, metrics, measurement, rule, createdAt });
   const evidence = {
@@ -317,6 +318,7 @@ export async function materializeRealAnalyticsBundle({ workspace, readonlyPlan, 
     evidence_ref: evidence.id,
     evidence_status: 'candidate',
     raw_sha256: rawSha,
+    persisted_to_workspace: true,
     causal_claim: false,
     auto_approved: false,
   };

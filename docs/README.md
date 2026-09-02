@@ -114,7 +114,8 @@
 | M7 独立 QA | [`records/2026-09-02-m7-cycle1-cycle2-independent-qa-record.md`](records/2026-09-02-m7-cycle1-cycle2-independent-qa-record.md) | `verified`；仅 synthetic_test/test_only 双 Cycle，M6 113/113、M7 57/57、P0/P1 为 0/0 |
 | M8 Record | [`records/2026-09-02-m8-cross-host-conformance-record.md`](records/2026-09-02-m8-cross-host-conformance-record.md) | `verified`；required 5/5，native/manual optional 均 not_executed |
 | 真实启动 Runbook | [`runbooks/myyshop-real-cycle-start.md`](runbooks/myyshop-real-cycle-start.md) | `implemented`；Goal-scoped real KBASE 闭包、显式切换、Analytics 与停止条件 |
-| 最终工程 Record | [`records/2026-09-02-knowledge-independent-lifecycle-readiness-record.md`](records/2026-09-02-knowledge-independent-lifecycle-readiness-record.md) | `implemented`；工程检查全绿，真实 collect-observe 等待 ADC 交互式重新登录后收口 |
+| Analytics Observation Record | [`records/2026-09-02-ga4-gsc-observation-materialization-record.md`](records/2026-09-02-ga4-gsc-observation-materialization-record.md) | `verified`；真实 GA4/GSC 各 7 行，2 ANO、non-causal BSIG、candidate EVD，无自动批准 |
+| 最终工程 Record | [`records/2026-09-02-knowledge-independent-lifecycle-readiness-record.md`](records/2026-09-02-knowledge-independent-lifecycle-readiness-record.md) | `verified`；knowledge-independent 工程、真实 Analytics Observation 与全部声明范围已收口 |
 
 ## 历史 M6—M8 测试商户系统工程基线
 
@@ -153,6 +154,7 @@
 | Plan / Task | [`plans/2026-09-01-ga4-gsc-readonly-analytics-plan.md`](plans/2026-09-01-ga4-gsc-readonly-analytics-plan.md) / [`tasks/2026-09-01-ga4-gsc-readonly-analytics.md`](tasks/2026-09-01-ga4-gsc-readonly-analytics.md) | `approved`；TDD、认证向导、回归、真实 smoke 与 Record |
 | Runbook | [`runbooks/ga4-gsc-readonly-analytics.md`](runbooks/ga4-gsc-readonly-analytics.md) | `implemented`；setup、doctor、dry-run、smoke、故障与撤销 |
 | Record | [`records/2026-09-01-ga4-gsc-readonly-analytics-record.md`](records/2026-09-01-ga4-gsc-readonly-analytics-record.md) | `verified`；认证、固定请求、7+7 行真实只读 smoke 与边界 |
+| Observation Materialization Record | [`records/2026-09-02-ga4-gsc-observation-materialization-record.md`](records/2026-09-02-ga4-gsc-observation-materialization-record.md) | `verified`；真实只读结果进入 ANO/非因果 BSIG/candidate EVD，未修改 Claim |
 
 ## Query Portfolio 流水线（本地工程验收完成）
 

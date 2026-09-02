@@ -1,0 +1,204 @@
+{
+  "captured_at": "2026-09-02T11:18:48.856Z",
+  "causal_claim": false,
+  "persisted_to_workspace": true,
+  "quality": {
+    "warnings": []
+  },
+  "run_id": "RUN-MYYSHOP-GA4-GSC-SMOKE-20260902",
+  "schema_version": "ga4-gsc-readonly-result/1.0.0",
+  "sources": {
+    "ga4": {
+      "quota": {
+        "concurrentRequests": {
+          "consumed": 0,
+          "remaining": 10
+        },
+        "potentiallyThresholdedRequestsPerHour": {
+          "consumed": 0,
+          "remaining": 120
+        },
+        "serverErrorsPerProjectPerHour": {
+          "consumed": 0,
+          "remaining": 10
+        },
+        "tokensPerDay": {
+          "consumed": 1,
+          "remaining": 199998
+        },
+        "tokensPerHour": {
+          "consumed": 1,
+          "remaining": 39998
+        },
+        "tokensPerProjectPerHour": {
+          "consumed": 1,
+          "remaining": 13998
+        }
+      },
+      "response_checksum": "8f179f67ceb1887a4af07a61a0c70daad5e677acb69ecd72eb5fa50229ee3f6d",
+      "row_count": 7,
+      "rows": [
+        {
+          "dimensions": {
+            "date": "2026-08-25"
+          },
+          "metrics": {
+            "activeUsers": 7144,
+            "screenPageViews": 39745,
+            "sessions": 9230
+          }
+        },
+        {
+          "dimensions": {
+            "date": "2026-08-24"
+          },
+          "metrics": {
+            "activeUsers": 6939,
+            "screenPageViews": 40091,
+            "sessions": 8795
+          }
+        },
+        {
+          "dimensions": {
+            "date": "2026-08-26"
+          },
+          "metrics": {
+            "activeUsers": 6792,
+            "screenPageViews": 37466,
+            "sessions": 8638
+          }
+        },
+        {
+          "dimensions": {
+            "date": "2026-08-27"
+          },
+          "metrics": {
+            "activeUsers": 7053,
+            "screenPageViews": 39277,
+            "sessions": 8587
+          }
+        },
+        {
+          "dimensions": {
+            "date": "2026-08-23"
+          },
+          "metrics": {
+            "activeUsers": 7071,
+            "screenPageViews": 34858,
+            "sessions": 8569
+          }
+        },
+        {
+          "dimensions": {
+            "date": "2026-08-28"
+          },
+          "metrics": {
+            "activeUsers": 5773,
+            "screenPageViews": 36331,
+            "sessions": 7994
+          }
+        },
+        {
+          "dimensions": {
+            "date": "2026-08-29"
+          },
+          "metrics": {
+            "activeUsers": 5408,
+            "screenPageViews": 34881,
+            "sessions": 7806
+          }
+        }
+      ],
+      "status": "ok"
+    },
+    "gsc": {
+      "response_aggregation_type": "byProperty",
+      "response_checksum": "3a8fca74445a7c5f2fc0d45e38d3b95b83fbf7d37def73aaa4e1152cb2f2a728",
+      "row_count": 7,
+      "rows": [
+        {
+          "dimensions": {
+            "date": "2026-08-23"
+          },
+          "metrics": {
+            "clicks": 354,
+            "ctr": 0.28095238095238095,
+            "impressions": 1260,
+            "position": 25.505555555555556
+          }
+        },
+        {
+          "dimensions": {
+            "date": "2026-08-24"
+          },
+          "metrics": {
+            "clicks": 455,
+            "ctr": 0.4008810572687225,
+            "impressions": 1135,
+            "position": 15.147136563876652
+          }
+        },
+        {
+          "dimensions": {
+            "date": "2026-08-25"
+          },
+          "metrics": {
+            "clicks": 487,
+            "ctr": 0.4538676607642125,
+            "impressions": 1073,
+            "position": 9.752096924510717
+          }
+        },
+        {
+          "dimensions": {
+            "date": "2026-08-26"
+          },
+          "metrics": {
+            "clicks": 420,
+            "ctr": 0.41297935103244837,
+            "impressions": 1017,
+            "position": 9.651917404129794
+          }
+        },
+        {
+          "dimensions": {
+            "date": "2026-08-27"
+          },
+          "metrics": {
+            "clicks": 434,
+            "ctr": 0.40674789128397376,
+            "impressions": 1067,
+            "position": 6.769447047797564
+          }
+        },
+        {
+          "dimensions": {
+            "date": "2026-08-28"
+          },
+          "metrics": {
+            "clicks": 394,
+            "ctr": 0.37345971563981045,
+            "impressions": 1055,
+            "position": 8.528909952606636
+          }
+        },
+        {
+          "dimensions": {
+            "date": "2026-08-29"
+          },
+          "metrics": {
+            "clicks": 400,
+            "ctr": 0.3864734299516908,
+            "impressions": 1035,
+            "position": 11.514975845410628
+          }
+        }
+      ],
+      "status": "ok"
+    }
+  },
+  "time_window": {
+    "end_date": "2026-08-29",
+    "start_date": "2026-08-23"
+  }
+}

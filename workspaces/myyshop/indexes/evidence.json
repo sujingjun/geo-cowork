@@ -1,6 +1,19 @@
 {
   "objects": [
     {
+      "id": "EVD-MYYSHOP-ANALYTICS-20260902",
+      "path": "evidence/records/evd-myyshop-analytics-20260902.md",
+      "refs": [
+        "ANO-MYYSHOP-GA4-20260902",
+        "ANO-MYYSHOP-GSC-20260902",
+        "SRC-MYYSHOP-GA4-20260902",
+        "SRC-MYYSHOP-GSC-20260902"
+      ],
+      "status": "candidate",
+      "updated_at": "2026-09-02T11:18:48.856Z",
+      "version": "1.0.0"
+    },
+    {
       "id": "EVD-MYYSHOP-LEGACY-DEFINITION-001",
       "path": "evidence/records/evd-myyshop-legacy-definition-001.md",
       "refs": [

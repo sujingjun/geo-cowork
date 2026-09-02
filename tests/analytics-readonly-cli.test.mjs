@@ -235,7 +235,7 @@ test('collect-observe 单次执行连接只读采集与受控 materializer', asy
         observation_refs: ['ANO-MYYSHOP-GA4-20260902', 'ANO-MYYSHOP-GSC-20260902'],
         business_signal_ref: 'BSIG-MYYSHOP-GSC-20260902',
         evidence_ref: 'EVD-MYYSHOP-ANALYTICS-20260902', evidence_status: 'candidate',
-        causal_claim: false, auto_approved: false,
+        persisted_to_workspace: true, causal_claim: false, auto_approved: false,
       };
     },
   });
@@ -243,5 +243,6 @@ test('collect-observe 单次执行连接只读采集与受控 materializer', asy
   assert.equal(materialized.plan.evidence.status, 'candidate');
   assert.equal(result.network_accessed, true);
   assert.equal(result.evidence_status, 'candidate');
+  assert.equal(result.persisted_to_workspace, true);
   assert.equal(result.auto_approved, false);
 });

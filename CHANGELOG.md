@@ -8,7 +8,7 @@
 - 新增 GA4/GSC `collect-observe` 与聚合业务文件 `ingest-business-file`：可形成真实 ANO、非因果 BSIG、candidate EVD，拒绝自动批准、PII、逐用户/逐请求数据；
 - 完成 Query Portfolio 对新 KBASE scope 的迁移和 NUL 文档字节修复；候选生成、去重、聚类、优先级、人工批准与冻结行为不变；
 - 新增 M8 Cross-host Conformance Tool：Codex/Claude packaging + shared Tool 和 WorkBuddy test-only semantic fixture 为 required；native/manual optional 保持 `not_executed`；
-- synthetic Cycle 1/2、人工选择、恢复、安全与跨宿主专项已重新通过；真实 GA4/GSC Observation 采集仍需当前 ADC 完成交互式重新登录后复跑；无 commit/push/PR/release/deploy。
+- synthetic Cycle 1/2、人工选择、恢复、安全与跨宿主专项已重新通过；真实 GA4/GSC Observation 采集与受控物化随后完成，Evidence 保持 candidate、Signal 保持 non-causal；无 push/PR/release/deploy。
 
 ## 2026-09-01 - Query Portfolio 流水线（本地未发布）
 

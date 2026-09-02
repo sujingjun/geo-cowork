@@ -1,6 +1,19 @@
 {
   "objects": [
     {
+      "id": "RUN-MYYSHOP-GA4-GSC-OBS-20260902",
+      "path": "runs/RUN-MYYSHOP-GA4-GSC-OBS-20260902/run.md",
+      "refs": [
+        "EVD-MYYSHOP-ANALYTICS-20260902",
+        "MER-MYYSHOP-001",
+        "SRC-MYYSHOP-GA4-20260902",
+        "SRC-MYYSHOP-GSC-20260902"
+      ],
+      "status": "completed",
+      "updated_at": "2026-09-02T11:18:48.856Z",
+      "version": "1.0.0"
+    },
+    {
       "id": "RUN-MYYSHOP-M3-DEFINITION-001",
       "path": "runs/RUN-MYYSHOP-M3-DEFINITION-001/run.md",
       "refs": [

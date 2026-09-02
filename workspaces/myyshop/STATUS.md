@@ -22,9 +22,9 @@ M2—M5 历史工程状态保持。2026-09-02 已登记唯一线上 Merchant `ME
 - 五个平台各有两个 candidate Answer Review；Gemini 两槽 `current_positioning:fail`，其余平台两槽均为 `partial`。由于最新完整业务知识库尚未建立，所有 `core_fact_accuracy` 与 `citation_quality` 暂为 `partial`，不得升级为最终事实判断。
 - 五个平台 Aggregation 均为 `computed` 且 `selected_sample_count:2`；因 region/model/viewport 等存在 unknown 或软差异，comparability 全部为 `partial`。分类覆盖率为 0，Source Type、party relation 与 Claim Support 指标保持 partial/null。
 - 当前定位与中英语义合同由 `cycles/preparation/decisions/2026-08-26-m5-two-slot-source-batch-and-positioning-approved.md` 冻结；它是 M5 评估合同，不自动替代 M3 Knowledge Release 或证明外部发布。
-- GA4/GSC → ANO/BSIG/candidate EVD 的实现与注入测试已通过；本次真实 `collect-observe` 在网络前因 ADC 需要交互式重新登录而停止，未生成任何新 Observation/Evidence。Business file adapter 已验证，但当前无获授权真实聚合文件，保持 `BUSINESS_FILE_NOT_PROVIDED`。
+- GA4/GSC → ANO/BSIG/candidate EVD 的真实 `collect-observe` 已通过：两个 ANO recorded、一个 BSIG computed/non-causal、一个 EVD candidate 且无 approval；GA4/GSC 各 7 行、0 warning。Business file adapter 已验证，但当前无获授权真实聚合文件，保持 `BUSINESS_FILE_NOT_PROVIDED`。
 - M8 required packaging/shared Tool/WorkBuddy semantic fixture 已通过；Codex/Claude native interactive 与 WorkBuddy manual/native 均未执行。
 
 ## 下一动作
 
-工程侧继续使用 `KBASE-MYYSHOP-DEVTEST-001` 回归。真实启动不等待全部 120 条知识，只等待拟启动 Goal 的真实知识切片形成批准闭包，并按 `docs/runbooks/myyshop-real-cycle-start.md` 切换显式 `knowledge_base_ref`。Analytics 侧先由用户完成 ADC 交互式重新登录，再在本次精确授权窗口内重跑一次 `collect-observe`；不得降级到 Cookie/API Key 或扩大 scope。M5 的 10 个 candidate Answer Review、60 个 Source 差额、M4 Publication/Retest 和业务效果门继续独立保留。
+工程侧继续使用 `KBASE-MYYSHOP-DEVTEST-001` 回归。真实启动不等待全部 120 条知识，只等待拟启动 Goal 的真实知识切片形成批准闭包，并按 `docs/runbooks/myyshop-real-cycle-start.md` 切换显式 `knowledge_base_ref`。由事实 Owner 单独审阅新 Analytics candidate Evidence；不得自动绑定 Claim 或解释为因果效果。M5 的 10 个 candidate Answer Review、60 个 Source 差额、M4 Publication/Retest 和业务效果门继续独立保留。

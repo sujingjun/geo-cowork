@@ -1,0 +1,28 @@
+{
+  "objects": [
+    {
+      "id": "ANO-MYYSHOP-GA4-20260902",
+      "path": "cycles/m6/analytics/ano-myyshop-ga4-20260902.md",
+      "refs": [
+        "MER-MYYSHOP-001",
+        "RUN-MYYSHOP-GA4-GSC-OBS-20260902"
+      ],
+      "status": "recorded",
+      "updated_at": "2026-09-02T11:18:48.856Z",
+      "version": "1.0.0"
+    },
+    {
+      "id": "ANO-MYYSHOP-GSC-20260902",
+      "path": "cycles/m6/analytics/ano-myyshop-gsc-20260902.md",
+      "refs": [
+        "MER-MYYSHOP-001",
+        "RUN-MYYSHOP-GA4-GSC-OBS-20260902"
+      ],
+      "status": "recorded",
+      "updated_at": "2026-09-02T11:18:48.856Z",
+      "version": "1.0.0"
+    }
+  ],
+  "record_type": "analytics_observation",
+  "schema_version": "1.1.0"
+}

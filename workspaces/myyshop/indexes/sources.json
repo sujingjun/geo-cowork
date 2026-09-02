@@ -89,6 +89,14 @@
       "version": "1.0.0"
     },
     {
+      "id": "SRC-MYYSHOP-GA4-20260902",
+      "path": "evidence/sources/src-myyshop-ga4-20260902.md",
+      "refs": [],
+      "status": "active",
+      "updated_at": "2026-09-02T11:18:48.856Z",
+      "version": "1.0.0"
+    },
+    {
       "id": "SRC-MYYSHOP-GLOBENEWSWIRE-CPM-001",
       "path": "evidence/sources/src-myyshop-globenewswire-cpm-001.md",
       "refs": [
@@ -187,6 +195,14 @@
       "status": "active",
       "updated_at": "2026-08-26T19:10:37+08:00",
       "version": "1.0.1"
+    },
+    {
+      "id": "SRC-MYYSHOP-GSC-20260902",
+      "path": "evidence/sources/src-myyshop-gsc-20260902.md",
+      "refs": [],
+      "status": "active",
+      "updated_at": "2026-09-02T11:18:48.856Z",
+      "version": "1.0.0"
     },
     {
       "id": "SRC-MYYSHOP-INFLUENCER-MARKETING-HUB-001",

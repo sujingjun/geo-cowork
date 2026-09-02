@@ -150,10 +150,13 @@ test('真实只读结果一次写入 ANO、非因果 BSIG 与未批准 candidate
     assert.equal(created.evidence_status, 'candidate');
     assert.equal(created.auto_approved, false);
     assert.equal(created.causal_claim, false);
+    assert.equal(created.persisted_to_workspace, true);
     const graph = await loadWorkspaceGraph({ workspace: root });
     assert.equal(graph.byId.get(created.business_signal_ref).data.causal_claim, false);
     assert.equal(graph.byId.get(created.evidence_ref).data.approval, undefined);
-    assert.equal((await readFile(path.join(root, plan.raw_output_path), 'utf8')).includes('screenPageViews'), true);
+    const persisted = JSON.parse(await readFile(path.join(root, plan.raw_output_path), 'utf8'));
+    assert.equal(persisted.persisted_to_workspace, true);
+    assert.equal(JSON.stringify(persisted).includes('screenPageViews'), true);
   } finally {
     await rm(root, { recursive: true, force: true });
   }
