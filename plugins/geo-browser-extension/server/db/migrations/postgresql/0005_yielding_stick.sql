@@ -1,0 +1,1 @@
+ALTER TABLE "sites" ADD COLUMN "builder_config" jsonb;

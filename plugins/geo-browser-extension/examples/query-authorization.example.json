@@ -1,0 +1,41 @@
+{
+  "schema_version": "geo-browser-query-authorization-v1",
+  "status": "approved",
+  "decision_ref": "workspace://cycles/preparation/decisions/current-platform-manual-approved.json",
+  "platform": "chatgpt",
+  "product_entry": "https://chatgpt.com/",
+  "login_state": "logged_in",
+  "region": "US",
+  "language": "en-US",
+  "collection_method": "manual",
+  "query_submission_allowed": true,
+  "allowed_artifacts": [
+    "answer_text",
+    "citation_raw",
+    "collector_log"
+  ],
+  "artifact_retention_days": {
+    "answer_text": 365,
+    "citation_raw": 365,
+    "collector_log": 365
+  },
+  "privacy": {
+    "answer_region_only": true,
+    "account_identifier_stored": false,
+    "credentials_stored": false
+  },
+  "access_roles": [
+    "MyyShop Owner"
+  ],
+  "deletion_responsibility": "MyyShop Owner",
+  "stop_conditions": [
+    "challenge",
+    "account_warning",
+    "privacy_minimization_failed",
+    "selector_drift"
+  ],
+  "external_writes": false,
+  "approved_by": "<human-approver>",
+  "approved_at": "<RFC3339>",
+  "expires_at": "<RFC3339>"
+}

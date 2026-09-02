@@ -1,0 +1,28 @@
+{
+  "schema_version": "geo-browser-query-task-plan-v1",
+  "task_id": "BQT-TEST-FIXTURE-001",
+  "cycle_ref": "CYC-M6-TEST-001",
+  "cycle_version": "1.0.0",
+  "query_set": {
+    "ref": "QS-M6-TEST-001",
+    "version": "1.0.0"
+  },
+  "authorization_ref": "fixture://authorization/browser-query-task",
+  "development_fixture": true,
+  "platform": {
+    "id": "fixture",
+    "entry_url": "http://127.0.0.1:9321/task",
+    "execution_mode": "dom_automation",
+    "selector_version": "fixture-selectors-v1",
+    "terminal_detector_version": "fixture-terminal-v1",
+    "selectors": {
+      "input": "#prompt",
+      "submit": "#submit",
+      "answer": ".answer",
+      "citation": "a[href]",
+      "busy": "[aria-busy=\"true\"]",
+      "timeout_ms": 30000,
+      "stable_ms": 500
+    }
+  }
+}

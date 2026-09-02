@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GEO Generative Platform Fixture</title>
+    <style>
+      body { max-width: 760px; margin: 40px auto; padding: 0 20px; font: 16px/1.5 system-ui; }
+      textarea { width: 100%; min-height: 100px; }
+      button { margin-top: 12px; padding: 8px 14px; }
+      .answer { margin-top: 28px; padding: 18px; border: 1px solid #b8d7c2; border-radius: 12px; }
+    </style>
+  </head>
+  <body>
+    <h1>生成式平台 Fixture</h1>
+    <textarea id="prompt" aria-label="Query input"></textarea>
+    <button id="submit" type="button">提交</button>
+    <section id="answers" aria-live="polite"></section>
+    <script>
+      const prompt = document.querySelector('#prompt')
+      const submit = document.querySelector('#submit')
+      const answers = document.querySelector('#answers')
+      submit.addEventListener('click', () => {
+        if (!prompt.value.trim()) return
+        submit.disabled = true
+        answers.setAttribute('aria-busy', 'true')
+        setTimeout(() => {
+          const article = document.createElement('article')
+          article.className = 'answer'
+          const answer = document.createElement('p')
+          answer.textContent = `Fixture answer for: ${prompt.value}`
+          const citation = document.createElement('p')
+          const link = document.createElement('a')
+          link.href = 'https://source.example.invalid/page#fixture'
+          link.textContent = 'Fixture source'
+          citation.append(link)
+          article.append(answer, citation)
+          answers.append(article)
+          answers.removeAttribute('aria-busy')
+          submit.disabled = false
+          history.replaceState({}, '', '/result')
+        }, 300)
+      })
+    </script>
+  </body>
+</html>

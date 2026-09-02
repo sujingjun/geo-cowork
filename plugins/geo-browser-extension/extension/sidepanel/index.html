@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GEO Browser Assistant</title>
+    <link rel="stylesheet" href="./sidepanel.css">
+  </head>
+  <body>
+    <main class="panel-shell">
+      <header class="panel-header">
+        <p class="eyebrow">GEO Browser Assistant</p>
+        <h1>Query 测试任务</h1>
+        <p class="description">连接本地任务服务，逐条执行 frozen Query Set，并把完整回答、引用和失败记录写回工作区。</p>
+      </header>
+
+      <section class="page-card" aria-labelledby="page-heading">
+        <div class="card-heading">
+          <h2 id="page-heading">Active Page Context</h2>
+          <button id="refresh-page" type="button">刷新</button>
+        </div>
+        <p id="page-status" class="status" data-state="loading" role="status" aria-live="polite">正在读取当前页面…</p>
+        <dl>
+          <div>
+            <dt>标题</dt>
+            <dd id="page-title">—</dd>
+          </div>
+          <div>
+            <dt>URL</dt>
+            <dd><a id="page-url" href="#" target="_blank" rel="noreferrer">—</a></dd>
+          </div>
+        </dl>
+      </section>
+
+      <section class="task-card" aria-labelledby="connection-heading">
+        <div class="card-heading">
+          <h2 id="connection-heading">本地任务服务</h2>
+          <span id="connection-state" class="pill" data-state="idle">未连接</span>
+        </div>
+        <label>
+          服务地址
+          <input id="service-url" type="url" value="http://127.0.0.1:4319" autocomplete="off">
+        </label>
+        <label>
+          Session token
+          <input id="session-token" type="password" autocomplete="off" placeholder="仅保留在当前面板内存">
+        </label>
+        <button id="connect-task" type="button">连接并读取任务</button>
+        <p id="task-message" class="status" data-state="idle" role="status" aria-live="polite">先在终端启动本地任务服务。</p>
+      </section>
+
+      <section id="task-card" class="task-card" aria-labelledby="task-heading" hidden>
+        <div class="card-heading">
+          <div>
+            <p id="task-progress" class="eyebrow"></p>
+            <h2 id="task-heading">当前 Query</h2>
+          </div>
+          <span id="query-state" class="pill"></span>
+        </div>
+        <p id="query-ref" class="mono"></p>
+        <blockquote id="query-text"></blockquote>
+        <p id="platform-boundary" class="description"></p>
+
+        <div class="actions">
+          <button id="start-query" type="button">开始本条</button>
+          <button id="retry-query" type="button" hidden>重新启动</button>
+        </div>
+
+        <form id="capture-form" hidden>
+          <label>
+            回答终态
+            <select id="answer-outcome">
+              <option value="success">success</option>
+              <option value="refusal">refusal</option>
+            </select>
+          </label>
+          <label>
+            结果 URL
+            <input id="result-url" type="url" required>
+          </label>
+          <label>
+            完整回答
+            <textarea id="answer-text" rows="10" required placeholder="粘贴完整回答，不要概述"></textarea>
+          </label>
+          <label>
+            引用（每行一个 URL，或“标题 | URL”）
+            <textarea id="citation-text" rows="5" placeholder="来源标题 | https://example.com/page"></textarea>
+          </label>
+          <button type="submit">回写并完成本条</button>
+        </form>
+
+        <form id="failure-form" hidden>
+          <label>
+            失败终态
+            <select id="failure-outcome">
+              <option value="system_failure">system_failure（可重试）</option>
+              <option value="timeout">timeout（平台观察，不重试）</option>
+              <option value="no_result">no_result（平台观察，不重试）</option>
+              <option value="challenge">challenge（停止平台）</option>
+              <option value="cancelled">cancelled（不重试）</option>
+            </select>
+          </label>
+          <label>
+            失败原因
+            <textarea id="failure-reason" rows="3" required placeholder="记录超时、选择器漂移、挑战页等实际原因"></textarea>
+          </label>
+          <button class="danger" type="submit">记录失败</button>
+        </form>
+      </section>
+
+      <p class="boundary">登录、验证码和账号确认始终由人工完成。现有消费者平台按 Spec 0006 走 manual assist；只有 adapter 明确为 <code>allowed</code> 才执行 DOM 自动化。</p>
+    </main>
+    <script type="module" src="./sidepanel.js"></script>
+  </body>
+</html>
