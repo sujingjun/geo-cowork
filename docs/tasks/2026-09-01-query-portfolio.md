@@ -1,6 +1,6 @@
 ---
 title: Query Portfolio 流水线任务清单
-status: approved
+status: verified
 created: 2026-09-01
 updated: 2026-09-01
 source:

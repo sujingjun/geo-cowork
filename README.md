@@ -70,11 +70,14 @@ npm run test:m3-knowledge-query                          # M3 Knowledge/Query �
 npm run test:m4-diagnosis                               # M4 Diagnosis/Site/Asset 专项测试
 npm run test:m5-answer                                 # M5 Answer/Citation/Source/聚合专项测试
 npm run test:m6-cycle                                 # M6 测试商户 Cycle/Analytics/恢复专项测试
+npm run test:m7-strategy                             # M7 策略推理执行专项测试
+npm run test:query-portfolio                          # Query Portfolio 流水线专项测试
 npm run smoke:m5-playwright                            # 全局 Playwright + loopback base Smoke
 npm run check:docs                                      # 仓库 Markdown 本地链接检查
 npm run validate:plugin                                  # 插件包契约自检
 node plugins/geo-expert/scripts/build-index.mjs --workspace workspaces/myyshop --check
 node plugins/geo-expert/scripts/knowledge-query.mjs validate --workspace workspaces/myyshop
+node plugins/geo-expert/scripts/query-portfolio.mjs validate --workspace workspaces/myyshop
 node plugins/geo-expert/scripts/diagnosis.mjs validate --workspace workspaces/myyshop
 node plugins/geo-expert/scripts/answer-cycle.mjs validate --workspace workspaces/myyshop
 node plugins/geo-expert/scripts/geo-lifecycle.mjs validate --workspace <test-workspace>

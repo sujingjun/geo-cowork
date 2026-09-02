@@ -1,5 +1,13 @@
 # geo-cowork 变更记录
 
+## 2026-09-01 - Query Portfolio 流水线（本地未发布）
+
+- 新增 Query Portfolio 阶段：候选 intake（确定性归一化/意图/优先级规则 `qp-*-v1`）、同源重复失败、跨来源合并、既有 Query 幂等跳过、聚类与覆盖报告（create-only JSON 工件）、draft Query Set 组装与冻结前机器门；
+- 新增 `scripts/query-portfolio.mjs`（intake/report/assemble/prefreeze/validate）与 `skills/geo-query-portfolio`；不新增记录类型、不写任何 `approval`，candidate → formal 与 draft → frozen 只由人类编辑并补批准；
+- 双路径写入：`workspace_mode: test_only` 走 M6 `preflightSyntheticWrite` 全隔离，真实工作区走 M3 `validateObjectData` + create-only，同一命令无需改代码即可在两类工作区运行；
+- 知识库缺席验收：`tests/fixtures/query-portfolio` 合成测试商户（`.invalid` locator、`fixture://` 批准）零 Claim/Evidence/Document/Knowledge Release 完成全旅程；`workspaces/myyshop` 全程只读、字节不变；
+- 专项 21 tests（16 单元 + 3 E2E + 2 CLI）与全量 321 tests 通过；插件 Manifest 仍为 0.3.0，未 commit/push/PR/release/deploy。
+
 ## 2026-08-26 - M5 两槽英文 Baseline 第 1 槽（本地未发布）
 
 - Owner 将正式协议修订为每平台两个独立英文 manual Sample；中文仅作可选辅助并绑定同一语义合同；

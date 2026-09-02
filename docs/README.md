@@ -139,6 +139,15 @@
 | Runbook | [`runbooks/ga4-gsc-readonly-analytics.md`](runbooks/ga4-gsc-readonly-analytics.md) | `implemented`；setup、doctor、dry-run、smoke、故障与撤销 |
 | Record | [`records/2026-09-01-ga4-gsc-readonly-analytics-record.md`](records/2026-09-01-ga4-gsc-readonly-analytics-record.md) | `verified`；认证、固定请求、7+7 行真实只读 smoke 与边界 |
 
+## Query Portfolio 流水线（本地工程验收完成）
+
+| 类别 | 工件 | 状态与用途 |
+| --- | --- | --- |
+| Requirement / PRD | [`requirements/2026-09-01-query-portfolio.md`](requirements/2026-09-01-query-portfolio.md) / [`prd/2026-09-01-query-portfolio.md`](prd/2026-09-01-query-portfolio.md) | `approved`；候选生成、去重、聚类、优先级、人工批准与 Query Set 冻结的问题、目标与非目标 |
+| Architecture / Spec 0011 | [`architecture/2026-09-01-query-portfolio-architecture.md`](architecture/2026-09-01-query-portfolio-architecture.md) / [`specs/0011-query-portfolio.md`](specs/0011-query-portfolio.md) | `approved`；确定性规则版本、intake/report/assemble/prefreeze/validate 工具合同与双路径写入 |
+| Plan / Task | [`plans/2026-09-01-query-portfolio-plan.md`](plans/2026-09-01-query-portfolio-plan.md) / [`tasks/2026-09-01-query-portfolio.md`](tasks/2026-09-01-query-portfolio.md) | `approved` / `verified`；T01—T05 与验收命令 |
+| Record | [`records/2026-09-01-query-portfolio-record.md`](records/2026-09-01-query-portfolio-record.md) | `verified`；321/321 测试、知识库缺席 fixture 全旅程、真实 myyshop 工作区只读兼容；未 commit/push |
+
 ## 历史提案与交接
 
 | 工件 | 位置 | 状态与用途 |
