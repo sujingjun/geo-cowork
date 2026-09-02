@@ -1,5 +1,13 @@
 # geo-cowork 变更记录
 
+## 2026-09-02 - 五平台 guard adapter 移除 terms_blocked（本地未发布）
+
+- 按 Owner 当次指令移除五个平台 guard adapter 的 `terms_blocked` 状态：ChatGPT、Perplexity、Google AI、Claude 与 Gemini 统一为 `manual_only`，adapter 合同枚举收窄为 `allowed/manual_only`；
+- 五个平台的 Query 测试统一由 GEO Browser Extension（manual_assist）在 Owner-controlled 浏览器中完成；adapter `manual_fallback.mode` 统一冻结为 `extension_manual_assist`，Browser Query Task 合同强制校验该通道；
+- Perplexity 同步放开：`user_supplied_result` 限制移除，可走扩展 manual_assist 提交新 Query，Owner 已提供导出/结果 URL 的导入通道保留；本决定覆盖 2026-08-26 Perplexity 限制决策；
+- 自动采集门不变：非 `allowed` 平台尝试 `dom_automation`/Playwright 仍在浏览器启动前被 `PLATFORM_TERMS_BLOCKED` 阻止，adapter 变成 `allowed` 仍需平台方书面许可；
+- 根 `npm test` 347/347 与扩展 4/4 通过；未访问真实平台、未安装扩展、未 push/PR/release/deploy。
+
 ## 2026-09-02 - Knowledge-Independent GEO Lifecycle Readiness（本地未发布）
 
 - 将 M6/M7 的测试边界从虚构 `test_merchant` 重构为“唯一 MyyShop online Merchant + 隔离 development-test KBASE”；新增显式 `knowledge_base_ref`，删除旧 record type、CLI、模块、模板与专属 fixture 命名；

@@ -169,10 +169,10 @@ function validatePlatform(plan) {
       selectors = validateSelectors(adapter.extension_automation.selectors);
     } else {
       assertPlatformManualAllowed(adapter, { manualSourceKind: 'user_supplied_result_url' });
-      if (adapter.manual_fallback.mode === 'user_supplied_result') {
+      if (adapter.manual_fallback.mode !== 'extension_manual_assist') {
         failBrowserQueryTask(
           'PLATFORM_MANUAL_COLLECTION_BLOCKED',
-          '该平台只允许导入 Owner 已提供的结果，不得打开并提交新 Query',
+          '平台 manual 路径必须经由 GEO Browser Extension manual assist',
           { platform: id },
         );
       }

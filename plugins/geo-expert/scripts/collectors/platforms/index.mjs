@@ -31,7 +31,7 @@ function validateAdapter(adapter) {
   ];
   const missing = required.filter((field) => adapter[field] === undefined);
   if (missing.length > 0 || adapter.product_entries.length === 0
-      || !['allowed', 'terms_blocked', 'manual_only'].includes(adapter.automation.status)) {
+      || !['allowed', 'manual_only'].includes(adapter.automation.status)) {
     throw new PlatformAdapterError('PLATFORM_ADAPTER_INVALID', '平台 adapter 合同不完整', {
       platform: adapter.platform,
       missing,

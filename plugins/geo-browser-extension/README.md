@@ -41,7 +41,7 @@
 
 `cycle_ref` 必须是 `active` Cycle，`query_set` 必须匹配该 Cycle frozen input snapshot 中 `goal_tracks[].query_set_entry_key` 指向的精确对象。真实平台授权使用 `geo-browser-query-authorization-v1` JSON，至少冻结 platform/product entry、`logged_in`、region/language、`manual|browser_automation`、Query 提交许可、允许 artifact 及逐项保留期、隐私最小化、访问角色、删除责任、停止条件、外部写入为否、批准人与有效期；计划用 `authorization_sha256` 锁定原始字节。字段模板见 [examples/query-authorization.example.json](examples/query-authorization.example.json)。
 
-当前五个消费者平台沿用 Spec 0006 的许可状态：ChatGPT、Perplexity、Google AI、Claude 是 `terms_blocked`，Gemini 是 `manual_only`。这些平台只能使用 `manual_assist`；登录状态不能替代许可。`dom_automation` 只有在平台注册 adapter 明确为 `allowed` 且扩展 manifest 已声明精确 origin permission 时才会启动。当前可执行自动化只覆盖 loopback fixture，样例见 [examples/query-task.fixture.json](examples/query-task.fixture.json)。
+当前五个消费者平台（ChatGPT、Gemini、Perplexity、Google AI、Claude）的注册 adapter 统一为 `manual_only`，Query 测试只能使用 `manual_assist` 由本扩展在 Owner-controlled 浏览器中完成；登录状态不能替代许可。`dom_automation` 只有在平台注册 adapter 明确为 `allowed` 且扩展 manifest 已声明精确 origin permission 时才会启动。当前可执行自动化只覆盖 loopback fixture，样例见 [examples/query-task.fixture.json](examples/query-task.fixture.json)。
 
 ## 2. 启动本地任务服务
 

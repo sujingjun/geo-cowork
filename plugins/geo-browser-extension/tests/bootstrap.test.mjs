@@ -149,7 +149,7 @@ test('自动化 runner 只在 allowed 模式申请精确 origin 并回传完整�
     error => error.stage === 'submitted'
   )
   await assert.rejects(
-    runAutomatedPlatformQuery(chromeApi, { ...platform, policy: { status: 'terms_blocked' } }, 'test'),
+    runAutomatedPlatformQuery(chromeApi, { ...platform, policy: { status: 'manual_only' } }, 'test'),
     /未获 DOM 自动化许可/
   )
 })

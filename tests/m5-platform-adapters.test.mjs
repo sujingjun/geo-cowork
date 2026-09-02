@@ -26,7 +26,8 @@ test('五个平台 adapter 分别冻结入口、版本、artifact 与条款状�
     } else {
       assert.ok(adapter.allowed_artifacts.includes('collector_log'));
     }
-    assert.ok(['terms_blocked', 'manual_only'].includes(adapter.automation.status));
+    assert.equal(adapter.automation.status, 'manual_only');
+    assert.equal(adapter.manual_fallback.mode, 'extension_manual_assist');
     assert.equal('written_permission_required' in adapter.automation, false);
     assert.equal('written_permission_ref' in adapter.automation, false);
     assert.equal('future_collection_mode' in adapter.automation, false);
@@ -35,23 +36,19 @@ test('五个平台 adapter 分别冻结入口、版本、artifact 与条款状�
   }
 });
 
-test('真实 UI manual adapter 允许四个平台，Perplexity 允许 Owner 提供导出或结果 URL', () => {
+test('五个平台统一允许 GEO Browser Extension manual assist 人工路径', () => {
   for (const platform of ['chatgpt', 'gemini', 'google_ai', 'claude']) {
     assert.equal(assertPlatformManualAllowed(getPlatformAdapter(platform)).platform, platform);
   }
-  assert.throws(
-    () => assertPlatformManualAllowed(getPlatformAdapter('perplexity')),
-    (error) => error.code === 'PLATFORM_MANUAL_COLLECTION_BLOCKED',
-  );
+  assert.equal(assertPlatformManualAllowed(getPlatformAdapter('perplexity'), {
+    manualSourceKind: 'user_supplied_result_url',
+  }).platform, 'perplexity');
   assert.equal(assertPlatformManualAllowed(getPlatformAdapter('perplexity'), {
     manualSourceKind: 'user_supplied_export',
   }).platform, 'perplexity');
   assert.ok(getPlatformAdapter('gemini').manual_fallback.result_url_origins.includes(
     'https://share.gemini.google',
   ));
-  assert.equal(assertPlatformManualAllowed(getPlatformAdapter('perplexity'), {
-    manualSourceKind: 'user_supplied_result_url',
-  }).platform, 'perplexity');
 });
 
 test('adapter 不再以 written permission ref 作为运行时硬门', () => {

@@ -438,7 +438,7 @@ test('消费者平台 manual assist 可保存人工提供的完整结果', async
   try {
     const opened = await openBrowserQueryTask({ workspace, plan });
     assert.equal(opened.state.platform.execution_mode, 'manual_assist');
-    assert.equal(opened.state.platform.policy.status, 'terms_blocked');
+    assert.equal(opened.state.platform.policy.status, 'manual_only');
     await startBrowserQuery({ workspace, plan, queryRef: 'Q-M6-TEST-001' });
     const completed = await completeBrowserQuery({
       workspace,

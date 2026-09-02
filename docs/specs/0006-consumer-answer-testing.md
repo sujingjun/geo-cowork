@@ -2,7 +2,7 @@
 title: Spec 0006 — Consumer Answer Testing 与持续信源体系
 status: approved
 created: 2026-08-24
-updated: 2026-08-26
+updated: 2026-09-02
 source:
   - docs/prd/2026-08-24-m5-consumer-answer-testing.md
   - docs/architecture/2026-08-24-consumer-answer-testing-architecture.md
@@ -16,6 +16,7 @@ source:
   - "2026-08-25 当前用户指令：去除 Adapter written_permission_ref 限制；平台许可改为全部里程碑完成后的上线前待办"
   - "2026-08-26 当前用户指令：继续 Owner 手工操作/复制的 manual exploratory 采样；开发阶段先跑通对应真实 UI adapter"
   - "2026-08-26 当前用户指令：信源统一归档未分类，100 个唯一 Source 后批量分类；每平台两次独立人工采样；英文主线、中文辅助且同对象语义一致；确认当前定位并提供五平台首轮结果 URL"
+  - "2026-09-02 当前用户指令：五个平台 guard adapter 移除 terms_blocked 状态，统一调整成 geo chrome 插件完成"
 scope: M5 Collector Profile、Playwright/真实采集、Answer Sample、持续 Source registry、Citation/Review、聚合、恢复与授权门
 ---
 
@@ -569,4 +570,4 @@ COMPARABILITY_PARTIAL
 
 ## 17. 非目标与当前授权
 
-本 Spec 完整设计 Playwright base、逐平台真实 collector 与持续信源维护。Owner 已授权 T02—T08，并授权五个平台使用 Owner-controlled 浏览器路径、真实用户隐私最小化与本地 365 天保留；该账号授权不能覆盖平台 Terms、robots、challenge 或安全控制。2026-08-26 Owner 将正式协议修订为每平台两个独立英文 manual Sample，并提供五个平台第 1 槽 exact result URL；中文仅作可选辅助且不得与英文混聚合。所有 Citation Source 先归档未分类，唯一 Source 达 100 个后再统一分类。自动采集仍由 `terms_blocked/manual_only` 控制。不授权 M4 业务对象补写、GA4/GSC、外部写入、commit、push、PR、发布、部署或 Git 远端动作；第 2 槽未完成前不得称平台 Baseline 完成。
+本 Spec 完整设计 Playwright base、逐平台真实 collector 与持续信源维护。Owner 已授权 T02—T08，并授权五个平台使用 Owner-controlled 浏览器路径、真实用户隐私最小化与本地 365 天保留；该账号授权不能覆盖平台 Terms、robots、challenge 或安全控制。2026-08-26 Owner 将正式协议修订为每平台两个独立英文 manual Sample，并提供五个平台第 1 槽 exact result URL；中文仅作可选辅助且不得与英文混聚合。所有 Citation Source 先归档未分类，唯一 Source 达 100 个后再统一分类。2026-09-02 Owner 决定移除 adapter `terms_blocked` 状态：五个平台统一为 `manual_only`，Query 测试统一由 GEO Browser Extension（manual_assist）在 Owner-controlled 浏览器中完成，自动采集仍被 `PLATFORM_TERMS_BLOCKED` 阻止。不授权 M4 业务对象补写、GA4/GSC、外部写入、commit、push、PR、发布、部署或 Git 远端动作；第 2 槽未完成前不得称平台 Baseline 完成。
