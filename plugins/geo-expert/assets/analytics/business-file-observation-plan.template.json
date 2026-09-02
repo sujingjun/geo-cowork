@@ -1,0 +1,48 @@
+{
+  "schema_version": "business-file-observation-plan/1.0.0",
+  "merchant_ref": "MER-EXAMPLE-001",
+  "execution_scope": "authorized_real",
+  "adapter_kind": "business_file",
+  "format": "csv",
+  "input_path": "imports/authorized-aggregate.csv",
+  "authorization": {
+    "ref": "workspace://cycles/preparation/decisions/business-file-authorized.md",
+    "sha256": "REPLACE_WITH_AUTHORIZATION_SHA256"
+  },
+  "metadata": {
+    "starts_at": "2026-01-01T00:00:00Z",
+    "ends_at": "2026-01-08T00:00:00Z",
+    "as_of": "2026-01-09T00:00:00Z",
+    "owner_role": "Data Owner"
+  },
+  "source": {
+    "id": "SRC-EXAMPLE-BUSINESS-FILE-001",
+    "path": "evidence/sources/src-example-business-file-001.md",
+    "name": "Authorized aggregate business export"
+  },
+  "run": {
+    "id": "RUN-EXAMPLE-BUSINESS-FILE-001",
+    "path": "runs/RUN-EXAMPLE-BUSINESS-FILE-001/run.md"
+  },
+  "observation": {
+    "id": "ANO-EXAMPLE-BUSINESS-FILE-001",
+    "path": "cycles/analytics/ano-example-business-file-001.md"
+  },
+  "signal": {
+    "id": "BSIG-EXAMPLE-BUSINESS-FILE-001",
+    "path": "cycles/analytics/bsig-example-business-file-001.md",
+    "numerator_metric_id": "example_numerator",
+    "denominator_metric_id": "example_denominator",
+    "unit": "ratio"
+  },
+  "evidence": {
+    "id": "EVD-EXAMPLE-BUSINESS-FILE-001",
+    "path": "evidence/records/evd-example-business-file-001.md",
+    "status": "candidate"
+  },
+  "contracts": {
+    "measurement": { "path": "execution/contracts/business-measurement.json" },
+    "sensitive_data_policy": { "path": "execution/contracts/business-sensitive-policy.json" },
+    "signal_rule": { "path": "execution/contracts/business-signal-rule.json" }
+  }
+}

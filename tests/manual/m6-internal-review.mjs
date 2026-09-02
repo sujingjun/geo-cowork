@@ -82,7 +82,7 @@ async function main() {
       synthetic: trace.synthetic,
       real_myyshop_impact: trace.real_myyshop_impact,
       network_accessed: false,
-      next_action: 'Follow docs/runbooks/m6-test-merchant-internal-review.md',
+      next_action: 'Follow docs/runbooks/myyshop-development-test-internal-review.md',
     }, null, 2));
   } catch (error) {
     console.error(JSON.stringify({

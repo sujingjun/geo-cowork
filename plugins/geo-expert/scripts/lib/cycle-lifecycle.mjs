@@ -18,7 +18,7 @@ import {
   validateCycleAdvance,
 } from './cycle-state.mjs';
 export { deriveCycleSummary, validateCycleAdvance } from './cycle-state.mjs';
-import { preflightSyntheticWrite } from './m6-test-merchant.mjs';
+import { preflightTestKnowledgeWrite } from './workspace-scope.mjs';
 import { serializeMarkdownObject } from './object-contract.mjs';
 import {
   atomicWrite,
@@ -320,7 +320,7 @@ export async function advanceCycle({ workspace, plan }) {
       now,
     });
     const transitionPath = `cycles/m6/transitions/${transition.id.toLowerCase()}.md`;
-    await preflightSyntheticWrite({
+    await preflightTestKnowledgeWrite({
       workspace: root,
       data: transition,
       body: `# Cycle Transition ${transition.id}\n`,

@@ -7,7 +7,7 @@
       "x-statuses": ["draft", "waiting_human", "decided", "superseded"],
       "required": ["test_scope", "merchant_ref", "cycle_review_ref", "cycle_review_version", "strategy_input_snapshot_version", "human_invocation", "eligibility_inputs", "eligibility_checks", "eligibility_result", "eligibility_rule", "decision"],
       "properties": {
-        "merchant_ref": { "type": "string", "pattern": "^TMT-(?:[A-Z0-9]+-)*[A-Z0-9]+$" },
+        "merchant_ref": { "type": "string", "pattern": "^MER-(?:[A-Z0-9]+-)*[A-Z0-9]+$" },
         "cycle_review_ref": { "type": "string", "pattern": "^CRV-(?:[A-Z0-9]+-)*[A-Z0-9]+$" },
         "cycle_review_version": { "type": "string", "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$" },
         "strategy_input_snapshot_version": { "$ref": "common#/$defs/refVersion" },
@@ -119,7 +119,7 @@
       "x-statuses": ["candidate", "validated", "decision_factor", "deprecated"],
       "required": ["test_scope", "merchant_ref", "strategy_assessment_version", "strategy_input_snapshot_version", "label", "definition", "query_entry_keys", "review_entry_keys", "evidence_entry_keys", "finding_entry_keys", "product_gap_entry_key", "product_gap_identity", "basis"],
       "properties": {
-        "merchant_ref": { "type": "string", "pattern": "^TMT-(?:[A-Z0-9]+-)*[A-Z0-9]+$" },
+        "merchant_ref": { "type": "string", "pattern": "^MER-(?:[A-Z0-9]+-)*[A-Z0-9]+$" },
         "strategy_assessment_version": { "$ref": "common#/$defs/refVersion" },
         "strategy_input_snapshot_version": { "$ref": "common#/$defs/refVersion" },
         "label": { "type": "string", "minLength": 1 },
@@ -199,7 +199,7 @@
       "x-statuses": ["recorded"],
       "required": ["test_scope", "merchant_ref", "source_cycle_review_version", "review_input_snapshot_version", "generator_rule", "batch_key", "ordered_candidates", "run_ref"],
       "properties": {
-        "merchant_ref": { "type": "string", "pattern": "^TMT-(?:[A-Z0-9]+-)*[A-Z0-9]+$" },
+        "merchant_ref": { "type": "string", "pattern": "^MER-(?:[A-Z0-9]+-)*[A-Z0-9]+$" },
         "source_cycle_review_version": {
           "type": "object",
           "required": ["ref", "version", "file_sha256"],
@@ -274,7 +274,7 @@
         "limitations", "evidence_gaps", "risks", "rank_inputs", "rank"
       ],
       "properties": {
-        "merchant_ref": { "type": "string", "pattern": "^TMT-(?:[A-Z0-9]+-)*[A-Z0-9]+$" },
+        "merchant_ref": { "type": "string", "pattern": "^MER-(?:[A-Z0-9]+-)*[A-Z0-9]+$" },
         "candidate_batch_version": { "$ref": "common#/$defs/refVersion" },
         "source_cycle_review_version": {
           "type": "object",
@@ -366,7 +366,7 @@
         "candidate_versions", "decision"
       ],
       "properties": {
-        "merchant_ref": { "type": "string", "pattern": "^TMT-(?:[A-Z0-9]+-)*[A-Z0-9]+$" },
+        "merchant_ref": { "type": "string", "pattern": "^MER-(?:[A-Z0-9]+-)*[A-Z0-9]+$" },
         "source_cycle_review_version": {
           "type": "object",
           "required": ["ref", "version", "file_sha256"],
@@ -411,7 +411,7 @@
         "validation_plan_contract", "body_sha256", "artifact_manifest_fingerprint"
       ],
       "properties": {
-        "merchant_ref": { "type": "string", "pattern": "^TMT-(?:[A-Z0-9]+-)*[A-Z0-9]+$" },
+        "merchant_ref": { "type": "string", "pattern": "^MER-(?:[A-Z0-9]+-)*[A-Z0-9]+$" },
         "strategy_assessment_version": { "$ref": "common#/$defs/refVersion" },
         "strategy_input_snapshot_version": { "$ref": "common#/$defs/refVersion" },
         "run_ref": { "type": "string", "pattern": "^RUN-(?:[A-Z0-9]+-)*[A-Z0-9]+$" },

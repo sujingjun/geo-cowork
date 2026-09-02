@@ -48,7 +48,7 @@ function portfolio(command, workspace, ...rest) {
   return runCli(args);
 }
 
-test('知识库缺席：测试商户 Query Portfolio 全旅程', async () => {
+test('知识库缺席：测试知识库 Query Portfolio 全旅程', async () => {
   const root = await createQueryPortfolioFixtureWorkspace();
   try {
     // 1. intake：4 条观察生成 candidate Query
@@ -99,7 +99,7 @@ test('知识库缺席：测试商户 Query Portfolio 全旅程', async () => {
       schema_version: 'qp-assemble-plan/1.0.0',
       id: QP_QUERY_SET_ID,
       path: SET_PATH,
-      title: 'QP test merchant query set',
+      title: 'QP test knowledge base query set',
       goal_refs: [QP_GOAL_ID],
       query_versions: intake.result.queries.map((item) => ({ ref: item.id, version: '1.0.0' })),
     })}\n`);
@@ -140,7 +140,7 @@ test('知识库缺席：测试商户 Query Portfolio 全旅程', async () => {
     assert.equal(frozenCheck.result.state, 'frozen');
     assert.equal(frozenCheck.result.valid, true);
 
-    // 10. validate：M3 + portfolio + 测试商户三层均无 error
+    // 10. validate：M3 + portfolio + 测试知识库三层均无 error
     const validation = await portfolio('validate', root);
     assert.equal(validation.code, 0);
     assert.deepEqual(validation.result.errors, []);
@@ -159,10 +159,13 @@ test('知识库缺席：测试商户 Query Portfolio 全旅程', async () => {
     // 12. 知识库缺席断言：工作区只有商户/来源/目标/Query/Query Set
     const graph = await loadWorkspaceGraph({ workspace: root });
     const recordTypes = [...new Set(graph.objects.map((object) => object.data.record_type))].sort();
-    assert.deepEqual(recordTypes, ['perception_goal', 'query', 'query_set', 'source', 'test_merchant']);
+    assert.deepEqual(recordTypes, [
+      'brand_knowledge_base', 'merchant', 'perception_goal', 'query', 'query_set', 'source',
+    ]);
     for (const object of graph.objects) {
-      assert.ok(!/MYYSHOP/.test(object.data.id), object.data.id);
-      assert.ok(!/MYYSHOP/.test(object.data.title ?? ''));
+      if (!['merchant', 'brand_knowledge_base'].includes(object.data.record_type)) {
+        assert.ok(!/MYYSHOP/.test(object.data.id), object.data.id);
+      }
     }
     assert.equal((await readFile(path.join(root, 'workspace.json'), 'utf8')).includes(QP_WORKSPACE_ID), true);
   } finally {
@@ -179,7 +182,7 @@ test('知识库缺席：重复观察与跨来源合并', async () => {
       source_ref: 'SRC-QP-TEST-002',
       source_class: 'community_expression',
       observed_at: NOW,
-      entries: [{ query_text: 'what is qp test merchant', language: 'en-US' }],
+      entries: [{ query_text: 'what is qp test knowledge base', language: 'en-US' }],
     });
     const planFile = path.join(root, 'intake-plan-2.json');
     const { writeFile } = await import('node:fs/promises');
@@ -188,7 +191,7 @@ test('知识库缺席：重复观察与跨来源合并', async () => {
     assert.equal(result.code, 0);
     assert.equal(result.result.queries.length, 4);
     const merged = result.result.queries.find(
-      (item) => item.normalized_text === 'what is qp test merchant',
+      (item) => item.normalized_text === 'what is qp test knowledge base',
     );
     assert.equal(merged.source_classes.length, 2);
     assert.equal(merged.priority, 'P0');
@@ -204,7 +207,7 @@ test('知识库缺席：同源重复观察整体失败且无部分写入', async
   const root = await createQueryPortfolioFixtureWorkspace();
   try {
     const plan = JSON.parse(await readFile(PLAN, 'utf8'));
-    plan.sources[0].entries.push({ query_text: 'what is QP test merchant', language: 'en-US' });
+    plan.sources[0].entries.push({ query_text: 'what is QP test knowledge base', language: 'en-US' });
     const planFile = path.join(root, 'intake-plan-3.json');
     const { writeFile } = await import('node:fs/promises');
     await writeFile(planFile, `${JSON.stringify(plan)}\n`);

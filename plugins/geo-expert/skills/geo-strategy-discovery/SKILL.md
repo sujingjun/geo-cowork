@@ -1,6 +1,6 @@
 ---
 name: geo-strategy-discovery
-description: 在显式人工 invocation 后，基于 M6 strategy CIS 和已批准 M4 open Product Gap 执行测试商户战略发现、Decision Dimension 人工门、Strategy Output 与 Cycle 2 候选准备；不自动批准或选择。
+description: 在显式人工 invocation 后，基于 development-test KBASE 的 M6 strategy CIS 和已批准 M4 open Product Gap 执行战略发现、Decision Dimension 人工门、Strategy Output 与 Cycle 2 候选准备；不自动批准或选择。
 ---
 
 # geo-strategy-discovery
@@ -8,7 +8,7 @@ description: 在显式人工 invocation 后，基于 M6 strategy CIS 和已批�
 ## 触发场景
 
 - 人工明确要求对一个 completed Cycle Review 进行 Strategy eligibility 检查；
-- 已存在 approved/open Product Gap，需要准备测试商户 Decision Dimension、Strategy Output 或 Cycle 2 候选。
+- 已存在 approved/open Product Gap，需要准备 test-only Decision Dimension、Strategy Output 或 Cycle 2 候选。
 
 本 Skill 不是普通 GEO Cycle 的必经步骤。没有显式人工 invocation 时保持 `not_applicable`。
 
@@ -18,7 +18,7 @@ description: 在显式人工 invocation 后，基于 M6 strategy CIS 和已批�
 
 ## 开工前必读
 
-读取 Spec 0005、Spec 0007、Spec 0008、M6→M7 Handoff、当前 Cycle Review/CIS 和目标 Test Merchant 身份。先确认 `GEO_M7_NETWORK_DISABLED=1`，再核对 plan、Scope、版本、checksum 与人工决定的 `conversation_history_used:false`。
+读取 Spec 0005、Spec 0007、Spec 0008、Spec 0012、M6→M7 Handoff、当前 Cycle Review/CIS、Merchant 与 KBASE 身份。先确认 `GEO_M7_NETWORK_DISABLED=1`，再核对 plan、Scope、版本、checksum 与人工决定的 `conversation_history_used:false`。
 
 ## 步骤
 

@@ -41,7 +41,8 @@ const INDEX_NAMES = {
   claim_support_review: 'claim-support-reviews.json',
   answer_review: 'answer-reviews.json',
   answer_aggregation: 'answer-aggregations.json',
-  test_merchant: 'test-merchants.json',
+  merchant: 'merchants.json',
+  brand_knowledge_base: 'brand-knowledge-bases.json',
   cycle_input_snapshot: 'cycle-input-snapshots.json',
   cycle_transition: 'cycle-transitions.json',
   analytics_observation: 'analytics-observations.json',
@@ -53,6 +54,9 @@ const INDEX_NAMES = {
   cycle_goal_candidate: 'cycle-goal-candidates.json',
   cycle_goal_selection: 'cycle-goal-selections.json',
   strategy_output: 'strategy-outputs.json',
+  lifecycle_readiness_report: 'lifecycle-readiness-reports.json',
+  conformance_profile: 'conformance-profiles.json',
+  conformance_result: 'conformance-results.json',
 };
 const EXTENDED_INDEX_TYPES = new Set([
   'document', 'answer_card', 'knowledge_release',
@@ -61,10 +65,11 @@ const EXTENDED_INDEX_TYPES = new Set([
   'collector_profile', 'answer_sample', 'citation_observation',
   'source_classification', 'claim_support_review', 'answer_review',
   'answer_aggregation',
-  'test_merchant', 'cycle_input_snapshot', 'cycle_transition',
+  'merchant', 'brand_knowledge_base', 'cycle_input_snapshot', 'cycle_transition',
   'analytics_observation', 'business_signal', 'cycle_review',
   'strategy_assessment', 'decision_dimension', 'cycle_goal_candidate_batch',
   'cycle_goal_candidate', 'cycle_goal_selection', 'strategy_output',
+  'lifecycle_readiness_report', 'conformance_profile', 'conformance_result',
 ]);
 
 const REF_FIELDS = {
@@ -170,9 +175,14 @@ const REF_FIELDS = {
   answer_aggregation: {
     supersedes_ref: ['answer_aggregation'],
   },
-  test_merchant: { supersedes_ref: ['test_merchant'] },
+  merchant: { supersedes_ref: ['merchant'] },
+  brand_knowledge_base: {
+    merchant_ref: ['merchant'],
+    supersedes_ref: ['brand_knowledge_base'],
+  },
   cycle_input_snapshot: {
-    merchant_ref: ['test_merchant'],
+    merchant_ref: ['merchant'],
+    knowledge_base_ref: ['brand_knowledge_base'],
     cycle_ref: ['cycle'],
     run_ref: ['run'],
     supersedes_ref: ['cycle_input_snapshot'],
@@ -183,46 +193,61 @@ const REF_FIELDS = {
     supersedes_ref: ['cycle_transition'],
   },
   analytics_observation: {
-    merchant_ref: ['test_merchant'],
+    merchant_ref: ['merchant'],
     cycle_ref: ['cycle'],
     goal_ref: ['perception_goal'],
     run_ref: ['run'],
     supersedes_ref: ['analytics_observation'],
   },
   business_signal: {
-    merchant_ref: ['test_merchant'],
+    merchant_ref: ['merchant'],
     cycle_ref: ['cycle'],
     goal_ref: ['perception_goal'],
     run_ref: ['run'],
     supersedes_ref: ['business_signal'],
   },
   cycle_review: {
-    merchant_ref: ['test_merchant'],
+    merchant_ref: ['merchant'],
     cycle_ref: ['cycle'],
     supersedes_ref: ['cycle_review'],
   },
   strategy_assessment: {
-    merchant_ref: ['test_merchant'],
+    merchant_ref: ['merchant'],
     cycle_review_ref: ['cycle_review'],
     supersedes_ref: ['strategy_assessment'],
   },
   decision_dimension: {
-    merchant_ref: ['test_merchant'],
+    merchant_ref: ['merchant'],
     supersedes_ref: ['decision_dimension'],
   },
   cycle_goal_candidate_batch: {
-    merchant_ref: ['test_merchant'],
+    merchant_ref: ['merchant'],
     run_ref: ['run'],
   },
-  cycle_goal_candidate: { merchant_ref: ['test_merchant'] },
+  cycle_goal_candidate: { merchant_ref: ['merchant'] },
   cycle_goal_selection: {
-    merchant_ref: ['test_merchant'],
+    merchant_ref: ['merchant'],
     supersedes_ref: ['cycle_goal_selection'],
   },
   strategy_output: {
-    merchant_ref: ['test_merchant'],
+    merchant_ref: ['merchant'],
     run_ref: ['run'],
     supersedes_ref: ['strategy_output'],
+  },
+  lifecycle_readiness_report: {
+    merchant_ref: ['merchant'],
+    knowledge_base_ref: ['brand_knowledge_base'],
+    goal_ref: ['perception_goal'],
+    supersedes_ref: ['lifecycle_readiness_report'],
+  },
+  conformance_profile: {
+    merchant_ref: ['merchant'],
+    knowledge_base_ref: ['brand_knowledge_base'],
+    supersedes_ref: ['conformance_profile'],
+  },
+  conformance_result: {
+    profile_ref: ['conformance_profile'],
+    supersedes_ref: ['conformance_result'],
   },
 };
 
@@ -267,7 +292,7 @@ export class IndexValidationError extends Error {
 }
 
 function normalizeValues(value) {
-  if (value === undefined) return [];
+  if (value === undefined || value === null) return [];
   return Array.isArray(value) ? value : [value];
 }
 
@@ -277,7 +302,15 @@ export function collectObjectReferences(data) {
     refs.push({
       field: 'test_scope.merchant_ref',
       ref: data.test_scope.merchant_ref,
-      allowedTypes: ['test_merchant'],
+      allowedTypes: ['merchant'],
+      version: null,
+    });
+  }
+  if (data.test_scope?.knowledge_base_ref) {
+    refs.push({
+      field: 'test_scope.knowledge_base_ref',
+      ref: data.test_scope.knowledge_base_ref,
+      allowedTypes: ['brand_knowledge_base'],
       version: null,
     });
   }
@@ -294,12 +327,14 @@ export function collectObjectReferences(data) {
   }
   if (data.record_type === 'cycle') {
     for (const [field, entry] of Object.entries(data.core_versions ?? {})) {
-      const allowedTypes = data.scope === 'test_merchant_engineering' && field === 'input_snapshot'
+      const allowedTypes = ['knowledge_independent_engineering', 'authorized_real'].includes(data.scope)
+        && field === 'input_snapshot'
         ? ['cycle_input_snapshot']
         : RECORD_TYPES;
       refs.push({ field: `core_versions.${field}`, ref: entry.ref, version: entry.version, allowedTypes });
     }
-    if (data.merchant_ref) refs.push({ field: 'merchant_ref', ref: data.merchant_ref, version: null, allowedTypes: ['test_merchant'] });
+    if (data.merchant_ref) refs.push({ field: 'merchant_ref', ref: data.merchant_ref, version: null, allowedTypes: ['merchant'] });
+    if (data.knowledge_base_ref) refs.push({ field: 'knowledge_base_ref', ref: data.knowledge_base_ref, version: null, allowedTypes: ['brand_knowledge_base'] });
     for (const ref of data.transition_refs ?? []) {
       refs.push({ field: 'transition_refs', ref, version: null, allowedTypes: ['cycle_transition'] });
     }

@@ -24,9 +24,9 @@ import {
   collectObjectReferences,
 } from '../plugins/geo-expert/scripts/lib/index-builder.mjs';
 import {
-  assertTestWorkspaceWriteAllowed,
-  preflightSyntheticWrite,
-} from '../plugins/geo-expert/scripts/lib/m6-test-merchant.mjs';
+  assertDevelopmentWorkspaceWriteAllowed,
+  preflightTestKnowledgeWrite,
+} from '../plugins/geo-expert/scripts/lib/workspace-scope.mjs';
 import {
   validateWorkspace,
 } from '../plugins/geo-expert/scripts/workspace-validate.mjs';
@@ -130,7 +130,7 @@ test('P0: unresolved/type/version refs 必须由 synthetic 写前预检拒绝', 
     ];
     const before = await treeDigest(root);
     const outcomes = await Promise.all(candidates.map((data) => capture(() =>
-      preflightSyntheticWrite({ workspace: root, data, body: '# Synthetic\n' }))));
+      preflightTestKnowledgeWrite({ workspace: root, data, body: '# Synthetic\n' }))));
     assert.deepEqual({
       rejected: outcomes.map((outcome) => !outcome.ok),
       unchanged: await treeDigest(root) === before,
@@ -195,7 +195,7 @@ test('P1: M6 Cycle core_versions.input_snapshot 只允许 CIS', () => {
   const refs = collectObjectReferences({
     id: 'CYC-M6-ADVERSARIAL-REF-001',
     record_type: 'cycle',
-    scope: 'test_merchant_engineering',
+    scope: 'knowledge_independent_engineering',
     core_versions: {
       input_snapshot: { ref: 'EVD-M6-TEST-001', version: '1.0.0' },
     },
@@ -219,7 +219,7 @@ test('P1: workspace-validate --objects 必须聚合 M6 existing-type profile', a
       version: '1.0.0',
       created_at: M6_NOW,
       updated_at: M6_NOW,
-      scope: 'test_merchant_engineering',
+      scope: 'knowledge_independent_engineering',
       core_versions: {},
     });
     const result = await validateWorkspace(root, { objects: true });
@@ -240,7 +240,7 @@ test('P1: test Workspace 根为 symlink 时所有 M6 写路径必须 fail closed
   try {
     await seedM6FreezeInputs(target);
     await symlink(target, linked, 'dir');
-    const outcome = await capture(() => assertTestWorkspaceWriteAllowed({ workspace: linked }));
+    const outcome = await capture(() => assertDevelopmentWorkspaceWriteAllowed({ workspace: linked }));
     assert.equal(outcome.ok, false, 'Workspace 根 symlink 不得通过身份预检');
     assert.equal(outcome.error?.code, 'SYMLINK_NOT_ALLOWED');
   } finally {

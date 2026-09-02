@@ -103,7 +103,22 @@
 | M5 Baseline 收口与知识优化 Handoff | [`handoff/2026-08-26-m5-baseline-closeout-and-knowledge-optimization-handoff.md`](handoff/2026-08-26-m5-baseline-closeout-and-knowledge-optimization-handoff.md) | proposed；Owner Review → M3 新知识版本 → 100 Source 分类 → M4 发布/Retest |
 | 平台许可需求池条目 | [`requirements/2026-08-25-platform-automation-permission-backlog.md`](requirements/2026-08-25-platform-automation-permission-backlog.md) | proposed / 待规划；是否启动规范仅由 Owner 决定 |
 
-## M6—M8 测试商户系统工程闭环（Owner 已批准设计）
+## Knowledge-Independent GEO Lifecycle Readiness（当前批准基线）
+
+| 类别 | 工件 | 状态与用途 |
+| --- | --- | --- |
+| Requirement / PRD | [`requirements/2026-09-02-knowledge-independent-lifecycle-readiness.md`](requirements/2026-09-02-knowledge-independent-lifecycle-readiness.md) / [`prd/2026-09-02-knowledge-independent-lifecycle-readiness.md`](prd/2026-09-02-knowledge-independent-lifecycle-readiness.md) | `approved`；唯一 MyyShop Merchant、development-test KBASE、真实数据 Observation 与禁止项 |
+| ADR / Spec 0012 | [`adr/0001-one-merchant-development-test-knowledge-base.md`](adr/0001-one-merchant-development-test-knowledge-base.md) / [`specs/0012-knowledge-independent-lifecycle-readiness.md`](specs/0012-knowledge-independent-lifecycle-readiness.md) | 已确认决策 / `approved`；替代旧 `test_merchant` 身份边界，定义显式 `knowledge_base_ref`、Readiness、Analytics 与 M8 |
+| Plan / Task | [`plans/2026-09-02-knowledge-independent-lifecycle-readiness-plan.md`](plans/2026-09-02-knowledge-independent-lifecycle-readiness-plan.md) / [`tasks/2026-09-02-knowledge-independent-lifecycle-readiness.md`](tasks/2026-09-02-knowledge-independent-lifecycle-readiness.md) | `approved`；T01—T08 实施与验收链 |
+| Readiness Report | [`records/2026-09-02-myyshop-real-cycle-readiness-report.md`](records/2026-09-02-myyshop-real-cycle-readiness-report.md) | `verified`；test KBASE engineering ready；真实 KBASE absent/not ready；不创建 Cycle、不推断 Content Gap |
+| M7 独立 QA | [`records/2026-09-02-m7-cycle1-cycle2-independent-qa-record.md`](records/2026-09-02-m7-cycle1-cycle2-independent-qa-record.md) | `verified`；仅 synthetic_test/test_only 双 Cycle，M6 113/113、M7 57/57、P0/P1 为 0/0 |
+| M8 Record | [`records/2026-09-02-m8-cross-host-conformance-record.md`](records/2026-09-02-m8-cross-host-conformance-record.md) | `verified`；required 5/5，native/manual optional 均 not_executed |
+| 真实启动 Runbook | [`runbooks/myyshop-real-cycle-start.md`](runbooks/myyshop-real-cycle-start.md) | `implemented`；Goal-scoped real KBASE 闭包、显式切换、Analytics 与停止条件 |
+| 最终工程 Record | [`records/2026-09-02-knowledge-independent-lifecycle-readiness-record.md`](records/2026-09-02-knowledge-independent-lifecycle-readiness-record.md) | `implemented`；工程检查全绿，真实 collect-observe 等待 ADC 交互式重新登录后收口 |
+
+## 历史 M6—M8 测试商户系统工程基线
+
+以下工件保留原批准与验证历史；其中 `test_merchant/TMT/.invalid Workspace identity` 已被 Spec 0012 的“唯一 Merchant + development-test KBASE”替代，不能再作为当前实现入口。
 
 | 类别 | 工件 | 状态与用途 |
 | --- | --- | --- |

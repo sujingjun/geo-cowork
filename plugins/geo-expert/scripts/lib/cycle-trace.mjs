@@ -8,7 +8,7 @@ import {
   materializeCycleSnapshot,
 } from './cycle-snapshot.mjs';
 import { traceStageGateValid } from './cycle-trace-gates.mjs';
-import { preflightSyntheticWrite } from './m6-test-merchant.mjs';
+import { preflightTestKnowledgeWrite } from './workspace-scope.mjs';
 import { serializeMarkdownObject } from './object-contract.mjs';
 import {
   resolveWithin,
@@ -231,7 +231,7 @@ export async function assembleCycleReview({ workspace, plan }) {
     goal_results: plan.goal_results,
     next_cycle_candidate_inputs: plan.next_cycle_candidate_inputs,
   };
-  await preflightSyntheticWrite({
+  await preflightTestKnowledgeWrite({
     workspace: root, data, body: '# Synthetic Cycle Review\n', refClosure: false,
   });
   const result = await writeCreateOnly(
@@ -298,7 +298,7 @@ export async function decideCycleReview({ workspace, decision }) {
   };
   const relative = decision.decided_review.path
     ?? `cycles/m6/reviews/${data.id.toLowerCase()}.md`;
-  await preflightSyntheticWrite({
+  await preflightTestKnowledgeWrite({
     workspace: root, data, body: '# Decided Synthetic Cycle Review\n', refClosure: false,
   });
   const result = await writeCreateOnly(
@@ -368,20 +368,21 @@ export async function traceCycle({ workspace, cycleId, active = false }) {
   const byId = new Map(objects.map((object) => [object.data.id, object]));
   const cycle = byId.get(cycleId);
   const base = {
-    scope: 'test_merchant_engineering',
+    scope: 'knowledge_independent_engineering',
   };
   if (!cycle) {
-    let testWorkspace = false;
+    let testKnowledgeWorkspace = false;
     try {
       const identity = JSON.parse(await readFile(path.join(root, 'workspace.json'), 'utf8'));
-      testWorkspace = identity.workspace_mode === 'test_only' && identity.legal_entity === false;
+      testKnowledgeWorkspace = identity.workspace_mode === 'development_test'
+        && identity.knowledge_base_mode === 'test_only';
     } catch {
-      testWorkspace = false;
+      testKnowledgeWorkspace = false;
     }
     return {
       ...base,
-      synthetic: testWorkspace,
-      real_myyshop_impact: testWorkspace ? false : null,
+      synthetic: testKnowledgeWorkspace,
+      real_myyshop_impact: testKnowledgeWorkspace ? false : null,
       errors: [{ code: 'TRACE_INCOMPLETE', ref: cycleId }],
       lifecycle_ready: false,
       goal_tracks: [],
@@ -389,7 +390,7 @@ export async function traceCycle({ workspace, cycleId, active = false }) {
   }
   const errors = [];
   const snapshotObjects = new Map();
-  const synthetic = cycle.data.scope === 'test_merchant_engineering'
+  const synthetic = cycle.data.scope === 'knowledge_independent_engineering'
     && cycle.data.test_scope?.kind === 'synthetic'
     && cycle.data.test_scope?.usage === 'test_only';
   if (!synthetic) {

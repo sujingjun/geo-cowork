@@ -28,6 +28,7 @@ const M4 = await loadSchema('m4-record-types.schema.json');
 const M5 = await loadSchema('m5-record-types.schema.json');
 const M6 = await loadSchema('m6-record-types.schema.json');
 const M7 = await loadSchema('m7-record-types.schema.json');
+const M8 = await loadSchema('m8-record-types.schema.json');
 
 export class ObjectContractError extends Error {
   constructor(code, message, diagnostics = []) {
@@ -40,7 +41,7 @@ export class ObjectContractError extends Error {
 
 function mergeDefinitions() {
   const definitions = new Map();
-  for (const schema of [M2, M3, M4, M5, M6, M7]) {
+  for (const schema of [M2, M3, M4, M5, M6, M7, M8]) {
     for (const [recordType, definition] of Object.entries(schema.$defs)) {
       const prior = definitions.get(recordType);
       const existing = prior ?? {

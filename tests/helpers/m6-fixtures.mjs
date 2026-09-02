@@ -11,13 +11,13 @@ import { sha256, stableStringify } from '../../plugins/geo-expert/scripts/lib/wo
 import { REQUIRED_DIRS } from '../../plugins/geo-expert/scripts/workspace-init.mjs';
 
 const THIS_DIR = path.dirname(fileURLToPath(import.meta.url));
-export const M6_FIXTURE_ROOT = path.resolve(THIS_DIR, '..', 'fixtures', 'm6-test-merchant');
+export const M6_FIXTURE_ROOT = path.resolve(THIS_DIR, '..', 'fixtures', 'myyshop-development-test');
 
 export const M6_NOW = '2026-08-27T00:00:00Z';
-export const M6_WORKSPACE_ID = 'ws_m6testmerchant000000000000';
-export const M6_NAMESPACE = 'm6-test-merchant-v1';
-export const M6_SUBJECT_LOCATOR = 'https://m6-test-merchant.invalid/';
-export const M6_MERCHANT_ID = 'TMT-M6-TEST-001';
+export const M6_WORKSPACE_ID = 'ws_myyshopdevtest000000000000';
+export const M6_SUBJECT_LOCATOR = 'https://www.myyshop.com/';
+export const M6_MERCHANT_ID = 'MER-MYYSHOP-001';
+export const M6_KNOWLEDGE_BASE_ID = 'KBASE-MYYSHOP-DEVTEST-001';
 export const M6_CYCLE_ID = 'CYC-M6-TEST-001';
 export const M6_RUN_ID = 'RUN-M6-CIS-001';
 
@@ -32,6 +32,7 @@ export const M6_TEST_SCOPE = Object.freeze({
   usage: 'test_only',
   merchant_ref: M6_MERCHANT_ID,
   workspace_id: M6_WORKSPACE_ID,
+  knowledge_base_ref: M6_KNOWLEDGE_BASE_ID,
 });
 
 const CONTRACT_FILES = Object.freeze({
@@ -55,31 +56,38 @@ export async function writeM6Object(root, relative, data, body = '# M6 synthetic
   return target;
 }
 
-export function m6TestMerchantData(overrides = {}) {
+export function m6MerchantData(overrides = {}) {
   return {
     id: M6_MERCHANT_ID,
-    record_type: 'test_merchant',
+    record_type: 'merchant',
+    status: 'active',
+    version: '1.0.0',
+    created_at: M6_NOW,
+    updated_at: M6_NOW,
+    title: 'MyyShop online merchant identity',
+    display_name: 'MyyShop',
+    canonical_locator: M6_SUBJECT_LOCATOR,
+    account_mode: 'online',
+    ...overrides,
+  };
+}
+
+export function m6KnowledgeBaseData(overrides = {}) {
+  return {
+    id: M6_KNOWLEDGE_BASE_ID,
+    record_type: 'brand_knowledge_base',
     status: 'frozen',
     version: '1.0.0',
     created_at: M6_NOW,
     updated_at: M6_NOW,
-    title: 'M6 synthetic test merchant',
+    title: 'MyyShop development test knowledge base',
     test_scope: { ...M6_TEST_SCOPE },
-    workspace_id: M6_WORKSPACE_ID,
-    workspace_namespace: M6_NAMESPACE,
-    display_name: 'M6 Synthetic Test Merchant',
-    identity: {
-      legal_entity_kind: 'fictitious',
-      canonical_locator: M6_SUBJECT_LOCATOR,
-      real_brand_identity_claimed: false,
-    },
+    merchant_ref: M6_MERCHANT_ID,
+    mode: 'test_only',
+    root_path: 'knowledge',
     provenance: {
-      kind: 'synthetic',
-      usage: 'test_only',
-      decision_ref: M6_APPROVAL.decision_ref,
-      semantic_projection_ref: 'workspace://contracts/myyshop-positioning-test-projection-v1',
+      kind: 'synthetic', usage: 'test_only', decision_ref: M6_APPROVAL.decision_ref,
     },
-    real_workspace_forbidden: ['workspaces/myyshop'],
     approval: { ...M6_APPROVAL },
     ...overrides,
   };
@@ -102,10 +110,13 @@ export function m6SchemaSamples() {
   const hash = 'a'.repeat(64);
   const refVersion = (ref) => ({ ref, version: '1.0.0' });
   return {
-    test_merchant: m6TestMerchantData(),
+    merchant: m6MerchantData(),
+    brand_knowledge_base: m6KnowledgeBaseData(),
     cycle_input_snapshot: {
       ...common('CIS-M6-TEST-001', 'cycle_input_snapshot', 'recorded', 'Freeze snapshot'),
       merchant_ref: M6_MERCHANT_ID,
+      knowledge_base_ref: M6_KNOWLEDGE_BASE_ID,
+      execution_scope: 'synthetic_test',
       cycle_ref: M6_CYCLE_ID,
       snapshot_kind: 'freeze',
       manifest: {
@@ -159,6 +170,7 @@ export function m6SchemaSamples() {
       cycle_ref: M6_CYCLE_ID,
       goal_ref: 'GOAL-M6-TEST-001',
       run_ref: 'RUN-M6-ANALYTICS-001',
+      execution_scope: 'synthetic_test',
       adapter: {
         kind: 'fixture', name: 'm6-fixture', version: '1.0.0',
         access_mode: 'fixture', authorization_ref: 'fixture://authorization/m6-analytics-001',
@@ -192,6 +204,7 @@ export function m6SchemaSamples() {
       cycle_ref: M6_CYCLE_ID,
       goal_ref: 'GOAL-M6-TEST-001',
       run_ref: 'RUN-M6-ANALYTICS-001',
+      execution_scope: 'synthetic_test',
       observation_versions: [refVersion('ANO-M6-TEST-001')],
       measurement_contract: {
         version: '1.0.0', artifact_path: 'execution/contracts/measurement-contract.json',
@@ -230,7 +243,7 @@ export function m6SchemaSamples() {
 }
 
 export async function createM6FixtureWorkspace() {
-  const root = await mkdtemp(path.join(os.tmpdir(), 'geo-m6-test-merchant-'));
+  const root = await mkdtemp(path.join(os.tmpdir(), 'geo-myyshop-devtest-'));
   for (const dir of [
     ...REQUIRED_DIRS,
     'knowledge/documents', 'knowledge/claims', 'knowledge/answer-cards', 'knowledge/releases',
@@ -240,7 +253,7 @@ export async function createM6FixtureWorkspace() {
 
   await copyFile(fixturePath('workspace.json'), path.join(root, 'workspace.json'));
   await copyFile(fixturePath('README.md'), path.join(root, 'README.md'));
-  await writeFile(path.join(root, 'STATUS.md'), '# M6 Synthetic Test Merchant\n\nTest-only fixture.\n');
+  await writeFile(path.join(root, 'STATUS.md'), '# MyyShop Development Test Knowledge Base\n\nTest-only fixture.\n');
   for (const [role, relative] of Object.entries(CONTRACT_FILES)) {
     const targetName = `${role.replaceAll('_', '-')}.json`;
     await copyFile(fixturePath(relative), path.join(root, 'execution/contracts', targetName));
@@ -255,7 +268,7 @@ export async function createM6FixtureWorkspace() {
 }
 
 export async function seedM6FreezeInputs(root, { skipMerchant = false } = {}) {
-  const sourceSnapshot = 'Synthetic test merchant capability statement.\n';
+  const sourceSnapshot = 'Synthetic development knowledge capability statement.\n';
   await mkdir(path.join(root, 'evidence/snapshots'), { recursive: true });
   await mkdir(path.join(root, 'execution/contracts'), { recursive: true });
   await mkdir(path.join(root, 'fixtures/analytics'), { recursive: true });
@@ -273,17 +286,18 @@ export async function seedM6FreezeInputs(root, { skipMerchant = false } = {}) {
   }
   await writeFile(path.join(root, 'evidence/snapshots/source.txt'), sourceSnapshot);
   if (!skipMerchant) {
-    await writeM6Object(root, 'cycles/preparation/test-merchant.md', m6TestMerchantData());
+    await writeM6Object(root, 'execution/identity/merchant.md', m6MerchantData());
+    await writeM6Object(root, 'knowledge/meta/knowledge-base.md', m6KnowledgeBaseData());
   }
   await writeM6Object(root, 'evidence/sources/source.md', {
     ...common('SRC-M6-TEST-001', 'source', 'active', 'Synthetic source'),
     name: 'Synthetic fixture source', source_kind: 'first_party_document',
-    locator: 'https://m6-test-merchant.invalid/source',
+    locator: 'https://dev-knowledge.invalid/source',
   });
   await writeM6Object(root, 'evidence/records/evidence.md', {
     ...common('EVD-M6-TEST-001', 'evidence', 'approved', 'Synthetic evidence'),
     source_refs: ['SRC-M6-TEST-001'], claim_refs: ['CLM-M6-TEST-001'],
-    locator: 'https://m6-test-merchant.invalid/source#fact', captured_at: M6_NOW,
+    locator: 'https://dev-knowledge.invalid/source#fact', captured_at: M6_NOW,
     snapshot: {
       path: 'evidence/snapshots/source.txt', sha256: sha256(sourceSnapshot), media_type: 'text/plain',
     },
@@ -297,20 +311,20 @@ export async function seedM6FreezeInputs(root, { skipMerchant = false } = {}) {
   });
   await writeM6Object(root, 'cycles/preparation/goal.md', {
     ...common('GOAL-M6-TEST-001', 'perception_goal', 'approved', 'Synthetic goal'),
-    goal_statement: 'Represent the synthetic test merchant accurately.',
-    success_question: 'What is the synthetic test merchant?',
+    goal_statement: 'Represent the synthetic development knowledge scenario accurately.',
+    success_question: 'What is the synthetic development knowledge scenario?',
     query_set_refs: ['QS-M6-TEST-001'], approval: { ...M6_APPROVAL },
   });
   await writeM6Object(root, 'queries/formal/query.md', {
     ...common('Q-M6-TEST-001', 'query', 'formal', 'Synthetic query'),
-    query_text: 'What is the synthetic test merchant?', language: 'en-US',
-    normalized_text: 'what is the synthetic test merchant', intent: 'definition', priority: 'P0',
+    query_text: 'What is the synthetic development knowledge scenario?', language: 'en-US',
+    normalized_text: 'what is the synthetic development knowledge scenario', intent: 'definition', priority: 'P0',
     goal_refs: ['GOAL-M6-TEST-001'], discovery_source_refs: ['SRC-M6-TEST-001'],
     legacy_refs: [], approval: { ...M6_APPROVAL },
   });
   await writeM6Object(root, 'knowledge/claims/claim.md', {
     ...common('CLM-M6-TEST-001', 'claim', 'published', 'Synthetic claim'),
-    statement: 'The synthetic test merchant provides a documented fixture capability.',
+    statement: 'The development test knowledge base contains a documented fixture capability.',
     risk_type: 'capability_fact', risk_level: 'low', evidence_refs: ['EVD-M6-TEST-001'],
     document_refs: ['DOC-M6-TEST-001'], scope: 'Synthetic test only.',
     evidence_sufficiency: {
@@ -323,13 +337,13 @@ export async function seedM6FreezeInputs(root, { skipMerchant = false } = {}) {
     query_refs: ['Q-M6-TEST-001'],
     claim_versions: [{ ref: 'CLM-M6-TEST-001', version: '1.0.0' }],
     evidence_refs: ['EVD-M6-TEST-001'],
-    direct_answer: 'The synthetic test merchant provides a documented fixture capability.',
+    direct_answer: 'The development test knowledge base contains a documented fixture capability.',
     limitations: ['Synthetic fixture only.'], forbidden_statements: ['No real business effect.'],
     release_refs: ['KR-M6-TEST-001'], approval: { ...M6_APPROVAL },
   });
   const queryVersions = [{
     ref: 'Q-M6-TEST-001', version: '1.0.0',
-    query_text: 'What is the synthetic test merchant?', language: 'en-US',
+    query_text: 'What is the synthetic development knowledge scenario?', language: 'en-US',
   }];
   await writeM6Object(root, 'queries/sets/query-set.md', {
     ...common('QS-M6-TEST-001', 'query_set', 'frozen', 'Synthetic query set'),
@@ -347,7 +361,7 @@ export async function seedM6FreezeInputs(root, { skipMerchant = false } = {}) {
   });
   await writeM6Object(root, 'assets/own/about.md', {
     ...common('AST-M6-TEST-001', 'asset', 'active', 'Synthetic About asset'),
-    asset_kind: 'own', locator: 'https://m6-test-merchant.invalid/about',
+    asset_kind: 'own', locator: 'https://dev-knowledge.invalid/about',
     source_refs: ['SRC-M6-TEST-001'], asset_role: 'about', control_scope: 'own',
     goal_refs: ['GOAL-M6-TEST-001'], query_refs: ['Q-M6-TEST-001'],
     claim_versions: [{ ref: 'CLM-M6-TEST-001', version: '1.0.0' }],
@@ -355,7 +369,7 @@ export async function seedM6FreezeInputs(root, { skipMerchant = false } = {}) {
   });
   const profile = {
     ...common('CPF-M6-TEST-001', 'collector_profile', 'frozen', 'Synthetic collector profile'),
-    platform: 'chatgpt', product_entry: 'https://consumer.m6-test-merchant.invalid/chat',
+    platform: 'chatgpt', product_entry: 'https://consumer.dev-knowledge.invalid/chat',
     region: 'US', language: 'en-US', login_state: 'logged_out', conversation_state: 'new',
     web_search_state: 'on', model_mode: 'recorded-fixture', query_template_version: '1.0.0',
     sampling_count: 2,
@@ -369,7 +383,8 @@ export async function seedM6FreezeInputs(root, { skipMerchant = false } = {}) {
   await writeM6Object(root, 'cycles/preparation/collector-profile.md', profile);
 
   const sourcePaths = [
-      'cycles/preparation/test-merchant.md', 'cycles/preparation/goal.md',
+      'execution/identity/merchant.md', 'knowledge/meta/knowledge-base.md',
+      'cycles/preparation/goal.md',
       'queries/formal/query.md', 'queries/sets/query-set.md',
       'knowledge/documents/document.md', 'knowledge/claims/claim.md',
       'knowledge/answer-cards/answer.md', 'knowledge/releases/release.md',
@@ -458,6 +473,7 @@ export async function buildM6SnapshotPlan(root, {
       kind: snapshotKind,
     },
     merchant_ref: M6_MERCHANT_ID,
+    knowledge_base_ref: M6_KNOWLEDGE_BASE_ID,
     cycle_ref: M6_CYCLE_ID,
     run_ref: M6_RUN_ID,
     source_entries: sourceEntries,

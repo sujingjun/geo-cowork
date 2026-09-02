@@ -17,7 +17,8 @@ function validTestScope(data) {
   return data.test_scope?.kind === 'synthetic'
     && data.test_scope?.usage === 'test_only'
     && data.test_scope?.merchant_ref === data.merchant_ref
-    && typeof data.test_scope?.workspace_id === 'string';
+    && typeof data.test_scope?.workspace_id === 'string'
+    && typeof data.test_scope?.knowledge_base_ref === 'string';
 }
 
 function validateAssessment(data, prior, errors) {
@@ -85,7 +86,7 @@ export function validateStrategyObject(data, { prior = null } = {}) {
   const errors = [];
   const warnings = [];
   if (!M7_TYPES.has(data?.record_type)) return { errors, warnings };
-  if (!validTestScope(data)) add(errors, 'TEST_MERCHANT_SCOPE_REQUIRED');
+  if (!validTestScope(data)) add(errors, 'TEST_KNOWLEDGE_SCOPE_REQUIRED');
   switch (data.record_type) {
     case 'strategy_assessment':
       validateAssessment(data, prior, errors);

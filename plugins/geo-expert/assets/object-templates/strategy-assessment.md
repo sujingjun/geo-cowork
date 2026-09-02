@@ -9,9 +9,10 @@ title: 合成战略资格评估
 test_scope:
   kind: synthetic
   usage: test_only
-  merchant_ref: TMT-M6-TEST-001
-  workspace_id: ws_m6testmerchant000000000000
-merchant_ref: TMT-M6-TEST-001
+  merchant_ref: MER-MYYSHOP-001
+  workspace_id: ws_myyshopdevtest000000000000
+  knowledge_base_ref: KBASE-EXAMPLE-DEVTEST-001
+merchant_ref: MER-MYYSHOP-001
 cycle_review_ref: CRV-M7-CYCLE-ONE-DECIDED-001
 cycle_review_version: 1.0.0
 strategy_input_snapshot_version:

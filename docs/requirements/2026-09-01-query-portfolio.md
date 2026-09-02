@@ -2,12 +2,13 @@
 title: Query Portfolio 流水线需求
 status: approved
 created: 2026-09-01
-updated: 2026-09-01
+updated: 2026-09-02
 source:
   - docs/plans/2026-08-23-geo-cowork-final-product-plan.md
   - docs/specs/0003-contract-provenance-kernel.md
   - docs/specs/0004-knowledge-query-operating-system.md
   - workspaces/myyshop/STATUS.md
+  - docs/specs/0012-knowledge-independent-lifecycle-readiness.md
   - 2026-09-01 当前用户明确指令：先实现 Query Portfolio 候选生成、去重、聚类、优先级、人工批准和 Query Set 冻结
 scope: Query Portfolio 从候选生成到 Query Set 冻结的确定性流水线；不包含知识对象、真实采集、发布或业务效果
 ---
@@ -27,7 +28,7 @@ candidate
 → Cycle 启动时冻结 Query Set Version
 ```
 
-当前仓库只实现了该生命周期的终点合同：M3 提供 Query/Query Set 的 Schema、`assemble-query-set`（创建 draft）与 validate/trace 冻结校验，M6 测试商户 Cycle 的 Query Set 由 fixture 直接预置。起点与中间段缺失：
+当前仓库只实现了该生命周期的终点合同：M3 提供 Query/Query Set 的 Schema、`assemble-query-set`（创建 draft）与 validate/trace 冻结校验，M6 test-only KBASE Cycle 的 Query Set 由 fixture 直接预置。起点与中间段缺失：
 
 1. 没有任何工具可以从授权观察来源生成 candidate Query；Query 对象目前只能手工编写 Markdown。
 2. 去重只存在于 validate 阶段的错误报告（`DUPLICATE_QUERY`），intake 时不能防重、不能报告重复观察。
@@ -43,7 +44,7 @@ candidate
 3. 提供确定性 portfolio 报告：按规则聚类（`qp-cluster-v1`）、意图分布、来源/优先级覆盖、formal 化与冻结就绪缺口。
 4. 来源优先级按产品方案固定映射：生成式平台观察 > 第一方用户数据 > 真实社区表达 > 竞品材料；工具只写建议值，人工批准时可覆盖。
 5. 人工批准与冻结保持既有合同：candidate → formal 与 draft → frozen 均由人类编辑对象并补 approval；工具不提供自动 promote，只提供校验与就绪检查。
-6. 测试商户 fixture（`test_only` 身份、`.invalid` locator）在知识库缺席（无 Claim/Evidence/Document/KR）条件下完整跑通：intake → 报告 → 人工批准 → draft Query Set → 冻结 → validate/index 通过。
+6. development-test KBASE fixture（唯一线上 Merchant、KBASE-bound `test_scope`，合成 Source 使用 `.invalid` locator）在业务知识对象缺席（无 Claim/Evidence/Document/KR）条件下完整跑通：intake → 报告 → 人工批准 → draft Query Set → 冻结 → validate/index 通过。
 7. 上述代码路径 workspace-generic：真实知识切片到位后，同一命令在真实工作区运行无需改代码。
 
 ## 3. 成功标准

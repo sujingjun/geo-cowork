@@ -2,11 +2,12 @@
 title: Query Portfolio 流水线实施计划
 status: approved
 created: 2026-09-01
-updated: 2026-09-01
+updated: 2026-09-02
 source:
   - docs/specs/0011-query-portfolio.md
   - docs/prd/2026-09-01-query-portfolio.md
   - docs/architecture/2026-09-01-query-portfolio-architecture.md
+  - docs/specs/0012-knowledge-independent-lifecycle-readiness.md
 scope: Query Portfolio CLI、规则库、fixture、测试、Skill 与文档的实施顺序与验收门
 ---
 
@@ -20,16 +21,16 @@ scope: Query Portfolio CLI、规则库、fixture、测试、Skill 与文档的�
 | 去重只在 validate 报 `DUPLICATE_QUERY` | intake 不防重、不合并跨来源、不报告既有重复 | intake 全量预检（同源失败/跨源合并/既有跳过） |
 | 无聚类、意图规则与覆盖视图 | 批准与冻结前无组合视图 | 版本化规则 + `report` 内容键工件 |
 | 冻结前无就绪检查 | 人工直接编辑对象，剩余门不透明 | `prefreeze` gates + `content_sha256` 预览 |
-| M6 测试商户的 Query Set 由 fixture 直接预置 | portfolio 未被证明可产出 Cycle 冻结输入 | 知识库缺席测试商户 E2E + 双路写入 |
+| M6 test-only KBASE 的 Query Set 由 fixture 直接预置 | portfolio 未被证明可产出 Cycle 冻结输入 | 知识库缺席 KBASE E2E + 双路写入 |
 
 ## 2. 实施顺序（TDD）
 
 1. **红测先行**：`tests/query-portfolio.test.mjs` 覆盖 §2 规则（归一化/意图/优先级/聚类/ID）、intake 预检矩阵、assemble/prefreeze/validate 合同；先因模块缺失失败。
 2. **规则库**：`lib/query-portfolio.mjs` 实现规则纯函数与对象生成（含 `extensions["geo.qp_intake"]`）。
-3. **intake / assemble**：双路写入 helper（`workspace.json` 识别 + `preflightSyntheticWrite` 测试路径）、create-only 幂等、stdout 合同。
+3. **intake / assemble**：双路写入 helper（`workspace.json` 识别 + `preflightTestKnowledgeWrite` 测试路径）、create-only 幂等、stdout 合同。
 4. **report / prefreeze / validate**：内容键工件、gates 与 warnings、三层 validate 合并。
 5. **CLI**：`scripts/query-portfolio.mjs`（参数解析、错误输出、退出码），`tests/query-portfolio-cli.test.mjs`。
-6. **E2E**：`tests/helpers/query-portfolio-fixtures.mjs`（`test_only` 身份 + `test_merchant` + source + goal，零知识对象）+ `tests/fixtures/query-portfolio/`（intake 计划）+ `tests/query-portfolio-e2e.test.mjs`（Spec 0011 §6 全旅程，含幂等重跑与确定性重算）。
+6. **E2E**：`tests/helpers/query-portfolio-fixtures.mjs`（online Merchant + test-only KBASE + source + goal，零业务知识对象）+ `tests/fixtures/query-portfolio/`（intake 计划）+ `tests/query-portfolio-e2e.test.mjs`（Spec 0011 §6 全旅程，含幂等重跑与确定性重算）。
 7. **Skill 与文档**：`skills/geo-query-portfolio/SKILL.md`（含人工门与 Run 记录约定）、`package.json` 增加 `test:query-portfolio`、根 `README.md` 开发命令、`docs/README.md` 导航、`CHANGELOG.md` 条目、Record 收口。
 
 ## 3. 目标文件

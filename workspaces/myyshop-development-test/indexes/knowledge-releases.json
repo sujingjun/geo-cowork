@@ -1,0 +1,19 @@
+{
+  "objects": [
+    {
+      "id": "KR-M6-TEST-001",
+      "path": "knowledge/releases/release.md",
+      "refs": [
+        "ANS-M6-TEST-001",
+        "CLM-M6-TEST-001",
+        "KBASE-MYYSHOP-DEVTEST-001",
+        "MER-MYYSHOP-001"
+      ],
+      "status": "published",
+      "updated_at": "2026-08-27T00:00:00Z",
+      "version": "1.0.0"
+    }
+  ],
+  "record_type": "knowledge_release",
+  "schema_version": "1.1.0"
+}

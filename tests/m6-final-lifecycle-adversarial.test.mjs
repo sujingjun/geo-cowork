@@ -126,7 +126,7 @@ test('final QA P0: all-rejected Adoption 之后唯一合法分支是 cancel/no_a
       adoption_ref: adoption.id,
       asset_ref: 'AST-M6-TEST-001',
       published_item_ids: ['REC-M6-ASSET-001'],
-      published_locator: 'https://m6-test-merchant.invalid/rejected-publication',
+      published_locator: 'https://dev-knowledge.invalid/rejected-publication',
       content_sha256: sha256('rejected-publication'),
       published_at: M6_NOW,
       approval: { ...M6_APPROVAL },

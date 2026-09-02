@@ -2,10 +2,11 @@
 title: Query Portfolio 流水线任务清单
 status: verified
 created: 2026-09-01
-updated: 2026-09-01
+updated: 2026-09-02
 source:
   - docs/plans/2026-09-01-query-portfolio-plan.md
   - docs/specs/0011-query-portfolio.md
+  - docs/specs/0012-knowledge-independent-lifecycle-readiness.md
 scope: 当前会话内的 TDD、实现、验证与 Record 收口
 ---
 
@@ -19,7 +20,7 @@ scope: 当前会话内的 TDD、实现、验证与 Record 收口
 
 ## T02 — intake / assemble 双路写入
 
-- 目标：intake 计划合同、全量预检（同源重复失败、跨源合并、既有跳过、ID 冲突）、candidate 生成与 `extensions["geo.qp_intake"]`；assemble draft Query Set 与 `content_sha256_preview`；测试路径经 `preflightSyntheticWrite` + `test_scope`，真实路径与 M3 一致；幂等 `kept`。
+- 目标：intake 计划合同、全量预检（同源重复失败、跨源合并、既有跳过、ID 冲突）、candidate 生成与 `extensions["geo.qp_intake"]`；assemble draft Query Set 与 `content_sha256_preview`；测试路径经 `preflightTestKnowledgeWrite` + KBASE-bound `test_scope`，真实路径与 M3 一致；幂等 `kept`。
 - 验证：专项测试正负例（非法 schema_version、未知 Goal、非 active Source、非法 source_class、空 query_text、同源重复、跨源合并、既有重复、ID 冲突、路径冲突）。
 
 ## T03 — report / prefreeze / validate
@@ -29,7 +30,7 @@ scope: 当前会话内的 TDD、实现、验证与 Record 收口
 
 ## T04 — CLI 与 E2E
 
-- 目标：`query-portfolio.mjs` 五命令参数解析、JSON stdout、错误码与退出码；知识库缺席测试商户 fixture 与 E2E 全旅程（幂等重跑、formal/冻结模拟、validate 无 error、index 重建、零知识对象断言）。
+- 目标：`query-portfolio.mjs` 五命令参数解析、JSON stdout、错误码与退出码；知识库缺席 test-only KBASE fixture 与 E2E 全旅程（幂等重跑、formal/冻结模拟、validate 无 error、index 重建、零业务知识对象断言）。
 - 验证：`node --test tests/query-portfolio-cli.test.mjs tests/query-portfolio-e2e.test.mjs`。
 
 ## T05 — Skill、文档与 Record 收口

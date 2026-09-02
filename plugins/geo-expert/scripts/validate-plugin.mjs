@@ -159,7 +159,7 @@ async function checkTemplates() {
     'collector-profile.md', 'answer-sample.md', 'citation-observation.md',
     'source-classification.md', 'claim-support-review.md', 'answer-review.md',
     'answer-aggregation.md',
-    'test-merchant.md', 'cycle-input-snapshot.md', 'cycle-transition.md',
+    'merchant.md', 'brand-knowledge-base.md', 'cycle-input-snapshot.md', 'cycle-transition.md',
     'analytics-observation.md', 'business-signal.md', 'cycle-review.md',
     'strategy-assessment.md', 'decision-dimension.md',
     'cycle-goal-candidate-batch.md', 'cycle-goal-candidate.md',
@@ -184,6 +184,7 @@ async function checkRuntime() {
     'm5-record-types.schema.json',
     'm6-record-types.schema.json',
     'm7-record-types.schema.json',
+    'm8-record-types.schema.json',
   ]) {
     const p = path.join(PLUGIN_ROOT, 'schemas', file);
     const data = await readJson(p);
@@ -196,6 +197,7 @@ async function checkRuntime() {
     'check-doc-links.mjs',
     'answer-cycle.mjs',
     'geo-lifecycle.mjs', 'geo-analytics.mjs', 'geo-strategy-discovery.mjs',
+    'geo-analytics-readonly.mjs', 'geo-readiness.mjs', 'geo-conformance.mjs',
   ]) {
     const p = path.join(PLUGIN_ROOT, 'scripts', file);
     try {
@@ -217,7 +219,9 @@ async function checkRuntime() {
     'm5-policy.mjs', 'source-batch.mjs',
     'source-registry.mjs', 'citation-analysis.mjs', 'answer-review.mjs',
     'answer-aggregation.mjs', 'answer-cycle.mjs',
-    'm6-profile.mjs', 'm6-test-merchant.mjs',
+    'm6-profile.mjs', 'workspace-scope.mjs',
+    'analytics-observation-inputs.mjs', 'real-analytics-materializer.mjs',
+    'business-file-materializer.mjs', 'lifecycle-readiness.mjs', 'conformance.mjs',
     'cycle-snapshot.mjs', 'cycle-lock.mjs', 'cycle-gates.mjs',
     'cycle-lifecycle.mjs', 'analytics-cycle.mjs', 'cycle-trace.mjs',
     'strategy-assessment.mjs', 'decision-dimension.mjs',

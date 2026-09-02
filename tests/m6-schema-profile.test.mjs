@@ -15,7 +15,8 @@ import {
 import { inputFingerprint } from '../plugins/geo-expert/scripts/lib/run-store.mjs';
 
 const M6_TYPES = [
-  'test_merchant',
+  'merchant',
+  'brand_knowledge_base',
   'cycle_input_snapshot',
   'cycle_transition',
   'analytics_observation',
@@ -104,7 +105,7 @@ function answerRunWithOrdinal(ordinal) {
   };
 }
 
-test('Spec 0007 注册六类 M6 对象并拒绝未知字段', () => {
+test('Spec 0012 注册 Merchant/KBASE 与 M6 对象并拒绝未知字段', () => {
   for (const type of M6_TYPES) assert.ok(RECORD_TYPES.includes(type), `缺少 M6 类型 ${type}`);
   for (const [type, sample] of Object.entries(m6SchemaSamples())) {
     assert.equal(validateObjectData(sample).record_type, type);
@@ -136,8 +137,8 @@ test('公共对象允许合法顶层 test_scope，且 M6 profile 不从 extensio
   const result = validateM6Object({
     data: { ...base, extensions: { 'm6.test_scope': { ...M6_TEST_SCOPE } } },
     path: '<memory>',
-  }, { testWorkspace: true });
-  assert.ok(result.errors.some((item) => item.code === 'TEST_MERCHANT_SCOPE_REQUIRED'));
+  }, { testKnowledgeWorkspace: true });
+  assert.ok(result.errors.some((item) => item.code === 'TEST_KNOWLEDGE_SCOPE_REQUIRED'));
 });
 
 test('base Schema 兼容历史 sampling_count 3，但正式 language profile 仍强制两个 slot', () => {
@@ -180,7 +181,7 @@ test('M6 profile 对 cycle/evidence/run 扩展必填独立 fail closed', async (
     {
       id: 'CYC-M6-RED-001', record_type: 'cycle', status: 'proposed', version: '1.0.0',
       created_at: M6_NOW, updated_at: M6_NOW, core_versions: {},
-      scope: 'test_merchant_engineering',
+      scope: 'knowledge_independent_engineering',
     },
     {
       id: 'EVD-M6-RED-001', record_type: 'evidence', status: 'candidate', version: '1.0.0',

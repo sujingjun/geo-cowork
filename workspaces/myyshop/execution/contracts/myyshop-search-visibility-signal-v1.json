@@ -1,0 +1,11 @@
+{
+  "schema_version": "merchant-business-signal-rule/1.0.0",
+  "id": "myyshop-search-visibility-signal-v1",
+  "version": "1.0.0",
+  "scope": "authorized_real",
+  "signal_kind": "search_visibility",
+  "numerator_metric_id": "gsc_clicks",
+  "denominator_metric_id": "gsc_impressions",
+  "calculation": "numerator / denominator",
+  "causal_claim": false
+}

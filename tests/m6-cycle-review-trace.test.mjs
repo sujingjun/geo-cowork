@@ -71,7 +71,8 @@ function reviewPlan(overrides = {}) {
       ],
       pre_review_entry_keys: ['3'.repeat(64), '4'.repeat(64)],
       source_paths: [
-        'cycles/preparation/test-merchant.md',
+        'execution/identity/merchant.md',
+        'knowledge/meta/knowledge-base.md',
         'cycles/preparation/goal.md',
         'queries/formal/query.md',
         'evidence/records/evidence.md',
@@ -111,7 +112,8 @@ function reviewPlanForFixture(fixture, overrides = {}) {
         fixture.reviewCutoff.preReviewTransitionSnapshotVersions,
       pre_review_entry_keys: fixture.reviewCutoff.preReviewEntryKeys,
       source_paths: [
-        'cycles/preparation/test-merchant.md',
+        'execution/identity/merchant.md',
+        'knowledge/meta/knowledge-base.md',
         'cycles/preparation/goal.md',
         'queries/formal/query.md',
         'evidence/records/evidence.md',
@@ -274,7 +276,7 @@ test('completed trace 只依赖 freeze/pre-review/后生 transition snapshot cop
     await unlink(queryPath);
     const { traceCycle } = await traceApi();
     const trace = await traceCycle({ workspace: root, cycleId: M6_CYCLE_ID });
-    assert.equal(trace.scope, 'test_merchant_engineering');
+    assert.equal(trace.scope, 'knowledge_independent_engineering');
     assert.equal(trace.synthetic, true);
     assert.equal(trace.real_myyshop_impact, false);
     assert.equal(trace.source, 'snapshot_copies');

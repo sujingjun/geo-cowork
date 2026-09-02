@@ -1,7 +1,7 @@
 import { readFile } from 'node:fs/promises';
 
 import { serializeMarkdownObject } from './object-contract.mjs';
-import { preflightSyntheticWrite } from './m6-test-merchant.mjs';
+import { preflightTestKnowledgeWrite } from './workspace-scope.mjs';
 import {
   compareUtf8,
   resolveWithin,
@@ -330,7 +330,7 @@ export async function materializeCandidateBatch({
     bytes: Buffer.from(serializeMarkdownObject(target.data, target.body)),
   }));
   for (const target of targets) {
-    await preflightSyntheticWrite({
+    await preflightTestKnowledgeWrite({
       workspace,
       data: target.data,
       body: target.body,

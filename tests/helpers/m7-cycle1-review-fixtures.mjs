@@ -77,7 +77,7 @@ async function materializeProductGap(root) {
     id: 'SRC-M7-USER-001', record_type: 'source', status: 'active', version: '1.0.0',
     created_at: M6_NOW, updated_at: M6_NOW, title: 'Synthetic user source',
     test_scope: { ...M6_TEST_SCOPE }, name: 'Synthetic user research',
-    source_kind: 'development_fixture', locator: 'https://m6-test-merchant.invalid/research/users',
+    source_kind: 'development_fixture', locator: 'https://dev-knowledge.invalid/research/users',
   };
   await writeM6Object(root, 'evidence/sources/src-m7-user-001.md', source);
   const research = (id, title, bytes, file, supportKind, locator) => ({
@@ -94,11 +94,11 @@ async function materializeProductGap(root) {
   });
   const demand = research(
     'EVD-M7-USER-DEMAND-001', 'Synthetic user demand', userBytes,
-    'm7-user-interest.txt', 'user', 'https://m6-test-merchant.invalid/research/users#pricing',
+    'm7-user-interest.txt', 'user', 'https://dev-knowledge.invalid/research/users#pricing',
   );
   const capability = research(
     'EVD-M7-CAPABILITY-GAP-001', 'Synthetic capability gap', capabilityBytes,
-    'm7-capability-gap.txt', 'first_party', 'https://m6-test-merchant.invalid/about',
+    'm7-capability-gap.txt', 'first_party', 'https://dev-knowledge.invalid/about',
   );
   await writeM6Object(root, 'evidence/records/evd-m7-user-demand-001.md', demand);
   await writeM6Object(root, 'evidence/records/evd-m7-capability-gap-001.md', capability);

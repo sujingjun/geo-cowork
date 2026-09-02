@@ -2,63 +2,17 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://geo-cowork.local/schemas/m6-record-types-v1.json",
   "$defs": {
-    "test_merchant": {
-      "x-id-prefix": "TMT-",
-      "x-statuses": ["draft", "frozen", "superseded"],
-      "required": [
-        "test_scope", "workspace_id", "workspace_namespace", "display_name",
-        "identity", "provenance", "real_workspace_forbidden"
-      ],
-      "properties": {
-        "workspace_id": { "type": "string", "pattern": "^ws_[a-z0-9]{26}$" },
-        "workspace_namespace": { "type": "string", "pattern": "^[a-z0-9][a-z0-9-]*$" },
-        "display_name": { "type": "string", "minLength": 1 },
-        "identity": {
-          "type": "object",
-          "required": ["legal_entity_kind", "canonical_locator", "real_brand_identity_claimed"],
-          "properties": {
-            "legal_entity_kind": { "const": "fictitious" },
-            "canonical_locator": { "type": "string", "pattern": "^https://[^/]+\\.invalid(?:/|$)" },
-            "real_brand_identity_claimed": { "const": false }
-          },
-          "additionalProperties": false
-        },
-        "provenance": {
-          "type": "object",
-          "required": ["kind", "usage", "decision_ref"],
-          "properties": {
-            "kind": { "const": "synthetic" },
-            "usage": { "const": "test_only" },
-            "decision_ref": { "type": "string", "minLength": 1 },
-            "semantic_projection_ref": { "type": "string", "minLength": 1 }
-          },
-          "additionalProperties": false
-        },
-        "real_workspace_forbidden": {
-          "type": "array",
-          "minItems": 1,
-          "uniqueItems": true,
-          "items": { "type": "string", "minLength": 1 }
-        },
-        "approval": { "$ref": "common#/$defs/approval" },
-        "supersedes_ref": { "type": "string", "pattern": "^TMT-(?:[A-Z0-9]+-)*[A-Z0-9]+$" }
-      },
-      "allOf": [
-        {
-          "if": { "properties": { "status": { "const": "frozen" } }, "required": ["status"] },
-          "then": { "required": ["approval"] }
-        }
-      ]
-    },
     "cycle_input_snapshot": {
       "x-id-prefix": "CIS-",
       "x-statuses": ["recorded", "superseded"],
       "required": [
-        "test_scope", "merchant_ref", "cycle_ref", "snapshot_kind", "manifest",
+        "merchant_ref", "knowledge_base_ref", "cycle_ref", "execution_scope", "snapshot_kind", "manifest",
         "source_entries", "artifact_entries", "run_ref"
       ],
       "properties": {
-        "merchant_ref": { "type": "string", "pattern": "^TMT-(?:[A-Z0-9]+-)*[A-Z0-9]+$" },
+        "merchant_ref": { "type": "string", "pattern": "^MER-(?:[A-Z0-9]+-)*[A-Z0-9]+$" },
+        "knowledge_base_ref": { "type": "string", "pattern": "^KBASE-(?:[A-Z0-9]+-)*[A-Z0-9]+$" },
+        "execution_scope": { "enum": ["synthetic_test", "authorized_real"] },
         "cycle_ref": { "type": "string", "pattern": "^CYC-(?:[A-Z0-9]+-)*[A-Z0-9]+$" },
         "snapshot_kind": { "enum": ["freeze", "transition", "review", "strategy"] },
         "manifest": {
@@ -190,14 +144,15 @@
       "x-id-prefix": "ANO-",
       "x-statuses": ["recorded", "superseded"],
       "required": [
-        "test_scope", "merchant_ref", "cycle_ref", "goal_ref", "run_ref", "adapter",
+        "merchant_ref", "run_ref", "execution_scope", "adapter",
         "measurement_contract", "sensitive_data_policy", "time_window", "metrics",
         "artifacts", "quality", "causal_claim"
       ],
       "properties": {
-        "merchant_ref": { "type": "string", "pattern": "^TMT-(?:[A-Z0-9]+-)*[A-Z0-9]+$" },
-        "cycle_ref": { "type": "string", "pattern": "^CYC-(?:[A-Z0-9]+-)*[A-Z0-9]+$" },
-        "goal_ref": { "type": "string", "pattern": "^GOAL-(?:[A-Z0-9]+-)*[A-Z0-9]+$" },
+        "merchant_ref": { "type": "string", "pattern": "^MER-(?:[A-Z0-9]+-)*[A-Z0-9]+$" },
+        "execution_scope": { "enum": ["synthetic_test", "authorized_real"] },
+        "cycle_ref": { "type": ["string", "null"], "pattern": "^CYC-(?:[A-Z0-9]+-)*[A-Z0-9]+$" },
+        "goal_ref": { "type": ["string", "null"], "pattern": "^GOAL-(?:[A-Z0-9]+-)*[A-Z0-9]+$" },
         "run_ref": { "type": "string", "pattern": "^RUN-(?:[A-Z0-9]+-)*[A-Z0-9]+$" },
         "adapter": {
           "type": "object",
@@ -260,6 +215,7 @@
               },
               "state": { "enum": ["observed", "unavailable", "partial"] },
               "limitation": { "type": ["string", "null"] }
+              ,"causal_claim": { "const": false }
             },
             "additionalProperties": false
           }
@@ -295,14 +251,15 @@
       "x-id-prefix": "BSIG-",
       "x-statuses": ["computed", "superseded"],
       "required": [
-        "test_scope", "merchant_ref", "cycle_ref", "goal_ref", "run_ref",
+        "merchant_ref", "run_ref", "execution_scope",
         "observation_versions", "measurement_contract", "rule", "signal_kind",
         "denominator", "calculation", "causal_claim"
       ],
       "properties": {
-        "merchant_ref": { "type": "string", "pattern": "^TMT-(?:[A-Z0-9]+-)*[A-Z0-9]+$" },
-        "cycle_ref": { "type": "string", "pattern": "^CYC-(?:[A-Z0-9]+-)*[A-Z0-9]+$" },
-        "goal_ref": { "type": "string", "pattern": "^GOAL-(?:[A-Z0-9]+-)*[A-Z0-9]+$" },
+        "merchant_ref": { "type": "string", "pattern": "^MER-(?:[A-Z0-9]+-)*[A-Z0-9]+$" },
+        "execution_scope": { "enum": ["synthetic_test", "authorized_real"] },
+        "cycle_ref": { "type": ["string", "null"], "pattern": "^CYC-(?:[A-Z0-9]+-)*[A-Z0-9]+$" },
+        "goal_ref": { "type": ["string", "null"], "pattern": "^GOAL-(?:[A-Z0-9]+-)*[A-Z0-9]+$" },
         "run_ref": { "type": "string", "pattern": "^RUN-(?:[A-Z0-9]+-)*[A-Z0-9]+$" },
         "observation_versions": {
           "type": "array", "minItems": 1, "items": { "$ref": "common#/$defs/refVersion" }
@@ -367,7 +324,7 @@
         "next_cycle_candidate_inputs"
       ],
       "properties": {
-        "merchant_ref": { "type": "string", "pattern": "^TMT-(?:[A-Z0-9]+-)*[A-Z0-9]+$" },
+        "merchant_ref": { "type": "string", "pattern": "^MER-(?:[A-Z0-9]+-)*[A-Z0-9]+$" },
         "cycle_ref": { "type": "string", "pattern": "^CYC-(?:[A-Z0-9]+-)*[A-Z0-9]+$" },
         "reviewed_cycle_input_version": { "type": "string", "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$" },
         "review_input_snapshot_version": { "$ref": "common#/$defs/refVersion" },
@@ -410,8 +367,10 @@
     },
     "cycle": {
       "properties": {
-        "scope": { "enum": ["test_merchant_engineering"] },
-        "merchant_ref": { "type": "string", "pattern": "^TMT-(?:[A-Z0-9]+-)*[A-Z0-9]+$" },
+        "scope": { "enum": ["knowledge_independent_engineering", "authorized_real"] },
+        "merchant_ref": { "type": "string", "pattern": "^MER-(?:[A-Z0-9]+-)*[A-Z0-9]+$" },
+        "knowledge_base_ref": { "type": "string", "pattern": "^KBASE-(?:[A-Z0-9]+-)*[A-Z0-9]+$" },
+        "execution_scope": { "enum": ["synthetic_test", "authorized_real"] },
         "cycle_number": { "type": "integer", "minimum": 1 },
         "aggregate_stage": {
           "enum": [
@@ -431,6 +390,8 @@
     },
     "evidence": {
       "properties": {
+        "merchant_ref": { "type": "string", "pattern": "^MER-(?:[A-Z0-9]+-)*[A-Z0-9]+$" },
+        "execution_scope": { "enum": ["synthetic_test", "authorized_real"] },
         "observation_versions": {
           "type": "array",
           "minItems": 1,
@@ -440,8 +401,9 @@
     },
     "run": {
       "properties": {
-        "merchant_ref": { "type": "string", "pattern": "^TMT-(?:[A-Z0-9]+-)*[A-Z0-9]+$" },
-        "cycle_ref": { "type": "string", "pattern": "^CYC-(?:[A-Z0-9]+-)*[A-Z0-9]+$" },
+        "merchant_ref": { "type": "string", "pattern": "^MER-(?:[A-Z0-9]+-)*[A-Z0-9]+$" },
+        "execution_scope": { "enum": ["synthetic_test", "authorized_real"] },
+        "cycle_ref": { "type": ["string", "null"], "pattern": "^CYC-(?:[A-Z0-9]+-)*[A-Z0-9]+$" },
         "cycle_version": { "type": "string", "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$" },
         "transition_plan_sha256": { "$ref": "common#/$defs/sha256" }
       }

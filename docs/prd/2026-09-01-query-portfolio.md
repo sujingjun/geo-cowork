@@ -2,10 +2,11 @@
 title: Query Portfolio 流水线 PRD
 status: approved
 created: 2026-09-01
-updated: 2026-09-01
+updated: 2026-09-02
 source:
   - docs/requirements/2026-09-01-query-portfolio.md
   - docs/plans/2026-08-23-geo-cowork-final-product-plan.md
+  - docs/specs/0012-knowledge-independent-lifecycle-readiness.md
   - 2026-09-01 当前用户明确指令：先实现 Query Portfolio 候选生成、去重、聚类、优先级、人工批准和 Query Set 冻结
 scope: GEO 负责人从观察来源建立并冻结 Query Set 的用户旅程、业务规则、业务验收与非目标
 ---
@@ -36,7 +37,7 @@ MyyShop GEO 负责人（v1 唯一核心用户）需要在 Cycle 启动前把分�
 - **去重**：同一 active Goal 下 `normalized_text + language` 重复即重复；重复观察不得产生第二个 Query 对象，但必须在 Run 输出中可追溯。
 - **人工批准**：candidate → formal 与 draft → frozen 只能由人类编辑对象并补 approval 完成；工具不得自动 promote，不得代写 approval；工具的人工批准检查只验证证明存在与格式，不验证决定真实性。
 - **覆盖记录**：报告按 Goal 输出聚类 × 语言 × 意图的覆盖与 formal 化进度；冻结前检查输出覆盖摘要，缺覆盖只提示不阻断。
-- **测试边界**：工程验收使用 `test_only` 身份、`.invalid` locator 的测试商户 fixture；fixture 中的 approval 仅用于验证机器门，不代表真实品牌批准。
+- **测试边界**：工程验收使用唯一线上 Merchant 下的 test-only KBASE；合成 Source 使用 `.invalid` locator，fixture approval 仅验证机器门，不代表真实品牌批准。
 
 ## 4. 业务验收
 
@@ -49,10 +50,10 @@ MyyShop GEO 负责人（v1 唯一核心用户）需要在 Cycle 启动前把分�
 | BA-05 | 优先级建议 | 按来源类别映射 P0—P3；人工覆盖后 validate 不再回写 |
 | BA-06 | 人工批准门 | 无 approval 的 formal Query 或 frozen Query Set 在 validate 报错；工具任何命令都不能生成 approval |
 | BA-07 | 冻结前检查 | 冻结前检查列出全部未满足门与内容哈希预览；全部满足时明确提示可冻结 |
-| BA-08 | 知识库缺席 E2E | 零 Claim/Evidence/Document/KR 的测试商户工作区完成 intake → 报告 → 人工批准 → 冻结，validate/index 无 error |
+| BA-08 | 知识库缺席 E2E | 零 Claim/Evidence/Document/KR 的 development-test KBASE 完成 intake → 报告 → 人工批准 → 冻结，validate/index 无 error |
 | BA-09 | 真实工作区只读 | 真实 `workspaces/myyshop` 字节不变，既有只读检查通过 |
 | BA-10 | 结论边界 | 全流程不产生任何 Claim、Evidence、Publication 或业务效果表述 |
 
 ## 5. 非目标与完成边界
 
-本次完成至 frozen Query Set 为止的确定性流水线与测试商户工程验收；不证明真实 Cycle 效果，不包含知识对象治理（M3 既有）、Cycle 内 Query 静默变更管控（M6 既有）或真实采集授权。真实工作区运行、真实 Cycle 启动与业务效果由后续独立授权与 Record 证明。
+本次完成至 frozen Query Set 为止的确定性流水线与 test-only KBASE 工程验收；不证明真实 Cycle 效果，不包含知识对象治理（M3 既有）、Cycle 内 Query 静默变更管控（M6 既有）或真实采集授权。真实工作区运行、真实 Cycle 启动与业务效果由后续独立授权与 Record 证明。

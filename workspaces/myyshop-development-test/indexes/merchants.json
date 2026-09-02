@@ -1,0 +1,14 @@
+{
+  "objects": [
+    {
+      "id": "MER-MYYSHOP-001",
+      "path": "execution/identity/merchant.md",
+      "refs": [],
+      "status": "active",
+      "updated_at": "2026-09-02T10:20:00Z",
+      "version": "1.0.0"
+    }
+  ],
+  "record_type": "merchant",
+  "schema_version": "1.1.0"
+}

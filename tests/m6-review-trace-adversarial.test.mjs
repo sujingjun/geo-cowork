@@ -59,7 +59,7 @@ function reviewPlan(overrides = {}) {
         version: '8.8.8',
       }],
       pre_review_entry_keys: ['f'.repeat(64)],
-      source_paths: ['cycles/preparation/test-merchant.md'],
+      source_paths: ['execution/identity/merchant.md'],
       artifact_paths: [{
         role: 'measurement_contract',
         path: 'execution/contracts/measurement-contract.json',

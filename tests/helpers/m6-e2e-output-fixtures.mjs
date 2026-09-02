@@ -76,7 +76,8 @@ export async function materializeM6OutputGateFixtures(root, bundle, { includeRev
       pre_review_transition_snapshot_versions: [{ ref: 'CIS-M6-E2E-ANALYTICS-001', version: '1.0.0' }],
       pre_review_entry_keys: ['b'.repeat(64)],
       source_paths: [
-        'cycles/preparation/test-merchant.md',
+        'execution/identity/merchant.md',
+        'knowledge/meta/knowledge-base.md',
         'cycles/preparation/goal.md',
         bundle.analytics.observation.path,
         bundle.analytics.signal.path,

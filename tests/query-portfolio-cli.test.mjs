@@ -103,14 +103,14 @@ test('CLI：intake/report/assemble/prefreeze/validate 串联与冲突退出码',
     assert.equal(validation.code, 0);
     assert.deepEqual(validation.result.errors, []);
 
-    // validate 退出码 1：移除一个对象的 test_scope 后测试商户层报错
+    // validate 退出码 1：移除一个对象的 test_scope 后测试知识库层报错
     const setFile = path.join(root, 'queries/sets/qs-qp-test-001.md');
     const parsed = matter(await readFile(setFile, 'utf8'));
     delete parsed.data.test_scope;
     await writeFile(setFile, serializeMarkdownObject(parsed.data, parsed.content));
     const broken = await runCli(['validate', '--workspace', root]);
     assert.equal(broken.code, 1);
-    assert.ok(broken.result.errors.some((error) => error.code === 'TEST_MERCHANT_SCOPE_REQUIRED'));
+    assert.ok(broken.result.errors.some((error) => error.code === 'TEST_KNOWLEDGE_SCOPE_REQUIRED'));
   } finally {
     await rm(root, { recursive: true });
   }

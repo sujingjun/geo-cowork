@@ -2,7 +2,7 @@ import { readFile } from 'node:fs/promises';
 
 import { loadSnapshotGraph } from './cycle-snapshot.mjs';
 import { serializeMarkdownObject } from './object-contract.mjs';
-import { preflightSyntheticWrite } from './m6-test-merchant.mjs';
+import { preflightTestKnowledgeWrite } from './workspace-scope.mjs';
 import {
   resolveWithin,
   sha256,
@@ -386,7 +386,7 @@ export function buildDecidedStrategyAssessment({ waiting, id, decision, approval
 
 export async function materializeStrategyAssessment({ workspace, path, data }) {
   const body = '# Synthetic Strategy Assessment\n';
-  await preflightSyntheticWrite({
+  await preflightTestKnowledgeWrite({
     workspace,
     data,
     body,

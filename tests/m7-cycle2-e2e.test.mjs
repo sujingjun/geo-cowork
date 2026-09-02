@@ -33,8 +33,9 @@ test('Cycle 2 E2E fixture 固定 predecessor/GSEL/新 Goal approval 与完整九
   assert.equal(plan.selected_candidate_version, null);
   assert.equal(JSON.stringify(plan).includes('GCD-M7-PRODUCT-001'), false);
   assert.equal(plan.source_objects.length, 11);
-  assert.equal(plan.source_paths.length, 12);
-  assert.equal(plan.source_paths.includes('cycles/preparation/test-merchant.md'), true);
+  assert.equal(plan.source_paths.length, 13);
+  assert.equal(plan.source_paths.includes('execution/identity/merchant.md'), true);
+  assert.equal(plan.source_paths.includes('knowledge/meta/knowledge-base.md'), true);
   assert.equal(plan.cycle_one_review_handoff.candidate_input, undefined);
   assert.ok(plan.new_goal.approval.decision_ref.startsWith('fixture://decision/'));
   assert.deepEqual(plan.stages, [
@@ -368,7 +369,10 @@ test('完整 synthetic Cycle 1 → strategy/GSEL → 新 freeze CIS → 九门 C
       measurement_contract_path: 'execution/contracts/measurement-contract.json',
       signal_rule_path: 'execution/contracts/signal-rule.json',
       sensitive_data_policy_path: 'execution/contracts/sensitive-data-policy.json',
-      test_scope: { kind: 'synthetic', usage: 'test_only', merchant_ref: plan.merchant_ref, workspace_id: plan.workspace_id },
+      test_scope: {
+        kind: 'synthetic', usage: 'test_only', merchant_ref: plan.merchant_ref,
+        workspace_id: plan.workspace_id, knowledge_base_ref: plan.knowledge_base_ref,
+      },
     };
     await runNode(ANALYTICS_CLI, [
       'ingest-fixture', '--workspace', handoff.root,

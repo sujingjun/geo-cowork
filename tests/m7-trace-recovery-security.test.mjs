@@ -44,7 +44,7 @@ test('STO 对真实 MyyShop Workspace 保持 zero-write', async () => {
       path: 'strategy/outputs/sto-m7-forbidden.md',
       ...fixture,
     }),
-    (error) => ['REAL_WORKSPACE_WRITE_FORBIDDEN', 'TEST_MERCHANT_IDENTITY_INVALID'].includes(error.code),
+    (error) => ['REAL_WORKSPACE_WRITE_FORBIDDEN', 'WORKSPACE_SCOPE_INVALID'].includes(error.code),
   );
   await assert.rejects(
     access(path.join(realWorkspace, 'strategy/outputs/sto-m7-forbidden.md')),

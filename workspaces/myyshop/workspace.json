@@ -3,5 +3,17 @@
   "workspace_id": "ws_myyshop2026082400000000000",
   "brand": "MyyShop",
   "created_at": "2026-08-24T00:00:00Z",
-  "created_by": "m2-contract-provenance-migration/0.3.0"
+  "created_by": "m2-contract-provenance-migration/0.3.0",
+  "workspace_mode": "online",
+  "merchant_ref": "MER-MYYSHOP-001",
+  "merchant_mode": "online",
+  "subject_locator": "https://www.myyshop.com/",
+  "execution_scope": "authorized_real",
+  "knowledge_base_ref": null,
+  "knowledge_base_mode": "real_pending",
+  "online_configuration": {
+    "ga4_property_id": "356373250",
+    "gsc_site_url": "https://www.myyshop.com/",
+    "analytics_plan": "cycles/preparation/analytics/2026-09-01-ga4-gsc-readonly-smoke-plan.json"
+  }
 }

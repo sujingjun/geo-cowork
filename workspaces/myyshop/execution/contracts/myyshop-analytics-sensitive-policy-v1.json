@@ -1,0 +1,12 @@
+{
+  "schema_version": "merchant-analytics-sensitive-policy/1.0.0",
+  "id": "myyshop-analytics-sensitive-policy-v1",
+  "version": "1.0.0",
+  "scope": "authorized_real",
+  "aggregate_only": true,
+  "forbidden_fields": [
+    "email", "phone", "ip", "user_id", "account_id", "cookie",
+    "authorization", "token", "secret", "password"
+  ],
+  "causal_claim": false
+}

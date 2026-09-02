@@ -10,7 +10,7 @@ import {
 } from './lib/analytics-cycle.mjs';
 
 const COMMANDS = new Set([
-  'ingest-fixture', 'compute-signals', 'materialize-evidence',
+  'ingest-fixture', 'compute-signals', 'materialize-evidence', 'ingest-business-file',
 ]);
 
 function invalid(message) {
@@ -53,6 +53,10 @@ async function readPlan(file) {
 async function execute(args) {
   const workspace = path.resolve(args.workspace);
   const plan = await readPlan(args.plan);
+  if (args.command === 'ingest-business-file') {
+    const { materializeBusinessFileBundle } = await import('./lib/business-file-materializer.mjs');
+    return { ...(await materializeBusinessFileBundle({ workspace, plan })), network_accessed: false };
+  }
   if (args.command === 'ingest-fixture') {
     return { ...(await ingestFixtureObservation({ workspace, plan })), network_accessed: false };
   }
@@ -72,7 +76,7 @@ async function main() {
   try {
     const args = parseArgs(process.argv.slice(2));
     if (args.help) {
-      console.log('geo-analytics commands: ingest-fixture compute-signals materialize-evidence');
+      console.log('geo-analytics commands: ingest-fixture compute-signals materialize-evidence ingest-business-file');
       return;
     }
     assertNetworkDisabled();

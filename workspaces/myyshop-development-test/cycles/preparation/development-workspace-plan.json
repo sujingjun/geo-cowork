@@ -1,0 +1,24 @@
+{
+  "schema_version": "development-knowledge-workspace/1.0.0",
+  "workspace_id": "ws_myyshopdevtest000000000000",
+  "brand": "MyyShop",
+  "created_at": "2026-09-02T10:20:00Z",
+  "merchant": {
+    "id": "MER-MYYSHOP-001",
+    "path": "execution/identity/merchant.md",
+    "canonical_locator": "https://www.myyshop.com/"
+  },
+  "knowledge_base": {
+    "id": "KBASE-MYYSHOP-DEVTEST-001",
+    "path": "knowledge/meta/knowledge-base.md",
+    "root_path": "knowledge",
+    "mode": "test_only"
+  },
+  "execution_scope": "synthetic_test",
+  "online_configuration": {
+    "ga4_property_id": "356373250",
+    "gsc_site_url": "https://www.myyshop.com/",
+    "analytics_plan": "cycles/preparation/analytics/ga4-gsc-readonly-plan.json"
+  },
+  "decision_ref": "docs/adr/0001-one-merchant-development-test-knowledge-base.md"
+}

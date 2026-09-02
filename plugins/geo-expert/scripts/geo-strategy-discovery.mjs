@@ -9,8 +9,8 @@ import {
 } from './lib/strategy-workflow.mjs';
 import { traceStrategyWorkspace } from './lib/strategy-workflow-trace.mjs';
 import {
-  assertTestWorkspaceWriteAllowed, validateTestMerchantWorkspace,
-} from './lib/m6-test-merchant.mjs';
+  assertDevelopmentWorkspaceWriteAllowed, validateDevelopmentKnowledgeWorkspace,
+} from './lib/workspace-scope.mjs';
 
 const COMMANDS = new Set(['assess', 'propose-dimensions', 'assemble-output', 'trace']);
 
@@ -83,8 +83,8 @@ function assertPlan(plan, command) {
 }
 
 async function validateWorkspace(root) {
-  await assertTestWorkspaceWriteAllowed({ workspace: root });
-  const validation = await validateTestMerchantWorkspace({ workspace: root });
+  await assertDevelopmentWorkspaceWriteAllowed({ workspace: root });
+  const validation = await validateDevelopmentKnowledgeWorkspace({ workspace: root });
   if (validation.errors.length > 0) {
     throw failure(validation.errors[0].code, 'M7 Test Workspace 未就绪', {
       diagnostics: validation.errors,

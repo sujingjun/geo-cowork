@@ -7,7 +7,7 @@ import {
   stableStringify,
   writeCreateOnly,
 } from './workspace-paths.mjs';
-import { assertTestWorkspaceWriteAllowed } from './m6-test-merchant.mjs';
+import { assertDevelopmentWorkspaceWriteAllowed } from './workspace-scope.mjs';
 
 export class CycleLockError extends Error {
   constructor(code, message, details = {}) {
@@ -74,7 +74,7 @@ export async function acquireCycleLease({
   inputFingerprint = null,
 }) {
   const root = path.resolve(workspace);
-  await assertTestWorkspaceWriteAllowed({ workspace: root });
+  await assertDevelopmentWorkspaceWriteAllowed({ workspace: root });
   const data = leaseData({
     cycleId, ownerId, now, ttlMs, revision: 1, inputFingerprint,
   });
@@ -111,7 +111,7 @@ export async function recoverStaleCycleLease({
   ttlMs = 60_000,
 }) {
   const root = path.resolve(workspace);
-  await assertTestWorkspaceWriteAllowed({ workspace: root });
+  await assertDevelopmentWorkspaceWriteAllowed({ workspace: root });
   const existing = await readLease(root, cycleId);
   if (!existing) throw new CycleLockError('LEASE_STALE_RECOVERY_REQUIRED', '不存在可恢复 lease');
   if (Date.parse(existing.expires_at) > Date.parse(now)) {

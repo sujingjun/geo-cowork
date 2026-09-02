@@ -16,13 +16,14 @@ import {
   traceCycle,
 } from './lib/cycle-trace.mjs';
 import {
-  assertTestWorkspaceWriteAllowed,
-  validateTestMerchantWorkspace,
-} from './lib/m6-test-merchant.mjs';
+  initializeDevelopmentKnowledgeWorkspace,
+  preflightLifecycleWrite,
+  validateLifecycleWorkspace,
+} from './lib/workspace-scope.mjs';
+import { assessLifecycleReadiness } from './lib/lifecycle-readiness.mjs';
 import {
   readMarkdownObject,
   serializeMarkdownObject,
-  validateObjectData,
 } from './lib/object-contract.mjs';
 import { inputFingerprint } from './lib/run-store.mjs';
 import {
@@ -33,9 +34,8 @@ import {
   walkMarkdownFiles,
   writeCreateOnly,
 } from './lib/workspace-paths.mjs';
-import { initWorkspace } from './workspace-init.mjs';
 const COMMANDS = new Set([
-  'prepare-test-merchant', 'create-cycle', 'advance',
+  'prepare-development-workspace', 'create-cycle', 'advance',
   'assemble-review', 'trace', 'validate', 'propose-cycle-two', 'apply-goal-selection',
 ]);
 function invalid(message) {
@@ -67,7 +67,7 @@ function parseArgs(argv) {
     args[flag.slice(2)] = rest[++index] ?? null;
   }
   if (!args.workspace) throw invalid('缺少 --workspace');
-  if (['prepare-test-merchant', 'create-cycle', 'advance', 'assemble-review',
+  if (['prepare-development-workspace', 'create-cycle', 'advance', 'assemble-review',
     'propose-cycle-two', 'apply-goal-selection'].includes(command)
       && !args.plan) throw invalid('缺少 --plan');
   if (['advance', 'trace'].includes(command) && !args.cycle) throw invalid('缺少 --cycle');
@@ -87,102 +87,39 @@ async function fileExists(file) {
   try { await readFile(file); return true; } catch { return false; }
 }
 
-async function prepareTestMerchant(workspace, plan) {
-  const root = path.resolve(workspace);
-  const identityPath = path.join(root, 'workspace.json');
-  if (await fileExists(identityPath)) await assertTestWorkspaceWriteAllowed({ workspace: root });
-  const existingIdentity = await fileExists(identityPath)
-    ? JSON.parse(await readFile(identityPath, 'utf8'))
-    : null;
-  const createdAt = existingIdentity?.created_at ?? plan.created_at ?? new Date().toISOString();
-  const identity = {
-    schema_version: '1.0.0',
-    workspace_id: plan.workspace_id,
-    brand: plan.brand,
-    created_at: createdAt,
-    created_by: 'geo-lifecycle/1.0.0',
-    workspace_mode: 'test_only',
-    test_namespace: plan.test_namespace,
-    legal_entity: false,
-    subject_locator: plan.subject_locator,
-  };
-  const merchant = {
-    id: plan.merchant_id,
-    record_type: 'test_merchant',
-    status: 'frozen',
-    version: '1.0.0',
-    created_at: createdAt,
-    updated_at: createdAt,
-    title: `${plan.brand} test merchant`,
-    test_scope: {
-      kind: 'synthetic', usage: 'test_only',
-      merchant_ref: plan.merchant_id, workspace_id: plan.workspace_id,
-    },
-    workspace_id: plan.workspace_id,
-    workspace_namespace: plan.test_namespace,
-    display_name: plan.brand,
-    identity: {
-      legal_entity_kind: 'fictitious',
-      canonical_locator: plan.subject_locator,
-      real_brand_identity_claimed: false,
-    },
-    provenance: {
-      kind: 'synthetic', usage: 'test_only', decision_ref: plan.decision_ref,
-    },
-    real_workspace_forbidden: ['workspaces/myyshop'],
-    approval: {
-      approved_by: 'Fixture Human Reviewer',
-      approved_at: createdAt,
-      decision_ref: plan.decision_ref,
-    },
-  };
-  validateObjectData(merchant, { path: '<prepare-test-merchant-plan>' });
-  const identityResult = await writeCreateOnly(
-    root,
-    'workspace.json',
-    stableStringify(identity, 2),
-    { idempotent: true, conflictCode: 'IDENTITY_CONFLICT' },
-  );
-  await initWorkspace({
-    workspace: root,
-    brand: plan.brand,
-    testOnly: true,
-    testNamespace: plan.test_namespace,
-    subjectLocator: plan.subject_locator,
-  });
-  const merchantResult = await writeCreateOnly(
-    root,
-    plan.merchant_path,
-    serializeMarkdownObject(merchant, '# Synthetic Test Merchant\n'),
-    { idempotent: true, conflictCode: 'OBJECT_CONFLICT' },
-  );
-  const validation = await validateTestMerchantWorkspace({ workspace: root });
-  if (validation.errors.length > 0) {
-    const error = new Error('Test Merchant 初始化后校验失败');
-    error.code = validation.errors[0].code;
-    error.diagnostics = validation.errors;
-    throw error;
-  }
-  return {
-    action: identityResult.action === 'kept' && merchantResult.action === 'kept'
-      ? 'kept' : 'created',
-    workspace: root,
-    workspace_id: plan.workspace_id,
-    merchant_id: plan.merchant_id,
-    network_accessed: false,
-  };
-}
-
 function byType(entries, type) {
   return entries.filter((entry) => entry.record_type === type);
 }
 
 async function createCycle(workspace, plan) {
   const root = path.resolve(workspace);
-  const validation = await validateTestMerchantWorkspace({ workspace: root });
+  const validation = await validateLifecycleWorkspace({
+    workspace: root,
+    knowledgeBaseRef: plan.knowledge_base_ref,
+  });
   if (validation.errors.length > 0) {
-    const error = new Error('Test Merchant 未就绪');
+    const error = new Error('Lifecycle Workspace 未就绪');
     error.code = validation.errors[0].code;
+    throw error;
+  }
+  const testOnly = validation.identity.workspace_mode === 'development_test';
+  if (!testOnly) {
+    const readiness = await assessLifecycleReadiness({
+      workspace: root,
+      knowledgeBaseRef: plan.knowledge_base_ref,
+      goalRef: plan.goal_ref,
+    });
+    if (!readiness.real_cycle_start_ready) {
+      const error = new Error('Real Cycle start readiness 未通过');
+      error.code = 'KNOWLEDGE_INPUT_ABSENT';
+      error.diagnostics = readiness.gates.filter(({ status }) => status === 'blocked');
+      throw error;
+    }
+  }
+  if (plan.merchant_ref !== validation.identity.merchant_ref
+      || plan.knowledge_base_ref !== validation.identity.knowledge_base_ref) {
+    const error = new Error('Cycle Merchant/Knowledge Base 与 Workspace 不一致');
+    error.code = 'KNOWLEDGE_BASE_SCOPE_MISMATCH';
     throw error;
   }
   const snapshot = await buildCycleSnapshotPlan({
@@ -190,6 +127,7 @@ async function createCycle(workspace, plan) {
     id: plan.snapshot_id,
     snapshotKind: 'freeze',
     merchantRef: plan.merchant_ref,
+    knowledgeBaseRef: plan.knowledge_base_ref,
     cycleRef: plan.cycle_id,
     runRef: plan.run_id,
     sourcePaths: plan.source_paths,
@@ -228,7 +166,7 @@ async function createCycle(workspace, plan) {
       review_input_snapshot_version: null,
     });
   }
-  const createdAt = validation.merchant.updated_at;
+  const createdAt = validation.knowledgeBase.updated_at;
   const cycle = {
     id: plan.cycle_id,
     record_type: 'cycle',
@@ -236,10 +174,17 @@ async function createCycle(workspace, plan) {
     version: '1.0.0',
     created_at: createdAt,
     updated_at: createdAt,
-    title: 'Synthetic GEO Cycle 1',
-    test_scope: { ...validation.merchant.test_scope },
-    scope: 'test_merchant_engineering',
+    title: testOnly ? 'Synthetic GEO Cycle 1' : 'Authorized Real GEO Cycle 1',
+    ...(testOnly ? { test_scope: {
+      kind: 'synthetic', usage: 'test_only',
+      merchant_ref: validation.identity.merchant_ref,
+      workspace_id: validation.identity.workspace_id,
+      knowledge_base_ref: validation.identity.knowledge_base_ref,
+    } } : {}),
+    scope: testOnly ? 'knowledge_independent_engineering' : 'authorized_real',
     merchant_ref: plan.merchant_ref,
+    knowledge_base_ref: plan.knowledge_base_ref,
+    execution_scope: testOnly ? 'synthetic_test' : 'authorized_real',
     cycle_number: 1,
     core_versions: { input_snapshot: { ref: snapshot.snapshot.id, version: snapshot.snapshot.version } },
     aggregate_stage: 'frozen',
@@ -261,8 +206,8 @@ async function createCycle(workspace, plan) {
     version: '1.0.0',
     created_at: createdAt,
     updated_at: createdAt,
-    title: 'Synthetic lifecycle Run',
-    test_scope: { ...validation.merchant.test_scope },
+    title: testOnly ? 'Synthetic lifecycle Run' : 'Authorized Real lifecycle Run',
+    ...(testOnly ? { test_scope: { ...cycle.test_scope } } : {}),
     skill: 'geo-lifecycle', skill_version: '1.0.0',
     input_refs: Object.keys(inputVersions).sort(),
     input_versions: Object.fromEntries(Object.entries(inputVersions).sort(([a], [b]) => a.localeCompare(b))),
@@ -276,6 +221,7 @@ async function createCycle(workspace, plan) {
     business_result: 'not_evaluated',
     next_action: 'advance baseline gate',
     merchant_ref: plan.merchant_ref,
+    execution_scope: cycle.execution_scope,
     cycle_ref: plan.cycle_id,
     cycle_version: cycle.version,
     transition_plan_sha256: sha256(stableStringify(plan)),
@@ -286,9 +232,16 @@ async function createCycle(workspace, plan) {
     },
     finding_refs: [], evidence_refs: [], asset_refs: [], failure_reason: null,
   };
+  const runBody = testOnly ? '# Synthetic lifecycle Run\n' : '# Authorized Real lifecycle Run\n';
+  await preflightLifecycleWrite({
+    workspace: root,
+    data: run,
+    body: runBody,
+    refClosure: false,
+  });
   await writeCreateOnly(root, `runs/${plan.run_id}/run.md`, serializeMarkdownObject(
     run,
-    '# Synthetic lifecycle Run\n',
+    runBody,
   ), { idempotent: true, conflictCode: 'RUN_CONFLICT' });
   return {
     action: materialized.action,
@@ -451,7 +404,7 @@ async function completeReviewPlan(root, request) {
 
 async function execute(args) {
   const root = path.resolve(args.workspace);
-  if (args.command === 'validate') return validateTestMerchantWorkspace({ workspace: root });
+  if (args.command === 'validate') return validateLifecycleWorkspace({ workspace: root });
   if (args.command === 'trace') return traceCycle({ workspace: root, cycleId: args.cycle });
   const plan = await readPlan(args.plan);
   if (args.command === 'propose-cycle-two') {
@@ -462,7 +415,9 @@ async function execute(args) {
     const { applyGoalSelection } = await import('./lib/cycle-two-apply.mjs');
     return applyGoalSelection({ workspace: root, plan });
   }
-  if (args.command === 'prepare-test-merchant') return prepareTestMerchant(root, plan);
+  if (args.command === 'prepare-development-workspace') {
+    return initializeDevelopmentKnowledgeWorkspace({ workspace: root, plan });
+  }
   if (args.command === 'create-cycle') return createCycle(root, plan);
   if (args.command === 'advance') return advance(root, plan, args.cycle);
   return assembleCycleReview({ workspace: root, plan: await completeReviewPlan(root, plan) });
@@ -478,7 +433,7 @@ async function main() {
   try {
     const args = parseArgs(process.argv.slice(2));
     if (args.help) {
-      console.log('geo-lifecycle commands: prepare-test-merchant create-cycle advance assemble-review trace validate propose-cycle-two apply-goal-selection');
+      console.log('geo-lifecycle commands: prepare-development-workspace create-cycle advance assemble-review trace validate propose-cycle-two apply-goal-selection');
       return;
     }
     assertNetworkDisabled(args.command);

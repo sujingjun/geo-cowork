@@ -1,0 +1,28 @@
+{
+  "schema_version": "ga4-gsc-readonly-smoke/1.0.0",
+  "run_id": "RUN-MYYSHOP-GA4-GSC-SMOKE-20260902",
+  "workspace_id": "ws_myyshop2026082400000000000",
+  "authorization": {
+    "ref": "workspace://cycles/preparation/decisions/2026-09-02-ga4-gsc-observation-authorized.md",
+    "sha256": "9cfbb9f1714dd26c5a6c2199973f227970440acc1c3d04cb1db6e8b1a2c24f6d",
+    "expires_at": "2026-09-03T00:00:00+08:00"
+  },
+  "time_window": {
+    "start_date": "2026-08-23",
+    "end_date": "2026-08-29"
+  },
+  "ga4": {
+    "property_id": "356373250",
+    "dimensions": ["date"],
+    "metrics": ["sessions", "activeUsers", "screenPageViews"],
+    "limit": 10
+  },
+  "gsc": {
+    "site_url": "https://www.myyshop.com/",
+    "dimensions": ["date"],
+    "type": "web",
+    "aggregation_type": "byProperty",
+    "data_state": "final",
+    "row_limit": 10
+  }
+}

@@ -8,9 +8,10 @@ updated_at: 2026-01-01T00:00:00Z
 test_scope:
   kind: synthetic
   usage: test_only
-  merchant_ref: TMT-EXAMPLE-001
+  merchant_ref: MER-EXAMPLE-001
   workspace_id: ws_example0000000000000000000
-merchant_ref: TMT-EXAMPLE-001
+  knowledge_base_ref: KBASE-EXAMPLE-DEVTEST-001
+merchant_ref: MER-EXAMPLE-001
 cycle_ref: CYC-EXAMPLE-001
 reviewed_cycle_input_version: 1.0.9
 review_input_snapshot_version:

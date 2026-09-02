@@ -11,6 +11,7 @@ import path from 'node:path';
 
 import {
   M6_CYCLE_ID,
+  M6_KNOWLEDGE_BASE_ID,
   M6_MERCHANT_ID,
   M6_NOW,
   M6_RUN_ID,
@@ -231,8 +232,11 @@ test('freeze CYC/CIS 双向物化在一侧已存在时只允许同一预分配 p
     const cycleData = {
       id: M6_CYCLE_ID, record_type: 'cycle', status: 'proposed', version: '1.0.0',
       created_at: M6_NOW, updated_at: M6_NOW, title: 'M6 synthetic cycle',
-      test_scope: { ...M6_TEST_SCOPE }, scope: 'test_merchant_engineering',
-      merchant_ref: M6_MERCHANT_ID, cycle_number: 1,
+      test_scope: { ...M6_TEST_SCOPE }, scope: 'knowledge_independent_engineering',
+      merchant_ref: M6_MERCHANT_ID,
+      knowledge_base_ref: M6_KNOWLEDGE_BASE_ID,
+      execution_scope: 'synthetic_test',
+      cycle_number: 1,
       core_versions: { input_snapshot: { ref: plan.snapshot.id, version: '1.0.0' } },
       aggregate_stage: 'prepared', completion_scope: 'none',
       goal_tracks: [{

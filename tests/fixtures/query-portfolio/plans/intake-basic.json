@@ -8,10 +8,10 @@
       "source_class": "generative_platform_observation",
       "observed_at": "2026-09-01T00:00:00Z",
       "entries": [
-        { "query_text": "What is QP Test Merchant?", "language": "en-US" },
-        { "query_text": "what is qp test merchant platform", "language": "en-US" },
-        { "query_text": "is qp test merchant legit", "language": "en-US" },
-        { "query_text": "qp test merchant pricing", "language": "en-US" }
+        { "query_text": "What is QP Test Knowledge Base?", "language": "en-US" },
+        { "query_text": "what is qp test knowledge base platform", "language": "en-US" },
+        { "query_text": "is qp test knowledge base legit", "language": "en-US" },
+        { "query_text": "qp test knowledge base pricing", "language": "en-US" }
       ]
     }
   ]

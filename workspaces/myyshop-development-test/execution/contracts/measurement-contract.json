@@ -1,0 +1,19 @@
+{
+  "schema_version": "m6-measurement-contract/1.0.0",
+  "id": "measurement-contract-m6-fixture-v1",
+  "version": "1.0.0",
+  "scope": "test_only",
+  "metrics": [
+    {
+      "metric_id": "ai_visits",
+      "definition": "Synthetic visits attributed to the fixture AI referrer group.",
+      "unit": "visits"
+    },
+    {
+      "metric_id": "ai_registrations",
+      "definition": "Synthetic aggregate registrations attributed to the fixture AI referrer group.",
+      "unit": "registrations"
+    }
+  ],
+  "causal_claim_allowed": false
+}

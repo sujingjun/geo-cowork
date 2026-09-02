@@ -9,9 +9,10 @@ title: 合成价格清晰度候选维度
 test_scope:
   kind: synthetic
   usage: test_only
-  merchant_ref: TMT-M6-TEST-001
-  workspace_id: ws_m6testmerchant000000000000
-merchant_ref: TMT-M6-TEST-001
+  merchant_ref: MER-MYYSHOP-001
+  workspace_id: ws_myyshopdevtest000000000000
+  knowledge_base_ref: KBASE-EXAMPLE-DEVTEST-001
+merchant_ref: MER-MYYSHOP-001
 strategy_assessment_version:
   ref: STA-M7-DECIDED-001
   version: 1.0.0

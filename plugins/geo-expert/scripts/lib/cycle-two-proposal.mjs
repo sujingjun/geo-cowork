@@ -12,10 +12,10 @@ import {
 } from './cycle-goal-selection.mjs';
 import { validateDecisionDimensionLineage } from './decision-dimension.mjs';
 import {
-  assertTestWorkspaceWriteAllowed,
-  preflightSyntheticWrite,
-  validateTestMerchantWorkspace,
-} from './m6-test-merchant.mjs';
+  assertDevelopmentWorkspaceWriteAllowed,
+  preflightTestKnowledgeWrite,
+  validateDevelopmentKnowledgeWorkspace,
+} from './workspace-scope.mjs';
 import { serializeMarkdownObject } from './object-contract.mjs';
 import { traceStrategy } from './strategy-trace.mjs';
 import { validateStrategyObject } from './strategy-profile.mjs';
@@ -42,8 +42,8 @@ const KIND_ORDER = Object.freeze({
 });
 
 async function validateWorkspace(root) {
-  await assertTestWorkspaceWriteAllowed({ workspace: root });
-  const result = await validateTestMerchantWorkspace({ workspace: root });
+  await assertDevelopmentWorkspaceWriteAllowed({ workspace: root });
+  const result = await validateDevelopmentKnowledgeWorkspace({ workspace: root });
   if (result.errors.length > 0) {
     throw makeFailure(result.errors[0].code, 'M7 Test Workspace 未就绪', {
       diagnostics: result.errors,
@@ -379,7 +379,7 @@ export async function proposeCycleTwo({ workspace, reviewId, plan }) {
       bytes: Buffer.from(serializeMarkdownObject(selection, '# Synthetic Cycle Goal Selection\n')),
     },
   ];
-  await preflightSyntheticWrite({
+  await preflightTestKnowledgeWrite({
     workspace: root,
     data: selection,
     body: '# Synthetic Cycle Goal Selection\n',

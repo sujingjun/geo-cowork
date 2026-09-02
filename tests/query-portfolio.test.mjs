@@ -77,7 +77,7 @@ function intakePlan(overrides = {}) {
         source_class: 'generative_platform_observation',
         observed_at: '2026-09-01T00:00:00Z',
         entries: [
-          { query_text: 'What is QP Test Merchant?', language: 'en-US' },
+          { query_text: 'What is QP Test Knowledge Base?', language: 'en-US' },
         ],
       },
     ],
@@ -86,7 +86,7 @@ function intakePlan(overrides = {}) {
 }
 
 test('qp-normalize-v1：NFKC、小写、空白折叠与首尾标点', () => {
-  assert.equal(normalizeQueryText('  What is QP Test Merchant? '), 'what is qp test merchant');
+  assert.equal(normalizeQueryText('  What is QP Test Knowledge Base? '), 'what is qp test knowledge base');
   assert.equal(normalizeQueryText('ＱＰ测试商家是什么？'), 'qp测试商家是什么');
   assert.equal(normalizeQueryText('what   is x'), 'what is x');
   assert.equal(normalizeQueryText('what is x!!!'), 'what is x');
@@ -95,22 +95,22 @@ test('qp-normalize-v1：NFKC、小写、空白折叠与首尾标点', () => {
 });
 
 test('qp-intent-v1：固定顺序关键词判定', () => {
-  assert.equal(classifyIntent('what is qp test merchant'), 'brand_definition');
-  assert.equal(classifyIntent('who is qp test merchant'), 'brand_definition');
+  assert.equal(classifyIntent('what is qp test knowledge base'), 'brand_definition');
+  assert.equal(classifyIntent('who is qp test knowledge base'), 'brand_definition');
   assert.equal(classifyIntent('qp测试商家是什么'), 'brand_definition');
-  assert.equal(classifyIntent('qp test merchant vs competitor'), 'comparison');
-  assert.equal(classifyIntent('compare qp test merchant with others'), 'comparison');
-  assert.equal(classifyIntent('qp test merchant 对比'), 'comparison');
+  assert.equal(classifyIntent('qp test knowledge base vs competitor'), 'comparison');
+  assert.equal(classifyIntent('compare qp test knowledge base with others'), 'comparison');
+  assert.equal(classifyIntent('qp test knowledge base 对比'), 'comparison');
   assert.equal(classifyIntent('best platform for creators'), 'recommendation');
-  assert.equal(classifyIntent('should i use qp test merchant'), 'recommendation');
-  assert.equal(classifyIntent('qp test merchant pricing'), 'pricing');
-  assert.equal(classifyIntent('how much does qp test merchant cost'), 'pricing');
-  assert.equal(classifyIntent('qp test merchant price'), 'pricing');
-  assert.equal(classifyIntent('is qp test merchant legit'), 'reputation');
-  assert.equal(classifyIntent('qp test merchant reviews'), 'reputation');
-  assert.equal(classifyIntent('qp test merchant 靠谱吗'), 'reputation');
-  assert.equal(classifyIntent('how to use qp test merchant'), 'capability');
-  assert.equal(classifyIntent('does qp test merchant support export'), 'capability');
+  assert.equal(classifyIntent('should i use qp test knowledge base'), 'recommendation');
+  assert.equal(classifyIntent('qp test knowledge base pricing'), 'pricing');
+  assert.equal(classifyIntent('how much does qp test knowledge base cost'), 'pricing');
+  assert.equal(classifyIntent('qp test knowledge base price'), 'pricing');
+  assert.equal(classifyIntent('is qp test knowledge base legit'), 'reputation');
+  assert.equal(classifyIntent('qp test knowledge base reviews'), 'reputation');
+  assert.equal(classifyIntent('qp test knowledge base 靠谱吗'), 'reputation');
+  assert.equal(classifyIntent('how to use qp test knowledge base'), 'capability');
+  assert.equal(classifyIntent('does qp test knowledge base support export'), 'capability');
   assert.equal(classifyIntent('random unrelated text'), 'other');
   assert.equal(classifyIntent('what is the best price for x'), 'recommendation');
   assert.equal(classifyIntent('what is the price for x'), 'pricing');
@@ -127,25 +127,25 @@ test('qp-priority-v1：来源类别映射与最高优先级', () => {
 });
 
 test('qp-id-v1：确定性生成与区分度', () => {
-  const first = generateQueryIdentity({ normalizedText: 'what is qp test merchant', language: 'en-US' });
-  const repeated = generateQueryIdentity({ normalizedText: 'what is qp test merchant', language: 'en-US' });
+  const first = generateQueryIdentity({ normalizedText: 'what is qp test knowledge base', language: 'en-US' });
+  const repeated = generateQueryIdentity({ normalizedText: 'what is qp test knowledge base', language: 'en-US' });
   const second = generateQueryIdentity({
-    normalizedText: 'what is qp test merchant platform',
+    normalizedText: 'what is qp test knowledge base platform',
     language: 'en-US',
   });
   const chinese = generateQueryIdentity({ normalizedText: 'qp测试商家是什么', language: 'zh-CN' });
   assert.deepEqual(first, repeated);
   assert.notEqual(first.id, second.id);
-  assert.match(first.id, /^Q-WHAT-IS-QP-TEST-MERCHANT-EN-[0-9A-F]{4}$/);
+  assert.match(first.id, /^Q-WHAT-IS-QP-TEST-KNOWLEDGE-EN-[0-9A-F]{4}$/);
   assert.match(chinese.id, /^Q-QP-ZH-[0-9A-F]{4}$/);
   assert.equal(chinese.path, `queries/candidates/${chinese.id.toLowerCase()}.md`);
 });
 
 test('qp-cluster-v1：意图桶内相似聚类、跨意图不合并、确定性', () => {
   const queries = [
-    { data: { id: 'Q-A-EN-0001', language: 'en-US', intent: 'brand_definition', normalized_text: 'what is qp test merchant', priority: 'P0', status: 'candidate', version: '1.0.0' } },
-    { data: { id: 'Q-B-EN-0002', language: 'en-US', intent: 'brand_definition', normalized_text: 'what is qp test merchant platform', priority: 'P1', status: 'formal', version: '1.0.0' } },
-    { data: { id: 'Q-C-EN-0003', language: 'en-US', intent: 'reputation', normalized_text: 'is qp test merchant legit', priority: 'P0', status: 'candidate', version: '1.0.0' } },
+    { data: { id: 'Q-A-EN-0001', language: 'en-US', intent: 'brand_definition', normalized_text: 'what is qp test knowledge base', priority: 'P0', status: 'candidate', version: '1.0.0' } },
+    { data: { id: 'Q-B-EN-0002', language: 'en-US', intent: 'brand_definition', normalized_text: 'what is qp test knowledge base platform', priority: 'P1', status: 'formal', version: '1.0.0' } },
+    { data: { id: 'Q-C-EN-0003', language: 'en-US', intent: 'reputation', normalized_text: 'is qp test knowledge base legit', priority: 'P0', status: 'candidate', version: '1.0.0' } },
     { data: { id: 'Q-D-ZH-0004', language: 'zh-CN', intent: 'brand_definition', normalized_text: 'qp测试商家是什么', priority: 'P0', status: 'candidate', version: '1.0.0' } },
     { data: { id: 'Q-E-ZH-0005', language: 'zh-CN', intent: 'brand_definition', normalized_text: 'qp测试商家是什么平台', priority: 'P0', status: 'candidate', version: '1.0.0' } },
   ];
@@ -177,7 +177,7 @@ test('intake：生成 candidate、幂等 kept 与规则溯源', async () => {
     assert.deepEqual(first.kept, []);
     assert.equal(first.duplicates.length, 0);
     const generated = first.queries[0];
-    assert.equal(generated.normalized_text, 'what is qp test merchant');
+    assert.equal(generated.normalized_text, 'what is qp test knowledge base');
     assert.equal(generated.intent, 'brand_definition');
     assert.equal(generated.priority, 'P0');
     assert.deepEqual(generated.source_classes, ['generative_platform_observation']);
@@ -210,7 +210,7 @@ test('intake：同源重复整体失败且无部分写入', async () => {
   const root = await unitWorkspace();
   try {
     const plan = intakePlan();
-    plan.sources[0].entries.push({ query_text: 'What is QP Test Merchant', language: 'en-US' });
+    plan.sources[0].entries.push({ query_text: 'What is QP Test Knowledge Base', language: 'en-US' });
     await assert.rejects(
       intakeQueryPortfolio({ workspace: root, plan, now: NOW }),
       (error) => error.code === 'DUPLICATE_QUERY',
@@ -230,7 +230,7 @@ test('intake：跨来源合并、多来源优先级与展示文本取字节序�
       source_ref: QP_SOURCE_COMMUNITY_ID,
       source_class: 'community_expression',
       observed_at: '2026-09-01T00:00:00Z',
-      entries: [{ query_text: 'what is QP test merchant', language: 'en-US' }],
+      entries: [{ query_text: 'what is QP test knowledge base', language: 'en-US' }],
     });
     const result = await intakeQueryPortfolio({ workspace: root, plan, now: NOW });
     assert.equal(result.queries.length, 1);
@@ -239,7 +239,7 @@ test('intake：跨来源合并、多来源优先级与展示文本取字节序�
     const graph = await loadWorkspaceGraph({ workspace: root });
     const created = graph.byId.get(generated.id);
     assert.deepEqual(created.data.discovery_source_refs, [QP_SOURCE_PLATFORM_ID, QP_SOURCE_COMMUNITY_ID]);
-    assert.equal(created.data.query_text, 'What is QP Test Merchant?');
+    assert.equal(created.data.query_text, 'What is QP Test Knowledge Base?');
     assert.equal(created.data.extensions['geo.qp_intake'].sources.length, 2);
   } finally {
     await rm(root, { recursive: true });
@@ -253,9 +253,9 @@ test('intake：对既有活跃 Query 的重复观察跳过并报告', async () =
       id: 'Q-EXISTING-001',
       status: 'formal',
       title: 'Existing formal query',
-      query_text: 'What is QP Test Merchant?',
+      query_text: 'What is QP Test Knowledge Base?',
       language: 'en-US',
-      normalized_text: 'what is qp test merchant',
+      normalized_text: 'what is qp test knowledge base',
       intent: 'brand_definition',
       priority: 'P0',
       goal_refs: [QP_GOAL_ID],
@@ -555,9 +555,9 @@ test('report：聚类覆盖视图、内容键工件与确定性', async () => {
   try {
     const plan = intakePlan();
     plan.sources[0].entries.push(
-      { query_text: 'what is qp test merchant platform', language: 'en-US' },
-      { query_text: 'is qp test merchant legit', language: 'en-US' },
-      { query_text: 'qp test merchant pricing', language: 'en-US' },
+      { query_text: 'what is qp test knowledge base platform', language: 'en-US' },
+      { query_text: 'is qp test knowledge base legit', language: 'en-US' },
+      { query_text: 'qp test knowledge base pricing', language: 'en-US' },
     );
     const intake = await intakeQueryPortfolio({ workspace: root, plan, now: NOW });
     assert.equal(intake.queries.length, 4);
@@ -601,7 +601,7 @@ test('frozen Query Set 覆盖缺口 warning 与 index 重建', async () => {
   const root = await unitWorkspace();
   try {
     const plan = intakePlan();
-    plan.sources[0].entries.push({ query_text: 'is qp test merchant legit', language: 'en-US' });
+    plan.sources[0].entries.push({ query_text: 'is qp test knowledge base legit', language: 'en-US' });
     const intake = await intakeQueryPortfolio({ workspace: root, plan, now: NOW });
     // 人工只批准 definition Query，legit 保持 candidate
     const definition = intake.queries.find((item) => item.intent === 'brand_definition');

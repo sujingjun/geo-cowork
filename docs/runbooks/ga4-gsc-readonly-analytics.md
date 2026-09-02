@@ -2,7 +2,7 @@
 title: GA4/GSC 真实只读分析接入 Runbook
 status: implemented
 created: 2026-09-01
-updated: 2026-09-01
+updated: 2026-09-02
 source:
   - docs/specs/0010-ga4-gsc-readonly-analytics.md
   - docs/plans/2026-09-01-ga4-gsc-readonly-analytics-plan.md
@@ -62,12 +62,26 @@ GEO_ANALYTICS_REAL_READ=1 npm run analytics:readonly -- smoke \
 
 stdout 只显示 source 状态、row count 和 checksum；完整聚合行只在 Git 忽略的临时结果中。GA4/GSC 各发一个请求，不自动重试。
 
+### 3.1 Observation 单次采集
+
+只有当前授权决定明确允许写入真实 Observation，且对应 plan 尚未过期时，使用合并入口：
+
+```bash
+GEO_ANALYTICS_REAL_READ=1 npm run analytics:readonly -- collect-observe \
+  --workspace workspaces/myyshop \
+  --plan <current-readonly-plan.json> \
+  --observation-plan <current-observation-plan.json> \
+  --confirm-readonly
+```
+
+该入口在同一次显式执行中读取、归一化并 create-only 写入 ANO、非因果 BSIG、Source、Run 与 candidate EVD；不提供自动批准或 Claim 更新。ADC 需要交互式重新认证时先停止，不能把 `doctor` 的“文件存在”当成 token 可刷新。
+
 ## 4. 结果解释
 
 - `ok`：认证、目标资源、API 和响应 Schema 可读，且该窗口至少一行。
 - `unavailable`：API 调用成功但零行；不改写为正向结果。
 - GSC Search Analytics 不保证返回全部行；本 smoke 只按日期读取，不能推广为 Query/Page 全量分析。
-- 任意结果都固定 `causal_claim:false`，且本次不写真实 ANO/BSIG/EVD/Claim。
+- 任意结果都固定 `causal_claim:false`。`smoke` 不写真实 ANO/BSIG/EVD/Claim；`collect-observe` 只有在独立授权覆盖时才写 ANO/BSIG/candidate EVD，仍不写 Claim 或 approval。
 
 ## 5. 故障分流
 

@@ -8,7 +8,10 @@ import { REQUIRED_DIRS, REQUIRED_FILES } from './workspace-init.mjs';
 
 const ID_PATTERN = /^ws_[a-z0-9]{26}$/;
 const IDENTITY_FIELDS = ['schema_version', 'workspace_id', 'brand', 'created_at', 'created_by'];
-const TEST_IDENTITY_FIELDS = ['test_namespace', 'legal_entity', 'subject_locator'];
+const SCOPED_IDENTITY_FIELDS = [
+  'merchant_ref', 'merchant_mode', 'subject_locator', 'execution_scope',
+  'knowledge_base_ref', 'knowledge_base_mode', 'online_configuration',
+];
 
 async function isDir(p) {
   try {
@@ -67,24 +70,29 @@ export async function validateWorkspace(root, { objects = false } = {}) {
       if (parsed.workspace_id && !ID_PATTERN.test(parsed.workspace_id)) {
         errors.push(`workspace_id 格式非法: ${parsed.workspace_id}`);
       }
-      const hasTestField = parsed.workspace_mode !== undefined
-        || TEST_IDENTITY_FIELDS.some((field) => parsed[field] !== undefined);
-      if (hasTestField) {
-        if (parsed.workspace_mode !== 'test_only') {
-          errors.push('workspace_mode 存在测试身份字段时必须为 test_only');
+      const hasScopedIdentity = parsed.workspace_mode !== undefined
+        || SCOPED_IDENTITY_FIELDS.some((field) => parsed[field] !== undefined);
+      if (hasScopedIdentity && !['development_test', 'online'].includes(parsed.workspace_mode)) {
+        errors.push('workspace_mode 必须为 development_test 或 online');
+      }
+      if (parsed.workspace_mode === 'development_test') {
+        if (!/^MER-(?:[A-Z0-9]+-)*[A-Z0-9]+$/.test(parsed.merchant_ref ?? '')) {
+          errors.push('development-test Workspace merchant_ref 格式非法');
         }
-        if (typeof parsed.test_namespace !== 'string'
-            || !/^[a-z0-9][a-z0-9-]*$/.test(parsed.test_namespace)) {
-          errors.push('test_namespace 格式非法');
+        if (parsed.merchant_mode !== 'online') errors.push('merchant_mode 必须为 online');
+        if (parsed.execution_scope !== 'synthetic_test') {
+          errors.push('development-test Workspace execution_scope 必须为 synthetic_test');
         }
-        if (parsed.legal_entity !== false) errors.push('test-only Workspace 的 legal_entity 必须为 false');
+        if (!/^KBASE-(?:[A-Z0-9]+-)*[A-Z0-9]+$/.test(parsed.knowledge_base_ref ?? '')
+            || parsed.knowledge_base_mode !== 'test_only') {
+          errors.push('development-test Workspace knowledge_base_ref/mode 非法');
+        }
         try {
-          const locator = new URL(parsed.subject_locator);
-          if (!locator.hostname.endsWith('.invalid')) {
-            errors.push('test-only Workspace 的 subject_locator 必须使用 .invalid 主机');
+          if (new URL(parsed.subject_locator).protocol !== 'https:') {
+            errors.push('development-test Workspace subject_locator 必须为 HTTPS');
           }
         } catch {
-          errors.push('test-only Workspace 的 subject_locator 必须是合法 URL');
+          errors.push('development-test Workspace subject_locator 必须是合法 URL');
         }
       }
     }
@@ -99,7 +107,7 @@ export async function validateWorkspace(root, { objects = false } = {}) {
       const { validateM6Object } = await import('./lib/m6-profile.mjs');
       for (const object of graph.objects) {
         objectErrors.push(...validateM6Object(object, {
-          testWorkspace: workspaceIdentity?.workspace_mode === 'test_only',
+          testKnowledgeWorkspace: workspaceIdentity?.workspace_mode === 'development_test',
         }).errors);
       }
       try {
@@ -115,20 +123,16 @@ export async function validateWorkspace(root, { objects = false } = {}) {
         if (error.code !== 'ERR_MODULE_NOT_FOUND') throw error;
       }
       const containsTestObjects = graph.objects.some((object) =>
-        object.data.test_scope
-        || ['test_merchant', 'cycle_input_snapshot', 'cycle_transition',
-          'analytics_observation', 'business_signal', 'cycle_review'].includes(
-          object.data.record_type,
-        ));
-      if (containsTestObjects && workspaceIdentity?.workspace_mode !== 'test_only') {
+        object.data.test_scope || object.data.execution_scope === 'synthetic_test');
+      if (containsTestObjects && workspaceIdentity?.workspace_mode !== 'development_test') {
         objectErrors.push({
           code: 'SYNTHETIC_REAL_REF_CONTAMINATION',
           path: 'workspace.json',
           reason: 'test_objects_in_non_test_workspace',
         });
-      } else if (workspaceIdentity?.workspace_mode === 'test_only') {
-        const { validateTestMerchantWorkspace } = await import('./lib/m6-test-merchant.mjs');
-        const testResult = await validateTestMerchantWorkspace({ workspace: root });
+      } else if (workspaceIdentity?.workspace_mode === 'development_test') {
+        const { validateDevelopmentKnowledgeWorkspace } = await import('./lib/workspace-scope.mjs');
+        const testResult = await validateDevelopmentKnowledgeWorkspace({ workspace: root });
         objectErrors.push(...testResult.errors);
         warnings.push(...testResult.warnings);
       }

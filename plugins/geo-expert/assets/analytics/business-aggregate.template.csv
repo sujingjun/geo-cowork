@@ -1,0 +1,3 @@
+metric_id,value,unit,segment
+example_numerator,0,count,all
+example_denominator,0,count,all

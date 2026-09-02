@@ -1,5 +1,5 @@
 import { serializeMarkdownObject } from './object-contract.mjs';
-import { preflightSyntheticWrite } from './m6-test-merchant.mjs';
+import { preflightTestKnowledgeWrite } from './workspace-scope.mjs';
 import { stableStringify, writeCreateOnly } from './workspace-paths.mjs';
 
 function error(code, details = {}) {
@@ -137,7 +137,7 @@ export async function materializeDecisionDimension({ workspace, path, data, prio
     throw failure;
   }
   const body = '# Synthetic Decision Dimension\n';
-  await preflightSyntheticWrite({ workspace, data, body, manifest: data.basis });
+  await preflightTestKnowledgeWrite({ workspace, data, body, manifest: data.basis });
   return writeCreateOnly(workspace, path, serializeMarkdownObject(data, body), {
     idempotent: true,
     conflictCode: 'DECISION_DIMENSION_CONFLICT',

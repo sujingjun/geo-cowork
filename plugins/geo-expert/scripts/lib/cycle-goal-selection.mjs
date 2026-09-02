@@ -1,5 +1,5 @@
 import { serializeMarkdownObject } from './object-contract.mjs';
-import { preflightSyntheticWrite } from './m6-test-merchant.mjs';
+import { preflightTestKnowledgeWrite } from './workspace-scope.mjs';
 import {
   compareUtf8,
   sha256,
@@ -179,7 +179,7 @@ export async function materializeGoalSelection({ workspace, path, data, prior = 
     throw failure;
   }
   const body = '# Synthetic Cycle Goal Selection\n';
-  await preflightSyntheticWrite({ workspace, data, body, manifest: data.decision });
+  await preflightTestKnowledgeWrite({ workspace, data, body, manifest: data.decision });
   return writeCreateOnly(workspace, path, serializeMarkdownObject(data, body), {
     idempotent: true,
     conflictCode: 'GOAL_CANDIDATE_BATCH_CONFLICT',

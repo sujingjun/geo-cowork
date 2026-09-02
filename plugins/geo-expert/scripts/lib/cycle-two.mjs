@@ -40,7 +40,8 @@ function versionRef(value, prefix) {
 function contaminated(value) {
   if (typeof value === 'string') {
     return /(?:^|[\\/])workspaces[\\/]myyshop(?:[\\/]|$)/i.test(value)
-      || /(?:^|-)(?:REAL|MYYSHOP)(?:-|$)/i.test(value);
+      || /\b(?:CLM|EVD|SRC|Q|QS|KR|ANS|AST|RUN|GOAL)-MYYSHOP-(?!DEVTEST-)[A-Z0-9-]+\b/.test(value)
+      || /(?:^|-)REAL(?:-|$)/i.test(value);
   }
   if (Array.isArray(value)) return value.some(contaminated);
   return Boolean(value && typeof value === 'object' && Object.values(value).some(contaminated));
@@ -131,6 +132,7 @@ export function buildCycleTwoFreezeInputPlan(plan) {
     snapshot_kind: 'freeze',
     snapshot_id: plan.snapshot_id,
     merchant_ref: plan.merchant_ref,
+    knowledge_base_ref: plan.knowledge_base_ref,
     cycle_id: plan.cycle_id,
     cycle_number: 2,
     cycle_path: plan.cycle_path,

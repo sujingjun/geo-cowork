@@ -58,7 +58,7 @@ node plugins/geo-expert/scripts/workspace-init.mjs --workspace ./workspaces/<bra
 node plugins/geo-expert/scripts/workspace-validate.mjs --workspace ./workspaces/<brand>
 ```
 
-初始化幂等，已有文件默认不覆盖，`workspace.json` 中的 `workspace_id` 稳定不变。契约详见 `docs/specs/0002-workspace-contract.md`。仓库内 `workspaces/myyshop/` 是 MyyShop 品牌的真实工作区实例。
+初始化幂等，已有文件默认不覆盖，`workspace.json` 中的 `workspace_id` 稳定不变。契约详见 `docs/specs/0002-workspace-contract.md`。仓库内 `workspaces/myyshop/` 是 MyyShop 真实工作区；`workspaces/myyshop-development-test/` 是同一线上 Merchant 在 0→1 开发期使用的隔离 `test_only` 品牌知识库，不是第二商户，也不得自动转正。
 
 ## 开发与验证
 
@@ -69,8 +69,9 @@ npm run test:m2-contract                                 # M2 专项测试
 npm run test:m3-knowledge-query                          # M3 Knowledge/Query 专项测试
 npm run test:m4-diagnosis                               # M4 Diagnosis/Site/Asset 专项测试
 npm run test:m5-answer                                 # M5 Answer/Citation/Source/聚合专项测试
-npm run test:m6-cycle                                 # M6 测试商户 Cycle/Analytics/恢复专项测试
+npm run test:m6-cycle                                 # M6 development-test KBASE Cycle/Analytics/恢复专项测试
 npm run test:m7-strategy                             # M7 策略推理执行专项测试
+npm run test:m8-conformance                         # M8 Cross-host Conformance 专项测试
 npm run test:query-portfolio                          # Query Portfolio 流水线专项测试
 npm run smoke:m5-playwright                            # 全局 Playwright + loopback base Smoke
 npm run check:docs                                      # 仓库 Markdown 本地链接检查
@@ -80,8 +81,9 @@ node plugins/geo-expert/scripts/knowledge-query.mjs validate --workspace workspa
 node plugins/geo-expert/scripts/query-portfolio.mjs validate --workspace workspaces/myyshop
 node plugins/geo-expert/scripts/diagnosis.mjs validate --workspace workspaces/myyshop
 node plugins/geo-expert/scripts/answer-cycle.mjs validate --workspace workspaces/myyshop
-node plugins/geo-expert/scripts/geo-lifecycle.mjs validate --workspace <test-workspace>
-node plugins/geo-expert/scripts/geo-lifecycle.mjs trace --workspace <test-workspace> --cycle <CYC-ID>
+node plugins/geo-expert/scripts/geo-lifecycle.mjs validate --workspace workspaces/myyshop-development-test
+node plugins/geo-expert/scripts/geo-readiness.mjs report --workspace workspaces/myyshop-development-test --knowledge-base KBASE-MYYSHOP-DEVTEST-001 --goal GOAL-M6-TEST-001
+node plugins/geo-expert/scripts/geo-conformance.mjs run --workspace workspaces/myyshop-development-test --profile workspaces/myyshop-development-test/execution/conformance/profile.json
 ```
 
 真实公开 HTTP snapshot 必须另有逐项授权并使用显式 plan；采集和 M4 输入桥接命令为：
@@ -92,6 +94,8 @@ npm run prepare:m4-public-inputs -- --workspace <workspace> --summary <workspace
 ```
 
 要求 Node.js 20+。协作规则见 `AGENTS.md` 与 `docs/workflow.md`；文档导航见 `docs/README.md`。
+
+真实 GA4/GSC Observation 在精确当次授权下使用 `geo-analytics-readonly.mjs collect-observe`；服务端业务文件只接受 Workspace 内的聚合 JSON/CSV，并使用 `geo-analytics.mjs ingest-business-file`。两条入口都固定非因果，Evidence 只创建 `candidate`。
 
 ## 边界
 

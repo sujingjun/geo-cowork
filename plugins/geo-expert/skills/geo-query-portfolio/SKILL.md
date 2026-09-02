@@ -10,7 +10,7 @@ description: 在 Cycle 启动前用确定性流水线完成 Query Portfolio：�
 - 从授权观察来源（生成式平台观察、第一方用户数据、社区表达、竞品材料）登记 candidate Query；
 - 为一个 Perception Goal 生成聚类、意图与覆盖视图；
 - 组装 draft Query Set 并检查冻结前剩余人工门；
-- 校验 Query Portfolio 对象合同（M3 + portfolio + 测试商户）。
+- 校验 Query Portfolio 对象合同（M3 + portfolio + 测试知识库）。
 
 ## 输入
 
@@ -18,7 +18,7 @@ description: 在 Cycle 启动前用确定性流水线完成 Query Portfolio：�
 
 ## 开工前必读
 
-读取工作区 `README.md`、`STATUS.md`、`workspace.json`，以及 Spec 0003、Spec 0004、Spec 0011。确认观察来源已获授权；测试工作区必须具备 `test_only` 身份与唯一 `test_merchant`。
+读取工作区 `README.md`、`STATUS.md`、`workspace.json`，以及 Spec 0003、Spec 0004、Spec 0011、Spec 0012。确认观察来源已获授权；测试工作区必须具备唯一线上 Merchant identity、显式 test-only KBASE 与匹配的 `test_scope`。
 
 ## 步骤
 
@@ -63,7 +63,7 @@ candidate Query、portfolio 报告工件、draft/frozen Query Set、结构化 er
 - 确定性生成 candidate 与去重（同源重复失败、跨来源合并、既有重复跳过并报告）；
 - 报告聚类、意图、优先级建议与覆盖缺口；
 - 列出冻结前全部机器门与期望 `content_sha256`；
-- 在真实工作区与测试商户工作区用同一命令运行（测试工作区自动走 `preflightSyntheticWrite`）。
+- 在真实工作区与测试知识库工作区用同一命令运行（测试工作区自动走 `preflightTestKnowledgeWrite`）。
 
 ## 禁止事项
 

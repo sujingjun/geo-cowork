@@ -1,0 +1,96 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://geo-cowork.local/schemas/m8-record-types-v1.json",
+  "$defs": {
+    "merchant": {
+      "x-id-prefix": "MER-",
+      "x-statuses": ["active", "archived"],
+      "required": ["display_name", "canonical_locator", "account_mode"],
+      "properties": {
+        "display_name": { "type": "string", "minLength": 1 },
+        "canonical_locator": { "type": "string", "pattern": "^https://" },
+        "account_mode": { "const": "online" },
+        "supersedes_ref": { "type": "string", "pattern": "^MER-(?:[A-Z0-9]+-)*[A-Z0-9]+$" }
+      }
+    },
+    "brand_knowledge_base": {
+      "x-id-prefix": "KBASE-",
+      "x-statuses": ["draft", "frozen", "active", "archived"],
+      "required": ["merchant_ref", "mode", "root_path", "provenance"],
+      "properties": {
+        "merchant_ref": { "type": "string", "pattern": "^MER-(?:[A-Z0-9]+-)*[A-Z0-9]+$" },
+        "mode": { "enum": ["test_only", "real"] },
+        "root_path": { "type": "string", "minLength": 1 },
+        "provenance": {
+          "type": "object",
+          "required": ["kind", "usage", "decision_ref"],
+          "properties": {
+            "kind": { "enum": ["synthetic", "real"] },
+            "usage": { "enum": ["test_only", "brand_operations"] },
+            "decision_ref": { "type": "string", "minLength": 1 }
+          },
+          "additionalProperties": false
+        },
+        "approval": { "$ref": "common#/$defs/approval" },
+        "supersedes_ref": { "type": "string", "pattern": "^KBASE-(?:[A-Z0-9]+-)*[A-Z0-9]+$" }
+      },
+      "allOf": [
+        {
+          "if": { "properties": { "mode": { "const": "test_only" } }, "required": ["mode"] },
+          "then": { "required": ["test_scope", "approval"] }
+        }
+      ]
+    },
+    "lifecycle_readiness_report": {
+      "x-id-prefix": "LRR-",
+      "x-statuses": ["computed", "superseded"],
+      "required": ["merchant_ref", "knowledge_base_ref", "goal_ref", "engineering_ready", "real_cycle_start_ready", "formal_cycle_created", "gates", "knowledge_absence"],
+      "properties": {
+        "merchant_ref": { "type": "string", "pattern": "^MER-(?:[A-Z0-9]+-)*[A-Z0-9]+$" },
+        "knowledge_base_ref": { "type": "string", "pattern": "^KBASE-(?:[A-Z0-9]+-)*[A-Z0-9]+$" },
+        "goal_ref": { "type": "string", "pattern": "^GOAL-(?:[A-Z0-9]+-)*[A-Z0-9]+$" },
+        "engineering_ready": { "type": "boolean" },
+        "real_cycle_start_ready": { "type": "boolean" },
+        "formal_cycle_created": { "const": false },
+        "gates": { "type": "array", "items": { "type": "object" } },
+        "knowledge_absence": {
+          "type": "object",
+          "required": ["missing", "content_gap_inferred"],
+          "properties": {
+            "missing": { "type": "boolean" },
+            "content_gap_inferred": { "const": false }
+          },
+          "additionalProperties": false
+        },
+        "supersedes_ref": { "type": "string", "pattern": "^LRR-(?:[A-Z0-9]+-)*[A-Z0-9]+$" }
+      }
+    },
+    "conformance_profile": {
+      "x-id-prefix": "CFP-",
+      "x-statuses": ["draft", "frozen", "superseded"],
+      "required": ["merchant_ref", "knowledge_base_ref", "required_executions", "optional_executions"],
+      "properties": {
+        "merchant_ref": { "type": "string", "pattern": "^MER-(?:[A-Z0-9]+-)*[A-Z0-9]+$" },
+        "knowledge_base_ref": { "type": "string", "pattern": "^KBASE-(?:[A-Z0-9]+-)*[A-Z0-9]+$" },
+        "required_executions": { "type": "array", "minItems": 1, "items": { "type": "object" } },
+        "optional_executions": { "type": "array", "items": { "type": "object" } },
+        "approval": { "$ref": "common#/$defs/approval" },
+        "supersedes_ref": { "type": "string", "pattern": "^CFP-(?:[A-Z0-9]+-)*[A-Z0-9]+$" }
+      }
+    },
+    "conformance_result": {
+      "x-id-prefix": "CFR-",
+      "x-statuses": ["computed", "superseded"],
+      "required": ["profile_ref", "profile_version", "required_passed", "host_runs", "optional_runs", "limitations"],
+      "properties": {
+        "profile_ref": { "type": "string", "pattern": "^CFP-(?:[A-Z0-9]+-)*[A-Z0-9]+$" },
+        "profile_version": { "type": "string", "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$" },
+        "required_passed": { "type": "boolean" },
+        "host_runs": { "type": "array", "minItems": 1, "items": { "type": "object" } },
+        "optional_runs": { "type": "array", "items": { "type": "object" } },
+        "limitations": { "$ref": "common#/$defs/stringArray" },
+        "supersedes_ref": { "type": "string", "pattern": "^CFR-(?:[A-Z0-9]+-)*[A-Z0-9]+$" }
+      }
+    }
+  }
+}

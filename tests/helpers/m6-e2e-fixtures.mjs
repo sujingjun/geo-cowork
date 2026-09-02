@@ -243,7 +243,7 @@ async function materializeM4Gates(root, { allRejected }) {
   const assetEvidence = {
     ...common('EVD-M6-ASSET-001', 'evidence', 'candidate', 'Synthetic Asset Evidence'),
     source_refs: ['SRC-M6-TEST-001'], claim_refs: [CLAIM_REF],
-    locator: 'https://m6-test-merchant.invalid/about', captured_at: M6_NOW,
+    locator: 'https://dev-knowledge.invalid/about', captured_at: M6_NOW,
     snapshot: {
       path: 'evidence/snapshots/m6-e2e-asset.html', sha256: sha256(assetSnapshot), media_type: 'text/html',
     },
@@ -306,7 +306,7 @@ async function materializeM4Gates(root, { allRejected }) {
     ...common('PUB-M6-ASSET-001', 'asset_publication', 'confirmed', 'Synthetic Publication'),
     proposal_ref: proposal.id, adoption_ref: adoption.id, asset_ref: ASSET_REF,
     published_item_ids: ['REC-M6-ASSET-001'],
-    published_locator: 'https://m6-test-merchant.invalid/about',
+    published_locator: 'https://dev-knowledge.invalid/about',
     content_sha256: sha256(proposalBody), published_at: M6_NOW,
     approval: { ...M6_APPROVAL },
   };
@@ -334,7 +334,7 @@ export async function materializeM6E2EGates(root, bundle, { allRejected = false 
   const technicalEvidence = {
     ...common('EVD-M6-TECH-RETEST-001', 'evidence', 'candidate', 'Synthetic Retest Evidence'),
     source_refs: ['SRC-M6-TEST-001'], claim_refs: [CLAIM_REF],
-    locator: 'https://m6-test-merchant.invalid/about', captured_at: M6_NOW,
+    locator: 'https://dev-knowledge.invalid/about', captured_at: M6_NOW,
     snapshot: {
       path: 'evidence/snapshots/m6-e2e-asset.html',
       sha256: sha256(await readFile(path.join(root, 'evidence/snapshots/m6-e2e-asset.html'))),

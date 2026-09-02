@@ -1,19 +1,19 @@
 ---
 name: geo-lifecycle
-description: 编排测试商户 GEO Cycle 的输入冻结、阶段门、并发恢复、人工 Review 与 snapshot trace；不连接真实系统或替代人工决定。
+description: 在同一线上 Merchant 的 development-test 品牌知识库中编排 synthetic GEO Cycle 输入冻结、阶段门、并发恢复、人工 Review 与 snapshot trace；不替代人工决定。
 ---
 
 # geo-lifecycle
 
 ## 触发场景
 
-- 创建独立 `test_only` 测试商户并冻结 Cycle 输入；
+- 创建 MyyShop development-test Workspace 与 `test_only` 品牌知识库并冻结 Cycle 输入；
 - 按 Spec 0007 推进 Baseline、诊断、采用、Publication、双 Retest、Analytics 与 Review；
 - 恢复 orphan transition、检查 active drift 或重建 completed trace。
 
 ## 输入
 
-测试 Workspace、显式 plan、稳定对象 ID/path/version/bytes SHA、人工 fixture decision，以及当前 Cycle ID。每个 `advance` plan 必须携带已经存在的 canonical `gate_objects` descriptors。
+development-test Workspace、显式 `knowledge_base_ref`、稳定对象 ID/path/version/bytes SHA、人工 fixture decision，以及当前 Cycle ID。每个 `advance` plan 必须携带已经存在的 canonical `gate_objects` descriptors。
 
 ## 开工前必读
 
@@ -25,7 +25,7 @@ node <plugin-root>/scripts/geo-lifecycle.mjs validate --workspace <workspace>
 
 ## 步骤
 
-1. `prepare-test-merchant` 一次性创建 `.invalid`、fictitious、synthetic/test-only 身份与 TMT。
+1. `prepare-development-workspace` 一次性登记真实线上 Merchant identity 与隔离的 test-only KBASE；不创建第二商户。
 2. 注入已批准的 synthetic M2—M5 seed 后，`create-cycle` 创建 freeze CIS 与 Cycle。
 3. 每阶段先物化合法 canonical gate，再以 descriptor 的 ID/type/status/version/path/SHA 调用 `advance`。
 4. Analytics 后使用 `assemble-review` 创建 waiting CRV；人类决定必须使用新 CRV ID。
@@ -33,7 +33,7 @@ node <plugin-root>/scripts/geo-lifecycle.mjs validate --workspace <workspace>
 
 ## 输出
 
-Test Merchant、CIS、CTR、Cycle、CRV、阶段摘要、trace、errors/warnings、下一 gate 与 `real_myyshop_impact:false` 的测试范围声明。
+Merchant/KBASE、CIS、CTR、Cycle、CRV、阶段摘要、trace、errors/warnings、下一 gate 与 `real_myyshop_impact:false` 的测试范围声明。
 
 ## 可做事项
 
@@ -45,7 +45,7 @@ Test Merchant、CIS、CTR、Cycle、CRV、阶段摘要、trace、errors/warnings
 
 - 不从 ID 猜测或创建 M4/M5 gate；
 - 不绕过 Publication、Retest、Analytics 或 Review；
-- 不写真实 `workspaces/myyshop`，不联网，不访问账号或凭据；
+- synthetic Cycle 不写真实 `workspaces/myyshop`，不联网，不访问账号或凭据；线上 GA4/GSC Observation 走独立只读入口；
 - 不把 synthetic completed 表述为真实 Cycle、业务效果或 v1 Release。
 
 ## 失败与停止条件

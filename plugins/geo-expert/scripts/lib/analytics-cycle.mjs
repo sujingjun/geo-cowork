@@ -8,7 +8,7 @@ import {
   completeAnalyticsRun,
   createAnalyticsRun,
 } from './analytics-run.mjs';
-import { preflightSyntheticWrite } from './m6-test-merchant.mjs';
+import { preflightTestKnowledgeWrite } from './workspace-scope.mjs';
 import { serializeMarkdownObject } from './object-contract.mjs';
 import {
   resolveWithin,
@@ -151,6 +151,7 @@ export async function ingestFixtureObservation({ workspace, plan }) {
     updated_at: validated.input.time_window.as_of,
     title: 'Synthetic Analytics Observation',
     test_scope: { ...plan.test_scope },
+    execution_scope: 'synthetic_test',
     merchant_ref: plan.merchant_ref,
     cycle_ref: plan.cycle_ref,
     goal_ref: plan.goal_ref,
@@ -179,7 +180,7 @@ export async function ingestFixtureObservation({ workspace, plan }) {
     },
     causal_claim: false,
   };
-  await preflightSyntheticWrite({
+  await preflightTestKnowledgeWrite({
     workspace: root, data, body: '# Synthetic Analytics Observation\n', refClosure: false,
   });
   await createAnalyticsRun(root, plan, data.updated_at, plan.raw_output_path);
@@ -352,6 +353,7 @@ export async function computeBusinessSignal({ workspace, plan }) {
     updated_at: observation.data.updated_at,
     title: 'Synthetic Business Signal',
     test_scope: { ...plan.test_scope },
+    execution_scope: 'synthetic_test',
     merchant_ref: plan.merchant_ref,
     cycle_ref: plan.cycle_ref,
     goal_ref: plan.goal_ref,
@@ -365,7 +367,7 @@ export async function computeBusinessSignal({ workspace, plan }) {
     signal_kind: rule.signal_kind,
     ...computed,
   };
-  await preflightSyntheticWrite({
+  await preflightTestKnowledgeWrite({
     workspace: root, data, body: '# Synthetic Business Signal\n', refClosure: false,
   });
   const result = await writeCanonical(
@@ -447,6 +449,8 @@ export async function materializeObservationEvidence({ workspace, plan }) {
     updated_at: observation.data.updated_at,
     title: 'Synthetic Analytics Evidence Candidate',
     test_scope: { ...plan.test_scope },
+    merchant_ref: observation.data.merchant_ref,
+    execution_scope: 'synthetic_test',
     source_refs: plan.source_refs,
     claim_refs: plan.claim_refs,
     locator: `fixture://${plan.evidence.id.toLowerCase()}`,
@@ -460,7 +464,7 @@ export async function materializeObservationEvidence({ workspace, plan }) {
     scope: 'Synthetic test-only Analytics Evidence candidate.',
     observation_versions: plan.observation_versions,
   };
-  await preflightSyntheticWrite({
+  await preflightTestKnowledgeWrite({
     workspace: root, data, body: '# Synthetic Analytics Evidence Candidate\n', refClosure: false,
   });
   const result = await writeCanonical(

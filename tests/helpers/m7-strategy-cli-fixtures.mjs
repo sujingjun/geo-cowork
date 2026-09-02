@@ -155,7 +155,7 @@ export async function createStrategyCliWorkspace() {
   const plan = {
     schema_version: 'm7-strategy-workflow-plan/1.0.0',
     workspace_scope: 'test_only',
-    merchant_ref: 'TMT-M6-TEST-001',
+    merchant_ref: 'MER-MYYSHOP-001',
     commands: ['assess', 'propose-dimensions', 'assemble-output', 'trace'],
     network_access: false,
     real_execution_authorized: false,

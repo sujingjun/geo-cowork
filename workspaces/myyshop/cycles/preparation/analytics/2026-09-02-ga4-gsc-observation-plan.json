@@ -1,0 +1,57 @@
+{
+  "schema_version": "real-analytics-observation-plan/1.0.0",
+  "merchant_ref": "MER-MYYSHOP-001",
+  "execution_scope": "authorized_real",
+  "authorization_ref": "workspace://cycles/preparation/decisions/2026-09-02-ga4-gsc-observation-authorized.md",
+  "raw_output_path": "runs/RUN-MYYSHOP-GA4-GSC-OBS-20260902/raw/analytics/result.json",
+  "sources": [
+    {
+      "id": "SRC-MYYSHOP-GA4-20260902",
+      "path": "evidence/sources/src-myyshop-ga4-20260902.md",
+      "kind": "ga4",
+      "name": "MyyShop GA4 Property 356373250 aggregate"
+    },
+    {
+      "id": "SRC-MYYSHOP-GSC-20260902",
+      "path": "evidence/sources/src-myyshop-gsc-20260902.md",
+      "kind": "gsc",
+      "name": "MyyShop GSC URL-prefix aggregate"
+    }
+  ],
+  "run": {
+    "id": "RUN-MYYSHOP-GA4-GSC-OBS-20260902",
+    "path": "runs/RUN-MYYSHOP-GA4-GSC-OBS-20260902/run.md"
+  },
+  "observations": [
+    {
+      "id": "ANO-MYYSHOP-GA4-20260902",
+      "path": "cycles/m6/analytics/ano-myyshop-ga4-20260902.md",
+      "kind": "ga4"
+    },
+    {
+      "id": "ANO-MYYSHOP-GSC-20260902",
+      "path": "cycles/m6/analytics/ano-myyshop-gsc-20260902.md",
+      "kind": "gsc"
+    }
+  ],
+  "signal": {
+    "id": "BSIG-MYYSHOP-GSC-20260902",
+    "path": "cycles/m6/analytics/bsig-myyshop-gsc-20260902.md"
+  },
+  "evidence": {
+    "id": "EVD-MYYSHOP-ANALYTICS-20260902",
+    "path": "evidence/records/evd-myyshop-analytics-20260902.md",
+    "status": "candidate"
+  },
+  "contracts": {
+    "measurement": {
+      "path": "execution/contracts/myyshop-analytics-measurement-v1.json"
+    },
+    "sensitive_data_policy": {
+      "path": "execution/contracts/myyshop-analytics-sensitive-policy-v1.json"
+    },
+    "signal_rule": {
+      "path": "execution/contracts/myyshop-search-visibility-signal-v1.json"
+    }
+  }
+}

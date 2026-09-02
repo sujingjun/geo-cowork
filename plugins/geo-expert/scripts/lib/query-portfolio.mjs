@@ -6,10 +6,10 @@ import {
   validateKnowledgeWorkspace,
 } from './knowledge-query.mjs';
 import {
-  assertNoSyntheticContamination,
-  preflightSyntheticWrite,
-  validateTestMerchantWorkspace,
-} from './m6-test-merchant.mjs';
+  assertNoTestKnowledgeContamination,
+  preflightTestKnowledgeWrite,
+  validateDevelopmentKnowledgeWorkspace,
+} from './workspace-scope.mjs';
 import { serializeMarkdownObject, validateObjectData } from './object-contract.mjs';
 import {
   assertNoSymlinkPath,
@@ -256,19 +256,20 @@ async function loadGraph(workspace) {
 
 async function portfolioWriteContext(workspace) {
   const identity = await readWorkspaceIdentity(workspace);
-  const testOnly = identity?.workspace_mode === 'test_only';
+  const testOnly = identity?.workspace_mode === 'development_test';
   let merchantId = null;
+  let knowledgeBaseId = null;
   if (testOnly) {
     const graph = await loadGraph(workspace);
-    const merchants = graph.objects.filter((object) => object.data.record_type === 'test_merchant');
-    if (merchants.length !== 1) {
-      fail('QP_TEST_MERCHANT_REQUIRED', '测试工作区必须恰好一个 test_merchant', {
-        count: merchants.length,
-      });
+    const merchant = graph.byId.get(identity.merchant_ref)?.data;
+    const knowledgeBase = graph.byId.get(identity.knowledge_base_ref)?.data;
+    if (merchant?.record_type !== 'merchant' || knowledgeBase?.record_type !== 'brand_knowledge_base') {
+      fail('QP_TEST_KNOWLEDGE_REQUIRED', 'development-test Workspace 缺少 Merchant/KBASE');
     }
-    merchantId = merchants[0].data.id;
+    merchantId = merchant.id;
+    knowledgeBaseId = knowledgeBase.id;
   }
-  return { identity, testOnly, merchantId };
+  return { identity, testOnly, merchantId, knowledgeBaseId };
 }
 
 function decorateOutput(context, output) {
@@ -279,6 +280,7 @@ function decorateOutput(context, output) {
       usage: 'test_only',
       merchant_ref: context.merchantId,
       workspace_id: context.identity.workspace_id,
+      knowledge_base_ref: context.knowledgeBaseId,
     };
   }
   const body = output.body ?? `# ${data.title ?? data.id}\n`;
@@ -309,7 +311,7 @@ async function writeDecoratedOutputs(workspace, context, decorated) {
       fail('OBJECT_CONFLICT', '目标已存在且内容不同', { path: output.path });
     }
     if (context.testOnly) {
-      await preflightSyntheticWrite({ workspace, data: output.data, body: output.body });
+      await preflightTestKnowledgeWrite({ workspace, data: output.data, body: output.body });
     } else {
       validateObjectData(output.data, { path: output.path });
     }
@@ -564,9 +566,9 @@ export async function reportQueryPortfolio({ workspace, goalRef, now }) {
   const path = `queries/portfolio/reports/${goalRef.toLowerCase()}-${key}.json`;
   const content = stableStringify(report, 2);
   const identity = await readWorkspaceIdentity(workspace);
-  if (identity?.workspace_mode === 'test_only') {
+  if (identity?.workspace_mode === 'development_test') {
     try {
-      assertNoSyntheticContamination(content);
+      assertNoTestKnowledgeContamination(content);
     } catch (error) {
       throw new QueryPortfolioError('SYNTHETIC_REAL_REF_CONTAMINATION', error.message, {
         fields: error.fields,
@@ -832,8 +834,8 @@ export async function validateQueryPortfolioWorkspace({ workspace }) {
   }
 
   const identity = await readWorkspaceIdentity(workspace);
-  if (identity?.workspace_mode === 'test_only') {
-    const testValidation = await validateTestMerchantWorkspace({ workspace });
+  if (identity?.workspace_mode === 'development_test') {
+    const testValidation = await validateDevelopmentKnowledgeWorkspace({ workspace });
     errors.push(...testValidation.errors);
   }
 

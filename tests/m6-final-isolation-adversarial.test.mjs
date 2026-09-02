@@ -21,7 +21,6 @@ import {
   createM6FrozenCycleWorkspace,
 } from './helpers/m6-cycle-fixtures.mjs';
 import {
-  M6_APPROVAL,
   M6_CYCLE_ID,
   M6_MERCHANT_ID,
   M6_NOW,
@@ -34,40 +33,17 @@ import {
   treeDigest,
 } from './helpers/m6-adversarial-fixtures.mjs';
 
-test('final QA P0: normal Workspace 必须拒绝 TMT/test_scope 反向污染', async () => {
+test('final QA P0: normal Workspace 必须拒绝 test-only KBASE scope 反向污染', async () => {
   const root = await mkdtemp(path.join(os.tmpdir(), 'geo-m6-final-qa-normal-root-'));
   try {
     const identity = await initWorkspace({ workspace: root, brand: 'Normal Workspace' });
-    const merchantId = 'TMT-M6-FINAL-QA-REVERSE-001';
     const testScope = {
       kind: 'synthetic',
       usage: 'test_only',
-      merchant_ref: merchantId,
+      merchant_ref: 'MER-MYYSHOP-001',
       workspace_id: identity.workspace_id,
+      knowledge_base_ref: 'KBASE-MYYSHOP-DEVTEST-001',
     };
-    await writeM6Object(root, 'cycles/preparation/injected-test-merchant.md', {
-      id: merchantId,
-      record_type: 'test_merchant',
-      status: 'frozen',
-      version: '1.0.0',
-      created_at: M6_NOW,
-      updated_at: M6_NOW,
-      title: 'Injected test merchant',
-      test_scope: testScope,
-      workspace_id: identity.workspace_id,
-      workspace_namespace: 'm6-final-qa-reverse',
-      display_name: 'Injected Test Merchant',
-      identity: {
-        legal_entity_kind: 'fictitious',
-        canonical_locator: 'https://m6-final-qa-reverse.invalid/',
-        real_brand_identity_claimed: false,
-      },
-      provenance: {
-        kind: 'synthetic', usage: 'test_only', decision_ref: M6_APPROVAL.decision_ref,
-      },
-      real_workspace_forbidden: ['workspaces/myyshop'],
-      approval: { ...M6_APPROVAL },
-    });
     await writeM6Object(root, 'queries/candidates/injected-test-query.md', {
       id: 'Q-M6-FINAL-QA-REVERSE-001',
       record_type: 'query',
@@ -81,9 +57,9 @@ test('final QA P0: normal Workspace 必须拒绝 TMT/test_scope 反向污染', a
       language: 'en-US',
     });
     const result = await validateWorkspace(root, { objects: true });
-    assert.equal(result.ok, false, '非 test-only 根不得容纳 TMT 或 test_scope 对象');
+    assert.equal(result.ok, false, '非 development-test 根不得容纳 test_scope 对象');
     assert.ok(result.object_errors.some((item) =>
-      item.code === 'SYNTHETIC_REAL_REF_CONTAMINATION'));
+      ['SYNTHETIC_REAL_REF_CONTAMINATION', 'BROKEN_REF'].includes(item.code)));
   } finally {
     await rm(root, { recursive: true, force: true });
   }
@@ -130,24 +106,24 @@ test('final QA P0: CIS 必须扫描 artifact bytes 中的真实 URL/ID 污染', 
   }
 });
 
-test('final QA P0: BAD merchant plan 必须在零写阶段失败，validate 不得漏报', async () => {
+test('final QA P0: BAD Merchant plan 必须在零写阶段失败，validate 不得漏报', async () => {
   const root = await mkdtemp(path.join(os.tmpdir(), 'geo-m6-final-qa-bad-merchant-'));
   const planRoot = await mkdtemp(path.join(os.tmpdir(), 'geo-m6-final-qa-plan-'));
   try {
     const plan = structuredClone((await readM6FixtureJson('plans/cycle-1-e2e.json')).prepare);
-    plan.merchant_id = 'BAD';
+    plan.merchant.id = 'BAD';
     const planPath = path.join(planRoot, 'bad-merchant.json');
     await writeFile(planPath, `${JSON.stringify(plan, null, 2)}\n`);
     const before = await treeDigest(root);
     const outcome = await capture(() => executeLifecycle({
-      command: 'prepare-test-merchant',
+      command: 'prepare-development-workspace',
       workspace: root,
       plan: planPath,
     }));
     const validation = await executeLifecycle({ command: 'validate', workspace: root });
-    assert.equal(outcome.ok, false, '非法 stable ID 必须在 identity/TMT/目录写入前失败');
+    assert.equal(outcome.ok, false, '非法 stable ID 必须在 identity/目录写入前失败');
     assert.ok(
-      ['INVALID_ARGUMENT', 'INVALID_FRONTMATTER', 'TEST_MERCHANT_IDENTITY_INVALID']
+      ['INVALID_ARGUMENT', 'INVALID_FRONTMATTER', 'WORKSPACE_SCOPE_INVALID']
         .includes(outcome.error?.code),
       `非法 merchant ID 错误码不明确: ${outcome.error?.code ?? 'success'}`,
     );

@@ -100,67 +100,6 @@ test('身份冲突：workspace.json 缺字段时拒绝修补', async () => {
   await rm(dir, { recursive: true });
 });
 
-test('test-only 初始化：一次性写入隔离身份并通过校验', async () => {
-  const dir = await tmpWorkspace();
-  const result = await initWorkspace({
-    workspace: dir,
-    brand: 'Synthetic Test Merchant',
-    testOnly: true,
-    testNamespace: 'm6-test-merchant-v1',
-    subjectLocator: 'https://m6-test-merchant.invalid/',
-  });
-  assert.equal(result.workspace_mode, 'test_only');
-  assert.equal(result.test_namespace, 'm6-test-merchant-v1');
-  const identity = JSON.parse(await readFile(path.join(dir, 'workspace.json'), 'utf8'));
-  assert.equal(identity.workspace_mode, 'test_only');
-  assert.equal(identity.test_namespace, 'm6-test-merchant-v1');
-  assert.equal(identity.legal_entity, false);
-  assert.equal(identity.subject_locator, 'https://m6-test-merchant.invalid/');
-  assert.equal((await validateWorkspace(dir)).ok, true);
-  await rm(dir, { recursive: true });
-});
-
-test('test-only 初始化：重复同身份幂等，禁止把既有 Workspace 改成另一测试身份', async () => {
-  const dir = await tmpWorkspace();
-  const options = {
-    workspace: dir,
-    brand: 'Synthetic Test Merchant',
-    testOnly: true,
-    testNamespace: 'm6-test-merchant-v1',
-    subjectLocator: 'https://m6-test-merchant.invalid/',
-  };
-  await initWorkspace(options);
-  const before = await readFile(path.join(dir, 'workspace.json'));
-  const repeated = await initWorkspace(options);
-  assert.ok(repeated.kept.includes('workspace.json'));
-  assert.deepEqual(await readFile(path.join(dir, 'workspace.json')), before);
-  await assert.rejects(
-    initWorkspace({ ...options, testNamespace: 'other-test-merchant' }),
-    (error) => error.code === 'IDENTITY_CONFLICT',
-  );
-  assert.deepEqual(await readFile(path.join(dir, 'workspace.json')), before);
-  await rm(dir, { recursive: true });
-});
-
-test('test-only 初始化：拒绝非 .invalid locator 与不完整参数', async () => {
-  const dir = await tmpWorkspace();
-  await assert.rejects(
-    initWorkspace({
-      workspace: dir,
-      brand: 'Synthetic Test Merchant',
-      testOnly: true,
-      testNamespace: 'm6-test-merchant-v1',
-      subjectLocator: 'https://www.myyshop.com/',
-    }),
-    /\.invalid/,
-  );
-  await assert.rejects(
-    run('node', [INIT, '--workspace', dir, '--test-only']),
-    (error) => error.code === 2,
-  );
-  await rm(dir, { recursive: true });
-});
-
 test('CLI：损坏的 workspace.json 退出码 3', async () => {
   const dir = await tmpWorkspace();
   await writeFile(path.join(dir, 'workspace.json'), '{ 不是合法 JSON');

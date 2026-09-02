@@ -8,8 +8,9 @@ updated_at: 2026-01-01T00:00:00Z
 test_scope:
   kind: synthetic
   usage: test_only
-  merchant_ref: TMT-EXAMPLE-001
+  merchant_ref: MER-EXAMPLE-001
   workspace_id: ws_example0000000000000000000
+  knowledge_base_ref: KBASE-EXAMPLE-DEVTEST-001
 cycle_ref: CYC-EXAMPLE-001
 goal_ref: GOAL-EXAMPLE-001
 operation_id: example-operation-001

@@ -138,6 +138,7 @@ async function assembleCliReview(root, bundle, current) {
       kind: 'synthetic', usage: 'test_only',
       merchant_ref: bundle.create_cycle.merchant_ref,
       workspace_id: bundle.prepare.workspace_id,
+      knowledge_base_ref: bundle.create_cycle.knowledge_base_ref,
     },
   };
   await runCli(LIFECYCLE, [
@@ -191,7 +192,7 @@ test('公开 CLI/API 跑通单 Goal synthetic Cycle 1，fresh process 决定 Rev
     const bundle = await readM6FixtureJson('plans/cycle-1-e2e.json');
     const preparePath = await writePlan(root, 'prepare', bundle.prepare);
     await runCli(LIFECYCLE, [
-      'prepare-test-merchant', '--workspace', root, '--plan', preparePath,
+      'prepare-development-workspace', '--workspace', root, '--plan', preparePath,
     ]);
     await seedM6FreezeInputs(root, { skipMerchant: true });
     const gateGraph = await materializeM6E2EGates(root, bundle);
@@ -232,6 +233,7 @@ test('公开 CLI/API 跑通单 Goal synthetic Cycle 1，fresh process 决定 Rev
       kind: 'synthetic', usage: 'test_only',
       merchant_ref: bundle.create_cycle.merchant_ref,
       workspace_id: bundle.prepare.workspace_id,
+      knowledge_base_ref: bundle.create_cycle.knowledge_base_ref,
     };
     const observationPath = await writePlan(root, 'analytics-observation', observationPlan);
     await runCli(ANALYTICS, [

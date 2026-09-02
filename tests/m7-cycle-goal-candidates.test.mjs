@@ -9,10 +9,10 @@ import {
 } from './helpers/m7-fixtures.mjs';
 
 const candidateContext = {
-  merchant_ref: 'TMT-M6-TEST-001',
+  merchant_ref: 'MER-MYYSHOP-001',
   test_scope: {
     kind: 'synthetic', usage: 'test_only',
-    merchant_ref: 'TMT-M6-TEST-001', workspace_id: 'ws_m6testmerchant000000000000',
+    merchant_ref: 'MER-MYYSHOP-001', workspace_id: 'ws_myyshopdevtest000000000000',
   },
   created_at: '2026-08-27T00:00:00Z',
   run_ref: 'RUN-M7-CANDIDATES-001',

@@ -16,10 +16,14 @@ const SETUP_WIZARD = path.join(
   'plugins/geo-expert/scripts/setup-google-analytics-readonly.sh',
 );
 const RUNBOOK = path.join(REPO_ROOT, 'docs/runbooks/ga4-gsc-readonly-analytics.md');
+const CURRENT_PLAN = path.join(
+  REPO_ROOT,
+  'workspaces/myyshop/cycles/preparation/analytics/2026-09-02-ga4-gsc-readonly-observation-read-plan.json',
+);
 
-test('真实只读 CLI 公开 doctor/dry-run/smoke 三个命令', async () => {
+test('真实只读 CLI 公开 doctor/dry-run/smoke/collect-observe', async () => {
   const { stdout } = await exec(process.execPath, [CLI, '--help'], { cwd: REPO_ROOT });
-  for (const command of ['doctor', 'dry-run', 'smoke']) {
+  for (const command of ['doctor', 'dry-run', 'smoke', 'collect-observe']) {
     assert.ok(stdout.includes(command), command);
   }
 });
@@ -41,10 +45,7 @@ test('dry-run 无凭据无网络地输出获授权请求摘要', async () => {
     CLI,
     'dry-run',
     '--workspace', path.join(REPO_ROOT, 'workspaces/myyshop'),
-    '--plan', path.join(
-      REPO_ROOT,
-      'workspaces/myyshop/cycles/preparation/analytics/2026-09-01-ga4-gsc-readonly-smoke-plan.json',
-    ),
+    '--plan', CURRENT_PLAN,
   ], {
     cwd: REPO_ROOT,
     env: {
@@ -57,7 +58,7 @@ test('dry-run 无凭据无网络地输出获授权请求摘要', async () => {
   assert.equal(result.mode, 'dry-run');
   assert.equal(result.network_accessed, false);
   assert.equal(result.credential_accessed, false);
-  assert.equal(result.run_id, 'RUN-MYYSHOP-GA4-GSC-SMOKE-20260901');
+  assert.equal(result.run_id, 'RUN-MYYSHOP-GA4-GSC-SMOKE-20260902');
   assert.equal(result.requests.ga4.url,
     'https://analyticsdata.googleapis.com/v1beta/properties/356373250:runReport');
   assert.equal(result.requests.gsc.url,
@@ -69,10 +70,7 @@ test('smoke 缺环境开关时在 ADC 与网络前失败', async () => {
     CLI,
     'smoke',
     '--workspace', path.join(REPO_ROOT, 'workspaces/myyshop'),
-    '--plan', path.join(
-      REPO_ROOT,
-      'workspaces/myyshop/cycles/preparation/analytics/2026-09-01-ga4-gsc-readonly-smoke-plan.json',
-    ),
+    '--plan', CURRENT_PLAN,
     '--output', path.join(REPO_ROOT, 'tmp/geo-analytics/test-result.json'),
     '--confirm-readonly',
   ], {
@@ -91,10 +89,7 @@ test('smoke 在 ADC 前拒绝 tmp/geo-analytics Run 目录外输出', async () =
     CLI,
     'smoke',
     '--workspace', path.join(REPO_ROOT, 'workspaces/myyshop'),
-    '--plan', path.join(
-      REPO_ROOT,
-      'workspaces/myyshop/cycles/preparation/analytics/2026-09-01-ga4-gsc-readonly-smoke-plan.json',
-    ),
+    '--plan', CURRENT_PLAN,
     '--output', '/tmp/geo-analytics-result.json',
     '--confirm-readonly',
   ], {
@@ -204,4 +199,49 @@ test('doctor 只报告本地 ADC 前置，不读取 credential 内容或网络',
     credential_content_read: false,
     network_accessed: false,
   });
+});
+
+test('collect-observe 单次执行连接只读采集与受控 materializer', async () => {
+  let materialized = null;
+  const result = await execute({
+    command: 'collect-observe',
+    workspace: path.join(REPO_ROOT, 'workspaces/myyshop'),
+    plan: CURRENT_PLAN,
+    'observation-plan': path.join(
+      REPO_ROOT,
+      'workspaces/myyshop/cycles/preparation/analytics/2026-09-02-ga4-gsc-observation-plan.json',
+    ),
+    confirmReadonly: true,
+  }, {
+    realReadEnabled: true,
+    now: new Date('2026-09-02T10:30:00Z'),
+    createRequester: async () => async (source) => source === 'ga4' ? {
+      dimensionHeaders: [{ name: 'date' }],
+      metricHeaders: [{ name: 'sessions' }, { name: 'activeUsers' }, { name: 'screenPageViews' }],
+      rows: [{
+        dimensionValues: [{ value: '20260823' }],
+        metricValues: [{ value: '1' }, { value: '1' }, { value: '1' }],
+      }],
+      rowCount: 1,
+      propertyQuota: {},
+    } : {
+      rows: [{ keys: ['2026-08-23'], clicks: 1, impressions: 10, ctr: 0.1, position: 2 }],
+      responseAggregationType: 'byProperty',
+    },
+    materializeResult: async (input) => {
+      materialized = input;
+      return {
+        action: 'created', run_ref: 'RUN-MYYSHOP-GA4-GSC-OBS-20260902',
+        observation_refs: ['ANO-MYYSHOP-GA4-20260902', 'ANO-MYYSHOP-GSC-20260902'],
+        business_signal_ref: 'BSIG-MYYSHOP-GSC-20260902',
+        evidence_ref: 'EVD-MYYSHOP-ANALYTICS-20260902', evidence_status: 'candidate',
+        causal_claim: false, auto_approved: false,
+      };
+    },
+  });
+  assert.equal(materialized.result.causal_claim, false);
+  assert.equal(materialized.plan.evidence.status, 'candidate');
+  assert.equal(result.network_accessed, true);
+  assert.equal(result.evidence_status, 'candidate');
+  assert.equal(result.auto_approved, false);
 });

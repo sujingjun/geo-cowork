@@ -1,0 +1,22 @@
+{
+  "objects": [
+    {
+      "id": "AST-M6-TEST-001",
+      "path": "assets/own/about.md",
+      "refs": [
+        "CLM-M6-TEST-001",
+        "GOAL-M6-TEST-001",
+        "KBASE-MYYSHOP-DEVTEST-001",
+        "KR-M6-TEST-001",
+        "MER-MYYSHOP-001",
+        "Q-M6-TEST-001",
+        "SRC-M6-TEST-001"
+      ],
+      "status": "active",
+      "updated_at": "2026-08-27T00:00:00Z",
+      "version": "1.0.0"
+    }
+  ],
+  "record_type": "asset",
+  "schema_version": "1.0.0"
+}

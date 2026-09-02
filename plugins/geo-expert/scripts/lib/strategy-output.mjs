@@ -1,7 +1,7 @@
 import { readFile } from 'node:fs/promises';
 
 import { serializeMarkdownObject } from './object-contract.mjs';
-import { preflightSyntheticWrite } from './m6-test-merchant.mjs';
+import { preflightTestKnowledgeWrite } from './workspace-scope.mjs';
 import {
   compareUtf8,
   resolveWithin,
@@ -79,7 +79,7 @@ export async function materializeStrategyOutput({ workspace, path, data, body, a
       bytes: Buffer.from(artifactContents.get(artifact.role)),
     })),
   ];
-  await preflightSyntheticWrite({
+  await preflightTestKnowledgeWrite({
     workspace,
     data,
     body,

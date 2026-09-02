@@ -1,11 +1,21 @@
 # geo-cowork 变更记录
 
+## 2026-09-02 - Knowledge-Independent GEO Lifecycle Readiness（本地未发布）
+
+- 将 M6/M7 的测试边界从虚构 `test_merchant` 重构为“唯一 MyyShop online Merchant + 隔离 development-test KBASE”；新增显式 `knowledge_base_ref`，删除旧 record type、CLI、模块、模板与专属 fixture 命名；
+- 新增 `workspaces/myyshop-development-test/`，复用 MyyShop 线上 locator、GA4 Property `356373250` 和 GSC URL-prefix 配置；test-only Claim/Evidence/批准不进入真实工作区，也不自动转正；
+- 新增只读 `geo-readiness report`，分开 engineering readiness 与 real Cycle start readiness；真实知识缺席固定 `content_gap_inferred:false` 且不创建 Cycle；
+- 新增 GA4/GSC `collect-observe` 与聚合业务文件 `ingest-business-file`：可形成真实 ANO、非因果 BSIG、candidate EVD，拒绝自动批准、PII、逐用户/逐请求数据；
+- 完成 Query Portfolio 对新 KBASE scope 的迁移和 NUL 文档字节修复；候选生成、去重、聚类、优先级、人工批准与冻结行为不变；
+- 新增 M8 Cross-host Conformance Tool：Codex/Claude packaging + shared Tool 和 WorkBuddy test-only semantic fixture 为 required；native/manual optional 保持 `not_executed`；
+- synthetic Cycle 1/2、人工选择、恢复、安全与跨宿主专项已重新通过；真实 GA4/GSC Observation 采集仍需当前 ADC 完成交互式重新登录后复跑；无 commit/push/PR/release/deploy。
+
 ## 2026-09-01 - Query Portfolio 流水线（本地未发布）
 
 - 新增 Query Portfolio 阶段：候选 intake（确定性归一化/意图/优先级规则 `qp-*-v1`）、同源重复失败、跨来源合并、既有 Query 幂等跳过、聚类与覆盖报告（create-only JSON 工件）、draft Query Set 组装与冻结前机器门；
 - 新增 `scripts/query-portfolio.mjs`（intake/report/assemble/prefreeze/validate）与 `skills/geo-query-portfolio`；不新增记录类型、不写任何 `approval`，candidate → formal 与 draft → frozen 只由人类编辑并补批准；
-- 双路径写入：`workspace_mode: test_only` 走 M6 `preflightSyntheticWrite` 全隔离，真实工作区走 M3 `validateObjectData` + create-only，同一命令无需改代码即可在两类工作区运行；
-- 知识库缺席验收：`tests/fixtures/query-portfolio` 合成测试商户（`.invalid` locator、`fixture://` 批准）零 Claim/Evidence/Document/Knowledge Release 完成全旅程；`workspaces/myyshop` 全程只读、字节不变；
+- 双路径写入已于 2026-09-02 迁移：`workspace_mode: development_test` 走 `preflightTestKnowledgeWrite`，真实工作区仍走 M3 `validateObjectData` + create-only；
+- 知识库缺席验收已迁移为 online Merchant + test-only KBASE；合成 Source 继续使用 `.invalid` locator，`workspaces/myyshop` 只读兼容保持；
 - 专项 21 tests（16 单元 + 3 E2E + 2 CLI）与全量 321 tests 通过；插件 Manifest 仍为 0.3.0，未 commit/push/PR/release/deploy。
 
 ## 2026-08-26 - M5 两槽英文 Baseline 第 1 槽（本地未发布）

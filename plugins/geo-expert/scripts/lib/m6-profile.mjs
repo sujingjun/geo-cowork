@@ -1,5 +1,4 @@
 const M6_NEW_TYPES = new Set([
-  'test_merchant',
   'cycle_input_snapshot',
   'cycle_transition',
   'analytics_observation',
@@ -43,20 +42,29 @@ function validateTestScope(object, errors) {
       || scope.kind !== 'synthetic'
       || scope.usage !== 'test_only'
       || typeof scope.merchant_ref !== 'string'
-      || typeof scope.workspace_id !== 'string') {
-    addError(errors, 'TEST_MERCHANT_SCOPE_REQUIRED', object, { field: 'test_scope' });
+      || typeof scope.workspace_id !== 'string'
+      || typeof scope.knowledge_base_ref !== 'string') {
+    addError(errors, 'TEST_KNOWLEDGE_SCOPE_REQUIRED', object, { field: 'test_scope' });
   }
 }
 
 function validateCycle(object, errors) {
   requireFields(errors, object, [
-    'test_scope', 'scope', 'merchant_ref', 'cycle_number', 'core_versions',
+    'scope', 'merchant_ref', 'knowledge_base_ref', 'execution_scope',
+    'cycle_number', 'core_versions',
     'aggregate_stage', 'completion_scope', 'goal_tracks',
   ]);
   if (!Array.isArray(object.data.transition_refs)) {
     addError(errors, 'M6_FIELD_REQUIRED', object, { field: 'transition_refs' });
   }
-  if (object.data.scope !== 'test_merchant_engineering') {
+  if (object.data.execution_scope === 'synthetic_test') {
+    validateTestScope(object, errors);
+  }
+  if (!['knowledge_independent_engineering', 'authorized_real'].includes(object.data.scope)
+      || (object.data.execution_scope === 'synthetic_test'
+        && object.data.scope !== 'knowledge_independent_engineering')
+      || (object.data.execution_scope === 'authorized_real'
+        && object.data.scope !== 'authorized_real')) {
     addError(errors, 'M6_FIELD_REQUIRED', object, { field: 'scope' });
   }
   if (!object.data.core_versions?.input_snapshot?.ref
@@ -67,15 +75,17 @@ function validateCycle(object, errors) {
 
 function validateEvidence(object, errors) {
   if (!('observation_versions' in object.data)) return;
-  requireFields(errors, object, ['test_scope', 'observation_versions']);
+  requireFields(errors, object, ['merchant_ref', 'execution_scope', 'observation_versions']);
+  if (object.data.execution_scope === 'synthetic_test') validateTestScope(object, errors);
 }
 
 function validateRun(object, errors) {
   if (!M6_RUN_SKILLS.has(object.data.skill)) return;
-  requireFields(errors, object, [
-    'test_scope', 'merchant_ref', 'cycle_ref', 'cycle_version',
-    'transition_plan_sha256', 'lease',
-  ]);
+  const real = object.data.execution_scope === 'authorized_real';
+  requireFields(errors, object, real
+    ? ['merchant_ref', 'execution_scope', 'transition_plan_sha256', 'lease']
+    : ['test_scope', 'merchant_ref', 'cycle_ref', 'cycle_version',
+      'transition_plan_sha256', 'lease']);
   const lease = object.data.lease;
   if (lease) {
     for (const field of [
@@ -88,18 +98,23 @@ function validateRun(object, errors) {
 
 export function isM6Object(data) {
   return M6_NEW_TYPES.has(data.record_type)
-    || data.record_type === 'cycle' && data.scope === 'test_merchant_engineering'
+    || data.record_type === 'cycle'
+      && ['knowledge_independent_engineering', 'authorized_real'].includes(data.scope)
     || data.record_type === 'evidence' && 'observation_versions' in data
     || data.record_type === 'run' && M6_RUN_SKILLS.has(data.skill);
 }
 
-export function validateM6Object(object, { testWorkspace = false } = {}) {
+export function validateM6Object(object, { testKnowledgeWorkspace = false } = {}) {
   const errors = [];
   const warnings = [];
   const data = object.data ?? {};
-  if (testWorkspace || isM6Object(data)) validateTestScope(object, errors);
+  const synthetic = data.execution_scope === 'synthetic_test' || Boolean(data.test_scope);
+  if ((testKnowledgeWorkspace && data.record_type !== 'merchant') || synthetic) {
+    validateTestScope(object, errors);
+  }
 
-  if (data.record_type === 'cycle' && data.scope === 'test_merchant_engineering') {
+  if (data.record_type === 'cycle'
+      && ['knowledge_independent_engineering', 'authorized_real'].includes(data.scope)) {
     validateCycle(object, errors);
   } else if (data.record_type === 'evidence') {
     validateEvidence(object, errors);
@@ -107,12 +122,8 @@ export function validateM6Object(object, { testWorkspace = false } = {}) {
     validateRun(object, errors);
   } else if (M6_NEW_TYPES.has(data.record_type)) {
     const requiredByType = {
-      test_merchant: [
-        'workspace_id', 'workspace_namespace', 'display_name', 'identity',
-        'provenance', 'real_workspace_forbidden',
-      ],
       cycle_input_snapshot: [
-        'merchant_ref', 'cycle_ref', 'snapshot_kind', 'manifest',
+        'merchant_ref', 'knowledge_base_ref', 'cycle_ref', 'execution_scope', 'snapshot_kind', 'manifest',
         'source_entries', 'artifact_entries', 'run_ref',
       ],
       cycle_transition: [
@@ -121,12 +132,12 @@ export function validateM6Object(object, { testWorkspace = false } = {}) {
         'from_stage', 'to_stage', 'required_gate_entry_keys', 'lease_revision', 'actor',
       ],
       analytics_observation: [
-        'merchant_ref', 'cycle_ref', 'goal_ref', 'run_ref', 'adapter',
+        'merchant_ref', 'run_ref', 'execution_scope', 'adapter',
         'measurement_contract', 'sensitive_data_policy', 'time_window', 'metrics',
         'artifacts', 'quality', 'causal_claim',
       ],
       business_signal: [
-        'merchant_ref', 'cycle_ref', 'goal_ref', 'run_ref', 'observation_versions',
+        'merchant_ref', 'run_ref', 'execution_scope', 'observation_versions',
         'measurement_contract', 'rule', 'signal_kind', 'denominator', 'calculation',
         'causal_claim',
       ],

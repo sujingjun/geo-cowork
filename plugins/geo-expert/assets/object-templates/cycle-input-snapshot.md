@@ -8,9 +8,12 @@ updated_at: 2026-01-01T00:00:00Z
 test_scope:
   kind: synthetic
   usage: test_only
-  merchant_ref: TMT-EXAMPLE-001
+  merchant_ref: MER-EXAMPLE-001
   workspace_id: ws_example0000000000000000000
-merchant_ref: TMT-EXAMPLE-001
+  knowledge_base_ref: KBASE-EXAMPLE-DEVTEST-001
+merchant_ref: MER-EXAMPLE-001
+knowledge_base_ref: KBASE-EXAMPLE-DEVTEST-001
+execution_scope: synthetic_test
 cycle_ref: CYC-EXAMPLE-001
 snapshot_kind: freeze
 manifest:

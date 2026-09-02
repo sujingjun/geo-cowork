@@ -320,7 +320,8 @@ export async function createM6ReviewReadyWorkspace({
   const graph = await loadWorkspaceGraph({ workspace: root });
   const cutoff = cutoffFromGraph(graph, cycle);
   const sourcePaths = [
-    'cycles/preparation/test-merchant.md',
+    'execution/identity/merchant.md',
+    'knowledge/meta/knowledge-base.md',
     'cycles/preparation/goal.md',
     bundle.analytics.observation.path,
     bundle.analytics.signal.path,

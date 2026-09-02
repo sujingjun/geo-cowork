@@ -13,11 +13,11 @@ import {
 } from './cycle-snapshot.mjs';
 import { prepareCycleTwoInputs } from './cycle-two.mjs';
 import {
-  assertNoSyntheticContamination,
-  assertTestWorkspaceWriteAllowed,
-  preflightSyntheticWrite,
-  validateTestMerchantWorkspace,
-} from './m6-test-merchant.mjs';
+  assertNoTestKnowledgeContamination,
+  assertDevelopmentWorkspaceWriteAllowed,
+  preflightTestKnowledgeWrite,
+  validateDevelopmentKnowledgeWorkspace,
+} from './workspace-scope.mjs';
 import { validateM6Object } from './m6-profile.mjs';
 import { collectObjectReferences } from './index-builder.mjs';
 import {
@@ -48,8 +48,8 @@ function sameReviewVersion(value, review, checksum) {
     && value?.file_sha256 === checksum;
 }
 async function validateWorkspace(root) {
-  await assertTestWorkspaceWriteAllowed({ workspace: root });
-  const result = await validateTestMerchantWorkspace({ workspace: root });
+  await assertDevelopmentWorkspaceWriteAllowed({ workspace: root });
+  const result = await validateDevelopmentKnowledgeWorkspace({ workspace: root });
   if (result.errors.length > 0) {
     throw makeFailure(result.errors[0].code, 'M7 Test Workspace 未就绪', {
       diagnostics: result.errors,
@@ -206,14 +206,15 @@ function validatePlannedObjects(plan, validation, existing) {
     ids.add(item.data.id);
     paths.add(item.path);
     const data = validateObjectData(item.data, { path: item.path });
-    const profile = validateM6Object({ data, path: item.path }, { testWorkspace: true });
+    const profile = validateM6Object({ data, path: item.path }, { testKnowledgeWorkspace: true });
     if (profile.errors.length > 0) {
       throw makeFailure(profile.errors[0].code, 'Cycle 2 source profile 非法', {
         diagnostics: profile.errors,
       });
     }
     if (data.test_scope?.merchant_ref !== validation.merchant.id
-        || data.test_scope?.workspace_id !== validation.identity.workspace_id) {
+        || data.test_scope?.workspace_id !== validation.identity.workspace_id
+        || data.test_scope?.knowledge_base_ref !== validation.knowledgeBase.id) {
       throw makeFailure('SYNTHETIC_REAL_REF_CONTAMINATION', 'Cycle 2 source scope 跨 Workspace');
     }
     const body = `# ${data.title}\n`;
@@ -261,7 +262,7 @@ async function materializationInputs(root, plan, validation, existing) {
         path: file.path,
       });
     }
-    assertNoSyntheticContamination(file.content);
+    assertNoTestKnowledgeContamination(file.content);
     raw.push({ path: file.path, bytes });
   }
   const rawByPath = new Map(raw.map((item) => [item.path, item.bytes]));
@@ -278,7 +279,7 @@ async function materializationInputs(root, plan, validation, existing) {
     }
   }
   for (const item of planned) {
-    await preflightSyntheticWrite({
+    await preflightTestKnowledgeWrite({
       workspace: root,
       data: item.data,
       body: item.body,
@@ -296,7 +297,7 @@ async function materializationInputs(root, plan, validation, existing) {
   const artifactBytes = new Map();
   for (const artifact of plan.artifact_paths) {
     const bytes = await readFile(resolveWithin(root, artifact.path));
-    assertNoSyntheticContamination(bytes.toString('utf8'));
+    assertNoTestKnowledgeContamination(bytes.toString('utf8'));
     artifactBytes.set(artifact.path, bytes);
   }
   return { planned, raw, sourceBytes, artifactBytes };
@@ -406,6 +407,7 @@ export async function applyGoalSelection({ workspace, plan }) {
     snapshotKind: 'freeze',
     snapshotPath: `cycles/m7/snapshots/${prepared.snapshot_id.toLowerCase()}.md`,
     merchantRef: prepared.merchant_ref,
+    knowledgeBaseRef: prepared.knowledge_base_ref,
     cycleRef: prepared.cycle_id,
     runRef: prepared.run_id,
     sourcePaths: prepared.freeze_input_plan.source_paths,
@@ -429,8 +431,10 @@ export async function applyGoalSelection({ workspace, plan }) {
     updated_at: createdAt,
     title: 'Synthetic GEO Cycle 2',
     test_scope: { ...selectedGoal.test_scope },
-    scope: 'test_merchant_engineering',
+    scope: 'knowledge_independent_engineering',
     merchant_ref: prepared.merchant_ref,
+    knowledge_base_ref: prepared.knowledge_base_ref,
+    execution_scope: 'synthetic_test',
     cycle_number: 2,
     core_versions: { input_snapshot: { ref: snapshot.snapshot.id, version: snapshot.snapshot.version } },
     aggregate_stage: 'frozen',
@@ -452,11 +456,11 @@ export async function applyGoalSelection({ workspace, plan }) {
   const cycleBytes = Buffer.from(serializeMarkdownObject(cycle, '# M6 synthetic cycle\n'));
   const runPath = `runs/${prepared.run_id}/run.md`;
   const runBytes = Buffer.from(serializeMarkdownObject(run, '# Synthetic Cycle 2 lifecycle Run\n'));
-  await preflightSyntheticWrite({
+  await preflightTestKnowledgeWrite({
     workspace: root, data: cycle, body: '# M6 synthetic cycle\n', manifest: prepared,
     refClosure: false,
   });
-  await preflightSyntheticWrite({
+  await preflightTestKnowledgeWrite({
     workspace: root, data: run, body: '# Synthetic Cycle 2 lifecycle Run\n', manifest: prepared,
     refClosure: false,
   });

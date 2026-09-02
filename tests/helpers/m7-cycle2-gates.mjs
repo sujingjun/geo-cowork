@@ -15,7 +15,7 @@ import {
 } from './m6-fixtures.mjs';
 
 const CORE_IDS = Object.freeze({
-  'TMT-M6-TEST-001': 'TMT-M6-TEST-001',
+  'MER-MYYSHOP-001': 'MER-MYYSHOP-001',
   'GOAL-M6-TEST-001': 'GOAL-M7-CYCLE-2-001',
   'Q-M6-TEST-001': 'Q-M7-CYCLE-2-001',
   'QS-M6-TEST-001': 'QS-M7-CYCLE-2-001',
@@ -58,7 +58,7 @@ async function copyFileWithDirs(source, target) {
 
 function refreshObject(data, allObjects) {
   if (data.record_type === 'evidence' && data.id === 'EVD-M7-C2-ASSET-001') {
-    data.locator = 'https://m6-test-merchant.invalid/cycle-2/pricing';
+    data.locator = 'https://dev-knowledge.invalid/cycle-2/pricing';
   }
   if (data.record_type === 'answer_sample') {
     data.slot_key = sampleSlotKey({

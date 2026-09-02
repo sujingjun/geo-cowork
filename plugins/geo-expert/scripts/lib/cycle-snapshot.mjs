@@ -5,11 +5,11 @@ import matter from 'gray-matter';
 
 import { serializeMarkdownObject } from './object-contract.mjs';
 import {
-  assertTestWorkspaceWriteAllowed,
-  assertNoSyntheticContamination,
-  preflightSyntheticWrite,
-  validateTestMerchantWorkspace,
-} from './m6-test-merchant.mjs';
+  assertNoTestKnowledgeContamination,
+  preflightLifecycleWrite,
+  readWorkspaceIdentity,
+  validateLifecycleWorkspace,
+} from './workspace-scope.mjs';
 import {
   assertNoSymlinkPath,
   resolveWithin,
@@ -61,6 +61,7 @@ export async function buildCycleSnapshotPlan({
   snapshotKind,
   snapshotPath,
   merchantRef,
+  knowledgeBaseRef,
   cycleRef,
   runRef,
   sourcePaths,
@@ -72,6 +73,8 @@ export async function buildCycleSnapshotPlan({
   preReviewEntryKeys = [],
 }) {
   const root = path.resolve(workspace);
+  const identity = await readWorkspaceIdentity(root);
+  const effectiveKnowledgeBaseRef = knowledgeBaseRef ?? identity.knowledge_base_ref;
   const base = `outputs/snapshots/${id.toLowerCase()}`;
   const sourceEntries = [];
   for (const objectPath of sourcePaths) {
@@ -115,6 +118,7 @@ export async function buildCycleSnapshotPlan({
       kind: snapshotKind,
     },
     merchant_ref: merchantRef,
+    knowledge_base_ref: effectiveKnowledgeBaseRef,
     cycle_ref: cycleRef,
     run_ref: runRef,
     source_entries: sourceEntries,
@@ -159,6 +163,7 @@ function validatePlanShape(plan) {
       || !plan.snapshot?.id
       || !['freeze', 'transition', 'review', 'strategy'].includes(plan.snapshot.kind)
       || !plan.merchant_ref
+      || !plan.knowledge_base_ref
       || !plan.cycle_ref
       || !plan.run_ref
       || !Array.isArray(plan.source_entries)
@@ -242,9 +247,9 @@ async function validateSourceEntry(workspace, entry, providedBytes = null) {
   return bytes;
 }
 
-async function validateArtifactEntry(workspace, entry, providedBytes = null) {
+async function validateArtifactEntry(workspace, entry, providedBytes = null, { testOnly = true } = {}) {
   const bytes = providedBytes ?? await readSafe(workspace, entry.source_path);
-  assertNoSyntheticContamination(bytes.toString('utf8'));
+  if (testOnly) assertNoTestKnowledgeContamination(bytes.toString('utf8'));
   if (sha256(bytes) !== entry.source_sha256
       || entry.snapshot_sha256 !== entry.source_sha256) {
     throw new CycleSnapshotError('CYCLE_INPUT_SNAPSHOT_CHECKSUM_MISMATCH', 'CIS artifact entry 与源 bytes 不一致', {
@@ -267,7 +272,8 @@ async function validateArtifactEntry(workspace, entry, providedBytes = null) {
   return bytes;
 }
 
-function cisData(plan, createdAt, workspaceId) {
+function cisData(plan, createdAt, identity) {
+  const testOnly = identity.workspace_mode === 'development_test';
   return {
     id: plan.snapshot.id,
     record_type: 'cycle_input_snapshot',
@@ -276,13 +282,13 @@ function cisData(plan, createdAt, workspaceId) {
     created_at: createdAt,
     updated_at: createdAt,
     title: `${plan.snapshot.kind} cycle input snapshot`,
-    test_scope: {
-      kind: 'synthetic',
-      usage: 'test_only',
-      merchant_ref: plan.merchant_ref,
-      workspace_id: workspaceId,
-    },
+    ...(testOnly ? { test_scope: {
+      kind: 'synthetic', usage: 'test_only', merchant_ref: plan.merchant_ref,
+      workspace_id: identity.workspace_id, knowledge_base_ref: plan.knowledge_base_ref,
+    } } : {}),
+    execution_scope: testOnly ? 'synthetic_test' : 'authorized_real',
     merchant_ref: plan.merchant_ref,
+    knowledge_base_ref: plan.knowledge_base_ref,
     cycle_ref: plan.cycle_ref,
     snapshot_kind: plan.snapshot.kind,
     manifest: {
@@ -322,16 +328,25 @@ async function snapshotTargets(workspace, plan, {
   sourceBytesByPath = null,
   artifactBytesByPath = null,
 } = {}) {
-  const identity = await assertTestWorkspaceWriteAllowed({ workspace });
-  const workspaceValidation = await validateTestMerchantWorkspace({ workspace });
+  const identity = await readWorkspaceIdentity(path.resolve(workspace));
+  const workspaceValidation = await validateLifecycleWorkspace({
+    workspace,
+    knowledgeBaseRef: plan.knowledge_base_ref,
+  });
   if (workspaceValidation.errors.length > 0) {
     throw new CycleSnapshotError(workspaceValidation.errors[0].code, 'CIS 写入前 Workspace 校验失败', {
       diagnostics: workspaceValidation.errors,
     });
   }
   const merchantEntry = plan.source_entries.find((entry) => entry.object_id === plan.merchant_ref);
+  const knowledgeBaseEntry = plan.source_entries.find(
+    (entry) => entry.object_id === plan.knowledge_base_ref,
+  );
   if (plan.snapshot.kind === 'freeze' && !merchantEntry) {
-    throw new CycleSnapshotError('CYCLE_INPUT_SNAPSHOT_INVALID', 'Freeze 输入缺 Test Merchant');
+    throw new CycleSnapshotError('CYCLE_INPUT_SNAPSHOT_INVALID', 'Freeze 输入缺 Merchant');
+  }
+  if (plan.snapshot.kind === 'freeze' && !knowledgeBaseEntry) {
+    throw new CycleSnapshotError('KNOWLEDGE_BASE_REQUIRED', 'Freeze 输入缺 Brand Knowledge Base');
   }
   const merchant = merchantEntry
     ? matter((await validateSourceEntry(
@@ -342,6 +357,9 @@ async function snapshotTargets(workspace, plan, {
     : workspaceValidation.merchant;
   if (!merchant || merchant.id !== plan.merchant_ref) {
     throw new CycleSnapshotError('CYCLE_INPUT_SNAPSHOT_INVALID', 'CIS merchant_ref 与 Workspace 不一致');
+  }
+  if (plan.knowledge_base_ref !== workspaceValidation.identity.knowledge_base_ref) {
+    throw new CycleSnapshotError('KNOWLEDGE_BASE_SCOPE_MISMATCH', 'CIS knowledge_base_ref 与 Workspace 不一致');
   }
   const targets = [];
   for (const entry of plan.source_entries) {
@@ -361,6 +379,7 @@ async function snapshotTargets(workspace, plan, {
       workspace,
       entry,
       artifactBytesByPath?.get(entry.source_path) ?? null,
+      { testOnly: identity.workspace_mode === 'development_test' },
     );
     targets.push({
       target: `runs/${plan.run_ref}/${entry.snapshot_path}`,
@@ -373,9 +392,9 @@ async function snapshotTargets(workspace, plan, {
     reportPath: plan.manifest.artifact_path,
     bytes: Buffer.from(plan.manifest.bytes),
   });
-  const data = cisData(plan, merchant.updated_at, identity.workspace_id);
+  const data = cisData(plan, merchant.updated_at, identity);
   const body = `# Cycle Input Snapshot ${plan.snapshot.id}\n`;
-  await preflightSyntheticWrite({
+  await preflightLifecycleWrite({
     workspace,
     data,
     body,
@@ -436,14 +455,13 @@ export async function materializeCycleFreeze({ workspace, plan }) {
     throw new CycleSnapshotError('CYCLE_INPUT_SNAPSHOT_INVALID', 'Freeze plan 缺少预分配 Cycle');
   }
   const root = path.resolve(workspace);
-  const cycleBytes = Buffer.from(serializeMarkdownObject(
-    plan.cycle.data,
-    `# M6 synthetic cycle\n`,
-  ));
-  await preflightSyntheticWrite({
+  const cycleBody = plan.cycle.data.execution_scope === 'authorized_real'
+    ? '# Authorized Real GEO Cycle\n' : '# M6 synthetic cycle\n';
+  const cycleBytes = Buffer.from(serializeMarkdownObject(plan.cycle.data, cycleBody));
+  await preflightLifecycleWrite({
     workspace: root,
     data: plan.cycle.data,
-    body: '# M6 synthetic cycle\n',
+    body: cycleBody,
     manifest: plan,
     refClosure: false,
   });

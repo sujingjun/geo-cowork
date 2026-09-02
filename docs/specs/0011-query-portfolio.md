@@ -2,13 +2,14 @@
 title: Spec 0011 — Query Portfolio Pipeline
 status: approved
 created: 2026-09-01
-updated: 2026-09-01
+updated: 2026-09-02
 source:
   - docs/prd/2026-09-01-query-portfolio.md
   - docs/architecture/2026-09-01-query-portfolio-architecture.md
   - docs/specs/0003-contract-provenance-kernel.md
   - docs/specs/0004-knowledge-query-operating-system.md
   - docs/specs/0007-cycle-analytics-test-merchant.md
+  - docs/specs/0012-knowledge-independent-lifecycle-readiness.md
   - 2026-09-01 当前用户明确指令：先实现 Query Portfolio 候选生成、去重、聚类、优先级、人工批准和 Query Set 冻结
 scope: Query Portfolio 从观察 intake 到 frozen Query Set 的确定性流水线合同；不新增 record type、不修改既有 Spec 0003/0004/0007 语义
 ---
@@ -17,7 +18,7 @@ scope: Query Portfolio 从观察 intake 到 frozen Query Set 的确定性流水�
 
 ## 1. 继承与触发范围
 
-继承 Spec 0003 的公共字段、stable ID、refs、version pin、checksum、create-only、安全与幂等规则；继承 Spec 0004 的 Query / Query Set / Perception Goal 状态机与人工批准合同（candidate → formal、draft → frozen 均由人类完成）；测试商户路径继承 Spec 0007 的 test-only 身份与 `preflightSyntheticWrite` 写入门。本 Spec 适用于 `query-portfolio.mjs`、`lib/query-portfolio.mjs`、`skills/geo-query-portfolio`、Query Portfolio fixture 与测试。
+继承 Spec 0003 的公共字段、stable ID、refs、version pin、checksum、create-only、安全与幂等规则；继承 Spec 0004 的 Query / Query Set / Perception Goal 状态机与人工批准合同（candidate → formal、draft → frozen 均由人类完成）；development-test 路径按 Spec 0012 使用唯一线上 Merchant、test-only KBASE 与 `preflightTestKnowledgeWrite` 写入门。本 Spec 适用于 `query-portfolio.mjs`、`lib/query-portfolio.mjs`、`skills/geo-query-portfolio`、Query Portfolio fixture 与测试。
 
 本 Spec 不新增 record type，不修改任何既有 Schema、lib 或 CLI；Query 继续使用 Spec 0003 的 `query` 对象与 `queries/candidates|formal` 目录，Query Set 继续使用 `query_set` 对象与 `queries/sets` 目录。
 
@@ -132,7 +133,7 @@ stdout 结果至少包含：`created`、`kept`、`duplicates`（`existing_ref`�
 
 ## 4. 双路写入与安全
 
-- 读取 workspace 根 `workspace.json`：`workspace_mode === 'test_only'` 时，每个输出对象先从唯一 `test_merchant` 生成顶层 `test_scope`，经 `preflightSyntheticWrite`（身份、双向污染、Schema、M6 profile、refs 闭包）后 `writeCreateOnly`；否则走 `validateObjectData + writeCreateOnly`（与 M3 相同路径）。`workspace.json` 缺失或无该字段按非测试路径处理。
+- 读取 workspace 根 `workspace.json`：`workspace_mode === 'development_test'` 时，每个输出对象从唯一 Merchant 与显式 KBASE 生成顶层 `test_scope`，经 `preflightTestKnowledgeWrite`（身份、知识库隔离、Schema、M6 profile、refs 闭包）后 `writeCreateOnly`；否则走 `validateObjectData + writeCreateOnly`（与 M3 相同路径）。`workspace.json` 缺失或无该字段按非测试路径处理。
 - 全部输出路径经 `assertSafeRelativePath`/`assertNoSymlinkPath`/`resolveWithin`；报告工件与对象均 create-only，冲突返回 `OBJECT_CONFLICT`。
 - 工具任何命令不生成、不修改、不删除 `approval`；不修改既有 Query/Query Set 状态；不写 Claim/Evidence/Document/Knowledge Release/Answer Card。
 
@@ -140,11 +141,11 @@ stdout 结果至少包含：`created`、`kept`、`duplicates`（`existing_ref`�
 
 沿用 Spec 0003 §7：目标不存在 `wx` 创建；存在且字节相同 `kept`；同 ID/path 不同内容 `OBJECT_CONFLICT`；可预见冲突全部在写入前预检。intake 对既有 Query 的重复观察不产生第二对象，也不修改既有对象。
 
-## 6. 测试商户 fixture 与知识库缺席验收
+## 6. development-test KBASE fixture 与知识库缺席验收
 
-- fixture workspace 具备 `test_only` 身份（唯一 `workspace.json` identity + 唯一 frozen `test_merchant`），locator 固定 `.invalid`，`test_namespace` 为 `query-portfolio-v1`；
+- fixture workspace 具备 MyyShop online Merchant identity 与唯一 frozen test-only KBASE；真实 locator/config 只属于 Merchant 配置，合成 Source locator 继续使用 `.invalid`；
 - 种子对象仅为 `source`（active）与 `perception_goal`（approved，fixture approval `fixture://…`）；**不包含任何 claim / evidence / document / knowledge_release / answer_card**；
-- 全部写入经 `preflightSyntheticWrite`，对象带 `test_scope`；
+- 全部写入经 `preflightTestKnowledgeWrite`，对象带 Merchant、Workspace、KBASE 三元绑定的 `test_scope`；
 - E2E：intake（含幂等重跑）→ report（含确定性重算）→ 人工批准模拟（fixture 编辑 formal + approval）→ assemble → prefreeze（正/负 gate）→ 人工冻结模拟 → validate 无 error → `build-index` 成功且 `queries.json`/`query-sets.json` 含新对象 → 断言工作区零知识对象。
 
 ## 7. 错误码

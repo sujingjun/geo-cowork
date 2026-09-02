@@ -14,7 +14,7 @@ import {
   writeCreateOnly,
 } from './lib/workspace-paths.mjs';
 
-const COMMANDS = new Set(['doctor', 'dry-run', 'smoke']);
+const COMMANDS = new Set(['doctor', 'dry-run', 'smoke', 'collect-observe']);
 const SCRIPT_FILE = fileURLToPath(import.meta.url);
 const REPO_ROOT = path.resolve(path.dirname(SCRIPT_FILE), '../../..');
 
@@ -26,7 +26,8 @@ function printHelp() {
   console.log(`geo-analytics-readonly commands:
   doctor --workspace <path> --plan <json>
   dry-run --workspace <path> --plan <json>
-  smoke --workspace <path> --plan <json> --output <path> --confirm-readonly`);
+  smoke --workspace <path> --plan <json> --output <path> --confirm-readonly
+  collect-observe --workspace <path> --plan <json> --observation-plan <json> --confirm-readonly`);
 }
 
 function parseArgs(argv) {
@@ -40,7 +41,7 @@ function parseArgs(argv) {
       args.confirmReadonly = true;
       continue;
     }
-    if (!['--workspace', '--plan', '--output'].includes(flag)) {
+    if (!['--workspace', '--plan', '--output', '--observation-plan'].includes(flag)) {
       throw invalid(`未知参数: ${flag}`);
     }
     const value = rest[++index];
@@ -49,6 +50,9 @@ function parseArgs(argv) {
   }
   if (!args.workspace || !args.plan) throw invalid('缺少 --workspace 或 --plan');
   if (command === 'smoke' && !args.output) throw invalid('smoke 缺少 --output');
+  if (command === 'collect-observe' && !args['observation-plan']) {
+    throw invalid('collect-observe 缺少 --observation-plan');
+  }
   return args;
 }
 
@@ -174,7 +178,7 @@ async function execute(args, dependencies = {}) {
       network_accessed: false,
     };
   }
-  if (args.command === 'smoke'
+  if (['smoke', 'collect-observe'].includes(args.command)
       && (!args.confirmReadonly
         || (dependencies.realReadEnabled ?? process.env.GEO_ANALYTICS_REAL_READ === '1') !== true)) {
     throw Object.assign(
@@ -182,7 +186,22 @@ async function execute(args, dependencies = {}) {
       { code: 'READONLY_NETWORK_CONFIRMATION_REQUIRED' },
     );
   }
-  if (args.command === 'smoke') {
+  if (args.command === 'smoke' || args.command === 'collect-observe') {
+    if (args.command === 'collect-observe') {
+      const createRequester = dependencies.createRequester ?? createGoogleRequester;
+      const request = await createRequester([...READONLY_SCOPES]);
+      const result = await collectReadonlySources({ plan, request, now });
+      const observationPlan = await readPlan(args['observation-plan']);
+      const materialize = dependencies.materializeResult
+        ?? (await import('./lib/real-analytics-materializer.mjs')).materializeRealAnalyticsBundle;
+      const bundle = await materialize({ workspace, readonlyPlan: plan, result, plan: observationPlan });
+      return {
+        mode: 'collect-observe',
+        ...bundle,
+        credential_accessed: true,
+        network_accessed: true,
+      };
+    }
     const output = path.resolve(args.output);
     const allowedRoot = path.join(REPO_ROOT, 'tmp', 'geo-analytics', plan.run_id);
     if (!output.startsWith(`${allowedRoot}${path.sep}`) || path.extname(output) !== '.json') {

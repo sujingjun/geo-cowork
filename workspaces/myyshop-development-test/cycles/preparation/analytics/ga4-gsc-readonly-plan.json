@@ -1,0 +1,10 @@
+{
+  "schema_version": "ga4-gsc-shared-online-configuration/1.0.0",
+  "merchant_ref": "MER-MYYSHOP-001",
+  "property_id": "356373250",
+  "site_url": "https://www.myyshop.com/",
+  "access_mode": "read_only",
+  "credentials_persisted": false,
+  "authorization_required_per_run": true,
+  "causal_claim": false
+}

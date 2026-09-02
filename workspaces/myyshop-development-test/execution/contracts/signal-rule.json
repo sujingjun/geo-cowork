@@ -1,0 +1,11 @@
+{
+  "schema_version": "m6-signal-rule/1.0.0",
+  "id": "signal-rule-m6-fixture-v1",
+  "version": "1.0.0",
+  "scope": "test_only",
+  "signal_kind": "ai_registration",
+  "numerator_metric_id": "ai_registrations",
+  "denominator_metric_id": "ai_visits",
+  "calculation": "numerator / denominator",
+  "causal_claim": false
+}

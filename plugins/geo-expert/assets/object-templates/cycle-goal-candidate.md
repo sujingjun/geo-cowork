@@ -9,9 +9,10 @@ title: 合成第二周期目标候选
 test_scope:
   kind: synthetic
   usage: test_only
-  merchant_ref: TMT-M6-TEST-001
-  workspace_id: ws_m6testmerchant000000000000
-merchant_ref: TMT-M6-TEST-001
+  merchant_ref: MER-MYYSHOP-001
+  workspace_id: ws_myyshopdevtest000000000000
+  knowledge_base_ref: KBASE-EXAMPLE-DEVTEST-001
+merchant_ref: MER-MYYSHOP-001
 candidate_batch_version:
   ref: GCB-09BDF23520694DFFE51C596E
   version: 1.0.0

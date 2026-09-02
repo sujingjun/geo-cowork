@@ -2,13 +2,14 @@
 title: Query Portfolio 流水线架构设计
 status: approved
 created: 2026-09-01
-updated: 2026-09-01
+updated: 2026-09-02
 source:
   - docs/prd/2026-09-01-query-portfolio.md
   - docs/specs/0003-contract-provenance-kernel.md
   - docs/specs/0004-knowledge-query-operating-system.md
   - docs/specs/0007-cycle-analytics-test-merchant.md
-scope: Query Portfolio 工具、确定性规则、双路写入与测试商户 fixture 的模块关系
+  - docs/specs/0012-knowledge-independent-lifecycle-readiness.md
+scope: Query Portfolio 工具、确定性规则、双路写入与 development-test KBASE fixture 的模块关系
 ---
 
 # Query Portfolio 流水线架构设计
@@ -36,9 +37,9 @@ scripts/query-portfolio.mjs            CLI：intake / report / assemble / prefre
 scripts/lib/query-portfolio.mjs          规则与流程（纯函数 + workspace I/O）
   ├─ 复用 object-contract / index-builder / workspace-paths（Spec 0003 内核）
   ├─ 复用 knowledge-query.mjs 的 querySetContentSha / validateKnowledgeWorkspace
-  └─ 测试商户路径复用 m6-test-merchant.mjs 的 preflightSyntheticWrite / validateTestMerchantWorkspace
+  └─ development-test 路径复用 workspace-scope.mjs 的 preflightTestKnowledgeWrite / validateDevelopmentKnowledgeWorkspace
 skills/geo-query-portfolio/SKILL.md      编排 Skill（人工门与 Run 记录约定）
-tests/helpers/query-portfolio-fixtures.mjs  知识库缺席的测试商户 fixture
+tests/helpers/query-portfolio-fixtures.mjs  知识库缺席的 test-only KBASE fixture
 ```
 
 不新增 record type、不修改 Schema、不修改 M3/M6 既有 lib。Query 与 Query Set 继续由 Spec 0003/0004 对象承载；聚类与覆盖是派生分析工件，不是业务对象。
@@ -49,10 +50,10 @@ tests/helpers/query-portfolio-fixtures.mjs  知识库缺席的测试商户 fixtu
 
 写入前读取 workspace 根 `workspace.json`：
 
-- `workspace_mode !== 'test_only'`（含真实工作区与无身份 fixture）：`validateObjectData` + `writeCreateOnly`，与 M3 `propose/assemble` 相同路径；
-- `workspace_mode === 'test_only'`：读取唯一 `test_merchant`，为输出对象生成顶层 `test_scope`，经 `preflightSyntheticWrite` 全量预检（身份、污染、Schema、M6 profile、refs 闭包）后 `writeCreateOnly`。
+- `workspace_mode !== 'development_test'`（含真实工作区与无身份 fixture）：`validateObjectData` + `writeCreateOnly`，与 M3 `propose/assemble` 相同路径；
+- `workspace_mode === 'development_test'`：读取唯一线上 Merchant 与 test-only KBASE，为输出对象生成顶层 `test_scope`，经 `preflightTestKnowledgeWrite` 全量预检（身份、知识库隔离、Schema、M6 profile、refs 闭包）后 `writeCreateOnly`。
 
-由此：真实知识切片到位后，同一命令在真实工作区运行无需改代码；测试商户写入保持 M6 fail-closed 隔离。
+由此：真实知识切片到位后，同一命令在真实工作区运行无需改代码；测试知识库写入保持 fail-closed 隔离。
 
 ### 3.2 确定性规则（版本化，跨宿主可复现）
 
@@ -81,7 +82,7 @@ candidate → formal 与 draft → frozen 沿用 Spec 0004：人类编辑对象 
 ## 5. 安全与隔离
 
 - 所有写入经 `assertSafeRelativePath` / `assertNoSymlinkPath` / `resolveWithin`；
-- 测试工作区写入走 `preflightSyntheticWrite`（真实 MyyShop 路径、真实 canonical ID、email、非 `.invalid` URL 全部拒绝）；
+- 测试工作区写入走 `preflightTestKnowledgeWrite`（真实 MyyShop 业务路径/对象、email 与非 `.invalid` 合成对象 URL 全部拒绝；Merchant 线上 locator 仅存在根身份）；
 - 真实 `workspaces/myyshop` 在本里程碑只读（验收命令均为只读检查 + `git status` 核对字节不变）。
 
 ## 6. 风险
@@ -91,4 +92,4 @@ candidate → formal 与 draft → frozen 沿用 Spec 0004：人类编辑对象 
 | 规则阈值（Jaccard 0.6、停用词表）业务上不最优 | 规则带版本，报告/工件显式记录；调整必须升版本，不做隐式改动 |
 | 生成 ID 与既有对象冲突 | 写前按 stable ID 查重，冲突 fail loud（QP_ID_COLLISION） |
 | 修改共享内核破坏 M2—M7 | 不改内核；全部新代码在新文件；全量回归验收 |
-| 测试商户 fixture 伪装真实批准 | fixture approval 一律 `fixture://`，对象带 `test_scope`，真实工作区字节不变由测试断言 |
+| 测试知识库 fixture 伪装真实批准 | fixture approval 一律 `fixture://`，对象带 KBASE-bound `test_scope`，真实工作区字节不变由测试断言 |
