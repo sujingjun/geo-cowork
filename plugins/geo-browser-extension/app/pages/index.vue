@@ -1,15 +1,17 @@
 <script setup lang="ts">
-import { isExtensionEnvironment } from '~/utils/extension-messaging'
-
-if (import.meta.client && isExtensionEnvironment()) {
-  await navigateTo('/popup/analysis', { replace: true })
-}
-
 const input = ref('')
 const loading = ref(false)
 const chatId = crypto.randomUUID()
 
 const { user } = useUserSession()
+
+// 检查店铺授权状态
+const { hasAuthorizedStore, fetchStores } = useStores()
+
+// 组件加载时检查授权状态
+onMounted(async () => {
+  await fetchStores()
+})
 
 const greeting = computed(() => {
   const hour = new Date().getHours()
@@ -36,6 +38,19 @@ const {
 const { csrf, headerName } = useCsrf()
 
 async function createChat(prompt: string) {
+  // 检查是否需要店铺授权
+  if (checkStoreAuthRequired(prompt) && !hasAuthorizedStore.value) {
+    toast.add({
+      title: '需要授权店铺',
+      description: '请先连接您的 Amazon 或 Shopify 店铺再生成站点',
+      color: 'warning',
+      icon: 'i-heroicons-exclamation-triangle'
+    })
+    // 跳转到店铺管理页，那里会显示授权提示
+    navigateTo('/stores')
+    return
+  }
+
   input.value = prompt
   loading.value = true
 
@@ -68,34 +83,42 @@ async function onSubmit() {
 
 const quickChats = [
   {
-    label: 'Why use Nuxt UI?',
-    icon: 'i-logos-nuxt-icon'
+    label: '生成一个母婴产品推荐站点',
+    icon: 'i-lucide-baby'
   },
   {
-    label: 'Help me create a Vue composable',
-    icon: 'i-logos-vue'
+    label: '创建家居装饰商品展示页',
+    icon: 'i-lucide-home'
   },
   {
-    label: 'Tell me more about UnJS',
-    icon: 'i-logos-unjs'
+    label: '生成户外运动装备站点',
+    icon: 'i-lucide-bike'
   },
   {
-    label: 'Why should I consider VueUse?',
-    icon: 'i-logos-vueuse'
+    label: '创建电子产品评测站点',
+    icon: 'i-lucide-smartphone'
   },
   {
-    label: 'Tailwind CSS best practices',
-    icon: 'i-logos-tailwindcss-icon'
+    label: '查看我的店铺数据',
+    icon: 'i-lucide-store'
   },
   {
-    label: 'What is the weather in Bordeaux?',
-    icon: 'i-lucide-sun'
+    label: '优化站点GEO设置',
+    icon: 'i-lucide-search'
   },
   {
-    label: 'Show me a chart of sales data',
-    icon: 'i-lucide-line-chart'
+    label: '如何提高站点转化率？',
+    icon: 'i-lucide-trending-up'
   }
 ]
+
+const toast = useToast()
+
+// 检查是否需要店铺授权
+function checkStoreAuthRequired(prompt: string): boolean {
+  const keywords = ['生成', '创建', '站点', '商品', 'site', 'generate', 'create', 'product']
+  return keywords.some(keyword => prompt.toLowerCase().includes(keyword))
+}
 </script>
 
 <template>

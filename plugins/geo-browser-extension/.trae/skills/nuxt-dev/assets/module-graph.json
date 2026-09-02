@@ -1,0 +1,592 @@
+{
+  "modules": [
+    {
+      "id": "m001",
+      "name": "HomePage",
+      "path": "app/pages/index.vue",
+      "type": "page",
+      "domain": "ui",
+      "scenarioTags": ["new-user-first-visit", "create-chat"],
+      "entrypoints": ["ui-home"],
+      "dependencies": ["m011", "m012", "m013", "m031", "m032"],
+      "exports": [],
+      "configs": [],
+      "permissions": ["public"],
+      "relatedDocs": ["references/business-scenarios.md#scenario-1", "references/entrypoints.md#home-page"]
+    },
+    {
+      "id": "m002",
+      "name": "ChatDetailPage",
+      "path": "app/pages/chat/[id].vue",
+      "type": "page",
+      "domain": "ui",
+      "scenarioTags": ["chat-conversation", "file-upload", "model-switch", "tool-call"],
+      "entrypoints": ["ui-chat-detail"],
+      "dependencies": ["m011", "m012", "m013", "m021", "m022", "m023", "m031", "m032"],
+      "exports": [],
+      "configs": [],
+      "permissions": ["public-or-owner"],
+      "relatedDocs": ["references/business-scenarios.md#scenario-2", "references/entrypoints.md#chat-detail-page"]
+    },
+    {
+      "id": "m003",
+      "name": "DefaultLayout",
+      "path": "app/layouts/default.vue",
+      "type": "layout",
+      "domain": "ui",
+      "scenarioTags": ["all"],
+      "entrypoints": [],
+      "dependencies": ["m021", "m022"],
+      "exports": [],
+      "configs": [],
+      "permissions": ["public"],
+      "relatedDocs": []
+    },
+    {
+      "id": "m011",
+      "name": "useChatActions",
+      "path": "app/composables/useChatActions.ts",
+      "type": "composable",
+      "domain": "business-logic",
+      "scenarioTags": ["create-chat", "delete-chat", "rename-chat", "toggle-visibility"],
+      "entrypoints": [],
+      "dependencies": ["m051", "m052", "m053", "m054", "m055", "m056"],
+      "exports": ["createChat", "deleteChat", "renameChat", "toggleVisibility"],
+      "configs": [],
+      "permissions": ["varies-by-action"],
+      "relatedDocs": ["references/api-reference.md#usechatactions", "references/patterns.md#composable-pattern"]
+    },
+    {
+      "id": "m012",
+      "name": "useChats",
+      "path": "app/composables/useChats.ts",
+      "type": "composable",
+      "domain": "business-logic",
+      "scenarioTags": ["load-chat-list"],
+      "entrypoints": [],
+      "dependencies": ["m051"],
+      "exports": ["chats", "refresh", "pending"],
+      "configs": [],
+      "permissions": ["authenticated"],
+      "relatedDocs": ["references/api-reference.md#usechats"]
+    },
+    {
+      "id": "m013",
+      "name": "useFileUpload",
+      "path": "app/composables/useFileUpload.ts",
+      "type": "composable",
+      "domain": "business-logic",
+      "scenarioTags": ["file-upload"],
+      "entrypoints": [],
+      "dependencies": ["m061", "m062"],
+      "exports": ["dropzoneRef", "dragging", "files", "uploadedFiles", "uploading", "open", "removeFile", "clearFiles"],
+      "configs": ["BLOB_READ_WRITE_TOKEN"],
+      "permissions": ["authenticated"],
+      "relatedDocs": ["references/api-reference.md#usefileupload", "references/business-scenarios.md#scenario-3"]
+    },
+    {
+      "id": "m014",
+      "name": "useModels",
+      "path": "app/composables/useModels.ts",
+      "type": "composable",
+      "domain": "business-logic",
+      "scenarioTags": ["model-switch"],
+      "entrypoints": [],
+      "dependencies": [],
+      "exports": ["models", "selectedModel", "selectModel"],
+      "configs": [],
+      "permissions": ["public"],
+      "relatedDocs": ["references/api-reference.md#usemodels", "references/business-scenarios.md#scenario-4"]
+    },
+    {
+      "id": "m021",
+      "name": "Navbar",
+      "path": "app/components/Navbar.vue",
+      "type": "component",
+      "domain": "ui",
+      "scenarioTags": ["all"],
+      "entrypoints": [],
+      "dependencies": ["m022", "m023"],
+      "exports": [],
+      "configs": [],
+      "permissions": ["public"],
+      "relatedDocs": []
+    },
+    {
+      "id": "m022",
+      "name": "UserMenu",
+      "path": "app/components/UserMenu.vue",
+      "type": "component",
+      "domain": "ui",
+      "scenarioTags": ["login", "logout"],
+      "entrypoints": ["ui-login-button", "ui-logout-action"],
+      "dependencies": ["m071"],
+      "exports": [],
+      "configs": ["NUXT_OAUTH_GITHUB_CLIENT_ID", "NUXT_OAUTH_GITHUB_CLIENT_SECRET"],
+      "permissions": ["public"],
+      "relatedDocs": ["references/entrypoints.md#login-button", "references/business-scenarios.md#scenario-3"]
+    },
+    {
+      "id": "m023",
+      "name": "ModelSelect",
+      "path": "app/components/ModelSelect.vue",
+      "type": "component",
+      "domain": "ui",
+      "scenarioTags": ["model-switch"],
+      "entrypoints": ["ui-model-selector"],
+      "dependencies": ["m014"],
+      "exports": [],
+      "configs": ["AI_GATEWAY_API_KEY"],
+      "permissions": ["public"],
+      "relatedDocs": ["references/entrypoints.md#model-selector", "references/business-scenarios.md#scenario-5"]
+    },
+    {
+      "id": "m024",
+      "name": "ChatTitle",
+      "path": "app/components/chat/ChatTitle.vue",
+      "type": "component",
+      "domain": "ui",
+      "scenarioTags": ["rename-chat"],
+      "entrypoints": [],
+      "dependencies": ["m011"],
+      "exports": [],
+      "configs": [],
+      "permissions": ["owner"],
+      "relatedDocs": ["references/api-reference.md#chattitle"]
+    },
+    {
+      "id": "m025",
+      "name": "FileUploadButton",
+      "path": "app/components/chat/FileUploadButton.vue",
+      "type": "component",
+      "domain": "ui",
+      "scenarioTags": ["file-upload"],
+      "entrypoints": ["ui-file-upload-button"],
+      "dependencies": ["m013"],
+      "exports": [],
+      "configs": [],
+      "permissions": ["authenticated"],
+      "relatedDocs": ["references/entrypoints.md#file-upload"]
+    },
+    {
+      "id": "m026",
+      "name": "ToolComponents",
+      "path": "app/components/chat/tool/*.vue",
+      "type": "component",
+      "domain": "ui",
+      "scenarioTags": ["tool-call"],
+      "entrypoints": [],
+      "dependencies": [],
+      "exports": [],
+      "configs": [],
+      "permissions": ["public"],
+      "relatedDocs": ["references/api-reference.md#tool-components", "references/business-scenarios.md#scenario-6"]
+    },
+    {
+      "id": "m031",
+      "name": "AI Utils",
+      "path": "app/utils/ai.ts",
+      "type": "utility",
+      "domain": "business-logic",
+      "scenarioTags": ["all-chat"],
+      "entrypoints": [],
+      "dependencies": [],
+      "exports": ["getMergedParts"],
+      "configs": [],
+      "permissions": [],
+      "relatedDocs": ["references/api-reference.md#getmergedparts"]
+    },
+    {
+      "id": "m032",
+      "name": "Tool Utils",
+      "path": "app/utils/tool.ts",
+      "type": "utility",
+      "domain": "business-logic",
+      "scenarioTags": ["tool-call"],
+      "entrypoints": [],
+      "dependencies": [],
+      "exports": [],
+      "configs": [],
+      "permissions": [],
+      "relatedDocs": []
+    },
+    {
+      "id": "m051",
+      "name": "GET /api/chats",
+      "path": "server/api/chats.get.ts",
+      "type": "api-route",
+      "domain": "backend",
+      "scenarioTags": ["load-chat-list"],
+      "entrypoints": ["api-get-chats"],
+      "dependencies": ["m091", "m092"],
+      "exports": [],
+      "dataStores": ["chats-table"],
+      "configs": ["TURSO_DATABASE_URL", "TURSO_AUTH_TOKEN"],
+      "permissions": ["authenticated"],
+      "relatedDocs": ["references/api-reference.md#get-apichats", "references/entrypoints.md#get-apichats"]
+    },
+    {
+      "id": "m052",
+      "name": "POST /api/chats",
+      "path": "server/api/chats.post.ts",
+      "type": "api-route",
+      "domain": "backend",
+      "scenarioTags": ["create-chat"],
+      "entrypoints": ["api-post-chats"],
+      "dependencies": ["m091", "m092", "m101"],
+      "exports": [],
+      "dataStores": ["chats-table", "messages-table"],
+      "configs": ["AI_GATEWAY_API_KEY", "NUXT_SESSION_PASSWORD"],
+      "permissions": ["public-optional-auth"],
+      "relatedDocs": ["references/api-reference.md#post-apichats", "references/entrypoints.md#post-apichats", "references/business-scenarios.md#scenario-1"]
+    },
+    {
+      "id": "m053",
+      "name": "GET /api/chats/[id]",
+      "path": "server/api/chats/[id].get.ts",
+      "type": "api-route",
+      "domain": "backend",
+      "scenarioTags": ["view-chat"],
+      "entrypoints": ["api-get-chat-by-id"],
+      "dependencies": ["m091", "m092"],
+      "exports": [],
+      "dataStores": ["chats-table", "messages-table"],
+      "configs": [],
+      "permissions": ["public-or-owner"],
+      "relatedDocs": ["references/api-reference.md#get-apichatsid", "references/entrypoints.md#get-apichatsid"]
+    },
+    {
+      "id": "m054",
+      "name": "POST /api/chats/[id]",
+      "path": "server/api/chats/[id].post.ts",
+      "type": "api-route",
+      "domain": "backend",
+      "scenarioTags": ["send-message", "ai-response", "tool-call"],
+      "entrypoints": ["api-post-chat-message"],
+      "dependencies": ["m091", "m092", "m101"],
+      "exports": [],
+      "dataStores": ["messages-table"],
+      "configs": ["AI_GATEWAY_API_KEY"],
+      "permissions": ["public-optional-auth"],
+      "relatedDocs": ["references/api-reference.md#post-apichatsid", "references/entrypoints.md#post-apichatsid", "references/business-scenarios.md#scenario-2"]
+    },
+    {
+      "id": "m055",
+      "name": "DELETE /api/chats/[id]",
+      "path": "server/api/chats/[id].delete.ts",
+      "type": "api-route",
+      "domain": "backend",
+      "scenarioTags": ["delete-chat"],
+      "entrypoints": ["api-delete-chat"],
+      "dependencies": ["m091", "m092"],
+      "exports": [],
+      "dataStores": ["chats-table", "messages-table", "votes-table"],
+      "configs": [],
+      "permissions": ["owner"],
+      "relatedDocs": ["references/api-reference.md#delete-apichatsid", "references/entrypoints.md#delete-apichatsid", "references/business-scenarios.md#scenario-6"]
+    },
+    {
+      "id": "m056",
+      "name": "PATCH /api/chats/[id]/title",
+      "path": "server/api/chats/[id]/title.patch.ts",
+      "type": "api-route",
+      "domain": "backend",
+      "scenarioTags": ["rename-chat"],
+      "entrypoints": ["api-patch-chat-title"],
+      "dependencies": ["m091", "m092"],
+      "exports": [],
+      "dataStores": ["chats-table"],
+      "configs": [],
+      "permissions": ["owner"],
+      "relatedDocs": ["references/api-reference.md#patch-apichatidtitle", "references/entrypoints.md#patch-apichatidtitle"]
+    },
+    {
+      "id": "m057",
+      "name": "PATCH /api/chats/[id]/visibility",
+      "path": "server/api/chats/[id]/visibility.patch.ts",
+      "type": "api-route",
+      "domain": "backend",
+      "scenarioTags": ["toggle-visibility", "share-chat"],
+      "entrypoints": ["api-patch-chat-visibility"],
+      "dependencies": ["m091", "m092"],
+      "exports": [],
+      "dataStores": ["chats-table"],
+      "configs": [],
+      "permissions": ["owner"],
+      "relatedDocs": ["references/api-reference.md#patch-apichatidvisibility", "references/entrypoints.md#patch-apichatidvisibility", "references/business-scenarios.md#scenario-7"]
+    },
+    {
+      "id": "m061",
+      "name": "PUT /api/upload/[chatId]",
+      "path": "server/api/upload/[chatId].put.ts",
+      "type": "api-route",
+      "domain": "backend",
+      "scenarioTags": ["file-upload"],
+      "entrypoints": ["api-put-upload-file"],
+      "dependencies": ["m092", "m102"],
+      "exports": [],
+      "dataStores": ["blob-storage"],
+      "configs": ["BLOB_READ_WRITE_TOKEN"],
+      "permissions": ["authenticated"],
+      "relatedDocs": ["references/api-reference.md#put-apiuploadchatid", "references/entrypoints.md#put-apiuploadchatid", "references/business-scenarios.md#scenario-4"]
+    },
+    {
+      "id": "m062",
+      "name": "DELETE /api/upload/[...pathname]",
+      "path": "server/api/upload/[...pathname].delete.ts",
+      "type": "api-route",
+      "domain": "backend",
+      "scenarioTags": ["file-delete"],
+      "entrypoints": ["api-delete-upload-file"],
+      "dependencies": ["m092", "m102"],
+      "exports": [],
+      "dataStores": ["blob-storage"],
+      "configs": [],
+      "permissions": ["authenticated"],
+      "relatedDocs": ["references/api-reference.md#delete-apiuploadpathname", "references/entrypoints.md#delete-apiuploadpathname"]
+    },
+    {
+      "id": "m071",
+      "name": "GET /auth/github",
+      "path": "server/routes/auth/github.get.ts",
+      "type": "auth-route",
+      "domain": "backend",
+      "scenarioTags": ["login"],
+      "entrypoints": ["auth-github-callback"],
+      "dependencies": ["m091", "m092", "m103"],
+      "exports": [],
+      "dataStores": ["users-table"],
+      "configs": ["NUXT_OAUTH_GITHUB_CLIENT_ID", "NUXT_OAUTH_GITHUB_CLIENT_SECRET", "NUXT_SESSION_PASSWORD"],
+      "permissions": ["public"],
+      "relatedDocs": ["references/api-reference.md#get-authgithub", "references/entrypoints.md#github-oauth-callback", "references/business-scenarios.md#scenario-3"]
+    },
+    {
+      "id": "m091",
+      "name": "Database Schema",
+      "path": "server/db/schema.ts",
+      "type": "database",
+      "domain": "data",
+      "scenarioTags": ["all"],
+      "entrypoints": [],
+      "dependencies": [],
+      "exports": ["users", "chats", "messages", "votes"],
+      "dataStores": ["users-table", "chats-table", "messages-table", "votes-table"],
+      "configs": ["TURSO_DATABASE_URL", "TURSO_AUTH_TOKEN"],
+      "permissions": [],
+      "relatedDocs": ["references/api-reference.md#database-schema-apis", "references/change-impact.md#database-schema-changes"]
+    },
+    {
+      "id": "m092",
+      "name": "Database Migrations",
+      "path": "server/db/migrations/",
+      "type": "database",
+      "domain": "data",
+      "scenarioTags": [],
+      "entrypoints": ["cli-db-migrate"],
+      "dependencies": ["m091"],
+      "exports": [],
+      "dataStores": ["all-tables"],
+      "configs": [],
+      "permissions": [],
+      "relatedDocs": ["references/entrypoints.md#database-migrations", "references/change-impact.md#database-schema-changes"]
+    },
+    {
+      "id": "m101",
+      "name": "Vercel AI Gateway",
+      "path": "external",
+      "type": "integration",
+      "domain": "external",
+      "scenarioTags": ["ai-response", "tool-call"],
+      "entrypoints": [],
+      "dependencies": [],
+      "exports": [],
+      "dataStores": [],
+      "configs": ["AI_GATEWAY_API_KEY"],
+      "permissions": [],
+      "relatedDocs": ["references/integrations.md#vercel-ai-gateway"]
+    },
+    {
+      "id": "m102",
+      "name": "NuxtHub Blob Storage",
+      "path": "external",
+      "type": "integration",
+      "domain": "external",
+      "scenarioTags": ["file-upload", "file-storage"],
+      "entrypoints": [],
+      "dependencies": [],
+      "exports": [],
+      "dataStores": ["blob-storage"],
+      "configs": ["BLOB_READ_WRITE_TOKEN"],
+      "permissions": [],
+      "relatedDocs": ["references/integrations.md#nuxthub-blob-storage"]
+    },
+    {
+      "id": "m103",
+      "name": "GitHub OAuth",
+      "path": "external",
+      "type": "integration",
+      "domain": "external",
+      "scenarioTags": ["login"],
+      "entrypoints": [],
+      "dependencies": [],
+      "exports": [],
+      "dataStores": [],
+      "configs": ["NUXT_OAUTH_GITHUB_CLIENT_ID", "NUXT_OAUTH_GITHUB_CLIENT_SECRET"],
+      "permissions": [],
+      "relatedDocs": ["references/integrations.md#github-oauth"]
+    }
+  ],
+  "edges": [
+    {
+      "from": "m001",
+      "to": "m011",
+      "type": "call",
+      "description": "HomePage uses useChatActions to create chats"
+    },
+    {
+      "from": "m001",
+      "to": "m013",
+      "type": "call",
+      "description": "HomePage uses useFileUpload for file uploads"
+    },
+    {
+      "from": "m002",
+      "to": "m011",
+      "type": "call",
+      "description": "ChatDetailPage uses useChatActions for chat operations"
+    },
+    {
+      "from": "m002",
+      "to": "m012",
+      "type": "call",
+      "description": "ChatDetailPage uses useChats to load chat data"
+    },
+    {
+      "from": "m002",
+      "to": "m013",
+      "type": "call",
+      "description": "ChatDetailPage uses useFileUpload for file uploads"
+    },
+    {
+      "from": "m011",
+      "to": "m052",
+      "type": "call",
+      "description": "useChatActions calls POST /api/chats"
+    },
+    {
+      "from": "m011",
+      "to": "m055",
+      "type": "call",
+      "description": "useChatActions calls DELETE /api/chats/[id]"
+    },
+    {
+      "from": "m011",
+      "to": "m056",
+      "type": "call",
+      "description": "useChatActions calls PATCH /api/chats/[id]/title"
+    },
+    {
+      "from": "m011",
+      "to": "m057",
+      "type": "call",
+      "description": "useChatActions calls PATCH /api/chats/[id]/visibility"
+    },
+    {
+      "from": "m012",
+      "to": "m051",
+      "type": "call",
+      "description": "useChats calls GET /api/chats"
+    },
+    {
+      "from": "m013",
+      "to": "m061",
+      "type": "call",
+      "description": "useFileUpload calls PUT /api/upload/[chatId]"
+    },
+    {
+      "from": "m013",
+      "to": "m062",
+      "type": "call",
+      "description": "useFileUpload calls DELETE /api/upload/[...pathname]"
+    },
+    {
+      "from": "m022",
+      "to": "m071",
+      "type": "redirect",
+      "description": "UserMenu redirects to GitHub OAuth"
+    },
+    {
+      "from": "m051",
+      "to": "m091",
+      "type": "data",
+      "description": "GET /api/chats queries chats table"
+    },
+    {
+      "from": "m052",
+      "to": "m091",
+      "type": "data",
+      "description": "POST /api/chats writes to chats and messages tables"
+    },
+    {
+      "from": "m052",
+      "to": "m101",
+      "type": "call",
+      "description": "POST /api/chats calls AI Gateway for response"
+    },
+    {
+      "from": "m054",
+      "to": "m091",
+      "type": "data",
+      "description": "POST /api/chats/[id] writes to messages table"
+    },
+    {
+      "from": "m054",
+      "to": "m101",
+      "type": "call",
+      "description": "POST /api/chats/[id] calls AI Gateway for response"
+    },
+    {
+      "from": "m055",
+      "to": "m091",
+      "type": "data",
+      "description": "DELETE /api/chats/[id] deletes from chats (cascade to messages, votes)"
+    },
+    {
+      "from": "m061",
+      "to": "m102",
+      "type": "call",
+      "description": "PUT /api/upload/[chatId] uploads to Blob Storage"
+    },
+    {
+      "from": "m062",
+      "to": "m102",
+      "type": "call",
+      "description": "DELETE /api/upload/[...pathname] deletes from Blob Storage"
+    },
+    {
+      "from": "m071",
+      "to": "m091",
+      "type": "data",
+      "description": "GET /auth/github upserts users table"
+    },
+    {
+      "from": "m071",
+      "to": "m103",
+      "type": "call",
+      "description": "GET /auth/github exchanges token with GitHub OAuth"
+    }
+  ],
+  "layers": {
+    "presentation": ["m001", "m002", "m003", "m021", "m022", "m023", "m024", "m025", "m026"],
+    "business": ["m011", "m012", "m013", "m014", "m031", "m032"],
+    "api": ["m051", "m052", "m053", "m054", "m055", "m056", "m057", "m061", "m062", "m071"],
+    "data": ["m091", "m092"],
+    "external": ["m101", "m102", "m103"]
+  },
+  "metrics": {
+    "totalModules": 37,
+    "circularDependencies": 0,
+    "scenarioCount": 7,
+    "entrypointCount": 17
+  }
+}

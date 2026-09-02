@@ -1,3 +1,4 @@
+import { db, schema } from 'hub:db'
 import { asc, eq } from 'drizzle-orm'
 import { z } from 'zod'
 

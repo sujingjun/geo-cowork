@@ -19,7 +19,9 @@ export function useChatActions() {
     props: {
       title: 'Delete chat',
       description: 'Are you sure you want to delete this chat? This cannot be undone.',
-      color: 'error'
+      color: 'error',
+      confirmLabel: 'Delete',
+      cancelLabel: 'Cancel'
     }
   })
 

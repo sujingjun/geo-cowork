@@ -1,53 +1,77 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
-import { LOCAL_EXTENSION_API_BASE } from './extension/config'
-
 export default defineNuxtConfig({
   modules: [
     '@nuxt/eslint',
     '@nuxt/ui',
     '@comark/nuxt',
+    '@nuxthub/core',
     'nuxt-auth-utils',
     'nuxt-charts',
     'nuxt-csurf',
-    '@pinia/nuxt'
+    '@nuxt/a11y',
+    '@nuxt/image',
+    '@nuxt/scripts',
+    '@nuxt/test-utils',
+    '@nuxtjs/device',
+    '@nuxtjs/emotion',
+    '@nuxtjs/seo'
   ],
-
-  ssr: false,
 
   devtools: {
     enabled: true
   },
 
-  app: {
-    baseURL: './',
-    buildAssetsDir: 'assets/'
-  },
-
-  router: {
-    options: {
-      hashMode: process.env.EXTENSION_BUILD === '1'
-    }
-  },
-
   css: ['~/assets/css/main.css'],
 
   runtimeConfig: {
+    oauth: {
+      amazon: {
+        clientId: process.env.NUXT_OAUTH_AMAZON_CLIENT_ID || process.env.AMAZON_LWA_CLIENT_ID || '',
+        clientSecret: process.env.NUXT_OAUTH_AMAZON_CLIENT_SECRET || process.env.AMAZON_LWA_CLIENT_SECRET || ''
+      },
+      shopify: {
+        clientId: process.env.NUXT_OAUTH_SHOPIFY_CLIENT_ID || '',
+        clientSecret: process.env.NUXT_OAUTH_SHOPIFY_CLIENT_SECRET || ''
+      },
+      google: {
+        clientId: '',
+        clientSecret: ''
+      }
+    },
+    amazon: {
+      environment: process.env.AMAZON_SP_API_ENVIRONMENT || 'production',
+      applicationId: process.env.AMAZON_SP_API_APPLICATION_ID || '',
+      sellerCentralAuthorizeUrl: process.env.AMAZON_SELLER_CENTRAL_AUTHORIZE_URL || '', // https://sellercentral.amazon.com/apps/authorize/consent
+      authorizationVersion: process.env.AMAZON_SP_API_AUTH_VERSION || '',
+      sandboxRefreshToken: process.env.AMAZON_SP_API_SANDBOX_REFRESH_TOKEN || '',
+      region: process.env.AMAZON_SP_API_REGION || 'us-east-1',
+      marketplaceId: process.env.AMAZON_MARKETPLACE_ID || '', // ATVPDKIKX0DER
+      spApiEndpoint: process.env.AMAZON_SP_API_ENDPOINT || '' // https://sellingpartnerapi-na.amazon.com
+    },
+    // AI Provider Configuration. Keep secrets in environment variables only.
+    openai: {
+      apiKey: process.env.OPENAI_API_KEY || '',
+      baseURL: process.env.OPENAI_BASE_URL || ''
+    },
+    anthropic: {
+      apiKey: process.env.ANTHROPIC_API_KEY || '',
+      baseURL: process.env.ANTHROPIC_BASE_URL || ''
+    },
+    google: {
+      apiKey: process.env.GOOGLE_GENERATIVE_AI_API_KEY || '',
+      baseURL: process.env.GOOGLE_BASE_URL || ''
+    },
+    deepseek: {
+      apiKey: process.env.DEEPSEEK_API_KEY || '',
+      baseURL: process.env.DEEPSEEK_BASE_URL || ''
+    },
+    shopify: {
+      scopes: process.env.NUXT_OAUTH_SHOPIFY_SCOPES || 'read_products',
+      apiVersion: process.env.SHOPIFY_API_VERSION || '2024-10'
+    },
     public: {
-      agentApiBase: process.env.EXTENSION_LOCAL_TEST === '1'
-        ? LOCAL_EXTENSION_API_BASE
-        : ''
+      siteUrl: process.env.NUXT_PUBLIC_SITE_URL || (process.env.VERCEL_PROJECT_PRODUCTION_URL ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}` : 'http://localhost:3000')
     }
-  },
-
-  routeRules: {
-    // Machine-to-machine endpoints called by the extension service worker
-    // (no browser cookies involved, so CSRF protection does not apply).
-    '/api/creators/batch': { csurf: false },
-    '/api/discovery/tiktok/upsert': { csurf: false },
-    '/api/discovery/tiktok/analyze-comments': { csurf: false },
-    '/api/discovery/tiktok/**': { csurf: false },
-    '/api/analyze-page': { csurf: false },
-    '/api/agent/chat': { csurf: false }
   },
 
   experimental: {
@@ -59,43 +83,24 @@ export default defineNuxtConfig({
   nitro: {
     experimental: {
       openAPI: true
-    },
-    prerender: {
-      crawlLinks: true,
-      routes: ['/']
-    },
-    static: true
+    }
+  },
+
+  hub: {
+    db: 'postgresql',
+    blob: true
   },
 
   vite: {
     optimizeDeps: {
       include: ['striptags']
-    },
-    build: {
-      rollupOptions: {
-        onLog(level, log, defaultHandler) {
-          const msg = typeof log === 'string' ? log : log.message
-          // Suppress benign, known-noise warnings from dependencies:
-          // - nuxt's module-preload polyfill doesn't emit a sourcemap for its transform
-          // - @vueuse/core ships /* #__PURE__ */ comments Rollup can't position
-          if (
-            msg.includes('module-preload-polyfill')
-            || msg.includes('#__PURE__')
-            || msg.includes('annotation that Rollup cannot interpret')
-          ) {
-            return
-          }
-          defaultHandler(level, log)
-        }
-      }
     }
   },
 
-  typescript: {
-    tsConfig: {
-      compilerOptions: {
-        types: ['@types/chrome']
-      }
+  csurf: {
+    encryptSecret: process.env.NUXT_SESSION_PASSWORD || '',
+    cookie: {
+      sameSite: 'lax'
     }
   },
 
@@ -105,12 +110,6 @@ export default defineNuxtConfig({
         commaDangle: 'never',
         braceStyle: '1tbs'
       }
-    }
-  },
-
-  fonts: {
-    assets: {
-      prefix: 'fonts'
     }
   }
 })

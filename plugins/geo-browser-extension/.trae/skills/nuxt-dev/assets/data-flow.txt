@@ -1,0 +1,319 @@
+# Data Flow Visualization
+
+## Flow 1: Create New Chat (Authenticated User)
+
+```
+User Input
+    │
+    ├─ Enter message in input field (index.vue)
+    ├─ Select AI model (ModelSelect.vue)
+    └─ Optionally upload files (FileUploadButton.vue → useFileUpload)
+    │
+    ▼
+Frontend Composable
+    │
+    ├─ useChatActions.createChat()
+    ├─ Generate UUID for chatId
+    ├─ Attach uploaded files (if any)
+    └─ Prepare message parts: [{ type: 'text', text }, { type: 'image', url }]
+    │
+    ▼
+HTTP POST Request
+    │
+    ├─ URL: /api/chats
+    ├─ Headers: CSRF token
+    ├─ Body: { id: UUID, message: { role: 'user', parts: [...] } }
+    │
+    ▼
+Server API Route (chats.post.ts)
+    │
+    ├─ Extract user session (getUserSession)
+    ├─ Validate CSRF token
+    ├─ Check authentication (optional for guests)
+    │
+    ▼
+Database Write
+    │
+    ├─ INSERT INTO chats (id, userId, visibility, createdAt)
+    └─ INSERT INTO messages (id, chatId, role, parts, createdAt)
+    │
+    ▼
+AI Gateway Call
+    │
+    ├─ Prepare request: model, messages[], tools[]
+    ├─ Call streamText() from AI SDK
+    └─ AI provider processes (Claude/Gemini/GPT)
+    │
+    ▼
+Streaming Response (SSE)
+    │
+    ├─ Server streams AI response chunks
+    ├─ Frontend receives and renders incrementally
+    └─ Display "thinking" indicator during processing
+    │
+    ▼
+Store AI Response
+    │
+    ├─ Complete stream received
+    ├─ INSERT INTO messages (role: 'assistant', parts: [...])
+    └─ Save tool call results (if any)
+    │
+    ▼
+Frontend Update
+    │
+    ├─ Navigate to /chat/[id]
+    ├─ Update chat list in sidebar (useChats.refresh())
+    └─ Display complete conversation
+```
+
+---
+
+## Flow 2: File Upload and Multimodal Chat
+
+```
+User Action
+    │
+    ├─ Drag-drop file onto chat window (Overlay.vue)
+    └─ Or click upload button (FileUploadButton.vue)
+    │
+    ▼
+File Selection
+    │
+    ├─ useFileUpload composable activates
+    ├─ Preview file locally (FilePreview.vue)
+    └─ Show upload progress
+    │
+    ▼
+HTTP PUT Request
+    │
+    ├─ URL: /api/upload/[chatId]
+    ├─ Headers: CSRF token + Auth
+    ├─ Body: FormData with file
+    │
+    ▼
+Server API Route (upload/[chatId].put.ts)
+    │
+    ├─ Check user authentication (required)
+    ├─ Validate file type and size
+    │
+    ▼
+Blob Storage
+    │
+    ├─ Call hubBlob().put(pathname, file)
+    ├─ Driver-specific storage:
+    │   - Local: .data/blob/
+    │   - Vercel: Vercel Blob API
+    │   - R2: Cloudflare R2 API
+    │   - S3: AWS S3 API
+    │
+    ▼
+Return File URL
+    │
+    ├─ Response: { type: 'image', url: 'https://...', mediaType: 'image/png' }
+    └─ Frontend receives uploaded file URL
+    │
+    ▼
+Attach to Message
+    │
+    ├─ Add file part to message.parts[]
+    ├─ User adds text prompt (optional)
+    └─ Send message with multimodal parts
+    │
+    ▼
+AI Multimodal Processing
+    │
+    ├─ AI receives text + image/file
+    ├─ Analyzes file content
+    └─ Generates contextualized response
+    │
+    ▼
+Display Result
+    │
+    ├─ Show file preview in message
+    ├─ Show AI analysis in response
+    └─ User can continue conversation
+```
+
+---
+
+## Flow 3: AI Tool Calling (Web Search Example)
+
+```
+User Question
+    │
+    └─ "What are the latest news in AI?" (needs real-time info)
+    │
+    ▼
+AI Decision
+    │
+    ├─ AI analyzes question
+    ├─ Determines need for tool (web_search)
+    └─ Generates tool call request
+    │
+    ▼
+Server Receives Tool Call
+    │
+    ├─ Stream contains: { type: 'tool-call', name: 'web_search', args: {...} }
+    ├─ Server executes tool (Anthropic/OpenAI built-in search)
+    └─ Tool returns results: [{ url, title, snippet }, ...]
+    │
+    ▼
+Stream Tool Result
+    │
+    ├─ Server sends: { type: 'tool-result', name: 'web_search', result: [...] }
+    └─ Frontend receives tool result chunks
+    │
+    ▼
+AI Integration
+    │
+    ├─ AI receives tool results
+    ├─ Synthesizes information
+    └─ Generates final response with citations
+    │
+    ▼
+Frontend Rendering
+    │
+    ├─ Render tool UI component (Sources.vue)
+    ├─ Display source links (SourceLink.vue)
+    └─ Show AI integrated answer
+    │
+    ▼
+Store Complete Message
+    │
+    ├─ Save message with tool-call and tool-result parts
+    └─ Database stores complete conversation context
+```
+
+---
+
+## Flow 4: Authentication (GitHub OAuth)
+
+```
+User Action
+    │
+    └─ Click "Login with GitHub" (UserMenu.vue)
+    │
+    ▼
+OAuth Redirect
+    │
+    ├─ Navigate to GitHub OAuth authorization URL
+    ├─ URL includes: client_id, redirect_uri, scope
+    └─ User sees GitHub authorization page
+    │
+    ▼
+User Authorizes
+    │
+    ├─ User clicks "Authorize"
+    └─ GitHub redirects to callback URL with authorization code
+    │
+    ▼
+Server Callback (auth/github.get.ts)
+    │
+    ├─ Receive authorization code
+    ├─ Exchange code for access token
+    │   - POST to GitHub token endpoint
+    │   - Includes client_id, client_secret, code
+    │
+    ▼
+Fetch User Info
+    │
+    ├─ Use access token to call GitHub API
+    ├─ GET /user endpoint
+    └─ Receive: { id, email, name, avatar_url, login }
+    │
+    ▼
+Database Upsert
+    │
+    ├─ Check if user exists (by provider + providerId)
+    ├─ INSERT or UPDATE users table
+    └─ Store: id, email, name, avatar, username, provider, providerId
+    │
+    ▼
+Create Session
+    │
+    ├─ Generate session token
+    ├─ Encrypt with NUXT_SESSION_PASSWORD
+    └─ Set secure HTTP-only cookie
+    │
+    ▼
+Redirect to Home
+    │
+    ├─ User redirected to /
+    ├─ Session cookie automatically included in future requests
+    └─ User now authenticated for protected features
+```
+
+---
+
+## Flow 5: Chat Management (Delete)
+
+```
+User Action
+    │
+    └─ Click delete button on chat (ModalConfirm.vue)
+    │
+    ▼
+Confirmation Dialog
+    │
+    ├─ Show "Are you sure?" modal
+    └─ User confirms deletion
+    │
+    ▼
+Frontend Action
+    │
+    ├─ useChatActions.deleteChat(id)
+    └─ Prepare HTTP DELETE request
+    │
+    ▼
+HTTP DELETE Request
+    │
+    ├─ URL: /api/chats/[id]
+    ├─ Headers: CSRF token + Auth
+    │
+    ▼
+Server API Route (chats/[id].delete.ts)
+    │
+    ├─ Verify user session (required)
+    ├─ Check ownership (chat.userId === user.id)
+    ├─ Return 403 if not owner
+    │
+    ▼
+Database Cascade Delete
+    │
+    ├─ DELETE FROM chats WHERE id = ?
+    ├─ CASCADE DELETE messages (ON DELETE CASCADE)
+    └─ CASCADE DELETE votes (ON DELETE CASCADE)
+    │
+    ▼
+Frontend Update
+    │
+    ├─ Remove chat from sidebar list
+    ├─ Navigate to home page (/)
+    └─ Refresh chat list (useChats.refresh())
+```
+
+---
+
+## Data Flow Summary
+
+### Request Flow Layers
+1. **User Interaction** → UI Components
+2. **State Management** → Composables
+3. **API Communication** → $fetch / useFetch
+4. **Server Processing** → API Routes
+5. **Data Persistence** → Database / Blob Storage
+6. **External Services** → AI Gateway, OAuth, etc.
+
+### Response Flow Layers
+1. **External Response** → Server receives data
+2. **Server Processing** → Transform and validate
+3. **HTTP Response** → JSON or SSE stream
+4. **Frontend Reception** → Composables handle response
+5. **State Update** → Reactive data updates
+6. **UI Rendering** → Components re-render
+
+### Critical Data Paths
+- **Latency-Sensitive**: AI streaming responses (SSE)
+- **Authentication-Required**: File upload, chat management
+- **CSRF-Protected**: All state-changing operations (POST/PATCH/DELETE)
+- **Cascade Operations**: Chat deletion → messages → votes

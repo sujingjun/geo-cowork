@@ -1,17 +1,7 @@
-<script setup lang="ts">
-const { isStreaming, startNewSession } = useAgent()
-
-function startNewAgentChat() {
-  if (startNewSession()) {
-    void navigateTo('/workbench')
-  }
-}
-</script>
-
 <template>
   <UDashboardNavbar
-    class="relative z-10 shrink-0 border-b border-default bg-default/85 backdrop-blur sm:px-4"
-    :ui="{ left: 'min-w-0 flex-1', right: 'shrink-0 gap-1' }"
+    class="absolute top-0 inset-x-0 border-b-0 z-10 backdrop-blur lg:backdrop-blur-none pointer-events-none sm:px-4"
+    :ui="{ left: 'pointer-events-auto min-w-0', right: 'pointer-events-auto' }"
   >
     <template #left>
       <slot name="title" />
@@ -26,10 +16,9 @@ function startNewAgentChat() {
         color="neutral"
         variant="ghost"
         icon="i-lucide-circle-plus"
+        to="/"
         class="lg:hidden"
         aria-label="New chat"
-        :disabled="isStreaming"
-        @click="startNewAgentChat"
       />
     </template>
   </UDashboardNavbar>

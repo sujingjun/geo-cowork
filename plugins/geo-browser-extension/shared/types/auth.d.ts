@@ -6,7 +6,7 @@ declare module '#auth-utils' {
     email: string
     avatar: string
     username: string
-    provider: 'github'
+    provider: 'github' | 'google'
     providerId: string
   }
 }

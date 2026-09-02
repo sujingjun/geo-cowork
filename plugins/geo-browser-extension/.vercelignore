@@ -1,0 +1,16 @@
+.git
+.github
+.agents
+.codex
+.data
+.nuxt
+.output
+.nitro
+.cache
+node_modules
+logs
+*.log
+.env
+.env.*
+!.env.example
+docs/*.bak*

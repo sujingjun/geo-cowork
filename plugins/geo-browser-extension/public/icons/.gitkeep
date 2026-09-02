@@ -1,7 +1,0 @@
-/**
- * Placeholder creator icon SVGs for development.
- * In production, replace with actual PNG icons.
- */
-
-// This file is a marker — actual icons should be placed as PNG files in public/icons/
-// For now, we'll copy wavith icons during the build process.

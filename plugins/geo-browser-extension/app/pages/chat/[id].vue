@@ -44,7 +44,9 @@ const chat = new Chat({
   transport: new DefaultChatTransport({
     api: `/api/chats/${data.value?.id}`,
     headers: { [headerName]: csrf },
-    body: () => ({ model: model.value })
+    body: {
+      model: model.value
+    }
   }),
   onData: async (dataPart) => {
     if (dataPart.type === 'data-chat-title') {

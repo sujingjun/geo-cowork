@@ -1,3 +1,4 @@
+import { blob } from 'hub:blob'
 import { z } from 'zod'
 
 export default defineEventHandler(async (event) => {

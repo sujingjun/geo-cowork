@@ -27,6 +27,3 @@ logs
 .history
 .vercel
 .env*.local
-# agents
-.agents
-.claude

@@ -1,15 +1,9 @@
 <script setup lang="ts">
 import type { DropdownMenuItem } from '@nuxt/ui'
 
-const { loggedIn, openInPopup } = useUserSession()
+const { loggedIn } = useUserSession()
 const { renameChat, deleteChat } = useChatActions()
-const {
-  agentSessions,
-  activeSessionId,
-  isStreaming: isAgentStreaming,
-  startNewSession,
-  selectSession
-} = useAgent()
+const { openLoginModal } = useLoginModal()
 
 const sidebarOpen = ref(false)
 const searchOpen = ref(false)
@@ -40,32 +34,6 @@ watch(loggedIn, () => {
 })
 
 const { groups } = useChats(chats)
-
-function startNewAgentChat() {
-  if (startNewSession()) {
-    void navigateTo('/workbench')
-  }
-}
-
-function selectAgentSession(id: string) {
-  if (selectSession(id)) {
-    void navigateTo('/workbench')
-  }
-}
-
-const agentSessionItems = computed(() => [
-  {
-    label: 'AI Agent 会话',
-    type: 'label' as const
-  },
-  ...agentSessions.value.map(session => ({
-    label: session.title,
-    icon: 'i-lucide-bot',
-    active: session.id === activeSessionId.value,
-    disabled: isAgentStreaming.value && session.id !== activeSessionId.value,
-    onSelect: () => selectAgentSession(session.id)
-  }))
-])
 
 const items = computed(() => groups.value?.flatMap((group) => {
   return [{
@@ -98,7 +66,7 @@ function getChatActions(item: { id: string, label: string }): DropdownMenuItem[]
 
 defineShortcuts({
   meta_o: () => {
-    startNewAgentChat()
+    navigateTo('/')
   }
 })
 </script>
@@ -117,42 +85,40 @@ defineShortcuts({
       <template #header="{ collapsed }">
         <NuxtLink v-if="!collapsed" to="/" class="flex items-end gap-0.5">
           <Logo class="h-8 w-auto shrink-0" />
-          <span class="text-xl font-bold text-highlighted">Workbench</span>
+          <span class="text-xl font-bold text-highlighted ml-3">69GEO</span>
         </NuxtLink>
 
         <UDashboardSidebarCollapse class="ms-auto" />
       </template>
 
       <template #default="{ collapsed }">
-        <!-- Workbench navigation -->
-        <UNavigationMenu
-          :items="[{
-            label: '工作台',
-            to: '/workbench',
-            icon: 'i-lucide-layout-dashboard'
-          }, {
-            label: '找达人',
-            to: '/discover',
-            icon: 'i-lucide-compass'
-          }, {
-            label: '私信触达',
-            to: '/outreach',
-            icon: 'i-lucide-send'
-          }]"
-          :collapsed="collapsed"
-          orientation="vertical"
+        <UButton
+          v-if="collapsed"
+          to="/sites"
+          icon="i-lucide-globe"
+          aria-label="我的站点"
+          color="neutral"
+          variant="ghost"
+          square
+          class="mb-1"
+        />
+        <UButton
+          v-if="collapsed"
+          to="/stores"
+          icon="i-lucide-store"
+          aria-label="店铺管理"
+          color="neutral"
+          variant="ghost"
+          square
+          class="mb-3"
         />
 
-        <USeparator class="my-4" />
-
-        <!-- Chat navigation -->
         <UNavigationMenu
           :items="[{
             label: 'New chat',
+            to: '/',
             kbds: ['meta', 'o'],
-            icon: 'i-lucide-circle-plus',
-            disabled: isAgentStreaming,
-            onSelect: startNewAgentChat
+            icon: 'i-lucide-circle-plus'
           }, {
             label: 'Search',
             icon: 'i-lucide-search',
@@ -178,11 +144,24 @@ defineShortcuts({
           </template>
         </UNavigationMenu>
 
-        <UNavigationMenu
-          v-if="!collapsed"
-          :items="agentSessionItems"
-          orientation="vertical"
-        />
+        <div v-if="!collapsed" class="space-y-1 px-2 pb-3">
+          <UButton
+            label="我的站点"
+            to="/sites"
+            icon="i-lucide-globe"
+            color="neutral"
+            variant="ghost"
+            class="w-full justify-start"
+          />
+          <UButton
+            label="店铺管理"
+            to="/stores"
+            icon="i-lucide-store"
+            color="neutral"
+            variant="ghost"
+            class="w-full justify-start"
+          />
+        </div>
 
         <UNavigationMenu
           v-if="!collapsed"
@@ -206,6 +185,7 @@ defineShortcuts({
                 variant="link"
                 size="sm"
                 class="rounded-[5px] hover:bg-accented/50 focus-visible:bg-accented/50 data-[state=open]:bg-accented/50"
+                role="button"
                 aria-label="Chat actions"
                 tabindex="-1"
                 @click.stop.prevent
@@ -219,32 +199,39 @@ defineShortcuts({
         <UserMenu v-if="loggedIn" :collapsed="collapsed" />
         <UButton
           v-else
-          :label="collapsed ? '' : 'Login with GitHub'"
-          icon="i-simple-icons-github"
+          :label="collapsed ? '' : 'Sign in'"
+          icon="i-lucide-log-in"
           color="neutral"
           variant="ghost"
           class="w-full"
-          @click="openInPopup('/auth/github')"
+          @click="openLoginModal()"
         />
       </template>
     </UDashboardSidebar>
 
     <UDashboardSearch
       v-model:open="searchOpen"
-      placeholder="Search chats..."
+      placeholder="Search chats…"
       :groups="[{
         id: 'links',
         items: [{
           label: 'New chat',
+          to: '/',
           icon: 'i-lucide-circle-plus',
-          kbds: ['meta', 'o'],
-          disabled: isAgentStreaming,
-          onSelect: startNewAgentChat
+          kbds: ['meta', 'o']
+        }, {
+          label: '我的站点',
+          to: '/sites',
+          icon: 'i-lucide-globe'
+        }, {
+          label: '店铺管理',
+          to: '/stores',
+          icon: 'i-lucide-store'
         }]
       }, ...groups]"
     />
 
-    <div class="flex-1 flex m-4 lg:ml-0 rounded-lg ring ring-default bg-default/75 shadow min-w-0 overflow-hidden">
+    <div class="flex-1 flex m-4 lg:ml-0 rounded-lg ring ring-default bg-default/75 shadow min-w-0 overflow-y-auto">
       <slot />
     </div>
   </UDashboardGroup>

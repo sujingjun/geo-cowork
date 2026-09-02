@@ -1,6 +1,0 @@
-export const TIKTOK_DISCOVERY_STATE_STORAGE_KEY = 'cw_tiktok_discovery_state'
-export const TIKTOK_DISCOVERY_SUMMARY_STORAGE_KEY = 'cw_tiktok_discovery_summary'
-export const TIKTOK_POPUP_LAST_OPENED_AT_STORAGE_KEY = 'cw_tiktok_popup_last_opened_at'
-export const TIKTOK_POPUP_OPEN_COOLDOWN_MS = 5000
-export const TIKTOK_PAGE_SNAPSHOT_STORAGE_KEY_PREFIX = 'cw_tiktok_page_snapshot'
-export const TIKTOK_PAGE_SNAPSHOT_KEYS_STORAGE_KEY = 'cw_tiktok_page_snapshot_keys'
