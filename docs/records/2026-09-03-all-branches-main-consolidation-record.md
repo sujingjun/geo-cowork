@@ -2,6 +2,7 @@
 title: 全分支合入 main 与 worktree 收口记录
 status: verified
 created: 2026-09-03
+updated: 2026-09-04
 source:
   - docs/workflow.md
   - "2026-09-03 当前用户指令：提交代码，检查项目关联的所有分支代码和 worktree，合并所有分支代码到 main，完成后删除所有 worktree，并分析项目进展与下一步"
@@ -35,6 +36,8 @@ remote_baseline: origin/main@9b0a2c5b45868dc5b71e076e2a876c02dbca7e6b
 
 还检查了 `refs/codex/snapshots/...@fb6fa9e`。它是内部 snapshot ref，不是分支或已注册 worktree；其 126 个变更路径已全部存在于 `main`，112 个字节相同、14 个已有后续演进，且与后续 `0039abb` 只剩 1 个文件的 2 行差异，因此未将这个被后续实现取代的内部快照重复合并。
 
+`git fsck` 另报告 `6ad250d` 与 `397b085` 两个 dangling WIP 对象。两者都是合并期间临时保存的 stash-style 快照，相对各自第一父提交都只给根 `package.json` 增加同一个由本机 Corepack/Pnpm 自动生成的 `packageManager` 字段，patch-id 相同，无其他路径或业务代码。根仓当前使用 npm 与 `package-lock.json`，浏览器扩展子项目另有自己的 pnpm 版本，因此没有恢复或合并这项环境生成元数据。
+
 ## 3. 实际合并与冲突裁决
 
 1. `origin/docs/milestone-1-workbuddy-expert-manager-handoff` 以 `--no-ff` 合入，生成 `7dd804f50006ccc19913632b5c01fb07e38274cb`；新增 1 份 769 行 Handoff。
@@ -55,6 +58,8 @@ remote_baseline: origin/main@9b0a2c5b45868dc5b71e076e2a876c02dbca7e6b
 | `npm test` | 1 | 353 tests：350 pass / 3 fail；失败均来自 2026-09-02 GA4/GSC 授权决定已过期，实际错误为 `READONLY_AUTHORIZATION_REQUIRED` |
 | `npm run test:extension`（Browser Extension） | 0 | 6/6 通过 |
 | `npm run test:browser-query`（Browser Extension） | 0 | 8 files、23/23 通过 |
+| `./node_modules/.bin/vitest run`（Browser Extension） | 1 | 16 个 Vitest 文件、53/53 测试通过；另将 Node Test 文件 `tests/bootstrap.test.mjs` 误收为 Vitest suite，报 `No test suite found` |
+| `./node_modules/.bin/vitest run --exclude tests/bootstrap.test.mjs` | 0 | 16 files、53/53 通过 |
 | `npm run typecheck`（Browser Extension） | 0 | 通过 |
 | `npm run build:extension`（Browser Extension） | 0 | MV3 扩展构建通过 |
 | `npm run validate:plugin` | 0 | `ok:true` |
@@ -62,6 +67,7 @@ remote_baseline: origin/main@9b0a2c5b45868dc5b71e076e2a876c02dbca7e6b
 | `npm run lint`（Browser Extension） | 1 | 8 errors / 57 warnings；集中于既有 seed、AI provider 与辅助脚本 |
 | `npm run build`（Browser Extension） | 130 | Client、Server、Nitro 均输出 built，7 个迁移为 up to date；命令未自行退出，约 90 秒后人工中断 |
 | `git diff --check da04093^1 da04093` | 2 | 新纳入的 Agent 指令/参考文档有 632 个 whitespace 诊断，分布于 156 个文件；未做无关批量格式化 |
+| `git fsck --full --no-dangling` | 0 | Git 对象连通性检查通过；dangling 对象另按上文审计，不代表分支遗漏 |
 
 ## 5. 合并后风险与下一步输入
 
@@ -69,4 +75,5 @@ remote_baseline: origin/main@9b0a2c5b45868dc5b71e076e2a876c02dbca7e6b
 2. 新纳入的 347 个 Agent-facing 文件包含 `npx ...@latest`、可能联网拉取依赖、写入 `.dhcoder/` 的脚本，以及建议把用户 API key 放入 `chrome.storage.local` 的通用指南。它们不在产品运行时，但与本仓本地优先、凭据只走环境变量和明确授权的边界存在治理风险，需 Owner 决定保留、改写或隔离。
 3. 全仓红灯来自已过期真实数据授权；不得通过静默延长 expiry 或改弱校验来收绿。若要刷新真实 GA4/GSC 读取，需新的当次授权与新的授权工件。
 4. Extension lint 和 Nuxt build 进程收口仍是独立工程债；不能用 typecheck、编译输出或专项测试替代这两个门。
-5. 本次没有执行真实 Chrome 日常 Profile、真实消费者平台、真实模型、发布或部署验证。
+5. Extension 全量 Vitest 当前需要显式排除 Node Test 文件；应修正 Vitest include/exclude 配置，使默认全量命令本身退出 0。
+6. 本次没有执行真实 Chrome 日常 Profile、真实消费者平台、真实模型、发布或部署验证。
