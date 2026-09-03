@@ -1,3 +1,10 @@
+import type { NuxtConfig } from '@nuxt/schema'
+
+const browserQueryRouteRules = {
+  '/mcp': { csurf: false },
+  '/api/browser-query/**': { csurf: false }
+}
+
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   modules: [
@@ -73,6 +80,9 @@ export default defineNuxtConfig({
       siteUrl: process.env.NUXT_PUBLIC_SITE_URL || (process.env.VERCEL_PROJECT_PRODUCTION_URL ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}` : 'http://localhost:3000')
     }
   },
+
+  // nuxt-csurf 1.6.5 augments an older Nitro route type; preserve its documented runtime shape.
+  routeRules: browserQueryRouteRules as unknown as NonNullable<NuxtConfig['routeRules']>,
 
   experimental: {
     viewTransition: true

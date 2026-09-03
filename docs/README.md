@@ -103,6 +103,17 @@
 | M5 Baseline 收口与知识优化 Handoff | [`handoff/2026-08-26-m5-baseline-closeout-and-knowledge-optimization-handoff.md`](handoff/2026-08-26-m5-baseline-closeout-and-knowledge-optimization-handoff.md) | proposed；Owner Review → M3 新知识版本 → 100 Source 分类 → M4 发布/Retest |
 | 平台许可需求池条目 | [`requirements/2026-08-25-platform-automation-permission-backlog.md`](requirements/2026-08-25-platform-automation-permission-backlog.md) | proposed / 待规划；是否启动规范仅由 Owner 决定 |
 
+## Browser Query Task MCP 自动化（已批准，本地已实现）
+
+| 类别 | 工件 | 状态与用途 |
+| --- | --- | --- |
+| Requirement / PRD | [`requirements/2026-09-03-browser-query-task-mcp-automation.md`](requirements/2026-09-03-browser-query-task-mcp-automation.md) / [`prd/2026-09-03-browser-query-task-mcp-automation.md`](prd/2026-09-03-browser-query-task-mcp-automation.md) | Requirement `proposed` / PRD `approved`；Cycle 输入、扩展任务、登录接管、结果提取与 Cowork 物化旅程 |
+| Architecture / ADR | [`architecture/2026-09-03-browser-query-task-mcp-automation-architecture.md`](architecture/2026-09-03-browser-query-task-mcp-automation-architecture.md) / [`adr/0002-browser-server-streamable-http-mcp-boundary.md`](adr/0002-browser-server-streamable-http-mcp-boundary.md) | `proposed` / 已确认决策；同机 Browser MCP Server、Codex Host Client、pending pull 边界 |
+| Spec 0013 | [`specs/0013-browser-query-task-mcp-automation.md`](specs/0013-browser-query-task-mcp-automation.md) | `approved`；MCP Tool、task/capture/extraction/ack、插件 `.mcp.json` 合同 |
+| Plan / Task | [`plans/2026-09-03-browser-query-task-mcp-automation-plan.md`](plans/2026-09-03-browser-query-task-mcp-automation-plan.md) / [`tasks/2026-09-03-browser-query-task-mcp-automation.md`](tasks/2026-09-03-browser-query-task-mcp-automation.md) | Plan `approved` / Task `implemented`；Browser 专项与真实 Chrome for Testing fixture 已通过，全仓门仍有独立失败 |
+| 通信研究 Record | [`records/2026-09-03-browser-cowork-communication-research-record.md`](records/2026-09-03-browser-cowork-communication-research-record.md) | `verified`；官方 MCP/Codex/Chrome 能力与 Owner 最终角色决定 |
+| 实施 Record | [`records/2026-09-03-browser-query-task-mcp-automation-record.md`](records/2026-09-03-browser-query-task-mcp-automation-record.md) | `implemented`；记录红绿测试、真实 loopback UI/MCP/Cowork 闭环、全仓失败与未授权边界 |
+
 ## Knowledge-Independent GEO Lifecycle Readiness（当前批准基线）
 
 | 类别 | 工件 | 状态与用途 |

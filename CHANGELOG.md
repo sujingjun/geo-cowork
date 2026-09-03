@@ -1,5 +1,13 @@
 # geo-cowork 变更记录
 
+## 2026-09-03 - Browser Query Task MCP 自动化（本地未发布）
+
+- Owner 批准 PRD、Spec 0013 与 Plan；新增 Browser Server durable CQI/BQT/Attempt、raw HTML、Fake extraction、pending/ack 状态与 PostgreSQL/PGlite migration 0006；
+- 新增官方 MCP TypeScript SDK 2.0.0 的同机 Streamable HTTP `/mcp`，兼容 modern `2026-07-28` 与 legacy stateless 客户端，并以 bearer、loopback Host/Origin、大小限制和 Tool allowlist fail closed；
+- Extension 改为选择已注册 Cycle 后创建 Browser-owned Task，加入 `chrome.storage.local` checkpoint、人工登录暂停/继续、新会话、单 submit、answer root `outerHTML` 与 Citation capture；
+- 新增 Cowork create-only intake/checksum/ack 与既有 M5 Answer Sample fixture seam；真实 Chrome for Testing + loopback fixture 完成登录等待、恢复、Capture、pending 与 Cowork 接收；
+- ChatGPT、Gemini、Perplexity、Google AI、Claude 继续 `manual_only`；未调用真实平台或真实/付费模型，未发布、部署、commit、push 或创建 PR。
+
 ## 2026-09-02 - 五平台 guard adapter 移除 terms_blocked（本地未发布）
 
 - 按 Owner 当次指令移除五个平台 guard adapter 的 `terms_blocked` 状态：ChatGPT、Perplexity、Google AI、Claude 与 Gemini 统一为 `manual_only`，adapter 合同枚举收窄为 `allowed/manual_only`；

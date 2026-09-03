@@ -1,6 +1,18 @@
 import { getTableColumns } from 'drizzle-orm'
 import { describe, expect, it } from 'vitest'
-import { products, sites, storeAuthEvents, storeSyncLogs, stores } from './schema'
+import {
+  browserCycleQueryInputs,
+  browserExtractionResults,
+  browserPendingQueryResults,
+  browserQueryArtifacts,
+  browserQueryCaptures,
+  browserQueryTasks,
+  products,
+  sites,
+  storeAuthEvents,
+  storeSyncLogs,
+  stores
+} from './schema'
 
 function enumValuesOf(column: { enumValues: readonly string[] }) {
   return column.enumValues
@@ -57,5 +69,24 @@ describe('database schema', () => {
       'reconnect_failed'
     ])
     expect(enumValuesOf(storeSyncLogs.status)).toEqual(['success', 'failed', 'partial'])
+  })
+
+  it('defines durable Browser Query input, task, raw, extraction and pending tables', () => {
+    expect(Object.keys(getTableColumns(browserCycleQueryInputs))).toEqual(expect.arrayContaining([
+      'id', 'requestId', 'cycleRef', 'fingerprint', 'payload'
+    ]))
+    expect(Object.keys(getTableColumns(browserQueryTasks))).toEqual(expect.arrayContaining([
+      'id', 'requestId', 'cycleRef', 'status', 'revision', 'payload'
+    ]))
+    expect(Object.keys(getTableColumns(browserQueryArtifacts))).toEqual(expect.arrayContaining([
+      'id', 'mediaType', 'byteLength', 'sha256', 'contentBase64'
+    ]))
+    expect(Object.keys(getTableColumns(browserQueryCaptures))).toContain('payload')
+    expect(Object.keys(getTableColumns(browserExtractionResults))).toEqual(expect.arrayContaining([
+      'captureId', 'attemptNo', 'status', 'payload'
+    ]))
+    expect(Object.keys(getTableColumns(browserPendingQueryResults))).toEqual(expect.arrayContaining([
+      'captureId', 'extractionId', 'status', 'receiverFingerprint', 'payload'
+    ]))
   })
 })

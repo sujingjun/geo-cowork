@@ -1,5 +1,13 @@
 # geo-expert 变更记录
 
+## Unreleased — Browser Query Task MCP Automation
+
+- 新增 `.mcp.json` 与 Codex Manifest `mcpServers` 指针，只注册 `http://127.0.0.1:4319/mcp` 和 `GEO_BROWSER_MCP_TOKEN` 环境变量名；
+- 新增 CQI 注册、Browser Task 摘要、pending result、raw artifact 分块读取与 acknowledgement Tool 合同；
+- 新增 `browser-query-result.mjs` 的 Cowork intake 校验与 synthetic M5 materialization seam；
+- `geo-answer-cycle` 增加 Browser pending pull/ack 顺序，保留 M5 人工 Review、100 Source 分类和业务边界；
+- 当前仍是本地未发布实现，不提升五个真实平台的 `manual_only` 状态，也不授权真实模型、部署或发布。
+
 ## Unreleased — M5 两槽人工 Baseline 与 Source 批量分类门
 
 - 正式采样改为每平台两个独立英文 manual slot；中文可选辅助、同对象语义一致但分别聚合；

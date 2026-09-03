@@ -2,8 +2,8 @@
 title: Spec 0001 — 插件包契约
 status: proposed
 created: 2026-08-20
-updated: 2026-08-20
-revision: 按用户指令移除 CodeBuddy 适配层；第三宿主改为 WorkBuddy（中国区），其包装契约待官方开发者契约发布后另行立 Spec
+updated: 2026-09-03
+revision: Spec 0013 已批准的唯一覆盖项是 Codex `.mcp.json` Browser MCP Server；apps 与 hooks 继续禁止
 source: docs/architecture/2026-08-20-cross-host-plugin-architecture.md
 scope: plugins/geo-expert 的目录结构、Manifest、Marketplace 与自检规则
 ---
@@ -18,6 +18,7 @@ scope: plugins/geo-expert 的目录结构、Manifest、Marketplace 与自检规�
 
 ```text
 plugins/geo-expert/
+├── .mcp.json                       # Spec 0013 的单一 Browser MCP Server 配置
 ├── .codex-plugin/plugin.json       # Codex Manifest
 ├── .claude-plugin/plugin.json      # Claude Code Manifest
 ├── README.md                       # 插件说明与安装方式
@@ -45,7 +46,9 @@ plugins/geo-expert/
 - 必需：`name`、`version`、`description`；
 - 组件指针：`"skills": "./skills/"`；
 - 可含 `interface`（`displayName`、`shortDescription`、`category` 等展示字段）；
-- 本阶段禁止出现 `mcpServers`、`apps`、`hooks` 字段。
+- Spec 0013 覆盖后的唯一例外：必须使用 `"mcpServers": "./.mcp.json"` 指向插件根的单一 `geo-browser` Streamable HTTP Server；禁止 inline Server 配置；
+- `.mcp.json` 只允许 `http://127.0.0.1:4319/mcp` 与 `GEO_BROWSER_MCP_TOKEN` 环境变量名，不得包含 token 值、额外 Server、业务规则或未知字段；
+- 继续禁止 `apps`、`hooks` 字段。
 
 ### 3.3 Claude Code（`.claude-plugin/plugin.json`)
 
@@ -115,6 +118,7 @@ Manifest 只含宿主元数据与组件路径。出现以下任一情况即为�
 | 两个 Manifest `name`/`version` 不一致 | `validate-plugin.mjs` 非零退出 |
 | SKILL.md 缺少 `name`/`description` 或与目录名不符 | `validate-plugin.mjs` 非零退出 |
 | Marketplace 指向不存在的插件路径 | `validate-plugin.mjs` 非零退出 |
+| `.mcp.json` 含明文 token、非 loopback URL、额外 Server 或未知字段 | `validate-plugin.mjs` 非零退出 |
 
 ## 7. 非功能要求
 

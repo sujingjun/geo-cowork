@@ -49,6 +49,8 @@ codex plugin add geo-expert
 
 在支持插件的 Codex/ChatGPT 宿主中触发 `geo-workspace-init`。
 
+Spec 0013 的 Browser MCP 是可选的同机能力。使用前先在 `plugins/geo-browser-extension` 启动绑定 `127.0.0.1:4319` 的 Browser Server，并在本地环境设置 `GEO_BROWSER_MCP_TOKEN`；插件 `.mcp.json` 只保存环境变量名，不保存 token 值。Browser Server 不由插件自动启动。
+
 ## 工作区
 
 品牌工作区是项目事实中心，位于插件目录之外的任意路径。初始化：
@@ -76,6 +78,9 @@ npm run test:query-portfolio                          # Query Portfolio 流水�
 npm run smoke:m5-playwright                            # 全局 Playwright + loopback base Smoke
 npm run check:docs                                      # 仓库 Markdown 本地链接检查
 npm run validate:plugin                                  # 插件包契约自检
+node --test tests/browser-query-result.test.mjs tests/plugin-mcp-config.test.mjs
+pnpm --dir plugins/geo-browser-extension test:browser-query
+pnpm --dir plugins/geo-browser-extension test:extension
 node plugins/geo-expert/scripts/build-index.mjs --workspace workspaces/myyshop --check
 node plugins/geo-expert/scripts/knowledge-query.mjs validate --workspace workspaces/myyshop
 node plugins/geo-expert/scripts/query-portfolio.mjs validate --workspace workspaces/myyshop
@@ -99,4 +104,4 @@ npm run prepare:m4-public-inputs -- --workspace <workspace> --summary <workspace
 
 ## 边界
 
-本仓库不做：云端 SaaS、MCP 服务、数据库、自动发布、自动审批、CRM 写入、社区运营或无条款许可的消费者 UI 自动采集。M4 Site/Research 诊断仍只读取显式本地 manifest/snapshot；M5 的 Playwright base 只通过 loopback fixture 验证，五个平台 guard adapter 统一为 `manual_only` 并以 `PLATFORM_TERMS_BLOCKED` 阻止自动执行；五个平台的 Query 测试统一由 GEO Browser Extension（manual_assist）在 Owner-controlled 浏览器中完成。Owner 可提供 exact result URL 进入受限 manual Sample；这不授权 Agent 自动提交 Query、读取账号存储或扩大浏览范围。未经当次明确授权，任何 Agent 不 commit、不 push、不创建 PR。
+本仓库不做：云端 SaaS、通用/远端 MCP、自动发布、自动审批、CRM 写入、社区运营或无条款许可的消费者 UI 自动采集。唯一 MCP 例外是 Spec 0013 批准的同机 Browser Server，用于冻结 Cycle 输入与可靠交付浏览器结果；其本地数据库、raw capture 和 acknowledgement 不构成 canonical M5 结论。M4 Site/Research 诊断仍只读取显式本地 manifest/snapshot；五个平台 adapter 统一为 `manual_only`，登录状态不能解除自动化门。Owner 可提供 exact result URL 进入受限 manual Sample；这不授权 Agent 自动提交真实平台 Query、读取账号存储或扩大浏览范围。未经当次明确授权，任何 Agent 不 commit、不 push、不创建 PR。

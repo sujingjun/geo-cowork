@@ -1,5 +1,12 @@
 import type { UIMessage } from 'ai'
 import type { SiteBuilderConfig } from '../../shared/utils/site-builder'
+import type {
+  BrowserQueryTask,
+  ExtractionRecord,
+  PendingQueryResult,
+  QueryCapture,
+  StoredCycleQueryInput
+} from '../../shared/types/browser-query'
 import { relations, sql } from 'drizzle-orm'
 import { pgTable, text, integer, index, uniqueIndex, primaryKey, timestamp, boolean, jsonb } from 'drizzle-orm/pg-core'
 
@@ -283,3 +290,89 @@ export const siteProductsRelations = relations(siteProducts, ({ one }) => ({
     references: [products.id]
   })
 }))
+
+export const browserCycleQueryInputs = pgTable('browser_cycle_query_inputs', {
+  id: text('id').primaryKey(),
+  requestId: text('request_id').notNull(),
+  cycleRef: text('cycle_ref').notNull(),
+  fingerprint: text('fingerprint').notNull(),
+  payload: jsonb('payload').$type<StoredCycleQueryInput>().notNull(),
+  registeredAt: text('registered_at').notNull()
+}, table => [
+  uniqueIndex('browser_cycle_query_inputs_request_idx').on(table.requestId),
+  index('browser_cycle_query_inputs_cycle_idx').on(table.cycleRef, table.registeredAt)
+])
+
+export const browserQueryTasks = pgTable('browser_query_tasks', {
+  id: text('id').primaryKey(),
+  requestId: text('request_id').notNull(),
+  inputId: text('input_id').notNull()
+    .references(() => browserCycleQueryInputs.id, { onDelete: 'restrict' }),
+  cycleRef: text('cycle_ref').notNull(),
+  status: text('status', {
+    enum: ['pending', 'running', 'waiting_human', 'completed', 'blocked', 'failed', 'cancelled']
+  }).notNull(),
+  revision: integer('revision').notNull().default(0),
+  payload: jsonb('payload').$type<BrowserQueryTask>().notNull(),
+  createdAt: text('created_at').notNull(),
+  updatedAt: text('updated_at').notNull()
+}, table => [
+  uniqueIndex('browser_query_tasks_request_idx').on(table.requestId),
+  index('browser_query_tasks_cycle_idx').on(table.cycleRef, table.createdAt),
+  index('browser_query_tasks_status_idx').on(table.status)
+])
+
+export const browserQueryArtifacts = pgTable('browser_query_artifacts', {
+  id: text('id').primaryKey(),
+  mediaType: text('media_type').notNull(),
+  byteLength: integer('byte_length').notNull(),
+  sha256: text('sha256').notNull(),
+  contentBase64: text('content_base64').notNull(),
+  createdAt: text('created_at').notNull()
+}, table => [
+  index('browser_query_artifacts_sha_idx').on(table.sha256)
+])
+
+export const browserQueryCaptures = pgTable('browser_query_captures', {
+  id: text('id').primaryKey(),
+  taskId: text('task_id').notNull()
+    .references(() => browserQueryTasks.id, { onDelete: 'restrict' }),
+  artifactId: text('artifact_id').notNull()
+    .references(() => browserQueryArtifacts.id, { onDelete: 'restrict' }),
+  payload: jsonb('payload').$type<QueryCapture>().notNull(),
+  capturedAt: text('captured_at').notNull()
+}, table => [
+  index('browser_query_captures_task_idx').on(table.taskId, table.capturedAt)
+])
+
+export const browserExtractionResults = pgTable('browser_extraction_results', {
+  id: text('id').primaryKey(),
+  captureId: text('capture_id').notNull()
+    .references(() => browserQueryCaptures.id, { onDelete: 'restrict' }),
+  attemptNo: integer('attempt_no').notNull(),
+  status: text('status', { enum: ['completed', 'failed'] }).notNull(),
+  payload: jsonb('payload').$type<ExtractionRecord>().notNull(),
+  completedAt: text('completed_at').notNull()
+}, table => [
+  uniqueIndex('browser_extraction_results_attempt_idx').on(table.captureId, table.attemptNo)
+])
+
+export const browserPendingQueryResults = pgTable('browser_pending_query_results', {
+  id: text('id').primaryKey(),
+  taskId: text('task_id').notNull()
+    .references(() => browserQueryTasks.id, { onDelete: 'restrict' }),
+  cycleRef: text('cycle_ref').notNull(),
+  captureId: text('capture_id').notNull()
+    .references(() => browserQueryCaptures.id, { onDelete: 'restrict' }),
+  extractionId: text('extraction_id').notNull()
+    .references(() => browserExtractionResults.id, { onDelete: 'restrict' }),
+  status: text('status', { enum: ['pending', 'acknowledged'] }).notNull(),
+  receiverFingerprint: text('receiver_fingerprint'),
+  acknowledgedAt: text('acknowledged_at'),
+  payload: jsonb('payload').$type<PendingQueryResult>().notNull(),
+  createdAt: text('created_at').notNull()
+}, table => [
+  index('browser_pending_query_results_queue_idx').on(table.status, table.createdAt, table.id),
+  index('browser_pending_query_results_cycle_idx').on(table.cycleRef, table.status),
+  index('browser_pending_query_results_task_idx').on(table.taskId, table.status)
+])

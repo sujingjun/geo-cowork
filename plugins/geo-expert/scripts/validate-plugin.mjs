@@ -6,6 +6,7 @@ import { readFile, readdir, stat } from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { parseMarkdownObjectText } from './lib/object-contract.mjs';
+import { validateGeoBrowserMcpConfig } from './lib/plugin-mcp-config.mjs';
 
 const PLUGIN_ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const REPO_ROOT = path.resolve(PLUGIN_ROOT, '..', '..');
@@ -17,6 +18,7 @@ const MARKETPLACES = [
   '.agents/plugins/marketplace.json',
   '.claude-plugin/marketplace.json',
 ].map((p) => path.join(REPO_ROOT, p));
+const MCP_CONFIG = path.join(PLUGIN_ROOT, '.mcp.json');
 
 const violations = [];
 const checked = [];
@@ -58,7 +60,10 @@ async function checkManifests() {
     if (!data.description) fail(`${rel}: 缺少 description`);
     if (file.includes('.codex-plugin')) {
       if (data.skills !== './skills/') fail(`${rel}: skills 指针必须为 "./skills/"`);
-      for (const forbidden of ['mcpServers', 'apps', 'hooks']) {
+      if (data.mcpServers !== './.mcp.json') {
+        fail(`${rel}: mcpServers 必须严格指向 "./.mcp.json"`);
+      }
+      for (const forbidden of ['apps', 'hooks']) {
         if (forbidden in data) fail(`${rel}: 本阶段禁止字段 ${forbidden}`);
       }
     }
@@ -67,6 +72,17 @@ async function checkManifests() {
   const versions = new Set(manifests.map((m) => m.data.version));
   if (versions.size > 1) {
     fail(`各 Manifest 版本不一致: ${[...versions].join(', ')}`);
+  }
+}
+
+async function checkMcpConfig() {
+  const data = await readJson(MCP_CONFIG);
+  if (!data) return;
+  try {
+    validateGeoBrowserMcpConfig(data);
+    checked.push(path.relative(REPO_ROOT, MCP_CONFIG));
+  } catch (error) {
+    fail(`${path.relative(REPO_ROOT, MCP_CONFIG)}: ${error.message}`);
   }
 }
 
@@ -195,6 +211,7 @@ async function checkRuntime() {
     'knowledge-query.mjs', 'workspace-init.mjs', 'workspace-validate.mjs',
     'diagnosis.mjs', 'collect-public-site.mjs', 'prepare-public-site-m4-inputs.mjs',
     'check-doc-links.mjs',
+    'browser-query-result.mjs',
     'answer-cycle.mjs',
     'geo-lifecycle.mjs', 'geo-analytics.mjs', 'geo-strategy-discovery.mjs',
     'geo-analytics-readonly.mjs', 'geo-readiness.mjs', 'geo-conformance.mjs',
@@ -229,6 +246,7 @@ async function checkRuntime() {
     'strategy-workflow.mjs', 'cycle-goal-candidates.mjs',
     'cycle-goal-selection.mjs', 'cycle-two.mjs', 'cycle-two-workspace.mjs',
     'cycle-two-proposal.mjs', 'cycle-two-apply.mjs',
+    'browser-query-result.mjs', 'plugin-mcp-config.mjs',
   ]) {
     const p = path.join(PLUGIN_ROOT, 'scripts', 'lib', file);
     try {
@@ -265,6 +283,7 @@ async function checkRuntime() {
 }
 
 await checkManifests();
+await checkMcpConfig();
 await checkSkills();
 await checkMarketplaces();
 await checkTemplates();

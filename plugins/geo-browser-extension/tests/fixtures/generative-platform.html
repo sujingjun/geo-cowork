@@ -11,15 +11,30 @@
       .answer { margin-top: 28px; padding: 18px; border: 1px solid #b8d7c2; border-radius: 12px; }
     </style>
   </head>
-  <body>
+  <body data-login-state="logged-out">
     <h1>生成式平台 Fixture</h1>
-    <textarea id="prompt" aria-label="Query input"></textarea>
-    <button id="submit" type="button">提交</button>
-    <section id="answers" aria-live="polite"></section>
+    <section id="login-gate">
+      <p>开发 fixture：模拟需要人工完成登录。</p>
+      <button id="login" type="button">模拟人工登录</button>
+    </section>
+    <section id="query-surface" hidden>
+      <textarea id="prompt" aria-label="Query input"></textarea>
+      <button id="submit" type="button">提交</button>
+      <section id="answers" aria-live="polite"></section>
+    </section>
     <script>
+      const login = document.querySelector('#login')
+      const loginGate = document.querySelector('#login-gate')
+      const querySurface = document.querySelector('#query-surface')
       const prompt = document.querySelector('#prompt')
       const submit = document.querySelector('#submit')
       const answers = document.querySelector('#answers')
+      const conversationId = crypto.randomUUID()
+      login.addEventListener('click', () => {
+        document.body.dataset.loginState = 'logged-in'
+        loginGate.hidden = true
+        querySurface.hidden = false
+      })
       submit.addEventListener('click', () => {
         if (!prompt.value.trim()) return
         submit.disabled = true
@@ -38,7 +53,7 @@
           answers.append(article)
           answers.removeAttribute('aria-busy')
           submit.disabled = false
-          history.replaceState({}, '', '/result')
+          history.replaceState({}, '', `/result?conversation=${conversationId}`)
         }, 300)
       })
     </script>

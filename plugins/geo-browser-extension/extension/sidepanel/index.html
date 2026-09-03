@@ -11,7 +11,7 @@
       <header class="panel-header">
         <p class="eyebrow">GEO Browser Assistant</p>
         <h1>Query 测试任务</h1>
-        <p class="description">连接本地任务服务，逐条执行 frozen Query Set，并把完整回答、引用和失败记录写回工作区。</p>
+        <p class="description">连接 Browser Server，选择已注册的 active Cycle，逐条执行 frozen Query Set，并把原始回答交给 Cowork 拉取。</p>
       </header>
 
       <section class="page-card" aria-labelledby="page-heading">
@@ -34,7 +34,7 @@
 
       <section class="task-card" aria-labelledby="connection-heading">
         <div class="card-heading">
-          <h2 id="connection-heading">本地任务服务</h2>
+          <h2 id="connection-heading">Browser Server</h2>
           <span id="connection-state" class="pill" data-state="idle">未连接</span>
         </div>
         <label>
@@ -42,11 +42,18 @@
           <input id="service-url" type="url" value="http://127.0.0.1:4319" autocomplete="off">
         </label>
         <label>
-          Session token
+          Product token
           <input id="session-token" type="password" autocomplete="off" placeholder="仅保留在当前面板内存">
         </label>
-        <button id="connect-task" type="button">连接并读取任务</button>
-        <p id="task-message" class="status" data-state="idle" role="status" aria-live="polite">先在终端启动本地任务服务。</p>
+        <button id="connect-task" type="button">连接并列出 Cycle 输入</button>
+        <label>
+          已注册 Cycle / Query Set
+          <select id="cycle-input" disabled>
+            <option value="">请先连接 Browser Server</option>
+          </select>
+        </label>
+        <button id="create-task" type="button" disabled>新建 Browser Query Task</button>
+        <p id="task-message" class="status" data-state="idle" role="status" aria-live="polite">先在终端启动 Browser Server。</p>
       </section>
 
       <section id="task-card" class="task-card" aria-labelledby="task-heading" hidden>
@@ -63,6 +70,7 @@
 
         <div class="actions">
           <button id="start-query" type="button">开始本条</button>
+          <button id="continue-query" type="button" hidden>人工处理完成，继续</button>
           <button id="retry-query" type="button" hidden>重新启动</button>
         </div>
 
@@ -83,10 +91,14 @@
             <textarea id="answer-text" rows="10" required placeholder="粘贴完整回答，不要概述"></textarea>
           </label>
           <label>
+            回答根节点 HTML
+            <textarea id="answer-html" rows="8" required placeholder="只粘贴当前回答根节点 outerHTML，不要粘贴整页 DOM"></textarea>
+          </label>
+          <label>
             引用（每行一个 URL，或“标题 | URL”）
             <textarea id="citation-text" rows="5" placeholder="来源标题 | https://example.com/page"></textarea>
           </label>
-          <button type="submit">回写并完成本条</button>
+          <button type="submit">保存 Capture 并完成本条</button>
         </form>
 
         <form id="failure-form" hidden>

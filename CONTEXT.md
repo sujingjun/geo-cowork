@@ -4,6 +4,10 @@
 
 ## Language
 
+**GEO Cycle**：
+由 Cowork 创建并启动的版本化 GEO 生命周期单位；启动后锁定本轮使用的 frozen Query Set。浏览器任务可以引用 Cycle，但不创建、启动或推进 Cycle。
+_Avoid_: Circle、Browser Query Task
+
 **知识独立工程就绪（Knowledge-Independent Engineering Readiness）**：
 在没有真实品牌知识库时，依靠明确标记的开发测试品牌知识库和 synthetic/test-only 材料完整验证 GEO Lifecycle 的工程合同。它不表示任何真实品牌知识、真实 Cycle、Publication 或业务效果已经成立。
 _Avoid_: 真实 Cycle 就绪、生产就绪、业务就绪
