@@ -1,0 +1,108 @@
+# System Architecture
+
+```
+┌─────────────────────────────────────────────────────────────────────┐
+│                         Browser Client                              │
+│                                                                     │
+│  ┌──────────────────┐  ┌──────────────────┐  ┌──────────────────┐ │
+│  │   Pages (/)      │  │   Layouts        │  │   Components     │ │
+│  │  - index.vue     │  │  - default.vue   │  │  - Navbar        │ │
+│  │  - chat/[id].vue │  │                  │  │  - UserMenu      │ │
+│  │  - error.vue     │  │                  │  │  - ModelSelect   │ │
+│  └────────┬─────────┘  └────────┬─────────┘  └────────┬─────────┘ │
+│           │                     │                      │           │
+│           └──────────┬──────────┴──────────┬───────────┘           │
+│                      │                     │                       │
+│           ┌──────────▼──────────────────────▼─────────┐            │
+│           │      Composables (app/composables/)       │            │
+│           │  - useChatActions.ts                     │            │
+│           │  - useChats.ts                           │            │
+│           │  - useFileUpload.ts                      │            │
+│           │  - useModels.ts                          │            │
+│           └──────────────────┬────────────────────────┘            │
+│                              │                                     │
+└──────────────────────────────┼─────────────────────────────────────┘
+                               │
+                               │ $fetch / useFetch
+                               │ (HTTP/SSE)
+                               │
+┌──────────────────────────────▼─────────────────────────────────────┐
+│                      Nitro Server (server/)                        │
+│                                                                    │
+│  ┌───────────────────────────────────────────────────────────┐    │
+│  │               API Routes (server/api/)                    │    │
+│  │                                                           │    │
+│  │  Chat Management:                    File Management:    │    │
+│  │  - GET    /api/chats                 - PUT /api/upload/  │    │
+│  │  - POST   /api/chats                   [chatId]          │    │
+│  │  - GET    /api/chats/[id]            - DELETE /api/      │    │
+│  │  - POST   /api/chats/[id]              upload/[...path] │    │
+│  │  - DELETE /api/chats/[id]                                │    │
+│  │  - PATCH  /api/chats/[id]/title      Voting:            │    │
+│  │  - PATCH  /api/chats/[id]/visibility - GET /api/chats/   │    │
+│  │  - DELETE /api/chats/[id]/messages     [id]/votes        │    │
+│  │                                       - POST /api/chats/  │    │
+│  │                                         [id]/votes        │    │
+│  └────────────┬───────────────────────┬──────────────────────┘    │
+│               │                       │                           │
+│  ┌────────────▼────────┐  ┌──────────▼────────────┐              │
+│  │  Auth Routes        │  │  Middleware           │              │
+│  │  (server/routes/)   │  │  - CSRF Protection    │              │
+│  │  - auth/github.get  │  │  - Session Check      │              │
+│  └────────────┬────────┘  └───────────────────────┘              │
+│               │                                                   │
+│  ┌────────────▼────────────────────────────────────────────┐     │
+│  │              Database Layer (server/db/)                │     │
+│  │  - schema.ts (Drizzle ORM)                             │     │
+│  │  - migrations/ (SQL scripts)                            │     │
+│  │                                                         │     │
+│  │  Tables:                                                │     │
+│  │  ┌─────────┐  ┌─────────┐  ┌──────────┐  ┌─────────┐  │     │
+│  │  │  users  │  │  chats  │  │ messages │  │  votes  │  │     │
+│  │  └────┬────┘  └────┬────┘  └────┬─────┘  └────┬────┘  │     │
+│  │       │ 1      1   │        *   │         *   │        │     │
+│  │       └────────────┴────────────┴─────────────┘        │     │
+│  └──────────────────────────┬──────────────────────────────┘     │
+│                             │                                    │
+└─────────────────────────────┼────────────────────────────────────┘
+                              │
+              ┌───────────────┼───────────────┐
+              │               │               │
+              ▼               ▼               ▼
+┌──────────────────┐  ┌──────────────┐  ┌─────────────────┐
+│   SQLite/Turso   │  │  NuxtHub     │  │  External APIs  │
+│   Database       │  │  Blob        │  │                 │
+│                  │  │  Storage     │  │  - Vercel AI    │
+│  - Local: .data/ │  │              │  │    Gateway      │
+│    hub/db/       │  │  Drivers:    │  │  - GitHub       │
+│  - Prod: Turso   │  │  - Vercel    │  │    OAuth        │
+│    (distributed  │  │  - R2        │  │  - AI Models    │
+│    SQLite)       │  │  - S3        │  │    (Claude,     │
+│                  │  │              │  │     Gemini,     │
+│                  │  │              │  │     GPT)        │
+└──────────────────┘  └──────────────┘  └─────────────────┘
+
+
+Legend:
+├─ UI Component Hierarchy
+│  Page → Layout → Component → Composable
+│
+├─ Data Flow Direction
+│  Client → Server → Database/External APIs
+│  Server → Client (SSE Streaming)
+│
+└─ Database Relationships
+   1:* (One-to-Many)
+   users → chats → messages → votes
+```
+
+## Key Architectural Decisions
+
+1. **Full-Stack Framework**: Nuxt 4 provides both client and server in a single codebase
+2. **Auto-Import**: Components, composables, and utilities are automatically imported
+3. **File-Based Routing**: Pages directory structure defines routes automatically
+4. **Server Routes**: API routes in server/api/ are automatically mapped to /api/* endpoints
+5. **Streaming**: AI responses use Server-Sent Events (SSE) for real-time streaming
+6. **Edge-First Database**: SQLite (local) and Turso (distributed SQLite for production)
+7. **Modular Storage**: NuxtHub Blob supports multiple storage backends (Vercel Blob, R2, S3)
+8. **Unified AI Access**: Vercel AI Gateway provides single API for multiple AI providers

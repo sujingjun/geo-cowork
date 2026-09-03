@@ -1,0 +1,403 @@
+# Business Scenario Flows
+
+## Scenario 1: First-Time User Experience (Guest)
+
+```
+[User Lands on Homepage]
+          │
+          ├─ See Welcome Message
+          ├─ View Example Prompts
+          └─ Notice Model Selector (Claude, Gemini, GPT)
+          │
+          ▼
+[User Types Question]
+          │
+          ├─ Input field active
+          ├─ Can select model
+          └─ Cannot upload files (login required)
+          │
+          ▼
+[User Sends Message]
+          │
+          ├─ POST /api/chats (no auth)
+          ├─ Create temporary chat (not saved to DB)
+          └─ Generate unique chatId
+          │
+          ▼
+[AI Streams Response]
+          │
+          ├─ Real-time text chunks appear
+          ├─ "Thinking" indicator shows
+          └─ Tool calls may happen (search, chart, etc.)
+          │
+          ▼
+[Response Complete]
+          │
+          ├─ Full message displayed
+          ├─ User can continue conversation
+          └─ Toast: "Login to save chat history"
+          │
+          ▼
+[User Decides]
+          │
+          ├─ Continue as guest (temp chat)
+          └─ Login to save (GitHub OAuth)
+                │
+                └─▶ [Scenario 3: User Login]
+```
+
+---
+
+## Scenario 2: Returning User Workflow
+
+```
+[User Lands on Homepage]
+          │
+          ├─ Already logged in (session cookie)
+          ├─ Sidebar shows chat history
+          └─ Avatar and username displayed
+          │
+          ▼
+[User Selects Action]
+          │
+          ├─ Option A: Open Existing Chat
+          │     │
+          │     ├─ Click chat in sidebar
+          │     ├─ GET /api/chats/[id]
+          │     ├─ Load message history
+          │     └─ Continue conversation
+          │
+          ├─ Option B: Start New Chat
+          │     │
+          │     ├─ Click "New Chat" button
+          │     ├─ Navigate to /
+          │     └─ Input first message
+          │
+          └─ Option C: Upload File for AI Analysis
+                │
+                └─▶ [Scenario 4: File Upload]
+          │
+          ▼
+[Chat with AI]
+          │
+          ├─ Messages saved automatically
+          ├─ Chat title auto-generated
+          └─ Visible in sidebar
+          │
+          ▼
+[Manage Chat]
+          │
+          ├─ Rename (PATCH /api/chats/[id]/title)
+          ├─ Toggle Visibility (PATCH /api/chats/[id]/visibility)
+          │     ├─ Private: Only user can see
+          │     └─ Public: Anyone with link can view
+          └─ Delete (DELETE /api/chats/[id])
+                ├─ Confirm dialog
+                └─ Cascade delete messages & votes
+```
+
+---
+
+## Scenario 3: User Login Journey
+
+```
+[User Clicks "Login"]
+          │
+          └─ Click "Login with GitHub" button
+          │
+          ▼
+[Redirect to GitHub]
+          │
+          ├─ GitHub OAuth authorization page
+          ├─ Shows requested permissions:
+          │   - Read email
+          │   - Read profile
+          └─ User sees app name & logo
+          │
+          ▼
+[User Authorizes]
+          │
+          ├─ Click "Authorize [App Name]"
+          └─ GitHub redirects to callback
+          │
+          ▼
+[Server Processes OAuth]
+          │
+          ├─ GET /auth/github
+          ├─ Exchange code for token
+          ├─ Fetch user info from GitHub
+          └─ Create or update user in database
+          │
+          ▼
+[Session Created]
+          │
+          ├─ Set secure HTTP-only cookie
+          ├─ Encrypt session with password
+          └─ Redirect to homepage
+          │
+          ▼
+[User Now Authenticated]
+          │
+          ├─ Avatar shown in navbar
+          ├─ Username displayed
+          ├─ File upload enabled
+          └─ Chat history visible
+          │
+          ▼
+[Protected Features Unlocked]
+          │
+          ├─ Upload files
+          ├─ Save chat history
+          ├─ Manage chats
+          └─ Set chat visibility
+```
+
+---
+
+## Scenario 4: File Upload & AI Analysis
+
+```
+[User Opens Chat]
+          │
+          ├─ Must be logged in
+          └─ Authentication check passes
+          │
+          ▼
+[User Selects File]
+          │
+          ├─ Option A: Drag & Drop
+          │     ├─ Drag file over chat window
+          │     ├─ Drop zone highlights
+          │     └─ File attached
+          │
+          └─ Option B: Click Upload Button
+                ├─ File picker opens
+                ├─ Select file (image, PDF, etc.)
+                └─ File attached
+          │
+          ▼
+[File Preview]
+          │
+          ├─ Thumbnail displayed
+          ├─ File name and size shown
+          ├─ Can remove before upload
+          └─ Multiple files supported
+          │
+          ▼
+[User Adds Prompt]
+          │
+          ├─ Type question about file
+          ├─ Example: "What's in this image?"
+          └─ Or: "Summarize this document"
+          │
+          ▼
+[Upload to Storage]
+          │
+          ├─ PUT /api/upload/[chatId]
+          ├─ File uploaded to Blob storage
+          │   - Local: .data/blob/
+          │   - Vercel Blob (production)
+          │   - Or R2 / S3
+          ├─ Returns: { url, mediaType }
+          └─ Upload progress shown
+          │
+          ▼
+[Send Multimodal Message]
+          │
+          ├─ POST /api/chats/[id]
+          ├─ Message parts:
+          │   - { type: 'text', text: '...' }
+          │   - { type: 'image', url: '...', mediaType: '...' }
+          └─ Attached to message
+          │
+          ▼
+[AI Analyzes File]
+          │
+          ├─ AI model processes image/file
+          ├─ Understands content
+          └─ Streams response
+          │
+          ▼
+[Response Displayed]
+          │
+          ├─ File preview in user message
+          ├─ AI analysis in assistant message
+          ├─ Can follow up with questions
+          └─ File saved in chat history
+```
+
+---
+
+## Scenario 5: Model Switching
+
+```
+[User in Chat]
+          │
+          └─ Click model selector dropdown
+          │
+          ▼
+[View Available Models]
+          │
+          ├─ Claude Haiku 4.5
+          ├─ Gemini 3 Flash
+          └─ GPT-5 Nano
+          │
+          ├─ Current model highlighted
+          └─ Descriptions shown
+          │
+          ▼
+[User Selects Different Model]
+          │
+          ├─ Click on new model
+          ├─ Dropdown closes
+          └─ Confirmation toast shown
+          │
+          ▼
+[Model Updated]
+          │
+          ├─ Selection saved to localStorage/state
+          ├─ UI updates model badge
+          └─ Next messages use new model
+          │
+          ▼
+[Historical Context]
+          │
+          ├─ Previous messages unchanged
+          ├─ Each message tagged with model used
+          └─ User can see model differences
+          │
+          ▼
+[Send Message with New Model]
+          │
+          ├─ POST /api/chats/[id]
+          ├─ Server uses selected model
+          └─ Response characteristics differ:
+                ├─ Speed variations
+                ├─ Style variations
+                └─ Context window differences
+```
+
+---
+
+## Scenario 6: AI Tool Usage (Web Search)
+
+```
+[User Asks Time-Sensitive Question]
+          │
+          └─ Example: "What happened in tech today?"
+          │
+          ▼
+[AI Recognizes Need]
+          │
+          ├─ Question requires real-time data
+          ├─ AI decides to use web_search tool
+          └─ Generates tool call request
+          │
+          ▼
+[Tool Execution]
+          │
+          ├─ Server receives tool call
+          ├─ Executes web search (Anthropic/OpenAI built-in)
+          └─ Returns search results:
+                ├─ URLs
+                ├─ Titles
+                └─ Snippets
+          │
+          ▼
+[AI Processes Results]
+          │
+          ├─ Receives search data
+          ├─ Analyzes multiple sources
+          └─ Synthesizes information
+          │
+          ▼
+[Streamed Response]
+          │
+          ├─ AI integrates findings
+          ├─ Cites sources
+          └─ Provides comprehensive answer
+          │
+          ▼
+[UI Rendering]
+          │
+          ├─ Tool result component (Sources.vue)
+          ├─ Clickable source links
+          ├─ Integrated AI summary
+          └─ User can explore sources
+```
+
+---
+
+## Scenario 7: Chat Sharing (Public Link)
+
+```
+[User Wants to Share Chat]
+          │
+          ├─ Must be logged in
+          └─ Must own the chat
+          │
+          ▼
+[User Toggles Visibility]
+          │
+          ├─ Click visibility button
+          ├─ Confirm "Make Public"
+          └─ PATCH /api/chats/[id]/visibility
+          │
+          ▼
+[Visibility Updated]
+          │
+          ├─ Database: visibility = 'public'
+          ├─ UI shows public icon
+          └─ Copy link button appears
+          │
+          ▼
+[User Copies Link]
+          │
+          ├─ Copy /chat/[id] URL
+          └─ Share via email, social, etc.
+          │
+          ▼
+[Recipient Opens Link]
+          │
+          ├─ No login required
+          ├─ GET /api/chats/[id]
+          ├─ Permission check: visibility === 'public'
+          └─ Chat history displayed
+          │
+          ▼
+[Recipient Limitations]
+          │
+          ├─ Can view messages
+          ├─ Cannot edit or delete
+          ├─ Cannot send new messages
+          └─ Prompt to login for own chat
+```
+
+---
+
+## Permission Matrix
+
+| Action                  | Guest | Logged In | Owner | Public Link |
+|------------------------|-------|-----------|-------|-------------|
+| View home              | ✅    | ✅        | ✅    | ✅          |
+| Chat (temp)            | ✅    | ✅        | ✅    | ❌          |
+| Create saved chat      | ❌    | ✅        | ✅    | ❌          |
+| View own chats         | ❌    | ✅        | ✅    | ❌          |
+| View public chat       | ✅    | ✅        | ✅    | ✅          |
+| Upload files           | ❌    | ✅        | ✅    | ❌          |
+| Rename chat            | ❌    | ❌        | ✅    | ❌          |
+| Delete chat            | ❌    | ❌        | ✅    | ❌          |
+| Toggle visibility      | ❌    | ❌        | ✅    | ❌          |
+| Vote on messages       | ✅    | ✅        | ✅    | ✅          |
+
+---
+
+## Feature Flag / Config Impact
+
+| Feature             | Config                     | Impact When Missing        |
+|--------------------|----------------------------|----------------------------|
+| AI Chat            | AI_GATEWAY_API_KEY         | No AI responses            |
+| User Login         | NUXT_OAUTH_GITHUB_*        | Guest-only mode            |
+| File Upload        | BLOB_READ_WRITE_TOKEN      | Upload fails (prod only)   |
+| Session Security   | NUXT_SESSION_PASSWORD      | Cannot create sessions     |
+| Database (prod)    | TURSO_DATABASE_URL         | Falls back to local SQLite |
