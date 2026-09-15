@@ -40,6 +40,10 @@ _Avoid_: Page Content, Browser Session
 扩展基于一个 GEO Cycle 的 frozen Query Set 新建并闭环的浏览器执行任务；它拥有逐条 Query 的执行状态，Cowork 只消费其模型结果，不推进该任务。
 _Avoid_: Query Set, GEO Cycle, Cowork Run
 
+**Cycle Query Input**:
+Cowork 向 Browser Server 注册的版本化 Cycle、Query Set 与 Query 绑定快照；它只提供 Browser Query Task 输入，不把 GEO Cycle 所有权转给浏览器产品。
+_Avoid_: GEO Cycle, Browser Query Task, Live Workspace Read
+
 **Query Attempt**:
 一条 Query 的一次执行尝试；成功 attempt 保存完整回答、Citation raw 与 capture manifest，失败 attempt 保存不可变 collector log。重试创建新 attempt，不覆盖历史。
 _Avoid_: Query Version, Answer Review

@@ -4,9 +4,17 @@ kind: index
 status: verified
 sources:
   - AGENTS.md
+  - CONTEXT.md
+  - CONTEXT-MAP.md
   - docs/workflow.md
   - docs/README.md
   - docs/plans/2026-08-23-geo-cowork-final-product-plan.md
+  - docs/prd/2026-09-04-authorized-real-geo-cycle.md
+  - docs/plans/2026-09-04-real-cycle-blocker-closure-plan.md
+  - docs/tasks/2026-09-04-real-cycle-blocker-closure.md
+  - docs/records/2026-09-04-real-cycle-blocker-closure-planning-record.md
+  - docs/records/2026-09-02-myyshop-real-cycle-readiness-report.md
+  - workspaces/myyshop/STATUS.md
   - docs/records/2026-08-24-m2-contract-provenance-kernel-record.md
   - docs/records/2026-08-24-m3-knowledge-query-operating-system-record.md
   - docs/records/2026-08-24-m3-business-object-approval-record.md
@@ -24,7 +32,7 @@ sources:
   - docs/requirements/2026-08-25-platform-automation-permission-backlog.md
   - docs/specs/0006-consumer-answer-testing.md
   - docs/plans/2026-08-24-m5-consumer-answer-testing-plan.md
-updated: 2026-08-25
+updated: 2026-09-04
 ---
 
 # geo-cowork 知识库导航
@@ -35,7 +43,7 @@ updated: 2026-08-25
 
 | 页面 | kind | status | updated |
 | --- | --- | --- | --- |
-| [index.md](index.md)（本页） | index | verified | 2026-08-25 |
+| [index.md](index.md)（本页） | index | verified | 2026-09-04 |
 
 新 Wiki 页面按 `docs/workflow.md` 第 2 章 Frontmatter 要求建档后加入本索引；原始来源变更而未同步时须标明过期或更新 `updated`。
 
@@ -44,7 +52,14 @@ updated: 2026-08-25
 - 仓级规则：[`../../AGENTS.md`](../../AGENTS.md)
 - 工作流规范：[`../workflow.md`](../workflow.md)
 - 文档导航：[`../README.md`](../README.md)
+- 领域上下文：[`../../CONTEXT-MAP.md`](../../CONTEXT-MAP.md)
 - 当前批准产品基线：[`../plans/2026-08-23-geo-cowork-final-product-plan.md`](../plans/2026-08-23-geo-cowork-final-product-plan.md)
+- Authorized-real/v1 PRD：[`../prd/2026-09-04-authorized-real-geo-cycle.md`](../prd/2026-09-04-authorized-real-geo-cycle.md)（`proposed`）
+- 当前下一行动计划：[`../plans/2026-09-04-real-cycle-blocker-closure-plan.md`](../plans/2026-09-04-real-cycle-blocker-closure-plan.md)（`proposed`）
+- 当前任务图：[`../tasks/2026-09-04-real-cycle-blocker-closure.md`](../tasks/2026-09-04-real-cycle-blocker-closure.md)（`proposed`）
+- 当前规划记录：[`../records/2026-09-04-real-cycle-blocker-closure-planning-record.md`](../records/2026-09-04-real-cycle-blocker-closure-planning-record.md)（`verified`；仅规划范围）
+- MyyShop 当前状态：[`../../workspaces/myyshop/STATUS.md`](../../workspaces/myyshop/STATUS.md)
+- Real Cycle Readiness：[`../records/2026-09-02-myyshop-real-cycle-readiness-report.md`](../records/2026-09-02-myyshop-real-cycle-readiness-report.md)
 - M2 本地验收：[`../records/2026-08-24-m2-contract-provenance-kernel-record.md`](../records/2026-08-24-m2-contract-provenance-kernel-record.md)
 - M3 本地验收：[`../records/2026-08-24-m3-knowledge-query-operating-system-record.md`](../records/2026-08-24-m3-knowledge-query-operating-system-record.md)
 - M3 业务对象批准：[`../records/2026-08-24-m3-business-object-approval-record.md`](../records/2026-08-24-m3-business-object-approval-record.md)

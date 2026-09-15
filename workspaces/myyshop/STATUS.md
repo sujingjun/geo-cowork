@@ -1,6 +1,6 @@
 # MyyShop 工作区状态
 
-> 最近更新：2026-09-02
+> 最近更新：2026-09-04
 
 ## 当前阶段
 
@@ -15,10 +15,11 @@ M2—M5 历史工程状态保持。2026-09-02 已登记唯一线上 Merchant `ME
 - trace 关系完整且 `lifecycle_ready:true`，`gates:[]`；批准来源为 Owner 当前会话决定，不是 Agent 自动批准；
 - `KR-MYYSHOP-DEFINITION-001` 的 `published/ready` 只表示本地正式知识包，不表示任何外部内容发布；
 - 当前 Site 技术结果：For Creators 与 MyyFinds 九项通过；首页、About、Brand Deals 有 canonical 相关 Finding，About 另缺 heading；sitemap 首次假阳性已由 `v1.0.2` 修复并保留旧 Run 轨迹；
-- 没有 Evidence 人工批准、Content/Evidence/Product Gap 确认、Proposal、Adoption、Publication、部署或业务效果验证；GA4/GSC smoke 只证明指定窗口的只读接口可用，不证明业务效果。
+- 新采集的 11 份一方 Evidence 与本次 real slice 尚未获得人工批准；Content/Evidence/Product Gap、Proposal、Adoption、Publication、部署或业务效果也未确认。历史已批准 Evidence 继续保留原状态；GA4/GSC smoke 只证明指定窗口的只读接口可用，不证明业务效果。
 - M5 Requirement、PRD、Architecture、Spec 0006 与 Plan 均为 `approved`；五平台正式英文两槽 Baseline 已完成并可重算，但 Task 继续为 `implemented`：10 个 Answer Review 仍为 candidate，100 Source 批量 Classification/Claim Support 尚未触发，post-change Retest 另缺 M4 Publication/Technical Retest。账号标识、凭据、浏览器历史和完整 DOM 不落盘。
 - 信源体系的唯一候选发现入口是获授权真实 Run 的 Citation Observation；无外部综合榜、静态域名表或历史排名 import 路径。
-- 当前 M5 共 133 个 Citation Observation，引用 40 个唯一 Source；全部进入 `archived_unclassified`，距离 100 Source 批量分类门还差 60 个。既有 27 个 candidate Classification 已转为 `superseded` 历史，不进入当前口径。
+- 当前 M5 共 133 个 Citation Observation，引用 40 个唯一 Source；全部进入 `archived_unclassified`，距离 100 Source 批量分类触发器还差 60 个。既有 27 个 candidate Classification 已转为 `superseded` 历史，不进入当前口径。
+- 2026-09-04 Owner 明确决定：Citation Observation 当前用于记录、Source identity、Baseline/Retest provenance 与质量指标；40→100 和后续 Classification/Claim Support 不得阻止真实 GEO Cycle 的启动、推进或完成。它是否仍为独立 M5/v1 交付门，由后续 authorized-real PRD 明确。
 - 五个平台各有两个 candidate Answer Review；Gemini 两槽 `current_positioning:fail`，其余平台两槽均为 `partial`。由于最新完整业务知识库尚未建立，所有 `core_fact_accuracy` 与 `citation_quality` 暂为 `partial`，不得升级为最终事实判断。
 - 五个平台 Aggregation 均为 `computed` 且 `selected_sample_count:2`；因 region/model/viewport 等存在 unknown 或软差异，comparability 全部为 `partial`。分类覆盖率为 0，Source Type、party relation 与 Claim Support 指标保持 partial/null。
 - 当前定位与中英语义合同由 `cycles/preparation/decisions/2026-08-26-m5-two-slot-source-batch-and-positioning-approved.md` 冻结；它是 M5 评估合同，不自动替代 M3 Knowledge Release 或证明外部发布。
@@ -27,4 +28,4 @@ M2—M5 历史工程状态保持。2026-09-02 已登记唯一线上 Merchant `ME
 
 ## 下一动作
 
-工程侧继续使用 `KBASE-MYYSHOP-DEVTEST-001` 回归。真实启动不等待全部 120 条知识，只等待拟启动 Goal 的真实知识切片形成批准闭包，并按 `docs/runbooks/myyshop-real-cycle-start.md` 切换显式 `knowledge_base_ref`。由事实 Owner 单独审阅新 Analytics candidate Evidence；不得自动绑定 Claim 或解释为因果效果。M5 的 10 个 candidate Answer Review、60 个 Source 差额、M4 Publication/Retest 和业务效果门继续独立保留。
+工程侧继续使用 `KBASE-MYYSHOP-DEVTEST-001` 回归；当前先审阅 `docs/prd/2026-09-04-authorized-real-geo-cycle.md`，PRD 获批后再起草 authorized-real 全链 Spec。真实启动不等待全部 120 条知识，只等待英文 `What is MyyShop?` Goal 的真实知识切片形成批准闭包，并按 `docs/runbooks/myyshop-real-cycle-start.md` 切换显式 `knowledge_base_ref`。由事实 Owner 单独审阅新 Analytics candidate Evidence；不得自动绑定 Claim 或解释为因果效果。M5 的 10 个 candidate Answer Review 与 M4 Publication/Retest 仍是对应阶段门；60 个 Source 差额独立并行，不阻塞 Cycle。
