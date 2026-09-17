@@ -1,0 +1,46 @@
+{
+  "audit": {
+    "attempts": [
+      "MODEL-eeb6a0ee-105d-4d8d-9416-1d9da260bd9e"
+    ],
+    "completed_at": "2026-09-15T20:38:38.389Z",
+    "duration_ms": 979,
+    "extraction_validation": "passed",
+    "finish_reason": "stop",
+    "http_status": 200,
+    "id": "MODEL-eeb6a0ee-105d-4d8d-9416-1d9da260bd9e",
+    "input_sha256": "f1cb847e9b663f1bd6ce39b2a132fa91e674eace4ffd22be4400999648a3a654",
+    "model": "deepseek-flash",
+    "output_sha256": "eef1ee48a5a485bc4e2ea653178a97df41558840ba1ec5c0b6b77cf288ac3871",
+    "prompt_sha256": "e5d2c9a2481b77f774d18dc813bd55ef7805d120c8b02d6e068af72999a4b872",
+    "provider": "deepseek",
+    "request_options": {
+      "reasoning_effort": null,
+      "thinking": "disabled"
+    },
+    "response_model": "deepseek-flash",
+    "started_at": "2026-09-15T20:38:37.410Z",
+    "status": "completed",
+    "usage": {
+      "completion_tokens": 110,
+      "prompt_cache_hit_tokens": 640,
+      "prompt_cache_miss_tokens": 154,
+      "prompt_tokens": 794,
+      "prompt_tokens_details": {
+        "cached_tokens": 640
+      },
+      "total_tokens": 904
+    }
+  },
+  "output": {
+    "answer": {
+      "completeness": "partial",
+      "html_structure_summary": "Plain text with two paragraphs separated by a blank line; no HTML elements present.",
+      "refusal": false,
+      "text": "Rehearsal eligibility FAQ Creator eligibility and evidence FAQ Details will be supplied after the new Goal review.\n\nSynthetic consumer input for: What capabilities does the MyyShop rehearsal support, including campaign discovery, applications, reports, and automatic acceptance limits?"
+    },
+    "citations": [],
+    "platform_annotations": [],
+    "warnings": []
+  }
+}

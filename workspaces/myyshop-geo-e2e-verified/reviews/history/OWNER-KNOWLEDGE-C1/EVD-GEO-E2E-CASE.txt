@@ -1,0 +1,28 @@
+---
+id: EVD-GEO-E2E-CASE
+record_type: evidence
+status: candidate
+version: 1.0.0
+created_at: '2026-09-16T00:00:00Z'
+updated_at: '2026-09-16T00:00:00Z'
+title: Case study
+test_scope:
+  kind: synthetic
+  usage: test_only
+  merchant_ref: MER-MYYSHOP-001
+  workspace_id: ws_377ec2e00b68d35bf465ab5d6e
+  knowledge_base_ref: KBASE-GEO-E2E-377EC2E00B68
+source_refs:
+  - SRC-GEO-E2E-CASE
+locator: 'https://knowledge.geo-e2e.invalid/case'
+captured_at: '2026-09-16T00:00:00Z'
+snapshot:
+  path: evidence/snapshots/case.txt
+  sha256: cbde3348d01680aa5a7d69cd46602a2ecc813d308d02ad4413c1355dca3c955b
+  media_type: text/plain
+collector:
+  name: business-input-reader
+  version: 1.0.0
+scope: Synthetic rehearsal only.
+---
+# Case study

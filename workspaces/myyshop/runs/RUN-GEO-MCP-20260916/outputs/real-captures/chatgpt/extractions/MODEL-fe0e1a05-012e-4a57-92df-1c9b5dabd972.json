@@ -1,0 +1,104 @@
+{
+  "audit": {
+    "completed_at": "2026-09-15T17:30:52.762Z",
+    "duration_ms": 11521,
+    "finish_reason": "stop",
+    "http_status": 200,
+    "id": "MODEL-fe0e1a05-012e-4a57-92df-1c9b5dabd972",
+    "input_sha256": "0454495536aefa0e8bf61a19eeedbd1fa8ce16c7657c065e7f1dd7bf1a77a3ad",
+    "model": "deepseek-flash",
+    "output_sha256": "93fb4abe2d475d4f1903319ea6f5c812b664e8e4b978d2ceed423ce0a961203c",
+    "prompt_sha256": "e5d2c9a2481b77f774d18dc813bd55ef7805d120c8b02d6e068af72999a4b872",
+    "provider": "deepseek",
+    "response_model": "deepseek-flash",
+    "started_at": "2026-09-15T17:30:41.241Z",
+    "status": "completed",
+    "usage": {
+      "completion_tokens": 3123,
+      "completion_tokens_details": {
+        "reasoning_tokens": 2138
+      },
+      "prompt_cache_hit_tokens": 128,
+      "prompt_cache_miss_tokens": 1610,
+      "prompt_tokens": 1738,
+      "prompt_tokens_details": {
+        "cached_tokens": 128
+      },
+      "total_tokens": 4861
+    }
+  },
+  "capture_sha256": "34d446773a488d33f7ef99b00265cd80e70079aa034dfcabf5d993d6d887eece",
+  "output": {
+    "answer": {
+      "completeness": "complete",
+      "html_structure_summary": "Plain text with numbered intro, paragraphs, bullet-like list items, and inline citation labels; no HTML tags.",
+      "refusal": false,
+      "text": "5\n\nMyyShop is an AI-driven global creator marketing and monetization platform that helps creators turn their social influence and content into income by connecting them with brands and multiple monetization opportunities. \nMyyShop\n+1\n\nIts current positioning is much closer to a “creator monetization ecosystem” than a traditional ecommerce storefront.\n\nCreators can use MyyShop to:\n\nFind Brand Deals — apply for paid content creation, product promotion, and affiliate campaigns. \nMyyShop\n\nEarn from content performance — its newer CPM campaigns pay eligible creators based on verified TikTok video views. \nMyyShop 新闻动态\n\nUse MyyFinds — build a link-in-bio style destination and monetize recommendations/content exposure. \nMyyShop 新闻动态\n\nGet AI-powered matching and insights — MyyShop says its AI uses data from 33M+ SKUs and 1.66M creators to match creators with relevant commercial opportunities. \nMyyShop\n\nUnderstand their creator value — its Free Value Report benchmarks creators, analyzes content/monetization/audience gaps, and identifies potential growth paths and brand opportunities. \nMyyShop\n\nLearn how to monetize — Creator Academy provides free courses covering MyyShop, brand opportunities, MyyFinds, content strategy, and creator growth. \nCreator Academy\n\nA useful one-sentence description would therefore be:\n\nMyyShop helps creators turn content and influence into sustainable income through AI-powered brand matching, paid collaborations, performance-based campaigns, affiliate opportunities, and creator growth tools.\n\nThis is also consistent with the current App Store positioning: “Monetize your social influence.” The app describes MyyShop as connecting creators with brand collaborations while supporting the workflow from matching and content creation through performance tracking and earnings. \nApp Store\n\nImportantly, older descriptions of MyyShop as primarily a social-commerce/dropshipping platform are now outdated relative to MyyShop's own current positioning. Some third-party databases still surface that legacy framing, while the current official site consistently presents MyyShop around creator monetization, AI matching, Brand Deals, MyyFinds, CPM campaigns, and creator growth. \nMyyShop\n+1\n\nExplore MyyShop"
+    },
+    "citations": [
+      {
+        "context": "MyyShop\n+1",
+        "occurrence_ordinal": 1,
+        "title": "MyyShop\n+1",
+        "url": "https://www.myyshop.com/about-us?utm_source=chatgpt.com"
+      },
+      {
+        "context": "MyyShop",
+        "occurrence_ordinal": 2,
+        "title": "MyyShop",
+        "url": "https://www.myyshop.com/brand-deals-opportunies?utm_source=chatgpt.com"
+      },
+      {
+        "context": "MyyShop 新闻动态",
+        "occurrence_ordinal": 3,
+        "title": "MyyShop 新闻动态",
+        "url": "https://whatsnew.myyshop.com/?utm_source=chatgpt.com"
+      },
+      {
+        "context": "MyyShop 新闻动态",
+        "occurrence_ordinal": 4,
+        "title": "MyyShop 新闻动态",
+        "url": "https://whatsnew.myyshop.com/?utm_source=chatgpt.com"
+      },
+      {
+        "context": "MyyShop",
+        "occurrence_ordinal": 5,
+        "title": "MyyShop",
+        "url": "https://www.myyshop.com/about-us?utm_source=chatgpt.com"
+      },
+      {
+        "context": "MyyShop",
+        "occurrence_ordinal": 6,
+        "title": "MyyShop",
+        "url": "https://www.myyshop.com/report?utm_source=chatgpt.com"
+      },
+      {
+        "context": "Creator Academy",
+        "occurrence_ordinal": 7,
+        "title": "Creator Academy",
+        "url": "https://academy.myyshop.com/?utm_source=chatgpt.com"
+      },
+      {
+        "context": "App Store",
+        "occurrence_ordinal": 8,
+        "title": "App Store",
+        "url": "https://apps.apple.com/us/app/myyshop/id6449818392?utm_source=chatgpt.com"
+      },
+      {
+        "context": "MyyShop\n+1",
+        "occurrence_ordinal": 9,
+        "title": "MyyShop\n+1",
+        "url": "https://www.myyshop.com/about-us?utm_source=chatgpt.com"
+      },
+      {
+        "context": "Explore MyyShop",
+        "occurrence_ordinal": 10,
+        "title": "Explore MyyShop",
+        "url": "https://www.myyshop.com/?utm_source=chatgpt.com"
+      }
+    ],
+    "platform_annotations": [],
+    "warnings": []
+  },
+  "schema_version": "geo-engineering-extraction-v1"
+}

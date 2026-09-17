@@ -1,3 +1,4 @@
+import { createBrowserExtractor } from './extractor'
 import type { BrowserExtractor } from '../../../shared/types/browser-query'
 import { MemoryBrowserQueryRepository } from './memory-repository'
 import { BrowserQueryService } from './service'
@@ -60,32 +61,11 @@ export function adapterRegistry() {
   }
 }
 
-export function fakeExtractor(): BrowserExtractor {
-  return {
-    profile: {
-      provider: 'fake',
-      model: 'fixture-extractor-v1',
-      promptVersion: 'browser-query-extract-v1',
-      promptSha256: 'b'.repeat(64),
-      schemaVersion: 'geo-browser-extraction-result-v1'
-    },
-    async extract(input) {
-      return {
-        answer: {
-          text: input.answerText,
-          html_structure_summary: 'one answer root',
-          refusal: input.outcome === 'refusal',
-          completeness: 'complete'
-        },
-        citations: input.citations,
-        platform_annotations: [],
-        warnings: []
-      }
-    }
-  }
+export function realExtractor(): BrowserExtractor {
+  return createBrowserExtractor()
 }
 
-export function service(extractor: BrowserExtractor = fakeExtractor()) {
+export function service(extractor: BrowserExtractor = realExtractor()) {
   return new BrowserQueryService({
     repository: new MemoryBrowserQueryRepository(),
     adapterRegistry: adapterRegistry(),

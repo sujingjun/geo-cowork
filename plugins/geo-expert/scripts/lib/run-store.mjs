@@ -59,6 +59,7 @@ export async function createRun({
   inputVersions,
   now,
   supersedesRef,
+  testScope,
 }) {
   const versions = sortedInputVersions(inputVersions);
   const data = {
@@ -69,6 +70,7 @@ export async function createRun({
     created_at: now,
     updated_at: now,
     title: `${skill} run`,
+    ...(testScope ? { test_scope: { ...testScope } } : {}),
     skill,
     skill_version: skillVersion,
     input_refs: Object.keys(versions),

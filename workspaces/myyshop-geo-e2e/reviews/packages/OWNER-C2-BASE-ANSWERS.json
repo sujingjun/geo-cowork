@@ -1,0 +1,374 @@
+{
+  "actions": [
+    "approve",
+    "reject",
+    "defer"
+  ],
+  "body_sha256": "3639b5d79acc90152fe2fd93dd8a3e4dda89d6e7c7c875e488db6fd4cfddb317",
+  "id": "OWNER-C2-BASE-ANSWERS",
+  "kind": "answer_review",
+  "schema_version": "geo-owner-package-v1",
+  "targets": [
+    {
+      "id": "ARV-GEO-C2-BASE-Q1-CHATGPT-1",
+      "path": "cycles/m5/reviews/arv-geo-c2-base-q1-chatgpt-1.md",
+      "sha256": "ea87b0d935528f789408e6899a7211256649d8c7f54cbd84b4869ddc0ad85379",
+      "version": "1.0.0"
+    },
+    {
+      "id": "ARV-GEO-C2-BASE-Q1-CHATGPT-2",
+      "path": "cycles/m5/reviews/arv-geo-c2-base-q1-chatgpt-2.md",
+      "sha256": "892ec68e59f4638bb2239e2178dff20af08e973446fd135cd3d0c7f9920bc920",
+      "version": "1.0.0"
+    },
+    {
+      "id": "ARV-GEO-C2-BASE-Q1-GEMINI-1",
+      "path": "cycles/m5/reviews/arv-geo-c2-base-q1-gemini-1.md",
+      "sha256": "00a7716f7d4bb18b3acc68f491f53648a92ac48164d7536023b3db2319757f74",
+      "version": "1.0.0"
+    },
+    {
+      "id": "ARV-GEO-C2-BASE-Q1-GEMINI-2",
+      "path": "cycles/m5/reviews/arv-geo-c2-base-q1-gemini-2.md",
+      "sha256": "bf51b9e3af9b233792c832f4d83daa92e92b076571dab257f6de89ed649e0804",
+      "version": "1.0.0"
+    },
+    {
+      "id": "ARV-GEO-C2-BASE-Q1-PERPLEXITY-1",
+      "path": "cycles/m5/reviews/arv-geo-c2-base-q1-perplexity-1.md",
+      "sha256": "ccbbe9083328a34f92c966619d8158219bfaad6ade1e262a7ae07777d38bbff0",
+      "version": "1.0.0"
+    },
+    {
+      "id": "ARV-GEO-C2-BASE-Q1-PERPLEXITY-2",
+      "path": "cycles/m5/reviews/arv-geo-c2-base-q1-perplexity-2.md",
+      "sha256": "2ae376ff2f7949e019bcac72f1f61439f6bd95a72325cd51a44bf57870e78d78",
+      "version": "1.0.0"
+    },
+    {
+      "id": "ARV-GEO-C2-BASE-Q1-GOOGLE-AI-1",
+      "path": "cycles/m5/reviews/arv-geo-c2-base-q1-google-ai-1.md",
+      "sha256": "a930134e9b2113a894a27fd0428c6bd6c8f1fff389453f7f7ff4f12ef2bb445b",
+      "version": "1.0.0"
+    },
+    {
+      "id": "ARV-GEO-C2-BASE-Q1-GOOGLE-AI-2",
+      "path": "cycles/m5/reviews/arv-geo-c2-base-q1-google-ai-2.md",
+      "sha256": "11099c84feb2382d7acd6d9e3bdfa2058d92e84a919bf03ed9a804eedd32d7f2",
+      "version": "1.0.0"
+    },
+    {
+      "id": "ARV-GEO-C2-BASE-Q1-CLAUDE-1",
+      "path": "cycles/m5/reviews/arv-geo-c2-base-q1-claude-1.md",
+      "sha256": "fa2c3c8cfbe48572899d844a7cc5fe4809fe84126a853954c44295480ec27567",
+      "version": "1.0.0"
+    },
+    {
+      "id": "ARV-GEO-C2-BASE-Q1-CLAUDE-2",
+      "path": "cycles/m5/reviews/arv-geo-c2-base-q1-claude-2.md",
+      "sha256": "3ff4d53cdb98fce4d4dd44b19878af12c66640e9f7dbe238d88ea7e9ae842412",
+      "version": "1.0.0"
+    },
+    {
+      "id": "ARV-GEO-C2-BASE-Q2-CHATGPT-1",
+      "path": "cycles/m5/reviews/arv-geo-c2-base-q2-chatgpt-1.md",
+      "sha256": "ad53c96c9fe9266023ecd4c5c20089d01bf5573c72d00137f2a2a1e0bbf55320",
+      "version": "1.0.0"
+    },
+    {
+      "id": "ARV-GEO-C2-BASE-Q2-CHATGPT-2",
+      "path": "cycles/m5/reviews/arv-geo-c2-base-q2-chatgpt-2.md",
+      "sha256": "1985eba1c8de076f5d5d7e8f02bce53fd61d6d7beab6f637fe83ff2b1d202bb0",
+      "version": "1.0.0"
+    },
+    {
+      "id": "ARV-GEO-C2-BASE-Q2-GEMINI-1",
+      "path": "cycles/m5/reviews/arv-geo-c2-base-q2-gemini-1.md",
+      "sha256": "7e0fa891cf1d13e70f497c754bd70ed1515610ca8c1f62810d5ce6ad223dd581",
+      "version": "1.0.0"
+    },
+    {
+      "id": "ARV-GEO-C2-BASE-Q2-GEMINI-2",
+      "path": "cycles/m5/reviews/arv-geo-c2-base-q2-gemini-2.md",
+      "sha256": "6728aa9893289eff1a4a7c9866b7cb83e0328d4bbbf54fe07d348127fd0d68e4",
+      "version": "1.0.0"
+    },
+    {
+      "id": "ARV-GEO-C2-BASE-Q2-PERPLEXITY-1",
+      "path": "cycles/m5/reviews/arv-geo-c2-base-q2-perplexity-1.md",
+      "sha256": "d44a40441037a686d57b2da208f0eccfc40cb9918a63e81940ffd613c3ebd342",
+      "version": "1.0.0"
+    },
+    {
+      "id": "ARV-GEO-C2-BASE-Q2-PERPLEXITY-2",
+      "path": "cycles/m5/reviews/arv-geo-c2-base-q2-perplexity-2.md",
+      "sha256": "1d75355cf8c4e4c93cf5b2d65ecd58c22917ecc5354bbcdf3c1708db8f25f46d",
+      "version": "1.0.0"
+    },
+    {
+      "id": "ARV-GEO-C2-BASE-Q2-GOOGLE-AI-1",
+      "path": "cycles/m5/reviews/arv-geo-c2-base-q2-google-ai-1.md",
+      "sha256": "967effa1184daec5472e82f8cb491d8ff3fb1c4758f8f3c7948e06fc580e7877",
+      "version": "1.0.0"
+    },
+    {
+      "id": "ARV-GEO-C2-BASE-Q2-GOOGLE-AI-2",
+      "path": "cycles/m5/reviews/arv-geo-c2-base-q2-google-ai-2.md",
+      "sha256": "d7bd8abf6f0bff102b8309ec9e33cb4e26fcd1de613afbcb1404667aeb46cf2c",
+      "version": "1.0.0"
+    },
+    {
+      "id": "ARV-GEO-C2-BASE-Q2-CLAUDE-1",
+      "path": "cycles/m5/reviews/arv-geo-c2-base-q2-claude-1.md",
+      "sha256": "692f4597210ad333690e721d62f829dc7d7172cffc324350623268cff8895ff9",
+      "version": "1.0.0"
+    },
+    {
+      "id": "ARV-GEO-C2-BASE-Q2-CLAUDE-2",
+      "path": "cycles/m5/reviews/arv-geo-c2-base-q2-claude-2.md",
+      "sha256": "a21f3ce266b54009dedd8b63b1091c3bf49f22ba12c198125892933785a131af",
+      "version": "1.0.0"
+    },
+    {
+      "id": "ARV-GEO-C2-BASE-Q3-CHATGPT-1",
+      "path": "cycles/m5/reviews/arv-geo-c2-base-q3-chatgpt-1.md",
+      "sha256": "40b125c6c8f262b9c704342f3136788365273fbbd85991ab2095ed0d326d07fc",
+      "version": "1.0.0"
+    },
+    {
+      "id": "ARV-GEO-C2-BASE-Q3-CHATGPT-2",
+      "path": "cycles/m5/reviews/arv-geo-c2-base-q3-chatgpt-2.md",
+      "sha256": "2421a830928b21990e806edaeb160bb7443a86c73822bfc404d871f441352cd0",
+      "version": "1.0.0"
+    },
+    {
+      "id": "ARV-GEO-C2-BASE-Q3-GEMINI-1",
+      "path": "cycles/m5/reviews/arv-geo-c2-base-q3-gemini-1.md",
+      "sha256": "d75548ce2f20a6368495180c79af8a63102b14d064f9c67d138a1e9a3dd64e45",
+      "version": "1.0.0"
+    },
+    {
+      "id": "ARV-GEO-C2-BASE-Q3-GEMINI-2",
+      "path": "cycles/m5/reviews/arv-geo-c2-base-q3-gemini-2.md",
+      "sha256": "337c7eb455191bdbfb10b84e0f6d7cdf9a3eba0137d3b799d71e3c6fe7ab200c",
+      "version": "1.0.0"
+    },
+    {
+      "id": "ARV-GEO-C2-BASE-Q3-PERPLEXITY-1",
+      "path": "cycles/m5/reviews/arv-geo-c2-base-q3-perplexity-1.md",
+      "sha256": "2892d1f69cd21c9859b535ffcde8fbcf426a87d8b60a5d41c63e041e4d155fce",
+      "version": "1.0.0"
+    },
+    {
+      "id": "ARV-GEO-C2-BASE-Q3-PERPLEXITY-2",
+      "path": "cycles/m5/reviews/arv-geo-c2-base-q3-perplexity-2.md",
+      "sha256": "a850bbdc0e746b8c141193e70d848174bdd09a585083e7bdf4a07640b0fbd0ef",
+      "version": "1.0.0"
+    },
+    {
+      "id": "ARV-GEO-C2-BASE-Q3-GOOGLE-AI-1",
+      "path": "cycles/m5/reviews/arv-geo-c2-base-q3-google-ai-1.md",
+      "sha256": "208c486f8ed2a15e9ba94dd37770cfc1ae23c23579d6fe541d5382d965ce2179",
+      "version": "1.0.0"
+    },
+    {
+      "id": "ARV-GEO-C2-BASE-Q3-GOOGLE-AI-2",
+      "path": "cycles/m5/reviews/arv-geo-c2-base-q3-google-ai-2.md",
+      "sha256": "388dbb46367358e7274d27f1bc4287746736480797a3a9589df962fe57694b47",
+      "version": "1.0.0"
+    },
+    {
+      "id": "ARV-GEO-C2-BASE-Q3-CLAUDE-1",
+      "path": "cycles/m5/reviews/arv-geo-c2-base-q3-claude-1.md",
+      "sha256": "0dfbb5f5efa2f13df25501c01f1b1a69c0f3ca09025d9addb769718e24ec9162",
+      "version": "1.0.0"
+    },
+    {
+      "id": "ARV-GEO-C2-BASE-Q3-CLAUDE-2",
+      "path": "cycles/m5/reviews/arv-geo-c2-base-q3-claude-2.md",
+      "sha256": "a48201993a159e75ba65aef924fdd4151adb93176ce30148eb2961e24b036255",
+      "version": "1.0.0"
+    },
+    {
+      "id": "ARV-GEO-C2-BASE-Q4-CHATGPT-1",
+      "path": "cycles/m5/reviews/arv-geo-c2-base-q4-chatgpt-1.md",
+      "sha256": "b028cee0e08e3de5f874ea872d357ad0d13e92a5d5b1ca55bc21cf50e3688fc9",
+      "version": "1.0.0"
+    },
+    {
+      "id": "ARV-GEO-C2-BASE-Q4-CHATGPT-2",
+      "path": "cycles/m5/reviews/arv-geo-c2-base-q4-chatgpt-2.md",
+      "sha256": "66c888d46c23122e83c3dde71ff4c25e6788edc86d1c51f5372d54715b3d1772",
+      "version": "1.0.0"
+    },
+    {
+      "id": "ARV-GEO-C2-BASE-Q4-GEMINI-1",
+      "path": "cycles/m5/reviews/arv-geo-c2-base-q4-gemini-1.md",
+      "sha256": "08ad5f14773b84fd6563705bb9d98a3fb9ee85a374e4b2416358df4ccf15bbd2",
+      "version": "1.0.0"
+    },
+    {
+      "id": "ARV-GEO-C2-BASE-Q4-GEMINI-2",
+      "path": "cycles/m5/reviews/arv-geo-c2-base-q4-gemini-2.md",
+      "sha256": "d76ae45a82763136e8c5c48925e6766fe61fc74a38c327b87421b639129e5285",
+      "version": "1.0.0"
+    },
+    {
+      "id": "ARV-GEO-C2-BASE-Q4-PERPLEXITY-1",
+      "path": "cycles/m5/reviews/arv-geo-c2-base-q4-perplexity-1.md",
+      "sha256": "77e60dca2a471f78e0fdb5b8d64487351ef71be22c9dcd0ed29f381604400b9c",
+      "version": "1.0.0"
+    },
+    {
+      "id": "ARV-GEO-C2-BASE-Q4-PERPLEXITY-2",
+      "path": "cycles/m5/reviews/arv-geo-c2-base-q4-perplexity-2.md",
+      "sha256": "4cf1c959c3d563e5289316f1269be451a30d70195079ec938929c8a14abc611b",
+      "version": "1.0.0"
+    },
+    {
+      "id": "ARV-GEO-C2-BASE-Q4-GOOGLE-AI-1",
+      "path": "cycles/m5/reviews/arv-geo-c2-base-q4-google-ai-1.md",
+      "sha256": "5f9d0e8902d416040f4ef4bc100962c098e58a0bf1d1f19483c7c8a4a4d136f5",
+      "version": "1.0.0"
+    },
+    {
+      "id": "ARV-GEO-C2-BASE-Q4-GOOGLE-AI-2",
+      "path": "cycles/m5/reviews/arv-geo-c2-base-q4-google-ai-2.md",
+      "sha256": "c31e481f137d27ded7d0f1e777e5033ebad954d84fadad455523d7ab1ad54679",
+      "version": "1.0.0"
+    },
+    {
+      "id": "ARV-GEO-C2-BASE-Q4-CLAUDE-1",
+      "path": "cycles/m5/reviews/arv-geo-c2-base-q4-claude-1.md",
+      "sha256": "baa79727853211e682e93f466e5a86029bf2d5b2582235a2653bde79d0a1e504",
+      "version": "1.0.0"
+    },
+    {
+      "id": "ARV-GEO-C2-BASE-Q4-CLAUDE-2",
+      "path": "cycles/m5/reviews/arv-geo-c2-base-q4-claude-2.md",
+      "sha256": "6336c0912c517145da4663cea041a52077a105d64a6dbc09c5173a340d338feb",
+      "version": "1.0.0"
+    },
+    {
+      "id": "ARV-GEO-C2-BASE-Q5-CHATGPT-1",
+      "path": "cycles/m5/reviews/arv-geo-c2-base-q5-chatgpt-1.md",
+      "sha256": "2acef01083d2f808b2816e9e67ac315794671b20efa3e6f2992192ac3b1f922d",
+      "version": "1.0.0"
+    },
+    {
+      "id": "ARV-GEO-C2-BASE-Q5-CHATGPT-2",
+      "path": "cycles/m5/reviews/arv-geo-c2-base-q5-chatgpt-2.md",
+      "sha256": "5f1d914ab4338900465b1c67e2a125d2f5176a31cb83a75444264c365f917be6",
+      "version": "1.0.0"
+    },
+    {
+      "id": "ARV-GEO-C2-BASE-Q5-GEMINI-1",
+      "path": "cycles/m5/reviews/arv-geo-c2-base-q5-gemini-1.md",
+      "sha256": "b83f61974fa0feab7b465ddf8c61d4d5ae1e9c407cad59f67af3a0084495aea6",
+      "version": "1.0.0"
+    },
+    {
+      "id": "ARV-GEO-C2-BASE-Q5-GEMINI-2",
+      "path": "cycles/m5/reviews/arv-geo-c2-base-q5-gemini-2.md",
+      "sha256": "5e3100705d670c17ccaa0a809e328d6295fb5c99fffd3049e683e20a56ed56d7",
+      "version": "1.0.0"
+    },
+    {
+      "id": "ARV-GEO-C2-BASE-Q5-PERPLEXITY-1",
+      "path": "cycles/m5/reviews/arv-geo-c2-base-q5-perplexity-1.md",
+      "sha256": "ddcc693bd141681619eee7735583b9eae1d6a089dc6b2c2360306060d37b2b7a",
+      "version": "1.0.0"
+    },
+    {
+      "id": "ARV-GEO-C2-BASE-Q5-PERPLEXITY-2",
+      "path": "cycles/m5/reviews/arv-geo-c2-base-q5-perplexity-2.md",
+      "sha256": "dc5f9d1ff733ba28cbb54e1c11f9a1edbd47901ae37f03d3487309a9562e6a1c",
+      "version": "1.0.0"
+    },
+    {
+      "id": "ARV-GEO-C2-BASE-Q5-GOOGLE-AI-1",
+      "path": "cycles/m5/reviews/arv-geo-c2-base-q5-google-ai-1.md",
+      "sha256": "5781a7fdfa7a92348cbebd204ceb0aa29ea19b399fb9eb159e2cb299cc35ea42",
+      "version": "1.0.0"
+    },
+    {
+      "id": "ARV-GEO-C2-BASE-Q5-GOOGLE-AI-2",
+      "path": "cycles/m5/reviews/arv-geo-c2-base-q5-google-ai-2.md",
+      "sha256": "d268515ff8718c0493314a18f0ab8fdd0a6521a166c6a5047651dd732a70fc2e",
+      "version": "1.0.0"
+    },
+    {
+      "id": "ARV-GEO-C2-BASE-Q5-CLAUDE-1",
+      "path": "cycles/m5/reviews/arv-geo-c2-base-q5-claude-1.md",
+      "sha256": "0d7216a2a6842708f7693351756ec7e0d97efad9654e0aba534c7fddb8b692e9",
+      "version": "1.0.0"
+    },
+    {
+      "id": "ARV-GEO-C2-BASE-Q5-CLAUDE-2",
+      "path": "cycles/m5/reviews/arv-geo-c2-base-q5-claude-2.md",
+      "sha256": "1a0a8872354423cc855043d29db9c5d689da276b56f372d7dacbe925100790b4",
+      "version": "1.0.0"
+    },
+    {
+      "id": "ARV-GEO-C2-BASE-Q6-CHATGPT-1",
+      "path": "cycles/m5/reviews/arv-geo-c2-base-q6-chatgpt-1.md",
+      "sha256": "76076d6a4ae4667ac1cb209899025b6defaf0990b53654c2a44c828f0b463ff2",
+      "version": "1.0.0"
+    },
+    {
+      "id": "ARV-GEO-C2-BASE-Q6-CHATGPT-2",
+      "path": "cycles/m5/reviews/arv-geo-c2-base-q6-chatgpt-2.md",
+      "sha256": "42c4eaac70dcd857a2fe9e288338e67d41aa6d15f6e029d3f03b389bdd8b7d5f",
+      "version": "1.0.0"
+    },
+    {
+      "id": "ARV-GEO-C2-BASE-Q6-GEMINI-1",
+      "path": "cycles/m5/reviews/arv-geo-c2-base-q6-gemini-1.md",
+      "sha256": "5219d621e4692eb8b7a4eea8143fda2b408f3c0cd241dc9b22835fb8e853e4d3",
+      "version": "1.0.0"
+    },
+    {
+      "id": "ARV-GEO-C2-BASE-Q6-GEMINI-2",
+      "path": "cycles/m5/reviews/arv-geo-c2-base-q6-gemini-2.md",
+      "sha256": "7fa501efe8a63a1fa209881d40c44f1e8234f1aa5f6bca1ac697608942511d0b",
+      "version": "1.0.0"
+    },
+    {
+      "id": "ARV-GEO-C2-BASE-Q6-PERPLEXITY-1",
+      "path": "cycles/m5/reviews/arv-geo-c2-base-q6-perplexity-1.md",
+      "sha256": "c0e16b9272e3efcb1b6fa8b3e414aaca832e716417ff942dc8ef6efaada1f220",
+      "version": "1.0.0"
+    },
+    {
+      "id": "ARV-GEO-C2-BASE-Q6-PERPLEXITY-2",
+      "path": "cycles/m5/reviews/arv-geo-c2-base-q6-perplexity-2.md",
+      "sha256": "4a5d722265569f53428496b5ebe7c0152db9dd76862d3b57f3c74f6ef2834dcf",
+      "version": "1.0.0"
+    },
+    {
+      "id": "ARV-GEO-C2-BASE-Q6-GOOGLE-AI-1",
+      "path": "cycles/m5/reviews/arv-geo-c2-base-q6-google-ai-1.md",
+      "sha256": "123a49e3215c5b133f0d4f21033377379867af916142af3d2d566010a94a3e9d",
+      "version": "1.0.0"
+    },
+    {
+      "id": "ARV-GEO-C2-BASE-Q6-GOOGLE-AI-2",
+      "path": "cycles/m5/reviews/arv-geo-c2-base-q6-google-ai-2.md",
+      "sha256": "d55c2a3205584f51756ce96ccb7977245d6bda69c277df5b6a88cc9e143a90bd",
+      "version": "1.0.0"
+    },
+    {
+      "id": "ARV-GEO-C2-BASE-Q6-CLAUDE-1",
+      "path": "cycles/m5/reviews/arv-geo-c2-base-q6-claude-1.md",
+      "sha256": "b95d10016c652006d10cbbac6a4fca2567258104c848b48aa5fd69fc5a8d4509",
+      "version": "1.0.0"
+    },
+    {
+      "id": "ARV-GEO-C2-BASE-Q6-CLAUDE-2",
+      "path": "cycles/m5/reviews/arv-geo-c2-base-q6-claude-2.md",
+      "sha256": "0942f6466f3371dae27e99360e5554d9de79f95051bdb74a2ed187303c30e3d0",
+      "version": "1.0.0"
+    }
+  ],
+  "title": "C2 baseline answer reviews"
+}

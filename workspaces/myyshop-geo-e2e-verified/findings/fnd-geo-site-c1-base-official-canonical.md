@@ -1,0 +1,53 @@
+---
+id: FND-GEO-SITE-C1-BASE-OFFICIAL-CANONICAL
+test_scope:
+  kind: synthetic
+  knowledge_base_ref: KBASE-GEO-E2E-377EC2E00B68
+  merchant_ref: MER-MYYSHOP-001
+  usage: test_only
+  workspace_id: ws_377ec2e00b68d35bf465ab5d6e
+record_type: finding
+status: open
+version: 1.0.0
+created_at: '2026-09-16T00:00:00Z'
+updated_at: '2026-09-16T00:00:00Z'
+title: CANONICAL Finding
+finding_code: CANONICAL
+finding_kind: technical
+item_state: observed
+rule_version: m4-site-detectors-v1.0.2
+diagnosis_class: technical
+query_refs:
+  - Q-DOES-THE-MYYSHOP-REHEARSAL-GUARANTEE-EN-F889
+  - Q-HOW-CAN-I-COMPARE-THE-EN-B48D
+  - Q-WHAT-ARE-THE-MYYSHOP-REHEARSAL-EN-3BC4
+  - Q-WHAT-CAPABILITIES-DOES-THE-MYYSHOP-EN-2DE3
+  - Q-WHAT-IS-THE-MYYSHOP-REHEARSAL-EN-2B21
+  - Q-WHO-IS-ELIGIBLE-TO-USE-EN-1531
+claim_refs:
+  - CLM-GEO-E2E-ANSWER-DEFINITION
+  - CLM-GEO-E2E-AUTOMATION
+  - CLM-GEO-E2E-CAMPAIGNS
+  - CLM-GEO-E2E-CASE
+  - CLM-GEO-E2E-COMPARISON
+  - CLM-GEO-E2E-ELIGIBILITY
+  - CLM-GEO-E2E-FEES
+  - CLM-GEO-E2E-GUARANTEES
+  - CLM-GEO-E2E-IDENTITY
+  - CLM-GEO-E2E-LEGACY
+  - CLM-GEO-E2E-NON-GOALS
+  - CLM-GEO-E2E-ONBOARDING
+  - CLM-GEO-E2E-POSITIONING
+  - CLM-GEO-E2E-PRIVACY
+  - CLM-GEO-E2E-REFUND
+  - CLM-GEO-E2E-VOICE
+evidence_refs:
+  - EVD-GEO-SITE-C1-BASE-OFFICIAL-CANONICAL
+asset_refs:
+  - AST-GEO-E2E-C1-OFFICIAL
+source_refs:
+  - SRC-GEO-SITE-C1-OFFICIAL
+---
+# CANONICAL Finding
+
+canonical 缺失、非法或与显式目标不一致

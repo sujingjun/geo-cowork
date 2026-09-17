@@ -1,0 +1,890 @@
+{
+  "artifact_entries": [
+    {
+      "entry_key": "0748aedd9ce53d7cc22ef3ab9e6634005413b677794401fb02049304e1626048",
+      "media_type": "text/plain",
+      "role": "supporting_artifact",
+      "snapshot_path": "outputs/snapshots/cis-geo-c1-adoption-decided/artifacts/onboarding.txt",
+      "snapshot_sha256": "ca398de7d253f220b8ad33bb7acec52aeac27a65fa9f0d8a83930da77e91fc7d",
+      "source_path": "evidence/snapshots/onboarding.txt",
+      "source_sha256": "ca398de7d253f220b8ad33bb7acec52aeac27a65fa9f0d8a83930da77e91fc7d"
+    },
+    {
+      "entry_key": "0a0d1b0e37fe762766b3b33dbbfc033a1b3c780c0ca18f03498454d0c31186e7",
+      "media_type": "text/plain",
+      "role": "supporting_artifact",
+      "snapshot_path": "outputs/snapshots/cis-geo-c1-adoption-decided/artifacts/comparison.txt",
+      "snapshot_sha256": "71f6d35fe8b09eea8ca07f7319333faeedb0bf63fa61f9dc079ea124521cec42",
+      "source_path": "evidence/snapshots/comparison.txt",
+      "source_sha256": "71f6d35fe8b09eea8ca07f7319333faeedb0bf63fa61f9dc079ea124521cec42"
+    },
+    {
+      "entry_key": "123d6f78e0227cc1deca0795e364f9a3702153e95d1b4f768447877667cea003",
+      "media_type": "application/json",
+      "role": "supporting_artifact",
+      "snapshot_path": "outputs/snapshots/cis-geo-c1-adoption-decided/artifacts/69fd329e3758-OWNER-C1-ADOPTION.json",
+      "snapshot_sha256": "4e60e630e1685b959cd629292db594f008e6b6a3333c90737b449c29eca5ed7c",
+      "source_path": "reviews/packages/OWNER-C1-ADOPTION.json",
+      "source_sha256": "4e60e630e1685b959cd629292db594f008e6b6a3333c90737b449c29eca5ed7c"
+    },
+    {
+      "entry_key": "146d1e3dc3059f2c2dc5179e1be9c4c7f7d64c6a5538a59ceed6b66df370d9c4",
+      "media_type": "text/plain",
+      "role": "supporting_artifact",
+      "snapshot_path": "outputs/snapshots/cis-geo-c1-adoption-decided/artifacts/voice.txt",
+      "snapshot_sha256": "b35473d439790af54a518747f41bcdc85ef1eda434346f71fbc900b1df8a2b0c",
+      "source_path": "evidence/snapshots/voice.txt",
+      "source_sha256": "b35473d439790af54a518747f41bcdc85ef1eda434346f71fbc900b1df8a2b0c"
+    },
+    {
+      "entry_key": "14af37f184d6b3ed136ccc5479e344407fefa09bed1cce4715d8081c347643bf",
+      "media_type": "text/plain",
+      "role": "supporting_artifact",
+      "snapshot_path": "outputs/snapshots/cis-geo-c1-adoption-decided/artifacts/guarantees.txt",
+      "snapshot_sha256": "d48d89a87ca211b0e382a196174d2f42dd38ba63004988436db8a000720afd88",
+      "source_path": "evidence/snapshots/guarantees.txt",
+      "source_sha256": "d48d89a87ca211b0e382a196174d2f42dd38ba63004988436db8a000720afd88"
+    },
+    {
+      "entry_key": "2a152cd63fc4b9562a1dec146e864ffd8ed4cce16f7242541a3cd792ab55711c",
+      "media_type": "application/json",
+      "role": "measurement_contract",
+      "snapshot_path": "outputs/snapshots/cis-geo-c1-adoption-decided/artifacts/measurement-contract.json",
+      "snapshot_sha256": "38c1980f471f579564f81aff27132a5682cb647f38f19c0021698e39b4b41967",
+      "source_path": "execution/contracts/measurement-contract.json",
+      "source_sha256": "38c1980f471f579564f81aff27132a5682cb647f38f19c0021698e39b4b41967"
+    },
+    {
+      "entry_key": "3193cac052b07e57d784af2f5edb85ff38beb1ab9c729a3ee677f27f7ef39dab",
+      "media_type": "text/plain",
+      "role": "supporting_artifact",
+      "snapshot_path": "outputs/snapshots/cis-geo-c1-adoption-decided/artifacts/eligibility.txt",
+      "snapshot_sha256": "bb0fb9e1cd09c23a94c40688d151e6c55052dec41b47c7c7a2589f019186f1bd",
+      "source_path": "evidence/snapshots/eligibility.txt",
+      "source_sha256": "bb0fb9e1cd09c23a94c40688d151e6c55052dec41b47c7c7a2589f019186f1bd"
+    },
+    {
+      "entry_key": "3251f6bda773066c1cf6364714ac64780ebc3ad24c8df6b7478de441c05a7abd",
+      "media_type": "text/plain",
+      "role": "supporting_artifact",
+      "snapshot_path": "outputs/snapshots/cis-geo-c1-adoption-decided/artifacts/automation.txt",
+      "snapshot_sha256": "1aeebc46502ce6afc5da33d73b740c8b9b2bcfc608bd72d86fa7e45e75d29b34",
+      "source_path": "evidence/snapshots/automation.txt",
+      "source_sha256": "1aeebc46502ce6afc5da33d73b740c8b9b2bcfc608bd72d86fa7e45e75d29b34"
+    },
+    {
+      "entry_key": "33b080a062dd92e490c91138569858357a9cd8ca3444efcdcb9dacb56bc71512",
+      "media_type": "text/plain",
+      "role": "supporting_artifact",
+      "snapshot_path": "outputs/snapshots/cis-geo-c1-adoption-decided/artifacts/identity.txt",
+      "snapshot_sha256": "9409c796aec14f13994bed6a5366622a9debc4c84dd0fbd8331193f3b52a7db9",
+      "source_path": "evidence/snapshots/identity.txt",
+      "source_sha256": "9409c796aec14f13994bed6a5366622a9debc4c84dd0fbd8331193f3b52a7db9"
+    },
+    {
+      "entry_key": "3dba44086cedb6697a1e1c9c928422d2b98d7afceda91d3ad4c56af1ec85b935",
+      "media_type": "text/plain",
+      "role": "supporting_artifact",
+      "snapshot_path": "outputs/snapshots/cis-geo-c1-adoption-decided/artifacts/OWNER-C1-ADOPTION.md",
+      "snapshot_sha256": "b444b45156a456542cafa3cd7c001f4449de72dff57c43f77673eb3cd61a12ce",
+      "source_path": "reviews/packages/OWNER-C1-ADOPTION.md",
+      "source_sha256": "b444b45156a456542cafa3cd7c001f4449de72dff57c43f77673eb3cd61a12ce"
+    },
+    {
+      "entry_key": "4c5131b694516b72e9c51690e6a08a4b94898456a89f31621938e3b3c63aae84",
+      "media_type": "application/json",
+      "role": "supporting_artifact",
+      "snapshot_path": "outputs/snapshots/cis-geo-c1-adoption-decided/artifacts/543fdc2f8d42-OWNER-KNOWLEDGE-C1.json",
+      "snapshot_sha256": "7afdf6f0dc4b933c7cbcfee425e92d21accf7e6c68162d13cdceeb479428406f",
+      "source_path": "reviews/decisions/OWNER-KNOWLEDGE-C1.json",
+      "source_sha256": "7afdf6f0dc4b933c7cbcfee425e92d21accf7e6c68162d13cdceeb479428406f"
+    },
+    {
+      "entry_key": "5bbbb040c0563dfc2de19e030cc374ea6360a031d691af8ddc657e41b149524e",
+      "media_type": "text/plain",
+      "role": "supporting_artifact",
+      "snapshot_path": "outputs/snapshots/cis-geo-c1-adoption-decided/artifacts/bb1daece8a13-html.txt",
+      "snapshot_sha256": "d82228b74970e278aa6453e96d135fd69f88ff360d1acc593fab0953f93978a1",
+      "source_path": "assets/snapshots/C1/BASE/own/html.txt",
+      "source_sha256": "d82228b74970e278aa6453e96d135fd69f88ff360d1acc593fab0953f93978a1"
+    },
+    {
+      "entry_key": "699c3fa409df6d7e5d255f5d9d002eb71257672cb63b839f9ce64c4d80019bd7",
+      "media_type": "text/plain",
+      "role": "supporting_artifact",
+      "snapshot_path": "outputs/snapshots/cis-geo-c1-adoption-decided/artifacts/privacy.txt",
+      "snapshot_sha256": "e96c165fd9313d0dc51c77f32c5e9b8871da7a54eab96400c0080e4d728f51f3",
+      "source_path": "evidence/snapshots/privacy.txt",
+      "source_sha256": "e96c165fd9313d0dc51c77f32c5e9b8871da7a54eab96400c0080e4d728f51f3"
+    },
+    {
+      "entry_key": "6df8ab5e3cecfc46c7dcc90b8f4cc4fe11c0b0eeb6b75b0dbc5bb66e48029add",
+      "media_type": "text/plain",
+      "role": "supporting_artifact",
+      "snapshot_path": "outputs/snapshots/cis-geo-c1-adoption-decided/artifacts/adr-geo-c1-official.md",
+      "snapshot_sha256": "94d9e5a75f9be60975a52cdfa6d037a7c3a3dbd5361f038ae18c577fc513536a",
+      "source_path": "assets/adoptions/adr-geo-c1-official.md",
+      "source_sha256": "94d9e5a75f9be60975a52cdfa6d037a7c3a3dbd5361f038ae18c577fc513536a"
+    },
+    {
+      "entry_key": "87a7ef7a9b8d148c967e0d70cef03bd0861ec4ba75e666af77cb8c7a6a4ab195",
+      "media_type": "text/plain",
+      "role": "supporting_artifact",
+      "snapshot_path": "outputs/snapshots/cis-geo-c1-adoption-decided/artifacts/adr-geo-c1-third-party.md",
+      "snapshot_sha256": "42ee92cf3842d098fe21030cd1386e6b8f94a863351b6eba05ca2a1fbadc6206",
+      "source_path": "assets/adoptions/adr-geo-c1-third-party.md",
+      "source_sha256": "42ee92cf3842d098fe21030cd1386e6b8f94a863351b6eba05ca2a1fbadc6206"
+    },
+    {
+      "entry_key": "92b2cd12bfabc67492248656190a6c8ec6c512108e27e5d5f38b0bd21a03a215",
+      "media_type": "text/plain",
+      "role": "supporting_artifact",
+      "snapshot_path": "outputs/snapshots/cis-geo-c1-adoption-decided/artifacts/legacy.txt",
+      "snapshot_sha256": "66744dcf8d1e938d8d7d3a6c5e29231d909fa0b10c166698c4ce19e1f7c41931",
+      "source_path": "evidence/snapshots/legacy.txt",
+      "source_sha256": "66744dcf8d1e938d8d7d3a6c5e29231d909fa0b10c166698c4ce19e1f7c41931"
+    },
+    {
+      "entry_key": "946506db522c0306a6a5cf8a4e2ff678f68fbcc007375dbbea97f187fba362c5",
+      "media_type": "text/plain",
+      "role": "supporting_artifact",
+      "snapshot_path": "outputs/snapshots/cis-geo-c1-adoption-decided/artifacts/case.txt",
+      "snapshot_sha256": "cbde3348d01680aa5a7d69cd46602a2ecc813d308d02ad4413c1355dca3c955b",
+      "source_path": "evidence/snapshots/case.txt",
+      "source_sha256": "cbde3348d01680aa5a7d69cd46602a2ecc813d308d02ad4413c1355dca3c955b"
+    },
+    {
+      "entry_key": "9a394c3829c444a80b96d774deb069a1e622ad7556ff58abb54271556c38ad4e",
+      "media_type": "text/plain",
+      "role": "supporting_artifact",
+      "snapshot_path": "outputs/snapshots/cis-geo-c1-adoption-decided/artifacts/adr-geo-c1-own.md",
+      "snapshot_sha256": "cd0dfe7ad12b09a6200758a2b7cdb89dc0d6cd9c70781e9b7f49173643becd7f",
+      "source_path": "assets/adoptions/adr-geo-c1-own.md",
+      "source_sha256": "cd0dfe7ad12b09a6200758a2b7cdb89dc0d6cd9c70781e9b7f49173643becd7f"
+    },
+    {
+      "entry_key": "9be6bf528dec113f02cbac6b91b23909b25f93d9b576b2f9a32df18899432507",
+      "media_type": "text/plain",
+      "role": "supporting_artifact",
+      "snapshot_path": "outputs/snapshots/cis-geo-c1-adoption-decided/artifacts/OWNER-KNOWLEDGE-C1.md",
+      "snapshot_sha256": "f5e52a6c1fcf904b3ac9356af784353749b6b8eab51ea1ce32f3ca55b9f24d55",
+      "source_path": "reviews/packages/OWNER-KNOWLEDGE-C1.md",
+      "source_sha256": "f5e52a6c1fcf904b3ac9356af784353749b6b8eab51ea1ce32f3ca55b9f24d55"
+    },
+    {
+      "entry_key": "9f4b99a96d535c92e6fc4fa334594e84a3fc93725e89f62bbbceba349fb11bf0",
+      "media_type": "application/json",
+      "role": "supporting_artifact",
+      "snapshot_path": "outputs/snapshots/cis-geo-c1-adoption-decided/artifacts/4c79d1b9db27-OWNER-KNOWLEDGE-C1.json",
+      "snapshot_sha256": "2cf77dc7a9b729c9a72ad6656095b78561256a44d6e481f64a8a639b18890e70",
+      "source_path": "reviews/packages/OWNER-KNOWLEDGE-C1.json",
+      "source_sha256": "2cf77dc7a9b729c9a72ad6656095b78561256a44d6e481f64a8a639b18890e70"
+    },
+    {
+      "entry_key": "a92da495d27583dc56e473fd12133ee74f756dcf711d8d2f187cd20d3d24228a",
+      "media_type": "application/json",
+      "role": "supporting_artifact",
+      "snapshot_path": "outputs/snapshots/cis-geo-c1-adoption-decided/artifacts/64ced18fd3c6-OWNER-C1-ADOPTION.json",
+      "snapshot_sha256": "505e447fc1fc2317a937b19eab605474fa1328e8c46eecd39b7549a8616ff351",
+      "source_path": "reviews/decisions/OWNER-C1-ADOPTION.json",
+      "source_sha256": "505e447fc1fc2317a937b19eab605474fa1328e8c46eecd39b7549a8616ff351"
+    },
+    {
+      "entry_key": "adbde5f0ec0f3d34ed250642384e6d4ea8d4d7f7b0675a7cee31b89a4f5a9c97",
+      "media_type": "text/plain",
+      "role": "supporting_artifact",
+      "snapshot_path": "outputs/snapshots/cis-geo-c1-adoption-decided/artifacts/e193553e1d56-html.txt",
+      "snapshot_sha256": "974db9ce52d8fa2447b8be120c5b5663f4342656faeb6666d1cd349430ee8bf8",
+      "source_path": "assets/snapshots/C1/BASE/third-party/html.txt",
+      "source_sha256": "974db9ce52d8fa2447b8be120c5b5663f4342656faeb6666d1cd349430ee8bf8"
+    },
+    {
+      "entry_key": "bef4d9acbbda1785bb74a2947f04dfc652803be2583cb4606471a07fe64fe00e",
+      "media_type": "text/plain",
+      "role": "supporting_artifact",
+      "snapshot_path": "outputs/snapshots/cis-geo-c1-adoption-decided/artifacts/fees.txt",
+      "snapshot_sha256": "0d956d51fb8f36df790d686be5ffb4e4a1cc51e3e824b22b7907630c04d25e61",
+      "source_path": "evidence/snapshots/fees.txt",
+      "source_sha256": "0d956d51fb8f36df790d686be5ffb4e4a1cc51e3e824b22b7907630c04d25e61"
+    },
+    {
+      "entry_key": "c910dd5f239d0298e26431a445a4d767d97f1ce973198284488216c83f91380c",
+      "media_type": "text/plain",
+      "role": "supporting_artifact",
+      "snapshot_path": "outputs/snapshots/cis-geo-c1-adoption-decided/artifacts/22f39e5c7725-html.txt",
+      "snapshot_sha256": "80d325142006d767f69e7d20182f5f1a6ffdae38dff2a1999fe777294ef0779c",
+      "source_path": "assets/snapshots/C1/BASE/official/html.txt",
+      "source_sha256": "80d325142006d767f69e7d20182f5f1a6ffdae38dff2a1999fe777294ef0779c"
+    },
+    {
+      "entry_key": "cbea72ddd188fb578837ba923850dc836a2bc6906cdba14b4ad252008f07141b",
+      "media_type": "text/plain",
+      "role": "supporting_artifact",
+      "snapshot_path": "outputs/snapshots/cis-geo-c1-adoption-decided/artifacts/positioning.txt",
+      "snapshot_sha256": "67d453ca0215cada1c438161cba0e69294e825439d635618a6d0af2d477bf5ee",
+      "source_path": "evidence/snapshots/positioning.txt",
+      "source_sha256": "67d453ca0215cada1c438161cba0e69294e825439d635618a6d0af2d477bf5ee"
+    },
+    {
+      "entry_key": "d688dc3f819f6758a21977a3cce35dfd67428514533463c4564e18954c8edd33",
+      "media_type": "text/plain",
+      "role": "supporting_artifact",
+      "snapshot_path": "outputs/snapshots/cis-geo-c1-adoption-decided/artifacts/non-goals.txt",
+      "snapshot_sha256": "d7e49b6205098554fc5f5158c23eeaab6c3717fd6acaf8569beeca3d4517c7aa",
+      "source_path": "evidence/snapshots/non-goals.txt",
+      "source_sha256": "d7e49b6205098554fc5f5158c23eeaab6c3717fd6acaf8569beeca3d4517c7aa"
+    },
+    {
+      "entry_key": "dee954f5bb08aca107ab7b9c09d1f618106e7a85a81df021065fe34863356538",
+      "media_type": "text/plain",
+      "role": "supporting_artifact",
+      "snapshot_path": "outputs/snapshots/cis-geo-c1-adoption-decided/artifacts/campaigns.txt",
+      "snapshot_sha256": "2e20a442490a5a9e4ac2674fe61f817e8e5674bee1b79be94ea4be8f88b65a39",
+      "source_path": "evidence/snapshots/campaigns.txt",
+      "source_sha256": "2e20a442490a5a9e4ac2674fe61f817e8e5674bee1b79be94ea4be8f88b65a39"
+    },
+    {
+      "entry_key": "e221d94dfb4ef7fea2a183fab757e2b3bfbebe32fc99040e85b09377bc297666",
+      "media_type": "text/plain",
+      "role": "supporting_artifact",
+      "snapshot_path": "outputs/snapshots/cis-geo-c1-adoption-decided/artifacts/answer-definition.txt",
+      "snapshot_sha256": "0af9ebfd586790737c7243a666c6d7569ababccbda8fd1da93d04eddee1af68b",
+      "source_path": "evidence/snapshots/answer-definition.txt",
+      "source_sha256": "0af9ebfd586790737c7243a666c6d7569ababccbda8fd1da93d04eddee1af68b"
+    },
+    {
+      "entry_key": "fa3da5a550b7075cb928102f179ce374abf07e6f1bd0cc04006bb93e05ac7129",
+      "media_type": "text/plain",
+      "role": "supporting_artifact",
+      "snapshot_path": "outputs/snapshots/cis-geo-c1-adoption-decided/artifacts/refund.txt",
+      "snapshot_sha256": "6ce3e76729bb3422e95a444ca51c025a734a53c86bb6aabfc0a91d306990352e",
+      "source_path": "evidence/snapshots/refund.txt",
+      "source_sha256": "6ce3e76729bb3422e95a444ca51c025a734a53c86bb6aabfc0a91d306990352e"
+    }
+  ],
+  "base_freeze_snapshot_version": null,
+  "fingerprint": "12ebea96e6696f06654b900a4fe919175b1e9e0b996faf4a9eae1b712f612e52",
+  "pre_review_entry_keys": [],
+  "pre_review_transition_snapshot_versions": [],
+  "schema_version": "cycle-input-snapshot/1.0.0",
+  "snapshot_id": "CIS-GEO-C1-ADOPTION-DECIDED",
+  "snapshot_kind": "transition",
+  "source_entries": [
+    {
+      "content_sha256": "c05c6c819824b4a3bbbe50587e611d97dc478fa9777acc9ab0371c4133722b0f",
+      "entry_key": "0612d9493d00c762dfbfae2b7ebad3f252aa5a1cb0834516719408a731e89b3f",
+      "file_sha256": "137f3c60184df6eaf9ffab2e87f581c1d1b9ca21b844b447bbeab01843b9421d",
+      "object_id": "EVD-GEO-E2E-GUARANTEES",
+      "object_path": "evidence/records/evd-e2e-guarantees.md",
+      "object_version": "1.0.0",
+      "record_type": "evidence",
+      "snapshot_path": "outputs/snapshots/cis-geo-c1-adoption-decided/objects/evidence/records/evd-e2e-guarantees.md",
+      "snapshot_sha256": "137f3c60184df6eaf9ffab2e87f581c1d1b9ca21b844b447bbeab01843b9421d"
+    },
+    {
+      "content_sha256": "a210c8651cd23b7d74a65e4f99c45cf2a7681b9223ee46b623e3323d308d9020",
+      "entry_key": "082eee4cd249b3f84a43e01f0de994d9b8844cdbc5c4ff6dbdbc7b70437fb80b",
+      "file_sha256": "dfc8649d992633e4927ba23fb6803384f3fc912eb3702b89260b9920a3c331e3",
+      "object_id": "EVD-GEO-E2E-NON-GOALS",
+      "object_path": "evidence/records/evd-e2e-non-goals.md",
+      "object_version": "1.0.0",
+      "record_type": "evidence",
+      "snapshot_path": "outputs/snapshots/cis-geo-c1-adoption-decided/objects/evidence/records/evd-e2e-non-goals.md",
+      "snapshot_sha256": "dfc8649d992633e4927ba23fb6803384f3fc912eb3702b89260b9920a3c331e3"
+    },
+    {
+      "content_sha256": "4572ad641758c23474309fd0917192b0a55daa34e6bc97c3b8ca3e18c2e67004",
+      "entry_key": "0c23cb3e0fc88942ae967f9e0c45ffb542c2c6a4f095eaa352cc1cbda66a3b8b",
+      "file_sha256": "6f928dedeb86903c3da2aed04204a86caa3b0345ffa781572d2a76cd4ae11806",
+      "object_id": "SRC-GEO-E2E-VOICE",
+      "object_path": "evidence/sources/src-e2e-voice.md",
+      "object_version": "1.0.0",
+      "record_type": "source",
+      "snapshot_path": "outputs/snapshots/cis-geo-c1-adoption-decided/objects/evidence/sources/src-e2e-voice.md",
+      "snapshot_sha256": "6f928dedeb86903c3da2aed04204a86caa3b0345ffa781572d2a76cd4ae11806"
+    },
+    {
+      "content_sha256": "24e1cedf6efc20a99384f95baa7f873d352a7f4f44ddb1881a87f22fe10ae271",
+      "entry_key": "234ebc706d6656cadee7e760d3b7e9348d4420313a3fd108db5261bfe4bb956a",
+      "file_sha256": "a747088223667e05cada4974901a983cd6b8f2ff041dc3c3cdc6ab5791d11dbb",
+      "object_id": "EVD-GEO-E2E-COMPARISON",
+      "object_path": "evidence/records/evd-e2e-comparison.md",
+      "object_version": "1.0.0",
+      "record_type": "evidence",
+      "snapshot_path": "outputs/snapshots/cis-geo-c1-adoption-decided/objects/evidence/records/evd-e2e-comparison.md",
+      "snapshot_sha256": "a747088223667e05cada4974901a983cd6b8f2ff041dc3c3cdc6ab5791d11dbb"
+    },
+    {
+      "content_sha256": "6e0610ad7c6ea19a5143bad7b2167bddf28ecfc8e49ee460f16fd33060260812",
+      "entry_key": "29722e356c330da146480bedfb2f540434855180d8a7e4bcc1c4e74f03a02bc1",
+      "file_sha256": "8a904d3aa247f2ac60ec7dfe896fdfe1de9735d63cd7b1614681a8a1d97b5dcf",
+      "object_id": "SRC-GEO-E2E-FEES",
+      "object_path": "evidence/sources/src-e2e-fees.md",
+      "object_version": "1.0.0",
+      "record_type": "source",
+      "snapshot_path": "outputs/snapshots/cis-geo-c1-adoption-decided/objects/evidence/sources/src-e2e-fees.md",
+      "snapshot_sha256": "8a904d3aa247f2ac60ec7dfe896fdfe1de9735d63cd7b1614681a8a1d97b5dcf"
+    },
+    {
+      "content_sha256": "a72644835b1a7648ba95871bc7c874b7646ff9247675d45295e09105a2a124fa",
+      "entry_key": "3378910410974e72952a7fcd8680065f2f49e36b54b2122d76fbd91f8826f91a",
+      "file_sha256": "c6aec604c73ecd6efcd76b59840cd6778c42dd8b0850c95c0beefe2345fceb5f",
+      "object_id": "EVD-GEO-E2E-IDENTITY",
+      "object_path": "evidence/records/evd-e2e-identity.md",
+      "object_version": "1.0.0",
+      "record_type": "evidence",
+      "snapshot_path": "outputs/snapshots/cis-geo-c1-adoption-decided/objects/evidence/records/evd-e2e-identity.md",
+      "snapshot_sha256": "c6aec604c73ecd6efcd76b59840cd6778c42dd8b0850c95c0beefe2345fceb5f"
+    },
+    {
+      "content_sha256": "93e1c25d15e397d249e71905bd51a80b5af9be0d998e9032667dd3402089e880",
+      "entry_key": "405108ff766a9ccb22cb681e196901326b5783561bd08a702c793c8fcf9d2a98",
+      "file_sha256": "2089beb897d6aa3a6ecf68785f33d89ce646fe5e14a8ac5b1260f267d97d14b8",
+      "object_id": "EVD-GEO-E2E-AUTOMATION",
+      "object_path": "evidence/records/evd-e2e-automation.md",
+      "object_version": "1.0.0",
+      "record_type": "evidence",
+      "snapshot_path": "outputs/snapshots/cis-geo-c1-adoption-decided/objects/evidence/records/evd-e2e-automation.md",
+      "snapshot_sha256": "2089beb897d6aa3a6ecf68785f33d89ce646fe5e14a8ac5b1260f267d97d14b8"
+    },
+    {
+      "content_sha256": "9087984ac67dbf8cdb334907beecd2e2ce5dd3da7454673490a5ded0983139f5",
+      "entry_key": "43146ec7f27e1fd639ecdecd92ad6dee889b07ffdc068200911985dbc261cd3a",
+      "file_sha256": "b7788788c23d8efb67f04a6d8161c6876ba688db9ebffccfd088a4db0b76732a",
+      "object_id": "PRP-GEO-C1-THIRD-PARTY",
+      "object_path": "assets/proposals/prp-geo-c1-third-party.md",
+      "object_version": "1.0.0",
+      "record_type": "asset_proposal",
+      "snapshot_path": "outputs/snapshots/cis-geo-c1-adoption-decided/objects/assets/proposals/prp-geo-c1-third-party.md",
+      "snapshot_sha256": "b7788788c23d8efb67f04a6d8161c6876ba688db9ebffccfd088a4db0b76732a"
+    },
+    {
+      "content_sha256": "3987871042f7f7afed241d9b0fcf21cdf7a041c4849d71dfc019b3aee7716ea2",
+      "entry_key": "43aa64d6a8fd7cc04cf783c4e21b138ee6018adbecf47e1a0c2c53d2afc8b716",
+      "file_sha256": "ac007aa811844c95ef6764e0b696c40741ec0529205db63724c7e540c1fbf963",
+      "object_id": "SRC-GEO-E2E-CAMPAIGNS",
+      "object_path": "evidence/sources/src-e2e-campaigns.md",
+      "object_version": "1.0.0",
+      "record_type": "source",
+      "snapshot_path": "outputs/snapshots/cis-geo-c1-adoption-decided/objects/evidence/sources/src-e2e-campaigns.md",
+      "snapshot_sha256": "ac007aa811844c95ef6764e0b696c40741ec0529205db63724c7e540c1fbf963"
+    },
+    {
+      "content_sha256": "d5527b52bc1bc547cd5611b8b917acf02e71abc89909d116b1cc203131e44660",
+      "entry_key": "43c669116acf25cb5bda370cf5ec666f58c3aef3bd4f909ee313b0059973d119",
+      "file_sha256": "471137b2a48b27344f47dc9d37bf6e6278e02a249a0e6d4743a68a6d61647f0f",
+      "object_id": "EVD-GEO-SITE-C1-BASE-THIRD-PARTY-META-DESCRIPTION-PRESENT",
+      "object_path": "evidence/records/evd-geo-site-c1-base-third-party-meta-description-present.md",
+      "object_version": "1.0.0",
+      "record_type": "evidence",
+      "snapshot_path": "outputs/snapshots/cis-geo-c1-adoption-decided/objects/evidence/records/evd-geo-site-c1-base-third-party-meta-description-present.md",
+      "snapshot_sha256": "471137b2a48b27344f47dc9d37bf6e6278e02a249a0e6d4743a68a6d61647f0f"
+    },
+    {
+      "content_sha256": "993131c9e781b1af5b1496a9d83cba73365584d68b3ee5bffa168157aa18e4da",
+      "entry_key": "464be144d82e4709dd0d4c5e907b0726cc704246a0d3767d1e00391686bf308b",
+      "file_sha256": "992650f36ab025b92c03059d19c02d6faba828c5a3ab3195a03c40faa567a2b0",
+      "object_id": "EVD-GEO-SITE-C1-BASE-OFFICIAL-CANONICAL",
+      "object_path": "evidence/records/evd-geo-site-c1-base-official-canonical.md",
+      "object_version": "1.0.0",
+      "record_type": "evidence",
+      "snapshot_path": "outputs/snapshots/cis-geo-c1-adoption-decided/objects/evidence/records/evd-geo-site-c1-base-official-canonical.md",
+      "snapshot_sha256": "992650f36ab025b92c03059d19c02d6faba828c5a3ab3195a03c40faa567a2b0"
+    },
+    {
+      "content_sha256": "a72644835b1a7648ba95871bc7c874b7646ff9247675d45295e09105a2a124fa",
+      "entry_key": "4af6a3a24df1208fbeca4d4c6d373955c2b0c074e70190bb0fee091933d7e252",
+      "file_sha256": "b29dc49ca33192794b0738bef5d8590eeeb315b3ebe28d07c94b100c8c52d6aa",
+      "object_id": "SRC-GEO-E2E-IDENTITY",
+      "object_path": "evidence/sources/src-e2e-identity.md",
+      "object_version": "1.0.0",
+      "record_type": "source",
+      "snapshot_path": "outputs/snapshots/cis-geo-c1-adoption-decided/objects/evidence/sources/src-e2e-identity.md",
+      "snapshot_sha256": "b29dc49ca33192794b0738bef5d8590eeeb315b3ebe28d07c94b100c8c52d6aa"
+    },
+    {
+      "content_sha256": "39e9f04bfbb709f8985c63171446a5d66214132c264165afb6eb98c13a5bbb95",
+      "entry_key": "52067016046ee1099c9362295f383d8a30888fc880dfd10e33c8aee4e3be5e0c",
+      "file_sha256": "cc6a5c4f12366fba7b85af9acf8f2521c879bba5f139e7ddb72b8419f3427e55",
+      "object_id": "EVD-GEO-E2E-ANSWER-DEFINITION",
+      "object_path": "evidence/records/evd-e2e-answer-definition.md",
+      "object_version": "1.0.0",
+      "record_type": "evidence",
+      "snapshot_path": "outputs/snapshots/cis-geo-c1-adoption-decided/objects/evidence/records/evd-e2e-answer-definition.md",
+      "snapshot_sha256": "cc6a5c4f12366fba7b85af9acf8f2521c879bba5f139e7ddb72b8419f3427e55"
+    },
+    {
+      "content_sha256": "f9af0880fd4c17b32a11a2bb12a53edbc4fee9ea8aed96279fa7001a433e0c3e",
+      "entry_key": "55bf4f9490698e07d5d017f421460bb216719a6e5c72eb698938fbc44aa3d7c3",
+      "file_sha256": "583488c584088ce9fdf444199eafb5c76cf086b27540b04860a0a4030a8c9b47",
+      "object_id": "EVD-GEO-SITE-C1-BASE-OFFICIAL-CONTENT",
+      "object_path": "evidence/records/evd-geo-site-c1-base-official-content.md",
+      "object_version": "1.0.0",
+      "record_type": "evidence",
+      "snapshot_path": "outputs/snapshots/cis-geo-c1-adoption-decided/objects/evidence/records/evd-geo-site-c1-base-official-content.md",
+      "snapshot_sha256": "583488c584088ce9fdf444199eafb5c76cf086b27540b04860a0a4030a8c9b47"
+    },
+    {
+      "content_sha256": "f9af0880fd4c17b32a11a2bb12a53edbc4fee9ea8aed96279fa7001a433e0c3e",
+      "entry_key": "59e9e763f97c39f6c3e2fce8643e7e051211f74b809ac123333d35f3a9f01f5f",
+      "file_sha256": "968906ea68a8d9874bf9eabaf437596cc49f8ed9486ee0269e7901855a3ba0af",
+      "object_id": "EVD-GEO-SITE-C1-BASE-OWN-CONTENT",
+      "object_path": "evidence/records/evd-geo-site-c1-base-own-content.md",
+      "object_version": "1.0.0",
+      "record_type": "evidence",
+      "snapshot_path": "outputs/snapshots/cis-geo-c1-adoption-decided/objects/evidence/records/evd-geo-site-c1-base-own-content.md",
+      "snapshot_sha256": "968906ea68a8d9874bf9eabaf437596cc49f8ed9486ee0269e7901855a3ba0af"
+    },
+    {
+      "content_sha256": "1f715fc357d9cad4ec3309c90babd8e66e0cca6207463f3f5915bed060fc7301",
+      "entry_key": "5a1805b21d5dd041ab04df1536b513f8e482bdc427e0a2a95af2c0fee517fd45",
+      "file_sha256": "c3c936dcc45a890008902e7e66bb56741343d1e627ab6b013e8adec238fbfbce",
+      "object_id": "EVD-GEO-E2E-PRIVACY",
+      "object_path": "evidence/records/evd-e2e-privacy.md",
+      "object_version": "1.0.0",
+      "record_type": "evidence",
+      "snapshot_path": "outputs/snapshots/cis-geo-c1-adoption-decided/objects/evidence/records/evd-e2e-privacy.md",
+      "snapshot_sha256": "c3c936dcc45a890008902e7e66bb56741343d1e627ab6b013e8adec238fbfbce"
+    },
+    {
+      "content_sha256": "f9af0880fd4c17b32a11a2bb12a53edbc4fee9ea8aed96279fa7001a433e0c3e",
+      "entry_key": "6688445b1795a16f4ac7fc0a95fa71e13bc01eb6e4ecf56ae4817a59edb88846",
+      "file_sha256": "56d6c14321554d7907a8f1343a2f12e16389cec88764ff808566f92319df0f55",
+      "object_id": "EVD-GEO-SITE-C1-BASE-THIRD-PARTY-CONTENT",
+      "object_path": "evidence/records/evd-geo-site-c1-base-third-party-content.md",
+      "object_version": "1.0.0",
+      "record_type": "evidence",
+      "snapshot_path": "outputs/snapshots/cis-geo-c1-adoption-decided/objects/evidence/records/evd-geo-site-c1-base-third-party-content.md",
+      "snapshot_sha256": "56d6c14321554d7907a8f1343a2f12e16389cec88764ff808566f92319df0f55"
+    },
+    {
+      "content_sha256": "8ae668b4bb38e19fcc1a10d7ef63231fce19387bea31feb72120f8ec27d0d9f5",
+      "entry_key": "676caee235bb15933cd228c39d8127aac71a3a48d1b75026587b281d41f6cfa2",
+      "file_sha256": "200c18ac95f1c5d4f7361594d8215c74f2bf44c6918878b22194c2583d10e418",
+      "object_id": "SRC-GEO-E2E-ELIGIBILITY",
+      "object_path": "evidence/sources/src-e2e-eligibility.md",
+      "object_version": "1.0.0",
+      "record_type": "source",
+      "snapshot_path": "outputs/snapshots/cis-geo-c1-adoption-decided/objects/evidence/sources/src-e2e-eligibility.md",
+      "snapshot_sha256": "200c18ac95f1c5d4f7361594d8215c74f2bf44c6918878b22194c2583d10e418"
+    },
+    {
+      "content_sha256": "49b0bf9833def4f3d30c31179ca49260a8e22a96a3495ebac8120204f260b2bc",
+      "entry_key": "6940ee32ea7435c606e04759ca6d0f64e9875dae6fa30bca10e684a6269c5963",
+      "file_sha256": "4233386cd0cb64e0894f431870af1ff8ff0fd8be2373addeddad1607202d7303",
+      "object_id": "PRP-GEO-C1-OFFICIAL",
+      "object_path": "assets/proposals/prp-geo-c1-official.md",
+      "object_version": "1.0.0",
+      "record_type": "asset_proposal",
+      "snapshot_path": "outputs/snapshots/cis-geo-c1-adoption-decided/objects/assets/proposals/prp-geo-c1-official.md",
+      "snapshot_sha256": "4233386cd0cb64e0894f431870af1ff8ff0fd8be2373addeddad1607202d7303"
+    },
+    {
+      "content_sha256": "7d96aa214914f8db9380cb1623c1c3f257ef348ce4fdcd0ecfc7ec4ba7d208fc",
+      "entry_key": "6a8856a517a81a409cfc7461fa8efa9909fbf0c78a86ff38423473c5aea04bcc",
+      "file_sha256": "364809705dc46e81fabe02d049c9ac1ccb84d7fa8889b27e16382715d62af02a",
+      "object_id": "EVD-GEO-SITE-C1-BASE-THIRD-PARTY-CRAWLABILITY",
+      "object_path": "evidence/records/evd-geo-site-c1-base-third-party-crawlability.md",
+      "object_version": "1.0.0",
+      "record_type": "evidence",
+      "snapshot_path": "outputs/snapshots/cis-geo-c1-adoption-decided/objects/evidence/records/evd-geo-site-c1-base-third-party-crawlability.md",
+      "snapshot_sha256": "364809705dc46e81fabe02d049c9ac1ccb84d7fa8889b27e16382715d62af02a"
+    },
+    {
+      "content_sha256": "7d96aa214914f8db9380cb1623c1c3f257ef348ce4fdcd0ecfc7ec4ba7d208fc",
+      "entry_key": "6ad09d75fba62d6869817111937260188b6f017937d8b487794ce11c7b56793e",
+      "file_sha256": "effa960a9cf062ec9026e6bc28294646245a28952cb9c4dd668c39ecd38ab18a",
+      "object_id": "EVD-GEO-SITE-C1-BASE-OWN-CRAWLABILITY",
+      "object_path": "evidence/records/evd-geo-site-c1-base-own-crawlability.md",
+      "object_version": "1.0.0",
+      "record_type": "evidence",
+      "snapshot_path": "outputs/snapshots/cis-geo-c1-adoption-decided/objects/evidence/records/evd-geo-site-c1-base-own-crawlability.md",
+      "snapshot_sha256": "effa960a9cf062ec9026e6bc28294646245a28952cb9c4dd668c39ecd38ab18a"
+    },
+    {
+      "content_sha256": "6e0610ad7c6ea19a5143bad7b2167bddf28ecfc8e49ee460f16fd33060260812",
+      "entry_key": "6b432df0b0ab2a00db8df29b8a86b5c03fd90bccd13b6db0d351cdd9b92169af",
+      "file_sha256": "0a75f0eb018272bfe774621c91514716e39581153cfa2bc6e1c33502b140932a",
+      "object_id": "EVD-GEO-E2E-FEES",
+      "object_path": "evidence/records/evd-e2e-fees.md",
+      "object_version": "1.0.0",
+      "record_type": "evidence",
+      "snapshot_path": "outputs/snapshots/cis-geo-c1-adoption-decided/objects/evidence/records/evd-e2e-fees.md",
+      "snapshot_sha256": "0a75f0eb018272bfe774621c91514716e39581153cfa2bc6e1c33502b140932a"
+    },
+    {
+      "content_sha256": "d6fd212806c92f8b1d294e5b0d5f0afaa052d13d205a6f413183bf3746d0c908",
+      "entry_key": "724cb857a9198654da1039a3a92cffb5dddc31f6e9b91ac4f5b7a16111193706",
+      "file_sha256": "e70ed9d6316737e52d22fa392f596e14e394f3a2e3d2ecf3eba98b92670095ca",
+      "object_id": "SRC-GEO-E2E-ONBOARDING",
+      "object_path": "evidence/sources/src-e2e-onboarding.md",
+      "object_version": "1.0.0",
+      "record_type": "source",
+      "snapshot_path": "outputs/snapshots/cis-geo-c1-adoption-decided/objects/evidence/sources/src-e2e-onboarding.md",
+      "snapshot_sha256": "e70ed9d6316737e52d22fa392f596e14e394f3a2e3d2ecf3eba98b92670095ca"
+    },
+    {
+      "content_sha256": "11eba6508a4c4c1d270cabcec8c92346103d17f5959f3e43e9a09da9fcaf5d90",
+      "entry_key": "779722cc55d048c1d0e3aff4c276c6a6b21385ce66669ca7b7a50d36e2722cd2",
+      "file_sha256": "4d1bca7fdb929907e0324d087df30a747126151182cf1157d39655a65c43d879",
+      "object_id": "ADR-GEO-C1-THIRD-PARTY-DECIDED",
+      "object_path": "assets/adoptions/adr-geo-c1-third-party-decided.md",
+      "object_version": "1.0.0",
+      "record_type": "adoption_record",
+      "snapshot_path": "outputs/snapshots/cis-geo-c1-adoption-decided/objects/assets/adoptions/adr-geo-c1-third-party-decided.md",
+      "snapshot_sha256": "4d1bca7fdb929907e0324d087df30a747126151182cf1157d39655a65c43d879"
+    },
+    {
+      "content_sha256": "258ce8fe08a404363b6efc88cc605af3a4465aa29dcb4ba95737027327716064",
+      "entry_key": "79e7b8fc17d1eddcdbef4fa8ed37b1efa7205449d173d74db352a830dba81dca",
+      "file_sha256": "48dee8aff809bb960707326dc4bc5118c0013497c988874ba7c026a51c1b7428",
+      "object_id": "ADR-GEO-C1-OFFICIAL-DECIDED",
+      "object_path": "assets/adoptions/adr-geo-c1-official-decided.md",
+      "object_version": "1.0.0",
+      "record_type": "adoption_record",
+      "snapshot_path": "outputs/snapshots/cis-geo-c1-adoption-decided/objects/assets/adoptions/adr-geo-c1-official-decided.md",
+      "snapshot_sha256": "48dee8aff809bb960707326dc4bc5118c0013497c988874ba7c026a51c1b7428"
+    },
+    {
+      "content_sha256": "9cddd8a4732579c1ea633d2c66b028f8d72aeb6f15123fc3543b52cbf17e1df7",
+      "entry_key": "7c70960564743058c3afce62e726c2a184a10d2eb899bce313d3386b7e6dd5f7",
+      "file_sha256": "71f4be54245671f006792bba558cf9f6a86705812bce78d0f9ea34950957b96e",
+      "object_id": "EVD-GEO-E2E-CASE",
+      "object_path": "evidence/records/evd-e2e-case.md",
+      "object_version": "1.0.0",
+      "record_type": "evidence",
+      "snapshot_path": "outputs/snapshots/cis-geo-c1-adoption-decided/objects/evidence/records/evd-e2e-case.md",
+      "snapshot_sha256": "71f4be54245671f006792bba558cf9f6a86705812bce78d0f9ea34950957b96e"
+    },
+    {
+      "content_sha256": "115347126b40e11f3aaa82b2cf9b793751c02bc82808fd3984c6c1b257bed8d8",
+      "entry_key": "84b714281dd3014f9602998b9f5e63faffb1a73dd442c78fd6fbf779540a8852",
+      "file_sha256": "3afda0dff81b1664ef7ff408dd16fce84f07b88f45d6547c3f09871df3083d6e",
+      "object_id": "SRC-GEO-E2E-LEGACY",
+      "object_path": "evidence/sources/src-e2e-legacy.md",
+      "object_version": "1.0.0",
+      "record_type": "source",
+      "snapshot_path": "outputs/snapshots/cis-geo-c1-adoption-decided/objects/evidence/sources/src-e2e-legacy.md",
+      "snapshot_sha256": "3afda0dff81b1664ef7ff408dd16fce84f07b88f45d6547c3f09871df3083d6e"
+    },
+    {
+      "content_sha256": "993131c9e781b1af5b1496a9d83cba73365584d68b3ee5bffa168157aa18e4da",
+      "entry_key": "85855f5f36ab4dd176982e658d39ca1dca02831927b0a0f303ae6cdc543e7f47",
+      "file_sha256": "7dc606323fd1f70be97e93308d262e5867d52c0958f2df2e791a5c20af7232cf",
+      "object_id": "EVD-GEO-SITE-C1-BASE-OWN-CANONICAL",
+      "object_path": "evidence/records/evd-geo-site-c1-base-own-canonical.md",
+      "object_version": "1.0.0",
+      "record_type": "evidence",
+      "snapshot_path": "outputs/snapshots/cis-geo-c1-adoption-decided/objects/evidence/records/evd-geo-site-c1-base-own-canonical.md",
+      "snapshot_sha256": "7dc606323fd1f70be97e93308d262e5867d52c0958f2df2e791a5c20af7232cf"
+    },
+    {
+      "content_sha256": "c05c6c819824b4a3bbbe50587e611d97dc478fa9777acc9ab0371c4133722b0f",
+      "entry_key": "9009792931b41154690e41ad97f17d425a0d6bb0e7d5823c05b0e5cf2d8b4f36",
+      "file_sha256": "3a674d854b20db8648c7d7f10ae105e32f5465cbf054d40901af656b360d6553",
+      "object_id": "SRC-GEO-E2E-GUARANTEES",
+      "object_path": "evidence/sources/src-e2e-guarantees.md",
+      "object_version": "1.0.0",
+      "record_type": "source",
+      "snapshot_path": "outputs/snapshots/cis-geo-c1-adoption-decided/objects/evidence/sources/src-e2e-guarantees.md",
+      "snapshot_sha256": "3a674d854b20db8648c7d7f10ae105e32f5465cbf054d40901af656b360d6553"
+    },
+    {
+      "content_sha256": "d5527b52bc1bc547cd5611b8b917acf02e71abc89909d116b1cc203131e44660",
+      "entry_key": "909ba95e5e6b6c796fd32b63add5356118b81df2f8aa0556cdb210d10151b488",
+      "file_sha256": "fe9c34814985f4de8a9359f8eca4a47c845b9ac917efa68bd61ac0e47e413bca",
+      "object_id": "EVD-GEO-SITE-C1-BASE-OFFICIAL-META-DESCRIPTION-PRESENT",
+      "object_path": "evidence/records/evd-geo-site-c1-base-official-meta-description-present.md",
+      "object_version": "1.0.0",
+      "record_type": "evidence",
+      "snapshot_path": "outputs/snapshots/cis-geo-c1-adoption-decided/objects/evidence/records/evd-geo-site-c1-base-official-meta-description-present.md",
+      "snapshot_sha256": "fe9c34814985f4de8a9359f8eca4a47c845b9ac917efa68bd61ac0e47e413bca"
+    },
+    {
+      "content_sha256": "4b631febf4f1c6584240066a839b34061254fc17324ed18cd5efbd5294fe9919",
+      "entry_key": "90f2196378172098fe61ff47113e870ffff0f2ade752e57aa3837159506946b7",
+      "file_sha256": "146747d1f8837c710fbb60dddca7e959d25eab03927dc5d6a5f95e270ea8b3f0",
+      "object_id": "EVD-GEO-SITE-C1-BASE-THIRD-PARTY-SCHEMA-SYNTAX",
+      "object_path": "evidence/records/evd-geo-site-c1-base-third-party-schema-syntax.md",
+      "object_version": "1.0.0",
+      "record_type": "evidence",
+      "snapshot_path": "outputs/snapshots/cis-geo-c1-adoption-decided/objects/evidence/records/evd-geo-site-c1-base-third-party-schema-syntax.md",
+      "snapshot_sha256": "146747d1f8837c710fbb60dddca7e959d25eab03927dc5d6a5f95e270ea8b3f0"
+    },
+    {
+      "content_sha256": "115347126b40e11f3aaa82b2cf9b793751c02bc82808fd3984c6c1b257bed8d8",
+      "entry_key": "914824dc5f58fa4fcf457b9a8265e5e402c0f6d4bdf0bb3f1cdfb2032c22dc67",
+      "file_sha256": "c097dc354988db6b0ddcb9041d77974cbb4596fe01df92020a155b56f574e9b8",
+      "object_id": "EVD-GEO-E2E-LEGACY",
+      "object_path": "evidence/records/evd-e2e-legacy.md",
+      "object_version": "1.0.0",
+      "record_type": "evidence",
+      "snapshot_path": "outputs/snapshots/cis-geo-c1-adoption-decided/objects/evidence/records/evd-e2e-legacy.md",
+      "snapshot_sha256": "c097dc354988db6b0ddcb9041d77974cbb4596fe01df92020a155b56f574e9b8"
+    },
+    {
+      "content_sha256": "d5527b52bc1bc547cd5611b8b917acf02e71abc89909d116b1cc203131e44660",
+      "entry_key": "92d3f6f800347b861b4997628c39fb73ccb4fba5c402c824323c1664a6f75840",
+      "file_sha256": "a2cf21c84754cd7f1c9194c09b25ca718264a8657095e4edcb5d35f257f40a00",
+      "object_id": "EVD-GEO-SITE-C1-BASE-OWN-META-DESCRIPTION-PRESENT",
+      "object_path": "evidence/records/evd-geo-site-c1-base-own-meta-description-present.md",
+      "object_version": "1.0.0",
+      "record_type": "evidence",
+      "snapshot_path": "outputs/snapshots/cis-geo-c1-adoption-decided/objects/evidence/records/evd-geo-site-c1-base-own-meta-description-present.md",
+      "snapshot_sha256": "a2cf21c84754cd7f1c9194c09b25ca718264a8657095e4edcb5d35f257f40a00"
+    },
+    {
+      "content_sha256": "a210c8651cd23b7d74a65e4f99c45cf2a7681b9223ee46b623e3323d308d9020",
+      "entry_key": "95e1519b916cc40a1cd928ec09fae27cc853fafc8f3864b429af21fc5b01650f",
+      "file_sha256": "2f50b43f7f2e4bab3bdbd1d6b242a4025f0710531b41cbdfe27f763c3976faa4",
+      "object_id": "SRC-GEO-E2E-NON-GOALS",
+      "object_path": "evidence/sources/src-e2e-non-goals.md",
+      "object_version": "1.0.0",
+      "record_type": "source",
+      "snapshot_path": "outputs/snapshots/cis-geo-c1-adoption-decided/objects/evidence/sources/src-e2e-non-goals.md",
+      "snapshot_sha256": "2f50b43f7f2e4bab3bdbd1d6b242a4025f0710531b41cbdfe27f763c3976faa4"
+    },
+    {
+      "content_sha256": "3e6dc7819cc82b834438792a1446182ea7c6a51497bc3cd5050d7eafad9de198",
+      "entry_key": "9a9f0d2747c780634dcf681df63f4c5ce9b78ff47ff9b1b9ca852b6e7727c4e0",
+      "file_sha256": "036390e6100ed489af92ded78893a2e9aed15372695f80f643c12db29c69ebd6",
+      "object_id": "SRC-GEO-SITE-C1-OWN",
+      "object_path": "evidence/sources/src-geo-site-c1-own.md",
+      "object_version": "1.0.0",
+      "record_type": "source",
+      "snapshot_path": "outputs/snapshots/cis-geo-c1-adoption-decided/objects/evidence/sources/src-geo-site-c1-own.md",
+      "snapshot_sha256": "036390e6100ed489af92ded78893a2e9aed15372695f80f643c12db29c69ebd6"
+    },
+    {
+      "content_sha256": "cda951945ed872f423ec969dcdf6d49cdb08480cc4edbdd2bcd658d839b832c5",
+      "entry_key": "a0e8045449abd573d044d17da95ce1fd52314fa47517b3e3ca18f8e82b8f5f6a",
+      "file_sha256": "2ce36fc67a8bd1e0ecc24cc69268a62372eae9e8d0b53d517f3741f07225a44a",
+      "object_id": "PRP-GEO-C1-OWN",
+      "object_path": "assets/proposals/prp-geo-c1-own.md",
+      "object_version": "1.0.0",
+      "record_type": "asset_proposal",
+      "snapshot_path": "outputs/snapshots/cis-geo-c1-adoption-decided/objects/assets/proposals/prp-geo-c1-own.md",
+      "snapshot_sha256": "2ce36fc67a8bd1e0ecc24cc69268a62372eae9e8d0b53d517f3741f07225a44a"
+    },
+    {
+      "content_sha256": "d6fd212806c92f8b1d294e5b0d5f0afaa052d13d205a6f413183bf3746d0c908",
+      "entry_key": "a92d76bc206e1c5e6f42cb5cc15621e30ff60e6b8bd1ae5865673cdac440851b",
+      "file_sha256": "cd7703df19bab578ac7ca14af64167a7fe4aabffb5dee7fe14afbc453de7bc10",
+      "object_id": "EVD-GEO-E2E-ONBOARDING",
+      "object_path": "evidence/records/evd-e2e-onboarding.md",
+      "object_version": "1.0.0",
+      "record_type": "evidence",
+      "snapshot_path": "outputs/snapshots/cis-geo-c1-adoption-decided/objects/evidence/records/evd-e2e-onboarding.md",
+      "snapshot_sha256": "cd7703df19bab578ac7ca14af64167a7fe4aabffb5dee7fe14afbc453de7bc10"
+    },
+    {
+      "content_sha256": "4572ad641758c23474309fd0917192b0a55daa34e6bc97c3b8ca3e18c2e67004",
+      "entry_key": "aace85e737535dd977a6bd4e579775c8300df85445e8c895f551642f11b00ef6",
+      "file_sha256": "fd23a42af573115b5714b2ecff41188a00601ce98f5d76a9e5237caf98076135",
+      "object_id": "EVD-GEO-E2E-VOICE",
+      "object_path": "evidence/records/evd-e2e-voice.md",
+      "object_version": "1.0.0",
+      "record_type": "evidence",
+      "snapshot_path": "outputs/snapshots/cis-geo-c1-adoption-decided/objects/evidence/records/evd-e2e-voice.md",
+      "snapshot_sha256": "fd23a42af573115b5714b2ecff41188a00601ce98f5d76a9e5237caf98076135"
+    },
+    {
+      "content_sha256": "7d96aa214914f8db9380cb1623c1c3f257ef348ce4fdcd0ecfc7ec4ba7d208fc",
+      "entry_key": "acd5c954335ce6101dcf0d1745e25059d1729945113cd3544a997897ed13493c",
+      "file_sha256": "b80804eb6cde485ad5306dc07593b543279dc119e9b1f2b645c40106909b5a89",
+      "object_id": "EVD-GEO-SITE-C1-BASE-OFFICIAL-CRAWLABILITY",
+      "object_path": "evidence/records/evd-geo-site-c1-base-official-crawlability.md",
+      "object_version": "1.0.0",
+      "record_type": "evidence",
+      "snapshot_path": "outputs/snapshots/cis-geo-c1-adoption-decided/objects/evidence/records/evd-geo-site-c1-base-official-crawlability.md",
+      "snapshot_sha256": "b80804eb6cde485ad5306dc07593b543279dc119e9b1f2b645c40106909b5a89"
+    },
+    {
+      "content_sha256": "9cddd8a4732579c1ea633d2c66b028f8d72aeb6f15123fc3543b52cbf17e1df7",
+      "entry_key": "b0d3226fd0498563ac70644cbe392c1a6a963ec834cf7829367b425a65102657",
+      "file_sha256": "874dd0560cca7b721b579ce7b28426f0682968ea16498d6ef50b6f56cbd0227f",
+      "object_id": "SRC-GEO-E2E-CASE",
+      "object_path": "evidence/sources/src-e2e-case.md",
+      "object_version": "1.0.0",
+      "record_type": "source",
+      "snapshot_path": "outputs/snapshots/cis-geo-c1-adoption-decided/objects/evidence/sources/src-e2e-case.md",
+      "snapshot_sha256": "874dd0560cca7b721b579ce7b28426f0682968ea16498d6ef50b6f56cbd0227f"
+    },
+    {
+      "content_sha256": "8ae668b4bb38e19fcc1a10d7ef63231fce19387bea31feb72120f8ec27d0d9f5",
+      "entry_key": "b1dbdec546545311959f17389a2a8086359165ed773cf956aa67fdc0ba6d0e2b",
+      "file_sha256": "01b2d3c3800b55db72581d38f37ed046d39a935dfd1f88532f41db49356ed97c",
+      "object_id": "EVD-GEO-E2E-ELIGIBILITY",
+      "object_path": "evidence/records/evd-e2e-eligibility.md",
+      "object_version": "1.0.0",
+      "record_type": "evidence",
+      "snapshot_path": "outputs/snapshots/cis-geo-c1-adoption-decided/objects/evidence/records/evd-e2e-eligibility.md",
+      "snapshot_sha256": "01b2d3c3800b55db72581d38f37ed046d39a935dfd1f88532f41db49356ed97c"
+    },
+    {
+      "content_sha256": "53595091ce44ad6dc2ea2ec1d5aa0d30060cb6c52f98d80e35ac628b2bf6d8c1",
+      "entry_key": "b8789e91934d51e1edcba9b6a120ea9f7f5c079e06477bdf9a35f189a1f8678c",
+      "file_sha256": "919aef0812d73e040decc8e72f58f0775be805bb5ae8b3d014a5110a61a0e867",
+      "object_id": "EVD-GEO-E2E-POSITIONING",
+      "object_path": "evidence/records/evd-e2e-positioning.md",
+      "object_version": "1.0.0",
+      "record_type": "evidence",
+      "snapshot_path": "outputs/snapshots/cis-geo-c1-adoption-decided/objects/evidence/records/evd-e2e-positioning.md",
+      "snapshot_sha256": "919aef0812d73e040decc8e72f58f0775be805bb5ae8b3d014a5110a61a0e867"
+    },
+    {
+      "content_sha256": "3987871042f7f7afed241d9b0fcf21cdf7a041c4849d71dfc019b3aee7716ea2",
+      "entry_key": "bc798454b7003b15547bd0b4a7124b3a99b3f5faf8656f9a71852b850260d8d9",
+      "file_sha256": "c821349bebe6d279296e6f8c43cdf475ed571fdb425bca5e56be2136922efed9",
+      "object_id": "EVD-GEO-E2E-CAMPAIGNS",
+      "object_path": "evidence/records/evd-e2e-campaigns.md",
+      "object_version": "1.0.0",
+      "record_type": "evidence",
+      "snapshot_path": "outputs/snapshots/cis-geo-c1-adoption-decided/objects/evidence/records/evd-e2e-campaigns.md",
+      "snapshot_sha256": "c821349bebe6d279296e6f8c43cdf475ed571fdb425bca5e56be2136922efed9"
+    },
+    {
+      "content_sha256": "39e9f04bfbb709f8985c63171446a5d66214132c264165afb6eb98c13a5bbb95",
+      "entry_key": "bcdbe4167187b94ac9e47998ce5488eaf55aae565f4833a165254bc90278be21",
+      "file_sha256": "6a9daa67d8a1c25a8829de22400b0da17ec197440cb6ce9e9c6f818bf2548195",
+      "object_id": "SRC-GEO-E2E-ANSWER-DEFINITION",
+      "object_path": "evidence/sources/src-e2e-answer-definition.md",
+      "object_version": "1.0.0",
+      "record_type": "source",
+      "snapshot_path": "outputs/snapshots/cis-geo-c1-adoption-decided/objects/evidence/sources/src-e2e-answer-definition.md",
+      "snapshot_sha256": "6a9daa67d8a1c25a8829de22400b0da17ec197440cb6ce9e9c6f818bf2548195"
+    },
+    {
+      "content_sha256": "993131c9e781b1af5b1496a9d83cba73365584d68b3ee5bffa168157aa18e4da",
+      "entry_key": "beb0fe10d3c17936b98c45e703dbdd331271ccef21a6b480fd9d310fa3f354f1",
+      "file_sha256": "837feaeb6a74752d5de6663eef4204392b8d1ec68510f605c1f65d999557d480",
+      "object_id": "EVD-GEO-SITE-C1-BASE-THIRD-PARTY-CANONICAL",
+      "object_path": "evidence/records/evd-geo-site-c1-base-third-party-canonical.md",
+      "object_version": "1.0.0",
+      "record_type": "evidence",
+      "snapshot_path": "outputs/snapshots/cis-geo-c1-adoption-decided/objects/evidence/records/evd-geo-site-c1-base-third-party-canonical.md",
+      "snapshot_sha256": "837feaeb6a74752d5de6663eef4204392b8d1ec68510f605c1f65d999557d480"
+    },
+    {
+      "content_sha256": "4b631febf4f1c6584240066a839b34061254fc17324ed18cd5efbd5294fe9919",
+      "entry_key": "c8f91d32b4472825c178592b2bcc38e13fc8b9b2f95953b350331cb1d7b62bdc",
+      "file_sha256": "0342e76c43b8d18797efe8bce1f48e319fa6db61b29ee4928e03870fe4737ce3",
+      "object_id": "EVD-GEO-SITE-C1-BASE-OWN-SCHEMA-SYNTAX",
+      "object_path": "evidence/records/evd-geo-site-c1-base-own-schema-syntax.md",
+      "object_version": "1.0.0",
+      "record_type": "evidence",
+      "snapshot_path": "outputs/snapshots/cis-geo-c1-adoption-decided/objects/evidence/records/evd-geo-site-c1-base-own-schema-syntax.md",
+      "snapshot_sha256": "0342e76c43b8d18797efe8bce1f48e319fa6db61b29ee4928e03870fe4737ce3"
+    },
+    {
+      "content_sha256": "1f715fc357d9cad4ec3309c90babd8e66e0cca6207463f3f5915bed060fc7301",
+      "entry_key": "d2174913f31a0e0c0b4302d4e3db0ef340ed1993dad5b527a6eefca530e2f5e7",
+      "file_sha256": "9ac3ac936001b51704321d0ddc3da9909a0edc2e8b0f9c7cbe12dc31f7aff1a8",
+      "object_id": "SRC-GEO-E2E-PRIVACY",
+      "object_path": "evidence/sources/src-e2e-privacy.md",
+      "object_version": "1.0.0",
+      "record_type": "source",
+      "snapshot_path": "outputs/snapshots/cis-geo-c1-adoption-decided/objects/evidence/sources/src-e2e-privacy.md",
+      "snapshot_sha256": "9ac3ac936001b51704321d0ddc3da9909a0edc2e8b0f9c7cbe12dc31f7aff1a8"
+    },
+    {
+      "content_sha256": "24e1cedf6efc20a99384f95baa7f873d352a7f4f44ddb1881a87f22fe10ae271",
+      "entry_key": "e32b2a2c71bd17d438cb40548f1b5c345e1d849b682c478c7caf5206d7251a8d",
+      "file_sha256": "05a87f13bf03275dc76bd5ef1cc1f31762dfb4f27d31110be609982b0edb2f65",
+      "object_id": "SRC-GEO-E2E-COMPARISON",
+      "object_path": "evidence/sources/src-e2e-comparison.md",
+      "object_version": "1.0.0",
+      "record_type": "source",
+      "snapshot_path": "outputs/snapshots/cis-geo-c1-adoption-decided/objects/evidence/sources/src-e2e-comparison.md",
+      "snapshot_sha256": "05a87f13bf03275dc76bd5ef1cc1f31762dfb4f27d31110be609982b0edb2f65"
+    },
+    {
+      "content_sha256": "655624dbd4677d255e60241f6c1fbde3d877de7da3f666f156340636f456ea5d",
+      "entry_key": "e428c8f378027a3c98f8efd4f5a6ad78934ae5a31088530e4e4d3369fa70ab90",
+      "file_sha256": "6fa1895a787e2e7fa020dc917c4310913434d118ffa8c9082485c5e19c05a6ab",
+      "object_id": "SRC-GEO-SITE-C1-THIRD-PARTY",
+      "object_path": "evidence/sources/src-geo-site-c1-third-party.md",
+      "object_version": "1.0.0",
+      "record_type": "source",
+      "snapshot_path": "outputs/snapshots/cis-geo-c1-adoption-decided/objects/evidence/sources/src-geo-site-c1-third-party.md",
+      "snapshot_sha256": "6fa1895a787e2e7fa020dc917c4310913434d118ffa8c9082485c5e19c05a6ab"
+    },
+    {
+      "content_sha256": "85f6014ccda5f0e589c130ad13d6998d19a37a90a06383b18f7ef4505adf6ded",
+      "entry_key": "e775c3c7168cbeda55de1d95fc92ce9faf6f3d5e89d6e002b49cd64885ea75f3",
+      "file_sha256": "621e8096bd9eca85db0e01171b67b6548951ea58d25575ce6ea4191fe76cebd5",
+      "object_id": "SRC-GEO-SITE-C1-OFFICIAL",
+      "object_path": "evidence/sources/src-geo-site-c1-official.md",
+      "object_version": "1.0.0",
+      "record_type": "source",
+      "snapshot_path": "outputs/snapshots/cis-geo-c1-adoption-decided/objects/evidence/sources/src-geo-site-c1-official.md",
+      "snapshot_sha256": "621e8096bd9eca85db0e01171b67b6548951ea58d25575ce6ea4191fe76cebd5"
+    },
+    {
+      "content_sha256": "d8d34b9f234e97400b8a96db2edb8664e4889192426a0a6be8fd884fc28b1808",
+      "entry_key": "e8a4b957a9a7204eb73e8a5febfb72c3ad50365b7f91b38e5dc1bf89504c6408",
+      "file_sha256": "9acdd16536a6fba37129b981d9f3f866066cf68000d066fdca811df5a827e235",
+      "object_id": "EVD-GEO-E2E-REFUND",
+      "object_path": "evidence/records/evd-e2e-refund.md",
+      "object_version": "1.0.0",
+      "record_type": "evidence",
+      "snapshot_path": "outputs/snapshots/cis-geo-c1-adoption-decided/objects/evidence/records/evd-e2e-refund.md",
+      "snapshot_sha256": "9acdd16536a6fba37129b981d9f3f866066cf68000d066fdca811df5a827e235"
+    },
+    {
+      "content_sha256": "d8d34b9f234e97400b8a96db2edb8664e4889192426a0a6be8fd884fc28b1808",
+      "entry_key": "ec91ecbc46636e7c5e6dd6fdcebf2b949ac3e151c731de81fadeabb7e1a3719d",
+      "file_sha256": "c56c56aafe6a9473baad4a136d8fc1cfeac71e8030d0292a13e3d58fc8a5acfe",
+      "object_id": "SRC-GEO-E2E-REFUND",
+      "object_path": "evidence/sources/src-e2e-refund.md",
+      "object_version": "1.0.0",
+      "record_type": "source",
+      "snapshot_path": "outputs/snapshots/cis-geo-c1-adoption-decided/objects/evidence/sources/src-e2e-refund.md",
+      "snapshot_sha256": "c56c56aafe6a9473baad4a136d8fc1cfeac71e8030d0292a13e3d58fc8a5acfe"
+    },
+    {
+      "content_sha256": "93e1c25d15e397d249e71905bd51a80b5af9be0d998e9032667dd3402089e880",
+      "entry_key": "edcf46fd72be43d8801522232b0b7afc12cf49cf3f0cbc97809410479dfa96db",
+      "file_sha256": "98f661509c2250872a01f29a2156192a7980a04ca5faae78eb2491ad91d09879",
+      "object_id": "SRC-GEO-E2E-AUTOMATION",
+      "object_path": "evidence/sources/src-e2e-automation.md",
+      "object_version": "1.0.0",
+      "record_type": "source",
+      "snapshot_path": "outputs/snapshots/cis-geo-c1-adoption-decided/objects/evidence/sources/src-e2e-automation.md",
+      "snapshot_sha256": "98f661509c2250872a01f29a2156192a7980a04ca5faae78eb2491ad91d09879"
+    },
+    {
+      "content_sha256": "53595091ce44ad6dc2ea2ec1d5aa0d30060cb6c52f98d80e35ac628b2bf6d8c1",
+      "entry_key": "f74f49656f59668b38fb37d06196a6b9c67859a6f002d07f9020941f082119cb",
+      "file_sha256": "8a9658580fd0e6594c107ccc9727bdc8e05e2efab0112f1a15962026c870a028",
+      "object_id": "SRC-GEO-E2E-POSITIONING",
+      "object_path": "evidence/sources/src-e2e-positioning.md",
+      "object_version": "1.0.0",
+      "record_type": "source",
+      "snapshot_path": "outputs/snapshots/cis-geo-c1-adoption-decided/objects/evidence/sources/src-e2e-positioning.md",
+      "snapshot_sha256": "8a9658580fd0e6594c107ccc9727bdc8e05e2efab0112f1a15962026c870a028"
+    },
+    {
+      "content_sha256": "2eee2699e950cc3b2e8222abd3c365e25eac63e9b6fe6023e2bdc6199bae6e9d",
+      "entry_key": "fbb4fa074682bacdaad908120f7299b7ce6cc61facab15bd3afbd1fad2ccb3c0",
+      "file_sha256": "687e24da56322840f7ef047f535867a7cc82d19a3c45bbc16a53988d31df6ee4",
+      "object_id": "ADR-GEO-C1-OWN-DECIDED",
+      "object_path": "assets/adoptions/adr-geo-c1-own-decided.md",
+      "object_version": "1.0.0",
+      "record_type": "adoption_record",
+      "snapshot_path": "outputs/snapshots/cis-geo-c1-adoption-decided/objects/assets/adoptions/adr-geo-c1-own-decided.md",
+      "snapshot_sha256": "687e24da56322840f7ef047f535867a7cc82d19a3c45bbc16a53988d31df6ee4"
+    },
+    {
+      "content_sha256": "4b631febf4f1c6584240066a839b34061254fc17324ed18cd5efbd5294fe9919",
+      "entry_key": "fcd9d3fb1a0940fe2f40e7ee682235ebed847d104fb09c06794badb3db240a0a",
+      "file_sha256": "e8d6782dffe18e900a3eb7b7f9cbc904f5b4432185f8488ccf21ea8ff2686ecb",
+      "object_id": "EVD-GEO-SITE-C1-BASE-OFFICIAL-SCHEMA-SYNTAX",
+      "object_path": "evidence/records/evd-geo-site-c1-base-official-schema-syntax.md",
+      "object_version": "1.0.0",
+      "record_type": "evidence",
+      "snapshot_path": "outputs/snapshots/cis-geo-c1-adoption-decided/objects/evidence/records/evd-geo-site-c1-base-official-schema-syntax.md",
+      "snapshot_sha256": "e8d6782dffe18e900a3eb7b7f9cbc904f5b4432185f8488ccf21ea8ff2686ecb"
+    }
+  ]
+}

@@ -97,7 +97,14 @@ export default defineNuxtConfig({
   },
 
   hub: {
-    db: 'postgresql',
+    db: {
+      dialect: 'postgresql',
+      // NuxtHub's build-time PGlite migration client is not closed by the module.
+      // Local migrations run on dev startup; packaging must not open that database.
+      ...(!process.env.POSTGRES_URL && !process.env.POSTGRESQL_URL && !process.env.DATABASE_URL
+        ? { applyMigrationsDuringBuild: false }
+        : {})
+    },
     blob: true
   },
 

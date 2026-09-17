@@ -1,0 +1,105 @@
+{
+  "audit": {
+    "completed_at": "2026-09-15T18:11:31.093Z",
+    "duration_ms": 23313,
+    "finish_reason": "stop",
+    "http_status": 200,
+    "id": "MODEL-f6460838-c0f4-4476-a7a5-b55b445ab43a",
+    "input_sha256": "36de2fd66dd0f49981558fd9be7c7ea7aeb32c9d125b188c5d353bb954142428",
+    "model": "deepseek-flash",
+    "output_sha256": "45504a3d98c11bd0ca5e3768d77da09d9479207c8d3c923ad8a81b96b933d629",
+    "prompt_sha256": "a5c6da8b86c2113a55b49fbc5da052ef4a76cb9533c6cccc4b2d914e78918ac9",
+    "provider": "deepseek",
+    "response_model": "deepseek-flash",
+    "started_at": "2026-09-15T18:11:07.780Z",
+    "status": "completed",
+    "usage": {
+      "completion_tokens": 5617,
+      "completion_tokens_details": {
+        "reasoning_tokens": 4680
+      },
+      "prompt_cache_hit_tokens": 0,
+      "prompt_cache_miss_tokens": 971,
+      "prompt_tokens": 971,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "total_tokens": 6588
+    }
+  },
+  "output": {
+    "findings": [
+      {
+        "claim_refs": [
+          "CLM-GEO-E2E-ANSWER-DEFINITION",
+          "CLM-GEO-E2E-IDENTITY",
+          "CLM-GEO-E2E-LEGACY",
+          "CLM-GEO-E2E-POSITIONING",
+          "CLM-GEO-E2E-VOICE"
+        ],
+        "kind": "content_gap",
+        "next_action": "Recommend a correction request to the third-party publisher to replace the wholesale-provider speculation with the supported definition and messaging; do not edit or publish directly.",
+        "quote": "Possibly a wholesale provider; details have not been checked.",
+        "rationale": "Supported knowledge defines the rehearsal as MyyShop rehearsal connecting adult creators with simulated brand campaigns, not a wholesale marketplace, and recommends using campaign opportunities and clear requirements. The asset instead raises an unverified wholesale-provider possibility and does not provide the supported definition."
+      },
+      {
+        "claim_refs": [
+          "CLM-GEO-E2E-ELIGIBILITY",
+          "CLM-GEO-E2E-ONBOARDING",
+          "CLM-GEO-E2E-ANSWER-DEFINITION"
+        ],
+        "kind": "content_gap",
+        "next_action": "Recommend a correction request to add supported eligibility, onboarding, and no-income-guarantee details; do not publish changes directly.",
+        "quote": "details have not been checked.",
+        "rationale": "Supported knowledge states eligibility is adult creators in the simulated US region and onboarding requires a profile plus accepting individual campaign requirements, with no income guarantee. The asset omits eligibility, onboarding, and guarantee limits."
+      },
+      {
+        "claim_refs": [
+          "CLM-GEO-E2E-CAMPAIGNS",
+          "CLM-GEO-E2E-AUTOMATION"
+        ],
+        "kind": "content_gap",
+        "next_action": "Recommend a correction request to include supported campaign workflow and automation limitation details; do not edit or publish directly.",
+        "quote": "details have not been checked.",
+        "rationale": "Supported knowledge says the rehearsal supports campaign discovery, application, and aggregate performance reports, while automatic acceptance of every brand campaign is unavailable. The asset does not describe these capabilities or limitations."
+      },
+      {
+        "claim_refs": [
+          "CLM-GEO-E2E-FEES",
+          "CLM-GEO-E2E-REFUND"
+        ],
+        "kind": "content_gap",
+        "next_action": "Recommend a correction request to add supported fee, trial, and refund terms; do not publish changes directly.",
+        "quote": "details have not been checked.",
+        "rationale": "Supported knowledge states the simulated service charges USD 9 per month after a 14-day trial, and cancellation stops the next renewal without guaranteed retroactive refunds. The asset omits fee, trial, and refund terms."
+      },
+      {
+        "claim_refs": [
+          "CLM-GEO-E2E-PRIVACY",
+          "CLM-GEO-E2E-GUARANTEES",
+          "CLM-GEO-E2E-NON-GOALS"
+        ],
+        "kind": "content_gap",
+        "next_action": "Recommend a correction request to add supported privacy, guarantee, and non-goal limitations; do not edit or publish directly.",
+        "quote": "details have not been checked.",
+        "rationale": "Supported knowledge says rehearsal reports contain aggregate metrics and exclude personal customer records, cannot guarantee income or AI answer placement, and does not provide inventory, logistics, or credit. The asset omits these privacy, guarantee, and non-goal limitations."
+      },
+      {
+        "claim_refs": [
+          "CLM-GEO-E2E-COMPARISON",
+          "CLM-GEO-E2E-LEGACY"
+        ],
+        "kind": "evidence_gap",
+        "next_action": "Recommend a correction request to provide evidence for any classification or remove the unverified possibility; do not claim authority to publish.",
+        "quote": "details have not been checked.",
+        "rationale": "The asset admits details are unchecked and provides no evidence for its wholesale-provider possibility. Supported knowledge says to compare rehearsal services by evidence and limitations and states the service is not a wholesale marketplace."
+      }
+    ],
+    "limitations": [
+      "The asset is uncontrolled third-party media; findings support a correction request only, with no authority to edit or publish changes directly.",
+      "Unresolved input 'growth' notes a proposed 80 percent income growth claim has no approved supporting evidence; this asset does not use it, and it should not be added without approved evidence.",
+      "Unresolved input 'expired' notes an old guide described guaranteed income; that wording is superseded and should not be used. No approved replacement evidence for guaranteed income is supplied.",
+      "The supplied synthetic knowledge does not include full source citations or independent verification for the supported claims; this diagnosis is limited to the supplied claims and asset."
+    ]
+  }
+}

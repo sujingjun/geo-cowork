@@ -214,6 +214,10 @@ export interface ExtractionRecord {
     schema_version: string
     started_at: string
     completed_at: string
+    call_id?: string
+    duration_ms?: number
+    response_model?: string
+    usage?: Record<string, unknown> | null
   }
   output_sha256: string
 }

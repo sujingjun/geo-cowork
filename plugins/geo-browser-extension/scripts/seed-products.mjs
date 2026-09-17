@@ -16,7 +16,6 @@ async function createDbClient() {
 }
 
 // 用户和店铺 ID
-const USER_ID = '13399df5-9161-4c69-9264-fab7f42a9e18'
 const STORE_ID = 'ffccd138-b466-4345-9c39-d4392874f794'
 
 // 商品数据

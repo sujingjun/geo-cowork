@@ -1,0 +1,222 @@
+{
+  "objects": [
+    {
+      "id": "DOC-GEO-E2E-ANSWER-DEFINITION",
+      "path": "knowledge/documents/doc-e2e-answer-definition.md",
+      "refs": [
+        "KBASE-GEO-E2E-2BB19816EE72",
+        "MER-MYYSHOP-001",
+        "SRC-GEO-E2E-ANSWER-DEFINITION"
+      ],
+      "status": "approved",
+      "updated_at": "2026-09-16T00:00:00Z",
+      "version": "1.0.0"
+    },
+    {
+      "id": "DOC-GEO-E2E-AUTOMATION",
+      "path": "knowledge/documents/doc-e2e-automation.md",
+      "refs": [
+        "KBASE-GEO-E2E-2BB19816EE72",
+        "MER-MYYSHOP-001",
+        "SRC-GEO-E2E-AUTOMATION"
+      ],
+      "status": "approved",
+      "updated_at": "2026-09-16T00:00:00Z",
+      "version": "1.0.0"
+    },
+    {
+      "id": "DOC-GEO-E2E-CAMPAIGNS",
+      "path": "knowledge/documents/doc-e2e-campaigns.md",
+      "refs": [
+        "KBASE-GEO-E2E-2BB19816EE72",
+        "MER-MYYSHOP-001",
+        "SRC-GEO-E2E-CAMPAIGNS"
+      ],
+      "status": "approved",
+      "updated_at": "2026-09-16T00:00:00Z",
+      "version": "1.0.0"
+    },
+    {
+      "id": "DOC-GEO-E2E-CASE",
+      "path": "knowledge/documents/doc-e2e-case.md",
+      "refs": [
+        "KBASE-GEO-E2E-2BB19816EE72",
+        "MER-MYYSHOP-001",
+        "SRC-GEO-E2E-CASE"
+      ],
+      "status": "approved",
+      "updated_at": "2026-09-16T00:00:00Z",
+      "version": "1.0.0"
+    },
+    {
+      "id": "DOC-GEO-E2E-COMPARISON",
+      "path": "knowledge/documents/doc-e2e-comparison.md",
+      "refs": [
+        "KBASE-GEO-E2E-2BB19816EE72",
+        "MER-MYYSHOP-001",
+        "SRC-GEO-E2E-COMPARISON"
+      ],
+      "status": "approved",
+      "updated_at": "2026-09-16T00:00:00Z",
+      "version": "1.0.0"
+    },
+    {
+      "id": "DOC-GEO-E2E-ELIGIBILITY",
+      "path": "knowledge/documents/doc-e2e-eligibility.md",
+      "refs": [
+        "KBASE-GEO-E2E-2BB19816EE72",
+        "MER-MYYSHOP-001",
+        "SRC-GEO-E2E-ELIGIBILITY"
+      ],
+      "status": "approved",
+      "updated_at": "2026-09-16T00:00:00Z",
+      "version": "1.0.0"
+    },
+    {
+      "id": "DOC-GEO-E2E-EXPIRED",
+      "path": "knowledge/documents/doc-e2e-expired.md",
+      "refs": [
+        "KBASE-GEO-E2E-2BB19816EE72",
+        "MER-MYYSHOP-001",
+        "SRC-GEO-E2E-EXPIRED"
+      ],
+      "status": "draft",
+      "updated_at": "2026-09-16T00:00:00Z",
+      "version": "1.0.0"
+    },
+    {
+      "id": "DOC-GEO-E2E-FEES",
+      "path": "knowledge/documents/doc-e2e-fees.md",
+      "refs": [
+        "KBASE-GEO-E2E-2BB19816EE72",
+        "MER-MYYSHOP-001",
+        "SRC-GEO-E2E-FEES"
+      ],
+      "status": "approved",
+      "updated_at": "2026-09-16T00:00:00Z",
+      "version": "1.0.0"
+    },
+    {
+      "id": "DOC-GEO-E2E-GROWTH",
+      "path": "knowledge/documents/doc-e2e-growth.md",
+      "refs": [
+        "KBASE-GEO-E2E-2BB19816EE72",
+        "MER-MYYSHOP-001",
+        "SRC-GEO-E2E-GROWTH"
+      ],
+      "status": "draft",
+      "updated_at": "2026-09-16T00:00:00Z",
+      "version": "1.0.0"
+    },
+    {
+      "id": "DOC-GEO-E2E-GUARANTEES",
+      "path": "knowledge/documents/doc-e2e-guarantees.md",
+      "refs": [
+        "KBASE-GEO-E2E-2BB19816EE72",
+        "MER-MYYSHOP-001",
+        "SRC-GEO-E2E-GUARANTEES"
+      ],
+      "status": "approved",
+      "updated_at": "2026-09-16T00:00:00Z",
+      "version": "1.0.0"
+    },
+    {
+      "id": "DOC-GEO-E2E-IDENTITY",
+      "path": "knowledge/documents/doc-e2e-identity.md",
+      "refs": [
+        "KBASE-GEO-E2E-2BB19816EE72",
+        "MER-MYYSHOP-001",
+        "SRC-GEO-E2E-IDENTITY"
+      ],
+      "status": "approved",
+      "updated_at": "2026-09-16T00:00:00Z",
+      "version": "1.0.0"
+    },
+    {
+      "id": "DOC-GEO-E2E-LEGACY",
+      "path": "knowledge/documents/doc-e2e-legacy.md",
+      "refs": [
+        "KBASE-GEO-E2E-2BB19816EE72",
+        "MER-MYYSHOP-001",
+        "SRC-GEO-E2E-LEGACY"
+      ],
+      "status": "approved",
+      "updated_at": "2026-09-16T00:00:00Z",
+      "version": "1.0.0"
+    },
+    {
+      "id": "DOC-GEO-E2E-NON-GOALS",
+      "path": "knowledge/documents/doc-e2e-non-goals.md",
+      "refs": [
+        "KBASE-GEO-E2E-2BB19816EE72",
+        "MER-MYYSHOP-001",
+        "SRC-GEO-E2E-NON-GOALS"
+      ],
+      "status": "approved",
+      "updated_at": "2026-09-16T00:00:00Z",
+      "version": "1.0.0"
+    },
+    {
+      "id": "DOC-GEO-E2E-ONBOARDING",
+      "path": "knowledge/documents/doc-e2e-onboarding.md",
+      "refs": [
+        "KBASE-GEO-E2E-2BB19816EE72",
+        "MER-MYYSHOP-001",
+        "SRC-GEO-E2E-ONBOARDING"
+      ],
+      "status": "approved",
+      "updated_at": "2026-09-16T00:00:00Z",
+      "version": "1.0.0"
+    },
+    {
+      "id": "DOC-GEO-E2E-POSITIONING",
+      "path": "knowledge/documents/doc-e2e-positioning.md",
+      "refs": [
+        "KBASE-GEO-E2E-2BB19816EE72",
+        "MER-MYYSHOP-001",
+        "SRC-GEO-E2E-POSITIONING"
+      ],
+      "status": "approved",
+      "updated_at": "2026-09-16T00:00:00Z",
+      "version": "1.0.0"
+    },
+    {
+      "id": "DOC-GEO-E2E-PRIVACY",
+      "path": "knowledge/documents/doc-e2e-privacy.md",
+      "refs": [
+        "KBASE-GEO-E2E-2BB19816EE72",
+        "MER-MYYSHOP-001",
+        "SRC-GEO-E2E-PRIVACY"
+      ],
+      "status": "approved",
+      "updated_at": "2026-09-16T00:00:00Z",
+      "version": "1.0.0"
+    },
+    {
+      "id": "DOC-GEO-E2E-REFUND",
+      "path": "knowledge/documents/doc-e2e-refund.md",
+      "refs": [
+        "KBASE-GEO-E2E-2BB19816EE72",
+        "MER-MYYSHOP-001",
+        "SRC-GEO-E2E-REFUND"
+      ],
+      "status": "approved",
+      "updated_at": "2026-09-16T00:00:00Z",
+      "version": "1.0.0"
+    },
+    {
+      "id": "DOC-GEO-E2E-VOICE",
+      "path": "knowledge/documents/doc-e2e-voice.md",
+      "refs": [
+        "KBASE-GEO-E2E-2BB19816EE72",
+        "MER-MYYSHOP-001",
+        "SRC-GEO-E2E-VOICE"
+      ],
+      "status": "approved",
+      "updated_at": "2026-09-16T00:00:00Z",
+      "version": "1.0.0"
+    }
+  ],
+  "record_type": "document",
+  "schema_version": "1.1.0"
+}

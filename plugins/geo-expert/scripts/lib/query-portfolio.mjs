@@ -1,4 +1,4 @@
-import { readFile } from 'node:fs/promises';
+import { readFile, open, unlink } from 'node:fs/promises';
 
 import { loadWorkspaceGraph } from './index-builder.mjs';
 import {
@@ -19,6 +19,7 @@ import {
   sha256,
   stableStringify,
   writeCreateOnly,
+  atomicWrite,
 } from './workspace-paths.mjs';
 
 export class QueryPortfolioError extends Error {
@@ -43,6 +44,9 @@ export const QP_SOURCE_CLASSES = Object.freeze({
   first_party_user_data: 'P1',
   community_expression: 'P2',
   competitor_material: 'P3',
+  manual_import: 'P2',
+  gsc_search_query: 'P1',
+  knowledge_generated: 'P3',
 });
 
 const PRIORITY_ORDER = Object.freeze(['P0', 'P1', 'P2', 'P3']);
@@ -130,12 +134,12 @@ function bestPriority(priorities) {
 
 // --- 规则：qp-id-v1 ---
 
-export function generateQueryIdentity({ normalizedText, language }) {
+export function generateQueryIdentity({ normalizedText, language, goalRef }) {
   const slugTokens = normalizedText.match(/[a-z0-9]+/g) ?? [];
   const slug = (slugTokens.slice(0, 5).map((token) => token.slice(0, 12)).join('-')
     .slice(0, 40).toUpperCase()) || 'QUERY';
   const lang = String(language).split(/[-_]/)[0].toUpperCase();
-  const digest = sha256(stableStringify({ normalized_text: normalizedText, language }))
+  const digest = sha256(stableStringify({ normalized_text: normalizedText, language, ...(goalRef ? { goal_ref: goalRef } : {}) }))
     .slice(0, 4).toUpperCase();
   const id = `Q-${slug}-${lang}-${digest}`;
   return { id, path: `queries/candidates/${id.toLowerCase()}.md` };
@@ -410,6 +414,7 @@ export async function intakeQueryPortfolio({ workspace, plan, now }) {
 
   const context = await portfolioWriteContext(workspace);
   const duplicates = [];
+  const updates = [];
   const prepared = [];
   const preparedSummaries = [];
   for (const key of [...observations.keys()].sort(compareUtf8)) {
@@ -418,6 +423,7 @@ export async function intakeQueryPortfolio({ workspace, plan, now }) {
     const { id, path } = generateQueryIdentity({
       normalizedText: observation.normalized_text,
       language: observation.language,
+      ...(plan.goal_scoped_ids ? { goalRef: plan.goal_ref } : {}),
     });
     const queryText = [...observation.texts].sort(compareUtf8)[0];
     const data = {
@@ -453,6 +459,21 @@ export async function intakeQueryPortfolio({ workspace, plan, now }) {
       const existingBytes = await readExistingBytes(workspace, decorated.path);
       const idempotentReplay = existing.data.id === id && existingBytes === decorated.content;
       if (!idempotentReplay) {
+        if (plan.merge_sources && existing.data.status === 'candidate') {
+          const priorSources = existing.data.extensions?.['geo.qp_intake']?.sources ?? [];
+          const mergedSources = [...new Map([...priorSources, ...observation.sources].map(s => [s.ref, s])).values()].sort((a, b) => compareUtf8(a.ref, b.ref));
+          if (mergedSources.length > priorSources.length) {
+            const version = existing.data.version.split('.').map(Number);
+            version[2] += 1;
+            const mergedData = { ...existing.data, version: version.join('.'), updated_at: timestamp,
+              discovery_source_refs: [...new Set(mergedSources.map(s => s.ref))].sort(compareUtf8),
+              priority: priorityForSourceClasses(mergedSources.map(s => s.source_class)),
+              extensions: { ...existing.data.extensions, 'geo.qp_intake': { rules: { ...QP_RULES }, sources: mergedSources } },
+            };
+            updates.push({ before: await readExistingBytes(workspace, existing.path), output: decorateOutput(context, { path: existing.path, data: mergedData, body: existing.content }) });
+          }
+          preparedSummaries.push(summaryOf(existing.data, mergedSources.map(s => s.source_class)));
+        }
         duplicates.push({
           normalized_text: observation.normalized_text,
           language: observation.language,
@@ -482,11 +503,22 @@ export async function intakeQueryPortfolio({ workspace, plan, now }) {
   }
 
   const writeResult = await writeDecoratedOutputs(workspace, context, prepared);
+  for (const { before, output } of updates) {
+    const lockPath = resolveWithin(workspace, `${output.path}.lock`);
+    const lock = await open(lockPath, 'wx').catch(() => fail('OBJECT_CONFLICT', 'Query 正在更新'));
+    try {
+      if (await readExistingBytes(workspace, output.path) !== before) fail('OBJECT_CONFLICT', 'Query 在更新前已改变');
+      validateObjectData(output.data, { path: output.path });
+      if (context.testOnly) await preflightTestKnowledgeWrite({ workspace, data: output.data, body: output.body });
+      await atomicWrite(workspace, output.path, output.content);
+    } finally { await lock.close(); await unlink(lockPath); }
+  }
   return {
     run_id: plan.run_id,
     goal_ref: plan.goal_ref,
     created: writeResult.created,
     kept: writeResult.kept,
+    updated: updates.map(item => item.output.path),
     duplicates,
     queries: preparedSummaries,
   };

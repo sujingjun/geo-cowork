@@ -1,0 +1,31 @@
+{
+  "actor": "Independent fixture human (test_only)",
+  "at": "2026-09-16T00:05:00Z",
+  "decisions": {
+    "knowledge": {
+      "decision": "approve",
+      "reason": "Accept only supported current rehearsal facts and the generated six-question protocol; keep missing/expired evidence unresolved."
+    },
+    "answer_review": {
+      "decision": "approve",
+      "reason": "Reviewed the cited raw passages and scoped rehearsal knowledge. Retain uncertainty and adverse results."
+    },
+    "adoption": {
+      "decision": "approve",
+      "reason": "Adopt edits only for controlled rehearsal assets. Defer third-party publication; keep evidence and product gaps open."
+    },
+    "publication": {
+      "decision": "approve",
+      "reason": "Attest only the simulated versions actually read back after approved adoption."
+    },
+    "cycle_review": {
+      "decision": "approve",
+      "reason": "Accept an inconclusive, non-causal rehearsal review. Prioritize eligibility and evidence clarity in the next independent cycle.",
+      "next_goal": "Improve eligibility and evidence clarity using the previous cycle review."
+    },
+    "goal_selection": {
+      "decision": "approve",
+      "reason": "Independently select the evidence-clarity Goal proposed from the decided first-cycle Review."
+    }
+  }
+}

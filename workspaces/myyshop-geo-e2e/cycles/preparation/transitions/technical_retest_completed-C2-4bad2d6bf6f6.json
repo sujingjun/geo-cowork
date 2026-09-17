@@ -1,0 +1,31 @@
+{
+  "actor": {
+    "kind": "deterministic_tool"
+  },
+  "cycle_ref": "CYC-GEO-E2E-C2",
+  "expected_cycle_version": "1.0.4",
+  "from_stage": "publication_confirmed",
+  "gate": {
+    "artifact_paths": [
+      {
+        "media_type": "application/json",
+        "path": "execution/contracts/measurement-contract.json",
+        "role": "measurement_contract"
+      }
+    ],
+    "source_paths": [
+      "cycles/m4/runs/run-geo-site-c2-after-own.md",
+      "cycles/m4/runs/run-geo-site-c2-after-official.md"
+    ]
+  },
+  "gate_snapshot_id": "CIS-GEO-C2-TECHNICAL-RETEST-COMPLETED",
+  "goal_entry_key": "d4abe3adf89e120428516eb55f5ad306a5a27f14feecaa7cdaa1fbe222c8e57e",
+  "lease": {
+    "now": "2026-10-03T00:00:00.000Z",
+    "owner_id": "knowledge-journey",
+    "ttl_ms": 60000
+  },
+  "operation_id": "CYC-GEO-E2E-C2:technical_retest_completed",
+  "to_stage": "technical_retest_completed",
+  "transition_id": "CTR-GEO-C2-TECHNICAL-RETEST-COMPLETED"
+}

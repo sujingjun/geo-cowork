@@ -1,0 +1,43 @@
+{
+  "audit": {
+    "completed_at": "2026-09-15T17:56:04.474Z",
+    "duration_ms": 3420,
+    "finish_reason": "stop",
+    "http_status": 200,
+    "id": "MODEL-5789e781-382f-4128-9442-0c62e46e1362",
+    "input_sha256": "4c09d39196d87e528122cbcec7702590b4f2e66a8686e81710310d8ad2c6f836",
+    "model": "deepseek-flash",
+    "output_sha256": "e86c6d029e49238940d742381f995214c1331aab64c5a669bc442f40c1722acc",
+    "prompt_sha256": "e5d2c9a2481b77f774d18dc813bd55ef7805d120c8b02d6e068af72999a4b872",
+    "provider": "deepseek",
+    "response_model": "deepseek-flash",
+    "started_at": "2026-09-15T17:56:01.054Z",
+    "status": "completed",
+    "usage": {
+      "completion_tokens": 669,
+      "completion_tokens_details": {
+        "reasoning_tokens": 504
+      },
+      "prompt_cache_hit_tokens": 640,
+      "prompt_cache_miss_tokens": 220,
+      "prompt_tokens": 860,
+      "prompt_tokens_details": {
+        "cached_tokens": 640
+      },
+      "total_tokens": 1529
+    }
+  },
+  "output": {
+    "answer": {
+      "completeness": "partial",
+      "html_structure_summary": "Two plain-text paragraphs separated by a blank line; no headings, lists, or tables.",
+      "refusal": false,
+      "text": "MyyShop rehearsal connects adult creators with simulated brand campaigns. The rehearsal service is not a wholesale marketplace. The rehearsal prioritizes transparent campaign requirements over guaranteed earnings. The rehearsal does not provide inventory, logistics or credit. The rehearsal is open to adult creators in its simulated US region. Creators complete a profile and accept individual campaign requirements.\n\nSynthetic consumer input for: What are the fees, trial terms, and refund rules for the rehearsal service?"
+    },
+    "citations": [],
+    "platform_annotations": [],
+    "warnings": [
+      "Answer does not specify fees, trial terms, or refund rules."
+    ]
+  }
+}

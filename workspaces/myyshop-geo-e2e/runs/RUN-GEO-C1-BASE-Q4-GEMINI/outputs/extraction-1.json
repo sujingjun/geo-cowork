@@ -1,0 +1,41 @@
+{
+  "audit": {
+    "completed_at": "2026-09-15T17:57:05.756Z",
+    "duration_ms": 3394,
+    "finish_reason": "stop",
+    "http_status": 200,
+    "id": "MODEL-62dde405-e4c5-4047-b718-d3be355e4d63",
+    "input_sha256": "3165e01188230d9db4144afc5ad7ed32a518a1d20140a0627dbe3462d94bff69",
+    "model": "deepseek-flash",
+    "output_sha256": "702baed016661f78c3d736f11b8e0bd48c1fee1c9a08e3ed672c451bc6e485ea",
+    "prompt_sha256": "e5d2c9a2481b77f774d18dc813bd55ef7805d120c8b02d6e068af72999a4b872",
+    "provider": "deepseek",
+    "response_model": "deepseek-flash",
+    "started_at": "2026-09-15T17:57:02.362Z",
+    "status": "completed",
+    "usage": {
+      "completion_tokens": 516,
+      "completion_tokens_details": {
+        "reasoning_tokens": 412
+      },
+      "prompt_cache_hit_tokens": 640,
+      "prompt_cache_miss_tokens": 136,
+      "prompt_tokens": 776,
+      "prompt_tokens_details": {
+        "cached_tokens": 640
+      },
+      "total_tokens": 1292
+    }
+  },
+  "output": {
+    "answer": {
+      "completeness": "partial",
+      "html_structure_summary": "Plain text containing two paragraphs separated by a blank line; no HTML markup elements are present.",
+      "refusal": false,
+      "text": "MyyShop rehearsal Wholesale marketplace Guaranteed income for everyone.\n\nSynthetic consumer input for: What is the rehearsal service, what does it connect adult creators with, and is it a wholesale marketplace?"
+    },
+    "citations": [],
+    "platform_annotations": [],
+    "warnings": []
+  }
+}

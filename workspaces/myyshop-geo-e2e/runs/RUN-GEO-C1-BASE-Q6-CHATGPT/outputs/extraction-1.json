@@ -1,0 +1,45 @@
+{
+  "audit": {
+    "attempts": [
+      "MODEL-e4948fe8-cfa7-4231-bd14-dff218dfa77e"
+    ],
+    "completed_at": "2026-09-15T18:01:21.876Z",
+    "duration_ms": 5937,
+    "extraction_validation": "passed",
+    "finish_reason": "stop",
+    "http_status": 200,
+    "id": "MODEL-e4948fe8-cfa7-4231-bd14-dff218dfa77e",
+    "input_sha256": "f4c77c06785ce38d3a084a32bb33773c5bb758cd33652ca599788f99e2267080",
+    "model": "deepseek-flash",
+    "output_sha256": "3fb9e0837480e884affdb7619daa0978b4b0c8f875b49efc5b6b7ddb67b284c6",
+    "prompt_sha256": "e5d2c9a2481b77f774d18dc813bd55ef7805d120c8b02d6e068af72999a4b872",
+    "provider": "deepseek",
+    "response_model": "deepseek-flash",
+    "started_at": "2026-09-15T18:01:15.939Z",
+    "status": "completed",
+    "usage": {
+      "completion_tokens": 1112,
+      "completion_tokens_details": {
+        "reasoning_tokens": 1014
+      },
+      "prompt_cache_hit_tokens": 638,
+      "prompt_cache_miss_tokens": 134,
+      "prompt_tokens": 772,
+      "prompt_tokens_details": {
+        "cached_tokens": 638
+      },
+      "total_tokens": 1884
+    }
+  },
+  "output": {
+    "answer": {
+      "completeness": "partial",
+      "html_structure_summary": "Two plain-text paragraphs separated by a blank line; no HTML markup.",
+      "refusal": false,
+      "text": "MyyShop rehearsal Wholesale marketplace Guaranteed income for everyone.\n\nSynthetic consumer input for: Who is eligible for the rehearsal service, and what onboarding steps are required before accepting a campaign?"
+    },
+    "citations": [],
+    "platform_annotations": [],
+    "warnings": []
+  }
+}

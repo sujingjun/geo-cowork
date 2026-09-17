@@ -1,0 +1,20 @@
+{
+  "actions": [
+    "approve",
+    "reject",
+    "defer"
+  ],
+  "body_sha256": "cf5d27b2c2abdc6f9e21d23c4dfcfd3c528d71ac2f78b42232b8bf8efcf361a5",
+  "id": "OWNER-C1-CYCLE-REVIEW",
+  "kind": "cycle_review",
+  "schema_version": "geo-owner-package-v1",
+  "targets": [
+    {
+      "id": "CRV-GEO-C1-WAITING",
+      "path": "cycles/m6/reviews/crv-geo-c1-waiting.md",
+      "sha256": "ef9b221a23261ee2d013c0c89c8694d477d6ddcecef92f2d0a2a9d78fadde36f",
+      "version": "1.0.0"
+    }
+  ],
+  "title": "C1 cycle review and next Goal"
+}

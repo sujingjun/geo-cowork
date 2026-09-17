@@ -5,6 +5,18 @@ description: 在 Cycle 启动前用确定性流水线完成 Query Portfolio：�
 
 # geo-query-portfolio
 
+## 多来源入口（Spec 0014）
+
+```bash
+node <plugin-root>/scripts/query-portfolio.mjs import --workspace <workspace> --goal <goal-ref> --file <queries.csv>
+node <plugin-root>/scripts/query-portfolio.mjs collect-gsc --workspace <real-workspace> --goal <goal-ref>
+node <plugin-root>/scripts/query-portfolio.mjs generate --workspace <workspace> --goal <goal-ref> --knowledge <relative-paths-comma-separated> --provider deepseek
+```
+
+人工输入支持文本/TXT/CSV/JSON。GSC 默认读取配置的站点，PT 日期执行日前三天结束的连续 28 天、final/web/query 分页数据；其语言信息保持 unknown。生成问题使用 Goal、知识版本和线索，并保存真实模型调用和生成理由，不虚构用户需求频率。
+
+候选 Query 的新来源会合并并保留原始批次；已冻结对象不原地变更。完整演练中用 geo-lifecycle 的审核包和 apply-feedback 完成选择/冻结，Owner 不手写 ID/hash/status。独立 Portfolio 的底层接口仍保留，Agent 只能根据 Owner 的明确决定物化批准。
+
 ## 触发场景
 
 - 从授权观察来源（生成式平台观察、第一方用户数据、社区表达、竞品材料）登记 candidate Query；
@@ -34,7 +46,7 @@ description: 在 Cycle 启动前用确定性流水线完成 Query Portfolio：�
    node <plugin-root>/scripts/query-portfolio.mjs report --workspace <path> --goal <GOAL-ID>
    ```
 
-3. 人工逐条批准：把选定 Query 编辑为 `formal` 并补 `approval`（可覆盖优先级建议）；Agent 不得代写 approval。
+3. Owner 明确选择和批准后，由工具物化 `formal` 与决定引用；Agent 不自行做出批准结论。
 4. 组装 draft Query Set：
 
    ```bash
@@ -47,7 +59,7 @@ description: 在 Cycle 启动前用确定性流水线完成 Query Portfolio：�
    node <plugin-root>/scripts/query-portfolio.mjs prefreeze --workspace <path> --query-set <QS-ID>
    ```
 
-6. 人工把 Query Set 编辑为 `frozen`（补 `frozen_at/frozen_by/content_sha256/approval`），然后校验并重建 index，把每步写入独立 Run：
+6. 根据 Owner 的明确冻结决定，由工具生成 `frozen_at/frozen_by/content_sha256/approval`，然后校验并重建 index：
 
    ```bash
    node <plugin-root>/scripts/query-portfolio.mjs validate --workspace <path>

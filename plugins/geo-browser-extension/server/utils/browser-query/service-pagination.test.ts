@@ -3,7 +3,7 @@ import { describe, expect, it } from 'vitest'
 import type { BrowserQueryTask, PendingQueryResult } from '../../../shared/types/browser-query'
 import { MemoryBrowserQueryRepository } from './memory-repository'
 import { BrowserQueryService } from './service'
-import { adapterRegistry, fakeExtractor, registeredTask } from './service-test-fixtures'
+import { adapterRegistry, realExtractor, registeredTask } from './service-test-fixtures'
 
 describe('BrowserQueryService pagination and URL identity', () => {
   it('paginates pending results by created_at then result_id tuple', async () => {
@@ -11,7 +11,7 @@ describe('BrowserQueryService pagination and URL identity', () => {
     const subject = new BrowserQueryService({
       repository,
       adapterRegistry: adapterRegistry(),
-      extractor: fakeExtractor()
+      extractor: realExtractor()
     })
     const pending = (resultId: string, createdAt: string): PendingQueryResult => ({
       schema_version: 'geo-browser-pending-result-v1',
@@ -44,7 +44,7 @@ describe('BrowserQueryService pagination and URL identity', () => {
     const subject = new BrowserQueryService({
       repository,
       adapterRegistry: adapterRegistry(),
-      extractor: fakeExtractor()
+      extractor: realExtractor()
     })
     const task = (taskId: string, requestId: string, createdAt: string): BrowserQueryTask => ({
       schema_version: 'geo-browser-query-task-v2',

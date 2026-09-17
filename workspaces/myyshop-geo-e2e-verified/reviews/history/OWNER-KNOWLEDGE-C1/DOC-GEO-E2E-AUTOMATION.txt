@@ -1,0 +1,26 @@
+---
+id: DOC-GEO-E2E-AUTOMATION
+record_type: document
+status: draft
+version: 1.0.0
+created_at: '2026-09-16T00:00:00Z'
+updated_at: '2026-09-16T00:00:00Z'
+title: Capability boundary
+test_scope:
+  kind: synthetic
+  usage: test_only
+  merchant_ref: MER-MYYSHOP-001
+  workspace_id: ws_377ec2e00b68d35bf465ab5d6e
+  knowledge_base_ref: KBASE-GEO-E2E-377EC2E00B68
+scope: Synthetic rehearsal only.
+source_refs:
+  - SRC-GEO-E2E-AUTOMATION
+extensions:
+  geo.knowledge_input:
+    raw_path: knowledge/05-products-services/automation.md
+    sha256: 14fa153bc49a0e008e4881b27a2d856500b029991e2d7e4c5f1238c587eb2c09
+    supported: true
+---
+# Capability boundary
+
+Automatic acceptance of every brand campaign is unavailable.

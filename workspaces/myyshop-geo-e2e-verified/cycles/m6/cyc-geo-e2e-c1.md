@@ -1,0 +1,209 @@
+---
+id: CYC-GEO-E2E-C1
+record_type: cycle
+status: completed
+version: 1.0.9
+created_at: '2026-09-16T00:00:00Z'
+updated_at: '2026-09-25T00:00:00.000Z'
+title: Synthetic GEO Cycle 1
+test_scope:
+  kind: synthetic
+  usage: test_only
+  merchant_ref: MER-MYYSHOP-001
+  workspace_id: ws_377ec2e00b68d35bf465ab5d6e
+  knowledge_base_ref: KBASE-GEO-E2E-377EC2E00B68
+scope: knowledge_independent_engineering
+merchant_ref: MER-MYYSHOP-001
+knowledge_base_ref: KBASE-GEO-E2E-377EC2E00B68
+execution_scope: synthetic_test
+cycle_number: 1
+core_versions:
+  input_snapshot:
+    ref: CIS-GEO-E2E-FREEZE-C1
+    version: 1.0.0
+aggregate_stage: review_decided
+completion_scope: full
+goal_tracks:
+  - goal_entry_key: 3aee169d0dfb3f8c89300fe8b010652bb01c06f5e0064021ba8b1ed0f2d2ba6c
+    input_snapshot_version:
+      ref: CIS-GEO-E2E-FREEZE-C1
+      version: 1.0.0
+    query_set_entry_key: 0771797c27053b46b7e83ac5173d99e71dd961d570da863e1ada195df49a613c
+    knowledge_release_entry_keys:
+      - 86684c4db3815031c5fec4bb03755b5c4e26bf0e389c959dfa673dd0065ebbfe
+    evidence_entry_keys:
+      - 061271e0533d2d635a93185f22b3ca1b22166613781d97f9a84f81e641e4c95d
+      - 1a648515587896bdbc373f5a76f6459f299ad14d0413d81ffc8753f1014da0e9
+      - 1dad88642e6fd71815f162d6209832bf8d76ce1a8cfd6677e0f00630811c389b
+      - 3111b67b109ef9f6e286f0b4badf63c55806608abeb81b8d497c8bcfeb91d471
+      - 4cd3864c3a6dbdbcfb9ff54469e64bf2074be4110caa64049b4c7f46efd7ef1f
+      - 625d914724348008c8816150c5456329e28d38b8e9842ef9a493094644fd0b9e
+      - 6dbce9d368b43670531e0670b87b663d40fcd85043e3ce80485524fa4fef2ec3
+      - 9b8d78f5a9b423801f426181fe8bff4e910f311089dce6e6d9247cb2802dabd0
+      - a5dcf3ba8994285e17202a5e57c746d04f6132e34a424268eff188392b1c2d95
+      - a9cb1c41759044346c3604c5e361615ee6d89c669d70e9935d4721e072f95b10
+      - b5371f17f9f36af06ed4d4316e7e8b00714c120ce07553118866c1fca35eb3da
+      - c0cd5d69726daba96dfb65227eeff9a8858b8736c5240915687471f4a56fc9b3
+      - c30cb585f61014bf8ef34d6d8172fdad506c7cf0bca52068ddacec7709d2ec94
+      - c932c7d00e880e05317604016d9ac1abc0f912cfcc34a62c5a7c678abf5fed95
+      - de6c0017fd3c15069fae044a371f13e9d5f8ffa8d7a763f7d38d2444ff875bad
+      - f8c0b1fbe52991bbcb86c7560f554e20e5518e65dcf6e7fa539cf1a4061384f6
+    asset_entry_keys:
+      - b409285d8d77cfbbad00cbc50063c664fac71883d5fac38043cc035aed38f29f
+      - d18cc1a19104342ffbe6ab91518eaa2b82438608b2ece6dc158d433af0b8d67b
+      - d7eb157abec5fc0f771482a5dc50b620e00487b51f35eb6ca860028e9d48335c
+    collector_profile_entry_keys:
+      - 02e39660dc82322605bd6f66da68e95a9f788cc050aecfc2a9030251d83333b1
+      - 609d7659f6c8aedd4bfc2db6e50d3955d4b2876dfde77a184b039393c7e79a05
+      - 6d66eb349ab40ae257f2a50c5b63486297b6072a38bfd8e7329724d75f496187
+      - a9f6d80cfc758b52effc89915ea440206b66c21ad6b8e9b5fd73928ca98558bc
+      - db9de284f4591606c53760b45bb87fe3bd99f5cbc2c04263b43ae46d59093d39
+    measurement_contract_entry_key: 6c7bc9c1c9b1c6e12841185c235d69724891321d63ccce74f751c3e0b98d7806
+    stage: review_decided
+    baseline_aggregation_refs:
+      - AGG-GEO-C1-BASE-Q3-GOOGLE-AI
+      - AGG-GEO-C1-BASE-Q5-GEMINI
+      - AGG-GEO-C1-BASE-Q4-PERPLEXITY
+      - AGG-GEO-C1-BASE-Q2-CHATGPT
+      - AGG-GEO-C1-BASE-Q2-CLAUDE
+      - AGG-GEO-C1-BASE-Q6-CHATGPT
+      - AGG-GEO-C1-BASE-Q6-PERPLEXITY
+      - AGG-GEO-C1-BASE-Q5-CLAUDE
+      - AGG-GEO-C1-BASE-Q4-CHATGPT
+      - AGG-GEO-C1-BASE-Q6-CLAUDE
+      - AGG-GEO-C1-BASE-Q3-CHATGPT
+      - AGG-GEO-C1-BASE-Q3-GEMINI
+      - AGG-GEO-C1-BASE-Q5-CHATGPT
+      - AGG-GEO-C1-BASE-Q1-PERPLEXITY
+      - AGG-GEO-C1-BASE-Q6-GOOGLE-AI
+      - AGG-GEO-C1-BASE-Q2-PERPLEXITY
+      - AGG-GEO-C1-BASE-Q1-GOOGLE-AI
+      - AGG-GEO-C1-BASE-Q3-PERPLEXITY
+      - AGG-GEO-C1-BASE-Q5-GOOGLE-AI
+      - AGG-GEO-C1-BASE-Q2-GOOGLE-AI
+      - AGG-GEO-C1-BASE-Q1-GEMINI
+      - AGG-GEO-C1-BASE-Q1-CHATGPT
+      - AGG-GEO-C1-BASE-Q4-GOOGLE-AI
+      - AGG-GEO-C1-BASE-Q1-CLAUDE
+      - AGG-GEO-C1-BASE-Q4-CLAUDE
+      - AGG-GEO-C1-BASE-Q5-PERPLEXITY
+      - AGG-GEO-C1-BASE-Q2-GEMINI
+      - AGG-GEO-C1-BASE-Q3-CLAUDE
+      - AGG-GEO-C1-BASE-Q4-GEMINI
+      - AGG-GEO-C1-BASE-Q6-GEMINI
+    finding_refs:
+      - FND-GEO-C1-OWN-1
+      - FND-GEO-SITE-C1-BASE-THIRD-PARTY-CANONICAL
+      - FND-GEO-SITE-C1-BASE-THIRD-PARTY-META-DESCRIPTION-PRESENT
+      - FND-GEO-SITE-C1-BASE-OWN-CRAWLABILITY
+      - FND-GEO-SITE-C1-BASE-OFFICIAL-META-DESCRIPTION-PRESENT
+      - FND-GEO-C1-THIRD-PARTY-3
+      - FND-GEO-C1-OFFICIAL-3
+      - FND-GEO-SITE-C1-BASE-OFFICIAL-SCHEMA-SYNTAX
+      - FND-GEO-SITE-C1-BASE-THIRD-PARTY-SCHEMA-SYNTAX
+      - FND-GEO-SITE-C1-BASE-OWN-CANONICAL
+      - FND-GEO-C1-OFFICIAL-4
+      - FND-GEO-SITE-C1-BASE-THIRD-PARTY-CRAWLABILITY
+      - FND-GEO-SITE-C1-BASE-OFFICIAL-CANONICAL
+      - FND-GEO-C1-THIRD-PARTY-2
+      - FND-GEO-SITE-C1-BASE-OWN-SCHEMA-SYNTAX
+      - FND-GEO-SITE-C1-BASE-OFFICIAL-CRAWLABILITY
+      - FND-GEO-SITE-C1-BASE-OWN-META-DESCRIPTION-PRESENT
+      - FND-GEO-C1-OWN-2
+      - FND-GEO-C1-OFFICIAL-1
+      - FND-GEO-C1-THIRD-PARTY-1
+      - FND-GEO-C1-OFFICIAL-2
+    evidence_plan_refs:
+      - EPL-GEO-C1-THIRD-PARTY-3
+      - EPL-GEO-C1-OFFICIAL-4
+    asset_proposal_refs:
+      - PRP-GEO-C1-THIRD-PARTY
+      - PRP-GEO-C1-OFFICIAL
+      - PRP-GEO-C1-OWN
+    adoption_record_refs:
+      - ADR-GEO-C1-THIRD-PARTY-DECIDED
+      - ADR-GEO-C1-OFFICIAL-DECIDED
+      - ADR-GEO-C1-OWN-DECIDED
+    publication_refs:
+      - PUB-GEO-C1-OWN-V2-CONFIRMED
+      - PUB-GEO-C1-OFFICIAL-V2-CONFIRMED
+    technical_retest_run_refs:
+      - RUN-GEO-SITE-C1-AFTER-OWN
+      - RUN-GEO-SITE-C1-AFTER-OFFICIAL
+    answer_retest_aggregation_refs:
+      - AGG-GEO-C1-AFTER-Q5-CHATGPT
+      - AGG-GEO-C1-AFTER-Q4-CHATGPT
+      - AGG-GEO-C1-AFTER-Q6-CLAUDE
+      - AGG-GEO-C1-AFTER-Q5-PERPLEXITY
+      - AGG-GEO-C1-AFTER-Q1-GEMINI
+      - AGG-GEO-C1-AFTER-Q1-GOOGLE-AI
+      - AGG-GEO-C1-AFTER-Q1-CLAUDE
+      - AGG-GEO-C1-AFTER-Q6-CHATGPT
+      - AGG-GEO-C1-AFTER-Q6-GOOGLE-AI
+      - AGG-GEO-C1-AFTER-Q5-GOOGLE-AI
+      - AGG-GEO-C1-AFTER-Q4-GOOGLE-AI
+      - AGG-GEO-C1-AFTER-Q4-CLAUDE
+      - AGG-GEO-C1-AFTER-Q1-PERPLEXITY
+      - AGG-GEO-C1-AFTER-Q5-GEMINI
+      - AGG-GEO-C1-AFTER-Q5-CLAUDE
+      - AGG-GEO-C1-AFTER-Q2-GEMINI
+      - AGG-GEO-C1-AFTER-Q6-GEMINI
+      - AGG-GEO-C1-AFTER-Q3-CHATGPT
+      - AGG-GEO-C1-AFTER-Q2-PERPLEXITY
+      - AGG-GEO-C1-AFTER-Q2-GOOGLE-AI
+      - AGG-GEO-C1-AFTER-Q4-GEMINI
+      - AGG-GEO-C1-AFTER-Q2-CLAUDE
+      - AGG-GEO-C1-AFTER-Q3-GOOGLE-AI
+      - AGG-GEO-C1-AFTER-Q1-CHATGPT
+      - AGG-GEO-C1-AFTER-Q3-PERPLEXITY
+      - AGG-GEO-C1-AFTER-Q6-PERPLEXITY
+      - AGG-GEO-C1-AFTER-Q3-GEMINI
+      - AGG-GEO-C1-AFTER-Q2-CHATGPT
+      - AGG-GEO-C1-AFTER-Q3-CLAUDE
+      - AGG-GEO-C1-AFTER-Q4-PERPLEXITY
+    analytics_observation_refs:
+      - ANO-GEO-C1
+    business_signal_refs:
+      - BSIG-GEO-C1
+    review_input_snapshot_version:
+      ref: CIS-GEO-C1-REVIEW-WAITING-HUMAN
+      version: 1.0.0
+transition_refs:
+  - CTR-GEO-C1-BASELINE-RECORDED
+  - CTR-GEO-C1-DIAGNOSIS-READY
+  - CTR-GEO-C1-ADOPTION-DECIDED
+  - CTR-GEO-C1-PUBLICATION-CONFIRMED
+  - CTR-GEO-C1-TECHNICAL-RETEST-COMPLETED
+  - CTR-GEO-C1-ANSWER-RETEST-COMPLETED
+  - CTR-GEO-C1-ANALYTICS-RECORDED
+  - CTR-GEO-C1-REVIEW-WAITING-HUMAN
+  - CTR-GEO-C1-REVIEW-DECIDED
+cycle_review_version:
+  ref: CRV-GEO-C1-DECIDED
+  version: 1.0.0
+predecessor_review_version: null
+goal_selection_version: null
+extensions:
+  geo.journey:
+    query_refs:
+      - Q-DOES-THE-MYYSHOP-REHEARSAL-GUARANTEE-EN-F889
+      - Q-HOW-CAN-I-COMPARE-THE-EN-B48D
+      - Q-WHAT-ARE-THE-MYYSHOP-REHEARSAL-EN-3BC4
+      - Q-WHAT-CAPABILITIES-DOES-THE-MYYSHOP-EN-2DE3
+      - Q-WHAT-IS-THE-MYYSHOP-REHEARSAL-EN-2B21
+      - Q-WHO-IS-ELIGIBLE-TO-USE-EN-1531
+    query_set_ref: QS-GEO-E2E-C1
+    knowledge_release_ref: KR-GEO-E2E-C1
+    asset_refs:
+      - AST-GEO-E2E-C1-OWN
+      - AST-GEO-E2E-C1-OFFICIAL
+      - AST-GEO-E2E-C1-THIRD-PARTY
+    baseline_profile_refs:
+      - CPF-GEO-E2E-C1-BASE-CHATGPT
+      - CPF-GEO-E2E-C1-BASE-GEMINI
+      - CPF-GEO-E2E-C1-BASE-PERPLEXITY
+      - CPF-GEO-E2E-C1-BASE-GOOGLE-AI
+      - CPF-GEO-E2E-C1-BASE-CLAUDE
+    input_path: cycles/preparation/knowledge-input-C1.json
+---
+# M6 synthetic cycle

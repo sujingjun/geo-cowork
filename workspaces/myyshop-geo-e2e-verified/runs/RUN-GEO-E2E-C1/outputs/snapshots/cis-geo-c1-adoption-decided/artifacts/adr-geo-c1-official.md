@@ -1,0 +1,22 @@
+---
+id: ADR-GEO-C1-OFFICIAL
+test_scope:
+  kind: synthetic
+  knowledge_base_ref: KBASE-GEO-E2E-377EC2E00B68
+  merchant_ref: MER-MYYSHOP-001
+  usage: test_only
+  workspace_id: ws_377ec2e00b68d35bf465ab5d6e
+record_type: adoption_record
+status: draft
+version: 1.0.0
+created_at: '2026-09-16T00:00:00Z'
+updated_at: '2026-09-16T00:00:00Z'
+title: Adoption for PRP-GEO-C1-OFFICIAL
+proposal_ref: PRP-GEO-C1-OFFICIAL
+asset_ref: AST-GEO-E2E-C1-OFFICIAL
+decisions:
+  - item_id: REC-GEO-C1-OFFICIAL
+    decision: pending
+    reason: 待人工决定
+---
+# Adoption ADR-GEO-C1-OFFICIAL

@@ -1,0 +1,698 @@
+{
+  "audit": {
+    "completed_at": "2026-09-15T20:50:42.607Z",
+    "duration_ms": 27670,
+    "finish_reason": "stop",
+    "http_status": 200,
+    "id": "MODEL-595f1bcb-bdd6-4bc5-995e-9faced5985ce",
+    "input_sha256": "0f795ca995b614ecce7e8b56bf778e1af3aef495da6a3494afb6c64a34c4795d",
+    "model": "deepseek-flash",
+    "output_sha256": "79d2a7df1178abbba3de968be7bad803ad1855d3ce7f454319a12bee43b414a9",
+    "prompt_sha256": "94cb4bcf35cc23090c7271eaeb868a4612f150cd09551c6f5e1a6d6e77a143e1",
+    "provider": "deepseek",
+    "request_options": {
+      "reasoning_effort": "low",
+      "thinking": "enabled"
+    },
+    "response_model": "deepseek-flash",
+    "started_at": "2026-09-15T20:50:14.937Z",
+    "status": "completed",
+    "usage": {
+      "completion_tokens": 8095,
+      "completion_tokens_details": {
+        "reasoning_tokens": 3350
+      },
+      "prompt_cache_hit_tokens": 896,
+      "prompt_cache_miss_tokens": 2526,
+      "prompt_tokens": 3422,
+      "prompt_tokens_details": {
+        "cached_tokens": 896
+      },
+      "total_tokens": 11517
+    }
+  },
+  "output": {
+    "reviews": [
+      {
+        "core": {
+          "citation_quality": "fail",
+          "core_fact_accuracy": "pass",
+          "current_positioning": "pass",
+          "entity_recognition": "pass",
+          "risk_boundary": "pass"
+        },
+        "judgments": [
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-ANSWER-DEFINITION",
+            "quote": "Describe the rehearsal as an adult creator campaign service with explicit eligibility and no income guarantee.",
+            "reason": "Matches the supplied definition statement."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-ELIGIBILITY",
+            "quote": "The rehearsal is open to adult creators in its simulated US region.",
+            "reason": "Matches the supplied eligibility statement."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-ONBOARDING",
+            "quote": "Creators complete a profile and accept individual campaign requirements.",
+            "reason": "Matches the supplied onboarding statement."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-FEES",
+            "quote": "The simulated service charges USD 9 per month after a 14-day trial.",
+            "reason": "Matches the supplied fee statement."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-GUARANTEES",
+            "quote": "The rehearsal cannot guarantee income or placement in an AI answer.",
+            "reason": "Matches the supplied guarantee-limitation statement."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-NON-GOALS",
+            "quote": "The rehearsal does not provide inventory, logistics or credit.",
+            "reason": "Matches the supplied non-goals statement."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-REFUND",
+            "quote": "The rehearsal cancellation stops the next renewal and does not guarantee retroactive refunds.",
+            "reason": "Matches the supplied cancellation and refund-boundary statement."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-POSITIONING",
+            "quote": "The rehearsal prioritizes transparent campaign requirements over guaranteed earnings.",
+            "reason": "Matches the supplied positioning statement."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-PRIVACY",
+            "quote": "Rehearsal reports contain aggregate metrics and exclude personal customer records.",
+            "reason": "Matches the supplied privacy statement."
+          }
+        ],
+        "sample_ref": "SMP-GEO-C2-AFTER-Q6-CHATGPT-1"
+      },
+      {
+        "core": {
+          "citation_quality": "fail",
+          "core_fact_accuracy": "pass",
+          "current_positioning": "pass",
+          "entity_recognition": "pass",
+          "risk_boundary": "pass"
+        },
+        "judgments": [
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-ANSWER-DEFINITION",
+            "quote": "Describe the rehearsal as an adult creator campaign service with explicit eligibility and no income guarantee.",
+            "reason": "Matches the supplied definition statement."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-ELIGIBILITY",
+            "quote": "The rehearsal is open to adult creators in its simulated US region.",
+            "reason": "Matches the supplied eligibility statement."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-ONBOARDING",
+            "quote": "Creators complete a profile and accept individual campaign requirements.",
+            "reason": "Matches the supplied onboarding statement."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-FEES",
+            "quote": "The simulated service charges USD 9 per month after a 14-day trial.",
+            "reason": "Matches the supplied fee statement."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-GUARANTEES",
+            "quote": "The rehearsal cannot guarantee income or placement in an AI answer.",
+            "reason": "Matches the supplied guarantee-limitation statement."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-NON-GOALS",
+            "quote": "The rehearsal does not provide inventory, logistics or credit.",
+            "reason": "Matches the supplied non-goals statement."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-REFUND",
+            "quote": "The rehearsal cancellation stops the next renewal and does not guarantee retroactive refunds.",
+            "reason": "Matches the supplied cancellation and refund-boundary statement."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-POSITIONING",
+            "quote": "The rehearsal prioritizes transparent campaign requirements over guaranteed earnings.",
+            "reason": "Matches the supplied positioning statement."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-PRIVACY",
+            "quote": "Rehearsal reports contain aggregate metrics and exclude personal customer records.",
+            "reason": "Matches the supplied privacy statement."
+          }
+        ],
+        "sample_ref": "SMP-GEO-C2-AFTER-Q6-CHATGPT-2"
+      },
+      {
+        "core": {
+          "citation_quality": "fail",
+          "core_fact_accuracy": "pass",
+          "current_positioning": "pass",
+          "entity_recognition": "pass",
+          "risk_boundary": "pass"
+        },
+        "judgments": [
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-ANSWER-DEFINITION",
+            "quote": "Describe the rehearsal as an adult creator campaign service with explicit eligibility and no income guarantee.",
+            "reason": "Matches the supplied definition statement."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-ELIGIBILITY",
+            "quote": "The rehearsal is open to adult creators in its simulated US region.",
+            "reason": "Matches the supplied eligibility statement."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-ONBOARDING",
+            "quote": "Creators complete a profile and accept individual campaign requirements.",
+            "reason": "Matches the supplied onboarding statement."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-FEES",
+            "quote": "The simulated service charges USD 9 per month after a 14-day trial.",
+            "reason": "Matches the supplied fee statement."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-GUARANTEES",
+            "quote": "The rehearsal cannot guarantee income or placement in an AI answer.",
+            "reason": "Matches the supplied guarantee-limitation statement."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-NON-GOALS",
+            "quote": "The rehearsal does not provide inventory, logistics or credit.",
+            "reason": "Matches the supplied non-goals statement."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-REFUND",
+            "quote": "The rehearsal cancellation stops the next renewal and does not guarantee retroactive refunds.",
+            "reason": "Matches the supplied cancellation and refund-boundary statement."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-POSITIONING",
+            "quote": "The rehearsal prioritizes transparent campaign requirements over guaranteed earnings.",
+            "reason": "Matches the supplied positioning statement."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-PRIVACY",
+            "quote": "Rehearsal reports contain aggregate metrics and exclude personal customer records.",
+            "reason": "Matches the supplied privacy statement."
+          }
+        ],
+        "sample_ref": "SMP-GEO-C2-AFTER-Q6-GEMINI-1"
+      },
+      {
+        "core": {
+          "citation_quality": "fail",
+          "core_fact_accuracy": "pass",
+          "current_positioning": "pass",
+          "entity_recognition": "pass",
+          "risk_boundary": "pass"
+        },
+        "judgments": [
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-ANSWER-DEFINITION",
+            "quote": "Describe the rehearsal as an adult creator campaign service with explicit eligibility and no income guarantee.",
+            "reason": "Matches the supplied definition statement."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-ELIGIBILITY",
+            "quote": "The rehearsal is open to adult creators in its simulated US region.",
+            "reason": "Matches the supplied eligibility statement."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-ONBOARDING",
+            "quote": "Creators complete a profile and accept individual campaign requirements.",
+            "reason": "Matches the supplied onboarding statement."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-FEES",
+            "quote": "The simulated service charges USD 9 per month after a 14-day trial.",
+            "reason": "Matches the supplied fee statement."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-GUARANTEES",
+            "quote": "The rehearsal cannot guarantee income or placement in an AI answer.",
+            "reason": "Matches the supplied guarantee-limitation statement."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-NON-GOALS",
+            "quote": "The rehearsal does not provide inventory, logistics or credit.",
+            "reason": "Matches the supplied non-goals statement."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-REFUND",
+            "quote": "The rehearsal cancellation stops the next renewal and does not guarantee retroactive refunds.",
+            "reason": "Matches the supplied cancellation and refund-boundary statement."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-POSITIONING",
+            "quote": "The rehearsal prioritizes transparent campaign requirements over guaranteed earnings.",
+            "reason": "Matches the supplied positioning statement."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-PRIVACY",
+            "quote": "Rehearsal reports contain aggregate metrics and exclude personal customer records.",
+            "reason": "Matches the supplied privacy statement."
+          }
+        ],
+        "sample_ref": "SMP-GEO-C2-AFTER-Q6-GEMINI-2"
+      },
+      {
+        "core": {
+          "citation_quality": "fail",
+          "core_fact_accuracy": "pass",
+          "current_positioning": "pass",
+          "entity_recognition": "pass",
+          "risk_boundary": "pass"
+        },
+        "judgments": [
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-ANSWER-DEFINITION",
+            "quote": "Describe the rehearsal as an adult creator campaign service with explicit eligibility and no income guarantee.",
+            "reason": "Matches the supplied definition statement."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-ELIGIBILITY",
+            "quote": "The rehearsal is open to adult creators in its simulated US region.",
+            "reason": "Matches the supplied eligibility statement."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-ONBOARDING",
+            "quote": "Creators complete a profile and accept individual campaign requirements.",
+            "reason": "Matches the supplied onboarding statement."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-FEES",
+            "quote": "The simulated service charges USD 9 per month after a 14-day trial.",
+            "reason": "Matches the supplied fee statement."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-GUARANTEES",
+            "quote": "The rehearsal cannot guarantee income or placement in an AI answer.",
+            "reason": "Matches the supplied guarantee-limitation statement."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-NON-GOALS",
+            "quote": "The rehearsal does not provide inventory, logistics or credit.",
+            "reason": "Matches the supplied non-goals statement."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-REFUND",
+            "quote": "The rehearsal cancellation stops the next renewal and does not guarantee retroactive refunds.",
+            "reason": "Matches the supplied cancellation and refund-boundary statement."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-POSITIONING",
+            "quote": "The rehearsal prioritizes transparent campaign requirements over guaranteed earnings.",
+            "reason": "Matches the supplied positioning statement."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-PRIVACY",
+            "quote": "Rehearsal reports contain aggregate metrics and exclude personal customer records.",
+            "reason": "Matches the supplied privacy statement."
+          }
+        ],
+        "sample_ref": "SMP-GEO-C2-AFTER-Q6-PERPLEXITY-1"
+      },
+      {
+        "core": {
+          "citation_quality": "fail",
+          "core_fact_accuracy": "pass",
+          "current_positioning": "pass",
+          "entity_recognition": "pass",
+          "risk_boundary": "pass"
+        },
+        "judgments": [
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-ANSWER-DEFINITION",
+            "quote": "Describe the rehearsal as an adult creator campaign service with explicit eligibility and no income guarantee.",
+            "reason": "Matches the supplied definition statement."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-ELIGIBILITY",
+            "quote": "The rehearsal is open to adult creators in its simulated US region.",
+            "reason": "Matches the supplied eligibility statement."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-ONBOARDING",
+            "quote": "Creators complete a profile and accept individual campaign requirements.",
+            "reason": "Matches the supplied onboarding statement."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-FEES",
+            "quote": "The simulated service charges USD 9 per month after a 14-day trial.",
+            "reason": "Matches the supplied fee statement."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-GUARANTEES",
+            "quote": "The rehearsal cannot guarantee income or placement in an AI answer.",
+            "reason": "Matches the supplied guarantee-limitation statement."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-NON-GOALS",
+            "quote": "The rehearsal does not provide inventory, logistics or credit.",
+            "reason": "Matches the supplied non-goals statement."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-REFUND",
+            "quote": "The rehearsal cancellation stops the next renewal and does not guarantee retroactive refunds.",
+            "reason": "Matches the supplied cancellation and refund-boundary statement."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-POSITIONING",
+            "quote": "The rehearsal prioritizes transparent campaign requirements over guaranteed earnings.",
+            "reason": "Matches the supplied positioning statement."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-PRIVACY",
+            "quote": "Rehearsal reports contain aggregate metrics and exclude personal customer records.",
+            "reason": "Matches the supplied privacy statement."
+          }
+        ],
+        "sample_ref": "SMP-GEO-C2-AFTER-Q6-PERPLEXITY-2"
+      },
+      {
+        "core": {
+          "citation_quality": "fail",
+          "core_fact_accuracy": "pass",
+          "current_positioning": "pass",
+          "entity_recognition": "pass",
+          "risk_boundary": "pass"
+        },
+        "judgments": [
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-ANSWER-DEFINITION",
+            "quote": "Describe the rehearsal as an adult creator campaign service with explicit eligibility and no income guarantee.",
+            "reason": "Matches the supplied definition statement."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-ELIGIBILITY",
+            "quote": "The rehearsal is open to adult creators in its simulated US region.",
+            "reason": "Matches the supplied eligibility statement."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-ONBOARDING",
+            "quote": "Creators complete a profile and accept individual campaign requirements.",
+            "reason": "Matches the supplied onboarding statement."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-FEES",
+            "quote": "The simulated service charges USD 9 per month after a 14-day trial.",
+            "reason": "Matches the supplied fee statement."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-GUARANTEES",
+            "quote": "The rehearsal cannot guarantee income or placement in an AI answer.",
+            "reason": "Matches the supplied guarantee-limitation statement."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-NON-GOALS",
+            "quote": "The rehearsal does not provide inventory, logistics or credit.",
+            "reason": "Matches the supplied non-goals statement."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-REFUND",
+            "quote": "The rehearsal cancellation stops the next renewal and does not guarantee retroactive refunds.",
+            "reason": "Matches the supplied cancellation and refund-boundary statement."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-POSITIONING",
+            "quote": "The rehearsal prioritizes transparent campaign requirements over guaranteed earnings.",
+            "reason": "Matches the supplied positioning statement."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-PRIVACY",
+            "quote": "Rehearsal reports contain aggregate metrics and exclude personal customer records.",
+            "reason": "Matches the supplied privacy statement."
+          }
+        ],
+        "sample_ref": "SMP-GEO-C2-AFTER-Q6-GOOGLE-AI-1"
+      },
+      {
+        "core": {
+          "citation_quality": "fail",
+          "core_fact_accuracy": "pass",
+          "current_positioning": "pass",
+          "entity_recognition": "pass",
+          "risk_boundary": "pass"
+        },
+        "judgments": [
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-ANSWER-DEFINITION",
+            "quote": "Describe the rehearsal as an adult creator campaign service with explicit eligibility and no income guarantee.",
+            "reason": "Matches the supplied definition statement."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-ELIGIBILITY",
+            "quote": "The rehearsal is open to adult creators in its simulated US region.",
+            "reason": "Matches the supplied eligibility statement."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-ONBOARDING",
+            "quote": "Creators complete a profile and accept individual campaign requirements.",
+            "reason": "Matches the supplied onboarding statement."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-FEES",
+            "quote": "The simulated service charges USD 9 per month after a 14-day trial.",
+            "reason": "Matches the supplied fee statement."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-GUARANTEES",
+            "quote": "The rehearsal cannot guarantee income or placement in an AI answer.",
+            "reason": "Matches the supplied guarantee-limitation statement."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-NON-GOALS",
+            "quote": "The rehearsal does not provide inventory, logistics or credit.",
+            "reason": "Matches the supplied non-goals statement."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-REFUND",
+            "quote": "The rehearsal cancellation stops the next renewal and does not guarantee retroactive refunds.",
+            "reason": "Matches the supplied cancellation and refund-boundary statement."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-POSITIONING",
+            "quote": "The rehearsal prioritizes transparent campaign requirements over guaranteed earnings.",
+            "reason": "Matches the supplied positioning statement."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-PRIVACY",
+            "quote": "Rehearsal reports contain aggregate metrics and exclude personal customer records.",
+            "reason": "Matches the supplied privacy statement."
+          }
+        ],
+        "sample_ref": "SMP-GEO-C2-AFTER-Q6-GOOGLE-AI-2"
+      },
+      {
+        "core": {
+          "citation_quality": "fail",
+          "core_fact_accuracy": "pass",
+          "current_positioning": "pass",
+          "entity_recognition": "pass",
+          "risk_boundary": "pass"
+        },
+        "judgments": [
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-ANSWER-DEFINITION",
+            "quote": "Describe the rehearsal as an adult creator campaign service with explicit eligibility and no income guarantee.",
+            "reason": "Matches the supplied definition statement."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-ELIGIBILITY",
+            "quote": "The rehearsal is open to adult creators in its simulated US region.",
+            "reason": "Matches the supplied eligibility statement."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-ONBOARDING",
+            "quote": "Creators complete a profile and accept individual campaign requirements.",
+            "reason": "Matches the supplied onboarding statement."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-FEES",
+            "quote": "The simulated service charges USD 9 per month after a 14-day trial.",
+            "reason": "Matches the supplied fee statement."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-GUARANTEES",
+            "quote": "The rehearsal cannot guarantee income or placement in an AI answer.",
+            "reason": "Matches the supplied guarantee-limitation statement."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-NON-GOALS",
+            "quote": "The rehearsal does not provide inventory, logistics or credit.",
+            "reason": "Matches the supplied non-goals statement."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-REFUND",
+            "quote": "The rehearsal cancellation stops the next renewal and does not guarantee retroactive refunds.",
+            "reason": "Matches the supplied cancellation and refund-boundary statement."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-POSITIONING",
+            "quote": "The rehearsal prioritizes transparent campaign requirements over guaranteed earnings.",
+            "reason": "Matches the supplied positioning statement."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-PRIVACY",
+            "quote": "Rehearsal reports contain aggregate metrics and exclude personal customer records.",
+            "reason": "Matches the supplied privacy statement."
+          }
+        ],
+        "sample_ref": "SMP-GEO-C2-AFTER-Q6-CLAUDE-1"
+      },
+      {
+        "core": {
+          "citation_quality": "fail",
+          "core_fact_accuracy": "pass",
+          "current_positioning": "pass",
+          "entity_recognition": "pass",
+          "risk_boundary": "pass"
+        },
+        "judgments": [
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-ANSWER-DEFINITION",
+            "quote": "Describe the rehearsal as an adult creator campaign service with explicit eligibility and no income guarantee.",
+            "reason": "Matches the supplied definition statement."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-ELIGIBILITY",
+            "quote": "The rehearsal is open to adult creators in its simulated US region.",
+            "reason": "Matches the supplied eligibility statement."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-ONBOARDING",
+            "quote": "Creators complete a profile and accept individual campaign requirements.",
+            "reason": "Matches the supplied onboarding statement."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-FEES",
+            "quote": "The simulated service charges USD 9 per month after a 14-day trial.",
+            "reason": "Matches the supplied fee statement."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-GUARANTEES",
+            "quote": "The rehearsal cannot guarantee income or placement in an AI answer.",
+            "reason": "Matches the supplied guarantee-limitation statement."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-NON-GOALS",
+            "quote": "The rehearsal does not provide inventory, logistics or credit.",
+            "reason": "Matches the supplied non-goals statement."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-REFUND",
+            "quote": "The rehearsal cancellation stops the next renewal and does not guarantee retroactive refunds.",
+            "reason": "Matches the supplied cancellation and refund-boundary statement."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-POSITIONING",
+            "quote": "The rehearsal prioritizes transparent campaign requirements over guaranteed earnings.",
+            "reason": "Matches the supplied positioning statement."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-PRIVACY",
+            "quote": "Rehearsal reports contain aggregate metrics and exclude personal customer records.",
+            "reason": "Matches the supplied privacy statement."
+          }
+        ],
+        "sample_ref": "SMP-GEO-C2-AFTER-Q6-CLAUDE-2"
+      }
+    ]
+  }
+}

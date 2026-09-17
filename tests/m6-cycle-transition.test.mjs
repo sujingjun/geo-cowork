@@ -126,7 +126,7 @@ test('非法跳阶段、倒退、terminal 继续与跨 Goal gate 均在任何写
   }
 });
 
-test('advance 顺序固定为 transition CIS → exclusive lock → expected-version CAS', async () => {
+test('advance 先预检与 exclusive lock，再持久化 transition CIS 和 CAS', async () => {
   const { root, cycle } = await createM6FrozenCycleWorkspace();
   try {
     const { advanceCycle } = await lifecycleApi();
@@ -136,7 +136,8 @@ test('advance 顺序固定为 transition CIS → exclusive lock → expected-ver
       plan,
     });
     assert.equal(result.applied, true);
-    assert.ok(result.steps.indexOf('gate_snapshot_written') < result.steps.indexOf('lock_acquired'));
+    assert.ok(result.steps.indexOf('lock_acquired') < result.steps.indexOf('gate_snapshot_written'));
+    assert.ok(result.steps.indexOf('gate_snapshot_written') < result.steps.indexOf('transition_intent_written'));
     assert.ok(result.steps.indexOf('lock_acquired') < result.steps.indexOf('cas_applied'));
     assert.equal(result.transition_id, 'CTR-M6-TEST-BASELINE-001');
   } finally {

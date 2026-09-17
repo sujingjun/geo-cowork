@@ -1,0 +1,52 @@
+{
+  "audit": {
+    "completed_at": "2026-09-15T18:20:23.800Z",
+    "duration_ms": 9830,
+    "finish_reason": "stop",
+    "http_status": 200,
+    "id": "MODEL-029ceb7c-8cd9-46ad-92e5-12d6330132c1",
+    "input_sha256": "36de2fd66dd0f49981558fd9be7c7ea7aeb32c9d125b188c5d353bb954142428",
+    "model": "deepseek-flash",
+    "output_sha256": "b7609d51f08b631c74ae51985a246ec30276141e9eba5454ec4379e2ca82177c",
+    "prompt_sha256": "3923f12b156b2c822b487a67c1cbdfc52864056aa857d67a85838af31b5e241e",
+    "provider": "deepseek",
+    "request_options": {
+      "reasoning_effort": "low",
+      "thinking": "enabled"
+    },
+    "response_model": "deepseek-flash",
+    "started_at": "2026-09-15T18:20:13.970Z",
+    "status": "completed",
+    "usage": {
+      "completion_tokens": 1931,
+      "completion_tokens_details": {
+        "reasoning_tokens": 1754
+      },
+      "prompt_cache_hit_tokens": 0,
+      "prompt_cache_miss_tokens": 1041,
+      "prompt_tokens": 1041,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "total_tokens": 2972
+    }
+  },
+  "output": {
+    "findings": [
+      {
+        "claim_refs": [
+          "CLM-GEO-E2E-LEGACY",
+          "CLM-GEO-E2E-IDENTITY"
+        ],
+        "kind": "content_gap",
+        "next_action": "Request correction from the third-party publisher to replace the speculative wholesale wording with the accurate rehearsal service definition; do not claim authority to publish or approve the corrected content.",
+        "quote": "Possibly a wholesale provider; details have not been checked.",
+        "rationale": "Knowledge states the rehearsal service is not a wholesale marketplace and connects adult creators with simulated brand campaigns. The asset's speculative wholesale positioning conflicts with current knowledge."
+      }
+    ],
+    "limitations": [
+      "Unproven growth claim (80 percent income growth) has no approved supporting evidence and must not be used.",
+      "Expired wording: a historical guide described guaranteed income; this claim is superseded and must not be used."
+    ]
+  }
+}

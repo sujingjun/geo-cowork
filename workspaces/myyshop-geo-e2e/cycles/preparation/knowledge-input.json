@@ -1,0 +1,220 @@
+{
+  "created_at": "2026-09-30T00:00:00.000Z",
+  "cycle_number": 2,
+  "cycle_ref": "CYC-GEO-E2E-C2",
+  "goal_ref": "GOAL-GEO-E2E-C2",
+  "goal_selection_ref": "GSEL-F1CC84D9AE1591B77DCD82BB",
+  "knowledge_package_id": "OWNER-KNOWLEDGE-C2",
+  "knowledge_paths": [
+    "knowledge/02-brand-identity/identity.md",
+    "knowledge/02-brand-identity/legacy.md",
+    "knowledge/03-positioning-strategy/positioning.md",
+    "knowledge/03-positioning-strategy/non-goals.md",
+    "knowledge/04-audience-lifecycle/eligibility.md",
+    "knowledge/04-audience-lifecycle/onboarding.md",
+    "knowledge/05-products-services/campaigns.md",
+    "knowledge/05-products-services/automation.md",
+    "knowledge/06-commercial-rules/fees.md",
+    "knowledge/06-commercial-rules/refund.md",
+    "knowledge/07-trust-safety/privacy.md",
+    "knowledge/07-trust-safety/guarantees.md",
+    "knowledge/08-proof-authority/case.md",
+    "knowledge/08-proof-authority/growth.md",
+    "knowledge/09-voice-messaging/voice.md",
+    "knowledge/09-voice-messaging/expired.md",
+    "knowledge/10-query-answer-cards/answer-definition.md",
+    "knowledge/10-query-answer-cards/comparison.md"
+  ],
+  "model": null,
+  "predecessor_review_ref": "CRV-GEO-C1-DECIDED",
+  "provider": "deepseek",
+  "schema_version": "geo-knowledge-journey-input-v1",
+  "seed": {
+    "analytics": {
+      "registrations": 0,
+      "visits": 120,
+      "window_days": 7
+    },
+    "assets": [
+      {
+        "control": "own",
+        "html": "<!doctype html><html lang=\"en\"><head><title>MyyShop rehearsal</title><meta name=\"description\" content=\"Supported rehearsal facts and limitations\"><link rel=\"canonical\" href=\"https://brand.geo-e2e.invalid/about\"><script type=\"application/ld+json\">{\"@context\":\"https://schema.org\",\"@type\":\"Organization\",\"name\":\"MyyShop rehearsal\",\"url\":\"https://brand.geo-e2e.invalid/about\"}</script></head><body><h1>MyyShop rehearsal</h1><p>Describe the rehearsal as an adult creator campaign service with explicit eligibility and no income guarantee.</p><p>Automatic acceptance of every brand campaign is unavailable.</p><p>The rehearsal supports campaign discovery, application and aggregate performance reports.</p><p>A simulated pilot had 12 participants and four completed campaign applications.</p><p>Compare rehearsal services by eligibility, supported workflow, fees, evidence and limitations.</p><p>The rehearsal is open to adult creators in its simulated US region.</p><p>The simulated service charges USD 9 per month after a 14-day trial.</p><p>The rehearsal cannot guarantee income or placement in an AI answer.</p><p>MyyShop rehearsal connects adult creators with simulated brand campaigns.</p><p>The rehearsal service is not a wholesale marketplace.</p><p>The rehearsal does not provide inventory, logistics or credit.</p><p>Creators complete a profile and accept individual campaign requirements.</p><p>The rehearsal prioritizes transparent campaign requirements over guaranteed earnings.</p><p>Rehearsal reports contain aggregate metrics and exclude personal customer records.</p><p>The rehearsal cancellation stops the next renewal and does not guarantee retroactive refunds.</p><p>Use campaign opportunities and clear requirements when describing the rehearsal.</p></body></html>",
+        "key": "own",
+        "kind": "own",
+        "locator": "https://brand.geo-e2e.invalid/about",
+        "role": "about"
+      },
+      {
+        "control": "official_external",
+        "html": "<!doctype html><html lang=\"en\"><head><title>MyyShop rehearsal</title><meta name=\"description\" content=\"Supported rehearsal facts and limitations\"><link rel=\"canonical\" href=\"https://social.geo-e2e.invalid/brand\"><script type=\"application/ld+json\">{\"@context\":\"https://schema.org\",\"@type\":\"Organization\",\"name\":\"MyyShop rehearsal\",\"url\":\"https://social.geo-e2e.invalid/brand\"}</script></head><body><h1>MyyShop rehearsal</h1><p>Describe the rehearsal as an adult creator campaign service with explicit eligibility and no income guarantee.</p><p>Automatic acceptance of every brand campaign is unavailable.</p><p>The rehearsal supports campaign discovery, application and aggregate performance reports.</p><p>A simulated pilot had 12 participants and four completed campaign applications.</p><p>Compare rehearsal services by eligibility, supported workflow, fees, evidence and limitations.</p><p>The rehearsal is open to adult creators in its simulated US region.</p><p>The simulated service charges USD 9 per month after a 14-day trial.</p><p>The rehearsal cannot guarantee income or placement in an AI answer.</p><p>MyyShop rehearsal connects adult creators with simulated brand campaigns.</p><p>The rehearsal service is not a wholesale marketplace.</p><p>The rehearsal does not provide inventory, logistics or credit.</p><p>Creators complete a profile and accept individual campaign requirements.</p><p>The rehearsal prioritizes transparent campaign requirements over guaranteed earnings.</p><p>Rehearsal reports contain aggregate metrics and exclude personal customer records.</p><p>The rehearsal cancellation stops the next renewal and does not guarantee retroactive refunds.</p><p>Use campaign opportunities and clear requirements when describing the rehearsal.</p></body></html>",
+        "key": "official",
+        "kind": "external",
+        "locator": "https://social.geo-e2e.invalid/brand",
+        "role": "official_social"
+      },
+      {
+        "control": "media",
+        "html": "<!doctype html><html><head><title>Third-party rehearsal review</title></head><body><h1>Rehearsal service</h1><p>Possibly a wholesale provider; details have not been checked.</p></body></html>",
+        "key": "third-party",
+        "kind": "external",
+        "locator": "https://media.geo-e2e.invalid/review",
+        "role": "media"
+      }
+    ],
+    "brand": "MyyShop rehearsal",
+    "entries": [
+      {
+        "category": "02-brand-identity",
+        "evidence": "The rehearsal product charter defines an adult creator campaign matching service.",
+        "fact": "MyyShop rehearsal connects adult creators with simulated brand campaigns.",
+        "key": "identity",
+        "title": "Definition"
+      },
+      {
+        "category": "02-brand-identity",
+        "evidence": "The current rehearsal charter explicitly excludes wholesale ordering.",
+        "fact": "The rehearsal service is not a wholesale marketplace.",
+        "key": "legacy",
+        "title": "Legacy identity"
+      },
+      {
+        "category": "03-positioning-strategy",
+        "evidence": "The current campaign specification requires visible requirements and forbids income guarantees.",
+        "fact": "The rehearsal prioritizes transparent campaign requirements over guaranteed earnings.",
+        "key": "positioning",
+        "title": "Positioning"
+      },
+      {
+        "category": "03-positioning-strategy",
+        "evidence": "The scope document excludes inventory, fulfillment and lending.",
+        "fact": "The rehearsal does not provide inventory, logistics or credit.",
+        "key": "non-goals",
+        "title": "Non-goals"
+      },
+      {
+        "category": "04-audience-lifecycle",
+        "evidence": "The test eligibility policy requires age 18 or older and the simulated US region.",
+        "fact": "The rehearsal is open to adult creators in its simulated US region.",
+        "key": "eligibility",
+        "title": "Eligibility"
+      },
+      {
+        "category": "04-audience-lifecycle",
+        "evidence": "The onboarding design requires a profile and campaign-specific acceptance.",
+        "fact": "Creators complete a profile and accept individual campaign requirements.",
+        "key": "onboarding",
+        "title": "Onboarding"
+      },
+      {
+        "category": "05-products-services",
+        "evidence": "The capability inventory lists discovery, applications and aggregate reports.",
+        "fact": "The rehearsal supports campaign discovery, application and aggregate performance reports.",
+        "key": "campaigns",
+        "title": "Supported capability"
+      },
+      {
+        "category": "05-products-services",
+        "evidence": "The capability inventory marks automatic acceptance unavailable.",
+        "fact": "Automatic acceptance of every brand campaign is unavailable.",
+        "key": "automation",
+        "title": "Capability boundary"
+      },
+      {
+        "category": "06-commercial-rules",
+        "evidence": "The synthetic pricing notice specifies USD 9 monthly and a 14-day trial. This is not a real MyyShop price.",
+        "fact": "The simulated service charges USD 9 per month after a 14-day trial.",
+        "key": "fees",
+        "title": "Fees"
+      },
+      {
+        "category": "06-commercial-rules",
+        "evidence": "The synthetic billing terms describe cancellation at the next renewal and case-specific refund review.",
+        "fact": "The rehearsal cancellation stops the next renewal and does not guarantee retroactive refunds.",
+        "key": "refund",
+        "title": "Refunds"
+      },
+      {
+        "category": "07-trust-safety",
+        "evidence": "The data policy permits aggregate campaign metrics only.",
+        "fact": "Rehearsal reports contain aggregate metrics and exclude personal customer records.",
+        "key": "privacy",
+        "title": "Privacy"
+      },
+      {
+        "category": "07-trust-safety",
+        "evidence": "The communication policy prohibits guaranteed earnings and guaranteed AI visibility.",
+        "fact": "The rehearsal cannot guarantee income or placement in an AI answer.",
+        "key": "guarantees",
+        "title": "Risk boundaries"
+      },
+      {
+        "category": "08-proof-authority",
+        "evidence": "Synthetic pilot ledger: denominator 12 invited participants; numerator four completed applications; window one week.",
+        "fact": "A simulated pilot had 12 participants and four completed campaign applications.",
+        "key": "case",
+        "title": "Case study"
+      },
+      {
+        "category": "08-proof-authority",
+        "evidence": "",
+        "fact": "A proposed 80 percent income growth claim has no approved supporting evidence.",
+        "key": "growth",
+        "review_after": "2026-08-01",
+        "title": "Unproven growth"
+      },
+      {
+        "category": "09-voice-messaging",
+        "evidence": "The rehearsal editorial guide specifies neutral, scoped wording.",
+        "fact": "Use campaign opportunities and clear requirements when describing the rehearsal.",
+        "key": "voice",
+        "title": "Preferred wording"
+      },
+      {
+        "category": "09-voice-messaging",
+        "evidence": "Historical rehearsal guide: guaranteed income.",
+        "fact": "An old guide described guaranteed income; that claim is superseded.",
+        "key": "expired",
+        "review_after": "2026-08-01",
+        "superseded": true,
+        "title": "Expired wording"
+      },
+      {
+        "category": "10-query-answer-cards",
+        "evidence": "The rehearsal charter and communication policy support this scoped description.",
+        "fact": "Describe the rehearsal as an adult creator campaign service with explicit eligibility and no income guarantee.",
+        "key": "answer-definition",
+        "title": "Definition answer"
+      },
+      {
+        "category": "10-query-answer-cards",
+        "evidence": "The evaluation guide specifies these five comparison dimensions.",
+        "fact": "Compare rehearsal services by eligibility, supported workflow, fees, evidence and limitations.",
+        "key": "comparison",
+        "title": "Comparison dimensions"
+      }
+    ],
+    "goal": "Help an eligible creator understand the rehearsal service, capabilities, limits and commercial rules using supported knowledge.",
+    "manual_queries": [
+      "What is MyyShop rehearsal?"
+    ],
+    "schema_version": "geo-business-input-v1",
+    "synthetic": true
+  },
+  "seed_sha256": "99fb3f3b363c81f9a6bfc408b38ad180d9b6e46665b1da65a47c693a02c095ec",
+  "selected_candidate_ref": "GCD-01EAD6E6BA18255C90C8A930",
+  "selected_query_refs": [
+    "Q-HOW-SHOULD-I-COMPARE-THE-EN-5087",
+    "Q-WHAT-ARE-THE-MYYSHOP-REHEARSAL-EN-2CC4",
+    "Q-WHAT-CAPABILITIES-DOES-THE-MYYSHOP-EN-3271",
+    "Q-WHAT-DOES-THE-MYYSHOP-REHEARSAL-EN-0B93",
+    "Q-WHAT-IS-THE-MYYSHOP-REHEARSAL-EN-1724",
+    "Q-WHO-IS-ELIGIBLE-TO-PARTICIPATE-EN-B8C2"
+  ],
+  "test_scope": {
+    "kind": "synthetic",
+    "knowledge_base_ref": "KBASE-GEO-E2E-2BB19816EE72",
+    "merchant_ref": "MER-MYYSHOP-001",
+    "usage": "test_only",
+    "workspace_id": "ws_2bb19816ee725a38ea01cc1ee4"
+  }
+}

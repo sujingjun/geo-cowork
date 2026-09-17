@@ -74,8 +74,8 @@ export function compareCollectorProfiles(before, after) {
 }
 
 function currentObjects(graph, type) {
-  return graph.objects.filter(({ data }) =>
-    data.record_type === type && data.status !== 'superseded');
+  const superseded = new Set(graph.objects.filter(o => o.data.record_type === type).map(o => o.data.supersedes_ref).filter(Boolean));
+  return graph.objects.filter(({ data }) => data.record_type === type && data.status !== 'superseded' && !superseded.has(data.id));
 }
 
 function refVersions(objects) {
@@ -318,6 +318,7 @@ export async function materializeAnswerAggregation({ workspace, plan, now }) {
     created_at: now,
     updated_at: now,
     title: `Answer Aggregation ${plan.aggregation.id}`,
+    ...(profile.test_scope ? { test_scope: { ...profile.test_scope } } : {}),
     purpose: plan.purpose,
     industry: plan.industry,
     platform: profile.platform,

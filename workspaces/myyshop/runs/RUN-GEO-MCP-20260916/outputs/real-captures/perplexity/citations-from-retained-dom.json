@@ -1,0 +1,31 @@
+{
+  "source_capture_sha256": "0b6b90b8ebed613da24df025cb1a2a6695a45a68302287f29dd028844407af3e",
+  "source_html_sha256": "c42829312e653d01c3d321708b431c710f475852be5513af7c0ca7692f95646a",
+  "method": "retained DOM href and data-pplx-citation-url attributes",
+  "citations": [
+    {
+      "occurrence_ordinal": 1,
+      "url": "https://www.myyshop.com/",
+      "title": "myyshop+1",
+      "context": "MyyShop is an AI-driven creator-marketing platform that helps social-media creators connect with brands and earn money through collaborations. It describes itself as charging creators no platform commission and uses algorithmic matching to surface relevant opportunities.myyshop+1"
+    },
+    {
+      "occurrence_ordinal": 2,
+      "url": "https://finance.yahoo.com/media-advertising/articles/myyshop-launches-paid-every-view-091300863.html",
+      "title": "finance.yahoo+1",
+      "context": "Participate in TikTok-oriented campaigns, including some that compensate eligible creators based on verified video views.finance.yahoo+1"
+    },
+    {
+      "occurrence_ordinal": 3,
+      "url": "https://finance.yahoo.com/media-advertising/articles/myyshop-launches-paid-every-view-091300863.html",
+      "title": "finance.yahoo+1",
+      "context": "MyyShop says it is backed by DHgate Group, the cross-border e-commerce company. It originally launched around 2020 as a SaaS platform for store creation and dropshipping, helping merchants source products, manage fulfillment, and sell through channels such as social media. Its current positioning emphasizes creator-brand collaborations and influencer monetization instead.finance.yahoo+1"
+    },
+    {
+      "occurrence_ordinal": 4,
+      "url": "https://apps.apple.com/us/app/myyshop/id6449818392",
+      "title": "apple",
+      "context": "MyyShop is a platform for accessing opportunities, not a guarantee of income. Carefully check each campaign’s deliverables, usage rights, payment terms, required disclosure, eligibility rules, and how/when performance is verified before creating or posting content. Public app reviews include both positive and negative experiences, so it is sensible to document agreements and keep records of submitted work and communications.apple"
+    }
+  ]
+}

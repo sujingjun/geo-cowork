@@ -48,6 +48,8 @@ export async function materializeAnswerReview({
     created_at: now,
     updated_at: now,
     title: `Answer Review ${sampleId}`,
+    ...(sample.test_scope ? { test_scope: { ...sample.test_scope } } : {}),
+    ...(plan.analysis ? {extensions:{'geo.analysis':plan.analysis}} : {}),
     sample_ref: sampleId,
     sample_raw_manifest_sha256: sample.raw_manifest_sha256,
     rubric: {

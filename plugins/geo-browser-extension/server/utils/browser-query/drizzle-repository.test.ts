@@ -1,3 +1,4 @@
+import { createBrowserExtractor } from './extractor'
 import { readFile } from 'node:fs/promises'
 
 import { PGlite } from '@electric-sql/pglite'
@@ -40,25 +41,7 @@ function service(repo: DrizzleBrowserQueryRepository) {
         }
       }
     },
-    extractor: {
-      profile: {
-        provider: 'fake', model: 'fake-v1', promptVersion: 'v1',
-        promptSha256: 'b'.repeat(64), schemaVersion: 'geo-browser-extraction-result-v1'
-      },
-      async extract(input) {
-        return {
-          answer: {
-            text: input.answerText,
-            html_structure_summary: 'article',
-            refusal: false,
-            completeness: 'complete'
-          },
-          citations: input.citations,
-          platform_annotations: [],
-          warnings: []
-        }
-      }
-    }
+    extractor: createBrowserExtractor()
   })
 }
 

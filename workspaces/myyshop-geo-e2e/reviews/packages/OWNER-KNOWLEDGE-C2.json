@@ -1,0 +1,56 @@
+{
+  "actions": [
+    "approve",
+    "reject",
+    "defer"
+  ],
+  "body_sha256": "b383830cb21a6a1b7ea5bf208f0d7142896cf3e1804b51568eb0f2792f5e41a8",
+  "id": "OWNER-KNOWLEDGE-C2",
+  "kind": "knowledge",
+  "schema_version": "geo-owner-package-v1",
+  "targets": [
+    {
+      "id": "GOAL-GEO-E2E-C2",
+      "path": "cycles/preparation/goal-c2.md",
+      "sha256": "ff1589d89b0485263c3b4eb5061f7d153b5ddf35e747d80e170f835e93113b91",
+      "version": "1.0.0"
+    },
+    {
+      "id": "Q-HOW-SHOULD-I-COMPARE-THE-EN-5087",
+      "path": "queries/candidates/q-how-should-i-compare-the-en-5087.md",
+      "sha256": "21e347dbd99e4bb8b56a79b9c8c0062950924412ec9e0b6f62f43a11805e8278",
+      "version": "1.0.0"
+    },
+    {
+      "id": "Q-WHAT-ARE-THE-MYYSHOP-REHEARSAL-EN-2CC4",
+      "path": "queries/candidates/q-what-are-the-myyshop-rehearsal-en-2cc4.md",
+      "sha256": "24bc700358af4534cf8ca889fab0cd79205c6cf77fc1b8f27a20445cf14498d7",
+      "version": "1.0.0"
+    },
+    {
+      "id": "Q-WHAT-CAPABILITIES-DOES-THE-MYYSHOP-EN-3271",
+      "path": "queries/candidates/q-what-capabilities-does-the-myyshop-en-3271.md",
+      "sha256": "99e9ba6d1aab83681bee6477e6522d5a9e2933a66c4b88e6c661fc73f14bb49e",
+      "version": "1.0.0"
+    },
+    {
+      "id": "Q-WHAT-DOES-THE-MYYSHOP-REHEARSAL-EN-0B93",
+      "path": "queries/candidates/q-what-does-the-myyshop-rehearsal-en-0b93.md",
+      "sha256": "acbd9fadcb780ba1a9ff763b43f0f9cdc8e2fb016aaa12f0262447cedd3cefb0",
+      "version": "1.0.0"
+    },
+    {
+      "id": "Q-WHAT-IS-THE-MYYSHOP-REHEARSAL-EN-1724",
+      "path": "queries/candidates/q-what-is-the-myyshop-rehearsal-en-1724.md",
+      "sha256": "7f4ca3ab6ee999725bf623c9408a540bec09f9854fa93a5b38aa1b287c47c1d4",
+      "version": "1.0.0"
+    },
+    {
+      "id": "Q-WHO-IS-ELIGIBLE-TO-PARTICIPATE-EN-B8C2",
+      "path": "queries/candidates/q-who-is-eligible-to-participate-en-b8c2.md",
+      "sha256": "5ed53b5cef02ea83740a12c4f88aa7a5f156c98abfff2bffcb9ad1191a9f344f",
+      "version": "1.0.0"
+    }
+  ],
+  "title": "Approve the independently selected Cycle 2 Goal and questions"
+}

@@ -21,7 +21,14 @@ function exactKeys(value, expected, label) {
 
 export function validateGeoBrowserMcpConfig(config) {
   exactKeys(config, ['mcpServers'], '.mcp.json');
-  exactKeys(config.mcpServers, ['geo-browser'], 'mcpServers');
+  exactKeys(config.mcpServers, config.mcpServers?.playwright ? ['geo-browser', 'playwright'] : ['geo-browser'], 'mcpServers');
+  if (config.mcpServers.playwright) {
+    const playwright = config.mcpServers.playwright;
+    exactKeys(playwright, ['command', 'args'], 'mcpServers.playwright');
+    if (playwright.command !== 'npx' || JSON.stringify(playwright.args) !== JSON.stringify(['--yes', '@playwright/mcp@0.0.81', '--extension'])) {
+      fail('Playwright MCP 必须使用固定版本 0.0.81 和 extension 连接');
+    }
+  }
   const server = config.mcpServers['geo-browser'];
   exactKeys(server, ['type', 'url', 'bearer_token_env_var'], 'mcpServers.geo-browser');
   if (server.type !== 'http') fail('geo-browser type 必须为 http');

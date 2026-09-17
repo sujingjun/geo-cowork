@@ -1,0 +1,41 @@
+{
+  "audit": {
+    "completed_at": "2026-09-15T17:54:51.875Z",
+    "duration_ms": 5430,
+    "finish_reason": "stop",
+    "http_status": 200,
+    "id": "MODEL-21aad5e6-fbf3-4a2e-9de7-6676075d401d",
+    "input_sha256": "379b03259cf570d2429228447349193bd65e04a65c49fd6bef384a1776572161",
+    "model": "deepseek-flash",
+    "output_sha256": "e0a3ae60372e94b458ff4f8610752444928e08b0c6e8013f9dabfa482039de19",
+    "prompt_sha256": "e5d2c9a2481b77f774d18dc813bd55ef7805d120c8b02d6e068af72999a4b872",
+    "provider": "deepseek",
+    "response_model": "deepseek-flash",
+    "started_at": "2026-09-15T17:54:46.445Z",
+    "status": "completed",
+    "usage": {
+      "completion_tokens": 1114,
+      "completion_tokens_details": {
+        "reasoning_tokens": 1014
+      },
+      "prompt_cache_hit_tokens": 639,
+      "prompt_cache_miss_tokens": 134,
+      "prompt_tokens": 773,
+      "prompt_tokens_details": {
+        "cached_tokens": 639
+      },
+      "total_tokens": 1887
+    }
+  },
+  "output": {
+    "answer": {
+      "completeness": "partial",
+      "html_structure_summary": "Plain text with two paragraphs separated by a blank line; no HTML elements present.",
+      "refusal": false,
+      "text": "MyyShop rehearsal Wholesale marketplace Guaranteed income for everyone.\n\nSynthetic consumer input for: How can creators compare rehearsal services by eligibility, supported workflow, fees, evidence, and limitations?"
+    },
+    "citations": [],
+    "platform_annotations": [],
+    "warnings": []
+  }
+}

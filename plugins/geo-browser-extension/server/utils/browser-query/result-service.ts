@@ -32,6 +32,14 @@ type PersistTask = (
   now: string
 ) => Promise<void>
 
+export function matchesExtractorProfile(record: Pick<ExtractionRecord, 'status' | 'provenance'>, profile: BrowserExtractor['profile']) {
+  return record.status === 'completed'
+    && record.provenance.provider === profile.provider
+    && record.provenance.model === profile.model
+    && record.provenance.prompt_sha256 === profile.promptSha256
+    && record.provenance.schema_version === profile.schemaVersion
+}
+
 function resultCursor(item: PendingQueryResult) {
   return Buffer.from(JSON.stringify([item.created_at, item.result_id])).toString('base64url')
 }
@@ -247,7 +255,7 @@ export class BrowserQueryResultService {
 
   private async extractCapture(capture: QueryCapture, now: string) {
     const prior = await this.options.repository.listExtractions(capture.capture_id)
-    const completed = [...prior].reverse().find(item => item.status === 'completed')
+    const completed = [...prior].reverse().find(item => matchesExtractorProfile(item, this.options.extractor.profile))
     const created = completed
       ? { extraction: completed, pending: await this.ensurePending(capture, completed) }
       : await this.buildExtraction({
@@ -296,6 +304,7 @@ export class BrowserQueryResultService {
     provenance: ExtractionRecord['provenance']
   }): Promise<{ extraction: ExtractionRecord, pending: PendingQueryResult | null }> {
     const { capture, extractionId, attemptNo, provenance } = input
+    provenance.started_at = new Date().toISOString()
     try {
       const raw = await this.options.repository.getArtifact(capture.answer_html_artifact.artifact_id)
       if (!raw || raw.sha256 !== capture.answer_html_artifact.sha256) {
@@ -307,14 +316,30 @@ export class BrowserQueryResultService {
         title: citation.title,
         context: citation.anchor_or_context
       }))
-      const output = parseContract(extractionOutputSchema, await this.options.extractor.extract({
+      const extracted = await this.options.extractor.extract({
         query: capture.query,
         outcome: capture.outcome,
         answerText: capture.answer_text,
         safeHtmlText: striptags(Buffer.from(raw.bytes).toString('utf8')),
         citations,
         rawSha256: raw.sha256
-      }), 'EXTRACTION_SCHEMA_INVALID')
+      })
+      const envelope = extracted && typeof extracted === 'object' && 'output' in extracted && 'audit' in extracted
+        ? extracted as { output: unknown, audit: Record<string, unknown> }
+        : null
+      const output = parseContract(extractionOutputSchema, envelope ? envelope.output : extracted, 'EXTRACTION_SCHEMA_INVALID')
+      provenance.completed_at = new Date().toISOString()
+      if (envelope) {
+        const audit = envelope.audit
+        if (typeof audit.started_at === 'string') provenance.started_at = audit.started_at
+        if (typeof audit.completed_at === 'string') provenance.completed_at = audit.completed_at
+        if (typeof audit.id === 'string') provenance.call_id = audit.id
+        if (typeof audit.duration_ms === 'number') provenance.duration_ms = audit.duration_ms
+        if (typeof audit.response_model === 'string') provenance.response_model = audit.response_model
+        provenance.usage = audit.usage && typeof audit.usage === 'object' && !Array.isArray(audit.usage)
+          ? audit.usage as Record<string, unknown>
+          : null
+      }
       const base = {
         schema_version: 'geo-browser-extraction-result-v1' as const,
         extraction_id: extractionId,
@@ -330,6 +355,7 @@ export class BrowserQueryResultService {
       const pending = await this.ensurePending(capture, extraction)
       return { extraction, pending }
     } catch (error) {
+      provenance.completed_at = new Date().toISOString()
       const diagnosis = error instanceof BrowserQueryError
         ? safeError(error)
         : safeError(new BrowserQueryError('EXTRACTION_MODEL_FAILED', 'Extractor failed'))

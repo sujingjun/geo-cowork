@@ -1,6 +1,6 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { readFile, rm } from 'node:fs/promises';
+import { readFile, rm, writeFile } from 'node:fs/promises';
 import path from 'node:path';
 
 import {
@@ -379,4 +379,28 @@ test('合成全链分离 Gap、Proposal、Adoption、Publication 与 Retest gate
   assert.equal(trace.lifecycle_ready, true);
   assert.deepEqual(trace.gates, []);
   await rm(root, { recursive: true });
+});
+
+test('Owner modify produces an immutable draft successor and a new review package without adoption', async () => {
+  const root = await m4ReadyWorkspace();
+  try {
+    await writeGap(root);
+    await proposeAssets({workspace:root,plan:{proposals:[proposalPlan({body:'# About\n\nDraft introduction awaiting clarification.\n'})]},now:NOW});
+    await writeFile(path.join(root,'workspace.json'),JSON.stringify({workspace_mode:'development_test'}));
+    const {loadWorkspaceGraph}=await import('../plugins/geo-expert/scripts/lib/index-builder.mjs');
+    const {createOwnerPackage,acceptOwnerFeedback}=await import('../plugins/geo-expert/scripts/lib/owner-feedback.mjs');
+    const {reviseProposalFromFeedback}=await import('../plugins/geo-expert/scripts/lib/proposal-revision.mjs');
+    const graph=await loadWorkspaceGraph({workspace:root});const proposal=graph.byId.get('PRP-TEST-001');
+    const before=await readFile(path.join(root,proposal.path),'utf8');
+    const pack=await createOwnerPackage({workspace:root,id:'OWNER-MODIFY-TEST',kind:'adoption',objects:[proposal],title:'Review proposal',body:proposal.content});
+    const statement=graph.byId.get('CLM-TEST-001').data.statement;
+    const text=`包：${pack.id}\n校验：${pack.sha256}\n决定：modify\n决定人：Fixture reviewer\n时间：${NOW}\n说明：Use the approved statement.\n修改内容：${statement}\n`;
+    const feedback=await acceptOwnerFeedback({workspace:root,text});const changed=await reviseProposalFromFeedback(root,feedback);
+    const next=await loadWorkspaceGraph({workspace:root});const revised=next.byId.get(changed.proposal_ref);
+    assert.equal(revised.data.status,'draft');assert.equal(revised.data.supersedes_ref,proposal.data.id);
+    assert.equal(revised.data.recommendation_items[0].proposed_text,statement);
+    assert.equal(await readFile(path.join(root,proposal.path),'utf8'),before);
+    assert.equal(next.objects.filter(o=>o.data.record_type==='adoption_record').length,0);
+    assert.ok(changed.waiting_human);
+  } finally { await rm(root,{recursive:true}); }
 });

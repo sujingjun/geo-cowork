@@ -1,0 +1,72 @@
+
+/Users/sujingjun/geo-cowork/plugins/geo-browser-extension/scripts/check-deepseek.mjs
+  21:3  warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+
+/Users/sujingjun/geo-cowork/plugins/geo-browser-extension/scripts/check-get-products.mjs
+  18:3  warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+  23:5  warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+  37:5  warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+  39:7  warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+  45:5  warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+  56:5  warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+  58:7  warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+  62:5  warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+  73:5  warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+  75:7  warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+  78:5  warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+
+/Users/sujingjun/geo-cowork/plugins/geo-browser-extension/scripts/seed-products.mjs
+   85:3  warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+  164:3  warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+  165:3  warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+  166:3  warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+  178:3  warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+  180:5  warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+
+/Users/sujingjun/geo-cowork/plugins/geo-browser-extension/scripts/sync-vercel-production-env.mjs
+  77:5  warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+  81:3  warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+
+/Users/sujingjun/geo-cowork/plugins/geo-browser-extension/server/api/db/seed.post.ts
+   26:5  warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+   29:5  warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+   58:5  warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+   84:5  warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+  317:5  warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+  331:5  warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+  374:5  warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+
+/Users/sujingjun/geo-cowork/plugins/geo-browser-extension/server/db/seed.ts
+   17:3  warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+   20:3  warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+   42:5  warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+   44:5  warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+   48:3  warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+   51:3  warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+   76:3  warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+   79:3  warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+  216:3  warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+  311:3  warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+  314:3  warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+  327:3  warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+  330:3  warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+  372:3  warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+  375:3  warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+  403:3  warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+  405:3  warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+  406:3  warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+  407:3  warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+  408:3  warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+  409:3  warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+  410:3  warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+  411:3  warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+  412:3  warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+  413:3  warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+  414:3  warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+  415:3  warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+  416:3  warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+  417:3  warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+  418:3  warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+
+✖ 57 problems (0 errors, 57 warnings)
+

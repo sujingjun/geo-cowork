@@ -169,7 +169,7 @@ provenance {
 output_sha256
 ```
 
-模型输出必须经 Schema 验证；禁止模型生成或更改 ref/version/checksum/provenance。失败保存 `extraction_failed` diagnostics，可从同一 raw artifact 新建 extraction attempt；不得重跑 Query。真实模型调用需要当次授权，测试使用 Fake Extractor。
+模型输出必须经 Schema 验证；禁止模型生成或更改 ref/version/checksum/provenance。失败保存 `extraction_failed` diagnostics，可从同一 raw artifact 新建 extraction attempt；不得重跑 Query。当前知识驱动专题按 Spec 0014 与 Owner 明确指令使用真实模型；提取器测试不再使用 Fake。其他任务仍按其实际授权范围调用模型。
 
 Extraction Result 不得包含 Claim support、Answer Review、Source Type、Aggregation、Evidence、Finding、建议或业务效果。
 

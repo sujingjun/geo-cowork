@@ -1,0 +1,10 @@
+{
+  "actor": "Independent fixture human (test_only)",
+  "at": "2026-09-17T00:05:00.000Z",
+  "decision": "approve",
+  "package_id": "OWNER-C1-ADOPTION",
+  "package_sha256": "4e60e630e1685b959cd629292db594f008e6b6a3333c90737b449c29eca5ed7c",
+  "raw_feedback": "包：OWNER-C1-ADOPTION\n校验：4e60e630e1685b959cd629292db594f008e6b6a3333c90737b449c29eca5ed7c\n决定：approve\n决定人：Independent fixture human (test_only)\n时间：2026-09-17T00:05:00.000Z\n说明：Adopt edits only for controlled rehearsal assets. Defer third-party publication; keep evidence and product gaps open.\n",
+  "reason": "Adopt edits only for controlled rehearsal assets. Defer third-party publication; keep evidence and product gaps open.",
+  "scope": "test_only"
+}

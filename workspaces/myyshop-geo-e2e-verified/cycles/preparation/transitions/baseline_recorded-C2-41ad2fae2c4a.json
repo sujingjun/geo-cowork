@@ -1,0 +1,1459 @@
+{
+  "actor": {
+    "kind": "deterministic_tool"
+  },
+  "cycle_ref": "CYC-GEO-E2E-C2",
+  "expected_cycle_version": "1.0.0",
+  "from_stage": "frozen",
+  "gate": {
+    "artifact_paths": [
+      {
+        "media_type": "application/json",
+        "path": "execution/contracts/measurement-contract.json",
+        "role": "measurement_contract"
+      },
+      {
+        "media_type": "application/json",
+        "path": "cycles/preparation/matrix-C2-BASE.json",
+        "role": "other_contract"
+      },
+      {
+        "media_type": "text/plain",
+        "path": "runs/RUN-GEO-C2-BASE-Q1-CHATGPT/raw/answer-1.txt",
+        "role": "supporting_artifact"
+      },
+      {
+        "media_type": "application/json",
+        "path": "runs/RUN-GEO-C2-BASE-Q1-CHATGPT/raw/collector-1.json",
+        "role": "supporting_artifact"
+      },
+      {
+        "media_type": "application/json",
+        "path": "runs/RUN-GEO-C2-BASE-Q1-CHATGPT/outputs/extraction-1.json",
+        "role": "supporting_artifact"
+      },
+      {
+        "media_type": "application/json",
+        "path": "runs/model-calls/MODEL-4d580ad1-a2da-4a27-98ce-329a90db2df2.json",
+        "role": "supporting_artifact"
+      },
+      {
+        "media_type": "text/plain",
+        "path": "runs/RUN-GEO-C2-BASE-Q1-CHATGPT/raw/answer-2.txt",
+        "role": "supporting_artifact"
+      },
+      {
+        "media_type": "application/json",
+        "path": "runs/RUN-GEO-C2-BASE-Q1-CHATGPT/raw/collector-2.json",
+        "role": "supporting_artifact"
+      },
+      {
+        "media_type": "application/json",
+        "path": "runs/RUN-GEO-C2-BASE-Q1-CHATGPT/outputs/extraction-2.json",
+        "role": "supporting_artifact"
+      },
+      {
+        "media_type": "application/json",
+        "path": "runs/model-calls/MODEL-06224673-d09c-460f-bc11-f9edb853e62d.json",
+        "role": "supporting_artifact"
+      },
+      {
+        "media_type": "text/plain",
+        "path": "runs/RUN-GEO-C2-BASE-Q1-GEMINI/raw/answer-1.txt",
+        "role": "supporting_artifact"
+      },
+      {
+        "media_type": "application/json",
+        "path": "runs/RUN-GEO-C2-BASE-Q1-GEMINI/raw/collector-1.json",
+        "role": "supporting_artifact"
+      },
+      {
+        "media_type": "application/json",
+        "path": "runs/RUN-GEO-C2-BASE-Q1-GEMINI/outputs/extraction-1.json",
+        "role": "supporting_artifact"
+      },
+      {
+        "media_type": "application/json",
+        "path": "runs/model-calls/MODEL-046884ba-7303-4152-a6d0-116db8430ff6.json",
+        "role": "supporting_artifact"
+      },
+      {
+        "media_type": "text/plain",
+        "path": "runs/RUN-GEO-C2-BASE-Q1-GEMINI/raw/answer-2.txt",
+        "role": "supporting_artifact"
+      },
+      {
+        "media_type": "application/json",
+        "path": "runs/RUN-GEO-C2-BASE-Q1-GEMINI/raw/collector-2.json",
+        "role": "supporting_artifact"
+      },
+      {
+        "media_type": "application/json",
+        "path": "runs/RUN-GEO-C2-BASE-Q1-GEMINI/outputs/extraction-2.json",
+        "role": "supporting_artifact"
+      },
+      {
+        "media_type": "application/json",
+        "path": "runs/model-calls/MODEL-5245adf1-203f-48c8-b5c4-ef5c66c94e67.json",
+        "role": "supporting_artifact"
+      },
+      {
+        "media_type": "text/plain",
+        "path": "runs/RUN-GEO-C2-BASE-Q1-PERPLEXITY/raw/answer-2.txt",
+        "role": "supporting_artifact"
+      },
+      {
+        "media_type": "application/json",
+        "path": "runs/RUN-GEO-C2-BASE-Q1-PERPLEXITY/raw/collector-2.json",
+        "role": "supporting_artifact"
+      },
+      {
+        "media_type": "application/json",
+        "path": "runs/RUN-GEO-C2-BASE-Q1-PERPLEXITY/outputs/extraction-2.json",
+        "role": "supporting_artifact"
+      },
+      {
+        "media_type": "application/json",
+        "path": "runs/model-calls/MODEL-95c6b595-bc00-492a-8751-bc4bbaea4822.json",
+        "role": "supporting_artifact"
+      },
+      {
+        "media_type": "text/plain",
+        "path": "runs/RUN-GEO-C2-BASE-Q1-PERPLEXITY/raw/answer-1.txt",
+        "role": "supporting_artifact"
+      },
+      {
+        "media_type": "application/json",
+        "path": "runs/RUN-GEO-C2-BASE-Q1-PERPLEXITY/raw/collector-1.json",
+        "role": "supporting_artifact"
+      },
+      {
+        "media_type": "application/json",
+        "path": "runs/RUN-GEO-C2-BASE-Q1-PERPLEXITY/outputs/extraction-1.json",
+        "role": "supporting_artifact"
+      },
+      {
+        "media_type": "application/json",
+        "path": "runs/model-calls/MODEL-975a8279-ea1a-4ee4-b545-de426ac3bf3f.json",
+        "role": "supporting_artifact"
+      },
+      {
+        "media_type": "text/plain",
+        "path": "runs/RUN-GEO-C2-BASE-Q1-GOOGLE-AI/raw/answer-2.txt",
+        "role": "supporting_artifact"
+      },
+      {
+        "media_type": "application/json",
+        "path": "runs/RUN-GEO-C2-BASE-Q1-GOOGLE-AI/raw/collector-2.json",
+        "role": "supporting_artifact"
+      },
+      {
+        "media_type": "application/json",
+        "path": "runs/RUN-GEO-C2-BASE-Q1-GOOGLE-AI/outputs/extraction-2.json",
+        "role": "supporting_artifact"
+      },
+      {
+        "media_type": "application/json",
+        "path": "runs/model-calls/MODEL-7e2f8559-a7fe-42e2-b83a-5f97658492a1.json",
+        "role": "supporting_artifact"
+      },
+      {
+        "media_type": "text/plain",
+        "path": "runs/RUN-GEO-C2-BASE-Q1-GOOGLE-AI/raw/answer-1.txt",
+        "role": "supporting_artifact"
+      },
+      {
+        "media_type": "application/json",
+        "path": "runs/RUN-GEO-C2-BASE-Q1-GOOGLE-AI/raw/collector-1.json",
+        "role": "supporting_artifact"
+      },
+      {
+        "media_type": "application/json",
+        "path": "runs/RUN-GEO-C2-BASE-Q1-GOOGLE-AI/outputs/extraction-1.json",
+        "role": "supporting_artifact"
+      },
+      {
+        "media_type": "application/json",
+        "path": "runs/model-calls/MODEL-cbc57bae-4b18-40b1-94b1-bfc2380013aa.json",
+        "role": "supporting_artifact"
+      },
+      {
+        "media_type": "text/plain",
+        "path": "runs/RUN-GEO-C2-BASE-Q1-CLAUDE/raw/answer-2.txt",
+        "role": "supporting_artifact"
+      },
+      {
+        "media_type": "application/json",
+        "path": "runs/RUN-GEO-C2-BASE-Q1-CLAUDE/raw/collector-2.json",
+        "role": "supporting_artifact"
+      },
+      {
+        "media_type": "application/json",
+        "path": "runs/RUN-GEO-C2-BASE-Q1-CLAUDE/outputs/extraction-2.json",
+        "role": "supporting_artifact"
+      },
+      {
+        "media_type": "application/json",
+        "path": "runs/model-calls/MODEL-c822f8d9-304e-4080-9132-2a344afd1418.json",
+        "role": "supporting_artifact"
+      },
+      {
+        "media_type": "text/plain",
+        "path": "runs/RUN-GEO-C2-BASE-Q1-CLAUDE/raw/answer-1.txt",
+        "role": "supporting_artifact"
+      },
+      {
+        "media_type": "application/json",
+        "path": "runs/RUN-GEO-C2-BASE-Q1-CLAUDE/raw/collector-1.json",
+        "role": "supporting_artifact"
+      },
+      {
+        "media_type": "application/json",
+        "path": "runs/RUN-GEO-C2-BASE-Q1-CLAUDE/outputs/extraction-1.json",
+        "role": "supporting_artifact"
+      },
+      {
+        "media_type": "application/json",
+        "path": "runs/model-calls/MODEL-721fc0aa-78ee-4b4c-bb80-fbe9931cf5e9.json",
+        "role": "supporting_artifact"
+      },
+      {
+        "media_type": "text/plain",
+        "path": "runs/RUN-GEO-C2-BASE-Q2-CHATGPT/raw/answer-2.txt",
+        "role": "supporting_artifact"
+      },
+      {
+        "media_type": "application/json",
+        "path": "runs/RUN-GEO-C2-BASE-Q2-CHATGPT/raw/collector-2.json",
+        "role": "supporting_artifact"
+      },
+      {
+        "media_type": "application/json",
+        "path": "runs/RUN-GEO-C2-BASE-Q2-CHATGPT/outputs/extraction-2.json",
+        "role": "supporting_artifact"
+      },
+      {
+        "media_type": "application/json",
+        "path": "runs/model-calls/MODEL-e2aaa98b-b3ea-4e4e-bdcc-355be9465618.json",
+        "role": "supporting_artifact"
+      },
+      {
+        "media_type": "text/plain",
+        "path": "runs/RUN-GEO-C2-BASE-Q2-CHATGPT/raw/answer-1.txt",
+        "role": "supporting_artifact"
+      },
+      {
+        "media_type": "application/json",
+        "path": "runs/RUN-GEO-C2-BASE-Q2-CHATGPT/raw/collector-1.json",
+        "role": "supporting_artifact"
+      },
+      {
+        "media_type": "application/json",
+        "path": "runs/RUN-GEO-C2-BASE-Q2-CHATGPT/outputs/extraction-1.json",
+        "role": "supporting_artifact"
+      },
+      {
+        "media_type": "application/json",
+        "path": "runs/model-calls/MODEL-de120cea-0a3f-4bde-b7c4-e456d5d7945f.json",
+        "role": "supporting_artifact"
+      },
+      {
+        "media_type": "text/plain",
+        "path": "runs/RUN-GEO-C2-BASE-Q2-GEMINI/raw/answer-2.txt",
+        "role": "supporting_artifact"
+      },
+      {
+        "media_type": "application/json",
+        "path": "runs/RUN-GEO-C2-BASE-Q2-GEMINI/raw/collector-2.json",
+        "role": "supporting_artifact"
+      },
+      {
+        "media_type": "application/json",
+        "path": "runs/RUN-GEO-C2-BASE-Q2-GEMINI/outputs/extraction-2.json",
+        "role": "supporting_artifact"
+      },
+      {
+        "media_type": "application/json",
+        "path": "runs/model-calls/MODEL-ec0855be-9784-4d7d-9a7b-e6272b55b1ef.json",
+        "role": "supporting_artifact"
+      },
+      {
+        "media_type": "text/plain",
+        "path": "runs/RUN-GEO-C2-BASE-Q2-GEMINI/raw/answer-1.txt",
+        "role": "supporting_artifact"
+      },
+      {
+        "media_type": "application/json",
+        "path": "runs/RUN-GEO-C2-BASE-Q2-GEMINI/raw/collector-1.json",
+        "role": "supporting_artifact"
+      },
+      {
+        "media_type": "application/json",
+        "path": "runs/RUN-GEO-C2-BASE-Q2-GEMINI/outputs/extraction-1.json",
+        "role": "supporting_artifact"
+      },
+      {
+        "media_type": "application/json",
+        "path": "runs/model-calls/MODEL-dd9ca717-8bf7-411f-b612-cb2d73528ba7.json",
+        "role": "supporting_artifact"
+      },
+      {
+        "media_type": "text/plain",
+        "path": "runs/RUN-GEO-C2-BASE-Q2-PERPLEXITY/raw/answer-2.txt",
+        "role": "supporting_artifact"
+      },
+      {
+        "media_type": "application/json",
+        "path": "runs/RUN-GEO-C2-BASE-Q2-PERPLEXITY/raw/collector-2.json",
+        "role": "supporting_artifact"
+      },
+      {
+        "media_type": "application/json",
+        "path": "runs/RUN-GEO-C2-BASE-Q2-PERPLEXITY/outputs/extraction-2.json",
+        "role": "supporting_artifact"
+      },
+      {
+        "media_type": "application/json",
+        "path": "runs/model-calls/MODEL-f3399758-cae0-4ee8-8fdc-b8fecc0e0dbc.json",
+        "role": "supporting_artifact"
+      },
+      {
+        "media_type": "text/plain",
+        "path": "runs/RUN-GEO-C2-BASE-Q2-PERPLEXITY/raw/answer-1.txt",
+        "role": "supporting_artifact"
+      },
+      {
+        "media_type": "application/json",
+        "path": "runs/RUN-GEO-C2-BASE-Q2-PERPLEXITY/raw/collector-1.json",
+        "role": "supporting_artifact"
+      },
+      {
+        "media_type": "application/json",
+        "path": "runs/RUN-GEO-C2-BASE-Q2-PERPLEXITY/outputs/extraction-1.json",
+        "role": "supporting_artifact"
+      },
+      {
+        "media_type": "application/json",
+        "path": "runs/model-calls/MODEL-936dd281-d58a-4ca6-8daf-945e4f0e0986.json",
+        "role": "supporting_artifact"
+      },
+      {
+        "media_type": "text/plain",
+        "path": "runs/RUN-GEO-C2-BASE-Q2-GOOGLE-AI/raw/answer-2.txt",
+        "role": "supporting_artifact"
+      },
+      {
+        "media_type": "application/json",
+        "path": "runs/RUN-GEO-C2-BASE-Q2-GOOGLE-AI/raw/collector-2.json",
+        "role": "supporting_artifact"
+      },
+      {
+        "media_type": "application/json",
+        "path": "runs/RUN-GEO-C2-BASE-Q2-GOOGLE-AI/outputs/extraction-2.json",
+        "role": "supporting_artifact"
+      },
+      {
+        "media_type": "application/json",
+        "path": "runs/model-calls/MODEL-cead35e3-1d92-43f1-8ad3-3541554195e1.json",
+        "role": "supporting_artifact"
+      },
+      {
+        "media_type": "text/plain",
+        "path": "runs/RUN-GEO-C2-BASE-Q2-GOOGLE-AI/raw/answer-1.txt",
+        "role": "supporting_artifact"
+      },
+      {
+        "media_type": "application/json",
+        "path": "runs/RUN-GEO-C2-BASE-Q2-GOOGLE-AI/raw/collector-1.json",
+        "role": "supporting_artifact"
+      },
+      {
+        "media_type": "application/json",
+        "path": "runs/RUN-GEO-C2-BASE-Q2-GOOGLE-AI/outputs/extraction-1.json",
+        "role": "supporting_artifact"
+      },
+      {
+        "media_type": "application/json",
+        "path": "runs/model-calls/MODEL-f62a3cce-53d4-4a1b-864b-58c39f316709.json",
+        "role": "supporting_artifact"
+      },
+      {
+        "media_type": "text/plain",
+        "path": "runs/RUN-GEO-C2-BASE-Q2-CLAUDE/raw/answer-1.txt",
+        "role": "supporting_artifact"
+      },
+      {
+        "media_type": "application/json",
+        "path": "runs/RUN-GEO-C2-BASE-Q2-CLAUDE/raw/collector-1.json",
+        "role": "supporting_artifact"
+      },
+      {
+        "media_type": "application/json",
+        "path": "runs/RUN-GEO-C2-BASE-Q2-CLAUDE/outputs/extraction-1.json",
+        "role": "supporting_artifact"
+      },
+      {
+        "media_type": "application/json",
+        "path": "runs/model-calls/MODEL-61dcffbe-fe7d-4eeb-bf75-780e2f262c28.json",
+        "role": "supporting_artifact"
+      },
+      {
+        "media_type": "text/plain",
+        "path": "runs/RUN-GEO-C2-BASE-Q2-CLAUDE/raw/answer-2.txt",
+        "role": "supporting_artifact"
+      },
+      {
+        "media_type": "application/json",
+        "path": "runs/RUN-GEO-C2-BASE-Q2-CLAUDE/raw/collector-2.json",
+        "role": "supporting_artifact"
+      },
+      {
+        "media_type": "application/json",
+        "path": "runs/RUN-GEO-C2-BASE-Q2-CLAUDE/outputs/extraction-2.json",
+        "role": "supporting_artifact"
+      },
+      {
+        "media_type": "application/json",
+        "path": "runs/model-calls/MODEL-6c63bb7f-78d4-4c58-83b5-b849000253ff.json",
+        "role": "supporting_artifact"
+      },
+      {
+        "media_type": "text/plain",
+        "path": "runs/RUN-GEO-C2-BASE-Q3-CHATGPT/raw/answer-1.txt",
+        "role": "supporting_artifact"
+      },
+      {
+        "media_type": "application/json",
+        "path": "runs/RUN-GEO-C2-BASE-Q3-CHATGPT/raw/collector-1.json",
+        "role": "supporting_artifact"
+      },
+      {
+        "media_type": "application/json",
+        "path": "runs/RUN-GEO-C2-BASE-Q3-CHATGPT/outputs/extraction-1.json",
+        "role": "supporting_artifact"
+      },
+      {
+        "media_type": "application/json",
+        "path": "runs/model-calls/MODEL-22ec374c-d76d-4a42-a4ca-b0b76af53c48.json",
+        "role": "supporting_artifact"
+      },
+      {
+        "media_type": "text/plain",
+        "path": "runs/RUN-GEO-C2-BASE-Q3-CHATGPT/raw/answer-2.txt",
+        "role": "supporting_artifact"
+      },
+      {
+        "media_type": "application/json",
+        "path": "runs/RUN-GEO-C2-BASE-Q3-CHATGPT/raw/collector-2.json",
+        "role": "supporting_artifact"
+      },
+      {
+        "media_type": "application/json",
+        "path": "runs/RUN-GEO-C2-BASE-Q3-CHATGPT/outputs/extraction-2.json",
+        "role": "supporting_artifact"
+      },
+      {
+        "media_type": "application/json",
+        "path": "runs/model-calls/MODEL-0b883288-894a-4410-8359-258045488a29.json",
+        "role": "supporting_artifact"
+      },
+      {
+        "media_type": "text/plain",
+        "path": "runs/RUN-GEO-C2-BASE-Q3-GEMINI/raw/answer-2.txt",
+        "role": "supporting_artifact"
+      },
+      {
+        "media_type": "application/json",
+        "path": "runs/RUN-GEO-C2-BASE-Q3-GEMINI/raw/collector-2.json",
+        "role": "supporting_artifact"
+      },
+      {
+        "media_type": "application/json",
+        "path": "runs/RUN-GEO-C2-BASE-Q3-GEMINI/outputs/extraction-2.json",
+        "role": "supporting_artifact"
+      },
+      {
+        "media_type": "application/json",
+        "path": "runs/model-calls/MODEL-16412f0e-c3a8-4d1a-8cd3-909be1965e22.json",
+        "role": "supporting_artifact"
+      },
+      {
+        "media_type": "text/plain",
+        "path": "runs/RUN-GEO-C2-BASE-Q3-GEMINI/raw/answer-1.txt",
+        "role": "supporting_artifact"
+      },
+      {
+        "media_type": "application/json",
+        "path": "runs/RUN-GEO-C2-BASE-Q3-GEMINI/raw/collector-1.json",
+        "role": "supporting_artifact"
+      },
+      {
+        "media_type": "application/json",
+        "path": "runs/RUN-GEO-C2-BASE-Q3-GEMINI/outputs/extraction-1.json",
+        "role": "supporting_artifact"
+      },
+      {
+        "media_type": "application/json",
+        "path": "runs/model-calls/MODEL-2d7aa8f2-88b1-4f1e-b774-3a29e26c05c3.json",
+        "role": "supporting_artifact"
+      },
+      {
+        "media_type": "text/plain",
+        "path": "runs/RUN-GEO-C2-BASE-Q3-PERPLEXITY/raw/answer-2.txt",
+        "role": "supporting_artifact"
+      },
+      {
+        "media_type": "application/json",
+        "path": "runs/RUN-GEO-C2-BASE-Q3-PERPLEXITY/raw/collector-2.json",
+        "role": "supporting_artifact"
+      },
+      {
+        "media_type": "application/json",
+        "path": "runs/RUN-GEO-C2-BASE-Q3-PERPLEXITY/outputs/extraction-2.json",
+        "role": "supporting_artifact"
+      },
+      {
+        "media_type": "application/json",
+        "path": "runs/model-calls/MODEL-f50a30ae-f946-4085-b673-d430bb506153.json",
+        "role": "supporting_artifact"
+      },
+      {
+        "media_type": "text/plain",
+        "path": "runs/RUN-GEO-C2-BASE-Q3-PERPLEXITY/raw/answer-1.txt",
+        "role": "supporting_artifact"
+      },
+      {
+        "media_type": "application/json",
+        "path": "runs/RUN-GEO-C2-BASE-Q3-PERPLEXITY/raw/collector-1.json",
+        "role": "supporting_artifact"
+      },
+      {
+        "media_type": "application/json",
+        "path": "runs/RUN-GEO-C2-BASE-Q3-PERPLEXITY/outputs/extraction-1.json",
+        "role": "supporting_artifact"
+      },
+      {
+        "media_type": "application/json",
+        "path": "runs/model-calls/MODEL-7847798d-4f4e-4d85-a424-bf3da088049e.json",
+        "role": "supporting_artifact"
+      },
+      {
+        "media_type": "text/plain",
+        "path": "runs/RUN-GEO-C2-BASE-Q3-GOOGLE-AI/raw/answer-1.txt",
+        "role": "supporting_artifact"
+      },
+      {
+        "media_type": "application/json",
+        "path": "runs/RUN-GEO-C2-BASE-Q3-GOOGLE-AI/raw/collector-1.json",
+        "role": "supporting_artifact"
+      },
+      {
+        "media_type": "application/json",
+        "path": "runs/RUN-GEO-C2-BASE-Q3-GOOGLE-AI/outputs/extraction-1.json",
+        "role": "supporting_artifact"
+      },
+      {
+        "media_type": "application/json",
+        "path": "runs/model-calls/MODEL-5384ab75-3018-429a-828c-8cf94cd20682.json",
+        "role": "supporting_artifact"
+      },
+      {
+        "media_type": "text/plain",
+        "path": "runs/RUN-GEO-C2-BASE-Q3-GOOGLE-AI/raw/answer-2.txt",
+        "role": "supporting_artifact"
+      },
+      {
+        "media_type": "application/json",
+        "path": "runs/RUN-GEO-C2-BASE-Q3-GOOGLE-AI/raw/collector-2.json",
+        "role": "supporting_artifact"
+      },
+      {
+        "media_type": "application/json",
+        "path": "runs/RUN-GEO-C2-BASE-Q3-GOOGLE-AI/outputs/extraction-2.json",
+        "role": "supporting_artifact"
+      },
+      {
+        "media_type": "application/json",
+        "path": "runs/model-calls/MODEL-c5c906c5-cbc4-4c60-b7c9-31fc5e77c04f.json",
+        "role": "supporting_artifact"
+      },
+      {
+        "media_type": "text/plain",
+        "path": "runs/RUN-GEO-C2-BASE-Q3-CLAUDE/raw/answer-2.txt",
+        "role": "supporting_artifact"
+      },
+      {
+        "media_type": "application/json",
+        "path": "runs/RUN-GEO-C2-BASE-Q3-CLAUDE/raw/collector-2.json",
+        "role": "supporting_artifact"
+      },
+      {
+        "media_type": "application/json",
+        "path": "runs/RUN-GEO-C2-BASE-Q3-CLAUDE/outputs/extraction-2.json",
+        "role": "supporting_artifact"
+      },
+      {
+        "media_type": "application/json",
+        "path": "runs/model-calls/MODEL-67a773b2-1e30-4255-a2e3-8bd1dce39735.json",
+        "role": "supporting_artifact"
+      },
+      {
+        "media_type": "text/plain",
+        "path": "runs/RUN-GEO-C2-BASE-Q3-CLAUDE/raw/answer-1.txt",
+        "role": "supporting_artifact"
+      },
+      {
+        "media_type": "application/json",
+        "path": "runs/RUN-GEO-C2-BASE-Q3-CLAUDE/raw/collector-1.json",
+        "role": "supporting_artifact"
+      },
+      {
+        "media_type": "application/json",
+        "path": "runs/RUN-GEO-C2-BASE-Q3-CLAUDE/outputs/extraction-1.json",
+        "role": "supporting_artifact"
+      },
+      {
+        "media_type": "application/json",
+        "path": "runs/model-calls/MODEL-eeb6a0ee-105d-4d8d-9416-1d9da260bd9e.json",
+        "role": "supporting_artifact"
+      },
+      {
+        "media_type": "text/plain",
+        "path": "runs/RUN-GEO-C2-BASE-Q4-CHATGPT/raw/answer-1.txt",
+        "role": "supporting_artifact"
+      },
+      {
+        "media_type": "application/json",
+        "path": "runs/RUN-GEO-C2-BASE-Q4-CHATGPT/raw/collector-1.json",
+        "role": "supporting_artifact"
+      },
+      {
+        "media_type": "application/json",
+        "path": "runs/RUN-GEO-C2-BASE-Q4-CHATGPT/outputs/extraction-1.json",
+        "role": "supporting_artifact"
+      },
+      {
+        "media_type": "application/json",
+        "path": "runs/model-calls/MODEL-bb246a56-e109-4f88-9ea6-29d58248da45.json",
+        "role": "supporting_artifact"
+      },
+      {
+        "media_type": "text/plain",
+        "path": "runs/RUN-GEO-C2-BASE-Q4-CHATGPT/raw/answer-2.txt",
+        "role": "supporting_artifact"
+      },
+      {
+        "media_type": "application/json",
+        "path": "runs/RUN-GEO-C2-BASE-Q4-CHATGPT/raw/collector-2.json",
+        "role": "supporting_artifact"
+      },
+      {
+        "media_type": "application/json",
+        "path": "runs/RUN-GEO-C2-BASE-Q4-CHATGPT/outputs/extraction-2.json",
+        "role": "supporting_artifact"
+      },
+      {
+        "media_type": "application/json",
+        "path": "runs/model-calls/MODEL-10f108c0-1b87-42b6-aac6-e9dac1ac59fd.json",
+        "role": "supporting_artifact"
+      },
+      {
+        "media_type": "text/plain",
+        "path": "runs/RUN-GEO-C2-BASE-Q4-GEMINI/raw/answer-1.txt",
+        "role": "supporting_artifact"
+      },
+      {
+        "media_type": "application/json",
+        "path": "runs/RUN-GEO-C2-BASE-Q4-GEMINI/raw/collector-1.json",
+        "role": "supporting_artifact"
+      },
+      {
+        "media_type": "application/json",
+        "path": "runs/RUN-GEO-C2-BASE-Q4-GEMINI/outputs/extraction-1.json",
+        "role": "supporting_artifact"
+      },
+      {
+        "media_type": "application/json",
+        "path": "runs/model-calls/MODEL-8271e33b-71b8-4879-b9e3-3332dc675386.json",
+        "role": "supporting_artifact"
+      },
+      {
+        "media_type": "text/plain",
+        "path": "runs/RUN-GEO-C2-BASE-Q4-GEMINI/raw/answer-2.txt",
+        "role": "supporting_artifact"
+      },
+      {
+        "media_type": "application/json",
+        "path": "runs/RUN-GEO-C2-BASE-Q4-GEMINI/raw/collector-2.json",
+        "role": "supporting_artifact"
+      },
+      {
+        "media_type": "application/json",
+        "path": "runs/RUN-GEO-C2-BASE-Q4-GEMINI/outputs/extraction-2.json",
+        "role": "supporting_artifact"
+      },
+      {
+        "media_type": "application/json",
+        "path": "runs/model-calls/MODEL-b7622456-107e-4e4e-880a-b2ae66688cee.json",
+        "role": "supporting_artifact"
+      },
+      {
+        "media_type": "text/plain",
+        "path": "runs/RUN-GEO-C2-BASE-Q4-PERPLEXITY/raw/answer-1.txt",
+        "role": "supporting_artifact"
+      },
+      {
+        "media_type": "application/json",
+        "path": "runs/RUN-GEO-C2-BASE-Q4-PERPLEXITY/raw/collector-1.json",
+        "role": "supporting_artifact"
+      },
+      {
+        "media_type": "application/json",
+        "path": "runs/RUN-GEO-C2-BASE-Q4-PERPLEXITY/outputs/extraction-1.json",
+        "role": "supporting_artifact"
+      },
+      {
+        "media_type": "application/json",
+        "path": "runs/model-calls/MODEL-9360ec6e-735c-4297-91c1-aa48c7fb3285.json",
+        "role": "supporting_artifact"
+      },
+      {
+        "media_type": "text/plain",
+        "path": "runs/RUN-GEO-C2-BASE-Q4-PERPLEXITY/raw/answer-2.txt",
+        "role": "supporting_artifact"
+      },
+      {
+        "media_type": "application/json",
+        "path": "runs/RUN-GEO-C2-BASE-Q4-PERPLEXITY/raw/collector-2.json",
+        "role": "supporting_artifact"
+      },
+      {
+        "media_type": "application/json",
+        "path": "runs/RUN-GEO-C2-BASE-Q4-PERPLEXITY/outputs/extraction-2.json",
+        "role": "supporting_artifact"
+      },
+      {
+        "media_type": "application/json",
+        "path": "runs/model-calls/MODEL-584b77eb-af43-4b27-85a0-be9b76544cde.json",
+        "role": "supporting_artifact"
+      },
+      {
+        "media_type": "text/plain",
+        "path": "runs/RUN-GEO-C2-BASE-Q4-GOOGLE-AI/raw/answer-1.txt",
+        "role": "supporting_artifact"
+      },
+      {
+        "media_type": "application/json",
+        "path": "runs/RUN-GEO-C2-BASE-Q4-GOOGLE-AI/raw/collector-1.json",
+        "role": "supporting_artifact"
+      },
+      {
+        "media_type": "application/json",
+        "path": "runs/RUN-GEO-C2-BASE-Q4-GOOGLE-AI/outputs/extraction-1.json",
+        "role": "supporting_artifact"
+      },
+      {
+        "media_type": "application/json",
+        "path": "runs/model-calls/MODEL-23c27130-b1d1-4c29-9787-4edc41a66ba3.json",
+        "role": "supporting_artifact"
+      },
+      {
+        "media_type": "text/plain",
+        "path": "runs/RUN-GEO-C2-BASE-Q4-GOOGLE-AI/raw/answer-2.txt",
+        "role": "supporting_artifact"
+      },
+      {
+        "media_type": "application/json",
+        "path": "runs/RUN-GEO-C2-BASE-Q4-GOOGLE-AI/raw/collector-2.json",
+        "role": "supporting_artifact"
+      },
+      {
+        "media_type": "application/json",
+        "path": "runs/RUN-GEO-C2-BASE-Q4-GOOGLE-AI/outputs/extraction-2.json",
+        "role": "supporting_artifact"
+      },
+      {
+        "media_type": "application/json",
+        "path": "runs/model-calls/MODEL-e6d002e3-5656-4dc3-9b51-f685ccb60629.json",
+        "role": "supporting_artifact"
+      },
+      {
+        "media_type": "text/plain",
+        "path": "runs/RUN-GEO-C2-BASE-Q4-CLAUDE/raw/answer-1.txt",
+        "role": "supporting_artifact"
+      },
+      {
+        "media_type": "application/json",
+        "path": "runs/RUN-GEO-C2-BASE-Q4-CLAUDE/raw/collector-1.json",
+        "role": "supporting_artifact"
+      },
+      {
+        "media_type": "application/json",
+        "path": "runs/RUN-GEO-C2-BASE-Q4-CLAUDE/outputs/extraction-1.json",
+        "role": "supporting_artifact"
+      },
+      {
+        "media_type": "application/json",
+        "path": "runs/model-calls/MODEL-c49417c9-bc2b-46d3-b862-1dd998a37e29.json",
+        "role": "supporting_artifact"
+      },
+      {
+        "media_type": "text/plain",
+        "path": "runs/RUN-GEO-C2-BASE-Q4-CLAUDE/raw/answer-2.txt",
+        "role": "supporting_artifact"
+      },
+      {
+        "media_type": "application/json",
+        "path": "runs/RUN-GEO-C2-BASE-Q4-CLAUDE/raw/collector-2.json",
+        "role": "supporting_artifact"
+      },
+      {
+        "media_type": "application/json",
+        "path": "runs/RUN-GEO-C2-BASE-Q4-CLAUDE/outputs/extraction-2.json",
+        "role": "supporting_artifact"
+      },
+      {
+        "media_type": "application/json",
+        "path": "runs/model-calls/MODEL-ec35ad94-b596-4249-af8e-1cc34cc9bfa3.json",
+        "role": "supporting_artifact"
+      },
+      {
+        "media_type": "text/plain",
+        "path": "runs/RUN-GEO-C2-BASE-Q5-CHATGPT/raw/answer-1.txt",
+        "role": "supporting_artifact"
+      },
+      {
+        "media_type": "application/json",
+        "path": "runs/RUN-GEO-C2-BASE-Q5-CHATGPT/raw/collector-1.json",
+        "role": "supporting_artifact"
+      },
+      {
+        "media_type": "application/json",
+        "path": "runs/RUN-GEO-C2-BASE-Q5-CHATGPT/outputs/extraction-1.json",
+        "role": "supporting_artifact"
+      },
+      {
+        "media_type": "application/json",
+        "path": "runs/model-calls/MODEL-689d8ee1-b31c-4185-b480-1690d2773b89.json",
+        "role": "supporting_artifact"
+      },
+      {
+        "media_type": "text/plain",
+        "path": "runs/RUN-GEO-C2-BASE-Q5-CHATGPT/raw/answer-2.txt",
+        "role": "supporting_artifact"
+      },
+      {
+        "media_type": "application/json",
+        "path": "runs/RUN-GEO-C2-BASE-Q5-CHATGPT/raw/collector-2.json",
+        "role": "supporting_artifact"
+      },
+      {
+        "media_type": "application/json",
+        "path": "runs/RUN-GEO-C2-BASE-Q5-CHATGPT/outputs/extraction-2.json",
+        "role": "supporting_artifact"
+      },
+      {
+        "media_type": "application/json",
+        "path": "runs/model-calls/MODEL-859b06a5-053e-4666-abcb-3e1a4d2ff9b3.json",
+        "role": "supporting_artifact"
+      },
+      {
+        "media_type": "text/plain",
+        "path": "runs/RUN-GEO-C2-BASE-Q5-GEMINI/raw/answer-1.txt",
+        "role": "supporting_artifact"
+      },
+      {
+        "media_type": "application/json",
+        "path": "runs/RUN-GEO-C2-BASE-Q5-GEMINI/raw/collector-1.json",
+        "role": "supporting_artifact"
+      },
+      {
+        "media_type": "application/json",
+        "path": "runs/RUN-GEO-C2-BASE-Q5-GEMINI/outputs/extraction-1.json",
+        "role": "supporting_artifact"
+      },
+      {
+        "media_type": "application/json",
+        "path": "runs/model-calls/MODEL-ac09e5be-59be-4103-bc44-6193d5549384.json",
+        "role": "supporting_artifact"
+      },
+      {
+        "media_type": "text/plain",
+        "path": "runs/RUN-GEO-C2-BASE-Q5-GEMINI/raw/answer-2.txt",
+        "role": "supporting_artifact"
+      },
+      {
+        "media_type": "application/json",
+        "path": "runs/RUN-GEO-C2-BASE-Q5-GEMINI/raw/collector-2.json",
+        "role": "supporting_artifact"
+      },
+      {
+        "media_type": "application/json",
+        "path": "runs/RUN-GEO-C2-BASE-Q5-GEMINI/outputs/extraction-2.json",
+        "role": "supporting_artifact"
+      },
+      {
+        "media_type": "application/json",
+        "path": "runs/model-calls/MODEL-94cd4db3-5567-4452-aeb5-3efd7895668e.json",
+        "role": "supporting_artifact"
+      },
+      {
+        "media_type": "text/plain",
+        "path": "runs/RUN-GEO-C2-BASE-Q5-PERPLEXITY/raw/answer-2.txt",
+        "role": "supporting_artifact"
+      },
+      {
+        "media_type": "application/json",
+        "path": "runs/RUN-GEO-C2-BASE-Q5-PERPLEXITY/raw/collector-2.json",
+        "role": "supporting_artifact"
+      },
+      {
+        "media_type": "application/json",
+        "path": "runs/RUN-GEO-C2-BASE-Q5-PERPLEXITY/outputs/extraction-2.json",
+        "role": "supporting_artifact"
+      },
+      {
+        "media_type": "application/json",
+        "path": "runs/model-calls/MODEL-0e21e5bb-3fa8-45d5-b153-32af0ab4499f.json",
+        "role": "supporting_artifact"
+      },
+      {
+        "media_type": "text/plain",
+        "path": "runs/RUN-GEO-C2-BASE-Q5-PERPLEXITY/raw/answer-1.txt",
+        "role": "supporting_artifact"
+      },
+      {
+        "media_type": "application/json",
+        "path": "runs/RUN-GEO-C2-BASE-Q5-PERPLEXITY/raw/collector-1.json",
+        "role": "supporting_artifact"
+      },
+      {
+        "media_type": "application/json",
+        "path": "runs/RUN-GEO-C2-BASE-Q5-PERPLEXITY/outputs/extraction-1.json",
+        "role": "supporting_artifact"
+      },
+      {
+        "media_type": "application/json",
+        "path": "runs/model-calls/MODEL-f964be66-a846-456f-bb81-96786d7ff880.json",
+        "role": "supporting_artifact"
+      },
+      {
+        "media_type": "text/plain",
+        "path": "runs/RUN-GEO-C2-BASE-Q5-GOOGLE-AI/raw/answer-2.txt",
+        "role": "supporting_artifact"
+      },
+      {
+        "media_type": "application/json",
+        "path": "runs/RUN-GEO-C2-BASE-Q5-GOOGLE-AI/raw/collector-2.json",
+        "role": "supporting_artifact"
+      },
+      {
+        "media_type": "application/json",
+        "path": "runs/RUN-GEO-C2-BASE-Q5-GOOGLE-AI/outputs/extraction-2.json",
+        "role": "supporting_artifact"
+      },
+      {
+        "media_type": "application/json",
+        "path": "runs/model-calls/MODEL-4a9b7815-6528-486c-9eab-d07a4d270e57.json",
+        "role": "supporting_artifact"
+      },
+      {
+        "media_type": "text/plain",
+        "path": "runs/RUN-GEO-C2-BASE-Q5-GOOGLE-AI/raw/answer-1.txt",
+        "role": "supporting_artifact"
+      },
+      {
+        "media_type": "application/json",
+        "path": "runs/RUN-GEO-C2-BASE-Q5-GOOGLE-AI/raw/collector-1.json",
+        "role": "supporting_artifact"
+      },
+      {
+        "media_type": "application/json",
+        "path": "runs/RUN-GEO-C2-BASE-Q5-GOOGLE-AI/outputs/extraction-1.json",
+        "role": "supporting_artifact"
+      },
+      {
+        "media_type": "application/json",
+        "path": "runs/model-calls/MODEL-b4dfad83-42d4-4a83-8d17-0a0a50b60ba2.json",
+        "role": "supporting_artifact"
+      },
+      {
+        "media_type": "text/plain",
+        "path": "runs/RUN-GEO-C2-BASE-Q5-CLAUDE/raw/answer-1.txt",
+        "role": "supporting_artifact"
+      },
+      {
+        "media_type": "application/json",
+        "path": "runs/RUN-GEO-C2-BASE-Q5-CLAUDE/raw/collector-1.json",
+        "role": "supporting_artifact"
+      },
+      {
+        "media_type": "application/json",
+        "path": "runs/RUN-GEO-C2-BASE-Q5-CLAUDE/outputs/extraction-1.json",
+        "role": "supporting_artifact"
+      },
+      {
+        "media_type": "application/json",
+        "path": "runs/model-calls/MODEL-7d503968-7656-455c-b190-28fe8ee1c0cb.json",
+        "role": "supporting_artifact"
+      },
+      {
+        "media_type": "text/plain",
+        "path": "runs/RUN-GEO-C2-BASE-Q5-CLAUDE/raw/answer-2.txt",
+        "role": "supporting_artifact"
+      },
+      {
+        "media_type": "application/json",
+        "path": "runs/RUN-GEO-C2-BASE-Q5-CLAUDE/raw/collector-2.json",
+        "role": "supporting_artifact"
+      },
+      {
+        "media_type": "application/json",
+        "path": "runs/RUN-GEO-C2-BASE-Q5-CLAUDE/outputs/extraction-2.json",
+        "role": "supporting_artifact"
+      },
+      {
+        "media_type": "application/json",
+        "path": "runs/model-calls/MODEL-ad9ebc2e-6afd-45fd-a44a-a27025123e84.json",
+        "role": "supporting_artifact"
+      },
+      {
+        "media_type": "text/plain",
+        "path": "runs/RUN-GEO-C2-BASE-Q6-CHATGPT/raw/answer-1.txt",
+        "role": "supporting_artifact"
+      },
+      {
+        "media_type": "application/json",
+        "path": "runs/RUN-GEO-C2-BASE-Q6-CHATGPT/raw/collector-1.json",
+        "role": "supporting_artifact"
+      },
+      {
+        "media_type": "application/json",
+        "path": "runs/RUN-GEO-C2-BASE-Q6-CHATGPT/outputs/extraction-1.json",
+        "role": "supporting_artifact"
+      },
+      {
+        "media_type": "application/json",
+        "path": "runs/model-calls/MODEL-88a53632-5a01-4e0f-a916-431a5e59d71d.json",
+        "role": "supporting_artifact"
+      },
+      {
+        "media_type": "text/plain",
+        "path": "runs/RUN-GEO-C2-BASE-Q6-CHATGPT/raw/answer-2.txt",
+        "role": "supporting_artifact"
+      },
+      {
+        "media_type": "application/json",
+        "path": "runs/RUN-GEO-C2-BASE-Q6-CHATGPT/raw/collector-2.json",
+        "role": "supporting_artifact"
+      },
+      {
+        "media_type": "application/json",
+        "path": "runs/RUN-GEO-C2-BASE-Q6-CHATGPT/outputs/extraction-2.json",
+        "role": "supporting_artifact"
+      },
+      {
+        "media_type": "application/json",
+        "path": "runs/model-calls/MODEL-dbc8b056-186a-4fa0-a677-382baf1a361a.json",
+        "role": "supporting_artifact"
+      },
+      {
+        "media_type": "text/plain",
+        "path": "runs/RUN-GEO-C2-BASE-Q6-GEMINI/raw/answer-1.txt",
+        "role": "supporting_artifact"
+      },
+      {
+        "media_type": "application/json",
+        "path": "runs/RUN-GEO-C2-BASE-Q6-GEMINI/raw/collector-1.json",
+        "role": "supporting_artifact"
+      },
+      {
+        "media_type": "application/json",
+        "path": "runs/RUN-GEO-C2-BASE-Q6-GEMINI/outputs/extraction-1.json",
+        "role": "supporting_artifact"
+      },
+      {
+        "media_type": "application/json",
+        "path": "runs/model-calls/MODEL-72b53fb6-ddbd-4ce0-a4ae-03d90f28ae6e.json",
+        "role": "supporting_artifact"
+      },
+      {
+        "media_type": "text/plain",
+        "path": "runs/RUN-GEO-C2-BASE-Q6-GEMINI/raw/answer-2.txt",
+        "role": "supporting_artifact"
+      },
+      {
+        "media_type": "application/json",
+        "path": "runs/RUN-GEO-C2-BASE-Q6-GEMINI/raw/collector-2.json",
+        "role": "supporting_artifact"
+      },
+      {
+        "media_type": "application/json",
+        "path": "runs/RUN-GEO-C2-BASE-Q6-GEMINI/outputs/extraction-2.json",
+        "role": "supporting_artifact"
+      },
+      {
+        "media_type": "application/json",
+        "path": "runs/model-calls/MODEL-d0c26e60-3fc8-4509-98a6-751bab869359.json",
+        "role": "supporting_artifact"
+      },
+      {
+        "media_type": "text/plain",
+        "path": "runs/RUN-GEO-C2-BASE-Q6-PERPLEXITY/raw/answer-1.txt",
+        "role": "supporting_artifact"
+      },
+      {
+        "media_type": "application/json",
+        "path": "runs/RUN-GEO-C2-BASE-Q6-PERPLEXITY/raw/collector-1.json",
+        "role": "supporting_artifact"
+      },
+      {
+        "media_type": "application/json",
+        "path": "runs/RUN-GEO-C2-BASE-Q6-PERPLEXITY/outputs/extraction-1.json",
+        "role": "supporting_artifact"
+      },
+      {
+        "media_type": "application/json",
+        "path": "runs/model-calls/MODEL-982da9a6-6976-4427-a5e0-968201b14e85.json",
+        "role": "supporting_artifact"
+      },
+      {
+        "media_type": "text/plain",
+        "path": "runs/RUN-GEO-C2-BASE-Q6-PERPLEXITY/raw/answer-2.txt",
+        "role": "supporting_artifact"
+      },
+      {
+        "media_type": "application/json",
+        "path": "runs/RUN-GEO-C2-BASE-Q6-PERPLEXITY/raw/collector-2.json",
+        "role": "supporting_artifact"
+      },
+      {
+        "media_type": "application/json",
+        "path": "runs/RUN-GEO-C2-BASE-Q6-PERPLEXITY/outputs/extraction-2.json",
+        "role": "supporting_artifact"
+      },
+      {
+        "media_type": "application/json",
+        "path": "runs/model-calls/MODEL-9cd1011d-5e61-4197-9dc4-179d82332e50.json",
+        "role": "supporting_artifact"
+      },
+      {
+        "media_type": "text/plain",
+        "path": "runs/RUN-GEO-C2-BASE-Q6-GOOGLE-AI/raw/answer-1.txt",
+        "role": "supporting_artifact"
+      },
+      {
+        "media_type": "application/json",
+        "path": "runs/RUN-GEO-C2-BASE-Q6-GOOGLE-AI/raw/collector-1.json",
+        "role": "supporting_artifact"
+      },
+      {
+        "media_type": "application/json",
+        "path": "runs/RUN-GEO-C2-BASE-Q6-GOOGLE-AI/outputs/extraction-1.json",
+        "role": "supporting_artifact"
+      },
+      {
+        "media_type": "application/json",
+        "path": "runs/model-calls/MODEL-4eee7806-ac91-4fc9-bde4-a190771c7399.json",
+        "role": "supporting_artifact"
+      },
+      {
+        "media_type": "text/plain",
+        "path": "runs/RUN-GEO-C2-BASE-Q6-GOOGLE-AI/raw/answer-2.txt",
+        "role": "supporting_artifact"
+      },
+      {
+        "media_type": "application/json",
+        "path": "runs/RUN-GEO-C2-BASE-Q6-GOOGLE-AI/raw/collector-2.json",
+        "role": "supporting_artifact"
+      },
+      {
+        "media_type": "application/json",
+        "path": "runs/RUN-GEO-C2-BASE-Q6-GOOGLE-AI/outputs/extraction-2.json",
+        "role": "supporting_artifact"
+      },
+      {
+        "media_type": "application/json",
+        "path": "runs/model-calls/MODEL-11e983ca-dcc6-44a2-86e3-f95ace8e20fa.json",
+        "role": "supporting_artifact"
+      },
+      {
+        "media_type": "text/plain",
+        "path": "runs/RUN-GEO-C2-BASE-Q6-CLAUDE/raw/answer-2.txt",
+        "role": "supporting_artifact"
+      },
+      {
+        "media_type": "application/json",
+        "path": "runs/RUN-GEO-C2-BASE-Q6-CLAUDE/raw/collector-2.json",
+        "role": "supporting_artifact"
+      },
+      {
+        "media_type": "application/json",
+        "path": "runs/RUN-GEO-C2-BASE-Q6-CLAUDE/outputs/extraction-2.json",
+        "role": "supporting_artifact"
+      },
+      {
+        "media_type": "application/json",
+        "path": "runs/model-calls/MODEL-98c0de2d-eecf-4c0e-92d0-5f68a3a28718.json",
+        "role": "supporting_artifact"
+      },
+      {
+        "media_type": "text/plain",
+        "path": "runs/RUN-GEO-C2-BASE-Q6-CLAUDE/raw/answer-1.txt",
+        "role": "supporting_artifact"
+      },
+      {
+        "media_type": "application/json",
+        "path": "runs/RUN-GEO-C2-BASE-Q6-CLAUDE/raw/collector-1.json",
+        "role": "supporting_artifact"
+      },
+      {
+        "media_type": "application/json",
+        "path": "runs/RUN-GEO-C2-BASE-Q6-CLAUDE/outputs/extraction-1.json",
+        "role": "supporting_artifact"
+      },
+      {
+        "media_type": "application/json",
+        "path": "runs/model-calls/MODEL-b6e3907b-e4e0-414f-a715-5e1c5e561962.json",
+        "role": "supporting_artifact"
+      },
+      {
+        "media_type": "application/json",
+        "path": "cycles/m5/analysis/C2-BASE-Q1.json",
+        "role": "supporting_artifact"
+      },
+      {
+        "media_type": "application/json",
+        "path": "runs/model-calls/MODEL-835733ee-78a4-4798-b60c-f591cca4fd80.json",
+        "role": "supporting_artifact"
+      },
+      {
+        "media_type": "application/json",
+        "path": "reviews/decisions/OWNER-C2-BASE-ANSWERS.json",
+        "role": "supporting_artifact"
+      },
+      {
+        "media_type": "application/json",
+        "path": "reviews/packages/OWNER-C2-BASE-ANSWERS.json",
+        "role": "supporting_artifact"
+      },
+      {
+        "media_type": "text/plain",
+        "path": "reviews/packages/OWNER-C2-BASE-ANSWERS.md",
+        "role": "supporting_artifact"
+      },
+      {
+        "media_type": "application/json",
+        "path": "cycles/m5/analysis/C2-BASE-Q2.json",
+        "role": "supporting_artifact"
+      },
+      {
+        "media_type": "application/json",
+        "path": "runs/model-calls/MODEL-de7f7557-4964-44e8-90ba-567b4ee4739e.json",
+        "role": "supporting_artifact"
+      },
+      {
+        "media_type": "application/json",
+        "path": "cycles/m5/analysis/C2-BASE-Q3.json",
+        "role": "supporting_artifact"
+      },
+      {
+        "media_type": "application/json",
+        "path": "runs/model-calls/MODEL-7f09b599-c7ba-4786-8c32-41457663b48b.json",
+        "role": "supporting_artifact"
+      },
+      {
+        "media_type": "application/json",
+        "path": "cycles/m5/analysis/C2-BASE-Q4.json",
+        "role": "supporting_artifact"
+      },
+      {
+        "media_type": "application/json",
+        "path": "runs/model-calls/MODEL-bbf071d2-29c3-4acd-ba09-1cb3620885e0.json",
+        "role": "supporting_artifact"
+      },
+      {
+        "media_type": "application/json",
+        "path": "cycles/m5/analysis/C2-BASE-Q5.json",
+        "role": "supporting_artifact"
+      },
+      {
+        "media_type": "application/json",
+        "path": "runs/model-calls/MODEL-9b254843-9229-40b1-a475-907bb86f9af0.json",
+        "role": "supporting_artifact"
+      },
+      {
+        "media_type": "application/json",
+        "path": "cycles/m5/analysis/C2-BASE-Q6.json",
+        "role": "supporting_artifact"
+      },
+      {
+        "media_type": "application/json",
+        "path": "runs/model-calls/MODEL-f99ba340-1bf9-45fe-beaa-784481cf8112.json",
+        "role": "supporting_artifact"
+      }
+    ],
+    "source_paths": [
+      "cycles/m5/samples/smp-geo-c2-base-q1-chatgpt-1.md",
+      "cycles/m5/samples/smp-geo-c2-base-q1-chatgpt-2.md",
+      "cycles/m5/samples/smp-geo-c2-base-q1-gemini-1.md",
+      "cycles/m5/samples/smp-geo-c2-base-q1-gemini-2.md",
+      "cycles/m5/samples/smp-geo-c2-base-q1-perplexity-2.md",
+      "cycles/m5/samples/smp-geo-c2-base-q1-perplexity-1.md",
+      "cycles/m5/samples/smp-geo-c2-base-q1-google-ai-2.md",
+      "cycles/m5/samples/smp-geo-c2-base-q1-google-ai-1.md",
+      "cycles/m5/samples/smp-geo-c2-base-q1-claude-2.md",
+      "cycles/m5/samples/smp-geo-c2-base-q1-claude-1.md",
+      "cycles/m5/samples/smp-geo-c2-base-q2-chatgpt-2.md",
+      "cycles/m5/samples/smp-geo-c2-base-q2-chatgpt-1.md",
+      "cycles/m5/samples/smp-geo-c2-base-q2-gemini-2.md",
+      "cycles/m5/samples/smp-geo-c2-base-q2-gemini-1.md",
+      "cycles/m5/samples/smp-geo-c2-base-q2-perplexity-2.md",
+      "cycles/m5/samples/smp-geo-c2-base-q2-perplexity-1.md",
+      "cycles/m5/samples/smp-geo-c2-base-q2-google-ai-2.md",
+      "cycles/m5/samples/smp-geo-c2-base-q2-google-ai-1.md",
+      "cycles/m5/samples/smp-geo-c2-base-q2-claude-1.md",
+      "cycles/m5/samples/smp-geo-c2-base-q2-claude-2.md",
+      "cycles/m5/samples/smp-geo-c2-base-q3-chatgpt-1.md",
+      "cycles/m5/samples/smp-geo-c2-base-q3-chatgpt-2.md",
+      "cycles/m5/samples/smp-geo-c2-base-q3-gemini-2.md",
+      "cycles/m5/samples/smp-geo-c2-base-q3-gemini-1.md",
+      "cycles/m5/samples/smp-geo-c2-base-q3-perplexity-2.md",
+      "cycles/m5/samples/smp-geo-c2-base-q3-perplexity-1.md",
+      "cycles/m5/samples/smp-geo-c2-base-q3-google-ai-1.md",
+      "cycles/m5/samples/smp-geo-c2-base-q3-google-ai-2.md",
+      "cycles/m5/samples/smp-geo-c2-base-q3-claude-2.md",
+      "cycles/m5/samples/smp-geo-c2-base-q3-claude-1.md",
+      "cycles/m5/samples/smp-geo-c2-base-q4-chatgpt-1.md",
+      "cycles/m5/samples/smp-geo-c2-base-q4-chatgpt-2.md",
+      "cycles/m5/samples/smp-geo-c2-base-q4-gemini-1.md",
+      "cycles/m5/samples/smp-geo-c2-base-q4-gemini-2.md",
+      "cycles/m5/samples/smp-geo-c2-base-q4-perplexity-1.md",
+      "cycles/m5/samples/smp-geo-c2-base-q4-perplexity-2.md",
+      "cycles/m5/samples/smp-geo-c2-base-q4-google-ai-1.md",
+      "cycles/m5/samples/smp-geo-c2-base-q4-google-ai-2.md",
+      "cycles/m5/samples/smp-geo-c2-base-q4-claude-1.md",
+      "cycles/m5/samples/smp-geo-c2-base-q4-claude-2.md",
+      "cycles/m5/samples/smp-geo-c2-base-q5-chatgpt-1.md",
+      "cycles/m5/samples/smp-geo-c2-base-q5-chatgpt-2.md",
+      "cycles/m5/samples/smp-geo-c2-base-q5-gemini-1.md",
+      "cycles/m5/samples/smp-geo-c2-base-q5-gemini-2.md",
+      "cycles/m5/samples/smp-geo-c2-base-q5-perplexity-2.md",
+      "cycles/m5/samples/smp-geo-c2-base-q5-perplexity-1.md",
+      "cycles/m5/samples/smp-geo-c2-base-q5-google-ai-2.md",
+      "cycles/m5/samples/smp-geo-c2-base-q5-google-ai-1.md",
+      "cycles/m5/samples/smp-geo-c2-base-q5-claude-1.md",
+      "cycles/m5/samples/smp-geo-c2-base-q5-claude-2.md",
+      "cycles/m5/samples/smp-geo-c2-base-q6-chatgpt-1.md",
+      "cycles/m5/samples/smp-geo-c2-base-q6-chatgpt-2.md",
+      "cycles/m5/samples/smp-geo-c2-base-q6-gemini-1.md",
+      "cycles/m5/samples/smp-geo-c2-base-q6-gemini-2.md",
+      "cycles/m5/samples/smp-geo-c2-base-q6-perplexity-1.md",
+      "cycles/m5/samples/smp-geo-c2-base-q6-perplexity-2.md",
+      "cycles/m5/samples/smp-geo-c2-base-q6-google-ai-1.md",
+      "cycles/m5/samples/smp-geo-c2-base-q6-google-ai-2.md",
+      "cycles/m5/samples/smp-geo-c2-base-q6-claude-2.md",
+      "cycles/m5/samples/smp-geo-c2-base-q6-claude-1.md",
+      "cycles/m5/reviews/arv-geo-c2-base-q1-chatgpt-1-reviewed.md",
+      "cycles/m5/reviews/arv-geo-c2-base-q1-chatgpt-2-reviewed.md",
+      "cycles/m5/reviews/arv-geo-c2-base-q1-gemini-1-reviewed.md",
+      "cycles/m5/reviews/arv-geo-c2-base-q1-gemini-2-reviewed.md",
+      "cycles/m5/reviews/arv-geo-c2-base-q1-perplexity-1-reviewed.md",
+      "cycles/m5/reviews/arv-geo-c2-base-q1-perplexity-2-reviewed.md",
+      "cycles/m5/reviews/arv-geo-c2-base-q1-google-ai-1-reviewed.md",
+      "cycles/m5/reviews/arv-geo-c2-base-q1-google-ai-2-reviewed.md",
+      "cycles/m5/reviews/arv-geo-c2-base-q1-claude-1-reviewed.md",
+      "cycles/m5/reviews/arv-geo-c2-base-q1-claude-2-reviewed.md",
+      "cycles/m5/reviews/arv-geo-c2-base-q2-chatgpt-1-reviewed.md",
+      "cycles/m5/reviews/arv-geo-c2-base-q2-chatgpt-2-reviewed.md",
+      "cycles/m5/reviews/arv-geo-c2-base-q2-gemini-1-reviewed.md",
+      "cycles/m5/reviews/arv-geo-c2-base-q2-gemini-2-reviewed.md",
+      "cycles/m5/reviews/arv-geo-c2-base-q2-perplexity-1-reviewed.md",
+      "cycles/m5/reviews/arv-geo-c2-base-q2-perplexity-2-reviewed.md",
+      "cycles/m5/reviews/arv-geo-c2-base-q2-google-ai-1-reviewed.md",
+      "cycles/m5/reviews/arv-geo-c2-base-q2-google-ai-2-reviewed.md",
+      "cycles/m5/reviews/arv-geo-c2-base-q2-claude-1-reviewed.md",
+      "cycles/m5/reviews/arv-geo-c2-base-q2-claude-2-reviewed.md",
+      "cycles/m5/reviews/arv-geo-c2-base-q3-chatgpt-1-reviewed.md",
+      "cycles/m5/reviews/arv-geo-c2-base-q3-chatgpt-2-reviewed.md",
+      "cycles/m5/reviews/arv-geo-c2-base-q3-gemini-1-reviewed.md",
+      "cycles/m5/reviews/arv-geo-c2-base-q3-gemini-2-reviewed.md",
+      "cycles/m5/reviews/arv-geo-c2-base-q3-perplexity-1-reviewed.md",
+      "cycles/m5/reviews/arv-geo-c2-base-q3-perplexity-2-reviewed.md",
+      "cycles/m5/reviews/arv-geo-c2-base-q3-google-ai-1-reviewed.md",
+      "cycles/m5/reviews/arv-geo-c2-base-q3-google-ai-2-reviewed.md",
+      "cycles/m5/reviews/arv-geo-c2-base-q3-claude-1-reviewed.md",
+      "cycles/m5/reviews/arv-geo-c2-base-q3-claude-2-reviewed.md",
+      "cycles/m5/reviews/arv-geo-c2-base-q4-chatgpt-1-reviewed.md",
+      "cycles/m5/reviews/arv-geo-c2-base-q4-chatgpt-2-reviewed.md",
+      "cycles/m5/reviews/arv-geo-c2-base-q4-gemini-1-reviewed.md",
+      "cycles/m5/reviews/arv-geo-c2-base-q4-gemini-2-reviewed.md",
+      "cycles/m5/reviews/arv-geo-c2-base-q4-perplexity-1-reviewed.md",
+      "cycles/m5/reviews/arv-geo-c2-base-q4-perplexity-2-reviewed.md",
+      "cycles/m5/reviews/arv-geo-c2-base-q4-google-ai-1-reviewed.md",
+      "cycles/m5/reviews/arv-geo-c2-base-q4-google-ai-2-reviewed.md",
+      "cycles/m5/reviews/arv-geo-c2-base-q4-claude-1-reviewed.md",
+      "cycles/m5/reviews/arv-geo-c2-base-q4-claude-2-reviewed.md",
+      "cycles/m5/reviews/arv-geo-c2-base-q5-chatgpt-1-reviewed.md",
+      "cycles/m5/reviews/arv-geo-c2-base-q5-chatgpt-2-reviewed.md",
+      "cycles/m5/reviews/arv-geo-c2-base-q5-gemini-1-reviewed.md",
+      "cycles/m5/reviews/arv-geo-c2-base-q5-gemini-2-reviewed.md",
+      "cycles/m5/reviews/arv-geo-c2-base-q5-perplexity-1-reviewed.md",
+      "cycles/m5/reviews/arv-geo-c2-base-q5-perplexity-2-reviewed.md",
+      "cycles/m5/reviews/arv-geo-c2-base-q5-google-ai-1-reviewed.md",
+      "cycles/m5/reviews/arv-geo-c2-base-q5-google-ai-2-reviewed.md",
+      "cycles/m5/reviews/arv-geo-c2-base-q5-claude-1-reviewed.md",
+      "cycles/m5/reviews/arv-geo-c2-base-q5-claude-2-reviewed.md",
+      "cycles/m5/reviews/arv-geo-c2-base-q6-chatgpt-1-reviewed.md",
+      "cycles/m5/reviews/arv-geo-c2-base-q6-chatgpt-2-reviewed.md",
+      "cycles/m5/reviews/arv-geo-c2-base-q6-gemini-1-reviewed.md",
+      "cycles/m5/reviews/arv-geo-c2-base-q6-gemini-2-reviewed.md",
+      "cycles/m5/reviews/arv-geo-c2-base-q6-perplexity-1-reviewed.md",
+      "cycles/m5/reviews/arv-geo-c2-base-q6-perplexity-2-reviewed.md",
+      "cycles/m5/reviews/arv-geo-c2-base-q6-google-ai-1-reviewed.md",
+      "cycles/m5/reviews/arv-geo-c2-base-q6-google-ai-2-reviewed.md",
+      "cycles/m5/reviews/arv-geo-c2-base-q6-claude-1-reviewed.md",
+      "cycles/m5/reviews/arv-geo-c2-base-q6-claude-2-reviewed.md",
+      "cycles/m5/aggregations/agg-geo-c2-base-q1-chatgpt.md",
+      "cycles/m5/aggregations/agg-geo-c2-base-q1-gemini.md",
+      "cycles/m5/aggregations/agg-geo-c2-base-q1-perplexity.md",
+      "cycles/m5/aggregations/agg-geo-c2-base-q1-google-ai.md",
+      "cycles/m5/aggregations/agg-geo-c2-base-q1-claude.md",
+      "cycles/m5/aggregations/agg-geo-c2-base-q2-chatgpt.md",
+      "cycles/m5/aggregations/agg-geo-c2-base-q2-gemini.md",
+      "cycles/m5/aggregations/agg-geo-c2-base-q2-perplexity.md",
+      "cycles/m5/aggregations/agg-geo-c2-base-q2-google-ai.md",
+      "cycles/m5/aggregations/agg-geo-c2-base-q2-claude.md",
+      "cycles/m5/aggregations/agg-geo-c2-base-q3-chatgpt.md",
+      "cycles/m5/aggregations/agg-geo-c2-base-q3-gemini.md",
+      "cycles/m5/aggregations/agg-geo-c2-base-q3-perplexity.md",
+      "cycles/m5/aggregations/agg-geo-c2-base-q3-google-ai.md",
+      "cycles/m5/aggregations/agg-geo-c2-base-q3-claude.md",
+      "cycles/m5/aggregations/agg-geo-c2-base-q4-chatgpt.md",
+      "cycles/m5/aggregations/agg-geo-c2-base-q4-gemini.md",
+      "cycles/m5/aggregations/agg-geo-c2-base-q4-perplexity.md",
+      "cycles/m5/aggregations/agg-geo-c2-base-q4-google-ai.md",
+      "cycles/m5/aggregations/agg-geo-c2-base-q4-claude.md",
+      "cycles/m5/aggregations/agg-geo-c2-base-q5-chatgpt.md",
+      "cycles/m5/aggregations/agg-geo-c2-base-q5-gemini.md",
+      "cycles/m5/aggregations/agg-geo-c2-base-q5-perplexity.md",
+      "cycles/m5/aggregations/agg-geo-c2-base-q5-google-ai.md",
+      "cycles/m5/aggregations/agg-geo-c2-base-q5-claude.md",
+      "cycles/m5/aggregations/agg-geo-c2-base-q6-chatgpt.md",
+      "cycles/m5/aggregations/agg-geo-c2-base-q6-gemini.md",
+      "cycles/m5/aggregations/agg-geo-c2-base-q6-perplexity.md",
+      "cycles/m5/aggregations/agg-geo-c2-base-q6-google-ai.md",
+      "cycles/m5/aggregations/agg-geo-c2-base-q6-claude.md"
+    ]
+  },
+  "gate_snapshot_id": "CIS-GEO-C2-BASELINE-RECORDED",
+  "goal_entry_key": "945ae348a21ac35386c28382edada6d3fa2d9b59e3698d415dab7823d07c1386",
+  "lease": {
+    "now": "2026-10-01T00:00:00.000Z",
+    "owner_id": "knowledge-journey",
+    "ttl_ms": 60000
+  },
+  "operation_id": "CYC-GEO-E2E-C2:baseline_recorded",
+  "to_stage": "baseline_recorded",
+  "transition_id": "CTR-GEO-C2-BASELINE-RECORDED"
+}

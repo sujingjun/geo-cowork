@@ -1,0 +1,33 @@
+{
+  "actor": {
+    "decision_ref": "workspace://reviews/decisions/OWNER-C1-ADOPTION.json",
+    "kind": "fixture_human"
+  },
+  "cycle_ref": "CYC-GEO-E2E-C1",
+  "expected_cycle_version": "1.0.2",
+  "from_stage": "diagnosis_ready",
+  "gate": {
+    "artifact_paths": [
+      {
+        "media_type": "application/json",
+        "path": "execution/contracts/measurement-contract.json",
+        "role": "measurement_contract"
+      }
+    ],
+    "source_paths": [
+      "assets/adoptions/adr-geo-c1-official-decided.md",
+      "assets/adoptions/adr-geo-c1-own-decided.md",
+      "assets/adoptions/adr-geo-c1-third-party-decided.md"
+    ]
+  },
+  "gate_snapshot_id": "CIS-GEO-C1-ADOPTION-DECIDED",
+  "goal_entry_key": "1d6c2c65eb0de8987719f58c08e3b6b873f36ad588fe9f1dcb4e1930cab8cb33",
+  "lease": {
+    "now": "2026-09-17T00:00:00.000Z",
+    "owner_id": "knowledge-journey",
+    "ttl_ms": 60000
+  },
+  "operation_id": "CYC-GEO-E2E-C1:adoption_decided",
+  "to_stage": "adoption_decided",
+  "transition_id": "CTR-GEO-C1-ADOPTION-DECIDED"
+}

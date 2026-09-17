@@ -1,0 +1,61 @@
+{
+  "purpose": "engineering_validation",
+  "query": {
+    "ref": "Q-MYYSHOP-WHAT-IS-EN-BASELINE-001",
+    "sha256": "68c60cb8a474148a6c4861907aab8430745a217c3b41eac1f9e8c2f6e251e8be",
+    "text": "What is MyyShop?",
+    "version": "1.0.0"
+  },
+  "rows": [
+    {
+      "platform": "chatgpt",
+      "status": "completed",
+      "submitted_at": "2026-09-15T17:27:03.136Z",
+      "captured_at": "2026-09-15T17:29:25.656Z",
+      "raw_sha256": "34d446773a488d33f7ef99b00265cd80e70079aa034dfcabf5d993d6d887eece",
+      "characters": 2239,
+      "citations": 10,
+      "provider": "deepseek",
+      "model": "deepseek-flash",
+      "model_call": "MODEL-fe0e1a05-012e-4a57-92df-1c9b5dabd972",
+      "result_url": "https://chatgpt.com/?temporary-chat=true",
+      "extracted_citation_occurrences": 10,
+      "extracted_unique_citation_urls": 7,
+      "latest_model_call": "MODEL-fe0e1a05-012e-4a57-92df-1c9b5dabd972"
+    },
+    {
+      "platform": "gemini",
+      "status": "completed",
+      "submitted_at": "2026-09-15T17:31:38.746Z",
+      "captured_at": "2026-09-15T17:35:47.678Z",
+      "raw_sha256": "26ef58726b56b7602b43b77f20612879887bdb15744301fac5bbdf7d4f7ed5c3",
+      "characters": 1268,
+      "citations": 0,
+      "provider": "deepseek",
+      "model": "deepseek-flash",
+      "model_call": "MODEL-b08dd2ed-1b14-4d4f-af29-33a595243577",
+      "result_url": "https://gemini.google.com/app/9d83935e422a985e",
+      "extracted_citation_occurrences": 0,
+      "extracted_unique_citation_urls": 0,
+      "latest_model_call": "MODEL-b08dd2ed-1b14-4d4f-af29-33a595243577"
+    },
+    {
+      "platform": "perplexity",
+      "status": "completed",
+      "submitted_at": "2026-09-15T17:37:53.494Z",
+      "captured_at": "2026-09-15T17:44:24.983Z",
+      "raw_sha256": "0b6b90b8ebed613da24df025cb1a2a6695a45a68302287f29dd028844407af3e",
+      "characters": 1790,
+      "citations": 1,
+      "provider": "deepseek",
+      "model": "deepseek-flash",
+      "model_call": "MODEL-fa8c4caa-6073-4faf-ac47-19a503941ba9",
+      "result_url": "https://www.perplexity.ai/search/576ab248-c33a-4dde-911d-3d6042b8fbb0",
+      "extracted_citation_occurrences": 4,
+      "extracted_unique_citation_urls": 3,
+      "latest_model_call": "MODEL-02d8c84e-bfa0-4a6b-8e2e-915cfeb936d0",
+      "citation_limitations": "Retained DOM href and data-pplx-citation-url attributes were parsed; collapsed source groups were not expanded. Full URL coverage is not asserted."
+    }
+  ],
+  "scope": "Three single-slot engineering captures; not a formal Baseline or business effectiveness result."
+}

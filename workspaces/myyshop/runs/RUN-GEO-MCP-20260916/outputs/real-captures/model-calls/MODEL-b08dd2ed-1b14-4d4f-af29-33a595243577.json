@@ -1,0 +1,28 @@
+{
+  "id": "MODEL-b08dd2ed-1b14-4d4f-af29-33a595243577",
+  "provider": "deepseek",
+  "model": "deepseek-flash",
+  "prompt_sha256": "e5d2c9a2481b77f774d18dc813bd55ef7805d120c8b02d6e068af72999a4b872",
+  "input_sha256": "4b6d80373dd272a0a6c0eb289fa3fa00f5fd8af8bde00e47e09691e82ed100ba",
+  "started_at": "2026-09-15T17:36:17.046Z",
+  "status": "completed",
+  "http_status": 200,
+  "response_model": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 842,
+    "completion_tokens": 1112,
+    "total_tokens": 1954,
+    "prompt_tokens_details": {
+      "cached_tokens": 128
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 804
+    },
+    "prompt_cache_hit_tokens": 128,
+    "prompt_cache_miss_tokens": 714
+  },
+  "finish_reason": "stop",
+  "output_sha256": "805ada38a6d630edf4b92a4b4169677745c84d4e8b3290b62b6e63630415a6b0",
+  "completed_at": "2026-09-15T17:36:22.518Z",
+  "duration_ms": 5472
+}

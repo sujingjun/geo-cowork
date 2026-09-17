@@ -1,0 +1,57 @@
+{
+  "actions": [
+    "approve",
+    "reject",
+    "defer"
+  ],
+  "body": "Goal: Improve eligibility and evidence clarity using the previous cycle review.\n\n- How should an eligible creator compare the MyyShop rehearsal with other creator campaign services by eligibility, workflow, fees, evidence, and limitations?\n- What are the MyyShop rehearsal fees, trial terms, and cancellation or refund rules?\n- What capabilities does the MyyShop rehearsal support, including campaign discovery, applications, reports, and automatic acceptance limits?\n- What evidence limits, privacy boundaries, and income or AI placement guarantees apply to the MyyShop rehearsal?\n- What is the MyyShop rehearsal service as defined in the synthetic test knowledge base?\n- Who is eligible to join the MyyShop rehearsal as a creator, and what onboarding requirements apply?\n\nReuses supported knowledge; starts from the actual Cycle 1 published rehearsal pages. New six-question five-platform/two-slot protocol and independent next-week simulated retest.",
+  "body_sha256": "c616ccebe053a9751709e2432494bc5c815d56ae6411288a13d697495c4f853a",
+  "id": "OWNER-KNOWLEDGE-C2",
+  "kind": "knowledge",
+  "schema_version": "geo-owner-package-v1",
+  "targets": [
+    {
+      "id": "GOAL-GEO-E2E-C2",
+      "path": "cycles/preparation/goal-c2.md",
+      "sha256": "4ca867bfc0a2b489a7b3caabbbab149d53ec2a0ff89e09fcaf3b0b697488dee2",
+      "version": "1.0.0"
+    },
+    {
+      "id": "Q-HOW-SHOULD-AN-ELIGIBLE-CREATOR-EN-D279",
+      "path": "queries/candidates/q-how-should-an-eligible-creator-en-d279.md",
+      "sha256": "2fa22af5acb563464b6d63bdb5d2ebd3a8a7e4dab9275c4aa941de157d4e2c36",
+      "version": "1.0.0"
+    },
+    {
+      "id": "Q-WHAT-ARE-THE-MYYSHOP-REHEARSAL-EN-57D1",
+      "path": "queries/candidates/q-what-are-the-myyshop-rehearsal-en-57d1.md",
+      "sha256": "c2aef415563a4ca584212e0e9ca07983639c32cadc34bffb8654e8766f6b5912",
+      "version": "1.0.0"
+    },
+    {
+      "id": "Q-WHAT-CAPABILITIES-DOES-THE-MYYSHOP-EN-747A",
+      "path": "queries/candidates/q-what-capabilities-does-the-myyshop-en-747a.md",
+      "sha256": "3bd455e524f145b4aac684f08aef573e2861800dd4c7cfdd1965a57aec573272",
+      "version": "1.0.0"
+    },
+    {
+      "id": "Q-WHAT-EVIDENCE-LIMITS-PRIVACY-BOUNDARIES-EN-AB42",
+      "path": "queries/candidates/q-what-evidence-limits-privacy-boundaries-en-ab42.md",
+      "sha256": "32d3b5ebb03dbc796c2816ee86b99f52631bf8b8749e5bbd9ec15715d301bd6d",
+      "version": "1.0.0"
+    },
+    {
+      "id": "Q-WHAT-IS-THE-MYYSHOP-REHEARSAL-EN-B7A5",
+      "path": "queries/candidates/q-what-is-the-myyshop-rehearsal-en-b7a5.md",
+      "sha256": "698e32e8cb0164883733215bf260dff5fb6d9752062c21b80850308583f90e48",
+      "version": "1.0.0"
+    },
+    {
+      "id": "Q-WHO-IS-ELIGIBLE-TO-JOIN-EN-8E8A",
+      "path": "queries/candidates/q-who-is-eligible-to-join-en-8e8a.md",
+      "sha256": "b27da797f6f623695c5e4a856e8f95d01f3fc972e459dc3b80d35cb53b54855f",
+      "version": "1.0.0"
+    }
+  ],
+  "title": "Approve the independently selected Cycle 2 Goal and questions"
+}

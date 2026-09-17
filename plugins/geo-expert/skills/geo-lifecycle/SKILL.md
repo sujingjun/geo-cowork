@@ -5,6 +5,28 @@ description: 在同一线上 Merchant 的 development-test 品牌知识库中编
 
 # geo-lifecycle
 
+## 当前知识驱动入口（Spec 0014）
+
+Owner 维护知识正文、原始材料和可读反馈；Agent 通过以下入口生成内部 ID、计划与状态。当前专题的明确指令优先于历史过程文档。
+
+```bash
+node <plugin-root>/scripts/geo-lifecycle.mjs start --workspace <isolated-workspace>
+node <plugin-root>/scripts/geo-lifecycle.mjs continue --workspace <isolated-workspace>
+node <plugin-root>/scripts/geo-lifecycle.mjs inbox --workspace <isolated-workspace>
+node <plugin-root>/scripts/geo-lifecycle.mjs apply-feedback --workspace <isolated-workspace> --file <owner-feedback.md>
+node <plugin-root>/scripts/geo-lifecycle.mjs report --workspace <isolated-workspace>
+```
+
+默认 seed 是显式 synthetic/test_only 原始业务输入；可通过 `--input` 提供相同业务输入合同。运行产物必须写用户工作区，不能写安装缓存。真实提取默认 DeepSeek，配置从调用环境或显式 `GEO_ENV_FILE` 读取；OpenAI-compatible 支持配置切换，当前 Owner 已免除公司网络网关的真实验证。禁止用 Fake 替代模型成功结果。
+
+新入口生成可读审核包；将 Owner 的原始明确决定输入 `apply-feedback`，由工具生成 reviewed/decided successor。演练驱动器可输入独立 `fixture_human` 反馈，但不能表述为真实 Owner 批准。原始输入生成所有下游工件，不调用预置 gate fixture 证明产品旅程。
+
+`reports/geo-cycle-overview.md` 汇总知识、Query、答案、缺口、建议、反馈、双复测、Analytics 和两轮 Review。模型调用、模拟外部输入、真实采集和真实业务效果分别报告。
+
+## 既有底层合同入口
+
+以下底层接口保留，用于合同测试和诊断；Owner 不需要维护这些内部 plan。
+
 ## 触发场景
 
 - 创建 MyyShop development-test Workspace 与 `test_only` 品牌知识库并冻结 Cycle 输入；
@@ -45,7 +67,7 @@ Merchant/KBASE、CIS、CTR、Cycle、CRV、阶段摘要、trace、errors/warning
 
 - 不从 ID 猜测或创建 M4/M5 gate；
 - 不绕过 Publication、Retest、Analytics 或 Review；
-- synthetic Cycle 不写真实 `workspaces/myyshop`，不联网，不访问账号或凭据；线上 GA4/GSC Observation 走独立只读入口；
+- synthetic Cycle 不写真实 `workspaces/myyshop`；模型请求使用明确配置的真实 provider，其他外部输入仍按具名任务范围操作；线上 GA4/GSC 走独立只读入口；
 - 不把 synthetic completed 表述为真实 Cycle、业务效果或 v1 Release。
 
 ## 失败与停止条件

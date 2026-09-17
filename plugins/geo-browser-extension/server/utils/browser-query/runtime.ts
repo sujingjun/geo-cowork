@@ -14,7 +14,7 @@ const repository = new DrizzleBrowserQueryRepository(db as unknown as BrowserQue
 const service = new BrowserQueryService({
   repository,
   adapterRegistry: browserAdapterRegistry,
-  extractor: createBrowserExtractor(process.env.GEO_BROWSER_EXTRACTOR_MODE)
+  extractor: createBrowserExtractor(process.env.GEO_MODEL_PROVIDER, process.env.GEO_MODEL_NAME)
 })
 const mcpHandler = createBrowserMcpHandler({ service })
 

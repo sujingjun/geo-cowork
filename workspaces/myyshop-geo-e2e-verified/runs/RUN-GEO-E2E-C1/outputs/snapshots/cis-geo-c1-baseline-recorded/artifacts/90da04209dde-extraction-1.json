@@ -1,0 +1,46 @@
+{
+  "audit": {
+    "attempts": [
+      "MODEL-37716102-f4fa-40b7-a640-2db52cff0771"
+    ],
+    "completed_at": "2026-09-15T20:25:54.109Z",
+    "duration_ms": 1096,
+    "extraction_validation": "passed",
+    "finish_reason": "stop",
+    "http_status": 200,
+    "id": "MODEL-37716102-f4fa-40b7-a640-2db52cff0771",
+    "input_sha256": "525f33926b67d973f3acd9843ec64806fe9e0acdfe42b8672bff3777daa694ef",
+    "model": "deepseek-flash",
+    "output_sha256": "0e71abe1962268a715b20ec936cee2a739c353525eb708cc870cd1b988fd29c0",
+    "prompt_sha256": "e5d2c9a2481b77f774d18dc813bd55ef7805d120c8b02d6e068af72999a4b872",
+    "provider": "deepseek",
+    "request_options": {
+      "reasoning_effort": null,
+      "thinking": "disabled"
+    },
+    "response_model": "deepseek-flash",
+    "started_at": "2026-09-15T20:25:53.013Z",
+    "status": "completed",
+    "usage": {
+      "completion_tokens": 101,
+      "prompt_cache_hit_tokens": 512,
+      "prompt_cache_miss_tokens": 249,
+      "prompt_tokens": 761,
+      "prompt_tokens_details": {
+        "cached_tokens": 512
+      },
+      "total_tokens": 862
+    }
+  },
+  "output": {
+    "answer": {
+      "completeness": "partial",
+      "html_structure_summary": "Plain text with two paragraphs separated by a blank line; no HTML elements present.",
+      "refusal": false,
+      "text": "MyyShop rehearsal Wholesale marketplace Guaranteed income for everyone.\n\nSynthetic consumer input for: Does the MyyShop rehearsal guarantee income or AI placement, and how are report data and privacy handled?"
+    },
+    "citations": [],
+    "platform_annotations": [],
+    "warnings": []
+  }
+}

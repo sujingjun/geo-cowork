@@ -5,7 +5,7 @@
   "description": "本地优先的企业品牌 GEO 专家插件与品牌工作区",
   "type": "module",
   "engines": {
-    "node": ">=20"
+    "node": ">=22.14.0"
   },
   "scripts": {
     "test": "node --test",
@@ -25,11 +25,25 @@
     "collect:m4-public": "node plugins/geo-expert/scripts/collect-public-site.mjs",
     "prepare:m4-public-inputs": "node plugins/geo-expert/scripts/prepare-public-site-m4-inputs.mjs",
     "check:docs": "node plugins/geo-expert/scripts/check-doc-links.mjs",
-    "validate:plugin": "node plugins/geo-expert/scripts/validate-plugin.mjs"
+    "validate:plugin": "node plugins/geo-expert/scripts/validate-plugin.mjs",
+    "dev:browser-query": "node plugins/geo-expert/scripts/geo-runtime.mjs browser",
+    "query:portfolio": "node plugins/geo-expert/scripts/query-portfolio.mjs",
+    "collect:playwright": "node plugins/geo-expert/scripts/geo-playwright.mjs",
+    "test:query-inputs": "node --test tests/query-inputs.test.mjs",
+    "demo:geo-e2e": "node plugins/geo-expert/scripts/demo-knowledge-journey.mjs",
+    "test:semantic-quality": "node plugins/geo-expert/scripts/validate-semantic-quality.mjs",
+    "validate:geo-e2e": "node plugins/geo-expert/scripts/validate-knowledge-journey.mjs",
+    "format:geo-e2e": "prettier --single-quote --trailing-comma all --write 'plugins/geo-expert/scripts/lib/{model-client,query-inputs,capture-run,playwright-collector,playwright-mcp-client,owner-feedback,knowledge-workspace,knowledge-markdown,snapshot-support,sampling-matrix,proposal-revision,journey-*}.mjs' 'plugins/geo-expert/scripts/{geo-playwright,geo-runtime,demo-knowledge-journey,validate-semantic-quality,validate-knowledge-journey}.mjs' 'tests/{capture-run,owner-feedback,query-inputs,source-maintenance,snapshot-support,knowledge-markdown,journey-lock}.test.mjs'",
+    "format:check": "prettier --single-quote --trailing-comma all --check 'plugins/geo-expert/scripts/lib/{model-client,query-inputs,capture-run,playwright-collector,playwright-mcp-client,owner-feedback,knowledge-workspace,knowledge-markdown,snapshot-support,sampling-matrix,proposal-revision,journey-*}.mjs' 'plugins/geo-expert/scripts/{geo-playwright,geo-runtime,demo-knowledge-journey,validate-semantic-quality,validate-knowledge-journey}.mjs' 'tests/{capture-run,owner-feedback,query-inputs,source-maintenance,snapshot-support,knowledge-markdown,journey-lock}.test.mjs'"
   },
   "dependencies": {
     "ajv": "8.20.0",
     "google-auth-library": "10.9.1",
     "gray-matter": "4.0.3"
+  },
+  "devDependencies": {
+    "@modelcontextprotocol/sdk": "1.30.0",
+    "@playwright/mcp": "0.0.81",
+    "prettier": "3.6.2"
   }
 }

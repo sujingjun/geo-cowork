@@ -1,0 +1,10 @@
+{
+  "actor": "Independent fixture human (test_only)",
+  "at": "2026-09-30T00:05:00Z",
+  "decision": "approve",
+  "package_id": "OWNER-KNOWLEDGE-C2",
+  "package_sha256": "b4ea8b3c39ca8dc9784f90214b6ba18bf06b1bba72ef10d192d5adab2265e358",
+  "raw_feedback": "包：OWNER-KNOWLEDGE-C2\n校验：b4ea8b3c39ca8dc9784f90214b6ba18bf06b1bba72ef10d192d5adab2265e358\n决定：approve\n决定人：Independent fixture human (test_only)\n时间：2026-09-30T00:05:00Z\n说明：Accept only supported current rehearsal facts and the generated six-question protocol; keep missing/expired evidence unresolved.\n",
+  "reason": "Accept only supported current rehearsal facts and the generated six-question protocol; keep missing/expired evidence unresolved.",
+  "scope": "test_only"
+}

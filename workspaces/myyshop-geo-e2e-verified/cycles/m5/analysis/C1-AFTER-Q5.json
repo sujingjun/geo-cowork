@@ -1,0 +1,458 @@
+{
+  "audit": {
+    "completed_at": "2026-09-15T20:35:52.072Z",
+    "duration_ms": 23483,
+    "finish_reason": "stop",
+    "http_status": 200,
+    "id": "MODEL-f809fd13-4dcf-49f5-8705-9fd415e215e4",
+    "input_sha256": "286ef419ce241afb8f3ea60add841be8daafc4c4cd3ce88557fe7136e2877f34",
+    "model": "deepseek-flash",
+    "output_sha256": "8b645eed00b17ec792a9ae757bf259b8df0a9318bdb4a5f647b76b518dfc0714",
+    "prompt_sha256": "94cb4bcf35cc23090c7271eaeb868a4612f150cd09551c6f5e1a6d6e77a143e1",
+    "provider": "deepseek",
+    "request_options": {
+      "reasoning_effort": "low",
+      "thinking": "enabled"
+    },
+    "response_model": "deepseek-flash",
+    "started_at": "2026-09-15T20:35:28.589Z",
+    "status": "completed",
+    "usage": {
+      "completion_tokens": 6572,
+      "completion_tokens_details": {
+        "reasoning_tokens": 3167
+      },
+      "prompt_cache_hit_tokens": 896,
+      "prompt_cache_miss_tokens": 2486,
+      "prompt_tokens": 3382,
+      "prompt_tokens_details": {
+        "cached_tokens": 896
+      },
+      "total_tokens": 9954
+    }
+  },
+  "output": {
+    "reviews": [
+      {
+        "core": {
+          "citation_quality": "not_applicable",
+          "core_fact_accuracy": "pass",
+          "current_positioning": "pass",
+          "entity_recognition": "pass",
+          "risk_boundary": "pass"
+        },
+        "judgments": [
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-IDENTITY",
+            "quote": "MyyShop rehearsal connects adult creators with simulated brand campaigns.",
+            "reason": "The answer names the subject and identifies its audience, matching the supplied identity claim."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-CAMPAIGNS",
+            "quote": "The rehearsal supports campaign discovery, application and aggregate performance reports.",
+            "reason": "The supported workflow is stated accurately and aligns with the supplied campaign support fact."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-POSITIONING",
+            "quote": "The rehearsal prioritizes transparent campaign requirements over guaranteed earnings.",
+            "reason": "The answer reflects the supplied positioning accurately."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-GUARANTEES",
+            "quote": "The rehearsal cannot guarantee income or placement in an AI answer.",
+            "reason": "The risk boundary against income or placement guarantees matches the supplied guarantee limitation."
+          },
+          {
+            "assessment": "not_applicable",
+            "claim_ref": "CLM-GEO-E2E-ANSWER-DEFINITION",
+            "quote": "Synthetic post-change consumer input for: What is the MyyShop rehearsal service, and who is it designed for?",
+            "reason": "The answer contains no citation markers or source identifiers, so citation quality cannot be evaluated from this text."
+          }
+        ],
+        "sample_ref": "SMP-GEO-C1-AFTER-Q5-CHATGPT-1"
+      },
+      {
+        "core": {
+          "citation_quality": "not_applicable",
+          "core_fact_accuracy": "pass",
+          "current_positioning": "pass",
+          "entity_recognition": "pass",
+          "risk_boundary": "pass"
+        },
+        "judgments": [
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-IDENTITY",
+            "quote": "MyyShop rehearsal connects adult creators with simulated brand campaigns.",
+            "reason": "The answer names the subject and identifies its audience, matching the supplied identity claim."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-CAMPAIGNS",
+            "quote": "The rehearsal supports campaign discovery, application and aggregate performance reports.",
+            "reason": "The supported workflow is stated accurately and aligns with the supplied campaign support fact."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-POSITIONING",
+            "quote": "The rehearsal prioritizes transparent campaign requirements over guaranteed earnings.",
+            "reason": "The answer reflects the supplied positioning accurately."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-GUARANTEES",
+            "quote": "The rehearsal cannot guarantee income or placement in an AI answer.",
+            "reason": "The risk boundary against income or placement guarantees matches the supplied guarantee limitation."
+          },
+          {
+            "assessment": "not_applicable",
+            "claim_ref": "CLM-GEO-E2E-ANSWER-DEFINITION",
+            "quote": "Synthetic post-change consumer input for: What is the MyyShop rehearsal service, and who is it designed for?",
+            "reason": "The answer contains no citation markers or source identifiers, so citation quality cannot be evaluated from this text."
+          }
+        ],
+        "sample_ref": "SMP-GEO-C1-AFTER-Q5-CHATGPT-2"
+      },
+      {
+        "core": {
+          "citation_quality": "not_applicable",
+          "core_fact_accuracy": "pass",
+          "current_positioning": "pass",
+          "entity_recognition": "pass",
+          "risk_boundary": "pass"
+        },
+        "judgments": [
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-IDENTITY",
+            "quote": "MyyShop rehearsal connects adult creators with simulated brand campaigns.",
+            "reason": "The answer names the subject and identifies its audience, matching the supplied identity claim."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-CAMPAIGNS",
+            "quote": "The rehearsal supports campaign discovery, application and aggregate performance reports.",
+            "reason": "The supported workflow is stated accurately and aligns with the supplied campaign support fact."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-POSITIONING",
+            "quote": "The rehearsal prioritizes transparent campaign requirements over guaranteed earnings.",
+            "reason": "The answer reflects the supplied positioning accurately."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-GUARANTEES",
+            "quote": "The rehearsal cannot guarantee income or placement in an AI answer.",
+            "reason": "The risk boundary against income or placement guarantees matches the supplied guarantee limitation."
+          },
+          {
+            "assessment": "not_applicable",
+            "claim_ref": "CLM-GEO-E2E-ANSWER-DEFINITION",
+            "quote": "Synthetic post-change consumer input for: What is the MyyShop rehearsal service, and who is it designed for?",
+            "reason": "The answer contains no citation markers or source identifiers, so citation quality cannot be evaluated from this text."
+          }
+        ],
+        "sample_ref": "SMP-GEO-C1-AFTER-Q5-GEMINI-1"
+      },
+      {
+        "core": {
+          "citation_quality": "not_applicable",
+          "core_fact_accuracy": "pass",
+          "current_positioning": "pass",
+          "entity_recognition": "pass",
+          "risk_boundary": "pass"
+        },
+        "judgments": [
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-IDENTITY",
+            "quote": "MyyShop rehearsal connects adult creators with simulated brand campaigns.",
+            "reason": "The answer names the subject and identifies its audience, matching the supplied identity claim."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-CAMPAIGNS",
+            "quote": "The rehearsal supports campaign discovery, application and aggregate performance reports.",
+            "reason": "The supported workflow is stated accurately and aligns with the supplied campaign support fact."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-POSITIONING",
+            "quote": "The rehearsal prioritizes transparent campaign requirements over guaranteed earnings.",
+            "reason": "The answer reflects the supplied positioning accurately."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-GUARANTEES",
+            "quote": "The rehearsal cannot guarantee income or placement in an AI answer.",
+            "reason": "The risk boundary against income or placement guarantees matches the supplied guarantee limitation."
+          },
+          {
+            "assessment": "not_applicable",
+            "claim_ref": "CLM-GEO-E2E-ANSWER-DEFINITION",
+            "quote": "Synthetic post-change consumer input for: What is the MyyShop rehearsal service, and who is it designed for?",
+            "reason": "The answer contains no citation markers or source identifiers, so citation quality cannot be evaluated from this text."
+          }
+        ],
+        "sample_ref": "SMP-GEO-C1-AFTER-Q5-GEMINI-2"
+      },
+      {
+        "core": {
+          "citation_quality": "not_applicable",
+          "core_fact_accuracy": "pass",
+          "current_positioning": "pass",
+          "entity_recognition": "pass",
+          "risk_boundary": "pass"
+        },
+        "judgments": [
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-IDENTITY",
+            "quote": "MyyShop rehearsal connects adult creators with simulated brand campaigns.",
+            "reason": "The answer names the subject and identifies its audience, matching the supplied identity claim."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-CAMPAIGNS",
+            "quote": "The rehearsal supports campaign discovery, application and aggregate performance reports.",
+            "reason": "The supported workflow is stated accurately and aligns with the supplied campaign support fact."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-POSITIONING",
+            "quote": "The rehearsal prioritizes transparent campaign requirements over guaranteed earnings.",
+            "reason": "The answer reflects the supplied positioning accurately."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-GUARANTEES",
+            "quote": "The rehearsal cannot guarantee income or placement in an AI answer.",
+            "reason": "The risk boundary against income or placement guarantees matches the supplied guarantee limitation."
+          },
+          {
+            "assessment": "not_applicable",
+            "claim_ref": "CLM-GEO-E2E-ANSWER-DEFINITION",
+            "quote": "Synthetic post-change consumer input for: What is the MyyShop rehearsal service, and who is it designed for?",
+            "reason": "The answer contains no citation markers or source identifiers, so citation quality cannot be evaluated from this text."
+          }
+        ],
+        "sample_ref": "SMP-GEO-C1-AFTER-Q5-PERPLEXITY-1"
+      },
+      {
+        "core": {
+          "citation_quality": "not_applicable",
+          "core_fact_accuracy": "pass",
+          "current_positioning": "pass",
+          "entity_recognition": "pass",
+          "risk_boundary": "pass"
+        },
+        "judgments": [
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-IDENTITY",
+            "quote": "MyyShop rehearsal connects adult creators with simulated brand campaigns.",
+            "reason": "The answer names the subject and identifies its audience, matching the supplied identity claim."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-CAMPAIGNS",
+            "quote": "The rehearsal supports campaign discovery, application and aggregate performance reports.",
+            "reason": "The supported workflow is stated accurately and aligns with the supplied campaign support fact."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-POSITIONING",
+            "quote": "The rehearsal prioritizes transparent campaign requirements over guaranteed earnings.",
+            "reason": "The answer reflects the supplied positioning accurately."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-GUARANTEES",
+            "quote": "The rehearsal cannot guarantee income or placement in an AI answer.",
+            "reason": "The risk boundary against income or placement guarantees matches the supplied guarantee limitation."
+          },
+          {
+            "assessment": "not_applicable",
+            "claim_ref": "CLM-GEO-E2E-ANSWER-DEFINITION",
+            "quote": "Synthetic post-change consumer input for: What is the MyyShop rehearsal service, and who is it designed for?",
+            "reason": "The answer contains no citation markers or source identifiers, so citation quality cannot be evaluated from this text."
+          }
+        ],
+        "sample_ref": "SMP-GEO-C1-AFTER-Q5-PERPLEXITY-2"
+      },
+      {
+        "core": {
+          "citation_quality": "not_applicable",
+          "core_fact_accuracy": "pass",
+          "current_positioning": "pass",
+          "entity_recognition": "pass",
+          "risk_boundary": "pass"
+        },
+        "judgments": [
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-IDENTITY",
+            "quote": "MyyShop rehearsal connects adult creators with simulated brand campaigns.",
+            "reason": "The answer names the subject and identifies its audience, matching the supplied identity claim."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-CAMPAIGNS",
+            "quote": "The rehearsal supports campaign discovery, application and aggregate performance reports.",
+            "reason": "The supported workflow is stated accurately and aligns with the supplied campaign support fact."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-POSITIONING",
+            "quote": "The rehearsal prioritizes transparent campaign requirements over guaranteed earnings.",
+            "reason": "The answer reflects the supplied positioning accurately."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-GUARANTEES",
+            "quote": "The rehearsal cannot guarantee income or placement in an AI answer.",
+            "reason": "The risk boundary against income or placement guarantees matches the supplied guarantee limitation."
+          },
+          {
+            "assessment": "not_applicable",
+            "claim_ref": "CLM-GEO-E2E-ANSWER-DEFINITION",
+            "quote": "Synthetic post-change consumer input for: What is the MyyShop rehearsal service, and who is it designed for?",
+            "reason": "The answer contains no citation markers or source identifiers, so citation quality cannot be evaluated from this text."
+          }
+        ],
+        "sample_ref": "SMP-GEO-C1-AFTER-Q5-GOOGLE-AI-1"
+      },
+      {
+        "core": {
+          "citation_quality": "not_applicable",
+          "core_fact_accuracy": "pass",
+          "current_positioning": "pass",
+          "entity_recognition": "pass",
+          "risk_boundary": "pass"
+        },
+        "judgments": [
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-IDENTITY",
+            "quote": "MyyShop rehearsal connects adult creators with simulated brand campaigns.",
+            "reason": "The answer names the subject and identifies its audience, matching the supplied identity claim."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-CAMPAIGNS",
+            "quote": "The rehearsal supports campaign discovery, application and aggregate performance reports.",
+            "reason": "The supported workflow is stated accurately and aligns with the supplied campaign support fact."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-POSITIONING",
+            "quote": "The rehearsal prioritizes transparent campaign requirements over guaranteed earnings.",
+            "reason": "The answer reflects the supplied positioning accurately."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-GUARANTEES",
+            "quote": "The rehearsal cannot guarantee income or placement in an AI answer.",
+            "reason": "The risk boundary against income or placement guarantees matches the supplied guarantee limitation."
+          },
+          {
+            "assessment": "not_applicable",
+            "claim_ref": "CLM-GEO-E2E-ANSWER-DEFINITION",
+            "quote": "Synthetic post-change consumer input for: What is the MyyShop rehearsal service, and who is it designed for?",
+            "reason": "The answer contains no citation markers or source identifiers, so citation quality cannot be evaluated from this text."
+          }
+        ],
+        "sample_ref": "SMP-GEO-C1-AFTER-Q5-GOOGLE-AI-2"
+      },
+      {
+        "core": {
+          "citation_quality": "not_applicable",
+          "core_fact_accuracy": "pass",
+          "current_positioning": "pass",
+          "entity_recognition": "pass",
+          "risk_boundary": "pass"
+        },
+        "judgments": [
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-IDENTITY",
+            "quote": "MyyShop rehearsal connects adult creators with simulated brand campaigns.",
+            "reason": "The answer names the subject and identifies its audience, matching the supplied identity claim."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-CAMPAIGNS",
+            "quote": "The rehearsal supports campaign discovery, application and aggregate performance reports.",
+            "reason": "The supported workflow is stated accurately and aligns with the supplied campaign support fact."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-POSITIONING",
+            "quote": "The rehearsal prioritizes transparent campaign requirements over guaranteed earnings.",
+            "reason": "The answer reflects the supplied positioning accurately."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-GUARANTEES",
+            "quote": "The rehearsal cannot guarantee income or placement in an AI answer.",
+            "reason": "The risk boundary against income or placement guarantees matches the supplied guarantee limitation."
+          },
+          {
+            "assessment": "not_applicable",
+            "claim_ref": "CLM-GEO-E2E-ANSWER-DEFINITION",
+            "quote": "Synthetic post-change consumer input for: What is the MyyShop rehearsal service, and who is it designed for?",
+            "reason": "The answer contains no citation markers or source identifiers, so citation quality cannot be evaluated from this text."
+          }
+        ],
+        "sample_ref": "SMP-GEO-C1-AFTER-Q5-CLAUDE-1"
+      },
+      {
+        "core": {
+          "citation_quality": "not_applicable",
+          "core_fact_accuracy": "pass",
+          "current_positioning": "pass",
+          "entity_recognition": "pass",
+          "risk_boundary": "pass"
+        },
+        "judgments": [
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-IDENTITY",
+            "quote": "MyyShop rehearsal connects adult creators with simulated brand campaigns.",
+            "reason": "The answer names the subject and identifies its audience, matching the supplied identity claim."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-CAMPAIGNS",
+            "quote": "The rehearsal supports campaign discovery, application and aggregate performance reports.",
+            "reason": "The supported workflow is stated accurately and aligns with the supplied campaign support fact."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-POSITIONING",
+            "quote": "The rehearsal prioritizes transparent campaign requirements over guaranteed earnings.",
+            "reason": "The answer reflects the supplied positioning accurately."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-GUARANTEES",
+            "quote": "The rehearsal cannot guarantee income or placement in an AI answer.",
+            "reason": "The risk boundary against income or placement guarantees matches the supplied guarantee limitation."
+          },
+          {
+            "assessment": "not_applicable",
+            "claim_ref": "CLM-GEO-E2E-ANSWER-DEFINITION",
+            "quote": "Synthetic post-change consumer input for: What is the MyyShop rehearsal service, and who is it designed for?",
+            "reason": "The answer contains no citation markers or source identifiers, so citation quality cannot be evaluated from this text."
+          }
+        ],
+        "sample_ref": "SMP-GEO-C1-AFTER-Q5-CLAUDE-2"
+      }
+    ]
+  }
+}

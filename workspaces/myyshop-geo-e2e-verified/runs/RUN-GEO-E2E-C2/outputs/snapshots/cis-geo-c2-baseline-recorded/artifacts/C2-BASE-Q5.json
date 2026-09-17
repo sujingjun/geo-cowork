@@ -1,0 +1,428 @@
+{
+  "audit": {
+    "completed_at": "2026-09-15T20:42:42.785Z",
+    "duration_ms": 26651,
+    "finish_reason": "stop",
+    "http_status": 200,
+    "id": "MODEL-9b254843-9229-40b1-a475-907bb86f9af0",
+    "input_sha256": "dc0152cd86ffc33cdfee6bde5ed06297bccd464edd624972426be26a2c1d41f9",
+    "model": "deepseek-flash",
+    "output_sha256": "64e20423b10567408fc740ad78436d73b52da140e30f511ccbd591746344f6fb",
+    "prompt_sha256": "94cb4bcf35cc23090c7271eaeb868a4612f150cd09551c6f5e1a6d6e77a143e1",
+    "provider": "deepseek",
+    "request_options": {
+      "reasoning_effort": "low",
+      "thinking": "enabled"
+    },
+    "response_model": "deepseek-flash",
+    "started_at": "2026-09-15T20:42:16.134Z",
+    "status": "completed",
+    "usage": {
+      "completion_tokens": 7549,
+      "completion_tokens_details": {
+        "reasoning_tokens": 4239
+      },
+      "prompt_cache_hit_tokens": 640,
+      "prompt_cache_miss_tokens": 1062,
+      "prompt_tokens": 1702,
+      "prompt_tokens_details": {
+        "cached_tokens": 640
+      },
+      "total_tokens": 9251
+    }
+  },
+  "output": {
+    "reviews": [
+      {
+        "core": {
+          "citation_quality": "not_applicable",
+          "core_fact_accuracy": "not_applicable",
+          "current_positioning": "fail",
+          "entity_recognition": "fail",
+          "risk_boundary": "not_applicable"
+        },
+        "judgments": [
+          {
+            "assessment": "fail",
+            "claim_ref": "CLM-GEO-E2E-ELIGIBILITY",
+            "quote": "Rehearsal eligibility FAQ Creator eligibility and evidence FAQ Details will be supplied after the new Goal review.",
+            "reason": "The answer defers eligibility and evidence rather than stating the supplied eligibility fact that the rehearsal is open to adult creators in its simulated US region."
+          },
+          {
+            "assessment": "not_applicable",
+            "claim_ref": "CLM-GEO-E2E-IDENTITY",
+            "quote": "Synthetic consumer input for: What is the MyyShop rehearsal service as defined in the synthetic test knowledge base?",
+            "reason": "This is an echoed prompt line, not a substantive assertion defining the MyyShop rehearsal service."
+          }
+        ],
+        "sample_ref": "SMP-GEO-C2-BASE-Q5-CHATGPT-1"
+      },
+      {
+        "core": {
+          "citation_quality": "not_applicable",
+          "core_fact_accuracy": "pass",
+          "current_positioning": "pass",
+          "entity_recognition": "pass",
+          "risk_boundary": "partial"
+        },
+        "judgments": [
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-IDENTITY",
+            "quote": "MyyShop rehearsal connects adult creators with simulated brand campaigns.",
+            "reason": "Matches the supplied identity claim that MyyShop rehearsal connects adult creators with simulated brand campaigns."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-LEGACY",
+            "quote": "The rehearsal service is not a wholesale marketplace.",
+            "reason": "Matches the supplied legacy claim that the rehearsal service is not a wholesale marketplace."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-POSITIONING",
+            "quote": "The rehearsal prioritizes transparent campaign requirements over guaranteed earnings.",
+            "reason": "Matches the supplied positioning claim about prioritizing transparent campaign requirements over guaranteed earnings."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-NON-GOALS",
+            "quote": "The rehearsal does not provide inventory, logistics or credit.",
+            "reason": "Matches the supplied non-goals claim that the rehearsal does not provide inventory, logistics or credit."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-ELIGIBILITY",
+            "quote": "The rehearsal is open to adult creators in its simulated US region.",
+            "reason": "Matches the supplied eligibility claim that the rehearsal is open to adult creators in its simulated US region."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-ONBOARDING",
+            "quote": "Creators complete a profile and accept individual campaign requirements.",
+            "reason": "Matches the supplied onboarding claim that creators complete a profile and accept individual campaign requirements."
+          },
+          {
+            "assessment": "partial",
+            "claim_ref": "CLM-GEO-E2E-GUARANTEES",
+            "quote": "The rehearsal prioritizes transparent campaign requirements over guaranteed earnings.",
+            "reason": "It implies earnings are not guaranteed but does not explicitly state the supplied limitation that the rehearsal cannot guarantee income or placement in an AI answer."
+          }
+        ],
+        "sample_ref": "SMP-GEO-C2-BASE-Q5-CHATGPT-2"
+      },
+      {
+        "core": {
+          "citation_quality": "not_applicable",
+          "core_fact_accuracy": "not_applicable",
+          "current_positioning": "fail",
+          "entity_recognition": "fail",
+          "risk_boundary": "not_applicable"
+        },
+        "judgments": [
+          {
+            "assessment": "fail",
+            "claim_ref": "CLM-GEO-E2E-ELIGIBILITY",
+            "quote": "Rehearsal eligibility FAQ Creator eligibility and evidence FAQ Details will be supplied after the new Goal review.",
+            "reason": "The answer defers eligibility and evidence rather than stating the supplied eligibility fact that the rehearsal is open to adult creators in its simulated US region."
+          },
+          {
+            "assessment": "not_applicable",
+            "claim_ref": "CLM-GEO-E2E-IDENTITY",
+            "quote": "Synthetic consumer input for: What is the MyyShop rehearsal service as defined in the synthetic test knowledge base?",
+            "reason": "This is an echoed prompt line, not a substantive assertion defining the MyyShop rehearsal service."
+          }
+        ],
+        "sample_ref": "SMP-GEO-C2-BASE-Q5-GEMINI-1"
+      },
+      {
+        "core": {
+          "citation_quality": "not_applicable",
+          "core_fact_accuracy": "pass",
+          "current_positioning": "pass",
+          "entity_recognition": "pass",
+          "risk_boundary": "partial"
+        },
+        "judgments": [
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-IDENTITY",
+            "quote": "MyyShop rehearsal connects adult creators with simulated brand campaigns.",
+            "reason": "Matches the supplied identity claim that MyyShop rehearsal connects adult creators with simulated brand campaigns."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-LEGACY",
+            "quote": "The rehearsal service is not a wholesale marketplace.",
+            "reason": "Matches the supplied legacy claim that the rehearsal service is not a wholesale marketplace."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-POSITIONING",
+            "quote": "The rehearsal prioritizes transparent campaign requirements over guaranteed earnings.",
+            "reason": "Matches the supplied positioning claim about prioritizing transparent campaign requirements over guaranteed earnings."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-NON-GOALS",
+            "quote": "The rehearsal does not provide inventory, logistics or credit.",
+            "reason": "Matches the supplied non-goals claim that the rehearsal does not provide inventory, logistics or credit."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-ELIGIBILITY",
+            "quote": "The rehearsal is open to adult creators in its simulated US region.",
+            "reason": "Matches the supplied eligibility claim that the rehearsal is open to adult creators in its simulated US region."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-ONBOARDING",
+            "quote": "Creators complete a profile and accept individual campaign requirements.",
+            "reason": "Matches the supplied onboarding claim that creators complete a profile and accept individual campaign requirements."
+          },
+          {
+            "assessment": "partial",
+            "claim_ref": "CLM-GEO-E2E-GUARANTEES",
+            "quote": "The rehearsal prioritizes transparent campaign requirements over guaranteed earnings.",
+            "reason": "It implies earnings are not guaranteed but does not explicitly state the supplied limitation that the rehearsal cannot guarantee income or placement in an AI answer."
+          }
+        ],
+        "sample_ref": "SMP-GEO-C2-BASE-Q5-GEMINI-2"
+      },
+      {
+        "core": {
+          "citation_quality": "not_applicable",
+          "core_fact_accuracy": "not_applicable",
+          "current_positioning": "fail",
+          "entity_recognition": "fail",
+          "risk_boundary": "not_applicable"
+        },
+        "judgments": [
+          {
+            "assessment": "fail",
+            "claim_ref": "CLM-GEO-E2E-ELIGIBILITY",
+            "quote": "Rehearsal eligibility FAQ Creator eligibility and evidence FAQ Details will be supplied after the new Goal review.",
+            "reason": "The answer defers eligibility and evidence rather than stating the supplied eligibility fact that the rehearsal is open to adult creators in its simulated US region."
+          },
+          {
+            "assessment": "not_applicable",
+            "claim_ref": "CLM-GEO-E2E-IDENTITY",
+            "quote": "Synthetic consumer input for: What is the MyyShop rehearsal service as defined in the synthetic test knowledge base?",
+            "reason": "This is an echoed prompt line, not a substantive assertion defining the MyyShop rehearsal service."
+          }
+        ],
+        "sample_ref": "SMP-GEO-C2-BASE-Q5-PERPLEXITY-1"
+      },
+      {
+        "core": {
+          "citation_quality": "not_applicable",
+          "core_fact_accuracy": "pass",
+          "current_positioning": "pass",
+          "entity_recognition": "pass",
+          "risk_boundary": "partial"
+        },
+        "judgments": [
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-IDENTITY",
+            "quote": "MyyShop rehearsal connects adult creators with simulated brand campaigns.",
+            "reason": "Matches the supplied identity claim that MyyShop rehearsal connects adult creators with simulated brand campaigns."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-LEGACY",
+            "quote": "The rehearsal service is not a wholesale marketplace.",
+            "reason": "Matches the supplied legacy claim that the rehearsal service is not a wholesale marketplace."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-POSITIONING",
+            "quote": "The rehearsal prioritizes transparent campaign requirements over guaranteed earnings.",
+            "reason": "Matches the supplied positioning claim about prioritizing transparent campaign requirements over guaranteed earnings."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-NON-GOALS",
+            "quote": "The rehearsal does not provide inventory, logistics or credit.",
+            "reason": "Matches the supplied non-goals claim that the rehearsal does not provide inventory, logistics or credit."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-ELIGIBILITY",
+            "quote": "The rehearsal is open to adult creators in its simulated US region.",
+            "reason": "Matches the supplied eligibility claim that the rehearsal is open to adult creators in its simulated US region."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-ONBOARDING",
+            "quote": "Creators complete a profile and accept individual campaign requirements.",
+            "reason": "Matches the supplied onboarding claim that creators complete a profile and accept individual campaign requirements."
+          },
+          {
+            "assessment": "partial",
+            "claim_ref": "CLM-GEO-E2E-GUARANTEES",
+            "quote": "The rehearsal prioritizes transparent campaign requirements over guaranteed earnings.",
+            "reason": "It implies earnings are not guaranteed but does not explicitly state the supplied limitation that the rehearsal cannot guarantee income or placement in an AI answer."
+          }
+        ],
+        "sample_ref": "SMP-GEO-C2-BASE-Q5-PERPLEXITY-2"
+      },
+      {
+        "core": {
+          "citation_quality": "not_applicable",
+          "core_fact_accuracy": "not_applicable",
+          "current_positioning": "fail",
+          "entity_recognition": "fail",
+          "risk_boundary": "not_applicable"
+        },
+        "judgments": [
+          {
+            "assessment": "fail",
+            "claim_ref": "CLM-GEO-E2E-ELIGIBILITY",
+            "quote": "Rehearsal eligibility FAQ Creator eligibility and evidence FAQ Details will be supplied after the new Goal review.",
+            "reason": "The answer defers eligibility and evidence rather than stating the supplied eligibility fact that the rehearsal is open to adult creators in its simulated US region."
+          },
+          {
+            "assessment": "not_applicable",
+            "claim_ref": "CLM-GEO-E2E-IDENTITY",
+            "quote": "Synthetic consumer input for: What is the MyyShop rehearsal service as defined in the synthetic test knowledge base?",
+            "reason": "This is an echoed prompt line, not a substantive assertion defining the MyyShop rehearsal service."
+          }
+        ],
+        "sample_ref": "SMP-GEO-C2-BASE-Q5-GOOGLE-AI-1"
+      },
+      {
+        "core": {
+          "citation_quality": "not_applicable",
+          "core_fact_accuracy": "pass",
+          "current_positioning": "pass",
+          "entity_recognition": "pass",
+          "risk_boundary": "partial"
+        },
+        "judgments": [
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-IDENTITY",
+            "quote": "MyyShop rehearsal connects adult creators with simulated brand campaigns.",
+            "reason": "Matches the supplied identity claim that MyyShop rehearsal connects adult creators with simulated brand campaigns."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-LEGACY",
+            "quote": "The rehearsal service is not a wholesale marketplace.",
+            "reason": "Matches the supplied legacy claim that the rehearsal service is not a wholesale marketplace."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-POSITIONING",
+            "quote": "The rehearsal prioritizes transparent campaign requirements over guaranteed earnings.",
+            "reason": "Matches the supplied positioning claim about prioritizing transparent campaign requirements over guaranteed earnings."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-NON-GOALS",
+            "quote": "The rehearsal does not provide inventory, logistics or credit.",
+            "reason": "Matches the supplied non-goals claim that the rehearsal does not provide inventory, logistics or credit."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-ELIGIBILITY",
+            "quote": "The rehearsal is open to adult creators in its simulated US region.",
+            "reason": "Matches the supplied eligibility claim that the rehearsal is open to adult creators in its simulated US region."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-ONBOARDING",
+            "quote": "Creators complete a profile and accept individual campaign requirements.",
+            "reason": "Matches the supplied onboarding claim that creators complete a profile and accept individual campaign requirements."
+          },
+          {
+            "assessment": "partial",
+            "claim_ref": "CLM-GEO-E2E-GUARANTEES",
+            "quote": "The rehearsal prioritizes transparent campaign requirements over guaranteed earnings.",
+            "reason": "It implies earnings are not guaranteed but does not explicitly state the supplied limitation that the rehearsal cannot guarantee income or placement in an AI answer."
+          }
+        ],
+        "sample_ref": "SMP-GEO-C2-BASE-Q5-GOOGLE-AI-2"
+      },
+      {
+        "core": {
+          "citation_quality": "not_applicable",
+          "core_fact_accuracy": "not_applicable",
+          "current_positioning": "fail",
+          "entity_recognition": "fail",
+          "risk_boundary": "not_applicable"
+        },
+        "judgments": [
+          {
+            "assessment": "fail",
+            "claim_ref": "CLM-GEO-E2E-ELIGIBILITY",
+            "quote": "Rehearsal eligibility FAQ Creator eligibility and evidence FAQ Details will be supplied after the new Goal review.",
+            "reason": "The answer defers eligibility and evidence rather than stating the supplied eligibility fact that the rehearsal is open to adult creators in its simulated US region."
+          },
+          {
+            "assessment": "not_applicable",
+            "claim_ref": "CLM-GEO-E2E-IDENTITY",
+            "quote": "Synthetic consumer input for: What is the MyyShop rehearsal service as defined in the synthetic test knowledge base?",
+            "reason": "This is an echoed prompt line, not a substantive assertion defining the MyyShop rehearsal service."
+          }
+        ],
+        "sample_ref": "SMP-GEO-C2-BASE-Q5-CLAUDE-1"
+      },
+      {
+        "core": {
+          "citation_quality": "not_applicable",
+          "core_fact_accuracy": "pass",
+          "current_positioning": "pass",
+          "entity_recognition": "pass",
+          "risk_boundary": "partial"
+        },
+        "judgments": [
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-IDENTITY",
+            "quote": "MyyShop rehearsal connects adult creators with simulated brand campaigns.",
+            "reason": "Matches the supplied identity claim that MyyShop rehearsal connects adult creators with simulated brand campaigns."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-LEGACY",
+            "quote": "The rehearsal service is not a wholesale marketplace.",
+            "reason": "Matches the supplied legacy claim that the rehearsal service is not a wholesale marketplace."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-POSITIONING",
+            "quote": "The rehearsal prioritizes transparent campaign requirements over guaranteed earnings.",
+            "reason": "Matches the supplied positioning claim about prioritizing transparent campaign requirements over guaranteed earnings."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-NON-GOALS",
+            "quote": "The rehearsal does not provide inventory, logistics or credit.",
+            "reason": "Matches the supplied non-goals claim that the rehearsal does not provide inventory, logistics or credit."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-ELIGIBILITY",
+            "quote": "The rehearsal is open to adult creators in its simulated US region.",
+            "reason": "Matches the supplied eligibility claim that the rehearsal is open to adult creators in its simulated US region."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-ONBOARDING",
+            "quote": "Creators complete a profile and accept individual campaign requirements.",
+            "reason": "Matches the supplied onboarding claim that creators complete a profile and accept individual campaign requirements."
+          },
+          {
+            "assessment": "partial",
+            "claim_ref": "CLM-GEO-E2E-GUARANTEES",
+            "quote": "The rehearsal prioritizes transparent campaign requirements over guaranteed earnings.",
+            "reason": "It implies earnings are not guaranteed but does not explicitly state the supplied limitation that the rehearsal cannot guarantee income or placement in an AI answer."
+          }
+        ],
+        "sample_ref": "SMP-GEO-C2-BASE-Q5-CLAUDE-2"
+      }
+    ]
+  }
+}

@@ -1,0 +1,86 @@
+{
+  "created": [
+    "queries/candidates/q-how-should-i-compare-the-en-5087.md",
+    "queries/candidates/q-what-are-the-myyshop-rehearsal-en-2cc4.md",
+    "queries/candidates/q-what-capabilities-does-the-myyshop-en-3271.md",
+    "queries/candidates/q-what-does-the-myyshop-rehearsal-en-0b93.md",
+    "queries/candidates/q-what-is-the-myyshop-rehearsal-en-1724.md",
+    "queries/candidates/q-who-is-eligible-to-participate-en-b8c2.md"
+  ],
+  "duplicates": [],
+  "goal_ref": "GOAL-GEO-E2E-C2",
+  "input_path": "queries/inputs/c247d5a12766731ade4b4b9f20702071faa68adb5a9a07fcb7ff576d86e4dbec/input.json",
+  "kept": [],
+  "queries": [
+    {
+      "id": "Q-HOW-SHOULD-I-COMPARE-THE-EN-5087",
+      "intent": "comparison",
+      "normalized_text": "how should i compare the myyshop rehearsal with other options using eligibility, supported workflow, fees, evidence, and limitations",
+      "path": "queries/candidates/q-how-should-i-compare-the-en-5087.md",
+      "priority": "P3",
+      "query_text": "How should I compare the MyyShop rehearsal with other options using eligibility, supported workflow, fees, evidence, and limitations?",
+      "source_classes": [
+        "knowledge_generated"
+      ]
+    },
+    {
+      "id": "Q-WHAT-ARE-THE-MYYSHOP-REHEARSAL-EN-2CC4",
+      "intent": "brand_definition",
+      "normalized_text": "what are the myyshop rehearsal fees, trial period, and cancellation or refund rules",
+      "path": "queries/candidates/q-what-are-the-myyshop-rehearsal-en-2cc4.md",
+      "priority": "P3",
+      "query_text": "What are the MyyShop rehearsal fees, trial period, and cancellation or refund rules?",
+      "source_classes": [
+        "knowledge_generated"
+      ]
+    },
+    {
+      "id": "Q-WHAT-CAPABILITIES-DOES-THE-MYYSHOP-EN-3271",
+      "intent": "capability",
+      "normalized_text": "what capabilities does the myyshop rehearsal support for campaign discovery, applications, and performance reports, and what automation is unavailable",
+      "path": "queries/candidates/q-what-capabilities-does-the-myyshop-en-3271.md",
+      "priority": "P3",
+      "query_text": "What capabilities does the MyyShop rehearsal support for campaign discovery, applications, and performance reports, and what automation is unavailable?",
+      "source_classes": [
+        "knowledge_generated"
+      ]
+    },
+    {
+      "id": "Q-WHAT-DOES-THE-MYYSHOP-REHEARSAL-EN-0B93",
+      "intent": "capability",
+      "normalized_text": "what does the myyshop rehearsal not guarantee, and what privacy limits apply to its reports",
+      "path": "queries/candidates/q-what-does-the-myyshop-rehearsal-en-0b93.md",
+      "priority": "P3",
+      "query_text": "What does the MyyShop rehearsal not guarantee, and what privacy limits apply to its reports?",
+      "source_classes": [
+        "knowledge_generated"
+      ]
+    },
+    {
+      "id": "Q-WHAT-IS-THE-MYYSHOP-REHEARSAL-EN-1724",
+      "intent": "brand_definition",
+      "normalized_text": "what is the myyshop rehearsal service according to the synthetic test knowledge",
+      "path": "queries/candidates/q-what-is-the-myyshop-rehearsal-en-1724.md",
+      "priority": "P3",
+      "query_text": "What is the MyyShop rehearsal service according to the synthetic test knowledge?",
+      "source_classes": [
+        "knowledge_generated"
+      ]
+    },
+    {
+      "id": "Q-WHO-IS-ELIGIBLE-TO-PARTICIPATE-EN-B8C2",
+      "intent": "brand_definition",
+      "normalized_text": "who is eligible to participate in the myyshop rehearsal, and what onboarding is required",
+      "path": "queries/candidates/q-who-is-eligible-to-participate-en-b8c2.md",
+      "priority": "P3",
+      "query_text": "Who is eligible to participate in the MyyShop rehearsal, and what onboarding is required?",
+      "source_classes": [
+        "knowledge_generated"
+      ]
+    }
+  ],
+  "run_id": "RUN-QINPUT-C247D5A12766731ADE4B",
+  "source_kind": "knowledge_generated",
+  "source_ref": "SRC-QINPUT-C247D5A12766731ADE4B",
+  "updated": []
+}

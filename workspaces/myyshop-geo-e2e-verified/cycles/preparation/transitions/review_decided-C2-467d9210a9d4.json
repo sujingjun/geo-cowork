@@ -1,0 +1,46 @@
+{
+  "actor": {
+    "decision_ref": "workspace://reviews/decisions/OWNER-C2-CYCLE-REVIEW.json",
+    "kind": "fixture_human"
+  },
+  "cycle_ref": "CYC-GEO-E2E-C2",
+  "expected_cycle_version": "1.0.8",
+  "from_stage": "review_waiting_human",
+  "gate": {
+    "artifact_paths": [
+      {
+        "media_type": "application/json",
+        "path": "execution/contracts/measurement-contract.json",
+        "role": "measurement_contract"
+      },
+      {
+        "media_type": "application/json",
+        "path": "reviews/decisions/OWNER-C2-CYCLE-REVIEW.json",
+        "role": "supporting_artifact"
+      },
+      {
+        "media_type": "application/json",
+        "path": "reviews/packages/OWNER-C2-CYCLE-REVIEW.json",
+        "role": "supporting_artifact"
+      },
+      {
+        "media_type": "text/plain",
+        "path": "reviews/packages/OWNER-C2-CYCLE-REVIEW.md",
+        "role": "supporting_artifact"
+      }
+    ],
+    "source_paths": [
+      "cycles/m6/reviews/crv-geo-c2-decided.md"
+    ]
+  },
+  "gate_snapshot_id": "CIS-GEO-C2-REVIEW-DECIDED",
+  "goal_entry_key": "945ae348a21ac35386c28382edada6d3fa2d9b59e3698d415dab7823d07c1386",
+  "lease": {
+    "now": "2026-10-09T00:00:00.000Z",
+    "owner_id": "knowledge-journey",
+    "ttl_ms": 60000
+  },
+  "operation_id": "CYC-GEO-E2E-C2:review_decided",
+  "to_stage": "review_decided",
+  "transition_id": "CTR-GEO-C2-REVIEW-DECIDED"
+}

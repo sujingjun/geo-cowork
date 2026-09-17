@@ -1,0 +1,357 @@
+{
+  "actions": [
+    "approve",
+    "reject",
+    "defer"
+  ],
+  "body": "Goal: Help an eligible creator understand the rehearsal service, capabilities, limits and commercial rules using supported knowledge.\n\n## Candidate questions\n- Does the MyyShop rehearsal guarantee income or AI placement, and how are report data and privacy handled?\n- How can I compare the MyyShop rehearsal service with other creator campaign services?\n- What are the MyyShop rehearsal fees, trial length, cancellation and refund rules?\n- What capabilities does the MyyShop rehearsal support, and what automation or fulfillment is unavailable?\n- What is the MyyShop rehearsal service, and who is it designed for?\n- Who is eligible to use the MyyShop rehearsal, and what onboarding steps apply?\n\n## Maintenance\n- identity: candidate\n- legacy: candidate\n- positioning: candidate\n- non-goals: candidate\n- eligibility: candidate\n- onboarding: candidate\n- campaigns: candidate\n- automation: candidate\n- fees: candidate\n- refund: candidate\n- privacy: candidate\n- guarantees: candidate\n- case: candidate\n- growth: stale\n- voice: candidate\n- expired: stale\n- answer-definition: candidate\n- comparison: candidate\n\nApproval covers supported facts and this Query selection. Missing or expired evidence remains outside the frozen knowledge slice.",
+  "body_sha256": "76c4705c1f84ebce05b1a4161b99c35796c3cbbe483b570b0cd4cba0690c3584",
+  "id": "OWNER-KNOWLEDGE-C1",
+  "kind": "knowledge",
+  "schema_version": "geo-owner-package-v1",
+  "targets": [
+    {
+      "id": "GOAL-GEO-E2E-C1",
+      "path": "cycles/preparation/goal-c1.md",
+      "sha256": "c053ab4282b8ebbacc71e6ce48001eea49cd12f3aa9501ff7b81df13d9d4f1f9",
+      "version": "1.0.0"
+    },
+    {
+      "id": "DOC-GEO-E2E-IDENTITY",
+      "path": "knowledge/documents/doc-e2e-identity.md",
+      "sha256": "eba62033cddc198fbaa3a513ca49124c95c8b30575d3a31e9b59f4d9104c31f9",
+      "version": "1.0.0"
+    },
+    {
+      "id": "EVD-GEO-E2E-IDENTITY",
+      "path": "evidence/records/evd-e2e-identity.md",
+      "sha256": "45698b2d192ffdeb36c0d9aa6285eb387c7cd1f4120076e8e995a82b41bfc7b4",
+      "version": "1.0.0"
+    },
+    {
+      "id": "CLM-GEO-E2E-IDENTITY",
+      "path": "knowledge/claims/clm-e2e-identity.md",
+      "sha256": "2b8ffa924f83bc1cbe1588f7481a30753ccebec9fd12cb1be1b62c1198144429",
+      "version": "1.0.0"
+    },
+    {
+      "id": "DOC-GEO-E2E-LEGACY",
+      "path": "knowledge/documents/doc-e2e-legacy.md",
+      "sha256": "782cfed62b58adc44dff184d76ecddfbbd5ba395687c5a040decd5580af2a311",
+      "version": "1.0.0"
+    },
+    {
+      "id": "EVD-GEO-E2E-LEGACY",
+      "path": "evidence/records/evd-e2e-legacy.md",
+      "sha256": "22f99ae10d6316f1d0bddc64955f7aa7e68df5fab3983821aff6c9da3218bd16",
+      "version": "1.0.0"
+    },
+    {
+      "id": "CLM-GEO-E2E-LEGACY",
+      "path": "knowledge/claims/clm-e2e-legacy.md",
+      "sha256": "f61df8db31339f6acfe3016f92dbc5233640cfc0597dfbf75b91a40c16d7e688",
+      "version": "1.0.0"
+    },
+    {
+      "id": "DOC-GEO-E2E-POSITIONING",
+      "path": "knowledge/documents/doc-e2e-positioning.md",
+      "sha256": "73d284a967c32aeb3c16c0b09549fe31dd9268daab31c7d99e1b8f4be21d3d07",
+      "version": "1.0.0"
+    },
+    {
+      "id": "EVD-GEO-E2E-POSITIONING",
+      "path": "evidence/records/evd-e2e-positioning.md",
+      "sha256": "9cafbbc6c6866ae6c3f435637074f8041f29e4035598bc12b497ce2fa6d2fd45",
+      "version": "1.0.0"
+    },
+    {
+      "id": "CLM-GEO-E2E-POSITIONING",
+      "path": "knowledge/claims/clm-e2e-positioning.md",
+      "sha256": "75e4ed108a43e8c68f56a7401b51fdeabc31628855bb77e65bc93efebb1e546f",
+      "version": "1.0.0"
+    },
+    {
+      "id": "DOC-GEO-E2E-NON-GOALS",
+      "path": "knowledge/documents/doc-e2e-non-goals.md",
+      "sha256": "296f580c9d945b2ddb63bb1947c02f3893acc0f6647a3dda4ca1d6c6d4844112",
+      "version": "1.0.0"
+    },
+    {
+      "id": "EVD-GEO-E2E-NON-GOALS",
+      "path": "evidence/records/evd-e2e-non-goals.md",
+      "sha256": "3bf61b13f9a1e755a129d666d425c210117511ee75cfd10a2d9ad13baf0957c1",
+      "version": "1.0.0"
+    },
+    {
+      "id": "CLM-GEO-E2E-NON-GOALS",
+      "path": "knowledge/claims/clm-e2e-non-goals.md",
+      "sha256": "77e7537f66d1f1f41fb8d2089ea47152e44b577024efcde33323970c44c84944",
+      "version": "1.0.0"
+    },
+    {
+      "id": "DOC-GEO-E2E-ELIGIBILITY",
+      "path": "knowledge/documents/doc-e2e-eligibility.md",
+      "sha256": "28b1b6b7ae07320b76fbf313ee772db19fa0b11a980679d99b42c29a81716b66",
+      "version": "1.0.0"
+    },
+    {
+      "id": "EVD-GEO-E2E-ELIGIBILITY",
+      "path": "evidence/records/evd-e2e-eligibility.md",
+      "sha256": "99b0b1df4924454586086bf62e5663aa00749b62290ef266f48f1d3515b37dd6",
+      "version": "1.0.0"
+    },
+    {
+      "id": "CLM-GEO-E2E-ELIGIBILITY",
+      "path": "knowledge/claims/clm-e2e-eligibility.md",
+      "sha256": "1019b1763a5eabba31c204a658fb90dce13565d2846376bf5d5754579ef7089b",
+      "version": "1.0.0"
+    },
+    {
+      "id": "DOC-GEO-E2E-ONBOARDING",
+      "path": "knowledge/documents/doc-e2e-onboarding.md",
+      "sha256": "99aa453a4cb7d3783d48b4cada35f314e338222e06d676a94a7da1a8d5c68a7c",
+      "version": "1.0.0"
+    },
+    {
+      "id": "EVD-GEO-E2E-ONBOARDING",
+      "path": "evidence/records/evd-e2e-onboarding.md",
+      "sha256": "88eeff307620b191d3f9dcb6a99a5a4ff042ac2ae9c707322f6a18de37a0024e",
+      "version": "1.0.0"
+    },
+    {
+      "id": "CLM-GEO-E2E-ONBOARDING",
+      "path": "knowledge/claims/clm-e2e-onboarding.md",
+      "sha256": "42cf0665c4b3ebf2cdb122cf6ffc65271a97c3dd42f5f32d4c93fc00dc688142",
+      "version": "1.0.0"
+    },
+    {
+      "id": "DOC-GEO-E2E-CAMPAIGNS",
+      "path": "knowledge/documents/doc-e2e-campaigns.md",
+      "sha256": "edf107b6c2cbf265f38e282c67bc9c95c47747b88122bae1d3fea0a8326e5f74",
+      "version": "1.0.0"
+    },
+    {
+      "id": "EVD-GEO-E2E-CAMPAIGNS",
+      "path": "evidence/records/evd-e2e-campaigns.md",
+      "sha256": "d38f91bb5c22cf25f674a0a48b869cf5dcf96d114b3f614a8e71425b0c40397e",
+      "version": "1.0.0"
+    },
+    {
+      "id": "CLM-GEO-E2E-CAMPAIGNS",
+      "path": "knowledge/claims/clm-e2e-campaigns.md",
+      "sha256": "bea5f902c863c88af38ad476db3a66fe232cd80861290adb005be419cd5b282a",
+      "version": "1.0.0"
+    },
+    {
+      "id": "DOC-GEO-E2E-AUTOMATION",
+      "path": "knowledge/documents/doc-e2e-automation.md",
+      "sha256": "c9b1a541c78abff3a3c8dec54607f55116d0f2c22b57187bc0107d3f611d24ba",
+      "version": "1.0.0"
+    },
+    {
+      "id": "EVD-GEO-E2E-AUTOMATION",
+      "path": "evidence/records/evd-e2e-automation.md",
+      "sha256": "830ae85c86e7a3f093dc69a703636a4af70d12bef7756f095775d540f3c49baf",
+      "version": "1.0.0"
+    },
+    {
+      "id": "CLM-GEO-E2E-AUTOMATION",
+      "path": "knowledge/claims/clm-e2e-automation.md",
+      "sha256": "c5d3e6d27a12c8b1b132f2ac9bbd9e8b3f4b08ccba3c3eef7134b7bc5b040308",
+      "version": "1.0.0"
+    },
+    {
+      "id": "DOC-GEO-E2E-FEES",
+      "path": "knowledge/documents/doc-e2e-fees.md",
+      "sha256": "6fe71bb689a894ced9cdccd2cd6ec077d9cb35a0ed901579d8ef4f8db0ae91df",
+      "version": "1.0.0"
+    },
+    {
+      "id": "EVD-GEO-E2E-FEES",
+      "path": "evidence/records/evd-e2e-fees.md",
+      "sha256": "0d3b9d2b7f97eb28187958c11aff3484387fe6fadb8af57b1abcdb2cc5521df8",
+      "version": "1.0.0"
+    },
+    {
+      "id": "CLM-GEO-E2E-FEES",
+      "path": "knowledge/claims/clm-e2e-fees.md",
+      "sha256": "a47eed34d71586dc3ceb95b9ecfa495719d3a317121743bee20c433058a564fb",
+      "version": "1.0.0"
+    },
+    {
+      "id": "DOC-GEO-E2E-REFUND",
+      "path": "knowledge/documents/doc-e2e-refund.md",
+      "sha256": "26f335743cec657ff6d5d4c13f627319aa438645eb998c44338e697e7c8a8531",
+      "version": "1.0.0"
+    },
+    {
+      "id": "EVD-GEO-E2E-REFUND",
+      "path": "evidence/records/evd-e2e-refund.md",
+      "sha256": "7d77e13c46a394ae4091cba334d2f62df14c56e055f4afbe42be19ef42acb102",
+      "version": "1.0.0"
+    },
+    {
+      "id": "CLM-GEO-E2E-REFUND",
+      "path": "knowledge/claims/clm-e2e-refund.md",
+      "sha256": "0004ec4fd8183010516e369b621bb97f24ca18956676acaecc0bca43536e1b09",
+      "version": "1.0.0"
+    },
+    {
+      "id": "DOC-GEO-E2E-PRIVACY",
+      "path": "knowledge/documents/doc-e2e-privacy.md",
+      "sha256": "4f37dbc34cab929d4b7234c556ccfa677d28b74594d61c3e29223e52c6cd6d4b",
+      "version": "1.0.0"
+    },
+    {
+      "id": "EVD-GEO-E2E-PRIVACY",
+      "path": "evidence/records/evd-e2e-privacy.md",
+      "sha256": "9996e01abdfc7c643b0660892593a83fd61827366b864f837ad4c277fa35e5eb",
+      "version": "1.0.0"
+    },
+    {
+      "id": "CLM-GEO-E2E-PRIVACY",
+      "path": "knowledge/claims/clm-e2e-privacy.md",
+      "sha256": "eecc1c376ff6393591d01248e7d1b2e28943295b5e8e849ef1f44c747d07d608",
+      "version": "1.0.0"
+    },
+    {
+      "id": "DOC-GEO-E2E-GUARANTEES",
+      "path": "knowledge/documents/doc-e2e-guarantees.md",
+      "sha256": "66329056563040f4228f705e814b78aa2d1517a686446acbfab4a4c3b971715f",
+      "version": "1.0.0"
+    },
+    {
+      "id": "EVD-GEO-E2E-GUARANTEES",
+      "path": "evidence/records/evd-e2e-guarantees.md",
+      "sha256": "ee87e2010614a1ce11c29997b15580ca159e8f5d7fc1b38ff86d6297dcdc4279",
+      "version": "1.0.0"
+    },
+    {
+      "id": "CLM-GEO-E2E-GUARANTEES",
+      "path": "knowledge/claims/clm-e2e-guarantees.md",
+      "sha256": "f3c5508f4dbf4bd9ab529d80a6a776a7f7ba7faa4e4fd2bec7554203401523db",
+      "version": "1.0.0"
+    },
+    {
+      "id": "DOC-GEO-E2E-CASE",
+      "path": "knowledge/documents/doc-e2e-case.md",
+      "sha256": "b8a486453230c4dcedade8ed1088e43fe74a98a1e40d18ac0f03475fd7eb5b98",
+      "version": "1.0.0"
+    },
+    {
+      "id": "EVD-GEO-E2E-CASE",
+      "path": "evidence/records/evd-e2e-case.md",
+      "sha256": "770ee0923d0dc68202cc1eef5b383cff7e7a0f39ab6870f9e2c369b221e7cffc",
+      "version": "1.0.0"
+    },
+    {
+      "id": "CLM-GEO-E2E-CASE",
+      "path": "knowledge/claims/clm-e2e-case.md",
+      "sha256": "46f832389724346a9abc6411677cf66a40a9264658f9cb4735744ed07159f678",
+      "version": "1.0.0"
+    },
+    {
+      "id": "DOC-GEO-E2E-GROWTH",
+      "path": "knowledge/documents/doc-e2e-growth.md",
+      "sha256": "a94fefca7edb392ef2b141aeae85f7652bab2d1c768090bc1518e898814209a0",
+      "version": "1.0.0"
+    },
+    {
+      "id": "DOC-GEO-E2E-VOICE",
+      "path": "knowledge/documents/doc-e2e-voice.md",
+      "sha256": "3d640d315a297d88cad94d814c067b5241ff704df0cf6c9b0a4207b732278558",
+      "version": "1.0.0"
+    },
+    {
+      "id": "EVD-GEO-E2E-VOICE",
+      "path": "evidence/records/evd-e2e-voice.md",
+      "sha256": "c8f38a732268fabbd92aa4a52fa43a8a31e9101ae621ef878dd0f2304caa6425",
+      "version": "1.0.0"
+    },
+    {
+      "id": "CLM-GEO-E2E-VOICE",
+      "path": "knowledge/claims/clm-e2e-voice.md",
+      "sha256": "e8233c245fa0580e9d5d06dd4154e3c258a4cddc6d0355ec90f7983a7f7f74dd",
+      "version": "1.0.0"
+    },
+    {
+      "id": "DOC-GEO-E2E-EXPIRED",
+      "path": "knowledge/documents/doc-e2e-expired.md",
+      "sha256": "9f164ce9f73deb243f3579b72ab3fde8c387870817357d0600533b43503529fb",
+      "version": "1.0.0"
+    },
+    {
+      "id": "DOC-GEO-E2E-ANSWER-DEFINITION",
+      "path": "knowledge/documents/doc-e2e-answer-definition.md",
+      "sha256": "4c9b45fc5da8f8070a2148276c84f8343f3a077a679fa78b7e9b5789cff3593a",
+      "version": "1.0.0"
+    },
+    {
+      "id": "EVD-GEO-E2E-ANSWER-DEFINITION",
+      "path": "evidence/records/evd-e2e-answer-definition.md",
+      "sha256": "91618a7596d5971352b58c1428c7fabeb8bc17ed10c1b6500fbab3087cb19e09",
+      "version": "1.0.0"
+    },
+    {
+      "id": "CLM-GEO-E2E-ANSWER-DEFINITION",
+      "path": "knowledge/claims/clm-e2e-answer-definition.md",
+      "sha256": "d673cf2ce23ea8026b308cfacca7d1c338cf6deba2e0d692961e240184aea1ba",
+      "version": "1.0.0"
+    },
+    {
+      "id": "DOC-GEO-E2E-COMPARISON",
+      "path": "knowledge/documents/doc-e2e-comparison.md",
+      "sha256": "f5f35d2a9e183cd5cba8c84df108097e056b64d552f4b88cb58c58df855ff76e",
+      "version": "1.0.0"
+    },
+    {
+      "id": "EVD-GEO-E2E-COMPARISON",
+      "path": "evidence/records/evd-e2e-comparison.md",
+      "sha256": "009a1c5aba74d895982d8dda3924b3840d92122efc9418bc6b085e4a34829634",
+      "version": "1.0.0"
+    },
+    {
+      "id": "CLM-GEO-E2E-COMPARISON",
+      "path": "knowledge/claims/clm-e2e-comparison.md",
+      "sha256": "4a49dbfd637694d0e552914594c65a6bf6065d89a4a542f6cb0addc3ef8d45f6",
+      "version": "1.0.0"
+    },
+    {
+      "id": "Q-DOES-THE-MYYSHOP-REHEARSAL-GUARANTEE-EN-F889",
+      "path": "queries/candidates/q-does-the-myyshop-rehearsal-guarantee-en-f889.md",
+      "sha256": "aa8302eb61ec7410bfc2cbba41dfbf706bab30f13c7803d91e5b9857cbbfa42c",
+      "version": "1.0.0"
+    },
+    {
+      "id": "Q-HOW-CAN-I-COMPARE-THE-EN-B48D",
+      "path": "queries/candidates/q-how-can-i-compare-the-en-b48d.md",
+      "sha256": "6abb159ce29699c2bc9f4f0acf347261d9496fd822fa4e0f4e149cdb5fc737b2",
+      "version": "1.0.0"
+    },
+    {
+      "id": "Q-WHAT-ARE-THE-MYYSHOP-REHEARSAL-EN-3BC4",
+      "path": "queries/candidates/q-what-are-the-myyshop-rehearsal-en-3bc4.md",
+      "sha256": "3bd5ff0037c8e257d38bedd3be7e2d3c7dc0b218c0824bf97609ab5c5ba01213",
+      "version": "1.0.0"
+    },
+    {
+      "id": "Q-WHAT-CAPABILITIES-DOES-THE-MYYSHOP-EN-2DE3",
+      "path": "queries/candidates/q-what-capabilities-does-the-myyshop-en-2de3.md",
+      "sha256": "65028ab061cffd301e130964025f4822aa8a3f015a94efb80d5fe521774b22b9",
+      "version": "1.0.0"
+    },
+    {
+      "id": "Q-WHAT-IS-THE-MYYSHOP-REHEARSAL-EN-2B21",
+      "path": "queries/candidates/q-what-is-the-myyshop-rehearsal-en-2b21.md",
+      "sha256": "110eb7069682d602a3e2f57816f259c90571681c72d2e4122b263cd14f437ca2",
+      "version": "1.0.0"
+    },
+    {
+      "id": "Q-WHO-IS-ELIGIBLE-TO-USE-EN-1531",
+      "path": "queries/candidates/q-who-is-eligible-to-use-en-1531.md",
+      "sha256": "7b942072e4e072a55729a46ddfca68f3c1c5402ca78830b03f1b41a2de73c1b5",
+      "version": "1.0.0"
+    }
+  ],
+  "title": "Review rehearsal knowledge and Query selection"
+}

@@ -1,0 +1,74 @@
+{
+  "schema_version": "geo-engineering-extraction-v1",
+  "capture_sha256": "0b6b90b8ebed613da24df025cb1a2a6695a45a68302287f29dd028844407af3e",
+  "citation_supplement": "perplexity/citations-from-retained-dom.json",
+  "output": {
+    "answer": {
+      "text": "MyyShop is an AI-driven creator-marketing platform that helps social-media creators connect with brands and earn money through collaborations. It describes itself as charging creators no platform commission and uses algorithmic matching to surface relevant opportunities.\nmyyshop\n+1\n\nWhat creators can do\n\nDepending on the campaign, a creator may be able to:\n\nMake sponsored content for a brand.\n\nPromote products on social platforms and receive a fixed payment or performance-based earnings.\n\nJoin affiliate campaigns and earn commission on qualifying sales.\n\nParticipate in TikTok-oriented campaigns, including some that compensate eligible creators based on verified video views.\nfinance.yahoo\n+1\n\nFor example, a beauty creator might receive a brand brief, publish a product video, and be paid either a set campaign fee, a commission on sales, or—in a CPM/view-based campaign—according to approved video performance.\n\nWho is behind it\n\nMyyShop says it is backed by DHgate Group, the cross-border e-commerce company. It originally launched around 2020 as a SaaS platform for store creation and dropshipping, helping merchants source products, manage fulfillment, and sell through channels such as social media. Its current positioning emphasizes creator-brand collaborations and influencer monetization instead.\nfinance.yahoo\n+1\n\nThings to keep in mind\n\nMyyShop is a platform for accessing opportunities, not a guarantee of income. Carefully check each campaign’s deliverables, usage rights, payment terms, required disclosure, eligibility rules, and how/when performance is verified before creating or posting content. Public app reviews include both positive and negative experiences, so it is sensible to document agreements and keep records of submitted work and communications.\napple",
+      "html_structure_summary": "Plain text with paragraph breaks and inline source-label lines (e.g., 'myyshop', 'finance.yahoo', 'apple') followed by '+1' markers; includes section headings 'What creators can do', 'Who is behind it', and 'Things to keep in mind'.",
+      "refusal": false,
+      "completeness": "complete"
+    },
+    "citations": [
+      {
+        "occurrence_ordinal": 1,
+        "url": "https://www.myyshop.com/",
+        "title": "myyshop+1",
+        "context": "MyyShop is an AI-driven creator-marketing platform that helps social-media creators connect with brands and earn money through collaborations. It describes itself as charging creators no platform commission and uses algorithmic matching to surface relevant opportunities.myyshop+1"
+      },
+      {
+        "occurrence_ordinal": 2,
+        "url": "https://finance.yahoo.com/media-advertising/articles/myyshop-launches-paid-every-view-091300863.html",
+        "title": "finance.yahoo+1",
+        "context": "Participate in TikTok-oriented campaigns, including some that compensate eligible creators based on verified video views.finance.yahoo+1"
+      },
+      {
+        "occurrence_ordinal": 3,
+        "url": "https://finance.yahoo.com/media-advertising/articles/myyshop-launches-paid-every-view-091300863.html",
+        "title": "finance.yahoo+1",
+        "context": "MyyShop says it is backed by DHgate Group, the cross-border e-commerce company. It originally launched around 2020 as a SaaS platform for store creation and dropshipping, helping merchants source products, manage fulfillment, and sell through channels such as social media. Its current positioning emphasizes creator-brand collaborations and influencer monetization instead.finance.yahoo+1"
+      },
+      {
+        "occurrence_ordinal": 4,
+        "url": "https://apps.apple.com/us/app/myyshop/id6449818392",
+        "title": "apple",
+        "context": "MyyShop is a platform for accessing opportunities, not a guarantee of income. Carefully check each campaign’s deliverables, usage rights, payment terms, required disclosure, eligibility rules, and how/when performance is verified before creating or posting content. Public app reviews include both positive and negative experiences, so it is sensible to document agreements and keep records of submitted work and communications.apple"
+      }
+    ],
+    "platform_annotations": [],
+    "warnings": []
+  },
+  "audit": {
+    "id": "MODEL-02d8c84e-bfa0-4a6b-8e2e-915cfeb936d0",
+    "provider": "deepseek",
+    "model": "deepseek-flash",
+    "prompt_sha256": "e5d2c9a2481b77f774d18dc813bd55ef7805d120c8b02d6e068af72999a4b872",
+    "input_sha256": "698afed03137e8ba10c261216e868b6ddbc034762292f7e0b9e3a32ecfd5aba4",
+    "started_at": "2026-09-15T20:21:12.334Z",
+    "status": "completed",
+    "request_options": {
+      "thinking": "disabled",
+      "reasoning_effort": null
+    },
+    "http_status": 200,
+    "response_model": "deepseek-flash",
+    "usage": {
+      "prompt_tokens": 1409,
+      "completion_tokens": 837,
+      "total_tokens": 2246,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "prompt_cache_hit_tokens": 0,
+      "prompt_cache_miss_tokens": 1409
+    },
+    "finish_reason": "stop",
+    "output_sha256": "6ed1bee5340ceb0c0e9573c42b64f9c45a9ba62302ba066d82777218e4b99eec",
+    "completed_at": "2026-09-15T20:21:15.952Z",
+    "duration_ms": 3618,
+    "extraction_validation": "passed",
+    "attempts": [
+      "MODEL-02d8c84e-bfa0-4a6b-8e2e-915cfeb936d0"
+    ]
+  }
+}

@@ -6,7 +6,7 @@ import { MemoryBrowserQueryRepository } from './memory-repository'
 import {
   adapterRegistry,
   cycleInput,
-  fakeExtractor,
+  realExtractor,
   registeredTask,
   service
 } from './service-test-fixtures'
@@ -195,11 +195,10 @@ describe('BrowserQueryService', () => {
   it('retains raw capture when extraction output is invalid and retries without a new Query attempt', async () => {
     let valid = false
     const extractor: BrowserExtractor = {
-      ...fakeExtractor(),
+      ...realExtractor(),
       async extract(input) {
-        return valid
-          ? fakeExtractor().extract(input)
-          : { answer: { text: input.answerText } }
+        const output = await realExtractor().extract(input)
+        return valid ? output : { answer: { text: input.answerText } }
       }
     }
     const { subject, task } = await registeredTask(service(extractor))
@@ -338,10 +337,10 @@ describe('BrowserQueryService', () => {
     const repository = new CrashAfterPendingRepository()
     let extractionCalls = 0
     const extractor: BrowserExtractor = {
-      ...fakeExtractor(),
+      ...realExtractor(),
       async extract(input) {
         extractionCalls += 1
-        return fakeExtractor().extract(input)
+        return realExtractor().extract(input)
       }
     }
     const subject = new BrowserQueryService({

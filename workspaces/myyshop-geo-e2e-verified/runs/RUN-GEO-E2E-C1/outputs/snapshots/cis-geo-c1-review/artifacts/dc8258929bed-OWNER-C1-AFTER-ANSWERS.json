@@ -1,0 +1,10 @@
+{
+  "actor": "Independent fixture human (test_only)",
+  "at": "2026-09-24T00:05:00.000Z",
+  "decision": "approve",
+  "package_id": "OWNER-C1-AFTER-ANSWERS",
+  "package_sha256": "9fd4958118008e8d5a06a912f6b178b23c0d2f0441313c1ea087b578f131ff61",
+  "raw_feedback": "包：OWNER-C1-AFTER-ANSWERS\n校验：9fd4958118008e8d5a06a912f6b178b23c0d2f0441313c1ea087b578f131ff61\n决定：approve\n决定人：Independent fixture human (test_only)\n时间：2026-09-24T00:05:00.000Z\n说明：Reviewed the cited raw passages and scoped rehearsal knowledge. Retain uncertainty and adverse results.\n",
+  "reason": "Reviewed the cited raw passages and scoped rehearsal knowledge. Retain uncertainty and adverse results.",
+  "scope": "test_only"
+}

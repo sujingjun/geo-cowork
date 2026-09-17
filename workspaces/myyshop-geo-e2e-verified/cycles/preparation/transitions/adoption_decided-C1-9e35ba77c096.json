@@ -1,0 +1,226 @@
+{
+  "actor": {
+    "decision_ref": "workspace://reviews/decisions/OWNER-C1-ADOPTION.json",
+    "kind": "fixture_human"
+  },
+  "cycle_ref": "CYC-GEO-E2E-C1",
+  "expected_cycle_version": "1.0.2",
+  "from_stage": "diagnosis_ready",
+  "gate": {
+    "artifact_paths": [
+      {
+        "media_type": "application/json",
+        "path": "execution/contracts/measurement-contract.json",
+        "role": "measurement_contract"
+      },
+      {
+        "media_type": "text/plain",
+        "path": "assets/adoptions/adr-geo-c1-official.md",
+        "role": "supporting_artifact"
+      },
+      {
+        "media_type": "application/json",
+        "path": "reviews/decisions/OWNER-C1-ADOPTION.json",
+        "role": "supporting_artifact"
+      },
+      {
+        "media_type": "application/json",
+        "path": "reviews/packages/OWNER-C1-ADOPTION.json",
+        "role": "supporting_artifact"
+      },
+      {
+        "media_type": "text/plain",
+        "path": "reviews/packages/OWNER-C1-ADOPTION.md",
+        "role": "supporting_artifact"
+      },
+      {
+        "media_type": "text/plain",
+        "path": "assets/adoptions/adr-geo-c1-own.md",
+        "role": "supporting_artifact"
+      },
+      {
+        "media_type": "text/plain",
+        "path": "assets/adoptions/adr-geo-c1-third-party.md",
+        "role": "supporting_artifact"
+      },
+      {
+        "media_type": "text/plain",
+        "path": "evidence/snapshots/answer-definition.txt",
+        "role": "supporting_artifact"
+      },
+      {
+        "media_type": "application/json",
+        "path": "reviews/decisions/OWNER-KNOWLEDGE-C1.json",
+        "role": "supporting_artifact"
+      },
+      {
+        "media_type": "application/json",
+        "path": "reviews/packages/OWNER-KNOWLEDGE-C1.json",
+        "role": "supporting_artifact"
+      },
+      {
+        "media_type": "text/plain",
+        "path": "reviews/packages/OWNER-KNOWLEDGE-C1.md",
+        "role": "supporting_artifact"
+      },
+      {
+        "media_type": "text/plain",
+        "path": "evidence/snapshots/automation.txt",
+        "role": "supporting_artifact"
+      },
+      {
+        "media_type": "text/plain",
+        "path": "evidence/snapshots/campaigns.txt",
+        "role": "supporting_artifact"
+      },
+      {
+        "media_type": "text/plain",
+        "path": "evidence/snapshots/case.txt",
+        "role": "supporting_artifact"
+      },
+      {
+        "media_type": "text/plain",
+        "path": "evidence/snapshots/comparison.txt",
+        "role": "supporting_artifact"
+      },
+      {
+        "media_type": "text/plain",
+        "path": "evidence/snapshots/eligibility.txt",
+        "role": "supporting_artifact"
+      },
+      {
+        "media_type": "text/plain",
+        "path": "evidence/snapshots/fees.txt",
+        "role": "supporting_artifact"
+      },
+      {
+        "media_type": "text/plain",
+        "path": "evidence/snapshots/guarantees.txt",
+        "role": "supporting_artifact"
+      },
+      {
+        "media_type": "text/plain",
+        "path": "evidence/snapshots/identity.txt",
+        "role": "supporting_artifact"
+      },
+      {
+        "media_type": "text/plain",
+        "path": "evidence/snapshots/legacy.txt",
+        "role": "supporting_artifact"
+      },
+      {
+        "media_type": "text/plain",
+        "path": "evidence/snapshots/non-goals.txt",
+        "role": "supporting_artifact"
+      },
+      {
+        "media_type": "text/plain",
+        "path": "evidence/snapshots/onboarding.txt",
+        "role": "supporting_artifact"
+      },
+      {
+        "media_type": "text/plain",
+        "path": "evidence/snapshots/positioning.txt",
+        "role": "supporting_artifact"
+      },
+      {
+        "media_type": "text/plain",
+        "path": "evidence/snapshots/privacy.txt",
+        "role": "supporting_artifact"
+      },
+      {
+        "media_type": "text/plain",
+        "path": "evidence/snapshots/refund.txt",
+        "role": "supporting_artifact"
+      },
+      {
+        "media_type": "text/plain",
+        "path": "evidence/snapshots/voice.txt",
+        "role": "supporting_artifact"
+      },
+      {
+        "media_type": "text/plain",
+        "path": "assets/snapshots/C1/BASE/official/html.txt",
+        "role": "supporting_artifact"
+      },
+      {
+        "media_type": "text/plain",
+        "path": "assets/snapshots/C1/BASE/own/html.txt",
+        "role": "supporting_artifact"
+      },
+      {
+        "media_type": "text/plain",
+        "path": "assets/snapshots/C1/BASE/third-party/html.txt",
+        "role": "supporting_artifact"
+      }
+    ],
+    "source_paths": [
+      "assets/adoptions/adr-geo-c1-official-decided.md",
+      "assets/adoptions/adr-geo-c1-own-decided.md",
+      "assets/adoptions/adr-geo-c1-third-party-decided.md",
+      "assets/proposals/prp-geo-c1-official.md",
+      "assets/proposals/prp-geo-c1-own.md",
+      "assets/proposals/prp-geo-c1-third-party.md",
+      "evidence/records/evd-e2e-answer-definition.md",
+      "evidence/records/evd-e2e-automation.md",
+      "evidence/records/evd-e2e-campaigns.md",
+      "evidence/records/evd-e2e-case.md",
+      "evidence/records/evd-e2e-comparison.md",
+      "evidence/records/evd-e2e-eligibility.md",
+      "evidence/records/evd-e2e-fees.md",
+      "evidence/records/evd-e2e-guarantees.md",
+      "evidence/records/evd-e2e-identity.md",
+      "evidence/records/evd-e2e-legacy.md",
+      "evidence/records/evd-e2e-non-goals.md",
+      "evidence/records/evd-e2e-onboarding.md",
+      "evidence/records/evd-e2e-positioning.md",
+      "evidence/records/evd-e2e-privacy.md",
+      "evidence/records/evd-e2e-refund.md",
+      "evidence/records/evd-e2e-voice.md",
+      "evidence/records/evd-geo-site-c1-base-official-canonical.md",
+      "evidence/records/evd-geo-site-c1-base-official-content.md",
+      "evidence/records/evd-geo-site-c1-base-official-crawlability.md",
+      "evidence/records/evd-geo-site-c1-base-official-meta-description-present.md",
+      "evidence/records/evd-geo-site-c1-base-official-schema-syntax.md",
+      "evidence/records/evd-geo-site-c1-base-own-canonical.md",
+      "evidence/records/evd-geo-site-c1-base-own-content.md",
+      "evidence/records/evd-geo-site-c1-base-own-crawlability.md",
+      "evidence/records/evd-geo-site-c1-base-own-meta-description-present.md",
+      "evidence/records/evd-geo-site-c1-base-own-schema-syntax.md",
+      "evidence/records/evd-geo-site-c1-base-third-party-canonical.md",
+      "evidence/records/evd-geo-site-c1-base-third-party-content.md",
+      "evidence/records/evd-geo-site-c1-base-third-party-crawlability.md",
+      "evidence/records/evd-geo-site-c1-base-third-party-meta-description-present.md",
+      "evidence/records/evd-geo-site-c1-base-third-party-schema-syntax.md",
+      "evidence/sources/src-e2e-answer-definition.md",
+      "evidence/sources/src-e2e-automation.md",
+      "evidence/sources/src-e2e-campaigns.md",
+      "evidence/sources/src-e2e-case.md",
+      "evidence/sources/src-e2e-comparison.md",
+      "evidence/sources/src-e2e-eligibility.md",
+      "evidence/sources/src-e2e-fees.md",
+      "evidence/sources/src-e2e-guarantees.md",
+      "evidence/sources/src-e2e-identity.md",
+      "evidence/sources/src-e2e-legacy.md",
+      "evidence/sources/src-e2e-non-goals.md",
+      "evidence/sources/src-e2e-onboarding.md",
+      "evidence/sources/src-e2e-positioning.md",
+      "evidence/sources/src-e2e-privacy.md",
+      "evidence/sources/src-e2e-refund.md",
+      "evidence/sources/src-e2e-voice.md",
+      "evidence/sources/src-geo-site-c1-official.md",
+      "evidence/sources/src-geo-site-c1-own.md",
+      "evidence/sources/src-geo-site-c1-third-party.md"
+    ]
+  },
+  "gate_snapshot_id": "CIS-GEO-C1-ADOPTION-DECIDED",
+  "goal_entry_key": "3aee169d0dfb3f8c89300fe8b010652bb01c06f5e0064021ba8b1ed0f2d2ba6c",
+  "lease": {
+    "now": "2026-09-17T00:00:00.000Z",
+    "owner_id": "knowledge-journey",
+    "ttl_ms": 60000
+  },
+  "operation_id": "CYC-GEO-E2E-C1:adoption_decided",
+  "to_stage": "adoption_decided",
+  "transition_id": "CTR-GEO-C1-ADOPTION-DECIDED"
+}

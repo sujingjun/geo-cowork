@@ -1,0 +1,46 @@
+{
+  "audit": {
+    "attempts": [
+      "MODEL-ab42d097-7bfd-4dad-8525-6630dc92af1e"
+    ],
+    "completed_at": "2026-09-15T18:55:27.358Z",
+    "duration_ms": 1673,
+    "extraction_validation": "passed",
+    "finish_reason": "stop",
+    "http_status": 200,
+    "id": "MODEL-ab42d097-7bfd-4dad-8525-6630dc92af1e",
+    "input_sha256": "f23c70c4fb7c46fab6aacdc3f2357ba1a8a8c35dfeaafac406cd9408e88fc016",
+    "model": "deepseek-flash",
+    "output_sha256": "006006e873a6ac19ea9151ac29f205ce3b771e694c51dd3e351ab0806bd1e8b3",
+    "prompt_sha256": "e5d2c9a2481b77f774d18dc813bd55ef7805d120c8b02d6e068af72999a4b872",
+    "provider": "deepseek",
+    "request_options": {
+      "reasoning_effort": null,
+      "thinking": "disabled"
+    },
+    "response_model": "deepseek-flash",
+    "started_at": "2026-09-15T18:55:25.685Z",
+    "status": "completed",
+    "usage": {
+      "completion_tokens": 158,
+      "prompt_cache_hit_tokens": 640,
+      "prompt_cache_miss_tokens": 234,
+      "prompt_tokens": 874,
+      "prompt_tokens_details": {
+        "cached_tokens": 640
+      },
+      "total_tokens": 1032
+    }
+  },
+  "output": {
+    "answer": {
+      "completeness": "partial",
+      "html_structure_summary": "Plain text with two paragraphs separated by a blank line; no HTML elements present.",
+      "refusal": false,
+      "text": "MyyShop rehearsal connects adult creators with simulated brand campaigns. The rehearsal service is not a wholesale marketplace. The rehearsal prioritizes transparent campaign requirements over guaranteed earnings. The rehearsal does not provide inventory, logistics or credit. The rehearsal is open to adult creators in its simulated US region. Creators complete a profile and accept individual campaign requirements.\n\nSynthetic consumer input for: How should I compare the MyyShop rehearsal with other options using eligibility, supported workflow, fees, evidence, and limitations?"
+    },
+    "citations": [],
+    "platform_annotations": [],
+    "warnings": []
+  }
+}

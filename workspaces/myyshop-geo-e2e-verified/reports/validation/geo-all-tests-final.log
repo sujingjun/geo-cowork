@@ -1,0 +1,1844 @@
+
+> geo-cowork@0.3.0 test
+> node --test
+
+TAP version 13
+# Subtest: 构建 MV3 Side Panel 并通过最小权限连接 loopback 任务服务
+ok 1 - 构建 MV3 Side Panel 并通过最小权限连接 loopback 任务服务
+  ---
+  duration_ms: 81.03375
+  ...
+# Subtest: Service Worker 继续提供活动页上下文
+ok 2 - Service Worker 继续提供活动页上下文
+  ---
+  duration_ms: 96.452458
+  ...
+# Subtest: 自动化 runner 只在 allowed 模式打开新会话、检查登录并回传完整回答 HTML
+ok 3 - 自动化 runner 只在 allowed 模式打开新会话、检查登录并回传完整回答 HTML
+  ---
+  duration_ms: 60.239083
+  ...
+# Subtest: Query Task client 只连接 loopback 并携带临时 token
+ok 4 - Query Task client 只连接 loopback 并携带临时 token
+  ---
+  duration_ms: 18.395625
+  ...
+# Subtest: Query checkpoint survives a fresh store instance without persisting tokens
+ok 5 - Query checkpoint survives a fresh store instance without persisting tokens
+  ---
+  duration_ms: 4.597334
+  ...
+# Subtest: errors after submitted or waiting_response never reopen automatic Query retry
+ok 6 - errors after submitted or waiting_response never reopen automatic Query retry
+  ---
+  duration_ms: 1.276666
+  ...
+# Subtest: GA4/GSC 真实只读结果只生成聚合 Observation metrics
+ok 7 - GA4/GSC 真实只读结果只生成聚合 Observation metrics
+  ---
+  duration_ms: 0.765625
+  ...
+# Subtest: 服务端聚合 JSON/CSV 归一化；PII 与逐请求行失败
+ok 8 - 服务端聚合 JSON/CSV 归一化；PII 与逐请求行失败
+  ---
+  duration_ms: 0.900708
+  ...
+# Subtest: 真实只读结果一次写入 ANO、非因果 BSIG 与未批准 candidate Evidence
+ok 9 - 真实只读结果一次写入 ANO、非因果 BSIG 与未批准 candidate Evidence
+  ---
+  duration_ms: 341.219542
+  ...
+# Subtest: 真实只读 CLI 公开 doctor/dry-run/smoke/collect-observe
+ok 10 - 真实只读 CLI 公开 doctor/dry-run/smoke/collect-observe
+  ---
+  duration_ms: 50.671875
+  ...
+# Subtest: setup 向导包含 ADC 基础 scope、无 TERM 兜底且文档入口无错字
+ok 11 - setup 向导包含 ADC 基础 scope、无 TERM 兜底且文档入口无错字
+  ---
+  duration_ms: 1.462834
+  ...
+# Subtest: dry-run 无凭据无网络地输出获授权请求摘要
+ok 12 - dry-run 无凭据无网络地输出获授权请求摘要
+  ---
+  duration_ms: 47.005584
+  ...
+# Subtest: smoke 缺环境开关时在 ADC 与网络前失败
+ok 13 - smoke 缺环境开关时在 ADC 与网络前失败
+  ---
+  duration_ms: 58.493958
+  ...
+# Subtest: smoke 在 ADC 前拒绝 tmp/geo-analytics Run 目录外输出
+ok 14 - smoke 在 ADC 前拒绝 tmp/geo-analytics Run 目录外输出
+  ---
+  duration_ms: 114.139792
+  ...
+# Subtest: smoke 通过 injected Google seam 顺序读取并只向 stdout 返回脱敏摘要
+ok 15 - smoke 通过 injected Google seam 顺序读取并只向 stdout 返回脱敏摘要
+  ---
+  duration_ms: 26.91775
+  ...
+# Subtest: doctor 只报告本地 ADC 前置，不读取 credential 内容或网络
+ok 16 - doctor 只报告本地 ADC 前置，不读取 credential 内容或网络
+  ---
+  duration_ms: 30.868375
+  ...
+# Subtest: collect-observe 单次执行连接只读采集与受控 materializer
+ok 17 - collect-observe 单次执行连接只读采集与受控 materializer
+  ---
+  duration_ms: 23.444542
+  ...
+# Subtest: approved plan 生成固定 GA4/GSC 只读请求
+ok 18 - approved plan 生成固定 GA4/GSC 只读请求
+  ---
+  duration_ms: 0.840625
+  ...
+# Subtest: preflight 在网络前拒绝 measurement allowlist 外字段
+ok 19 - preflight 在网络前拒绝 measurement allowlist 外字段
+  ---
+  duration_ms: 12.980875
+  ...
+# Subtest: preflight 拒绝授权决定 bytes 漂移
+ok 20 - preflight 拒绝授权决定 bytes 漂移
+  ---
+  duration_ms: 7.988875
+  ...
+# Subtest: preflight 拒绝固定资源、日期、维度或计划 Schema 漂移
+ok 21 - preflight 拒绝固定资源、日期、维度或计划 Schema 漂移
+  ---
+  duration_ms: 8.218666
+  ...
+# Subtest: 两个只读响应被顺序归一化为非因果分析输入
+ok 22 - 两个只读响应被顺序归一化为非因果分析输入
+  ---
+  duration_ms: 1.552083
+  ...
+# Subtest: 归一化拒绝负计数与越界比例
+ok 23 - 归一化拒绝负计数与越界比例
+  ---
+  duration_ms: 0.18175
+  ...
+# Subtest: 平台 threshold、sampling、data loss 与 incomplete metadata 转成质量 warning
+ok 24 - 平台 threshold、sampling、data loss 与 incomplete metadata 转成质量 warning
+  ---
+  duration_ms: 0.250834
+  ...
+# Subtest: Cowork reliably stores raw/extraction before ack and can retry materialization locally
+ok 25 - Cowork reliably stores raw/extraction before ack and can retry materialization locally
+  ---
+  duration_ms: 117.05875
+  ...
+# Subtest: Cycle or Query version drift fails before raw read and acknowledgement
+ok 26 - Cycle or Query version drift fails before raw read and acknowledgement
+  ---
+  duration_ms: 2.010833
+  ...
+# Subtest: a received synthetic Browser intake materializes through the existing M5 Answer Sample contract
+ok 27 - a received synthetic Browser intake materializes through the existing M5 Answer Sample contract
+  ---
+  duration_ms: 315.246916
+  ...
+# Subtest: Query task 持久化失败、重试与完整回答/Citation 回写
+ok 28 - Query task 持久化失败、重试与完整回答/Citation 回写
+  ---
+  duration_ms: 1746.237084
+  ...
+# Subtest: Cycle 与 Query Set 精确绑定不匹配时拒绝创建任务
+ok 29 - Cycle 与 Query Set 精确绑定不匹配时拒绝创建任务
+  ---
+  duration_ms: 442.546459
+  ...
+# Subtest: 同一 attempt 已冻结 success 后不能再记录 system_failure
+ok 30 - 同一 attempt 已冻结 success 后不能再记录 system_failure
+  ---
+  duration_ms: 650.435
+  ...
+# Subtest: challenge 是停止终态且不能作为 system failure 重试
+ok 31 - challenge 是停止终态且不能作为 system failure 重试
+  ---
+  duration_ms: 532.253125
+  ...
+# Subtest: 提交后异常进入 waiting_human，不能直接重试但可人工补录终态
+ok 32 - 提交后异常进入 waiting_human，不能直接重试但可人工补录终态
+  ---
+  duration_ms: 563.241417
+  ...
+# Subtest: 持久 lease 阻止第二个服务进程同时改写 task state
+ok 33 - 持久 lease 阻止第二个服务进程同时改写 task state
+  ---
+  duration_ms: 1808.16975
+  ...
+# Subtest: 已登录不绕过消费者平台 automation policy
+ok 34 - 已登录不绕过消费者平台 automation policy
+  ---
+  duration_ms: 511.553875
+  ...
+# Subtest: 消费者平台 manual assist 可保存人工提供的完整结果
+ok 35 - 消费者平台 manual assist 可保存人工提供的完整结果
+  ---
+  duration_ms: 525.3065
+  ...
+# Subtest: 真实平台 authorization bytes 漂移时在创建 task 前失败
+ok 36 - 真实平台 authorization bytes 漂移时在创建 task 前失败
+  ---
+  duration_ms: 314.171958
+  ...
+# Subtest: loopback HTTP 服务要求临时 token 并恢复任务状态
+ok 37 - loopback HTTP 服务要求临时 token 并恢复任务状态
+  ---
+  duration_ms: 594.021333
+  ...
+# Subtest: 聚合业务文件一次生成 ANO/BSIG/candidate EVD，不生成 approval
+ok 38 - 聚合业务文件一次生成 ANO/BSIG/candidate EVD，不生成 approval
+  ---
+  duration_ms: 334.372417
+  ...
+# Subtest: 缺少真实业务文件只返回 BUSINESS_FILE_NOT_PROVIDED
+ok 39 - 缺少真实业务文件只返回 BUSINESS_FILE_NOT_PROVIDED
+  ---
+  duration_ms: 46.078291
+  ...
+# Subtest: engineering submission is persisted before browser work; rate and duplicate guards survive reload
+ok 40 - engineering submission is persisted before browser work; rate and duplicate guards survive reload
+  ---
+  duration_ms: 17.962625
+  ...
+# Subtest: Markdown 链接检查忽略外链/代码块并报告仓库内缺失目标
+ok 41 - Markdown 链接检查忽略外链/代码块并报告仓库内缺失目标
+  ---
+  duration_ms: 22.279667
+  ...
+# Subtest: single workspace writer rejects competition and recovers a proven dead process
+ok 42 - single workspace writer rejects competition and recovers a proven dead process
+  ---
+  duration_ms: 13.492875
+  ...
+# Subtest: Owner edits business Markdown without internal IDs and original bytes remain available
+ok 43 - Owner edits business Markdown without internal IDs and original bytes remain available
+  ---
+  duration_ms: 8.971125
+  ...
+# Subtest: 单一线上 Merchant + test_only KBASE 初始化，不注册 test_merchant
+ok 44 - 单一线上 Merchant + test_only KBASE 初始化，不注册 test_merchant
+  ---
+  duration_ms: 91.889667
+  ...
+# Subtest: Readiness 只读报告：知识缺席不是 Content Gap，也不创建正式 Cycle
+ok 45 - Readiness 只读报告：知识缺席不是 Content Gap，也不创建正式 Cycle
+  ---
+  duration_ms: 90.307041
+  ...
+# Subtest: knowledge_base_ref 不匹配时 fail loud
+ok 46 - knowledge_base_ref 不匹配时 fail loud
+  ---
+  duration_ms: 43.417042
+  ...
+# Subtest: 真实知识切片 fixture 到位后，同一 create-cycle 无需改代码即可启动 authorized_real
+ok 47 - 真实知识切片 fixture 到位后，同一 create-cycle 无需改代码即可启动 authorized_real
+  ---
+  duration_ms: 561.860458
+  ...
+# Subtest: M2 CLI：index check、Run create 与 legacy import 可从非仓库 cwd 执行
+ok 48 - M2 CLI：index check、Run create 与 legacy import 可从非仓库 cwd 执行
+  ---
+  duration_ms: 1516.782958
+  ...
+# Subtest: indexes 可删除重建且连续构建字节一致，不修改 Markdown
+ok 49 - indexes 可删除重建且连续构建字节一致，不修改 Markdown
+  ---
+  duration_ms: 450.4405
+  ...
+# Subtest: duplicate ID、broken ref、错误 ref 类型均返回路径化诊断
+    # Subtest: duplicate ID
+    ok 1 - duplicate ID
+      ---
+      duration_ms: 104.736333
+      ...
+    # Subtest: broken ref
+    ok 2 - broken ref
+      ---
+      duration_ms: 72.897333
+      ...
+    # Subtest: ref type mismatch
+    ok 3 - ref type mismatch
+      ---
+      duration_ms: 53.226375
+      ...
+    # Subtest: ref version mismatch
+    ok 4 - ref version mismatch
+      ---
+      duration_ms: 47.957833
+      ...
+    1..4
+ok 50 - duplicate ID、broken ref、错误 ref 类型均返回路径化诊断
+  ---
+  duration_ms: 279.769375
+  ...
+# Subtest: 失败构建不改旧 index，并发构建最终 JSON 完整
+ok 51 - 失败构建不改旧 index，并发构建最终 JSON 完整
+  ---
+  duration_ms: 569.405333
+  ...
+# Subtest: legacy knowledge 进入兼容索引，模板与治理文件被排除
+ok 52 - legacy knowledge 进入兼容索引，模板与治理文件被排除
+  ---
+  duration_ms: 133.002292
+  ...
+# Subtest: 业务品牌准备资料包作为规划文档排除，不进入对象索引
+ok 53 - 业务品牌准备资料包作为规划文档排除，不进入对象索引
+  ---
+  duration_ms: 48.802542
+  ...
+# Subtest: 合法公共对象通过 gray-matter 与 Ajv 校验
+ok 54 - 合法公共对象通过 gray-matter 与 Ajv 校验
+  ---
+  duration_ms: 4.260917
+  ...
+# Subtest: M2 最小 Query/Claim 不被 M3 扩展字段反向强制
+ok 55 - M2 最小 Query/Claim 不被 M3 扩展字段反向强制
+  ---
+  duration_ms: 0.900042
+  ...
+# Subtest: 缺少公共字段、未知类型、非法 ID 与时间顺序明确失败
+ok 56 - 缺少公共字段、未知类型、非法 ID 与时间顺序明确失败
+  ---
+  duration_ms: 0.908875
+  ...
+# Subtest: Evidence 必须引用至少一个 Source
+ok 57 - Evidence 必须引用至少一个 Source
+  ---
+  duration_ms: 0.706458
+  ...
+# Subtest: secret marker 失败且诊断不回显 secret
+ok 58 - secret marker 失败且诊断不回显 secret
+  ---
+  duration_ms: 0.325792
+  ...
+# Subtest: Evidence snapshot checksum 正确时通过，错误时失败
+ok 59 - Evidence snapshot checksum 正确时通过，错误时失败
+  ---
+  duration_ms: 31.788
+  ...
+# Subtest: canonical Markdown symlink 被拒绝
+ok 60 - canonical Markdown symlink 被拒绝
+  ---
+  duration_ms: 14.974208
+  ...
+# Subtest: legacy audit 确定性迁移，缺 Evidence 的 Finding 降级且分数不可比较
+ok 61 - legacy audit 确定性迁移，缺 Evidence 的 Finding 降级且分数不可比较
+  ---
+  duration_ms: 152.833166
+  ...
+# Subtest: legacy snapshot checksum 错误时迁移失败且不生成 Finding
+ok 62 - legacy snapshot checksum 错误时迁移失败且不生成 Finding
+  ---
+  duration_ms: 41.76675
+  ...
+# Subtest: Run 拒绝 input refs/version/fingerprint 不一致
+ok 63 - Run 拒绝 input refs/version/fingerprint 不一致
+  ---
+  duration_ms: 43.890083
+  ...
+# Subtest: Run status 与 business result 独立，非法状态转移失败
+ok 64 - Run status 与 business result 独立，非法状态转移失败
+  ---
+  duration_ms: 50.709166
+  ...
+# Subtest: Run artifact create-only，二次写失败且旧字节不变
+ok 65 - Run artifact create-only，二次写失败且旧字节不变
+  ---
+  duration_ms: 40.769125
+  ...
+# Subtest: 输入不变恢复旧 Run；输入变化 supersede 并幂等创建新 Run
+ok 66 - 输入不变恢复旧 Run；输入变化 supersede 并幂等创建新 Run
+  ---
+  duration_ms: 37.506291
+  ...
+# Subtest: 新 Run 已创建但旧 Run 未更新时，重试 supersede 可收敛
+ok 67 - 新 Run 已创建但旧 Run 未更新时，重试 supersede 可收敛
+  ---
+  duration_ms: 35.240417
+  ...
+# Subtest: 并发 workspace init 返回的 ID 全部等于实际落盘身份
+ok 68 - 并发 workspace init 返回的 ID 全部等于实际落盘身份
+  ---
+  duration_ms: 70.015625
+  ...
+# Subtest: artifact 拒绝父目录逃逸与绝对路径
+ok 69 - artifact 拒绝父目录逃逸与绝对路径
+  ---
+  duration_ms: 34.779958
+  ...
+# Subtest: approved Document 只能物化 candidate Claim/Answer Card，非 approved 拒绝
+ok 70 - approved Document 只能物化 candidate Claim/Answer Card，非 approved 拒绝
+  ---
+  duration_ms: 133.133709
+  ...
+# Subtest: assemble 只创建 draft Query Set 与 draft Release，不自动 freeze/publish
+ok 71 - assemble 只创建 draft Query Set 与 draft Release，不自动 freeze/publish
+  ---
+  duration_ms: 223.67025
+  ...
+# Subtest: formal/frozen/published 合成链通过，trace 可达 Source/Evidence/Document
+ok 72 - formal/frozen/published 合成链通过，trace 可达 Source/Evidence/Document
+  ---
+  duration_ms: 321.83025
+  ...
+# Subtest: stale Evidence 只给 warning；重复 formal Query 报错
+ok 73 - stale Evidence 只给 warning；重复 formal Query 报错
+  ---
+  duration_ms: 46.593417
+  ...
+# Subtest: M3 validator 对只有 M2 最小字段的 Query/Claim 报迁移字段缺失
+ok 74 - M3 validator 对只有 M2 最小字段的 Query/Claim 报迁移字段缺失
+  ---
+  duration_ms: 23.829417
+  ...
+# Subtest: propose 拒绝自动批准、重复输出与预检冲突，冲突前不产生半成品
+ok 75 - propose 拒绝自动批准、重复输出与预检冲突，冲突前不产生半成品
+  ---
+  duration_ms: 57.002584
+  ...
+# Subtest: stable ID 已在其他路径存在时，propose 明确冲突
+ok 76 - stable ID 已在其他路径存在时，propose 明确冲突
+  ---
+  duration_ms: 46.00425
+  ...
+# Subtest: M3 新对象的核心集合字段不允许为空
+ok 77 - M3 新对象的核心集合字段不允许为空
+  ---
+  duration_ms: 1.481166
+  ...
+# Subtest: validator 阻止无批准 formal、未批准 Goal 冻结与不完整 published Release
+ok 78 - validator 阻止无批准 formal、未批准 Goal 冻结与不完整 published Release
+  ---
+  duration_ms: 65.169208
+  ...
+# Subtest: assemble 的 M3 profile 拒绝只有 M2 最小字段的 Query 与 Claim
+ok 79 - assemble 的 M3 profile 拒绝只有 M2 最小字段的 Query 与 Claim
+  ---
+  duration_ms: 44.703875
+  ...
+# Subtest: M4 CLI 可从非仓库 cwd 执行 validate 与 site-audit
+ok 80 - M4 CLI 可从非仓库 cwd 执行 validate 与 site-audit
+  ---
+  duration_ms: 1164.519417
+  ...
+# Subtest: multi-goal 同一 Asset 只物化一份 Proposal，重复幂等且 trace 保留 gates
+ok 81 - multi-goal 同一 Asset 只物化一份 Proposal，重复幂等且 trace 保留 gates
+  ---
+  duration_ms: 521.754375
+  ...
+# Subtest: Proposal 冲突在写入前失败，证据不足时风险弱化必填
+ok 82 - Proposal 冲突在写入前失败，证据不足时风险弱化必填
+  ---
+  duration_ms: 150.204542
+  ...
+# Subtest: 同一 Proposal 唯一键并发创建只有一个成功
+ok 83 - 同一 Proposal 唯一键并发创建只有一个成功
+  ---
+  duration_ms: 258.657583
+  ...
+# Subtest: Adoption 与 Publication Tool 只创建 draft template
+ok 84 - Adoption 与 Publication Tool 只创建 draft template
+  ---
+  duration_ms: 194.388791
+  ...
+# Subtest: Technical Retest 需要 Publication；development fixture 例外并保留旧字节
+ok 85 - Technical Retest 需要 Publication；development fixture 例外并保留旧字节
+  ---
+  duration_ms: 545.543875
+  ...
+# Subtest: 合成全链分离 Gap、Proposal、Adoption、Publication 与 Retest gate
+ok 86 - 合成全链分离 Gap、Proposal、Adoption、Publication 与 Retest gate
+  ---
+  duration_ms: 492.249333
+  ...
+# Subtest: Owner modify produces an immutable draft successor and a new review package without adoption
+ok 87 - Owner modify produces an immutable draft successor and a new review package without adoption
+  ---
+  duration_ms: 319.771083
+  ...
+# Subtest: public collector 保存 raw、脱敏 metadata、SHA 与稳定 summary，重复执行不联网
+ok 88 - public collector 保存 raw、脱敏 metadata、SHA 与稳定 summary，重复执行不联网
+  ---
+  duration_ms: 104.695666
+  ...
+# Subtest: public collector 拒绝非 allowlist 与跨源重定向且不写 raw
+ok 89 - public collector 拒绝非 allowlist 与跨源重定向且不写 raw
+  ---
+  duration_ms: 25.707
+  ...
+# Subtest: public collector 在响应过大时停止且不留下半成品
+ok 90 - public collector 在响应过大时停止且不留下半成品
+  ---
+  duration_ms: 36.208333
+  ...
+# Subtest: public collector 对超时最多重试两次并返回稳定错误码
+ok 91 - public collector 对超时最多重试两次并返回稳定错误码
+  ---
+  duration_ms: 4059.739209
+  ...
+# Subtest: public collector 发现 body/metadata 半成品时显式冲突且不联网
+ok 92 - public collector 发现 body/metadata 半成品时显式冲突且不联网
+  ---
+  duration_ms: 21.401375
+  ...
+# Subtest: public collector CLI 可从非仓库 cwd 执行并输出结构化摘要
+ok 93 - public collector CLI 可从非仓库 cwd 执行并输出结构化摘要
+  ---
+  duration_ms: 119.7035
+  ...
+# Subtest: collection summary 确定性生成可执行 Site/Research manifest 与 plan
+ok 94 - collection summary 确定性生成可执行 Site/Research manifest 与 plan
+  ---
+  duration_ms: 817.285375
+  ...
+# Subtest: M4 新类型注册，未知字段失败，M2 最小对象保持兼容
+ok 95 - M4 新类型注册，未知字段失败，M2 最小对象保持兼容
+  ---
+  duration_ms: 4.299
+  ...
+# Subtest: M4 profile 区分 Content/Evidence/Product Gap 与人工门
+ok 96 - M4 profile 区分 Content/Evidence/Product Gap 与人工门
+  ---
+  duration_ms: 258.162042
+  ...
+# Subtest: M4 profile 拒绝越过目标 Asset/KR 的 Content Gap 与错误 Evidence Scope
+ok 97 - M4 profile 拒绝越过目标 Asset/KR 的 Content Gap 与错误 Evidence Scope
+  ---
+  duration_ms: 52.860292
+  ...
+# Subtest: Proposal profile 校验 body hash、section、风险与人工对象
+ok 98 - Proposal profile 校验 body hash、section、风险与人工对象
+  ---
+  duration_ms: 233.445417
+  ...
+# Subtest: M4 index 新增三类 index 并保留精确版本校验
+ok 99 - M4 index 新增三类 index 并保留精确版本校验
+  ---
+  duration_ms: 219.280083
+  ...
+# Subtest: site detector 九项确定、无综合分且不访问网络
+ok 100 - site detector 九项确定、无综合分且不访问网络
+  ---
+  duration_ms: 158.460583
+  ...
+# Subtest: site detector 九项逐项覆盖 fail，robots 按最长匹配 Allow/Disallow 判定
+ok 101 - site detector 九项逐项覆盖 fail，robots 按最长匹配 Allow/Disallow 判定
+  ---
+  duration_ms: 570.115209
+  ...
+# Subtest: site audit 失败项创建 Evidence/Finding/Run，checksum 冲突前无写入
+ok 102 - site audit 失败项创建 Evidence/Finding/Run，checksum 冲突前无写入
+  ---
+  duration_ms: 448.569708
+  ...
+# Subtest: site metadata detector Evidence 引用各自 snapshot 与 metadata scope
+ok 103 - site metadata detector Evidence 引用各自 snapshot 与 metadata scope
+  ---
+  duration_ms: 96.14325
+  ...
+# Subtest: captured 页面缺少 detector snapshot 时持久化为 unverifiable scope
+ok 104 - captured 页面缺少 detector snapshot 时持久化为 unverifiable scope
+  ---
+  duration_ms: 120.461
+  ...
+# Subtest: blocked/unverifiable snapshot 只证明采集失败
+ok 105 - blocked/unverifiable snapshot 只证明采集失败
+  ---
+  duration_ms: 161.221584
+  ...
+# Subtest: research access、原文、独立支持与 confidence 分离并保留 warning
+ok 106 - research access、原文、独立支持与 confidence 分离并保留 warning
+  ---
+  duration_ms: 71.386292
+  ...
+# Subtest: research 拒绝把 blocked snapshot 标为已取得目标原文
+ok 107 - research 拒绝把 blocked snapshot 标为已取得目标原文
+  ---
+  duration_ms: 33.259042
+  ...
+# Subtest: Citation URL 规范化保留 path/query 并处理 IDN、默认端口、fragment 与 www
+ok 108 - Citation URL 规范化保留 path/query 并处理 IDN、默认端口、fragment 与 www
+  ---
+  duration_ms: 0.834917
+  ...
+# Subtest: Citation/Source 双向 materialization 可从半成品恢复且拒绝无观测候选
+ok 109 - Citation/Source 双向 materialization 可从半成品恢复且拒绝无观测候选
+  ---
+  duration_ms: 353.4615
+  ...
+# Subtest: Source Classification 与 Claim Support 独立，外部榜单入口显式禁止
+ok 110 - Source Classification 与 Claim Support 独立，外部榜单入口显式禁止
+  ---
+  duration_ms: 678.760083
+  ...
+# Subtest: 后续 Citation 复用既有 Source，不改写首次 discovery 字节
+ok 111 - 后续 Citation 复用既有 Source，不改写首次 discovery 字节
+  ---
+  duration_ms: 314.194667
+  ...
+# Subtest: Source 分类队列在 100 个唯一 Source 时才进入 batch_ready
+ok 112 - Source 分类队列在 100 个唯一 Source 时才进入 batch_ready
+  ---
+  duration_ms: 0.308875
+  ...
+# Subtest: M5 CLI 从非仓库 cwd 以 no-network recorded Fixture 跑通全链
+ok 113 - M5 CLI 从非仓库 cwd 以 no-network recorded Fixture 跑通全链
+  ---
+  duration_ms: 2905.643959
+  ...
+# Subtest: M5 CLI 不提供外部榜单 import 或真实 collect 绕过入口
+ok 114 - M5 CLI 不提供外部榜单 import 或真实 collect 绕过入口
+  ---
+  duration_ms: 905.110666
+  ...
+# Subtest: M5 CLI 可从非仓库 cwd 完成两槽 manual baseline、candidate Review 与 partial Aggregation
+ok 115 - M5 CLI 可从非仓库 cwd 完成两槽 manual baseline、candidate Review 与 partial Aggregation
+  ---
+  duration_ms: 4652.760167
+  ...
+# Subtest: manual exploratory Sample 落盘 raw/Citation/Source/classification 且不保存账号标识
+ok 116 - manual exploratory Sample 落盘 raw/Citation/Source/classification 且不保存账号标识
+  ---
+  duration_ms: 474.967834
+  ...
+# Subtest: manual import 拒绝答案中的账号邮箱并在写入前失败
+ok 117 - manual import 拒绝答案中的账号邮箱并在写入前失败
+  ---
+  duration_ms: 75.02275
+  ...
+# Subtest: manual import 同字节重试幂等，不同字节冲突且旧 raw 不变
+ok 118 - manual import 同字节重试幂等，不同字节冲突且旧 raw 不变
+  ---
+  duration_ms: 458.684125
+  ...
+# Subtest: manual materializer 拒绝 Perplexity 页面采集但允许用户导出文件
+ok 119 - manual materializer 拒绝 Perplexity 页面采集但允许用户导出文件
+  ---
+  duration_ms: 305.582416
+  ...
+# Subtest: manual baseline v2 固定两个独立 slot，并在第二槽前保持 waiting_human
+ok 120 - manual baseline v2 固定两个独立 slot，并在第二槽前保持 waiting_human
+  ---
+  duration_ms: 532.4465
+  ...
+# Subtest: 五个平台 adapter 分别冻结入口、版本、artifact 与条款状态
+ok 121 - 五个平台 adapter 分别冻结入口、版本、artifact 与条款状态
+  ---
+  duration_ms: 0.735625
+  ...
+# Subtest: 五个平台统一允许 GEO Browser Extension manual assist 人工路径
+ok 122 - 五个平台统一允许 GEO Browser Extension manual assist 人工路径
+  ---
+  duration_ms: 0.099
+  ...
+# Subtest: adapter 不再以 written permission ref 作为运行时硬门
+ok 123 - adapter 不再以 written permission ref 作为运行时硬门
+  ---
+  duration_ms: 0.0645
+  ...
+# Subtest: 五个平台仍在启动 Playwright 前执行平台 Terms guard
+ok 124 - 五个平台仍在启动 Playwright 前执行平台 Terms guard
+  ---
+  duration_ms: 1.011792
+  ...
+# Subtest: 未知平台不回退到通用 URL adapter
+ok 125 - 未知平台不回退到通用 URL adapter
+  ---
+  duration_ms: 0.124625
+  ...
+# Subtest: Playwright runtime 必须匹配批准的 exact version
+ok 126 - Playwright runtime 必须匹配批准的 exact version
+  ---
+  duration_ms: 0.546791
+  ...
+# Subtest: base 每 attempt 使用新 context、无 storageState、守住 allowlist 并关闭资源
+ok 127 - base 每 attempt 使用新 context、无 storageState、守住 allowlist 并关闭资源
+  ---
+  duration_ms: 2.361458
+  ...
+# Subtest: base 在浏览器启动前拒绝越过入口 allowlist
+ok 128 - base 在浏览器启动前拒绝越过入口 allowlist
+  ---
+  duration_ms: 0.243291
+  ...
+# Subtest: base 在浏览器启动前拒绝超出 adapter 的 artifact 授权
+ok 129 - base 在浏览器启动前拒绝超出 adapter 的 artifact 授权
+  ---
+  duration_ms: 0.12875
+  ...
+# Subtest: 同一 raw 可产生新 Rubric Review，旧 raw 与 Review 字节不变
+ok 130 - 同一 raw 可产生新 Rubric Review，旧 raw 与 Review 字节不变
+  ---
+  duration_ms: 636.238
+  ...
+# Subtest: 五项指标、状态计数和零分母按手算 Fixture 确定
+ok 131 - 五项指标、状态计数和零分母按手算 Fixture 确定
+  ---
+  duration_ms: 645.634416
+  ...
+# Subtest: comparability 不把 unknown 当通配符，硬差异为 false
+ok 132 - comparability 不把 unknown 当通配符，硬差异为 false
+  ---
+  duration_ms: 0.359875
+  ...
+# Subtest: 无 Citation 使用 null + reason，Source Volatility 按 total variation 计算
+ok 133 - 无 Citation 使用 null + reason，Source Volatility 按 total variation 计算
+  ---
+  duration_ms: 297.960416
+  ...
+# Subtest: 100 Source 前允许两槽聚合保留分类指标为 partial/unknown
+ok 134 - 100 Source 前允许两槽聚合保留分类指标为 partial/unknown
+  ---
+  duration_ms: 589.442
+  ...
+# Subtest: M5 lease 拒绝双 owner，过期后可接管并保留 revision
+ok 135 - M5 lease 拒绝双 owner，过期后可接管并保留 revision
+  ---
+  duration_ms: 96.02075
+  ...
+# Subtest: query_submitted 后终态未知必须 waiting_human，不自动重复提交
+ok 136 - query_submitted 后终态未知必须 waiting_human，不自动重复提交
+  ---
+  duration_ms: 94.337625
+  ...
+# Subtest: recorded Fixture 保留两个 slot、终态与 create-only raw checksum
+ok 137 - recorded Fixture 保留两个 slot、终态与 create-only raw checksum
+  ---
+  duration_ms: 842.84525
+  ...
+# Subtest: Sample outcome 与 artifact 门拒绝缺 answer、日志及敏感输入
+ok 138 - Sample outcome 与 artifact 门拒绝缺 answer、日志及敏感输入
+  ---
+  duration_ms: 280.20225
+  ...
+# Subtest: no_result、challenge、cancelled 与 system_failure 均作为独立终态落盘
+ok 139 - no_result、challenge、cancelled 与 system_failure 均作为独立终态落盘
+  ---
+  duration_ms: 346.576917
+  ...
+# Subtest: cancelled Sample 缺少取消来源与已完成步骤时拒绝
+ok 140 - cancelled Sample 缺少取消来源与已完成步骤时拒绝
+  ---
+  duration_ms: 66.472458
+  ...
+# Subtest: system_failure 可用递增 attempt 重试，旧 attempt 保留
+ok 141 - system_failure 可用递增 attempt 重试，旧 attempt 保留
+  ---
+  duration_ms: 112.971
+  ...
+# Subtest: M5 注册七类对象且不反向破坏 M2 Source
+ok 142 - M5 注册七类对象且不反向破坏 M2 Source
+  ---
+  duration_ms: 3.534958
+  ...
+# Subtest: Collector Profile fingerprint、frozen approval 与 unknown 规则可复验
+ok 143 - Collector Profile fingerprint、frozen approval 与 unknown 规则可复验
+  ---
+  duration_ms: 41.941542
+  ...
+# Subtest: M5 全链对象生成七类 index，workspace profile 无错误
+ok 144 - M5 全链对象生成七类 index，workspace profile 无错误
+  ---
+  duration_ms: 768.613083
+  ...
+# Subtest: P0: Analytics scalar values 中的 secret、phone、IP 必须按 policy fail closed
+ok 145 - P0: Analytics scalar values 中的 secret、phone、IP 必须按 policy fail closed
+  ---
+  duration_ms: 54.849042
+  ...
+# Subtest: P0: 未被 freeze CIS pin 的弱 policy 不得写 raw 或 ANO
+ok 146 - P0: 未被 freeze CIS pin 的弱 policy 不得写 raw 或 ANO
+  ---
+  duration_ms: 130.201167
+  ...
+# Subtest: P0: measurement contract 未声明的 metric 必须在 raw 写入前拒绝
+ok 147 - P0: measurement contract 未声明的 metric 必须在 raw 写入前拒绝
+  ---
+  duration_ms: 131.756583
+  ...
+# Subtest: P0: unrelated negative metric 不得覆盖 rule 的 numerator/denominator
+ok 148 - P0: unrelated negative metric 不得覆盖 rule 的 numerator/denominator
+  ---
+  duration_ms: 0.328833
+  ...
+# Subtest: P0: 所有 Observation versions 均须检查 status/scope/Goal，不得只消费第一项
+ok 149 - P0: 所有 Observation versions 均须检查 status/scope/Goal，不得只消费第一项
+  ---
+  duration_ms: 351.733
+  ...
+# Subtest: P0: raw checksum、time window 与 Goal/Cycle 漂移必须阻止 Signal
+ok 150 - P0: raw checksum、time window 与 Goal/Cycle 漂移必须阻止 Signal
+  ---
+  duration_ms: 342.533833
+  ...
+# Subtest: P0: BSIG 永远不能作为 Observation materialize Evidence
+ok 151 - P0: BSIG 永远不能作为 Observation materialize Evidence
+  ---
+  duration_ms: 108.186458
+  ...
+# Subtest: P0: superseded/cross-Goal Observation 与缺 Owner/Source/Claim closure 不得物化 Evidence
+ok 152 - P0: superseded/cross-Goal Observation 与缺 Owner/Source/Claim closure 不得物化 Evidence
+  ---
+  duration_ms: 328.105791
+  ...
+# Subtest: Analytics fixtures 覆盖 signal、no-signal、partial、zero denominator、negative 与 PII
+ok 153 - Analytics fixtures 覆盖 signal、no-signal、partial、zero denominator、negative 与 PII
+  ---
+  duration_ms: 3.113209
+  ...
+# Subtest: fixture policy 允许聚合字段，拒绝 nested PII、secret marker、未知字段和不可扫描 binary
+ok 154 - fixture policy 允许聚合字段，拒绝 nested PII、secret marker、未知字段和不可扫描 binary
+  ---
+  duration_ms: 70.752417
+  ...
+# Subtest: ingest-fixture 只创建 causal_claim:false ANO，raw artifact create-only 且 partial/unavailable 明示
+ok 155 - ingest-fixture 只创建 causal_claim:false ANO，raw artifact create-only 且 partial/unavailable 明示
+  ---
+  duration_ms: 515.237375
+  ...
+# Subtest: Business Signal 对 signal/no_signal/insufficient_data/negative 使用确定性 denominator 语义
+ok 156 - Business Signal 对 signal/no_signal/insufficient_data/negative 使用确定性 denominator 语义
+  ---
+  duration_ms: 5.035
+  ...
+# Subtest: compute-signals version-pin ANO/measurement/rule，规则漂移不覆盖旧 BSIG
+ok 157 - compute-signals version-pin ANO/measurement/rule，规则漂移不覆盖旧 BSIG
+  ---
+  duration_ms: 479.24075
+  ...
+# Subtest: ANO/BSIG 永远不能进入 claim.evidence_refs 或被当作 Evidence
+ok 158 - ANO/BSIG 永远不能进入 claim.evidence_refs 或被当作 Evidence
+  ---
+  duration_ms: 0.231167
+  ...
+# Subtest: Observation → Evidence 使用独立新 EVD、初始 candidate、精确版本与 fixture approval 分离
+ok 159 - Observation → Evidence 使用独立新 EVD、初始 candidate、精确版本与 fixture approval 分离
+  ---
+  duration_ms: 475.751459
+  ...
+# Subtest: CLI fixture plan 冻结 approved commands、独立身份与 synthetic completion scope
+ok 160 - CLI fixture plan 冻结 approved commands、独立身份与 synthetic completion scope
+  ---
+  duration_ms: 3.074542
+  ...
+# Subtest: M6 公开 entry scripts 与两份 Skill 必须存在
+ok 161 - M6 公开 entry scripts 与两份 Skill 必须存在
+  ---
+  duration_ms: 0.402917
+  ...
+# Subtest: CLI 从非仓库 cwd 支持 lifecycle/analytics approved command surface
+ok 162 - CLI 从非仓库 cwd 支持 lifecycle/analytics approved command surface
+  ---
+  duration_ms: 741.947333
+  ...
+# Subtest: CLI 参数/合同错误输出单个结构化 JSON，exit 1/2/3 分离
+ok 163 - CLI 参数/合同错误输出单个结构化 JSON，exit 1/2/3 分离
+  ---
+  duration_ms: 1516.323083
+  ...
+# Subtest: prepare-development-workspace 对空目录建立 MyyShop Merchant + test KBASE，重复幂等
+ok 164 - prepare-development-workspace 对空目录建立 MyyShop Merchant + test KBASE，重复幂等
+  ---
+  duration_ms: 1564.888917
+  ...
+# Subtest: 所有 M6 CLI 在 network-disabled 环境运行且不得尝试 fetch fallback
+ok 165 - 所有 M6 CLI 在 network-disabled 环境运行且不得尝试 fetch fallback
+  ---
+  duration_ms: 1036.2555
+  ...
+# Subtest: 真实 MyyShop write preflight exit 1 且 workspace identity bytes 不变
+ok 166 - 真实 MyyShop write preflight exit 1 且 workspace identity bytes 不变
+  ---
+  duration_ms: 965.113292
+  ...
+# Subtest: Cycle 1 E2E plan 只有一个 Goal、九个显式 gate，Analytics/Review 不合并
+ok 167 - Cycle 1 E2E plan 只有一个 Goal、九个显式 gate，Analytics/Review 不合并
+  ---
+  duration_ms: 312.995667
+  ...
+# Subtest: 公开 CLI/API 跑通单 Goal synthetic Cycle 1，fresh process 决定 Review，trace completed
+ok 168 - 公开 CLI/API 跑通单 Goal synthetic Cycle 1，fresh process 决定 Review，trace completed
+  ---
+  duration_ms: 20384.004
+  ...
+# Subtest: 每个缺门均由 advance fail loud，不能以其他 gate 或直接改 Cycle 跳过
+ok 169 - 每个缺门均由 advance fail loud，不能以其他 gate 或直接改 Cycle 跳过
+  ---
+  duration_ms: 32425.310375
+  ...
+# Subtest: all-rejected 只能显式 cancel/no_adoption，不能伪造 Publication/Retest
+ok 170 - all-rejected 只能显式 cancel/no_adoption，不能伪造 Publication/Retest
+  ---
+  duration_ms: 2502.944959
+  ...
+# Subtest: CLI 恢复同 operation 幂等；污染 plan 与真实输出根在任何正式写入前失败
+ok 171 - CLI 恢复同 operation 幂等；污染 plan 与真实输出根在任何正式写入前失败
+  ---
+  duration_ms: 1588.443625
+  ...
+# Subtest: Cycle Review fixture 使用冻结 source entries，不用字符串占位或裸 Sample
+ok 172 - Cycle Review fixture 使用冻结 source entries，不用字符串占位或裸 Sample
+  ---
+  duration_ms: 0.465208
+  ...
+# Subtest: candidate kind 限制 source type、对应 Goal；Gap 必须含 FND，misperception/reason 禁止裸 SMP
+ok 173 - candidate kind 限制 source type、对应 Goal；Gap 必须含 FND，misperception/reason 禁止裸 SMP
+  ---
+  duration_ms: 0.614
+  ...
+# Subtest: assemble waiting_human CRV 创建 pre-review CIS，cutoff 只到 analytics_recorded
+ok 174 - assemble waiting_human CRV 创建 pre-review CIS，cutoff 只到 analytics_recorded
+  ---
+  duration_ms: 2965.360458
+  ...
+# Subtest: waiting_human → decided 必须新 CRV ID、supersedes waiting 且有人类决定
+ok 175 - waiting_human → decided 必须新 CRV ID、supersedes waiting 且有人类决定
+  ---
+  duration_ms: 3025.26175
+  ...
+# Subtest: review CIS fingerprint 或 reviewed Cycle version 漂移时拒绝，不用当前 bump 误判历史 version
+ok 176 - review CIS fingerprint 或 reviewed Cycle version 漂移时拒绝，不用当前 bump 误判历史 version
+  ---
+  duration_ms: 0.397958
+  ...
+# Subtest: completed trace 只依赖 freeze/pre-review/后生 transition snapshot copies，不依赖 live 旧 revision
+ok 177 - completed trace 只依赖 freeze/pre-review/后生 transition snapshot copies，不依赖 live 旧 revision
+  ---
+  duration_ms: 10283.844333
+  ...
+# Subtest: active trace 同时报告 live drift；缺 snapshot edge 返回 TRACE_INCOMPLETE 而非猜测
+ok 178 - active trace 同时报告 live drift；缺 snapshot edge 返回 TRACE_INCOMPLETE 而非猜测
+  ---
+  duration_ms: 40.507125
+  ...
+# Subtest: M6 冻结合同 fixture bytes 可复算且不含真实账号或因果声明
+ok 179 - M6 冻结合同 fixture bytes 可复算且不含真实账号或因果声明
+  ---
+  duration_ms: 7.06075
+  ...
+# Subtest: freeze CIS 保存完整 Markdown/artifact bytes、稳定 entry 排序与 manifest checksum
+ok 180 - freeze CIS 保存完整 Markdown/artifact bytes、稳定 entry 排序与 manifest checksum
+  ---
+  duration_ms: 490.460459
+  ...
+# Subtest: transition/review/strategy CIS 分别冻结 gate、pre-review cutoff 与 strategy 输入
+ok 181 - transition/review/strategy CIS 分别冻结 gate、pre-review cutoff 与 strategy 输入
+  ---
+  duration_ms: 695.875584
+  ...
+# Subtest: active input 漂移返回 CYCLE_VERSION_DRIFT，completed history 仍从 snapshot copy 解析
+ok 182 - active input 漂移返回 CYCLE_VERSION_DRIFT，completed history 仍从 snapshot copy 解析
+  ---
+  duration_ms: 282.341958
+  ...
+# Subtest: CIS 半成品仅按同一 plan/checksum 补齐，相同 bytes kept、不同 bytes conflict
+    # Subtest: same bytes resume
+    ok 1 - same bytes resume
+      ---
+      duration_ms: 342.909334
+      ...
+    # Subtest: different bytes conflict
+    ok 2 - different bytes conflict
+      ---
+      duration_ms: 481.166584
+      ...
+    1..2
+ok 183 - CIS 半成品仅按同一 plan/checksum 补齐，相同 bytes kept、不同 bytes conflict
+  ---
+  duration_ms: 824.786875
+  ...
+# Subtest: freeze CYC/CIS 双向物化在一侧已存在时只允许同一预分配 plan 恢复
+ok 184 - freeze CYC/CIS 双向物化在一侧已存在时只允许同一预分配 plan 恢复
+  ---
+  duration_ms: 594.190291
+  ...
+# Subtest: multi-goal fixture 明确每个 track 独立，aggregate 只可派生不直接推进其他 Goal
+ok 185 - multi-goal fixture 明确每个 track 独立，aggregate 只可派生不直接推进其他 Goal
+  ---
+  duration_ms: 0.775041
+  ...
+# Subtest: Cycle aggregate 覆盖 prepared、waiting、completed/full、cancelled 与 terminal partial
+ok 186 - Cycle aggregate 覆盖 prepared、waiting、completed/full、cancelled 与 terminal partial
+  ---
+  duration_ms: 29.04475
+  ...
+# Subtest: 非法跳阶段、倒退、terminal 继续与跨 Goal gate 均在任何写入前失败
+ok 187 - 非法跳阶段、倒退、terminal 继续与跨 Goal gate 均在任何写入前失败
+  ---
+  duration_ms: 0.42475
+  ...
+# Subtest: advance 先预检与 exclusive lock，再持久化 transition CIS 和 CAS
+ok 188 - advance 先预检与 exclusive lock，再持久化 transition CIS 和 CAS
+  ---
+  duration_ms: 1541.607083
+  ...
+# Subtest: expected Cycle version 不匹配时 CTR 不 applied，Cycle bytes 不变
+ok 189 - expected Cycle version 不匹配时 CTR 不 applied，Cycle bytes 不变
+  ---
+  duration_ms: 1035.085208
+  ...
+# Subtest: 同 operation/fingerprint 幂等 kept；同 operation 不同 fingerprint 冲突
+ok 190 - 同 operation/fingerprint 幂等 kept；同 operation 不同 fingerprint 冲突
+  ---
+  duration_ms: 2283.281417
+  ...
+# Subtest: CTR orphan intent 不计 applied；同输入 resume 附加，版本漂移新 CTR supersede 旧 intent
+ok 191 - CTR orphan intent 不计 applied；同输入 resume 附加，版本漂移新 CTR supersede 旧 intent
+  ---
+  duration_ms: 2555.888959
+  ...
+# Subtest: lease 双 owner 竞争只有一个成功；stale takeover 保留前 owner 并提升 revision
+ok 192 - lease 双 owner 竞争只有一个成功；stale takeover 保留前 owner 并提升 revision
+  ---
+  duration_ms: 476.868166
+  ...
+# Subtest: final QA P0: ANO measurement/policy tuple 必须精确引用 freeze CIS artifact entry
+ok 193 - final QA P0: ANO measurement/policy tuple 必须精确引用 freeze CIS artifact entry
+  ---
+  duration_ms: 737.012292
+  ...
+# Subtest: final QA P0: freeze 后弱化同 ID policy 仍须按 bytes drift/PII fail closed
+ok 194 - final QA P0: freeze 后弱化同 ID policy 仍须按 bytes drift/PII fail closed
+  ---
+  duration_ms: 588.950583
+  ...
+# Subtest: final QA P0: BSIG measurement/rule tuple 必须精确引用 freeze CIS artifact entry
+ok 195 - final QA P0: BSIG measurement/rule tuple 必须精确引用 freeze CIS artifact entry
+  ---
+  duration_ms: 1433.091584
+  ...
+# Subtest: final QA P0: freeze 后同 ID/version Signal Rule 漂移必须零写失败
+ok 196 - final QA P0: freeze 后同 ID/version Signal Rule 漂移必须零写失败
+  ---
+  duration_ms: 1725.423625
+  ...
+# Subtest: final QA P0: public Analytics 不得按 fixture policy ID 特判合法性
+ok 197 - final QA P0: public Analytics 不得按 fixture policy ID 特判合法性
+  ---
+  duration_ms: 0.762542
+  ...
+# Subtest: final QA P0: normal Workspace 必须拒绝 test-only KBASE scope 反向污染
+ok 198 - final QA P0: normal Workspace 必须拒绝 test-only KBASE scope 反向污染
+  ---
+  duration_ms: 38.78275
+  ...
+# Subtest: final QA P0: CIS 必须扫描 artifact bytes 中的真实 URL/ID 污染
+ok 199 - final QA P0: CIS 必须扫描 artifact bytes 中的真实 URL/ID 污染
+  ---
+  duration_ms: 551.272625
+  ...
+# Subtest: final QA P0: BAD Merchant plan 必须在零写阶段失败，validate 不得漏报
+ok 200 - final QA P0: BAD Merchant plan 必须在零写阶段失败，validate 不得漏报
+  ---
+  duration_ms: 9.921667
+  ...
+# Subtest: final QA P0: 8 进程 stale takeover 每轮必须恰好一个 owner 成功
+ok 201 - final QA P0: 8 进程 stale takeover 每轮必须恰好一个 owner 成功
+  ---
+  duration_ms: 3198.535125
+  ...
+# Subtest: final QA P0: all-rejected Adoption 之后唯一合法分支是 cancel/no_adoption
+ok 202 - final QA P0: all-rejected Adoption 之后唯一合法分支是 cancel/no_adoption
+  ---
+  duration_ms: 4122.422166
+  ...
+# Subtest: final QA P0: create-cycle 必须为 freeze CIS 中每个 Goal 建独立 track
+ok 203 - final QA P0: create-cycle 必须为 freeze CIS 中每个 Goal 建独立 track
+  ---
+  duration_ms: 350.722417
+  ...
+# Subtest: final QA P0: generic run 必须承载 gate CIS，且 advance 要回填 track output refs
+ok 204 - final QA P0: generic run 必须承载 gate CIS，且 advance 要回填 track output refs
+  ---
+  duration_ms: 1743.396167
+  ...
+# Subtest: final QA P0: public completed Cycle 1 必须保持 Analytics Run 与完整 graph refs 闭合
+ok 205 - final QA P0: public completed Cycle 1 必须保持 Analytics Run 与完整 graph refs 闭合
+  ---
+  duration_ms: 10082.184334
+  ...
+# Subtest: final QA P0: public lifecycle 不得硬编码 canonical fixture Run ID
+ok 206 - final QA P0: public lifecycle 不得硬编码 canonical fixture Run ID
+  ---
+  duration_ms: 1.39975
+  ...
+# Subtest: final QA P1: public lifecycle 不得硬编码 fixture wall clock
+ok 207 - final QA P1: public lifecycle 不得硬编码 fixture wall clock
+  ---
+  duration_ms: 1.182167
+  ...
+# Subtest: final QA P1: network-disabled 必须由执行 guard 证明而非自报
+ok 208 - final QA P1: network-disabled 必须由执行 guard 证明而非自报
+  ---
+  duration_ms: 0.863083
+  ...
+# Subtest: final QA P0: completed trace 必须复验九门业务对象，不能只认 transition 名称
+ok 209 - final QA P0: completed trace 必须复验九门业务对象，不能只认 transition 名称
+  ---
+  duration_ms: 2417.780125
+  ...
+# Subtest: final QA P0: completed/full 每个 Goal 必须完整且有序覆盖九门并匹配 track.stage
+ok 210 - final QA P0: completed/full 每个 Goal 必须完整且有序覆盖九门并匹配 track.stage
+  ---
+  duration_ms: 18302.667
+  ...
+# Subtest: final QA P0: Review candidate 的每个 entry 必须真实属于 review CIS
+ok 211 - final QA P0: Review candidate 的每个 entry 必须真实属于 review CIS
+  ---
+  duration_ms: 3423.583667
+  ...
+# Subtest: P0: formal sampling_count 3 必须在任何 Profile/Run 写入前拒绝
+ok 212 - P0: formal sampling_count 3 必须在任何 Profile/Run 写入前拒绝
+  ---
+  duration_ms: 152.352375
+  ...
+# Subtest: P0: unresolved/type/version refs 必须由 synthetic 写前预检拒绝
+ok 213 - P0: unresolved/type/version refs 必须由 synthetic 写前预检拒绝
+  ---
+  duration_ms: 231.12025
+  ...
+# Subtest: P0: 同 basename 的 CIS artifact 冲突必须在任何 snapshot copy 写入前失败
+ok 214 - P0: 同 basename 的 CIS artifact 冲突必须在任何 snapshot copy 写入前失败
+  ---
+  duration_ms: 119.855958
+  ...
+# Subtest: P1: M6 Cycle core_versions.input_snapshot 只允许 CIS
+ok 215 - P1: M6 Cycle core_versions.input_snapshot 只允许 CIS
+  ---
+  duration_ms: 0.245083
+  ...
+# Subtest: P1: workspace-validate --objects 必须聚合 M6 existing-type profile
+ok 216 - P1: workspace-validate --objects 必须聚合 M6 existing-type profile
+  ---
+  duration_ms: 201.747042
+  ...
+# Subtest: P1: test Workspace 根为 symlink 时所有 M6 写路径必须 fail closed
+ok 217 - P1: test Workspace 根为 symlink 时所有 M6 写路径必须 fail closed
+  ---
+  duration_ms: 51.521041
+  ...
+# Subtest: P0: Review cutoff 必须解析真实 freeze/applied transition/Cycle version 后才可写
+ok 218 - P0: Review cutoff 必须解析真实 freeze/applied transition/Cycle version 后才可写
+  ---
+  duration_ms: 204.944833
+  ...
+# Subtest: P0: decided Review 必须复验 pinned CIS manifest bytes/fingerprint
+ok 219 - P0: decided Review 必须复验 pinned CIS manifest bytes/fingerprint
+  ---
+  duration_ms: 8189.555875
+  ...
+# Subtest: P0: assemble Review 必须按 CIS 实际 Goal membership 拒绝 self-declared cross-Goal candidate
+ok 220 - P0: assemble Review 必须按 CIS 实际 Goal membership 拒绝 self-declared cross-Goal candidate
+  ---
+  duration_ms: 98.075291
+  ...
+# Subtest: P0: completed trace 缺任一 artifact snapshot copy 必须 TRACE_INCOMPLETE
+ok 221 - P0: completed trace 缺任一 artifact snapshot copy 必须 TRACE_INCOMPLETE
+  ---
+  duration_ms: 1358.790792
+  ...
+# Subtest: P0: trace 不得对非 test scope Cycle 无条件声称 synthetic/no-impact
+ok 222 - P0: trace 不得对非 test scope Cycle 无条件声称 synthetic/no-impact
+  ---
+  duration_ms: 1369.219834
+  ...
+# Subtest: P0: multi-Goal trace 必须逐 track 重建，不得复制全局 stages
+ok 223 - P0: multi-Goal trace 必须逐 track 重建，不得复制全局 stages
+  ---
+  duration_ms: 1365.553292
+  ...
+# Subtest: Spec 0012 注册 Merchant/KBASE 与 M6 对象并拒绝未知字段
+ok 224 - Spec 0012 注册 Merchant/KBASE 与 M6 对象并拒绝未知字段
+  ---
+  duration_ms: 6.44525
+  ...
+# Subtest: 公共对象允许合法顶层 test_scope，且 M6 profile 不从 extensions 读取核心隔离字段
+ok 225 - 公共对象允许合法顶层 test_scope，且 M6 profile 不从 extensions 读取核心隔离字段
+  ---
+  duration_ms: 3.075417
+  ...
+# Subtest: base Schema 兼容历史 sampling_count 3，但正式 language profile 仍强制两个 slot
+ok 226 - base Schema 兼容历史 sampling_count 3，但正式 language profile 仍强制两个 slot
+  ---
+  duration_ms: 1.362917
+  ...
+# Subtest: approved 两槽合同拒绝 Answer Sample ordinal 3
+ok 227 - approved 两槽合同拒绝 Answer Sample ordinal 3
+  ---
+  duration_ms: 1.064417
+  ...
+# Subtest: approved 两槽合同拒绝 M5 Run sample_slots ordinal 3
+ok 228 - approved 两槽合同拒绝 M5 Run sample_slots ordinal 3
+  ---
+  duration_ms: 1.552541
+  ...
+# Subtest: M6 profile 对 cycle/evidence/run 扩展必填独立 fail closed
+ok 229 - M6 profile 对 cycle/evidence/run 扩展必填独立 fail closed
+  ---
+  duration_ms: 0.28975
+  ...
+# Subtest: M6 fixture 使用唯一 MyyShop online Merchant 与 test-only KBASE
+ok 230 - M6 fixture 使用唯一 MyyShop online Merchant 与 test-only KBASE
+  ---
+  duration_ms: 3.498083
+  ...
+# Subtest: development KBASE validator 接受身份并检查每个 synthetic 对象的顶层 test_scope
+ok 231 - development KBASE validator 接受身份并检查每个 synthetic 对象的顶层 test_scope
+  ---
+  duration_ms: 119.126042
+  ...
+# Subtest: 根 identity 缺 Merchant/KBASE scope 或线上配置漂移时 fail closed
+    # Subtest: missing merchant
+    ok 1 - missing merchant
+      ---
+      duration_ms: 48.136792
+      ...
+    # Subtest: unknown mode
+    ok 2 - unknown mode
+      ---
+      duration_ms: 40.836542
+      ...
+    # Subtest: wrong execution scope
+    ok 3 - wrong execution scope
+      ---
+      duration_ms: 68.232167
+      ...
+    # Subtest: missing knowledge base
+    ok 4 - missing knowledge base
+      ---
+      duration_ms: 68.05725
+      ...
+    1..4
+ok 232 - 根 identity 缺 Merchant/KBASE scope 或线上配置漂移时 fail closed
+  ---
+  duration_ms: 226.346417
+  ...
+# Subtest: 写入预检拒绝缺失/伪装 test_scope 与跨 Workspace merchant_ref
+    # Subtest: missing top-level test_scope
+    ok 1 - missing top-level test_scope
+      ---
+      duration_ms: 45.48525
+      ...
+    # Subtest: extensions cannot replace top-level test_scope
+    ok 2 - extensions cannot replace top-level test_scope
+      ---
+      duration_ms: 24.162042
+      ...
+    # Subtest: cross-workspace merchant_ref
+    ok 3 - cross-workspace merchant_ref
+      ---
+      duration_ms: 24.865708
+      ...
+    1..3
+ok 233 - 写入预检拒绝缺失/伪装 test_scope 与跨 Workspace merchant_ref
+  ---
+  duration_ms: 143.378292
+  ...
+# Subtest: 污染预检覆盖 direct/version/Run input、正文 URL 与 manifest locator
+    # Subtest: direct ref
+    ok 1 - direct ref
+      ---
+      duration_ms: 26.70875
+      ...
+    # Subtest: version ref
+    ok 2 - version ref
+      ---
+      duration_ms: 32.850834
+      ...
+    # Subtest: Run input
+    ok 3 - Run input
+      ---
+      duration_ms: 25.836666
+      ...
+    # Subtest: body URL
+    ok 4 - body URL
+      ---
+      duration_ms: 25.582375
+      ...
+    # Subtest: manifest locator
+    ok 5 - manifest locator
+      ---
+      duration_ms: 27.3525
+      ...
+    1..5
+ok 234 - 污染预检覆盖 direct/version/Run input、正文 URL 与 manifest locator
+  ---
+  duration_ms: 189.804625
+  ...
+# Subtest: 真实 MyyShop 只读校验拒绝 M6 test-only 写入且不改变任何字节
+ok 235 - 真实 MyyShop 只读校验拒绝 M6 test-only 写入且不改变任何字节
+  ---
+  duration_ms: 2.015
+  ...
+# Subtest: P0: active freeze 任一 live bytes 漂移必须阻止 advance
+ok 236 - P0: active freeze 任一 live bytes 漂移必须阻止 advance
+  ---
+  duration_ms: 393.943125
+  ...
+# Subtest: P0: transition gate snapshot 后的 live gate 漂移必须在锁内复验
+ok 237 - P0: transition gate snapshot 后的 live gate 漂移必须在锁内复验
+  ---
+  duration_ms: 1687.116708
+  ...
+# Subtest: P0: 仅 Goal+measurement 自报不能满足 baseline_recorded gate
+ok 238 - P0: 仅 Goal+measurement 自报不能满足 baseline_recorded gate
+  ---
+  duration_ms: 501.342709
+  ...
+# Subtest: P0: operation fingerprint 必须由完整 plan 重算，不能只比较调用方字符串
+ok 239 - P0: operation fingerprint 必须由完整 plan 重算，不能只比较调用方字符串
+  ---
+  duration_ms: 1141.72575
+  ...
+# Subtest: P0: orphan resume 不得越过另一 owner 的 active lease
+ok 240 - P0: orphan resume 不得越过另一 owner 的 active lease
+  ---
+  duration_ms: 1026.930792
+  ...
+# Subtest: P0: 同 owner 的过期 lease 也必须走显式 stale recovery
+ok 241 - P0: 同 owner 的过期 lease 也必须走显式 stale recovery
+  ---
+  duration_ms: 31.031167
+  ...
+# Subtest: P0: stale owner release 必须以 revision fencing 拒绝删除 takeover lease
+ok 242 - P0: stale owner release 必须以 revision fencing 拒绝删除 takeover lease
+  ---
+  duration_ms: 34.18375
+  ...
+# Subtest: P0: takeover claim crash 后同 plan 重试必须可恢复
+ok 243 - P0: takeover claim crash 后同 plan 重试必须可恢复
+  ---
+  duration_ms: 36.5805
+  ...
+# Subtest: 公开 geo-strategy-discovery CLI 与 Skill 必须存在
+ok 244 - 公开 geo-strategy-discovery CLI 与 Skill 必须存在
+  ---
+  duration_ms: 2.427083
+  ...
+# Subtest: CLI command surface 固定 assess/propose-dimensions/assemble-output/trace
+ok 245 - CLI command surface 固定 assess/propose-dimensions/assemble-output/trace
+  ---
+  duration_ms: 485.399042
+  ...
+# Subtest: geo-lifecycle 暴露 propose-cycle-two/apply-goal-selection 且不改变 M6 commands
+ok 246 - geo-lifecycle 暴露 propose-cycle-two/apply-goal-selection 且不改变 M6 commands
+  ---
+  duration_ms: 405.336042
+  ...
+# Subtest: M7 CLI 可从非仓库 cwd 读取 test-only plan，且显式 network_accessed:false
+ok 247 - M7 CLI 可从非仓库 cwd 读取 test-only plan，且显式 network_accessed:false
+  ---
+  duration_ms: 593.009208
+  ...
+# Subtest: 缺 GEO_M7_NETWORK_DISABLED 时 CLI 在读取或写入前 fail closed
+ok 248 - 缺 GEO_M7_NETWORK_DISABLED 时 CLI 在读取或写入前 fail closed
+  ---
+  duration_ms: 472.482959
+  ...
+# Subtest: M7 CLI 参数/合同/create-only 冲突使用结构化 JSON 与 exit 1/2/3
+ok 249 - M7 CLI 参数/合同/create-only 冲突使用结构化 JSON 与 exit 1/2/3
+  ---
+  duration_ms: 1145.006375
+  ...
+# Subtest: GCB/GCD key、ID 与排序完全由 frozen Review/CIS/rule/descriptor 决定
+ok 250 - GCB/GCD key、ID 与排序完全由 frozen Review/CIS/rule/descriptor 决定
+  ---
+  duration_ms: 8.050334
+  ...
+# Subtest: 相同输入重复生成同 bytes；priority/kind/content/risk/gate 漂移生成新 batch
+ok 251 - 相同输入重复生成同 bytes；priority/kind/content/risk/gate 漂移生成新 batch
+  ---
+  duration_ms: 0.604417
+  ...
+# Subtest: ASCII/UTF-8 byte tie-break 不使用 localeCompare
+ok 252 - ASCII/UTF-8 byte tie-break 不使用 localeCompare
+  ---
+  duration_ms: 0.106458
+  ...
+# Subtest: GCB/GCD 先预分配完整双向闭包，FND-A/B 换绑与 strategy gate 缺失失败
+ok 253 - GCB/GCD 先预分配完整双向闭包，FND-A/B 换绑与 strategy gate 缺失失败
+  ---
+  duration_ms: 0.662875
+  ...
+# Subtest: 普通 Cycle 2 候选不要求 strategy gates，Product Gap 候选恰好需要一条 Gap
+ok 254 - 普通 Cycle 2 候选不要求 strategy gates，Product Gap 候选恰好需要一条 Gap
+  ---
+  duration_ms: 0.195084
+  ...
+# Subtest: GSEL draft 不含 selected/approval/supersedes，Tool 不自动选择
+ok 255 - GSEL draft 不含 selected/approval/supersedes，Tool 不自动选择
+  ---
+  duration_ms: 1.361834
+  ...
+# Subtest: fresh Node process 只凭 draft + fixture human decision 创建新 decided GSEL
+ok 256 - fresh Node process 只凭 draft + fixture human decision 创建新 decided GSEL
+  ---
+  duration_ms: 375.100792
+  ...
+# Subtest: decided GSEL 必须对同一 batch 做唯一、互斥、无遗漏分区
+ok 257 - decided GSEL 必须对同一 batch 做唯一、互斥、无遗漏分区
+  ---
+  duration_ms: 0.74075
+  ...
+# Subtest: 无 selected 的完整拒绝/推迟决定合法，但不能启动 Cycle 2
+ok 258 - 无 selected 的完整拒绝/推迟决定合法，但不能启动 Cycle 2
+  ---
+  duration_ms: 0.300125
+  ...
+# Subtest: strategy 未触发时普通 Query Cluster Candidate 仍可进入人工选择
+ok 259 - strategy 未触发时普通 Query Cluster Candidate 仍可进入人工选择
+  ---
+  duration_ms: 1.675833
+  ...
+# Subtest: Product Gap Candidate 必须闭合 STA proceed → factor DDM → STO 同 tuple
+ok 260 - Product Gap Candidate 必须闭合 STA proceed → factor DDM → STO 同 tuple
+  ---
+  duration_ms: 0.625167
+  ...
+# Subtest: Cycle 2 freeze 输入拥有独立 Goal/Query/QS/KR/Evidence/Asset/CPF 完整 graph
+ok 261 - Cycle 2 freeze 输入拥有独立 Goal/Query/QS/KR/Evidence/Asset/CPF 完整 graph
+  ---
+  duration_ms: 419.826084
+  ...
+# Subtest: Cycle 2 Baseline/M4/Publication/双Retest gate fixtures 使用独立 IDs 且 graph/profile 全绿
+ok 262 - Cycle 2 Baseline/M4/Publication/双Retest gate fixtures 使用独立 IDs 且 graph/profile 全绿
+  ---
+  duration_ms: 469.925166
+  ...
+# Subtest: Cycle 1 decided CRV 从实际 Review CIS entry tuples 冻结 Product Gap 候选
+ok 263 - Cycle 1 decided CRV 从实际 Review CIS entry tuples 冻结 Product Gap 候选
+  ---
+  duration_ms: 10618.206833
+  ...
+# Subtest: Cycle 2 输入必须绑定 predecessor Review、decided GSEL、selected Candidate 与独立 Goal approval
+ok 264 - Cycle 2 输入必须绑定 predecessor Review、decided GSEL、selected Candidate 与独立 Goal approval
+  ---
+  duration_ms: 6.525125
+  ...
+# Subtest: 直接创建 Cycle 2、缺 selected 或复用 Cycle 1 Goal approval 必须 fail closed
+ok 265 - 直接创建 Cycle 2、缺 selected 或复用 Cycle 1 Goal approval 必须 fail closed
+  ---
+  duration_ms: 2.659333
+  ...
+# Subtest: runSyntheticCycleTwo 无 lifecycle adapter/九门 trace 时不得伪造 completed
+ok 266 - runSyntheticCycleTwo 无 lifecycle adapter/九门 trace 时不得伪造 completed
+  ---
+  duration_ms: 189.460042
+  ...
+# Subtest: Cycle 2 E2E fixture 固定 predecessor/GSEL/新 Goal approval 与完整九门
+ok 267 - Cycle 2 E2E fixture 固定 predecessor/GSEL/新 Goal approval 与完整九门
+  ---
+  duration_ms: 2.784042
+  ...
+# Subtest: 三份人工决定由不同 fresh-process 证据承载，均不使用聊天历史
+ok 268 - 三份人工决定由不同 fresh-process 证据承载，均不使用聊天历史
+  ---
+  duration_ms: 2.481084
+  ...
+# Subtest: fresh Node 只从三份 decision bytes 重建人工门，不读取当前会话
+ok 269 - fresh Node 只从三份 decision bytes 重建人工门，不读取当前会话
+  ---
+  duration_ms: 43.157584
+  ...
+# Subtest: 完整 synthetic Cycle 1 → strategy/GSEL → 新 freeze CIS → 九门 Cycle 2
+ok 270 - 完整 synthetic Cycle 1 → strategy/GSEL → 新 freeze CIS → 九门 Cycle 2
+  ---
+  duration_ms: 31907.362208
+  ...
+# Subtest: DDM 四态七个可达组合逐一闭合，旧 bytes 不改写
+ok 271 - DDM 四态七个可达组合逐一闭合，旧 bytes 不改写
+  ---
+  duration_ms: 5.854375
+  ...
+# Subtest: 每次推进必须新 ID、supersedes 直接前态，禁止回 candidate/跳态/terminal 继续
+ok 272 - 每次推进必须新 ID、supersedes 直接前态，禁止回 candidate/跳态/terminal 继续
+  ---
+  duration_ms: 0.549959
+  ...
+# Subtest: validation/factor/deprecation decision 块按来源精确出现且 decision_ref 不复用
+ok 273 - validation/factor/deprecation decision 块按来源精确出现且 decision_ref 不复用
+  ---
+  duration_ms: 0.227167
+  ...
+# Subtest: factor rejected 可显式保留 validated 或进入 deprecated，但不能伪装 promoted
+ok 274 - factor rejected 可显式保留 validated 或进入 deprecated，但不能伪装 promoted
+  ---
+  duration_ms: 0.150083
+  ...
+# Subtest: M7 注册 strategy_assessment 且保留 unknown-field fail closed
+ok 275 - M7 注册 strategy_assessment 且保留 unknown-field fail closed
+  ---
+  duration_ms: 2.715375
+  ...
+# Subtest: M7 注册 decision_dimension 且保留 unknown-field fail closed
+ok 276 - M7 注册 decision_dimension 且保留 unknown-field fail closed
+  ---
+  duration_ms: 1.418542
+  ...
+# Subtest: M7 注册 cycle_goal_candidate_batch 且保留 unknown-field fail closed
+ok 277 - M7 注册 cycle_goal_candidate_batch 且保留 unknown-field fail closed
+  ---
+  duration_ms: 0.973333
+  ...
+# Subtest: M7 注册 cycle_goal_candidate 且保留 unknown-field fail closed
+ok 278 - M7 注册 cycle_goal_candidate 且保留 unknown-field fail closed
+  ---
+  duration_ms: 1.34425
+  ...
+# Subtest: M7 注册 cycle_goal_selection 且保留 unknown-field fail closed
+ok 279 - M7 注册 cycle_goal_selection 且保留 unknown-field fail closed
+  ---
+  duration_ms: 0.914666
+  ...
+# Subtest: M7 注册 strategy_output 且保留 unknown-field fail closed
+ok 280 - M7 注册 strategy_output 且保留 unknown-field fail closed
+  ---
+  duration_ms: 1.039958
+  ...
+# Subtest: 六类 M7 对象均要求顶层 synthetic test_scope
+ok 281 - 六类 M7 对象均要求顶层 synthetic test_scope
+  ---
+  duration_ms: 0.860541
+  ...
+# Subtest: STA decided/proceed 必须是 eligible 四项 pass、新 ID lineage 与人工 approval
+ok 282 - STA decided/proceed 必须是 eligible 四项 pass、新 ID lineage 与人工 approval
+  ---
+  duration_ms: 7.186958
+  ...
+# Subtest: DDM Schema/profile 精确覆盖四态 decision 矩阵，表外组合失败
+ok 283 - DDM Schema/profile 精确覆盖四态 decision 矩阵，表外组合失败
+  ---
+  duration_ms: 2.237542
+  ...
+# Subtest: Gate 0 缺 human invocation 时不创建 Strategy Run/STA
+ok 284 - Gate 0 缺 human invocation 时不创建 Strategy Run/STA
+  ---
+  duration_ms: 9.395375
+  ...
+# Subtest: eligibility 只从 pinned CIS 计算，拒绝调用方自报 pass
+ok 285 - eligibility 只从 pinned CIS 计算，拒绝调用方自报 pass
+  ---
+  duration_ms: 1.129708
+  ...
+# Subtest: 两条 formal Query/两个可追溯平台与 approved/non-stale 同 Scope Evidence 是硬门
+ok 286 - 两条 formal Query/两个可追溯平台与 approved/non-stale 同 Scope Evidence 是硬门
+  ---
+  duration_ms: 0.699375
+  ...
+# Subtest: 只消费 M4 open+approval Product Gap，并锁定同一 identity tuple
+ok 287 - 只消费 M4 open+approval Product Gap，并锁定同一 identity tuple
+  ---
+  duration_ms: 0.378958
+  ...
+# Subtest: 公开 CLI 从 canonical workspace 与 fresh decisions 跑通 STA→DDM factor→STO→trace
+ok 288 - 公开 CLI 从 canonical workspace 与 fresh decisions 跑通 STA→DDM factor→STO→trace
+  ---
+  duration_ms: 14230.204042
+  ...
+# Subtest: 空触发与伪造 waiting checksum 在任何目标写入前失败
+ok 289 - 空触发与伪造 waiting checksum 在任何目标写入前失败
+  ---
+  duration_ms: 5800.048167
+  ...
+# Subtest: strategy snapshot copy 漂移 fail closed；live object 后续漂移不改变冻结链
+ok 290 - strategy snapshot copy 漂移 fail closed；live object 后续漂移不改变冻结链
+  ---
+  duration_ms: 7659.462417
+  ...
+# Subtest: real MyyShop workspace 继续保持 zero-write
+ok 291 - real MyyShop workspace 继续保持 zero-write
+  ---
+  duration_ms: 3753.073792
+  ...
+# Subtest: plan 内嵌 eligibility/object 自报结果必须在写入前拒绝
+ok 292 - plan 内嵌 eligibility/object 自报结果必须在写入前拒绝
+  ---
+  duration_ms: 3356.197583
+  ...
+# Subtest: STO 三类 artifact 恰好各一份，body/hash/manifest 分开复算
+ok 293 - STO 三类 artifact 恰好各一份，body/hash/manifest 分开复算
+  ---
+  duration_ms: 5.271375
+  ...
+# Subtest: STO 只写对应 Strategy Run outputs，重复同 bytes kept
+ok 294 - STO 只写对应 Strategy Run outputs，重复同 bytes kept
+  ---
+  duration_ms: 232.669042
+  ...
+# Subtest: STO checksum/path/role 冲突必须 zero-write
+ok 295 - STO checksum/path/role 冲突必须 zero-write
+  ---
+  duration_ms: 74.615084
+  ...
+# Subtest: 任一既存 artifact bytes 冲突时，STO 与其他 artifacts 均不得部分写入
+ok 296 - 任一既存 artifact bytes 冲突时，STO 与其他 artifacts 均不得部分写入
+  ---
+  duration_ms: 170.780791
+  ...
+# Subtest: strategy absent trace 返回 not_applicable，不阻塞普通 lifecycle
+ok 297 - strategy absent trace 返回 not_applicable，不阻塞普通 lifecycle
+  ---
+  duration_ms: 0.941833
+  ...
+# Subtest: strategy trace 锁定 invocation、同 Product Gap tuple、factor DDM 与 STO
+ok 298 - strategy trace 锁定 invocation、同 Product Gap tuple、factor DDM 与 STO
+  ---
+  duration_ms: 0.587667
+  ...
+# Subtest: STO 对真实 MyyShop Workspace 保持 zero-write
+ok 299 - STO 对真实 MyyShop Workspace 保持 zero-write
+  ---
+  duration_ms: 10.584792
+  ...
+# Subtest: GCB/GCD/GSEL/Cycle2 半成品只按同一 plan/checksum 恢复，漂移与污染失败
+ok 300 - GCB/GCD/GSEL/Cycle2 半成品只按同一 plan/checksum 恢复，漂移与污染失败
+  ---
+  duration_ms: 79.457333
+  ...
+# Subtest: M8 required tiers 一致通过，optional 保持 not_executed
+ok 301 - M8 required tiers 一致通过，optional 保持 not_executed
+  ---
+  duration_ms: 0.968709
+  ...
+# Subtest: M8 输出不一致与 unsupported required execution 必须 fail loud
+ok 302 - M8 输出不一致与 unsupported required execution 必须 fail loud
+  ---
+  duration_ms: 0.422958
+  ...
+# Subtest: M8 profile 缺 required key、WorkBuddy boundary 冒充 native 均失败
+ok 303 - M8 profile 缺 required key、WorkBuddy boundary 冒充 native 均失败
+  ---
+  duration_ms: 0.117625
+  ...
+# Subtest: M8 任一 host output 含 PII 时在比较前失败
+ok 304 - M8 任一 host output 含 PII 时在比较前失败
+  ---
+  duration_ms: 0.080333
+  ...
+# Subtest: M8 实际检查两套 packaging、shared Tool 与 WorkBuddy semantic fixture
+ok 305 - M8 实际检查两套 packaging、shared Tool 与 WorkBuddy semantic fixture
+  ---
+  duration_ms: 104.831709
+  ...
+# Subtest: Owner feedback binds immutable target bytes and rejects changed targets or ambiguous feedback
+ok 306 - Owner feedback binds immutable target bytes and rejects changed targets or ambiguous feedback
+  ---
+  duration_ms: 23.315375
+  ...
+# Subtest: deferred feedback stays visible, can be superseded, and a final approval cannot be overwritten
+ok 307 - deferred feedback stays visible, can be superseded, and a final approval cannot be overwritten
+  ---
+  duration_ms: 23.802917
+  ...
+# Subtest: modified content is opaque and cannot inject a second approval field
+ok 308 - modified content is opaque and cannot inject a second approval field
+  ---
+  duration_ms: 1.062709
+  ...
+# Subtest: validate-plugin.mjs 退出码 0 且 ok:true
+ok 309 - validate-plugin.mjs 退出码 0 且 ok:true
+  ---
+  duration_ms: 553.439708
+  ...
+# Subtest: validate-plugin.mjs 不依赖调用时 cwd
+ok 310 - validate-plugin.mjs 不依赖调用时 cwd
+  ---
+  duration_ms: 500.36675
+  ...
+# Subtest: geo-browser plugin MCP config accepts only the fixed loopback Server contract
+ok 311 - geo-browser plugin MCP config accepts only the fixed loopback Server contract
+  ---
+  duration_ms: 0.829417
+  ...
+# Subtest: manual Query import handles quoted CSV, multiline values, JSON and normalized duplicates
+ok 312 - manual Query import handles quoted CSV, multiline values, JSON and normalized duplicates
+  ---
+  duration_ms: 1.020541
+  ...
+# Subtest: GSC default 28-day window uses PT date across UTC and daylight-saving boundaries
+ok 313 - GSC default 28-day window uses PT date across UTC and daylight-saving boundaries
+  ---
+  duration_ms: 12.975125
+  ...
+# Subtest: new sources merge into a candidate with version bump and retain immutable input receipts
+ok 314 - new sources merge into a candidate with version bump and retain immutable input receipts
+  ---
+  duration_ms: 348.574208
+  ...
+# Subtest: CLI：参数合同负例
+ok 315 - CLI：参数合同负例
+  ---
+  duration_ms: 3616.512458
+  ...
+# Subtest: CLI：intake/report/assemble/prefreeze/validate 串联与冲突退出码
+ok 316 - CLI：intake/report/assemble/prefreeze/validate 串联与冲突退出码
+  ---
+  duration_ms: 4162.945
+  ...
+# Subtest: 知识库缺席：测试知识库 Query Portfolio 全旅程
+ok 317 - 知识库缺席：测试知识库 Query Portfolio 全旅程
+  ---
+  duration_ms: 5593.410417
+  ...
+# Subtest: 知识库缺席：重复观察与跨来源合并
+ok 318 - 知识库缺席：重复观察与跨来源合并
+  ---
+  duration_ms: 565.328041
+  ...
+# Subtest: 知识库缺席：同源重复观察整体失败且无部分写入
+ok 319 - 知识库缺席：同源重复观察整体失败且无部分写入
+  ---
+  duration_ms: 373.567667
+  ...
+# Subtest: qp-normalize-v1：NFKC、小写、空白折叠与首尾标点
+ok 320 - qp-normalize-v1：NFKC、小写、空白折叠与首尾标点
+  ---
+  duration_ms: 0.85125
+  ...
+# Subtest: qp-intent-v1：固定顺序关键词判定
+ok 321 - qp-intent-v1：固定顺序关键词判定
+  ---
+  duration_ms: 0.632459
+  ...
+# Subtest: qp-priority-v1：来源类别映射与最高优先级
+ok 322 - qp-priority-v1：来源类别映射与最高优先级
+  ---
+  duration_ms: 0.099292
+  ...
+# Subtest: qp-id-v1：确定性生成与区分度
+ok 323 - qp-id-v1：确定性生成与区分度
+  ---
+  duration_ms: 0.732125
+  ...
+# Subtest: qp-cluster-v1：意图桶内相似聚类、跨意图不合并、确定性
+ok 324 - qp-cluster-v1：意图桶内相似聚类、跨意图不合并、确定性
+  ---
+  duration_ms: 1.242792
+  ...
+# Subtest: intake：生成 candidate、幂等 kept 与规则溯源
+ok 325 - intake：生成 candidate、幂等 kept 与规则溯源
+  ---
+  duration_ms: 65.517917
+  ...
+# Subtest: intake：同源重复整体失败且无部分写入
+ok 326 - intake：同源重复整体失败且无部分写入
+  ---
+  duration_ms: 51.590834
+  ...
+# Subtest: intake：跨来源合并、多来源优先级与展示文本取字节序最小
+ok 327 - intake：跨来源合并、多来源优先级与展示文本取字节序最小
+  ---
+  duration_ms: 76.85625
+  ...
+# Subtest: intake：对既有活跃 Query 的重复观察跳过并报告
+ok 328 - intake：对既有活跃 Query 的重复观察跳过并报告
+  ---
+  duration_ms: 52.120958
+  ...
+# Subtest: intake：计划合同负例
+ok 329 - intake：计划合同负例
+  ---
+  duration_ms: 71.26725
+  ...
+# Subtest: assemble：draft 组装与 content_sha256 预览
+ok 330 - assemble：draft 组装与 content_sha256 预览
+  ---
+  duration_ms: 78.272208
+  ...
+# Subtest: assemble：版本漂移、重复 ref 与非法计划
+ok 331 - assemble：版本漂移、重复 ref 与非法计划
+  ---
+  duration_ms: 53.820667
+  ...
+# Subtest: prefreeze：门禁矩阵与期望哈希
+ok 332 - prefreeze：门禁矩阵与期望哈希
+  ---
+  duration_ms: 170.453417
+  ...
+# Subtest: validate：M3 合并、drift 与覆盖 warning
+ok 333 - validate：M3 合并、drift 与覆盖 warning
+  ---
+  duration_ms: 196.0035
+  ...
+# Subtest: report：聚类覆盖视图、内容键工件与确定性
+ok 334 - report：聚类覆盖视图、内容键工件与确定性
+  ---
+  duration_ms: 110.013792
+  ...
+# Subtest: frozen Query Set 覆盖缺口 warning 与 index 重建
+ok 335 - frozen Query Set 覆盖缺口 warning 与 index 重建
+  ---
+  duration_ms: 371.739125
+  ...
+# Subtest: supporting artifacts retain distinct same-basename bytes and constrain loopback proof to an explicit test locator
+ok 336 - supporting artifacts retain distinct same-basename bytes and constrain loopback proof to an explicit test locator
+  ---
+  duration_ms: 316.920209
+  ...
+# Subtest: Source queue crossing the 100 threshold preserves freeze, while locator changes still fail
+ok 337 - Source queue crossing the 100 threshold preserves freeze, while locator changes still fail
+  ---
+  duration_ms: 384.50725
+  ...
+# Subtest: 空目录初始化：创建全部必需文件与目录，校验通过
+ok 338 - 空目录初始化：创建全部必需文件与目录，校验通过
+  ---
+  duration_ms: 25.537
+  ...
+# Subtest: 模板替换：品牌名与身份写入 README 和 workspace.json
+ok 339 - 模板替换：品牌名与身份写入 README 和 workspace.json
+  ---
+  duration_ms: 15.500875
+  ...
+# Subtest: 幂等：重复初始化 created 为空、全部 kept、文件字节不变、身份不变
+ok 340 - 幂等：重复初始化 created 为空、全部 kept、文件字节不变、身份不变
+  ---
+  duration_ms: 25.937709
+  ...
+# Subtest: 不覆盖：用户已有 README 原样保留
+ok 341 - 不覆盖：用户已有 README 原样保留
+  ---
+  duration_ms: 17.913375
+  ...
+# Subtest: dry-run：不写任何文件
+ok 342 - dry-run：不写任何文件
+  ---
+  duration_ms: 4.930125
+  ...
+# Subtest: 身份冲突：workspace.json 缺字段时拒绝修补
+ok 343 - 身份冲突：workspace.json 缺字段时拒绝修补
+  ---
+  duration_ms: 66.377708
+  ...
+# Subtest: CLI：损坏的 workspace.json 退出码 3
+ok 344 - CLI：损坏的 workspace.json 退出码 3
+  ---
+  duration_ms: 115.318417
+  ...
+# Subtest: CLI：不完整工作区 validate 退出码 1 并列出 missing
+ok 345 - CLI：不完整工作区 validate 退出码 1 并列出 missing
+  ---
+  duration_ms: 60.511
+  ...
+# Subtest: CLI：validate 从子目录向上定位工作区
+ok 346 - CLI：validate 从子目录向上定位工作区
+  ---
+  duration_ms: 68.935375
+  ...
+# Subtest: CLI：非法参数退出码 2
+ok 347 - CLI：非法参数退出码 2
+  ---
+  duration_ms: 48.595708
+  ...
+1..347
+# tests 365
+# suites 0
+# pass 365
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 63621.260667

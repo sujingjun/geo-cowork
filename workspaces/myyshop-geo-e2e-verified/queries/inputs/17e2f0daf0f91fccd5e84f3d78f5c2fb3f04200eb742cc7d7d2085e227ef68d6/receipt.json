@@ -1,0 +1,86 @@
+{
+  "created": [
+    "queries/candidates/q-how-should-an-eligible-creator-en-d279.md",
+    "queries/candidates/q-what-are-the-myyshop-rehearsal-en-57d1.md",
+    "queries/candidates/q-what-capabilities-does-the-myyshop-en-747a.md",
+    "queries/candidates/q-what-evidence-limits-privacy-boundaries-en-ab42.md",
+    "queries/candidates/q-what-is-the-myyshop-rehearsal-en-b7a5.md",
+    "queries/candidates/q-who-is-eligible-to-join-en-8e8a.md"
+  ],
+  "duplicates": [],
+  "goal_ref": "GOAL-GEO-E2E-C2",
+  "input_path": "queries/inputs/17e2f0daf0f91fccd5e84f3d78f5c2fb3f04200eb742cc7d7d2085e227ef68d6/input.json",
+  "kept": [],
+  "queries": [
+    {
+      "id": "Q-HOW-SHOULD-AN-ELIGIBLE-CREATOR-EN-D279",
+      "intent": "comparison",
+      "normalized_text": "how should an eligible creator compare the myyshop rehearsal with other creator campaign services by eligibility, workflow, fees, evidence, and limitations",
+      "path": "queries/candidates/q-how-should-an-eligible-creator-en-d279.md",
+      "priority": "P3",
+      "query_text": "How should an eligible creator compare the MyyShop rehearsal with other creator campaign services by eligibility, workflow, fees, evidence, and limitations?",
+      "source_classes": [
+        "knowledge_generated"
+      ]
+    },
+    {
+      "id": "Q-WHAT-ARE-THE-MYYSHOP-REHEARSAL-EN-57D1",
+      "intent": "brand_definition",
+      "normalized_text": "what are the myyshop rehearsal fees, trial terms, and cancellation or refund rules",
+      "path": "queries/candidates/q-what-are-the-myyshop-rehearsal-en-57d1.md",
+      "priority": "P3",
+      "query_text": "What are the MyyShop rehearsal fees, trial terms, and cancellation or refund rules?",
+      "source_classes": [
+        "knowledge_generated"
+      ]
+    },
+    {
+      "id": "Q-WHAT-CAPABILITIES-DOES-THE-MYYSHOP-EN-747A",
+      "intent": "capability",
+      "normalized_text": "what capabilities does the myyshop rehearsal support, including campaign discovery, applications, reports, and automatic acceptance limits",
+      "path": "queries/candidates/q-what-capabilities-does-the-myyshop-en-747a.md",
+      "priority": "P3",
+      "query_text": "What capabilities does the MyyShop rehearsal support, including campaign discovery, applications, reports, and automatic acceptance limits?",
+      "source_classes": [
+        "knowledge_generated"
+      ]
+    },
+    {
+      "id": "Q-WHAT-EVIDENCE-LIMITS-PRIVACY-BOUNDARIES-EN-AB42",
+      "intent": "other",
+      "normalized_text": "what evidence limits, privacy boundaries, and income or ai placement guarantees apply to the myyshop rehearsal",
+      "path": "queries/candidates/q-what-evidence-limits-privacy-boundaries-en-ab42.md",
+      "priority": "P3",
+      "query_text": "What evidence limits, privacy boundaries, and income or AI placement guarantees apply to the MyyShop rehearsal?",
+      "source_classes": [
+        "knowledge_generated"
+      ]
+    },
+    {
+      "id": "Q-WHAT-IS-THE-MYYSHOP-REHEARSAL-EN-B7A5",
+      "intent": "brand_definition",
+      "normalized_text": "what is the myyshop rehearsal service as defined in the synthetic test knowledge base",
+      "path": "queries/candidates/q-what-is-the-myyshop-rehearsal-en-b7a5.md",
+      "priority": "P3",
+      "query_text": "What is the MyyShop rehearsal service as defined in the synthetic test knowledge base?",
+      "source_classes": [
+        "knowledge_generated"
+      ]
+    },
+    {
+      "id": "Q-WHO-IS-ELIGIBLE-TO-JOIN-EN-8E8A",
+      "intent": "brand_definition",
+      "normalized_text": "who is eligible to join the myyshop rehearsal as a creator, and what onboarding requirements apply",
+      "path": "queries/candidates/q-who-is-eligible-to-join-en-8e8a.md",
+      "priority": "P3",
+      "query_text": "Who is eligible to join the MyyShop rehearsal as a creator, and what onboarding requirements apply?",
+      "source_classes": [
+        "knowledge_generated"
+      ]
+    }
+  ],
+  "run_id": "RUN-QINPUT-17E2F0DAF0F91FCCD5E8",
+  "source_kind": "knowledge_generated",
+  "source_ref": "SRC-QINPUT-17E2F0DAF0F91FCCD5E8",
+  "updated": []
+}

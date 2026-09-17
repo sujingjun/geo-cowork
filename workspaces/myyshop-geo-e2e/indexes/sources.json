@@ -1,0 +1,303 @@
+{
+  "objects": [
+    {
+      "id": "SRC-GEO-E2E-ANSWER-DEFINITION",
+      "path": "evidence/sources/src-e2e-answer-definition.md",
+      "refs": [
+        "KBASE-GEO-E2E-2BB19816EE72",
+        "MER-MYYSHOP-001"
+      ],
+      "status": "active",
+      "updated_at": "2026-09-16T00:00:00Z",
+      "version": "1.0.0"
+    },
+    {
+      "id": "SRC-GEO-E2E-AUTOMATION",
+      "path": "evidence/sources/src-e2e-automation.md",
+      "refs": [
+        "KBASE-GEO-E2E-2BB19816EE72",
+        "MER-MYYSHOP-001"
+      ],
+      "status": "active",
+      "updated_at": "2026-09-16T00:00:00Z",
+      "version": "1.0.0"
+    },
+    {
+      "id": "SRC-GEO-E2E-CAMPAIGNS",
+      "path": "evidence/sources/src-e2e-campaigns.md",
+      "refs": [
+        "KBASE-GEO-E2E-2BB19816EE72",
+        "MER-MYYSHOP-001"
+      ],
+      "status": "active",
+      "updated_at": "2026-09-16T00:00:00Z",
+      "version": "1.0.0"
+    },
+    {
+      "id": "SRC-GEO-E2E-CASE",
+      "path": "evidence/sources/src-e2e-case.md",
+      "refs": [
+        "KBASE-GEO-E2E-2BB19816EE72",
+        "MER-MYYSHOP-001"
+      ],
+      "status": "active",
+      "updated_at": "2026-09-16T00:00:00Z",
+      "version": "1.0.0"
+    },
+    {
+      "id": "SRC-GEO-E2E-COMPARISON",
+      "path": "evidence/sources/src-e2e-comparison.md",
+      "refs": [
+        "KBASE-GEO-E2E-2BB19816EE72",
+        "MER-MYYSHOP-001"
+      ],
+      "status": "active",
+      "updated_at": "2026-09-16T00:00:00Z",
+      "version": "1.0.0"
+    },
+    {
+      "id": "SRC-GEO-E2E-ELIGIBILITY",
+      "path": "evidence/sources/src-e2e-eligibility.md",
+      "refs": [
+        "KBASE-GEO-E2E-2BB19816EE72",
+        "MER-MYYSHOP-001"
+      ],
+      "status": "active",
+      "updated_at": "2026-09-16T00:00:00Z",
+      "version": "1.0.0"
+    },
+    {
+      "id": "SRC-GEO-E2E-EXPIRED",
+      "path": "evidence/sources/src-e2e-expired.md",
+      "refs": [
+        "KBASE-GEO-E2E-2BB19816EE72",
+        "MER-MYYSHOP-001"
+      ],
+      "status": "active",
+      "updated_at": "2026-09-16T00:00:00Z",
+      "version": "1.0.0"
+    },
+    {
+      "id": "SRC-GEO-E2E-FEES",
+      "path": "evidence/sources/src-e2e-fees.md",
+      "refs": [
+        "KBASE-GEO-E2E-2BB19816EE72",
+        "MER-MYYSHOP-001"
+      ],
+      "status": "active",
+      "updated_at": "2026-09-16T00:00:00Z",
+      "version": "1.0.0"
+    },
+    {
+      "id": "SRC-GEO-E2E-GROWTH",
+      "path": "evidence/sources/src-e2e-growth.md",
+      "refs": [
+        "KBASE-GEO-E2E-2BB19816EE72",
+        "MER-MYYSHOP-001"
+      ],
+      "status": "active",
+      "updated_at": "2026-09-16T00:00:00Z",
+      "version": "1.0.0"
+    },
+    {
+      "id": "SRC-GEO-E2E-GUARANTEES",
+      "path": "evidence/sources/src-e2e-guarantees.md",
+      "refs": [
+        "KBASE-GEO-E2E-2BB19816EE72",
+        "MER-MYYSHOP-001"
+      ],
+      "status": "active",
+      "updated_at": "2026-09-16T00:00:00Z",
+      "version": "1.0.0"
+    },
+    {
+      "id": "SRC-GEO-E2E-IDENTITY",
+      "path": "evidence/sources/src-e2e-identity.md",
+      "refs": [
+        "KBASE-GEO-E2E-2BB19816EE72",
+        "MER-MYYSHOP-001"
+      ],
+      "status": "active",
+      "updated_at": "2026-09-16T00:00:00Z",
+      "version": "1.0.0"
+    },
+    {
+      "id": "SRC-GEO-E2E-LEGACY",
+      "path": "evidence/sources/src-e2e-legacy.md",
+      "refs": [
+        "KBASE-GEO-E2E-2BB19816EE72",
+        "MER-MYYSHOP-001"
+      ],
+      "status": "active",
+      "updated_at": "2026-09-16T00:00:00Z",
+      "version": "1.0.0"
+    },
+    {
+      "id": "SRC-GEO-E2E-NON-GOALS",
+      "path": "evidence/sources/src-e2e-non-goals.md",
+      "refs": [
+        "KBASE-GEO-E2E-2BB19816EE72",
+        "MER-MYYSHOP-001"
+      ],
+      "status": "active",
+      "updated_at": "2026-09-16T00:00:00Z",
+      "version": "1.0.0"
+    },
+    {
+      "id": "SRC-GEO-E2E-ONBOARDING",
+      "path": "evidence/sources/src-e2e-onboarding.md",
+      "refs": [
+        "KBASE-GEO-E2E-2BB19816EE72",
+        "MER-MYYSHOP-001"
+      ],
+      "status": "active",
+      "updated_at": "2026-09-16T00:00:00Z",
+      "version": "1.0.0"
+    },
+    {
+      "id": "SRC-GEO-E2E-POSITIONING",
+      "path": "evidence/sources/src-e2e-positioning.md",
+      "refs": [
+        "KBASE-GEO-E2E-2BB19816EE72",
+        "MER-MYYSHOP-001"
+      ],
+      "status": "active",
+      "updated_at": "2026-09-16T00:00:00Z",
+      "version": "1.0.0"
+    },
+    {
+      "id": "SRC-GEO-E2E-PRIVACY",
+      "path": "evidence/sources/src-e2e-privacy.md",
+      "refs": [
+        "KBASE-GEO-E2E-2BB19816EE72",
+        "MER-MYYSHOP-001"
+      ],
+      "status": "active",
+      "updated_at": "2026-09-16T00:00:00Z",
+      "version": "1.0.0"
+    },
+    {
+      "id": "SRC-GEO-E2E-REFUND",
+      "path": "evidence/sources/src-e2e-refund.md",
+      "refs": [
+        "KBASE-GEO-E2E-2BB19816EE72",
+        "MER-MYYSHOP-001"
+      ],
+      "status": "active",
+      "updated_at": "2026-09-16T00:00:00Z",
+      "version": "1.0.0"
+    },
+    {
+      "id": "SRC-GEO-E2E-VOICE",
+      "path": "evidence/sources/src-e2e-voice.md",
+      "refs": [
+        "KBASE-GEO-E2E-2BB19816EE72",
+        "MER-MYYSHOP-001"
+      ],
+      "status": "active",
+      "updated_at": "2026-09-16T00:00:00Z",
+      "version": "1.0.0"
+    },
+    {
+      "id": "SRC-GEO-SITE-C1-OFFICIAL",
+      "path": "evidence/sources/src-geo-site-c1-official.md",
+      "refs": [
+        "KBASE-GEO-E2E-2BB19816EE72",
+        "MER-MYYSHOP-001"
+      ],
+      "status": "active",
+      "updated_at": "2026-09-16T00:00:00Z",
+      "version": "1.0.0"
+    },
+    {
+      "id": "SRC-GEO-SITE-C1-OWN",
+      "path": "evidence/sources/src-geo-site-c1-own.md",
+      "refs": [
+        "KBASE-GEO-E2E-2BB19816EE72",
+        "MER-MYYSHOP-001"
+      ],
+      "status": "active",
+      "updated_at": "2026-09-16T00:00:00Z",
+      "version": "1.0.0"
+    },
+    {
+      "id": "SRC-GEO-SITE-C1-THIRD-PARTY",
+      "path": "evidence/sources/src-geo-site-c1-third-party.md",
+      "refs": [
+        "KBASE-GEO-E2E-2BB19816EE72",
+        "MER-MYYSHOP-001"
+      ],
+      "status": "active",
+      "updated_at": "2026-09-16T00:00:00Z",
+      "version": "1.0.0"
+    },
+    {
+      "id": "SRC-GEO-SITE-C2-OFFICIAL",
+      "path": "evidence/sources/src-geo-site-c2-official.md",
+      "refs": [
+        "KBASE-GEO-E2E-2BB19816EE72",
+        "MER-MYYSHOP-001"
+      ],
+      "status": "active",
+      "updated_at": "2026-09-30T00:00:00.000Z",
+      "version": "1.0.0"
+    },
+    {
+      "id": "SRC-GEO-SITE-C2-OWN",
+      "path": "evidence/sources/src-geo-site-c2-own.md",
+      "refs": [
+        "KBASE-GEO-E2E-2BB19816EE72",
+        "MER-MYYSHOP-001"
+      ],
+      "status": "active",
+      "updated_at": "2026-09-30T00:00:00.000Z",
+      "version": "1.0.0"
+    },
+    {
+      "id": "SRC-GEO-SITE-C2-THIRD-PARTY",
+      "path": "evidence/sources/src-geo-site-c2-third-party.md",
+      "refs": [
+        "KBASE-GEO-E2E-2BB19816EE72",
+        "MER-MYYSHOP-001"
+      ],
+      "status": "active",
+      "updated_at": "2026-09-30T00:00:00.000Z",
+      "version": "1.0.0"
+    },
+    {
+      "id": "SRC-QINPUT-26E9601953DD31494C5C",
+      "path": "evidence/sources/src-qinput-26e9601953dd31494c5c.md",
+      "refs": [
+        "KBASE-GEO-E2E-2BB19816EE72",
+        "MER-MYYSHOP-001"
+      ],
+      "status": "active",
+      "updated_at": "2026-09-15T17:44:36.859Z",
+      "version": "1.0.0"
+    },
+    {
+      "id": "SRC-QINPUT-B4A7F3A49879D5F3DE0E",
+      "path": "evidence/sources/src-qinput-b4a7f3a49879d5f3de0e.md",
+      "refs": [
+        "KBASE-GEO-E2E-2BB19816EE72",
+        "MER-MYYSHOP-001"
+      ],
+      "status": "active",
+      "updated_at": "2026-09-15T17:44:26.642Z",
+      "version": "1.0.0"
+    },
+    {
+      "id": "SRC-QINPUT-C247D5A12766731ADE4B",
+      "path": "evidence/sources/src-qinput-c247d5a12766731ade4b.md",
+      "refs": [
+        "KBASE-GEO-E2E-2BB19816EE72",
+        "MER-MYYSHOP-001"
+      ],
+      "status": "active",
+      "updated_at": "2026-09-15T18:50:06.012Z",
+      "version": "1.0.0"
+    }
+  ],
+  "record_type": "source",
+  "schema_version": "1.0.0"
+}

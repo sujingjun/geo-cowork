@@ -34,7 +34,9 @@ import {
   walkMarkdownFiles,
   writeCreateOnly,
 } from './lib/workspace-paths.mjs';
+const JOURNEY_COMMANDS = ['start', 'continue', 'inbox', 'apply-feedback', 'report'];
 const COMMANDS = new Set([
+  ...JOURNEY_COMMANDS,
   'prepare-development-workspace', 'create-cycle', 'advance',
   'assemble-review', 'trace', 'validate', 'propose-cycle-two', 'apply-goal-selection',
 ]);
@@ -91,7 +93,7 @@ function byType(entries, type) {
   return entries.filter((entry) => entry.record_type === type);
 }
 
-async function createCycle(workspace, plan) {
+export async function createCycle(workspace, plan) {
   const root = path.resolve(workspace);
   const validation = await validateLifecycleWorkspace({
     workspace: root,
@@ -349,7 +351,7 @@ async function advance(workspace, plan, cycleId) {
   };
 }
 
-async function completeReviewPlan(root, request) {
+export async function completeReviewPlan(root, request) {
   const cycle = await readCycle(root, request.cycle_ref);
   if (!cycle) {
     const error = new Error('Cycle 不存在'); error.code = 'REVIEW_PRE_CUTOFF_INCOMPLETE'; throw error;
@@ -433,18 +435,20 @@ async function main() {
   try {
     const args = parseArgs(process.argv.slice(2));
     if (args.help) {
-      console.log('geo-lifecycle commands: prepare-development-workspace create-cycle advance assemble-review trace validate propose-cycle-two apply-goal-selection');
+      console.log('geo-lifecycle commands: start continue inbox apply-feedback report prepare-development-workspace create-cycle advance assemble-review trace validate propose-cycle-two apply-goal-selection');
       return;
     }
-    assertNetworkDisabled(args.command);
-    const result = await execute(args);
+    if (!JOURNEY_COMMANDS.includes(args.command)) assertNetworkDisabled(args.command);
+    const result = JOURNEY_COMMANDS.includes(args.command)
+      ? await (await import('./lib/journey-entrypoints.mjs')).executeKnowledgeJourney(args)
+      : await execute(args);
     console.log(JSON.stringify(result, null, 2));
     if (Array.isArray(result.errors) && result.errors.length > 0) process.exitCode = 1;
   } catch (error) {
     console.error(JSON.stringify({
       error: error.code ?? 'M6_LIFECYCLE_FAILED',
       message: error.message,
-      diagnostics: error.diagnostics ?? [],
+      diagnostics: error.diagnostics ?? error.fields?.map(field => ({field})) ?? [],
     }));
     process.exitCode = exitCode(error);
   }

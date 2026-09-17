@@ -1,0 +1,60 @@
+{
+  "artifact_entries": [
+    {
+      "entry_key": "29b80c13462c2bf27cea3a2d3b7304ea82f99810f2c555f89e27cd2feb9070be",
+      "media_type": "application/json",
+      "role": "measurement_contract",
+      "snapshot_path": "outputs/snapshots/cis-geo-c2-review-decided/artifacts/measurement-contract.json",
+      "snapshot_sha256": "38c1980f471f579564f81aff27132a5682cb647f38f19c0021698e39b4b41967",
+      "source_path": "execution/contracts/measurement-contract.json",
+      "source_sha256": "38c1980f471f579564f81aff27132a5682cb647f38f19c0021698e39b4b41967"
+    },
+    {
+      "entry_key": "b35ad97e2f1ff09e44c7df9ea0e108955d8c48f895856dfc4ef059d34bce459e",
+      "media_type": "text/plain",
+      "role": "supporting_artifact",
+      "snapshot_path": "outputs/snapshots/cis-geo-c2-review-decided/artifacts/OWNER-C2-CYCLE-REVIEW.md",
+      "snapshot_sha256": "0bc1ccfac0fd10e0885a9828de7bb201344a15fc208b52380068d7eb73fcca1c",
+      "source_path": "reviews/packages/OWNER-C2-CYCLE-REVIEW.md",
+      "source_sha256": "0bc1ccfac0fd10e0885a9828de7bb201344a15fc208b52380068d7eb73fcca1c"
+    },
+    {
+      "entry_key": "bfae737aba81166cca5022dec0fd46f0aa0f828c616aa11031fd73523437cffb",
+      "media_type": "application/json",
+      "role": "supporting_artifact",
+      "snapshot_path": "outputs/snapshots/cis-geo-c2-review-decided/artifacts/c918e386790e-OWNER-C2-CYCLE-REVIEW.json",
+      "snapshot_sha256": "c55d6bc8ed0669d64467544832f7c0857fc4f12dfeeb5a35e0d47b581807496a",
+      "source_path": "reviews/decisions/OWNER-C2-CYCLE-REVIEW.json",
+      "source_sha256": "c55d6bc8ed0669d64467544832f7c0857fc4f12dfeeb5a35e0d47b581807496a"
+    },
+    {
+      "entry_key": "f70bd0d230e68505091b7371756ea8aef480ec87a1fcf6dc06e02314a6dcf553",
+      "media_type": "application/json",
+      "role": "supporting_artifact",
+      "snapshot_path": "outputs/snapshots/cis-geo-c2-review-decided/artifacts/29f85058fd74-OWNER-C2-CYCLE-REVIEW.json",
+      "snapshot_sha256": "2d57ecc58762ce78ef8ae8c1edc512a0969f5a70a37e55339d3b015a08070931",
+      "source_path": "reviews/packages/OWNER-C2-CYCLE-REVIEW.json",
+      "source_sha256": "2d57ecc58762ce78ef8ae8c1edc512a0969f5a70a37e55339d3b015a08070931"
+    }
+  ],
+  "base_freeze_snapshot_version": null,
+  "fingerprint": "a699bf8779e6beb3e691033738967eeb86dcb8b610bc5e0338dbf533ff627d2d",
+  "pre_review_entry_keys": [],
+  "pre_review_transition_snapshot_versions": [],
+  "schema_version": "cycle-input-snapshot/1.0.0",
+  "snapshot_id": "CIS-GEO-C2-REVIEW-DECIDED",
+  "snapshot_kind": "transition",
+  "source_entries": [
+    {
+      "content_sha256": "a91bf44ac9772d74cee5f86ed8c7be51656615a5634d287276bbb52d597ed43b",
+      "entry_key": "93b81c26f6cc11d5bdac9a92354a36fe1c1478af5fea5dbff67231a335f09e67",
+      "file_sha256": "282a16ffe0f4974d9fd5239b3fdee37ccc15df0fd739b1c532db7685853bc8dd",
+      "object_id": "CRV-GEO-C2-DECIDED",
+      "object_path": "cycles/m6/reviews/crv-geo-c2-decided.md",
+      "object_version": "1.0.0",
+      "record_type": "cycle_review",
+      "snapshot_path": "outputs/snapshots/cis-geo-c2-review-decided/objects/cycles/m6/reviews/crv-geo-c2-decided.md",
+      "snapshot_sha256": "282a16ffe0f4974d9fd5239b3fdee37ccc15df0fd739b1c532db7685853bc8dd"
+    }
+  ]
+}

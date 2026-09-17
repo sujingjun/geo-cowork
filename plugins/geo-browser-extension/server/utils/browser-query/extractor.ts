@@ -1,44 +1,23 @@
 import type { BrowserExtractor } from '../../../shared/types/browser-query'
-import { sha256 } from './canonical'
-import { BrowserQueryError } from './errors'
+import { EXTRACTION_PROMPT, extractAnswer, modelHash, resolveModelConfig } from '../../../../geo-expert/scripts/lib/model-client.mjs'
+import { extractionOutputSchema } from './schemas'
 
-const PROMPT = 'Extract answer text, structure, citation occurrences, neutral annotations and warnings. Do not infer GEO claims or business conclusions.'
-
-export function createBrowserExtractor(mode: string | undefined): BrowserExtractor {
-  const profile = {
-    provider: mode === 'fake' ? 'fake' : 'disabled',
-    model: mode === 'fake' ? 'fixture-extractor-v1' : 'none',
-    promptVersion: 'browser-query-extract-v1',
-    promptSha256: sha256(PROMPT),
-    schemaVersion: 'geo-browser-extraction-result-v1' as const
-  }
-  if (mode !== 'fake') {
-    return {
-      profile,
-      async extract() {
-        throw new BrowserQueryError(
-          'EXTRACTION_MODEL_FAILED',
-          'No extractor is configured; real model use requires separate authorization'
-        )
-      }
-    }
-  }
+export function createBrowserExtractor(provider?: string, model?: string): BrowserExtractor {
+  const selected = provider ?? process.env.GEO_MODEL_PROVIDER ?? 'deepseek'
+  const selectedModel = model ?? process.env[selected === 'deepseek' ? 'DEEPSEEK_MODEL' : 'OPENAI_MODEL'] ?? ''
   return {
-    profile,
+    profile: {
+      provider: selected, model: selectedModel,
+      promptVersion: 'browser-query-extract-v2', promptSha256: modelHash(EXTRACTION_PROMPT),
+      schemaVersion: 'geo-browser-extraction-result-v1'
+    },
     async extract(input) {
-      return {
-        answer: {
-          text: input.answerText,
-          html_structure_summary: input.safeHtmlText === input.answerText
-            ? 'text-only answer root'
-            : 'answer root with structured HTML',
-          refusal: input.outcome === 'refusal',
-          completeness: input.answerText.trim() ? 'complete' : 'unknown'
-        },
-        citations: input.citations,
-        platform_annotations: [],
-        warnings: []
-      }
+      resolveModelConfig({ provider: selected, model: selectedModel })
+      const result = await extractAnswer(input, {
+        provider: selected, model: selectedModel,
+        auditDir: process.env.GEO_MODEL_AUDIT_DIR ?? '.data/model-calls'
+      })
+      return { output: extractionOutputSchema.parse(result.output), audit: result.audit }
     }
   }
 }

@@ -1,0 +1,2155 @@
+{
+  "objects": [
+    {
+      "id": "RUN-GEO-ANALYTICS-C1",
+      "path": "runs/RUN-GEO-ANALYTICS-C1/run.md",
+      "refs": [
+        "CYC-GEO-E2E-C1",
+        "GOAL-GEO-E2E-C1",
+        "KBASE-GEO-E2E-377EC2E00B68",
+        "MER-MYYSHOP-001"
+      ],
+      "status": "completed",
+      "updated_at": "2026-09-25T00:00:00.000Z",
+      "version": "1.0.1"
+    },
+    {
+      "id": "RUN-GEO-ANALYTICS-C2",
+      "path": "runs/RUN-GEO-ANALYTICS-C2/run.md",
+      "refs": [
+        "CYC-GEO-E2E-C2",
+        "GOAL-GEO-E2E-C2",
+        "KBASE-GEO-E2E-377EC2E00B68",
+        "MER-MYYSHOP-001"
+      ],
+      "status": "completed",
+      "updated_at": "2026-10-09T00:00:00.000Z",
+      "version": "1.0.1"
+    },
+    {
+      "id": "RUN-GEO-C1-AFTER-Q1-CHATGPT",
+      "path": "runs/RUN-GEO-C1-AFTER-Q1-CHATGPT/run.md",
+      "refs": [
+        "CPF-GEO-E2E-C1-AFTER-CHATGPT",
+        "KBASE-GEO-E2E-377EC2E00B68",
+        "MER-MYYSHOP-001",
+        "Q-DOES-THE-MYYSHOP-REHEARSAL-GUARANTEE-EN-F889",
+        "QS-GEO-E2E-C1"
+      ],
+      "status": "completed",
+      "updated_at": "2026-09-23T00:00:00.000Z",
+      "version": "1.0.6"
+    },
+    {
+      "id": "RUN-GEO-C1-AFTER-Q1-CLAUDE",
+      "path": "runs/RUN-GEO-C1-AFTER-Q1-CLAUDE/run.md",
+      "refs": [
+        "CPF-GEO-E2E-C1-AFTER-CLAUDE",
+        "KBASE-GEO-E2E-377EC2E00B68",
+        "MER-MYYSHOP-001",
+        "Q-DOES-THE-MYYSHOP-REHEARSAL-GUARANTEE-EN-F889",
+        "QS-GEO-E2E-C1"
+      ],
+      "status": "completed",
+      "updated_at": "2026-09-23T00:00:00.000Z",
+      "version": "1.0.6"
+    },
+    {
+      "id": "RUN-GEO-C1-AFTER-Q1-GEMINI",
+      "path": "runs/RUN-GEO-C1-AFTER-Q1-GEMINI/run.md",
+      "refs": [
+        "CPF-GEO-E2E-C1-AFTER-GEMINI",
+        "KBASE-GEO-E2E-377EC2E00B68",
+        "MER-MYYSHOP-001",
+        "Q-DOES-THE-MYYSHOP-REHEARSAL-GUARANTEE-EN-F889",
+        "QS-GEO-E2E-C1"
+      ],
+      "status": "completed",
+      "updated_at": "2026-09-23T00:00:00.000Z",
+      "version": "1.0.6"
+    },
+    {
+      "id": "RUN-GEO-C1-AFTER-Q1-GOOGLE-AI",
+      "path": "runs/RUN-GEO-C1-AFTER-Q1-GOOGLE-AI/run.md",
+      "refs": [
+        "CPF-GEO-E2E-C1-AFTER-GOOGLE-AI",
+        "KBASE-GEO-E2E-377EC2E00B68",
+        "MER-MYYSHOP-001",
+        "Q-DOES-THE-MYYSHOP-REHEARSAL-GUARANTEE-EN-F889",
+        "QS-GEO-E2E-C1"
+      ],
+      "status": "completed",
+      "updated_at": "2026-09-23T00:00:00.000Z",
+      "version": "1.0.6"
+    },
+    {
+      "id": "RUN-GEO-C1-AFTER-Q1-PERPLEXITY",
+      "path": "runs/RUN-GEO-C1-AFTER-Q1-PERPLEXITY/run.md",
+      "refs": [
+        "CPF-GEO-E2E-C1-AFTER-PERPLEXITY",
+        "KBASE-GEO-E2E-377EC2E00B68",
+        "MER-MYYSHOP-001",
+        "Q-DOES-THE-MYYSHOP-REHEARSAL-GUARANTEE-EN-F889",
+        "QS-GEO-E2E-C1"
+      ],
+      "status": "completed",
+      "updated_at": "2026-09-23T00:00:00.000Z",
+      "version": "1.0.6"
+    },
+    {
+      "id": "RUN-GEO-C1-AFTER-Q2-CHATGPT",
+      "path": "runs/RUN-GEO-C1-AFTER-Q2-CHATGPT/run.md",
+      "refs": [
+        "CPF-GEO-E2E-C1-AFTER-CHATGPT",
+        "KBASE-GEO-E2E-377EC2E00B68",
+        "MER-MYYSHOP-001",
+        "Q-HOW-CAN-I-COMPARE-THE-EN-B48D",
+        "QS-GEO-E2E-C1"
+      ],
+      "status": "completed",
+      "updated_at": "2026-09-23T00:00:00.000Z",
+      "version": "1.0.6"
+    },
+    {
+      "id": "RUN-GEO-C1-AFTER-Q2-CLAUDE",
+      "path": "runs/RUN-GEO-C1-AFTER-Q2-CLAUDE/run.md",
+      "refs": [
+        "CPF-GEO-E2E-C1-AFTER-CLAUDE",
+        "KBASE-GEO-E2E-377EC2E00B68",
+        "MER-MYYSHOP-001",
+        "Q-HOW-CAN-I-COMPARE-THE-EN-B48D",
+        "QS-GEO-E2E-C1"
+      ],
+      "status": "completed",
+      "updated_at": "2026-09-23T00:00:00.000Z",
+      "version": "1.0.6"
+    },
+    {
+      "id": "RUN-GEO-C1-AFTER-Q2-GEMINI",
+      "path": "runs/RUN-GEO-C1-AFTER-Q2-GEMINI/run.md",
+      "refs": [
+        "CPF-GEO-E2E-C1-AFTER-GEMINI",
+        "KBASE-GEO-E2E-377EC2E00B68",
+        "MER-MYYSHOP-001",
+        "Q-HOW-CAN-I-COMPARE-THE-EN-B48D",
+        "QS-GEO-E2E-C1"
+      ],
+      "status": "completed",
+      "updated_at": "2026-09-23T00:00:00.000Z",
+      "version": "1.0.6"
+    },
+    {
+      "id": "RUN-GEO-C1-AFTER-Q2-GOOGLE-AI",
+      "path": "runs/RUN-GEO-C1-AFTER-Q2-GOOGLE-AI/run.md",
+      "refs": [
+        "CPF-GEO-E2E-C1-AFTER-GOOGLE-AI",
+        "KBASE-GEO-E2E-377EC2E00B68",
+        "MER-MYYSHOP-001",
+        "Q-HOW-CAN-I-COMPARE-THE-EN-B48D",
+        "QS-GEO-E2E-C1"
+      ],
+      "status": "completed",
+      "updated_at": "2026-09-23T00:00:00.000Z",
+      "version": "1.0.6"
+    },
+    {
+      "id": "RUN-GEO-C1-AFTER-Q2-PERPLEXITY",
+      "path": "runs/RUN-GEO-C1-AFTER-Q2-PERPLEXITY/run.md",
+      "refs": [
+        "CPF-GEO-E2E-C1-AFTER-PERPLEXITY",
+        "KBASE-GEO-E2E-377EC2E00B68",
+        "MER-MYYSHOP-001",
+        "Q-HOW-CAN-I-COMPARE-THE-EN-B48D",
+        "QS-GEO-E2E-C1"
+      ],
+      "status": "completed",
+      "updated_at": "2026-09-23T00:00:00.000Z",
+      "version": "1.0.6"
+    },
+    {
+      "id": "RUN-GEO-C1-AFTER-Q3-CHATGPT",
+      "path": "runs/RUN-GEO-C1-AFTER-Q3-CHATGPT/run.md",
+      "refs": [
+        "CPF-GEO-E2E-C1-AFTER-CHATGPT",
+        "KBASE-GEO-E2E-377EC2E00B68",
+        "MER-MYYSHOP-001",
+        "Q-WHAT-ARE-THE-MYYSHOP-REHEARSAL-EN-3BC4",
+        "QS-GEO-E2E-C1"
+      ],
+      "status": "completed",
+      "updated_at": "2026-09-23T00:00:00.000Z",
+      "version": "1.0.6"
+    },
+    {
+      "id": "RUN-GEO-C1-AFTER-Q3-CLAUDE",
+      "path": "runs/RUN-GEO-C1-AFTER-Q3-CLAUDE/run.md",
+      "refs": [
+        "CPF-GEO-E2E-C1-AFTER-CLAUDE",
+        "KBASE-GEO-E2E-377EC2E00B68",
+        "MER-MYYSHOP-001",
+        "Q-WHAT-ARE-THE-MYYSHOP-REHEARSAL-EN-3BC4",
+        "QS-GEO-E2E-C1"
+      ],
+      "status": "completed",
+      "updated_at": "2026-09-23T00:00:00.000Z",
+      "version": "1.0.6"
+    },
+    {
+      "id": "RUN-GEO-C1-AFTER-Q3-GEMINI",
+      "path": "runs/RUN-GEO-C1-AFTER-Q3-GEMINI/run.md",
+      "refs": [
+        "CPF-GEO-E2E-C1-AFTER-GEMINI",
+        "KBASE-GEO-E2E-377EC2E00B68",
+        "MER-MYYSHOP-001",
+        "Q-WHAT-ARE-THE-MYYSHOP-REHEARSAL-EN-3BC4",
+        "QS-GEO-E2E-C1"
+      ],
+      "status": "completed",
+      "updated_at": "2026-09-23T00:00:00.000Z",
+      "version": "1.0.6"
+    },
+    {
+      "id": "RUN-GEO-C1-AFTER-Q3-GOOGLE-AI",
+      "path": "runs/RUN-GEO-C1-AFTER-Q3-GOOGLE-AI/run.md",
+      "refs": [
+        "CPF-GEO-E2E-C1-AFTER-GOOGLE-AI",
+        "KBASE-GEO-E2E-377EC2E00B68",
+        "MER-MYYSHOP-001",
+        "Q-WHAT-ARE-THE-MYYSHOP-REHEARSAL-EN-3BC4",
+        "QS-GEO-E2E-C1"
+      ],
+      "status": "completed",
+      "updated_at": "2026-09-23T00:00:00.000Z",
+      "version": "1.0.6"
+    },
+    {
+      "id": "RUN-GEO-C1-AFTER-Q3-PERPLEXITY",
+      "path": "runs/RUN-GEO-C1-AFTER-Q3-PERPLEXITY/run.md",
+      "refs": [
+        "CPF-GEO-E2E-C1-AFTER-PERPLEXITY",
+        "KBASE-GEO-E2E-377EC2E00B68",
+        "MER-MYYSHOP-001",
+        "Q-WHAT-ARE-THE-MYYSHOP-REHEARSAL-EN-3BC4",
+        "QS-GEO-E2E-C1"
+      ],
+      "status": "completed",
+      "updated_at": "2026-09-23T00:00:00.000Z",
+      "version": "1.0.6"
+    },
+    {
+      "id": "RUN-GEO-C1-AFTER-Q4-CHATGPT",
+      "path": "runs/RUN-GEO-C1-AFTER-Q4-CHATGPT/run.md",
+      "refs": [
+        "CPF-GEO-E2E-C1-AFTER-CHATGPT",
+        "KBASE-GEO-E2E-377EC2E00B68",
+        "MER-MYYSHOP-001",
+        "Q-WHAT-CAPABILITIES-DOES-THE-MYYSHOP-EN-2DE3",
+        "QS-GEO-E2E-C1"
+      ],
+      "status": "completed",
+      "updated_at": "2026-09-23T00:00:00.000Z",
+      "version": "1.0.6"
+    },
+    {
+      "id": "RUN-GEO-C1-AFTER-Q4-CLAUDE",
+      "path": "runs/RUN-GEO-C1-AFTER-Q4-CLAUDE/run.md",
+      "refs": [
+        "CPF-GEO-E2E-C1-AFTER-CLAUDE",
+        "KBASE-GEO-E2E-377EC2E00B68",
+        "MER-MYYSHOP-001",
+        "Q-WHAT-CAPABILITIES-DOES-THE-MYYSHOP-EN-2DE3",
+        "QS-GEO-E2E-C1"
+      ],
+      "status": "completed",
+      "updated_at": "2026-09-23T00:00:00.000Z",
+      "version": "1.0.6"
+    },
+    {
+      "id": "RUN-GEO-C1-AFTER-Q4-GEMINI",
+      "path": "runs/RUN-GEO-C1-AFTER-Q4-GEMINI/run.md",
+      "refs": [
+        "CPF-GEO-E2E-C1-AFTER-GEMINI",
+        "KBASE-GEO-E2E-377EC2E00B68",
+        "MER-MYYSHOP-001",
+        "Q-WHAT-CAPABILITIES-DOES-THE-MYYSHOP-EN-2DE3",
+        "QS-GEO-E2E-C1"
+      ],
+      "status": "completed",
+      "updated_at": "2026-09-23T00:00:00.000Z",
+      "version": "1.0.6"
+    },
+    {
+      "id": "RUN-GEO-C1-AFTER-Q4-GOOGLE-AI",
+      "path": "runs/RUN-GEO-C1-AFTER-Q4-GOOGLE-AI/run.md",
+      "refs": [
+        "CPF-GEO-E2E-C1-AFTER-GOOGLE-AI",
+        "KBASE-GEO-E2E-377EC2E00B68",
+        "MER-MYYSHOP-001",
+        "Q-WHAT-CAPABILITIES-DOES-THE-MYYSHOP-EN-2DE3",
+        "QS-GEO-E2E-C1"
+      ],
+      "status": "completed",
+      "updated_at": "2026-09-23T00:00:00.000Z",
+      "version": "1.0.6"
+    },
+    {
+      "id": "RUN-GEO-C1-AFTER-Q4-PERPLEXITY",
+      "path": "runs/RUN-GEO-C1-AFTER-Q4-PERPLEXITY/run.md",
+      "refs": [
+        "CPF-GEO-E2E-C1-AFTER-PERPLEXITY",
+        "KBASE-GEO-E2E-377EC2E00B68",
+        "MER-MYYSHOP-001",
+        "Q-WHAT-CAPABILITIES-DOES-THE-MYYSHOP-EN-2DE3",
+        "QS-GEO-E2E-C1"
+      ],
+      "status": "completed",
+      "updated_at": "2026-09-23T00:00:00.000Z",
+      "version": "1.0.6"
+    },
+    {
+      "id": "RUN-GEO-C1-AFTER-Q5-CHATGPT",
+      "path": "runs/RUN-GEO-C1-AFTER-Q5-CHATGPT/run.md",
+      "refs": [
+        "CPF-GEO-E2E-C1-AFTER-CHATGPT",
+        "KBASE-GEO-E2E-377EC2E00B68",
+        "MER-MYYSHOP-001",
+        "Q-WHAT-IS-THE-MYYSHOP-REHEARSAL-EN-2B21",
+        "QS-GEO-E2E-C1"
+      ],
+      "status": "completed",
+      "updated_at": "2026-09-23T00:00:00.000Z",
+      "version": "1.0.6"
+    },
+    {
+      "id": "RUN-GEO-C1-AFTER-Q5-CLAUDE",
+      "path": "runs/RUN-GEO-C1-AFTER-Q5-CLAUDE/run.md",
+      "refs": [
+        "CPF-GEO-E2E-C1-AFTER-CLAUDE",
+        "KBASE-GEO-E2E-377EC2E00B68",
+        "MER-MYYSHOP-001",
+        "Q-WHAT-IS-THE-MYYSHOP-REHEARSAL-EN-2B21",
+        "QS-GEO-E2E-C1"
+      ],
+      "status": "completed",
+      "updated_at": "2026-09-23T00:00:00.000Z",
+      "version": "1.0.6"
+    },
+    {
+      "id": "RUN-GEO-C1-AFTER-Q5-GEMINI",
+      "path": "runs/RUN-GEO-C1-AFTER-Q5-GEMINI/run.md",
+      "refs": [
+        "CPF-GEO-E2E-C1-AFTER-GEMINI",
+        "KBASE-GEO-E2E-377EC2E00B68",
+        "MER-MYYSHOP-001",
+        "Q-WHAT-IS-THE-MYYSHOP-REHEARSAL-EN-2B21",
+        "QS-GEO-E2E-C1"
+      ],
+      "status": "completed",
+      "updated_at": "2026-09-23T00:00:00.000Z",
+      "version": "1.0.6"
+    },
+    {
+      "id": "RUN-GEO-C1-AFTER-Q5-GOOGLE-AI",
+      "path": "runs/RUN-GEO-C1-AFTER-Q5-GOOGLE-AI/run.md",
+      "refs": [
+        "CPF-GEO-E2E-C1-AFTER-GOOGLE-AI",
+        "KBASE-GEO-E2E-377EC2E00B68",
+        "MER-MYYSHOP-001",
+        "Q-WHAT-IS-THE-MYYSHOP-REHEARSAL-EN-2B21",
+        "QS-GEO-E2E-C1"
+      ],
+      "status": "completed",
+      "updated_at": "2026-09-23T00:00:00.000Z",
+      "version": "1.0.6"
+    },
+    {
+      "id": "RUN-GEO-C1-AFTER-Q5-PERPLEXITY",
+      "path": "runs/RUN-GEO-C1-AFTER-Q5-PERPLEXITY/run.md",
+      "refs": [
+        "CPF-GEO-E2E-C1-AFTER-PERPLEXITY",
+        "KBASE-GEO-E2E-377EC2E00B68",
+        "MER-MYYSHOP-001",
+        "Q-WHAT-IS-THE-MYYSHOP-REHEARSAL-EN-2B21",
+        "QS-GEO-E2E-C1"
+      ],
+      "status": "completed",
+      "updated_at": "2026-09-23T00:00:00.000Z",
+      "version": "1.0.6"
+    },
+    {
+      "id": "RUN-GEO-C1-AFTER-Q6-CHATGPT",
+      "path": "runs/RUN-GEO-C1-AFTER-Q6-CHATGPT/run.md",
+      "refs": [
+        "CPF-GEO-E2E-C1-AFTER-CHATGPT",
+        "KBASE-GEO-E2E-377EC2E00B68",
+        "MER-MYYSHOP-001",
+        "Q-WHO-IS-ELIGIBLE-TO-USE-EN-1531",
+        "QS-GEO-E2E-C1"
+      ],
+      "status": "completed",
+      "updated_at": "2026-09-23T00:00:00.000Z",
+      "version": "1.0.6"
+    },
+    {
+      "id": "RUN-GEO-C1-AFTER-Q6-CLAUDE",
+      "path": "runs/RUN-GEO-C1-AFTER-Q6-CLAUDE/run.md",
+      "refs": [
+        "CPF-GEO-E2E-C1-AFTER-CLAUDE",
+        "KBASE-GEO-E2E-377EC2E00B68",
+        "MER-MYYSHOP-001",
+        "Q-WHO-IS-ELIGIBLE-TO-USE-EN-1531",
+        "QS-GEO-E2E-C1"
+      ],
+      "status": "completed",
+      "updated_at": "2026-09-23T00:00:00.000Z",
+      "version": "1.0.6"
+    },
+    {
+      "id": "RUN-GEO-C1-AFTER-Q6-GEMINI",
+      "path": "runs/RUN-GEO-C1-AFTER-Q6-GEMINI/run.md",
+      "refs": [
+        "CPF-GEO-E2E-C1-AFTER-GEMINI",
+        "KBASE-GEO-E2E-377EC2E00B68",
+        "MER-MYYSHOP-001",
+        "Q-WHO-IS-ELIGIBLE-TO-USE-EN-1531",
+        "QS-GEO-E2E-C1"
+      ],
+      "status": "completed",
+      "updated_at": "2026-09-23T00:00:00.000Z",
+      "version": "1.0.6"
+    },
+    {
+      "id": "RUN-GEO-C1-AFTER-Q6-GOOGLE-AI",
+      "path": "runs/RUN-GEO-C1-AFTER-Q6-GOOGLE-AI/run.md",
+      "refs": [
+        "CPF-GEO-E2E-C1-AFTER-GOOGLE-AI",
+        "KBASE-GEO-E2E-377EC2E00B68",
+        "MER-MYYSHOP-001",
+        "Q-WHO-IS-ELIGIBLE-TO-USE-EN-1531",
+        "QS-GEO-E2E-C1"
+      ],
+      "status": "completed",
+      "updated_at": "2026-09-23T00:00:00.000Z",
+      "version": "1.0.6"
+    },
+    {
+      "id": "RUN-GEO-C1-AFTER-Q6-PERPLEXITY",
+      "path": "runs/RUN-GEO-C1-AFTER-Q6-PERPLEXITY/run.md",
+      "refs": [
+        "CPF-GEO-E2E-C1-AFTER-PERPLEXITY",
+        "KBASE-GEO-E2E-377EC2E00B68",
+        "MER-MYYSHOP-001",
+        "Q-WHO-IS-ELIGIBLE-TO-USE-EN-1531",
+        "QS-GEO-E2E-C1"
+      ],
+      "status": "completed",
+      "updated_at": "2026-09-23T00:00:00.000Z",
+      "version": "1.0.6"
+    },
+    {
+      "id": "RUN-GEO-C1-BASE-Q1-CHATGPT",
+      "path": "runs/RUN-GEO-C1-BASE-Q1-CHATGPT/run.md",
+      "refs": [
+        "CPF-GEO-E2E-C1-BASE-CHATGPT",
+        "KBASE-GEO-E2E-377EC2E00B68",
+        "MER-MYYSHOP-001",
+        "Q-DOES-THE-MYYSHOP-REHEARSAL-GUARANTEE-EN-F889",
+        "QS-GEO-E2E-C1"
+      ],
+      "status": "completed",
+      "updated_at": "2026-09-16T00:00:00.000Z",
+      "version": "1.0.6"
+    },
+    {
+      "id": "RUN-GEO-C1-BASE-Q1-CLAUDE",
+      "path": "runs/RUN-GEO-C1-BASE-Q1-CLAUDE/run.md",
+      "refs": [
+        "CPF-GEO-E2E-C1-BASE-CLAUDE",
+        "KBASE-GEO-E2E-377EC2E00B68",
+        "MER-MYYSHOP-001",
+        "Q-DOES-THE-MYYSHOP-REHEARSAL-GUARANTEE-EN-F889",
+        "QS-GEO-E2E-C1"
+      ],
+      "status": "completed",
+      "updated_at": "2026-09-16T00:00:00.000Z",
+      "version": "1.0.6"
+    },
+    {
+      "id": "RUN-GEO-C1-BASE-Q1-GEMINI",
+      "path": "runs/RUN-GEO-C1-BASE-Q1-GEMINI/run.md",
+      "refs": [
+        "CPF-GEO-E2E-C1-BASE-GEMINI",
+        "KBASE-GEO-E2E-377EC2E00B68",
+        "MER-MYYSHOP-001",
+        "Q-DOES-THE-MYYSHOP-REHEARSAL-GUARANTEE-EN-F889",
+        "QS-GEO-E2E-C1"
+      ],
+      "status": "completed",
+      "updated_at": "2026-09-16T00:00:00.000Z",
+      "version": "1.0.6"
+    },
+    {
+      "id": "RUN-GEO-C1-BASE-Q1-GOOGLE-AI",
+      "path": "runs/RUN-GEO-C1-BASE-Q1-GOOGLE-AI/run.md",
+      "refs": [
+        "CPF-GEO-E2E-C1-BASE-GOOGLE-AI",
+        "KBASE-GEO-E2E-377EC2E00B68",
+        "MER-MYYSHOP-001",
+        "Q-DOES-THE-MYYSHOP-REHEARSAL-GUARANTEE-EN-F889",
+        "QS-GEO-E2E-C1"
+      ],
+      "status": "completed",
+      "updated_at": "2026-09-16T00:00:00.000Z",
+      "version": "1.0.6"
+    },
+    {
+      "id": "RUN-GEO-C1-BASE-Q1-PERPLEXITY",
+      "path": "runs/RUN-GEO-C1-BASE-Q1-PERPLEXITY/run.md",
+      "refs": [
+        "CPF-GEO-E2E-C1-BASE-PERPLEXITY",
+        "KBASE-GEO-E2E-377EC2E00B68",
+        "MER-MYYSHOP-001",
+        "Q-DOES-THE-MYYSHOP-REHEARSAL-GUARANTEE-EN-F889",
+        "QS-GEO-E2E-C1"
+      ],
+      "status": "completed",
+      "updated_at": "2026-09-16T00:00:00.000Z",
+      "version": "1.0.6"
+    },
+    {
+      "id": "RUN-GEO-C1-BASE-Q2-CHATGPT",
+      "path": "runs/RUN-GEO-C1-BASE-Q2-CHATGPT/run.md",
+      "refs": [
+        "CPF-GEO-E2E-C1-BASE-CHATGPT",
+        "KBASE-GEO-E2E-377EC2E00B68",
+        "MER-MYYSHOP-001",
+        "Q-HOW-CAN-I-COMPARE-THE-EN-B48D",
+        "QS-GEO-E2E-C1"
+      ],
+      "status": "completed",
+      "updated_at": "2026-09-16T00:00:00.000Z",
+      "version": "1.0.6"
+    },
+    {
+      "id": "RUN-GEO-C1-BASE-Q2-CLAUDE",
+      "path": "runs/RUN-GEO-C1-BASE-Q2-CLAUDE/run.md",
+      "refs": [
+        "CPF-GEO-E2E-C1-BASE-CLAUDE",
+        "KBASE-GEO-E2E-377EC2E00B68",
+        "MER-MYYSHOP-001",
+        "Q-HOW-CAN-I-COMPARE-THE-EN-B48D",
+        "QS-GEO-E2E-C1"
+      ],
+      "status": "completed",
+      "updated_at": "2026-09-16T00:00:00.000Z",
+      "version": "1.0.6"
+    },
+    {
+      "id": "RUN-GEO-C1-BASE-Q2-GEMINI",
+      "path": "runs/RUN-GEO-C1-BASE-Q2-GEMINI/run.md",
+      "refs": [
+        "CPF-GEO-E2E-C1-BASE-GEMINI",
+        "KBASE-GEO-E2E-377EC2E00B68",
+        "MER-MYYSHOP-001",
+        "Q-HOW-CAN-I-COMPARE-THE-EN-B48D",
+        "QS-GEO-E2E-C1"
+      ],
+      "status": "completed",
+      "updated_at": "2026-09-16T00:00:00.000Z",
+      "version": "1.0.6"
+    },
+    {
+      "id": "RUN-GEO-C1-BASE-Q2-GOOGLE-AI",
+      "path": "runs/RUN-GEO-C1-BASE-Q2-GOOGLE-AI/run.md",
+      "refs": [
+        "CPF-GEO-E2E-C1-BASE-GOOGLE-AI",
+        "KBASE-GEO-E2E-377EC2E00B68",
+        "MER-MYYSHOP-001",
+        "Q-HOW-CAN-I-COMPARE-THE-EN-B48D",
+        "QS-GEO-E2E-C1"
+      ],
+      "status": "completed",
+      "updated_at": "2026-09-16T00:00:00.000Z",
+      "version": "1.0.6"
+    },
+    {
+      "id": "RUN-GEO-C1-BASE-Q2-PERPLEXITY",
+      "path": "runs/RUN-GEO-C1-BASE-Q2-PERPLEXITY/run.md",
+      "refs": [
+        "CPF-GEO-E2E-C1-BASE-PERPLEXITY",
+        "KBASE-GEO-E2E-377EC2E00B68",
+        "MER-MYYSHOP-001",
+        "Q-HOW-CAN-I-COMPARE-THE-EN-B48D",
+        "QS-GEO-E2E-C1"
+      ],
+      "status": "completed",
+      "updated_at": "2026-09-16T00:00:00.000Z",
+      "version": "1.0.6"
+    },
+    {
+      "id": "RUN-GEO-C1-BASE-Q3-CHATGPT",
+      "path": "runs/RUN-GEO-C1-BASE-Q3-CHATGPT/run.md",
+      "refs": [
+        "CPF-GEO-E2E-C1-BASE-CHATGPT",
+        "KBASE-GEO-E2E-377EC2E00B68",
+        "MER-MYYSHOP-001",
+        "Q-WHAT-ARE-THE-MYYSHOP-REHEARSAL-EN-3BC4",
+        "QS-GEO-E2E-C1"
+      ],
+      "status": "completed",
+      "updated_at": "2026-09-16T00:00:00.000Z",
+      "version": "1.0.6"
+    },
+    {
+      "id": "RUN-GEO-C1-BASE-Q3-CLAUDE",
+      "path": "runs/RUN-GEO-C1-BASE-Q3-CLAUDE/run.md",
+      "refs": [
+        "CPF-GEO-E2E-C1-BASE-CLAUDE",
+        "KBASE-GEO-E2E-377EC2E00B68",
+        "MER-MYYSHOP-001",
+        "Q-WHAT-ARE-THE-MYYSHOP-REHEARSAL-EN-3BC4",
+        "QS-GEO-E2E-C1"
+      ],
+      "status": "completed",
+      "updated_at": "2026-09-16T00:00:00.000Z",
+      "version": "1.0.6"
+    },
+    {
+      "id": "RUN-GEO-C1-BASE-Q3-GEMINI",
+      "path": "runs/RUN-GEO-C1-BASE-Q3-GEMINI/run.md",
+      "refs": [
+        "CPF-GEO-E2E-C1-BASE-GEMINI",
+        "KBASE-GEO-E2E-377EC2E00B68",
+        "MER-MYYSHOP-001",
+        "Q-WHAT-ARE-THE-MYYSHOP-REHEARSAL-EN-3BC4",
+        "QS-GEO-E2E-C1"
+      ],
+      "status": "completed",
+      "updated_at": "2026-09-16T00:00:00.000Z",
+      "version": "1.0.6"
+    },
+    {
+      "id": "RUN-GEO-C1-BASE-Q3-GOOGLE-AI",
+      "path": "runs/RUN-GEO-C1-BASE-Q3-GOOGLE-AI/run.md",
+      "refs": [
+        "CPF-GEO-E2E-C1-BASE-GOOGLE-AI",
+        "KBASE-GEO-E2E-377EC2E00B68",
+        "MER-MYYSHOP-001",
+        "Q-WHAT-ARE-THE-MYYSHOP-REHEARSAL-EN-3BC4",
+        "QS-GEO-E2E-C1"
+      ],
+      "status": "completed",
+      "updated_at": "2026-09-16T00:00:00.000Z",
+      "version": "1.0.6"
+    },
+    {
+      "id": "RUN-GEO-C1-BASE-Q3-PERPLEXITY",
+      "path": "runs/RUN-GEO-C1-BASE-Q3-PERPLEXITY/run.md",
+      "refs": [
+        "CPF-GEO-E2E-C1-BASE-PERPLEXITY",
+        "KBASE-GEO-E2E-377EC2E00B68",
+        "MER-MYYSHOP-001",
+        "Q-WHAT-ARE-THE-MYYSHOP-REHEARSAL-EN-3BC4",
+        "QS-GEO-E2E-C1"
+      ],
+      "status": "completed",
+      "updated_at": "2026-09-16T00:00:00.000Z",
+      "version": "1.0.6"
+    },
+    {
+      "id": "RUN-GEO-C1-BASE-Q4-CHATGPT",
+      "path": "runs/RUN-GEO-C1-BASE-Q4-CHATGPT/run.md",
+      "refs": [
+        "CPF-GEO-E2E-C1-BASE-CHATGPT",
+        "KBASE-GEO-E2E-377EC2E00B68",
+        "MER-MYYSHOP-001",
+        "Q-WHAT-CAPABILITIES-DOES-THE-MYYSHOP-EN-2DE3",
+        "QS-GEO-E2E-C1"
+      ],
+      "status": "completed",
+      "updated_at": "2026-09-16T00:00:00.000Z",
+      "version": "1.0.6"
+    },
+    {
+      "id": "RUN-GEO-C1-BASE-Q4-CLAUDE",
+      "path": "runs/RUN-GEO-C1-BASE-Q4-CLAUDE/run.md",
+      "refs": [
+        "CPF-GEO-E2E-C1-BASE-CLAUDE",
+        "KBASE-GEO-E2E-377EC2E00B68",
+        "MER-MYYSHOP-001",
+        "Q-WHAT-CAPABILITIES-DOES-THE-MYYSHOP-EN-2DE3",
+        "QS-GEO-E2E-C1"
+      ],
+      "status": "completed",
+      "updated_at": "2026-09-16T00:00:00.000Z",
+      "version": "1.0.6"
+    },
+    {
+      "id": "RUN-GEO-C1-BASE-Q4-GEMINI",
+      "path": "runs/RUN-GEO-C1-BASE-Q4-GEMINI/run.md",
+      "refs": [
+        "CPF-GEO-E2E-C1-BASE-GEMINI",
+        "KBASE-GEO-E2E-377EC2E00B68",
+        "MER-MYYSHOP-001",
+        "Q-WHAT-CAPABILITIES-DOES-THE-MYYSHOP-EN-2DE3",
+        "QS-GEO-E2E-C1"
+      ],
+      "status": "completed",
+      "updated_at": "2026-09-16T00:00:00.000Z",
+      "version": "1.0.6"
+    },
+    {
+      "id": "RUN-GEO-C1-BASE-Q4-GOOGLE-AI",
+      "path": "runs/RUN-GEO-C1-BASE-Q4-GOOGLE-AI/run.md",
+      "refs": [
+        "CPF-GEO-E2E-C1-BASE-GOOGLE-AI",
+        "KBASE-GEO-E2E-377EC2E00B68",
+        "MER-MYYSHOP-001",
+        "Q-WHAT-CAPABILITIES-DOES-THE-MYYSHOP-EN-2DE3",
+        "QS-GEO-E2E-C1"
+      ],
+      "status": "completed",
+      "updated_at": "2026-09-16T00:00:00.000Z",
+      "version": "1.0.6"
+    },
+    {
+      "id": "RUN-GEO-C1-BASE-Q4-PERPLEXITY",
+      "path": "runs/RUN-GEO-C1-BASE-Q4-PERPLEXITY/run.md",
+      "refs": [
+        "CPF-GEO-E2E-C1-BASE-PERPLEXITY",
+        "KBASE-GEO-E2E-377EC2E00B68",
+        "MER-MYYSHOP-001",
+        "Q-WHAT-CAPABILITIES-DOES-THE-MYYSHOP-EN-2DE3",
+        "QS-GEO-E2E-C1"
+      ],
+      "status": "completed",
+      "updated_at": "2026-09-16T00:00:00.000Z",
+      "version": "1.0.6"
+    },
+    {
+      "id": "RUN-GEO-C1-BASE-Q5-CHATGPT",
+      "path": "runs/RUN-GEO-C1-BASE-Q5-CHATGPT/run.md",
+      "refs": [
+        "CPF-GEO-E2E-C1-BASE-CHATGPT",
+        "KBASE-GEO-E2E-377EC2E00B68",
+        "MER-MYYSHOP-001",
+        "Q-WHAT-IS-THE-MYYSHOP-REHEARSAL-EN-2B21",
+        "QS-GEO-E2E-C1"
+      ],
+      "status": "completed",
+      "updated_at": "2026-09-16T00:00:00.000Z",
+      "version": "1.0.6"
+    },
+    {
+      "id": "RUN-GEO-C1-BASE-Q5-CLAUDE",
+      "path": "runs/RUN-GEO-C1-BASE-Q5-CLAUDE/run.md",
+      "refs": [
+        "CPF-GEO-E2E-C1-BASE-CLAUDE",
+        "KBASE-GEO-E2E-377EC2E00B68",
+        "MER-MYYSHOP-001",
+        "Q-WHAT-IS-THE-MYYSHOP-REHEARSAL-EN-2B21",
+        "QS-GEO-E2E-C1"
+      ],
+      "status": "completed",
+      "updated_at": "2026-09-16T00:00:00.000Z",
+      "version": "1.0.6"
+    },
+    {
+      "id": "RUN-GEO-C1-BASE-Q5-GEMINI",
+      "path": "runs/RUN-GEO-C1-BASE-Q5-GEMINI/run.md",
+      "refs": [
+        "CPF-GEO-E2E-C1-BASE-GEMINI",
+        "KBASE-GEO-E2E-377EC2E00B68",
+        "MER-MYYSHOP-001",
+        "Q-WHAT-IS-THE-MYYSHOP-REHEARSAL-EN-2B21",
+        "QS-GEO-E2E-C1"
+      ],
+      "status": "completed",
+      "updated_at": "2026-09-16T00:00:00.000Z",
+      "version": "1.0.6"
+    },
+    {
+      "id": "RUN-GEO-C1-BASE-Q5-GOOGLE-AI",
+      "path": "runs/RUN-GEO-C1-BASE-Q5-GOOGLE-AI/run.md",
+      "refs": [
+        "CPF-GEO-E2E-C1-BASE-GOOGLE-AI",
+        "KBASE-GEO-E2E-377EC2E00B68",
+        "MER-MYYSHOP-001",
+        "Q-WHAT-IS-THE-MYYSHOP-REHEARSAL-EN-2B21",
+        "QS-GEO-E2E-C1"
+      ],
+      "status": "completed",
+      "updated_at": "2026-09-16T00:00:00.000Z",
+      "version": "1.0.6"
+    },
+    {
+      "id": "RUN-GEO-C1-BASE-Q5-PERPLEXITY",
+      "path": "runs/RUN-GEO-C1-BASE-Q5-PERPLEXITY/run.md",
+      "refs": [
+        "CPF-GEO-E2E-C1-BASE-PERPLEXITY",
+        "KBASE-GEO-E2E-377EC2E00B68",
+        "MER-MYYSHOP-001",
+        "Q-WHAT-IS-THE-MYYSHOP-REHEARSAL-EN-2B21",
+        "QS-GEO-E2E-C1"
+      ],
+      "status": "completed",
+      "updated_at": "2026-09-16T00:00:00.000Z",
+      "version": "1.0.6"
+    },
+    {
+      "id": "RUN-GEO-C1-BASE-Q6-CHATGPT",
+      "path": "runs/RUN-GEO-C1-BASE-Q6-CHATGPT/run.md",
+      "refs": [
+        "CPF-GEO-E2E-C1-BASE-CHATGPT",
+        "KBASE-GEO-E2E-377EC2E00B68",
+        "MER-MYYSHOP-001",
+        "Q-WHO-IS-ELIGIBLE-TO-USE-EN-1531",
+        "QS-GEO-E2E-C1"
+      ],
+      "status": "completed",
+      "updated_at": "2026-09-16T00:00:00.000Z",
+      "version": "1.0.6"
+    },
+    {
+      "id": "RUN-GEO-C1-BASE-Q6-CLAUDE",
+      "path": "runs/RUN-GEO-C1-BASE-Q6-CLAUDE/run.md",
+      "refs": [
+        "CPF-GEO-E2E-C1-BASE-CLAUDE",
+        "KBASE-GEO-E2E-377EC2E00B68",
+        "MER-MYYSHOP-001",
+        "Q-WHO-IS-ELIGIBLE-TO-USE-EN-1531",
+        "QS-GEO-E2E-C1"
+      ],
+      "status": "completed",
+      "updated_at": "2026-09-16T00:00:00.000Z",
+      "version": "1.0.6"
+    },
+    {
+      "id": "RUN-GEO-C1-BASE-Q6-GEMINI",
+      "path": "runs/RUN-GEO-C1-BASE-Q6-GEMINI/run.md",
+      "refs": [
+        "CPF-GEO-E2E-C1-BASE-GEMINI",
+        "KBASE-GEO-E2E-377EC2E00B68",
+        "MER-MYYSHOP-001",
+        "Q-WHO-IS-ELIGIBLE-TO-USE-EN-1531",
+        "QS-GEO-E2E-C1"
+      ],
+      "status": "completed",
+      "updated_at": "2026-09-16T00:00:00.000Z",
+      "version": "1.0.6"
+    },
+    {
+      "id": "RUN-GEO-C1-BASE-Q6-GOOGLE-AI",
+      "path": "runs/RUN-GEO-C1-BASE-Q6-GOOGLE-AI/run.md",
+      "refs": [
+        "CPF-GEO-E2E-C1-BASE-GOOGLE-AI",
+        "KBASE-GEO-E2E-377EC2E00B68",
+        "MER-MYYSHOP-001",
+        "Q-WHO-IS-ELIGIBLE-TO-USE-EN-1531",
+        "QS-GEO-E2E-C1"
+      ],
+      "status": "completed",
+      "updated_at": "2026-09-16T00:00:00.000Z",
+      "version": "1.0.6"
+    },
+    {
+      "id": "RUN-GEO-C1-BASE-Q6-PERPLEXITY",
+      "path": "runs/RUN-GEO-C1-BASE-Q6-PERPLEXITY/run.md",
+      "refs": [
+        "CPF-GEO-E2E-C1-BASE-PERPLEXITY",
+        "KBASE-GEO-E2E-377EC2E00B68",
+        "MER-MYYSHOP-001",
+        "Q-WHO-IS-ELIGIBLE-TO-USE-EN-1531",
+        "QS-GEO-E2E-C1"
+      ],
+      "status": "completed",
+      "updated_at": "2026-09-16T00:00:00.000Z",
+      "version": "1.0.6"
+    },
+    {
+      "id": "RUN-GEO-C2-AFTER-Q1-CHATGPT",
+      "path": "runs/RUN-GEO-C2-AFTER-Q1-CHATGPT/run.md",
+      "refs": [
+        "CPF-GEO-E2E-C2-AFTER-CHATGPT",
+        "KBASE-GEO-E2E-377EC2E00B68",
+        "MER-MYYSHOP-001",
+        "Q-HOW-SHOULD-AN-ELIGIBLE-CREATOR-EN-D279",
+        "QS-GEO-E2E-C2"
+      ],
+      "status": "completed",
+      "updated_at": "2026-10-07T00:00:00.000Z",
+      "version": "1.0.6"
+    },
+    {
+      "id": "RUN-GEO-C2-AFTER-Q1-CLAUDE",
+      "path": "runs/RUN-GEO-C2-AFTER-Q1-CLAUDE/run.md",
+      "refs": [
+        "CPF-GEO-E2E-C2-AFTER-CLAUDE",
+        "KBASE-GEO-E2E-377EC2E00B68",
+        "MER-MYYSHOP-001",
+        "Q-HOW-SHOULD-AN-ELIGIBLE-CREATOR-EN-D279",
+        "QS-GEO-E2E-C2"
+      ],
+      "status": "completed",
+      "updated_at": "2026-10-07T00:00:00.000Z",
+      "version": "1.0.6"
+    },
+    {
+      "id": "RUN-GEO-C2-AFTER-Q1-GEMINI",
+      "path": "runs/RUN-GEO-C2-AFTER-Q1-GEMINI/run.md",
+      "refs": [
+        "CPF-GEO-E2E-C2-AFTER-GEMINI",
+        "KBASE-GEO-E2E-377EC2E00B68",
+        "MER-MYYSHOP-001",
+        "Q-HOW-SHOULD-AN-ELIGIBLE-CREATOR-EN-D279",
+        "QS-GEO-E2E-C2"
+      ],
+      "status": "completed",
+      "updated_at": "2026-10-07T00:00:00.000Z",
+      "version": "1.0.6"
+    },
+    {
+      "id": "RUN-GEO-C2-AFTER-Q1-GOOGLE-AI",
+      "path": "runs/RUN-GEO-C2-AFTER-Q1-GOOGLE-AI/run.md",
+      "refs": [
+        "CPF-GEO-E2E-C2-AFTER-GOOGLE-AI",
+        "KBASE-GEO-E2E-377EC2E00B68",
+        "MER-MYYSHOP-001",
+        "Q-HOW-SHOULD-AN-ELIGIBLE-CREATOR-EN-D279",
+        "QS-GEO-E2E-C2"
+      ],
+      "status": "completed",
+      "updated_at": "2026-10-07T00:00:00.000Z",
+      "version": "1.0.6"
+    },
+    {
+      "id": "RUN-GEO-C2-AFTER-Q1-PERPLEXITY",
+      "path": "runs/RUN-GEO-C2-AFTER-Q1-PERPLEXITY/run.md",
+      "refs": [
+        "CPF-GEO-E2E-C2-AFTER-PERPLEXITY",
+        "KBASE-GEO-E2E-377EC2E00B68",
+        "MER-MYYSHOP-001",
+        "Q-HOW-SHOULD-AN-ELIGIBLE-CREATOR-EN-D279",
+        "QS-GEO-E2E-C2"
+      ],
+      "status": "completed",
+      "updated_at": "2026-10-07T00:00:00.000Z",
+      "version": "1.0.6"
+    },
+    {
+      "id": "RUN-GEO-C2-AFTER-Q2-CHATGPT",
+      "path": "runs/RUN-GEO-C2-AFTER-Q2-CHATGPT/run.md",
+      "refs": [
+        "CPF-GEO-E2E-C2-AFTER-CHATGPT",
+        "KBASE-GEO-E2E-377EC2E00B68",
+        "MER-MYYSHOP-001",
+        "Q-WHAT-ARE-THE-MYYSHOP-REHEARSAL-EN-57D1",
+        "QS-GEO-E2E-C2"
+      ],
+      "status": "completed",
+      "updated_at": "2026-10-07T00:00:00.000Z",
+      "version": "1.0.6"
+    },
+    {
+      "id": "RUN-GEO-C2-AFTER-Q2-CLAUDE",
+      "path": "runs/RUN-GEO-C2-AFTER-Q2-CLAUDE/run.md",
+      "refs": [
+        "CPF-GEO-E2E-C2-AFTER-CLAUDE",
+        "KBASE-GEO-E2E-377EC2E00B68",
+        "MER-MYYSHOP-001",
+        "Q-WHAT-ARE-THE-MYYSHOP-REHEARSAL-EN-57D1",
+        "QS-GEO-E2E-C2"
+      ],
+      "status": "completed",
+      "updated_at": "2026-10-07T00:00:00.000Z",
+      "version": "1.0.6"
+    },
+    {
+      "id": "RUN-GEO-C2-AFTER-Q2-GEMINI",
+      "path": "runs/RUN-GEO-C2-AFTER-Q2-GEMINI/run.md",
+      "refs": [
+        "CPF-GEO-E2E-C2-AFTER-GEMINI",
+        "KBASE-GEO-E2E-377EC2E00B68",
+        "MER-MYYSHOP-001",
+        "Q-WHAT-ARE-THE-MYYSHOP-REHEARSAL-EN-57D1",
+        "QS-GEO-E2E-C2"
+      ],
+      "status": "completed",
+      "updated_at": "2026-10-07T00:00:00.000Z",
+      "version": "1.0.6"
+    },
+    {
+      "id": "RUN-GEO-C2-AFTER-Q2-GOOGLE-AI",
+      "path": "runs/RUN-GEO-C2-AFTER-Q2-GOOGLE-AI/run.md",
+      "refs": [
+        "CPF-GEO-E2E-C2-AFTER-GOOGLE-AI",
+        "KBASE-GEO-E2E-377EC2E00B68",
+        "MER-MYYSHOP-001",
+        "Q-WHAT-ARE-THE-MYYSHOP-REHEARSAL-EN-57D1",
+        "QS-GEO-E2E-C2"
+      ],
+      "status": "completed",
+      "updated_at": "2026-10-07T00:00:00.000Z",
+      "version": "1.0.6"
+    },
+    {
+      "id": "RUN-GEO-C2-AFTER-Q2-PERPLEXITY",
+      "path": "runs/RUN-GEO-C2-AFTER-Q2-PERPLEXITY/run.md",
+      "refs": [
+        "CPF-GEO-E2E-C2-AFTER-PERPLEXITY",
+        "KBASE-GEO-E2E-377EC2E00B68",
+        "MER-MYYSHOP-001",
+        "Q-WHAT-ARE-THE-MYYSHOP-REHEARSAL-EN-57D1",
+        "QS-GEO-E2E-C2"
+      ],
+      "status": "completed",
+      "updated_at": "2026-10-07T00:00:00.000Z",
+      "version": "1.0.6"
+    },
+    {
+      "id": "RUN-GEO-C2-AFTER-Q3-CHATGPT",
+      "path": "runs/RUN-GEO-C2-AFTER-Q3-CHATGPT/run.md",
+      "refs": [
+        "CPF-GEO-E2E-C2-AFTER-CHATGPT",
+        "KBASE-GEO-E2E-377EC2E00B68",
+        "MER-MYYSHOP-001",
+        "Q-WHAT-CAPABILITIES-DOES-THE-MYYSHOP-EN-747A",
+        "QS-GEO-E2E-C2"
+      ],
+      "status": "completed",
+      "updated_at": "2026-10-07T00:00:00.000Z",
+      "version": "1.0.6"
+    },
+    {
+      "id": "RUN-GEO-C2-AFTER-Q3-CLAUDE",
+      "path": "runs/RUN-GEO-C2-AFTER-Q3-CLAUDE/run.md",
+      "refs": [
+        "CPF-GEO-E2E-C2-AFTER-CLAUDE",
+        "KBASE-GEO-E2E-377EC2E00B68",
+        "MER-MYYSHOP-001",
+        "Q-WHAT-CAPABILITIES-DOES-THE-MYYSHOP-EN-747A",
+        "QS-GEO-E2E-C2"
+      ],
+      "status": "completed",
+      "updated_at": "2026-10-07T00:00:00.000Z",
+      "version": "1.0.6"
+    },
+    {
+      "id": "RUN-GEO-C2-AFTER-Q3-GEMINI",
+      "path": "runs/RUN-GEO-C2-AFTER-Q3-GEMINI/run.md",
+      "refs": [
+        "CPF-GEO-E2E-C2-AFTER-GEMINI",
+        "KBASE-GEO-E2E-377EC2E00B68",
+        "MER-MYYSHOP-001",
+        "Q-WHAT-CAPABILITIES-DOES-THE-MYYSHOP-EN-747A",
+        "QS-GEO-E2E-C2"
+      ],
+      "status": "completed",
+      "updated_at": "2026-10-07T00:00:00.000Z",
+      "version": "1.0.6"
+    },
+    {
+      "id": "RUN-GEO-C2-AFTER-Q3-GOOGLE-AI",
+      "path": "runs/RUN-GEO-C2-AFTER-Q3-GOOGLE-AI/run.md",
+      "refs": [
+        "CPF-GEO-E2E-C2-AFTER-GOOGLE-AI",
+        "KBASE-GEO-E2E-377EC2E00B68",
+        "MER-MYYSHOP-001",
+        "Q-WHAT-CAPABILITIES-DOES-THE-MYYSHOP-EN-747A",
+        "QS-GEO-E2E-C2"
+      ],
+      "status": "completed",
+      "updated_at": "2026-10-07T00:00:00.000Z",
+      "version": "1.0.6"
+    },
+    {
+      "id": "RUN-GEO-C2-AFTER-Q3-PERPLEXITY",
+      "path": "runs/RUN-GEO-C2-AFTER-Q3-PERPLEXITY/run.md",
+      "refs": [
+        "CPF-GEO-E2E-C2-AFTER-PERPLEXITY",
+        "KBASE-GEO-E2E-377EC2E00B68",
+        "MER-MYYSHOP-001",
+        "Q-WHAT-CAPABILITIES-DOES-THE-MYYSHOP-EN-747A",
+        "QS-GEO-E2E-C2"
+      ],
+      "status": "completed",
+      "updated_at": "2026-10-07T00:00:00.000Z",
+      "version": "1.0.6"
+    },
+    {
+      "id": "RUN-GEO-C2-AFTER-Q4-CHATGPT",
+      "path": "runs/RUN-GEO-C2-AFTER-Q4-CHATGPT/run.md",
+      "refs": [
+        "CPF-GEO-E2E-C2-AFTER-CHATGPT",
+        "KBASE-GEO-E2E-377EC2E00B68",
+        "MER-MYYSHOP-001",
+        "Q-WHAT-EVIDENCE-LIMITS-PRIVACY-BOUNDARIES-EN-AB42",
+        "QS-GEO-E2E-C2"
+      ],
+      "status": "completed",
+      "updated_at": "2026-10-07T00:00:00.000Z",
+      "version": "1.0.6"
+    },
+    {
+      "id": "RUN-GEO-C2-AFTER-Q4-CLAUDE",
+      "path": "runs/RUN-GEO-C2-AFTER-Q4-CLAUDE/run.md",
+      "refs": [
+        "CPF-GEO-E2E-C2-AFTER-CLAUDE",
+        "KBASE-GEO-E2E-377EC2E00B68",
+        "MER-MYYSHOP-001",
+        "Q-WHAT-EVIDENCE-LIMITS-PRIVACY-BOUNDARIES-EN-AB42",
+        "QS-GEO-E2E-C2"
+      ],
+      "status": "completed",
+      "updated_at": "2026-10-07T00:00:00.000Z",
+      "version": "1.0.6"
+    },
+    {
+      "id": "RUN-GEO-C2-AFTER-Q4-GEMINI",
+      "path": "runs/RUN-GEO-C2-AFTER-Q4-GEMINI/run.md",
+      "refs": [
+        "CPF-GEO-E2E-C2-AFTER-GEMINI",
+        "KBASE-GEO-E2E-377EC2E00B68",
+        "MER-MYYSHOP-001",
+        "Q-WHAT-EVIDENCE-LIMITS-PRIVACY-BOUNDARIES-EN-AB42",
+        "QS-GEO-E2E-C2"
+      ],
+      "status": "completed",
+      "updated_at": "2026-10-07T00:00:00.000Z",
+      "version": "1.0.6"
+    },
+    {
+      "id": "RUN-GEO-C2-AFTER-Q4-GOOGLE-AI",
+      "path": "runs/RUN-GEO-C2-AFTER-Q4-GOOGLE-AI/run.md",
+      "refs": [
+        "CPF-GEO-E2E-C2-AFTER-GOOGLE-AI",
+        "KBASE-GEO-E2E-377EC2E00B68",
+        "MER-MYYSHOP-001",
+        "Q-WHAT-EVIDENCE-LIMITS-PRIVACY-BOUNDARIES-EN-AB42",
+        "QS-GEO-E2E-C2"
+      ],
+      "status": "completed",
+      "updated_at": "2026-10-07T00:00:00.000Z",
+      "version": "1.0.6"
+    },
+    {
+      "id": "RUN-GEO-C2-AFTER-Q4-PERPLEXITY",
+      "path": "runs/RUN-GEO-C2-AFTER-Q4-PERPLEXITY/run.md",
+      "refs": [
+        "CPF-GEO-E2E-C2-AFTER-PERPLEXITY",
+        "KBASE-GEO-E2E-377EC2E00B68",
+        "MER-MYYSHOP-001",
+        "Q-WHAT-EVIDENCE-LIMITS-PRIVACY-BOUNDARIES-EN-AB42",
+        "QS-GEO-E2E-C2"
+      ],
+      "status": "completed",
+      "updated_at": "2026-10-07T00:00:00.000Z",
+      "version": "1.0.6"
+    },
+    {
+      "id": "RUN-GEO-C2-AFTER-Q5-CHATGPT",
+      "path": "runs/RUN-GEO-C2-AFTER-Q5-CHATGPT/run.md",
+      "refs": [
+        "CPF-GEO-E2E-C2-AFTER-CHATGPT",
+        "KBASE-GEO-E2E-377EC2E00B68",
+        "MER-MYYSHOP-001",
+        "Q-WHAT-IS-THE-MYYSHOP-REHEARSAL-EN-B7A5",
+        "QS-GEO-E2E-C2"
+      ],
+      "status": "completed",
+      "updated_at": "2026-10-07T00:00:00.000Z",
+      "version": "1.0.6"
+    },
+    {
+      "id": "RUN-GEO-C2-AFTER-Q5-CLAUDE",
+      "path": "runs/RUN-GEO-C2-AFTER-Q5-CLAUDE/run.md",
+      "refs": [
+        "CPF-GEO-E2E-C2-AFTER-CLAUDE",
+        "KBASE-GEO-E2E-377EC2E00B68",
+        "MER-MYYSHOP-001",
+        "Q-WHAT-IS-THE-MYYSHOP-REHEARSAL-EN-B7A5",
+        "QS-GEO-E2E-C2"
+      ],
+      "status": "completed",
+      "updated_at": "2026-10-07T00:00:00.000Z",
+      "version": "1.0.6"
+    },
+    {
+      "id": "RUN-GEO-C2-AFTER-Q5-GEMINI",
+      "path": "runs/RUN-GEO-C2-AFTER-Q5-GEMINI/run.md",
+      "refs": [
+        "CPF-GEO-E2E-C2-AFTER-GEMINI",
+        "KBASE-GEO-E2E-377EC2E00B68",
+        "MER-MYYSHOP-001",
+        "Q-WHAT-IS-THE-MYYSHOP-REHEARSAL-EN-B7A5",
+        "QS-GEO-E2E-C2"
+      ],
+      "status": "completed",
+      "updated_at": "2026-10-07T00:00:00.000Z",
+      "version": "1.0.6"
+    },
+    {
+      "id": "RUN-GEO-C2-AFTER-Q5-GOOGLE-AI",
+      "path": "runs/RUN-GEO-C2-AFTER-Q5-GOOGLE-AI/run.md",
+      "refs": [
+        "CPF-GEO-E2E-C2-AFTER-GOOGLE-AI",
+        "KBASE-GEO-E2E-377EC2E00B68",
+        "MER-MYYSHOP-001",
+        "Q-WHAT-IS-THE-MYYSHOP-REHEARSAL-EN-B7A5",
+        "QS-GEO-E2E-C2"
+      ],
+      "status": "completed",
+      "updated_at": "2026-10-07T00:00:00.000Z",
+      "version": "1.0.6"
+    },
+    {
+      "id": "RUN-GEO-C2-AFTER-Q5-PERPLEXITY",
+      "path": "runs/RUN-GEO-C2-AFTER-Q5-PERPLEXITY/run.md",
+      "refs": [
+        "CPF-GEO-E2E-C2-AFTER-PERPLEXITY",
+        "KBASE-GEO-E2E-377EC2E00B68",
+        "MER-MYYSHOP-001",
+        "Q-WHAT-IS-THE-MYYSHOP-REHEARSAL-EN-B7A5",
+        "QS-GEO-E2E-C2"
+      ],
+      "status": "completed",
+      "updated_at": "2026-10-07T00:00:00.000Z",
+      "version": "1.0.6"
+    },
+    {
+      "id": "RUN-GEO-C2-AFTER-Q6-CHATGPT",
+      "path": "runs/RUN-GEO-C2-AFTER-Q6-CHATGPT/run.md",
+      "refs": [
+        "CPF-GEO-E2E-C2-AFTER-CHATGPT",
+        "KBASE-GEO-E2E-377EC2E00B68",
+        "MER-MYYSHOP-001",
+        "Q-WHO-IS-ELIGIBLE-TO-JOIN-EN-8E8A",
+        "QS-GEO-E2E-C2"
+      ],
+      "status": "completed",
+      "updated_at": "2026-10-07T00:00:00.000Z",
+      "version": "1.0.6"
+    },
+    {
+      "id": "RUN-GEO-C2-AFTER-Q6-CLAUDE",
+      "path": "runs/RUN-GEO-C2-AFTER-Q6-CLAUDE/run.md",
+      "refs": [
+        "CPF-GEO-E2E-C2-AFTER-CLAUDE",
+        "KBASE-GEO-E2E-377EC2E00B68",
+        "MER-MYYSHOP-001",
+        "Q-WHO-IS-ELIGIBLE-TO-JOIN-EN-8E8A",
+        "QS-GEO-E2E-C2"
+      ],
+      "status": "completed",
+      "updated_at": "2026-10-07T00:00:00.000Z",
+      "version": "1.0.6"
+    },
+    {
+      "id": "RUN-GEO-C2-AFTER-Q6-GEMINI",
+      "path": "runs/RUN-GEO-C2-AFTER-Q6-GEMINI/run.md",
+      "refs": [
+        "CPF-GEO-E2E-C2-AFTER-GEMINI",
+        "KBASE-GEO-E2E-377EC2E00B68",
+        "MER-MYYSHOP-001",
+        "Q-WHO-IS-ELIGIBLE-TO-JOIN-EN-8E8A",
+        "QS-GEO-E2E-C2"
+      ],
+      "status": "completed",
+      "updated_at": "2026-10-07T00:00:00.000Z",
+      "version": "1.0.6"
+    },
+    {
+      "id": "RUN-GEO-C2-AFTER-Q6-GOOGLE-AI",
+      "path": "runs/RUN-GEO-C2-AFTER-Q6-GOOGLE-AI/run.md",
+      "refs": [
+        "CPF-GEO-E2E-C2-AFTER-GOOGLE-AI",
+        "KBASE-GEO-E2E-377EC2E00B68",
+        "MER-MYYSHOP-001",
+        "Q-WHO-IS-ELIGIBLE-TO-JOIN-EN-8E8A",
+        "QS-GEO-E2E-C2"
+      ],
+      "status": "completed",
+      "updated_at": "2026-10-07T00:00:00.000Z",
+      "version": "1.0.6"
+    },
+    {
+      "id": "RUN-GEO-C2-AFTER-Q6-PERPLEXITY",
+      "path": "runs/RUN-GEO-C2-AFTER-Q6-PERPLEXITY/run.md",
+      "refs": [
+        "CPF-GEO-E2E-C2-AFTER-PERPLEXITY",
+        "KBASE-GEO-E2E-377EC2E00B68",
+        "MER-MYYSHOP-001",
+        "Q-WHO-IS-ELIGIBLE-TO-JOIN-EN-8E8A",
+        "QS-GEO-E2E-C2"
+      ],
+      "status": "completed",
+      "updated_at": "2026-10-07T00:00:00.000Z",
+      "version": "1.0.6"
+    },
+    {
+      "id": "RUN-GEO-C2-BASE-Q1-CHATGPT",
+      "path": "runs/RUN-GEO-C2-BASE-Q1-CHATGPT/run.md",
+      "refs": [
+        "CPF-GEO-E2E-C2-BASE-CHATGPT",
+        "KBASE-GEO-E2E-377EC2E00B68",
+        "MER-MYYSHOP-001",
+        "Q-HOW-SHOULD-AN-ELIGIBLE-CREATOR-EN-D279",
+        "QS-GEO-E2E-C2"
+      ],
+      "status": "completed",
+      "updated_at": "2026-09-30T00:00:00.000Z",
+      "version": "1.0.6"
+    },
+    {
+      "id": "RUN-GEO-C2-BASE-Q1-CLAUDE",
+      "path": "runs/RUN-GEO-C2-BASE-Q1-CLAUDE/run.md",
+      "refs": [
+        "CPF-GEO-E2E-C2-BASE-CLAUDE",
+        "KBASE-GEO-E2E-377EC2E00B68",
+        "MER-MYYSHOP-001",
+        "Q-HOW-SHOULD-AN-ELIGIBLE-CREATOR-EN-D279",
+        "QS-GEO-E2E-C2"
+      ],
+      "status": "completed",
+      "updated_at": "2026-09-30T00:00:00.000Z",
+      "version": "1.0.6"
+    },
+    {
+      "id": "RUN-GEO-C2-BASE-Q1-GEMINI",
+      "path": "runs/RUN-GEO-C2-BASE-Q1-GEMINI/run.md",
+      "refs": [
+        "CPF-GEO-E2E-C2-BASE-GEMINI",
+        "KBASE-GEO-E2E-377EC2E00B68",
+        "MER-MYYSHOP-001",
+        "Q-HOW-SHOULD-AN-ELIGIBLE-CREATOR-EN-D279",
+        "QS-GEO-E2E-C2"
+      ],
+      "status": "completed",
+      "updated_at": "2026-09-30T00:00:00.000Z",
+      "version": "1.0.6"
+    },
+    {
+      "id": "RUN-GEO-C2-BASE-Q1-GOOGLE-AI",
+      "path": "runs/RUN-GEO-C2-BASE-Q1-GOOGLE-AI/run.md",
+      "refs": [
+        "CPF-GEO-E2E-C2-BASE-GOOGLE-AI",
+        "KBASE-GEO-E2E-377EC2E00B68",
+        "MER-MYYSHOP-001",
+        "Q-HOW-SHOULD-AN-ELIGIBLE-CREATOR-EN-D279",
+        "QS-GEO-E2E-C2"
+      ],
+      "status": "completed",
+      "updated_at": "2026-09-30T00:00:00.000Z",
+      "version": "1.0.6"
+    },
+    {
+      "id": "RUN-GEO-C2-BASE-Q1-PERPLEXITY",
+      "path": "runs/RUN-GEO-C2-BASE-Q1-PERPLEXITY/run.md",
+      "refs": [
+        "CPF-GEO-E2E-C2-BASE-PERPLEXITY",
+        "KBASE-GEO-E2E-377EC2E00B68",
+        "MER-MYYSHOP-001",
+        "Q-HOW-SHOULD-AN-ELIGIBLE-CREATOR-EN-D279",
+        "QS-GEO-E2E-C2"
+      ],
+      "status": "completed",
+      "updated_at": "2026-09-30T00:00:00.000Z",
+      "version": "1.0.6"
+    },
+    {
+      "id": "RUN-GEO-C2-BASE-Q2-CHATGPT",
+      "path": "runs/RUN-GEO-C2-BASE-Q2-CHATGPT/run.md",
+      "refs": [
+        "CPF-GEO-E2E-C2-BASE-CHATGPT",
+        "KBASE-GEO-E2E-377EC2E00B68",
+        "MER-MYYSHOP-001",
+        "Q-WHAT-ARE-THE-MYYSHOP-REHEARSAL-EN-57D1",
+        "QS-GEO-E2E-C2"
+      ],
+      "status": "completed",
+      "updated_at": "2026-09-30T00:00:00.000Z",
+      "version": "1.0.6"
+    },
+    {
+      "id": "RUN-GEO-C2-BASE-Q2-CLAUDE",
+      "path": "runs/RUN-GEO-C2-BASE-Q2-CLAUDE/run.md",
+      "refs": [
+        "CPF-GEO-E2E-C2-BASE-CLAUDE",
+        "KBASE-GEO-E2E-377EC2E00B68",
+        "MER-MYYSHOP-001",
+        "Q-WHAT-ARE-THE-MYYSHOP-REHEARSAL-EN-57D1",
+        "QS-GEO-E2E-C2"
+      ],
+      "status": "completed",
+      "updated_at": "2026-09-30T00:00:00.000Z",
+      "version": "1.0.6"
+    },
+    {
+      "id": "RUN-GEO-C2-BASE-Q2-GEMINI",
+      "path": "runs/RUN-GEO-C2-BASE-Q2-GEMINI/run.md",
+      "refs": [
+        "CPF-GEO-E2E-C2-BASE-GEMINI",
+        "KBASE-GEO-E2E-377EC2E00B68",
+        "MER-MYYSHOP-001",
+        "Q-WHAT-ARE-THE-MYYSHOP-REHEARSAL-EN-57D1",
+        "QS-GEO-E2E-C2"
+      ],
+      "status": "completed",
+      "updated_at": "2026-09-30T00:00:00.000Z",
+      "version": "1.0.6"
+    },
+    {
+      "id": "RUN-GEO-C2-BASE-Q2-GOOGLE-AI",
+      "path": "runs/RUN-GEO-C2-BASE-Q2-GOOGLE-AI/run.md",
+      "refs": [
+        "CPF-GEO-E2E-C2-BASE-GOOGLE-AI",
+        "KBASE-GEO-E2E-377EC2E00B68",
+        "MER-MYYSHOP-001",
+        "Q-WHAT-ARE-THE-MYYSHOP-REHEARSAL-EN-57D1",
+        "QS-GEO-E2E-C2"
+      ],
+      "status": "completed",
+      "updated_at": "2026-09-30T00:00:00.000Z",
+      "version": "1.0.6"
+    },
+    {
+      "id": "RUN-GEO-C2-BASE-Q2-PERPLEXITY",
+      "path": "runs/RUN-GEO-C2-BASE-Q2-PERPLEXITY/run.md",
+      "refs": [
+        "CPF-GEO-E2E-C2-BASE-PERPLEXITY",
+        "KBASE-GEO-E2E-377EC2E00B68",
+        "MER-MYYSHOP-001",
+        "Q-WHAT-ARE-THE-MYYSHOP-REHEARSAL-EN-57D1",
+        "QS-GEO-E2E-C2"
+      ],
+      "status": "completed",
+      "updated_at": "2026-09-30T00:00:00.000Z",
+      "version": "1.0.6"
+    },
+    {
+      "id": "RUN-GEO-C2-BASE-Q3-CHATGPT",
+      "path": "runs/RUN-GEO-C2-BASE-Q3-CHATGPT/run.md",
+      "refs": [
+        "CPF-GEO-E2E-C2-BASE-CHATGPT",
+        "KBASE-GEO-E2E-377EC2E00B68",
+        "MER-MYYSHOP-001",
+        "Q-WHAT-CAPABILITIES-DOES-THE-MYYSHOP-EN-747A",
+        "QS-GEO-E2E-C2"
+      ],
+      "status": "completed",
+      "updated_at": "2026-09-30T00:00:00.000Z",
+      "version": "1.0.6"
+    },
+    {
+      "id": "RUN-GEO-C2-BASE-Q3-CLAUDE",
+      "path": "runs/RUN-GEO-C2-BASE-Q3-CLAUDE/run.md",
+      "refs": [
+        "CPF-GEO-E2E-C2-BASE-CLAUDE",
+        "KBASE-GEO-E2E-377EC2E00B68",
+        "MER-MYYSHOP-001",
+        "Q-WHAT-CAPABILITIES-DOES-THE-MYYSHOP-EN-747A",
+        "QS-GEO-E2E-C2"
+      ],
+      "status": "completed",
+      "updated_at": "2026-09-30T00:00:00.000Z",
+      "version": "1.0.6"
+    },
+    {
+      "id": "RUN-GEO-C2-BASE-Q3-GEMINI",
+      "path": "runs/RUN-GEO-C2-BASE-Q3-GEMINI/run.md",
+      "refs": [
+        "CPF-GEO-E2E-C2-BASE-GEMINI",
+        "KBASE-GEO-E2E-377EC2E00B68",
+        "MER-MYYSHOP-001",
+        "Q-WHAT-CAPABILITIES-DOES-THE-MYYSHOP-EN-747A",
+        "QS-GEO-E2E-C2"
+      ],
+      "status": "completed",
+      "updated_at": "2026-09-30T00:00:00.000Z",
+      "version": "1.0.6"
+    },
+    {
+      "id": "RUN-GEO-C2-BASE-Q3-GOOGLE-AI",
+      "path": "runs/RUN-GEO-C2-BASE-Q3-GOOGLE-AI/run.md",
+      "refs": [
+        "CPF-GEO-E2E-C2-BASE-GOOGLE-AI",
+        "KBASE-GEO-E2E-377EC2E00B68",
+        "MER-MYYSHOP-001",
+        "Q-WHAT-CAPABILITIES-DOES-THE-MYYSHOP-EN-747A",
+        "QS-GEO-E2E-C2"
+      ],
+      "status": "completed",
+      "updated_at": "2026-09-30T00:00:00.000Z",
+      "version": "1.0.6"
+    },
+    {
+      "id": "RUN-GEO-C2-BASE-Q3-PERPLEXITY",
+      "path": "runs/RUN-GEO-C2-BASE-Q3-PERPLEXITY/run.md",
+      "refs": [
+        "CPF-GEO-E2E-C2-BASE-PERPLEXITY",
+        "KBASE-GEO-E2E-377EC2E00B68",
+        "MER-MYYSHOP-001",
+        "Q-WHAT-CAPABILITIES-DOES-THE-MYYSHOP-EN-747A",
+        "QS-GEO-E2E-C2"
+      ],
+      "status": "completed",
+      "updated_at": "2026-09-30T00:00:00.000Z",
+      "version": "1.0.6"
+    },
+    {
+      "id": "RUN-GEO-C2-BASE-Q4-CHATGPT",
+      "path": "runs/RUN-GEO-C2-BASE-Q4-CHATGPT/run.md",
+      "refs": [
+        "CPF-GEO-E2E-C2-BASE-CHATGPT",
+        "KBASE-GEO-E2E-377EC2E00B68",
+        "MER-MYYSHOP-001",
+        "Q-WHAT-EVIDENCE-LIMITS-PRIVACY-BOUNDARIES-EN-AB42",
+        "QS-GEO-E2E-C2"
+      ],
+      "status": "completed",
+      "updated_at": "2026-09-30T00:00:00.000Z",
+      "version": "1.0.6"
+    },
+    {
+      "id": "RUN-GEO-C2-BASE-Q4-CLAUDE",
+      "path": "runs/RUN-GEO-C2-BASE-Q4-CLAUDE/run.md",
+      "refs": [
+        "CPF-GEO-E2E-C2-BASE-CLAUDE",
+        "KBASE-GEO-E2E-377EC2E00B68",
+        "MER-MYYSHOP-001",
+        "Q-WHAT-EVIDENCE-LIMITS-PRIVACY-BOUNDARIES-EN-AB42",
+        "QS-GEO-E2E-C2"
+      ],
+      "status": "completed",
+      "updated_at": "2026-09-30T00:00:00.000Z",
+      "version": "1.0.6"
+    },
+    {
+      "id": "RUN-GEO-C2-BASE-Q4-GEMINI",
+      "path": "runs/RUN-GEO-C2-BASE-Q4-GEMINI/run.md",
+      "refs": [
+        "CPF-GEO-E2E-C2-BASE-GEMINI",
+        "KBASE-GEO-E2E-377EC2E00B68",
+        "MER-MYYSHOP-001",
+        "Q-WHAT-EVIDENCE-LIMITS-PRIVACY-BOUNDARIES-EN-AB42",
+        "QS-GEO-E2E-C2"
+      ],
+      "status": "completed",
+      "updated_at": "2026-09-30T00:00:00.000Z",
+      "version": "1.0.6"
+    },
+    {
+      "id": "RUN-GEO-C2-BASE-Q4-GOOGLE-AI",
+      "path": "runs/RUN-GEO-C2-BASE-Q4-GOOGLE-AI/run.md",
+      "refs": [
+        "CPF-GEO-E2E-C2-BASE-GOOGLE-AI",
+        "KBASE-GEO-E2E-377EC2E00B68",
+        "MER-MYYSHOP-001",
+        "Q-WHAT-EVIDENCE-LIMITS-PRIVACY-BOUNDARIES-EN-AB42",
+        "QS-GEO-E2E-C2"
+      ],
+      "status": "completed",
+      "updated_at": "2026-09-30T00:00:00.000Z",
+      "version": "1.0.6"
+    },
+    {
+      "id": "RUN-GEO-C2-BASE-Q4-PERPLEXITY",
+      "path": "runs/RUN-GEO-C2-BASE-Q4-PERPLEXITY/run.md",
+      "refs": [
+        "CPF-GEO-E2E-C2-BASE-PERPLEXITY",
+        "KBASE-GEO-E2E-377EC2E00B68",
+        "MER-MYYSHOP-001",
+        "Q-WHAT-EVIDENCE-LIMITS-PRIVACY-BOUNDARIES-EN-AB42",
+        "QS-GEO-E2E-C2"
+      ],
+      "status": "completed",
+      "updated_at": "2026-09-30T00:00:00.000Z",
+      "version": "1.0.6"
+    },
+    {
+      "id": "RUN-GEO-C2-BASE-Q5-CHATGPT",
+      "path": "runs/RUN-GEO-C2-BASE-Q5-CHATGPT/run.md",
+      "refs": [
+        "CPF-GEO-E2E-C2-BASE-CHATGPT",
+        "KBASE-GEO-E2E-377EC2E00B68",
+        "MER-MYYSHOP-001",
+        "Q-WHAT-IS-THE-MYYSHOP-REHEARSAL-EN-B7A5",
+        "QS-GEO-E2E-C2"
+      ],
+      "status": "completed",
+      "updated_at": "2026-09-30T00:00:00.000Z",
+      "version": "1.0.6"
+    },
+    {
+      "id": "RUN-GEO-C2-BASE-Q5-CLAUDE",
+      "path": "runs/RUN-GEO-C2-BASE-Q5-CLAUDE/run.md",
+      "refs": [
+        "CPF-GEO-E2E-C2-BASE-CLAUDE",
+        "KBASE-GEO-E2E-377EC2E00B68",
+        "MER-MYYSHOP-001",
+        "Q-WHAT-IS-THE-MYYSHOP-REHEARSAL-EN-B7A5",
+        "QS-GEO-E2E-C2"
+      ],
+      "status": "completed",
+      "updated_at": "2026-09-30T00:00:00.000Z",
+      "version": "1.0.6"
+    },
+    {
+      "id": "RUN-GEO-C2-BASE-Q5-GEMINI",
+      "path": "runs/RUN-GEO-C2-BASE-Q5-GEMINI/run.md",
+      "refs": [
+        "CPF-GEO-E2E-C2-BASE-GEMINI",
+        "KBASE-GEO-E2E-377EC2E00B68",
+        "MER-MYYSHOP-001",
+        "Q-WHAT-IS-THE-MYYSHOP-REHEARSAL-EN-B7A5",
+        "QS-GEO-E2E-C2"
+      ],
+      "status": "completed",
+      "updated_at": "2026-09-30T00:00:00.000Z",
+      "version": "1.0.6"
+    },
+    {
+      "id": "RUN-GEO-C2-BASE-Q5-GOOGLE-AI",
+      "path": "runs/RUN-GEO-C2-BASE-Q5-GOOGLE-AI/run.md",
+      "refs": [
+        "CPF-GEO-E2E-C2-BASE-GOOGLE-AI",
+        "KBASE-GEO-E2E-377EC2E00B68",
+        "MER-MYYSHOP-001",
+        "Q-WHAT-IS-THE-MYYSHOP-REHEARSAL-EN-B7A5",
+        "QS-GEO-E2E-C2"
+      ],
+      "status": "completed",
+      "updated_at": "2026-09-30T00:00:00.000Z",
+      "version": "1.0.6"
+    },
+    {
+      "id": "RUN-GEO-C2-BASE-Q5-PERPLEXITY",
+      "path": "runs/RUN-GEO-C2-BASE-Q5-PERPLEXITY/run.md",
+      "refs": [
+        "CPF-GEO-E2E-C2-BASE-PERPLEXITY",
+        "KBASE-GEO-E2E-377EC2E00B68",
+        "MER-MYYSHOP-001",
+        "Q-WHAT-IS-THE-MYYSHOP-REHEARSAL-EN-B7A5",
+        "QS-GEO-E2E-C2"
+      ],
+      "status": "completed",
+      "updated_at": "2026-09-30T00:00:00.000Z",
+      "version": "1.0.6"
+    },
+    {
+      "id": "RUN-GEO-C2-BASE-Q6-CHATGPT",
+      "path": "runs/RUN-GEO-C2-BASE-Q6-CHATGPT/run.md",
+      "refs": [
+        "CPF-GEO-E2E-C2-BASE-CHATGPT",
+        "KBASE-GEO-E2E-377EC2E00B68",
+        "MER-MYYSHOP-001",
+        "Q-WHO-IS-ELIGIBLE-TO-JOIN-EN-8E8A",
+        "QS-GEO-E2E-C2"
+      ],
+      "status": "completed",
+      "updated_at": "2026-09-30T00:00:00.000Z",
+      "version": "1.0.6"
+    },
+    {
+      "id": "RUN-GEO-C2-BASE-Q6-CLAUDE",
+      "path": "runs/RUN-GEO-C2-BASE-Q6-CLAUDE/run.md",
+      "refs": [
+        "CPF-GEO-E2E-C2-BASE-CLAUDE",
+        "KBASE-GEO-E2E-377EC2E00B68",
+        "MER-MYYSHOP-001",
+        "Q-WHO-IS-ELIGIBLE-TO-JOIN-EN-8E8A",
+        "QS-GEO-E2E-C2"
+      ],
+      "status": "completed",
+      "updated_at": "2026-09-30T00:00:00.000Z",
+      "version": "1.0.6"
+    },
+    {
+      "id": "RUN-GEO-C2-BASE-Q6-GEMINI",
+      "path": "runs/RUN-GEO-C2-BASE-Q6-GEMINI/run.md",
+      "refs": [
+        "CPF-GEO-E2E-C2-BASE-GEMINI",
+        "KBASE-GEO-E2E-377EC2E00B68",
+        "MER-MYYSHOP-001",
+        "Q-WHO-IS-ELIGIBLE-TO-JOIN-EN-8E8A",
+        "QS-GEO-E2E-C2"
+      ],
+      "status": "completed",
+      "updated_at": "2026-09-30T00:00:00.000Z",
+      "version": "1.0.6"
+    },
+    {
+      "id": "RUN-GEO-C2-BASE-Q6-GOOGLE-AI",
+      "path": "runs/RUN-GEO-C2-BASE-Q6-GOOGLE-AI/run.md",
+      "refs": [
+        "CPF-GEO-E2E-C2-BASE-GOOGLE-AI",
+        "KBASE-GEO-E2E-377EC2E00B68",
+        "MER-MYYSHOP-001",
+        "Q-WHO-IS-ELIGIBLE-TO-JOIN-EN-8E8A",
+        "QS-GEO-E2E-C2"
+      ],
+      "status": "completed",
+      "updated_at": "2026-09-30T00:00:00.000Z",
+      "version": "1.0.6"
+    },
+    {
+      "id": "RUN-GEO-C2-BASE-Q6-PERPLEXITY",
+      "path": "runs/RUN-GEO-C2-BASE-Q6-PERPLEXITY/run.md",
+      "refs": [
+        "CPF-GEO-E2E-C2-BASE-PERPLEXITY",
+        "KBASE-GEO-E2E-377EC2E00B68",
+        "MER-MYYSHOP-001",
+        "Q-WHO-IS-ELIGIBLE-TO-JOIN-EN-8E8A",
+        "QS-GEO-E2E-C2"
+      ],
+      "status": "completed",
+      "updated_at": "2026-09-30T00:00:00.000Z",
+      "version": "1.0.6"
+    },
+    {
+      "id": "RUN-GEO-C2-CANDIDATES",
+      "path": "runs/RUN-GEO-C2-CANDIDATES/run.md",
+      "refs": [
+        "CRV-GEO-C1-DECIDED",
+        "KBASE-GEO-E2E-377EC2E00B68",
+        "MER-MYYSHOP-001"
+      ],
+      "status": "running",
+      "updated_at": "2026-09-25T00:05:00.000Z",
+      "version": "1.0.2"
+    },
+    {
+      "id": "RUN-GEO-E2E-C1",
+      "path": "runs/RUN-GEO-E2E-C1/run.md",
+      "refs": [
+        "ANS-GEO-E2E-C1-1",
+        "ANS-GEO-E2E-C1-2",
+        "ANS-GEO-E2E-C1-3",
+        "ANS-GEO-E2E-C1-4",
+        "ANS-GEO-E2E-C1-5",
+        "ANS-GEO-E2E-C1-6",
+        "AST-GEO-E2E-C1-OFFICIAL",
+        "AST-GEO-E2E-C1-OWN",
+        "AST-GEO-E2E-C1-THIRD-PARTY",
+        "CLM-GEO-E2E-ANSWER-DEFINITION",
+        "CLM-GEO-E2E-AUTOMATION",
+        "CLM-GEO-E2E-CAMPAIGNS",
+        "CLM-GEO-E2E-CASE",
+        "CLM-GEO-E2E-COMPARISON",
+        "CLM-GEO-E2E-ELIGIBILITY",
+        "CLM-GEO-E2E-FEES",
+        "CLM-GEO-E2E-GUARANTEES",
+        "CLM-GEO-E2E-IDENTITY",
+        "CLM-GEO-E2E-LEGACY",
+        "CLM-GEO-E2E-NON-GOALS",
+        "CLM-GEO-E2E-ONBOARDING",
+        "CLM-GEO-E2E-POSITIONING",
+        "CLM-GEO-E2E-PRIVACY",
+        "CLM-GEO-E2E-REFUND",
+        "CLM-GEO-E2E-VOICE",
+        "CPF-GEO-E2E-C1-BASE-CHATGPT",
+        "CPF-GEO-E2E-C1-BASE-CLAUDE",
+        "CPF-GEO-E2E-C1-BASE-GEMINI",
+        "CPF-GEO-E2E-C1-BASE-GOOGLE-AI",
+        "CPF-GEO-E2E-C1-BASE-PERPLEXITY",
+        "DOC-GEO-E2E-ANSWER-DEFINITION",
+        "DOC-GEO-E2E-AUTOMATION",
+        "DOC-GEO-E2E-CAMPAIGNS",
+        "DOC-GEO-E2E-CASE",
+        "DOC-GEO-E2E-COMPARISON",
+        "DOC-GEO-E2E-ELIGIBILITY",
+        "DOC-GEO-E2E-FEES",
+        "DOC-GEO-E2E-GUARANTEES",
+        "DOC-GEO-E2E-IDENTITY",
+        "DOC-GEO-E2E-LEGACY",
+        "DOC-GEO-E2E-NON-GOALS",
+        "DOC-GEO-E2E-ONBOARDING",
+        "DOC-GEO-E2E-POSITIONING",
+        "DOC-GEO-E2E-PRIVACY",
+        "DOC-GEO-E2E-REFUND",
+        "DOC-GEO-E2E-VOICE",
+        "EVD-GEO-E2E-ANSWER-DEFINITION",
+        "EVD-GEO-E2E-AUTOMATION",
+        "EVD-GEO-E2E-CAMPAIGNS",
+        "EVD-GEO-E2E-CASE",
+        "EVD-GEO-E2E-COMPARISON",
+        "EVD-GEO-E2E-ELIGIBILITY",
+        "EVD-GEO-E2E-FEES",
+        "EVD-GEO-E2E-GUARANTEES",
+        "EVD-GEO-E2E-IDENTITY",
+        "EVD-GEO-E2E-LEGACY",
+        "EVD-GEO-E2E-NON-GOALS",
+        "EVD-GEO-E2E-ONBOARDING",
+        "EVD-GEO-E2E-POSITIONING",
+        "EVD-GEO-E2E-PRIVACY",
+        "EVD-GEO-E2E-REFUND",
+        "EVD-GEO-E2E-VOICE",
+        "GOAL-GEO-E2E-C1",
+        "KBASE-GEO-E2E-377EC2E00B68",
+        "KR-GEO-E2E-C1",
+        "MER-MYYSHOP-001",
+        "Q-DOES-THE-MYYSHOP-REHEARSAL-GUARANTEE-EN-F889",
+        "Q-HOW-CAN-I-COMPARE-THE-EN-B48D",
+        "Q-WHAT-ARE-THE-MYYSHOP-REHEARSAL-EN-3BC4",
+        "Q-WHAT-CAPABILITIES-DOES-THE-MYYSHOP-EN-2DE3",
+        "Q-WHAT-IS-THE-MYYSHOP-REHEARSAL-EN-2B21",
+        "Q-WHO-IS-ELIGIBLE-TO-USE-EN-1531",
+        "QS-GEO-E2E-C1",
+        "SRC-GEO-E2E-ANSWER-DEFINITION",
+        "SRC-GEO-E2E-AUTOMATION",
+        "SRC-GEO-E2E-CAMPAIGNS",
+        "SRC-GEO-E2E-CASE",
+        "SRC-GEO-E2E-COMPARISON",
+        "SRC-GEO-E2E-ELIGIBILITY",
+        "SRC-GEO-E2E-EXPIRED",
+        "SRC-GEO-E2E-FEES",
+        "SRC-GEO-E2E-GROWTH",
+        "SRC-GEO-E2E-GUARANTEES",
+        "SRC-GEO-E2E-IDENTITY",
+        "SRC-GEO-E2E-LEGACY",
+        "SRC-GEO-E2E-NON-GOALS",
+        "SRC-GEO-E2E-ONBOARDING",
+        "SRC-GEO-E2E-POSITIONING",
+        "SRC-GEO-E2E-PRIVACY",
+        "SRC-GEO-E2E-REFUND",
+        "SRC-GEO-E2E-VOICE",
+        "SRC-QINPUT-4735717BB1748C8D093A",
+        "SRC-QINPUT-B4A7F3A49879D5F3DE0E"
+      ],
+      "status": "running",
+      "updated_at": "2026-09-16T00:00:00Z",
+      "version": "1.0.0"
+    },
+    {
+      "id": "RUN-GEO-E2E-C2",
+      "path": "runs/RUN-GEO-E2E-C2/run.md",
+      "refs": [
+        "ANS-GEO-E2E-C2-1",
+        "ANS-GEO-E2E-C2-2",
+        "ANS-GEO-E2E-C2-3",
+        "ANS-GEO-E2E-C2-4",
+        "ANS-GEO-E2E-C2-5",
+        "ANS-GEO-E2E-C2-6",
+        "AST-GEO-E2E-C2-OFFICIAL",
+        "AST-GEO-E2E-C2-OWN",
+        "AST-GEO-E2E-C2-THIRD-PARTY",
+        "CLM-GEO-E2E-ANSWER-DEFINITION",
+        "CLM-GEO-E2E-AUTOMATION",
+        "CLM-GEO-E2E-CAMPAIGNS",
+        "CLM-GEO-E2E-CASE",
+        "CLM-GEO-E2E-COMPARISON",
+        "CLM-GEO-E2E-ELIGIBILITY",
+        "CLM-GEO-E2E-FEES",
+        "CLM-GEO-E2E-GUARANTEES",
+        "CLM-GEO-E2E-IDENTITY",
+        "CLM-GEO-E2E-LEGACY",
+        "CLM-GEO-E2E-NON-GOALS",
+        "CLM-GEO-E2E-ONBOARDING",
+        "CLM-GEO-E2E-POSITIONING",
+        "CLM-GEO-E2E-PRIVACY",
+        "CLM-GEO-E2E-REFUND",
+        "CLM-GEO-E2E-VOICE",
+        "CPF-GEO-E2E-C2-BASE-CHATGPT",
+        "CPF-GEO-E2E-C2-BASE-CLAUDE",
+        "CPF-GEO-E2E-C2-BASE-GEMINI",
+        "CPF-GEO-E2E-C2-BASE-GOOGLE-AI",
+        "CPF-GEO-E2E-C2-BASE-PERPLEXITY",
+        "DOC-GEO-E2E-ANSWER-DEFINITION",
+        "DOC-GEO-E2E-AUTOMATION",
+        "DOC-GEO-E2E-CAMPAIGNS",
+        "DOC-GEO-E2E-CASE",
+        "DOC-GEO-E2E-COMPARISON",
+        "DOC-GEO-E2E-ELIGIBILITY",
+        "DOC-GEO-E2E-FEES",
+        "DOC-GEO-E2E-GUARANTEES",
+        "DOC-GEO-E2E-IDENTITY",
+        "DOC-GEO-E2E-LEGACY",
+        "DOC-GEO-E2E-NON-GOALS",
+        "DOC-GEO-E2E-ONBOARDING",
+        "DOC-GEO-E2E-POSITIONING",
+        "DOC-GEO-E2E-PRIVACY",
+        "DOC-GEO-E2E-REFUND",
+        "DOC-GEO-E2E-VOICE",
+        "EVD-GEO-E2E-ANSWER-DEFINITION",
+        "EVD-GEO-E2E-AUTOMATION",
+        "EVD-GEO-E2E-CAMPAIGNS",
+        "EVD-GEO-E2E-CASE",
+        "EVD-GEO-E2E-COMPARISON",
+        "EVD-GEO-E2E-ELIGIBILITY",
+        "EVD-GEO-E2E-FEES",
+        "EVD-GEO-E2E-GUARANTEES",
+        "EVD-GEO-E2E-IDENTITY",
+        "EVD-GEO-E2E-LEGACY",
+        "EVD-GEO-E2E-NON-GOALS",
+        "EVD-GEO-E2E-ONBOARDING",
+        "EVD-GEO-E2E-POSITIONING",
+        "EVD-GEO-E2E-PRIVACY",
+        "EVD-GEO-E2E-REFUND",
+        "EVD-GEO-E2E-VOICE",
+        "GOAL-GEO-E2E-C2",
+        "KBASE-GEO-E2E-377EC2E00B68",
+        "KR-GEO-E2E-C2",
+        "MER-MYYSHOP-001",
+        "Q-HOW-SHOULD-AN-ELIGIBLE-CREATOR-EN-D279",
+        "Q-WHAT-ARE-THE-MYYSHOP-REHEARSAL-EN-57D1",
+        "Q-WHAT-CAPABILITIES-DOES-THE-MYYSHOP-EN-747A",
+        "Q-WHAT-EVIDENCE-LIMITS-PRIVACY-BOUNDARIES-EN-AB42",
+        "Q-WHAT-IS-THE-MYYSHOP-REHEARSAL-EN-B7A5",
+        "Q-WHO-IS-ELIGIBLE-TO-JOIN-EN-8E8A",
+        "QS-GEO-E2E-C2",
+        "SRC-GEO-E2E-ANSWER-DEFINITION",
+        "SRC-GEO-E2E-AUTOMATION",
+        "SRC-GEO-E2E-CAMPAIGNS",
+        "SRC-GEO-E2E-CASE",
+        "SRC-GEO-E2E-COMPARISON",
+        "SRC-GEO-E2E-ELIGIBILITY",
+        "SRC-GEO-E2E-EXPIRED",
+        "SRC-GEO-E2E-FEES",
+        "SRC-GEO-E2E-GROWTH",
+        "SRC-GEO-E2E-GUARANTEES",
+        "SRC-GEO-E2E-IDENTITY",
+        "SRC-GEO-E2E-LEGACY",
+        "SRC-GEO-E2E-NON-GOALS",
+        "SRC-GEO-E2E-ONBOARDING",
+        "SRC-GEO-E2E-POSITIONING",
+        "SRC-GEO-E2E-PRIVACY",
+        "SRC-GEO-E2E-REFUND",
+        "SRC-GEO-E2E-VOICE",
+        "SRC-GEO-SITE-C1-OFFICIAL",
+        "SRC-GEO-SITE-C1-OWN",
+        "SRC-GEO-SITE-C1-THIRD-PARTY",
+        "SRC-QINPUT-17E2F0DAF0F91FCCD5E8",
+        "SRC-QINPUT-4735717BB1748C8D093A",
+        "SRC-QINPUT-B4A7F3A49879D5F3DE0E"
+      ],
+      "status": "running",
+      "updated_at": "2026-09-30T00:00:00.000Z",
+      "version": "1.0.0"
+    },
+    {
+      "id": "RUN-GEO-SITE-C1-AFTER-OFFICIAL",
+      "path": "cycles/m4/runs/run-geo-site-c1-after-official.md",
+      "refs": [
+        "AST-GEO-E2E-C1-OFFICIAL",
+        "EVD-GEO-SITE-C1-AFTER-OFFICIAL-CANONICAL",
+        "EVD-GEO-SITE-C1-AFTER-OFFICIAL-CRAWLABILITY",
+        "EVD-GEO-SITE-C1-AFTER-OFFICIAL-META-DESCRIPTION-PRESENT",
+        "EVD-GEO-SITE-C1-AFTER-OFFICIAL-SCHEMA-SYNTAX",
+        "FND-GEO-SITE-C1-AFTER-OFFICIAL-CANONICAL",
+        "FND-GEO-SITE-C1-AFTER-OFFICIAL-CRAWLABILITY",
+        "FND-GEO-SITE-C1-AFTER-OFFICIAL-META-DESCRIPTION-PRESENT",
+        "FND-GEO-SITE-C1-AFTER-OFFICIAL-SCHEMA-SYNTAX",
+        "FND-GEO-SITE-C1-BASE-OFFICIAL-CANONICAL",
+        "FND-GEO-SITE-C1-BASE-OFFICIAL-CRAWLABILITY",
+        "FND-GEO-SITE-C1-BASE-OFFICIAL-META-DESCRIPTION-PRESENT",
+        "FND-GEO-SITE-C1-BASE-OFFICIAL-SCHEMA-SYNTAX",
+        "GOAL-GEO-E2E-C1",
+        "KBASE-GEO-E2E-377EC2E00B68",
+        "KR-GEO-E2E-C1",
+        "MER-MYYSHOP-001",
+        "PUB-GEO-C1-OFFICIAL-V2-CONFIRMED",
+        "QS-GEO-E2E-C1",
+        "SRC-GEO-SITE-C1-OFFICIAL"
+      ],
+      "status": "completed",
+      "updated_at": "2026-09-19T00:00:00.000Z",
+      "version": "1.0.0"
+    },
+    {
+      "id": "RUN-GEO-SITE-C1-AFTER-OWN",
+      "path": "cycles/m4/runs/run-geo-site-c1-after-own.md",
+      "refs": [
+        "AST-GEO-E2E-C1-OWN",
+        "EVD-GEO-SITE-C1-AFTER-OWN-CANONICAL",
+        "EVD-GEO-SITE-C1-AFTER-OWN-CRAWLABILITY",
+        "EVD-GEO-SITE-C1-AFTER-OWN-META-DESCRIPTION-PRESENT",
+        "EVD-GEO-SITE-C1-AFTER-OWN-SCHEMA-SYNTAX",
+        "FND-GEO-SITE-C1-AFTER-OWN-CANONICAL",
+        "FND-GEO-SITE-C1-AFTER-OWN-CRAWLABILITY",
+        "FND-GEO-SITE-C1-AFTER-OWN-META-DESCRIPTION-PRESENT",
+        "FND-GEO-SITE-C1-AFTER-OWN-SCHEMA-SYNTAX",
+        "FND-GEO-SITE-C1-BASE-OWN-CANONICAL",
+        "FND-GEO-SITE-C1-BASE-OWN-CRAWLABILITY",
+        "FND-GEO-SITE-C1-BASE-OWN-META-DESCRIPTION-PRESENT",
+        "FND-GEO-SITE-C1-BASE-OWN-SCHEMA-SYNTAX",
+        "GOAL-GEO-E2E-C1",
+        "KBASE-GEO-E2E-377EC2E00B68",
+        "KR-GEO-E2E-C1",
+        "MER-MYYSHOP-001",
+        "PUB-GEO-C1-OWN-V2-CONFIRMED",
+        "QS-GEO-E2E-C1",
+        "SRC-GEO-SITE-C1-OWN"
+      ],
+      "status": "completed",
+      "updated_at": "2026-09-19T00:00:00.000Z",
+      "version": "1.0.0"
+    },
+    {
+      "id": "RUN-GEO-SITE-C1-BASE-OFFICIAL",
+      "path": "cycles/m4/runs/run-geo-site-c1-base-official.md",
+      "refs": [
+        "AST-GEO-E2E-C1-OFFICIAL",
+        "EVD-GEO-SITE-C1-BASE-OFFICIAL-CANONICAL",
+        "EVD-GEO-SITE-C1-BASE-OFFICIAL-CRAWLABILITY",
+        "EVD-GEO-SITE-C1-BASE-OFFICIAL-META-DESCRIPTION-PRESENT",
+        "EVD-GEO-SITE-C1-BASE-OFFICIAL-SCHEMA-SYNTAX",
+        "FND-GEO-SITE-C1-BASE-OFFICIAL-CANONICAL",
+        "FND-GEO-SITE-C1-BASE-OFFICIAL-CRAWLABILITY",
+        "FND-GEO-SITE-C1-BASE-OFFICIAL-META-DESCRIPTION-PRESENT",
+        "FND-GEO-SITE-C1-BASE-OFFICIAL-SCHEMA-SYNTAX",
+        "GOAL-GEO-E2E-C1",
+        "KBASE-GEO-E2E-377EC2E00B68",
+        "KR-GEO-E2E-C1",
+        "MER-MYYSHOP-001",
+        "QS-GEO-E2E-C1",
+        "SRC-GEO-SITE-C1-OFFICIAL"
+      ],
+      "status": "completed",
+      "updated_at": "2026-09-16T00:00:00Z",
+      "version": "1.0.0"
+    },
+    {
+      "id": "RUN-GEO-SITE-C1-BASE-OWN",
+      "path": "cycles/m4/runs/run-geo-site-c1-base-own.md",
+      "refs": [
+        "AST-GEO-E2E-C1-OWN",
+        "EVD-GEO-SITE-C1-BASE-OWN-CANONICAL",
+        "EVD-GEO-SITE-C1-BASE-OWN-CRAWLABILITY",
+        "EVD-GEO-SITE-C1-BASE-OWN-META-DESCRIPTION-PRESENT",
+        "EVD-GEO-SITE-C1-BASE-OWN-SCHEMA-SYNTAX",
+        "FND-GEO-SITE-C1-BASE-OWN-CANONICAL",
+        "FND-GEO-SITE-C1-BASE-OWN-CRAWLABILITY",
+        "FND-GEO-SITE-C1-BASE-OWN-META-DESCRIPTION-PRESENT",
+        "FND-GEO-SITE-C1-BASE-OWN-SCHEMA-SYNTAX",
+        "GOAL-GEO-E2E-C1",
+        "KBASE-GEO-E2E-377EC2E00B68",
+        "KR-GEO-E2E-C1",
+        "MER-MYYSHOP-001",
+        "QS-GEO-E2E-C1",
+        "SRC-GEO-SITE-C1-OWN"
+      ],
+      "status": "completed",
+      "updated_at": "2026-09-16T00:00:00Z",
+      "version": "1.0.0"
+    },
+    {
+      "id": "RUN-GEO-SITE-C1-BASE-THIRD-PARTY",
+      "path": "cycles/m4/runs/run-geo-site-c1-base-third-party.md",
+      "refs": [
+        "AST-GEO-E2E-C1-THIRD-PARTY",
+        "EVD-GEO-SITE-C1-BASE-THIRD-PARTY-CANONICAL",
+        "EVD-GEO-SITE-C1-BASE-THIRD-PARTY-CRAWLABILITY",
+        "EVD-GEO-SITE-C1-BASE-THIRD-PARTY-META-DESCRIPTION-PRESENT",
+        "EVD-GEO-SITE-C1-BASE-THIRD-PARTY-SCHEMA-SYNTAX",
+        "FND-GEO-SITE-C1-BASE-THIRD-PARTY-CANONICAL",
+        "FND-GEO-SITE-C1-BASE-THIRD-PARTY-CRAWLABILITY",
+        "FND-GEO-SITE-C1-BASE-THIRD-PARTY-META-DESCRIPTION-PRESENT",
+        "FND-GEO-SITE-C1-BASE-THIRD-PARTY-SCHEMA-SYNTAX",
+        "GOAL-GEO-E2E-C1",
+        "KBASE-GEO-E2E-377EC2E00B68",
+        "KR-GEO-E2E-C1",
+        "MER-MYYSHOP-001",
+        "QS-GEO-E2E-C1",
+        "SRC-GEO-SITE-C1-THIRD-PARTY"
+      ],
+      "status": "completed",
+      "updated_at": "2026-09-16T00:00:00Z",
+      "version": "1.0.0"
+    },
+    {
+      "id": "RUN-GEO-SITE-C2-AFTER-OWN",
+      "path": "cycles/m4/runs/run-geo-site-c2-after-own.md",
+      "refs": [
+        "AST-GEO-E2E-C2-OWN",
+        "EVD-GEO-SITE-C2-AFTER-OWN-CANONICAL",
+        "EVD-GEO-SITE-C2-AFTER-OWN-CRAWLABILITY",
+        "EVD-GEO-SITE-C2-AFTER-OWN-META-DESCRIPTION-PRESENT",
+        "EVD-GEO-SITE-C2-AFTER-OWN-SCHEMA-SYNTAX",
+        "FND-GEO-SITE-C2-AFTER-OWN-CANONICAL",
+        "FND-GEO-SITE-C2-AFTER-OWN-CRAWLABILITY",
+        "FND-GEO-SITE-C2-AFTER-OWN-META-DESCRIPTION-PRESENT",
+        "FND-GEO-SITE-C2-AFTER-OWN-SCHEMA-SYNTAX",
+        "FND-GEO-SITE-C2-BASE-OWN-CANONICAL",
+        "FND-GEO-SITE-C2-BASE-OWN-CRAWLABILITY",
+        "FND-GEO-SITE-C2-BASE-OWN-META-DESCRIPTION-PRESENT",
+        "FND-GEO-SITE-C2-BASE-OWN-SCHEMA-SYNTAX",
+        "GOAL-GEO-E2E-C2",
+        "KBASE-GEO-E2E-377EC2E00B68",
+        "KR-GEO-E2E-C2",
+        "MER-MYYSHOP-001",
+        "PUB-GEO-C2-OWN-V2-CONFIRMED",
+        "QS-GEO-E2E-C2",
+        "SRC-GEO-SITE-C2-OWN"
+      ],
+      "status": "completed",
+      "updated_at": "2026-10-03T00:00:00.000Z",
+      "version": "1.0.0"
+    },
+    {
+      "id": "RUN-GEO-SITE-C2-BASE-OFFICIAL",
+      "path": "cycles/m4/runs/run-geo-site-c2-base-official.md",
+      "refs": [
+        "AST-GEO-E2E-C2-OFFICIAL",
+        "GOAL-GEO-E2E-C2",
+        "KBASE-GEO-E2E-377EC2E00B68",
+        "KR-GEO-E2E-C2",
+        "MER-MYYSHOP-001",
+        "QS-GEO-E2E-C2",
+        "SRC-GEO-SITE-C2-OFFICIAL"
+      ],
+      "status": "completed",
+      "updated_at": "2026-09-30T00:00:00.000Z",
+      "version": "1.0.0"
+    },
+    {
+      "id": "RUN-GEO-SITE-C2-BASE-OWN",
+      "path": "cycles/m4/runs/run-geo-site-c2-base-own.md",
+      "refs": [
+        "AST-GEO-E2E-C2-OWN",
+        "EVD-GEO-SITE-C2-BASE-OWN-CANONICAL",
+        "EVD-GEO-SITE-C2-BASE-OWN-CRAWLABILITY",
+        "EVD-GEO-SITE-C2-BASE-OWN-META-DESCRIPTION-PRESENT",
+        "EVD-GEO-SITE-C2-BASE-OWN-SCHEMA-SYNTAX",
+        "FND-GEO-SITE-C2-BASE-OWN-CANONICAL",
+        "FND-GEO-SITE-C2-BASE-OWN-CRAWLABILITY",
+        "FND-GEO-SITE-C2-BASE-OWN-META-DESCRIPTION-PRESENT",
+        "FND-GEO-SITE-C2-BASE-OWN-SCHEMA-SYNTAX",
+        "GOAL-GEO-E2E-C2",
+        "KBASE-GEO-E2E-377EC2E00B68",
+        "KR-GEO-E2E-C2",
+        "MER-MYYSHOP-001",
+        "QS-GEO-E2E-C2",
+        "SRC-GEO-SITE-C2-OWN"
+      ],
+      "status": "completed",
+      "updated_at": "2026-09-30T00:00:00.000Z",
+      "version": "1.0.0"
+    },
+    {
+      "id": "RUN-GEO-SITE-C2-BASE-THIRD-PARTY",
+      "path": "cycles/m4/runs/run-geo-site-c2-base-third-party.md",
+      "refs": [
+        "AST-GEO-E2E-C2-THIRD-PARTY",
+        "EVD-GEO-SITE-C2-BASE-THIRD-PARTY-CANONICAL",
+        "EVD-GEO-SITE-C2-BASE-THIRD-PARTY-CRAWLABILITY",
+        "EVD-GEO-SITE-C2-BASE-THIRD-PARTY-META-DESCRIPTION-PRESENT",
+        "EVD-GEO-SITE-C2-BASE-THIRD-PARTY-SCHEMA-SYNTAX",
+        "FND-GEO-SITE-C2-BASE-THIRD-PARTY-CANONICAL",
+        "FND-GEO-SITE-C2-BASE-THIRD-PARTY-CRAWLABILITY",
+        "FND-GEO-SITE-C2-BASE-THIRD-PARTY-META-DESCRIPTION-PRESENT",
+        "FND-GEO-SITE-C2-BASE-THIRD-PARTY-SCHEMA-SYNTAX",
+        "GOAL-GEO-E2E-C2",
+        "KBASE-GEO-E2E-377EC2E00B68",
+        "KR-GEO-E2E-C2",
+        "MER-MYYSHOP-001",
+        "QS-GEO-E2E-C2",
+        "SRC-GEO-SITE-C2-THIRD-PARTY"
+      ],
+      "status": "completed",
+      "updated_at": "2026-09-30T00:00:00.000Z",
+      "version": "1.0.0"
+    }
+  ],
+  "record_type": "run",
+  "schema_version": "1.0.0"
+}

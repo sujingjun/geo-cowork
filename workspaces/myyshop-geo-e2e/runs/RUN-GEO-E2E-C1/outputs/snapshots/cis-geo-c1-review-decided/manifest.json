@@ -1,0 +1,33 @@
+{
+  "artifact_entries": [
+    {
+      "entry_key": "b9f5a2965ec525bd619203b7e1b05b0d48388ee25d881d653666f3edc31943d5",
+      "media_type": "application/json",
+      "role": "measurement_contract",
+      "snapshot_path": "outputs/snapshots/cis-geo-c1-review-decided/artifacts/measurement-contract.json",
+      "snapshot_sha256": "38c1980f471f579564f81aff27132a5682cb647f38f19c0021698e39b4b41967",
+      "source_path": "execution/contracts/measurement-contract.json",
+      "source_sha256": "38c1980f471f579564f81aff27132a5682cb647f38f19c0021698e39b4b41967"
+    }
+  ],
+  "base_freeze_snapshot_version": null,
+  "fingerprint": "f80c631d0dfa9f48451641fcf731a4731e46c07c4733e1c6199ff445b90e0b2d",
+  "pre_review_entry_keys": [],
+  "pre_review_transition_snapshot_versions": [],
+  "schema_version": "cycle-input-snapshot/1.0.0",
+  "snapshot_id": "CIS-GEO-C1-REVIEW-DECIDED",
+  "snapshot_kind": "transition",
+  "source_entries": [
+    {
+      "content_sha256": "a91bf44ac9772d74cee5f86ed8c7be51656615a5634d287276bbb52d597ed43b",
+      "entry_key": "3602bfda192be06ab30da66035558490ca2cfc7f8e65fd3be0173d19fe7e0fc8",
+      "file_sha256": "c48fb4a3e580b93d420a0329a5c87e443462788c6a83fd53d962e02879305b3f",
+      "object_id": "CRV-GEO-C1-DECIDED",
+      "object_path": "cycles/m6/reviews/crv-geo-c1-decided.md",
+      "object_version": "1.0.0",
+      "record_type": "cycle_review",
+      "snapshot_path": "outputs/snapshots/cis-geo-c1-review-decided/objects/cycles/m6/reviews/crv-geo-c1-decided.md",
+      "snapshot_sha256": "c48fb4a3e580b93d420a0329a5c87e443462788c6a83fd53d962e02879305b3f"
+    }
+  ]
+}

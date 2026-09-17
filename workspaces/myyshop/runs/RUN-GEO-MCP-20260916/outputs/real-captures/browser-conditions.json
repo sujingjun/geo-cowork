@@ -1,0 +1,42 @@
+{
+  "chatgpt": {
+    "query_language": "en-US",
+    "region": "unknown",
+    "actual_model_version": "unknown",
+    "login_state": "logged_in",
+    "ui_snapshot_sha256": "cbcff071177b539b4fe44294a3e5e766fa695942b4cfc84f5426cacc3dc114e7",
+    "ui_excerpt": [
+      "            - button \"关闭临时聊天\" [ref=e327] [cursor=pointer]",
+      "                - textbox \"与 ChatGPT 聊天\" [ref=e368]:",
+      "                  - button \"6 Pro\" [ref=e373] [cursor=pointer]:"
+    ],
+    "raw_ui_retention": "Only relevant excerpts retained; account/sidebar/console diagnostics removed.",
+    "memory_state": "UI states temporary chat may use memory, plugins and custom instructions; not otherwise verified"
+  },
+  "gemini": {
+    "query_language": "en-US",
+    "region": "unknown",
+    "actual_model_version": "unknown",
+    "login_state": "logged_in",
+    "ui_snapshot_sha256": "03a4628e2d3ef3fa16ec66a1c439f765416b1dd1fb3a827869c8cc3e3c00f884",
+    "ui_excerpt": [
+      "            - textbox \"为 Gemini 输入提示\" [ref=e184]:",
+      "                - button \"打开模式选择器，当前模式为“Flash”\" [ref=e199]:"
+    ],
+    "raw_ui_retention": "Only relevant excerpts retained; account/sidebar/console diagnostics removed.",
+    "memory_state": "unknown"
+  },
+  "perplexity": {
+    "query_language": "en-US",
+    "region": "unknown",
+    "actual_model_version": "unknown",
+    "login_state": "logged_in",
+    "ui_snapshot_sha256": "8cf9f75b3e95c27a8014d8267aa73a4dd43d0fd019031e0414f4fa6955e41ea0",
+    "ui_excerpt": [
+      "              - textbox [ref=e191]:",
+      "              - button \"模型\" [ref=e226] [cursor=pointer]"
+    ],
+    "raw_ui_retention": "Only relevant excerpts retained; account/sidebar/console diagnostics removed.",
+    "memory_state": "unknown"
+  }
+}

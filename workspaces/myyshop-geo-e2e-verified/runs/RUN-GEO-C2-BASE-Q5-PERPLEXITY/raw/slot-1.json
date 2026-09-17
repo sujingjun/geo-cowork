@@ -1,0 +1,10 @@
+{
+  "answer_text": "Rehearsal eligibility FAQ Creator eligibility and evidence FAQ Details will be supplied after the new Goal review.\n\nSynthetic consumer input for: What is the MyyShop rehearsal service as defined in the synthetic test knowledge base?",
+  "ordinal": 1,
+  "platform": "perplexity",
+  "purpose": "baseline",
+  "query_ref": "Q-WHAT-IS-THE-MYYSHOP-REHEARSAL-EN-B7A5",
+  "query_version": "1.0.0",
+  "source": "business-input assets/knowledge",
+  "synthetic": true
+}

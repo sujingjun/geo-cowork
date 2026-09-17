@@ -1,0 +1,10 @@
+{
+  "answer_text": "Rehearsal eligibility FAQ Creator eligibility and evidence FAQ Details will be supplied after the new Goal review.\n\nSynthetic consumer input for: What are the MyyShop rehearsal fees, trial terms, and cancellation or refund rules?",
+  "ordinal": 1,
+  "platform": "gemini",
+  "purpose": "baseline",
+  "query_ref": "Q-WHAT-ARE-THE-MYYSHOP-REHEARSAL-EN-57D1",
+  "query_version": "1.0.0",
+  "source": "business-input assets/knowledge",
+  "synthetic": true
+}

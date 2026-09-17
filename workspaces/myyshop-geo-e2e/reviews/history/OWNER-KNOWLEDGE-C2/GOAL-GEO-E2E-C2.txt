@@ -1,0 +1,18 @@
+---
+id: GOAL-GEO-E2E-C2
+record_type: perception_goal
+status: candidate
+version: 1.0.0
+created_at: '2026-09-30T00:00:00.000Z'
+updated_at: '2026-09-30T00:00:00.000Z'
+title: Cycle 2 selected Goal
+test_scope:
+  kind: synthetic
+  knowledge_base_ref: KBASE-GEO-E2E-2BB19816EE72
+  merchant_ref: MER-MYYSHOP-001
+  usage: test_only
+  workspace_id: ws_2bb19816ee725a38ea01cc1ee4
+goal_statement: Improve eligibility and evidence clarity using the previous cycle review.
+success_question: Can an eligible creator identify the rehearsal terms and evidence limits?
+---
+# Cycle 2 selected Goal

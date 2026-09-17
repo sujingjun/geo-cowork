@@ -1,0 +1,94 @@
+{
+  "audit": {
+    "attempts": [
+      "MODEL-9777c6d2-9172-4651-aa23-ed40b5d97168"
+    ],
+    "completed_at": "2026-09-15T20:30:38.355Z",
+    "duration_ms": 28529,
+    "finish_reason": "stop",
+    "http_status": 200,
+    "id": "MODEL-9777c6d2-9172-4651-aa23-ed40b5d97168",
+    "input_sha256": "2bfb47a13e622ccdb730443f7449bb52774bae867f6fe2ef2239cdda90b7d6c6",
+    "model": "deepseek-flash",
+    "output_sha256": "d82886b182feea921c4f0d3449eaa797f55bd484aa36ba1020874db414db66b8",
+    "prompt_sha256": "3923f12b156b2c822b487a67c1cbdfc52864056aa857d67a85838af31b5e241e",
+    "provider": "deepseek",
+    "request_options": {
+      "reasoning_effort": "low",
+      "thinking": "enabled"
+    },
+    "response_model": "deepseek-flash",
+    "started_at": "2026-09-15T20:30:09.826Z",
+    "status": "completed",
+    "usage": {
+      "completion_tokens": 6470,
+      "completion_tokens_details": {
+        "reasoning_tokens": 5850
+      },
+      "prompt_cache_hit_tokens": 768,
+      "prompt_cache_miss_tokens": 260,
+      "prompt_tokens": 1028,
+      "prompt_tokens_details": {
+        "cached_tokens": 768
+      },
+      "total_tokens": 7498
+    }
+  },
+  "output": {
+    "findings": [
+      {
+        "claim_refs": [
+          "CLM-GEO-E2E-IDENTITY",
+          "CLM-GEO-E2E-ELIGIBILITY",
+          "CLM-GEO-E2E-GUARANTEES",
+          "CLM-GEO-E2E-POSITIONING",
+          "CLM-GEO-E2E-VOICE"
+        ],
+        "kind": "content_gap",
+        "next_action": "Request a correction from the page owner to add approved definition, eligibility, and no-guarantee language; do not publish directly as an authority.",
+        "quote": "Campaign opportunities.",
+        "rationale": "The asset only states 'Campaign opportunities.' Current knowledge defines the rehearsal as an adult creator campaign service with explicit eligibility and no income or AI-placement guarantee; the page omits that required definition, eligibility, no-guarantee, and transparent-requirements positioning."
+      },
+      {
+        "claim_refs": [
+          "CLM-GEO-E2E-CAMPAIGNS",
+          "CLM-GEO-E2E-ONBOARDING",
+          "CLM-GEO-E2E-PRIVACY",
+          "CLM-GEO-E2E-AUTOMATION",
+          "CLM-GEO-E2E-NON-GOALS",
+          "CLM-GEO-E2E-FEES",
+          "CLM-GEO-E2E-REFUND",
+          "CLM-GEO-E2E-COMPARISON"
+        ],
+        "kind": "content_gap",
+        "next_action": "Request an update to the official external page adding the approved operational and limitation details; no publish authority claimed.",
+        "quote": "Campaign opportunities.",
+        "rationale": "The asset does not describe supported workflow (discovery, application, aggregate reports), onboarding, privacy handling, fees/trial/cancellation/refund, automation limits, non-goals, or comparison criteria that current knowledge supplies for these queries."
+      },
+      {
+        "claim_refs": [
+          "CLM-GEO-E2E-GUARANTEES",
+          "CLM-GEO-E2E-POSITIONING",
+          "CLM-GEO-E2E-VOICE"
+        ],
+        "kind": "content_gap",
+        "next_action": "Request correction of the historical guide to remove or replace guaranteed-income wording with approved no-guarantee language.",
+        "quote": "Historical rehearsal guide: guaranteed income.",
+        "rationale": "The supplied historical wording claims guaranteed income, but current knowledge states the rehearsal cannot guarantee income and prioritizes transparent requirements over guaranteed earnings."
+      },
+      {
+        "claim_refs": [
+          "CLM-GEO-E2E-GUARANTEES"
+        ],
+        "kind": "evidence_gap",
+        "next_action": "Obtain approved evidence or remove the proposed growth claim; if external, route a correction request to the owner.",
+        "quote": "A proposed 80 percent income growth claim has no approved supporting evidence.",
+        "rationale": "The proposed income-growth claim is unresolved and lacks approved supporting evidence, so it cannot be supported by current knowledge."
+      }
+    ],
+    "limitations": [
+      "No user demand evidence was supplied, so product_gap findings are not emitted.",
+      "Unproven growth and expired guaranteed-income wording remain unresolved inputs and are not approved facts."
+    ]
+  }
+}

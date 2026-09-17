@@ -1,0 +1,49 @@
+{
+  "authorization": "Owner 2026-09-16 implementation request: ChatGPT/Gemini/Perplexity once each, >=120 seconds apart",
+  "execution_scope": "authorized_real",
+  "last_submission_at": "2026-09-15T17:37:53.494Z",
+  "min_interval_ms": 120000,
+  "platforms": {
+    "chatgpt": {
+      "capture_path": "chatgpt/capture.json",
+      "extractions": [
+        "chatgpt/extractions/MODEL-fe0e1a05-012e-4a57-92df-1c9b5dabd972.json"
+      ],
+      "raw_sha256": "34d446773a488d33f7ef99b00265cd80e70079aa034dfcabf5d993d6d887eece",
+      "status": "completed",
+      "submissions": 1,
+      "submitted_at": "2026-09-15T17:27:03.136Z"
+    },
+    "gemini": {
+      "capture_path": "gemini/capture.json",
+      "extractions": [
+        "gemini/extractions/MODEL-b08dd2ed-1b14-4d4f-af29-33a595243577.json"
+      ],
+      "raw_sha256": "26ef58726b56b7602b43b77f20612879887bdb15744301fac5bbdf7d4f7ed5c3",
+      "status": "completed",
+      "submissions": 1,
+      "submitted_at": "2026-09-15T17:31:38.746Z"
+    },
+    "perplexity": {
+      "capture_path": "perplexity/capture.json",
+      "extractions": [
+        "perplexity/extractions/MODEL-fa8c4caa-6073-4faf-ac47-19a503941ba9.json",
+        "perplexity/extractions/MODEL-02d8c84e-bfa0-4a6b-8e2e-915cfeb936d0.json"
+      ],
+      "raw_sha256": "0b6b90b8ebed613da24df025cb1a2a6695a45a68302287f29dd028844407af3e",
+      "status": "completed",
+      "submissions": 1,
+      "submitted_at": "2026-09-15T17:37:53.494Z"
+    }
+  },
+  "provider_default": "deepseek",
+  "purpose": "engineering_validation",
+  "query": {
+    "ref": "Q-MYYSHOP-WHAT-IS-EN-BASELINE-001",
+    "sha256": "68c60cb8a474148a6c4861907aab8430745a217c3b41eac1f9e8c2f6e251e8be",
+    "text": "What is MyyShop?",
+    "version": "1.0.0"
+  },
+  "run_id": "RUN-GEO-MCP-20260916",
+  "schema_version": "geo-engineering-capture-run-v1"
+}

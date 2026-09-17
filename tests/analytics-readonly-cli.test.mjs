@@ -8,7 +8,10 @@ import { test } from 'node:test';
 
 import { execute } from '../plugins/geo-expert/scripts/geo-analytics-readonly.mjs';
 
-const exec = promisify(execFile);
+const execProcess = promisify(execFile);
+const exec = (file, args, options) => execProcess(file, [
+  '--import', fileURLToPath(new URL('./helpers/analytics-test-clock.mjs', import.meta.url)), ...args,
+], options);
 const REPO_ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const CLI = path.join(REPO_ROOT, 'plugins/geo-expert/scripts/geo-analytics-readonly.mjs');
 const SETUP_WIZARD = path.join(

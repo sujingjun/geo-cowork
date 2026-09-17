@@ -4,7 +4,7 @@
 
 ## 产品定位
 
-`geo-cowork` 让企业品牌在 Codex、Claude Code 两个已适配宿主中，用同一套 GEO Skills 和本地文件工作区，跑通品牌 GEO 闭环；中国区 WorkBuddy 宿主待其官方发布专家/技能开发者契约后再行适配：
+`geo-cowork` 让企业品牌在 Codex、Claude Code 两个已适配宿主中，用同一套 GEO Skills 和本地文件工作区，跑通品牌 GEO 闭环；中国区 WorkBuddy 官方专家契约已发布，本仓原生适配与验收另行安排：
 
 ```text
 Query → Knowledge → Site → Reputation → Answers
@@ -17,7 +17,7 @@ Query → Knowledge → Site → Reputation → Answers
 
 ## 安装
 
-本仓库即 Codex 与 Claude Code 的本地插件 Marketplace（WorkBuddy 待官方开发者契约，见下），插件为 `plugins/geo-expert`。
+本仓库即 Codex 与 Claude Code 的本地插件 Marketplace（WorkBuddy 原生适配见下），插件为 `plugins/geo-expert`。
 
 ### Claude Code
 
@@ -28,17 +28,17 @@ claude --plugin-dir ./plugins/geo-expert
 
 会话中触发：`/geo-expert:geo-workspace-init`
 
-### WorkBuddy（中国区，待适配）
+### WorkBuddy（中国区，待单独适配与验收）
 
 WorkBuddy 是腾讯云代码助手 CodeBuddy 旗下的 AI 任务执行型产品，其专家体系由「专家中心」（官方专家/专家团）与「我的专家」（自定义专家）构成，专家 = 人设 + 方法论 + 工具链。
 
-截至 2026-08-20，WorkBuddy 中国区官方文档未发布开发者契约（无插件/专家的 manifest、文件格式、导入协议或 CLI 验证命令），因此本仓库**不提供 WorkBuddy 插件包装**。过渡期的使用方式：
+WorkBuddy 官方已发布专家包、Agent、Skills 和 MCP 依赖合同。本仓目前尚未完成其原生包装、导入和交互验证。过渡期的使用方式：
 
 - 在 WorkBuddy「我的专家」或「创建技能」中，以自然语言把 GEO 专家的人设与方法论指向本仓库的 `skills/*/SKILL.md` 与本地品牌工作区；
 - 工作区文件（Markdown/JSONL/JSON）由 WorkBuddy 在授权下直接读写，与插件机制无关；
 - 待官方发布开发者契约后，本仓将按 `docs/workflow.md` 新立 Spec 恢复仓库级适配。
 
-官方文档：<https://www.workbuddy.cn/docs/workbuddy/From-Beginner-to-Expert-Guide/Function-Description/Expert-Center>
+官方文档：<https://open.workbuddy.cn/docs/expert>
 
 ### Codex
 
@@ -104,4 +104,14 @@ npm run prepare:m4-public-inputs -- --workspace <workspace> --summary <workspace
 
 ## 边界
 
-本仓库不做：云端 SaaS、通用/远端 MCP、自动发布、自动审批、CRM 写入、社区运营或无条款许可的消费者 UI 自动采集。唯一 MCP 例外是 Spec 0013 批准的同机 Browser Server，用于冻结 Cycle 输入与可靠交付浏览器结果；其本地数据库、raw capture 和 acknowledgement 不构成 canonical M5 结论。M4 Site/Research 诊断仍只读取显式本地 manifest/snapshot；五个平台 adapter 统一为 `manual_only`，登录状态不能解除自动化门。Owner 可提供 exact result URL 进入受限 manual Sample；这不授权 Agent 自动提交真实平台 Query、读取账号存储或扩大浏览范围。未经当次明确授权，任何 Agent 不 commit、不 push、不创建 PR。
+本仓库不做：云端 SaaS、通用/远端 MCP、自动发布、自动审批、CRM 写入、社区运营或无条款许可的消费者 UI 自动采集。当前 MCP 接入包括 Spec 0013 的同机 Browser Server 和 Spec 0014 的 Playwright MCP 工程采集；本地数据库、raw capture 和 acknowledgement 不构成 canonical M5 结论。既有五平台正式采样 adapter 保留 `manual_only`；本次明确授权的 ChatGPT、Gemini、Perplexity 单槽工程采集通过独立 Run 执行，不转为正式双槽 Baseline。M4 Site/Research 诊断读取显式 manifest/snapshot，演练页面仅在隔离本地环境发布和读回。登录状态本身不扩大采集范围。未经当次明确授权，任何 Agent 不 commit、不 push、不创建 PR。
+
+## 知识驱动双周期（当前实现）
+
+当前 [实施计划](docs/plans/2026-09-16-knowledge-driven-geo-e2e-plan.md) 与 [操作手册](docs/runbooks/knowledge-driven-geo-operations.md) 覆盖：真实 DeepSeek、可切换 OpenAI-compatible、人工/GSC/知识生成 Query、Playwright MCP 工程采集，以及可读审核包驱动的双周期。
+
+```bash
+npm run demo:geo-e2e -- --workspace workspaces/myyshop-geo-e2e-verified
+```
+
+这是显式 synthetic/test_only 原始输入与独立模拟反馈的演练，所有提取调用真实模型。三平台真实采集和 GSC 输入另列工程证据，演练不代表真实发布或 GEO 效果。运行环境 Node >=22.14.0，配置使用根 `.env` 或显式 `GEO_ENV_FILE`。

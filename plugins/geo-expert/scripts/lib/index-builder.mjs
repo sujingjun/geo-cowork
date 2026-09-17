@@ -127,6 +127,7 @@ const REF_FIELDS = {
   },
   perception_goal: { query_set_refs: ['query_set'] },
   asset_proposal: {
+    supersedes_ref: ['asset_proposal'],
     asset_ref: ['asset'],
     goal_refs: ['perception_goal'],
     query_refs: ['query'],

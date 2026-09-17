@@ -1,0 +1,48 @@
+{
+  "audit": {
+    "attempts": [
+      "MODEL-4eee7806-ac91-4fc9-bde4-a190771c7399"
+    ],
+    "completed_at": "2026-09-15T20:39:26.992Z",
+    "duration_ms": 1243,
+    "extraction_validation": "passed",
+    "finish_reason": "stop",
+    "http_status": 200,
+    "id": "MODEL-4eee7806-ac91-4fc9-bde4-a190771c7399",
+    "input_sha256": "7a89857af7fb5e7d715be7e2d6110c5a19c947c923653e922b9e1f61db2888eb",
+    "model": "deepseek-flash",
+    "output_sha256": "d839475b58528b37fe5b9c9991f3b27235c04367f02d72b18e44a7edb3707e73",
+    "prompt_sha256": "e5d2c9a2481b77f774d18dc813bd55ef7805d120c8b02d6e068af72999a4b872",
+    "provider": "deepseek",
+    "request_options": {
+      "reasoning_effort": null,
+      "thinking": "disabled"
+    },
+    "response_model": "deepseek-flash",
+    "started_at": "2026-09-15T20:39:25.749Z",
+    "status": "completed",
+    "usage": {
+      "completion_tokens": 130,
+      "prompt_cache_hit_tokens": 640,
+      "prompt_cache_miss_tokens": 139,
+      "prompt_tokens": 779,
+      "prompt_tokens_details": {
+        "cached_tokens": 640
+      },
+      "total_tokens": 909
+    }
+  },
+  "output": {
+    "answer": {
+      "completeness": "partial",
+      "html_structure_summary": "Plain text with two paragraphs separated by a blank line; no HTML elements present.",
+      "refusal": false,
+      "text": "Rehearsal eligibility FAQ Creator eligibility and evidence FAQ Details will be supplied after the new Goal review.\n\nSynthetic consumer input for: Who is eligible to join the MyyShop rehearsal as a creator, and what onboarding requirements apply?"
+    },
+    "citations": [],
+    "platform_annotations": [],
+    "warnings": [
+      "Answer defers eligibility and onboarding details to a future Goal review, so the response is incomplete relative to the query."
+    ]
+  }
+}

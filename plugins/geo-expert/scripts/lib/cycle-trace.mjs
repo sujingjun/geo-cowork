@@ -6,9 +6,10 @@ import matter from 'gray-matter';
 import {
   buildCycleSnapshotPlan,
   materializeCycleSnapshot,
+  compareLiveInputsWithFreeze,
 } from './cycle-snapshot.mjs';
 import { traceStageGateValid } from './cycle-trace-gates.mjs';
-import { preflightTestKnowledgeWrite } from './workspace-scope.mjs';
+import { preflightLifecycleWrite, validateLifecycleWorkspace } from './workspace-scope.mjs';
 import { serializeMarkdownObject } from './object-contract.mjs';
 import {
   resolveWithin,
@@ -213,7 +214,6 @@ export async function assembleCycleReview({ workspace, plan }) {
       || stableRefs(plan.review_snapshot.pre_review_entry_keys) !== stableRefs(cutoff.entryKeys)) {
     throw new CycleTraceError('REVIEW_PRE_CUTOFF_INCOMPLETE', '调用方 Review cutoff 与 applied Cycle 不一致');
   }
-  await materializeCycleSnapshot({ workspace: root, plan: snapshot });
   const data = {
     id: plan.waiting_review.id,
     record_type: 'cycle_review',
@@ -222,7 +222,7 @@ export async function assembleCycleReview({ workspace, plan }) {
     created_at: cutoff.cycle.data.updated_at,
     updated_at: cutoff.cycle.data.updated_at,
     title: 'Synthetic Cycle Review',
-    test_scope: { ...plan.test_scope },
+    ...(cutoff.cycle.data.test_scope ? { test_scope: { ...cutoff.cycle.data.test_scope } } : { execution_scope: cutoff.cycle.data.execution_scope, knowledge_base_ref: cutoff.cycle.data.knowledge_base_ref }),
     merchant_ref: plan.merchant_ref,
     cycle_ref: plan.cycle_ref,
     reviewed_cycle_input_version: plan.reviewed_cycle_input_version,
@@ -231,9 +231,10 @@ export async function assembleCycleReview({ workspace, plan }) {
     goal_results: plan.goal_results,
     next_cycle_candidate_inputs: plan.next_cycle_candidate_inputs,
   };
-  await preflightTestKnowledgeWrite({
+  await preflightLifecycleWrite({
     workspace: root, data, body: '# Synthetic Cycle Review\n', refClosure: false,
   });
+  await materializeCycleSnapshot({ workspace: root, plan: snapshot });
   const result = await writeCreateOnly(
     root,
     plan.waiting_review.path,
@@ -294,11 +295,11 @@ export async function decideCycleReview({ workspace, decision }) {
     supersedes_ref: waiting.data.id,
     approval: decision.approval,
     goal_results: decision.goal_results,
-    test_scope: { ...decision.test_scope },
+    ...(waiting.data.test_scope ? { test_scope: { ...waiting.data.test_scope } } : {}),
   };
   const relative = decision.decided_review.path
     ?? `cycles/m6/reviews/${data.id.toLowerCase()}.md`;
-  await preflightTestKnowledgeWrite({
+  await preflightLifecycleWrite({
     workspace: root, data, body: '# Decided Synthetic Cycle Review\n', refClosure: false,
   });
   const result = await writeCreateOnly(
@@ -394,7 +395,9 @@ export async function traceCycle({ workspace, cycleId, active = false }) {
     && cycle.data.test_scope?.kind === 'synthetic'
     && cycle.data.test_scope?.usage === 'test_only';
   if (!synthetic) {
-    errors.push({ code: 'SYNTHETIC_REAL_REF_CONTAMINATION', ref: cycle.data.id });
+    const real = cycle.data.execution_scope === 'authorized_real' && !cycle.data.test_scope;
+    const scope = real ? await validateLifecycleWorkspace({ workspace: root, knowledgeBaseRef: cycle.data.knowledge_base_ref }) : null;
+    if (!real || scope.errors.length) errors.push({ code: 'SYNTHETIC_REAL_REF_CONTAMINATION', ref: cycle.data.id });
   }
   const snapshotIds = new Set([cycle.data.core_versions?.input_snapshot?.ref]);
   const transitions = [];
@@ -425,6 +428,10 @@ export async function traceCycle({ workspace, cycleId, active = false }) {
         for (const entry of snapshot.data.source_entries) {
           const live = byId.get(entry.object_id);
           if (!live || live.data.version !== entry.object_version) {
+            if (live && entry.record_type === 'source') {
+              const checked = await compareLiveInputsWithFreeze({workspace:root,plan:{run_ref:snapshot.data.run_ref,source_entries:[entry],artifact_entries:[]}});
+              if (checked.ok) continue;
+            }
             errors.push({ code: 'CYCLE_VERSION_DRIFT', ref: entry.object_id });
           }
         }

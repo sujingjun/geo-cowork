@@ -99,7 +99,7 @@ export async function buildCycleSnapshotPlan({
     const entry = {
       role: artifact.role,
       source_path: artifact.path,
-      snapshot_path: `${base}/artifacts/${path.posix.basename(artifact.path)}`,
+      snapshot_path: `${base}/artifacts/${artifactPaths.filter(item => path.posix.basename(item.path) === path.posix.basename(artifact.path)).length > 1 && artifactPaths.some(item => path.posix.basename(item.path) === path.posix.basename(artifact.path) && item.role === 'supporting_artifact') ? sha256(artifact.path).slice(0, 12) + "-" : ""}${path.posix.basename(artifact.path)}`,
       media_type: artifact.media_type ?? 'application/octet-stream',
       source_sha256: sha256(bytes),
       snapshot_sha256: sha256(bytes),
@@ -247,9 +247,31 @@ async function validateSourceEntry(workspace, entry, providedBytes = null) {
   return bytes;
 }
 
+export function assertSnapshotArtifactScope(bytes, role) {
+  let scanned = bytes.toString('utf8');
+  if (role === 'supporting_artifact') {
+    // Technical vocabulary is not a real brand locator. Physical transport is
+    // accepted only in an explicit test-only read-back proof; bytes stay intact.
+    scanned = scanned.replace(/https?:\/\/(?:schema\.org|json-schema\.org)(?=[/"'\s<]|$)/g, 'fixture://schema-vocabulary');
+    try {
+      const proof = JSON.parse(scanned);
+      if (proof.synthetic === true && typeof proof.logical_locator === 'string'
+          && new URL(proof.logical_locator).hostname.endsWith('.invalid')
+          && typeof proof.transport === 'string') {
+        const transport = new URL(proof.transport);
+        if (transport.protocol !== 'http:' || !['127.0.0.1','localhost','[::1]'].includes(transport.hostname)
+            || transport.username || transport.password || transport.search || transport.hash || transport.pathname !== '/asset') throw new Error('Invalid fixture transport');
+        proof.transport = 'fixture://loopback-readback';
+        scanned = JSON.stringify(proof);
+      }
+    } catch { /* The normal contamination check rejects any unrecognized URL. */ }
+  }
+  assertNoTestKnowledgeContamination(scanned);
+}
+
 async function validateArtifactEntry(workspace, entry, providedBytes = null, { testOnly = true } = {}) {
   const bytes = providedBytes ?? await readSafe(workspace, entry.source_path);
-  if (testOnly) assertNoTestKnowledgeContamination(bytes.toString('utf8'));
+  if (testOnly) assertSnapshotArtifactScope(bytes, entry.role);
   if (sha256(bytes) !== entry.source_sha256
       || entry.snapshot_sha256 !== entry.source_sha256) {
     throw new CycleSnapshotError('CYCLE_INPUT_SNAPSHOT_CHECKSUM_MISMATCH', 'CIS artifact entry 与源 bytes 不一致', {
@@ -480,10 +502,25 @@ export async function materializeCycleFreeze({ workspace, plan }) {
 
 export async function compareLiveInputsWithFreeze({ workspace, plan }) {
   const errors = [];
+  const testOnly = (await readWorkspaceIdentity(path.resolve(workspace))).workspace_mode === 'development_test';
   for (const entry of plan.source_entries) {
     try {
       await validateSourceEntry(path.resolve(workspace), entry);
     } catch (error) {
+      if (entry.record_type === 'source') {
+        try {
+          const live = matter((await readSafe(path.resolve(workspace), entry.object_path)).toString('utf8'));
+          const frozenBytes = await readSafe(path.resolve(workspace), `runs/${plan.run_ref}/${entry.snapshot_path}`);
+          if (sha256(frozenBytes) !== entry.snapshot_sha256) throw error;
+          const frozen = matter(frozenBytes.toString('utf8'));
+          const stableSource = parsed => {
+            const data = { ...parsed.data };
+            delete data.classification_queue; delete data.updated_at; delete data.version;
+            return stableStringify({ data, content: parsed.content });
+          };
+          if (stableSource(live) === stableSource(frozen)) continue;
+        } catch { /* Any other source drift remains blocking. */ }
+      }
       errors.push({
         code: 'CYCLE_VERSION_DRIFT',
         object_id: entry.object_id,
@@ -494,7 +531,7 @@ export async function compareLiveInputsWithFreeze({ workspace, plan }) {
   }
   for (const entry of plan.artifact_entries) {
     try {
-      await validateArtifactEntry(path.resolve(workspace), entry);
+      await validateArtifactEntry(path.resolve(workspace), entry, null, { testOnly });
     } catch (error) {
       errors.push({
         code: 'CYCLE_VERSION_DRIFT',

@@ -213,3 +213,9 @@ Owner 已批准 M5 两槽英文主线、中文可选辅助和同对象语义合�
 | [`handoff/`](handoff/2026-08-27-m6-m8-test-merchant-sdd-approval-handoff.md) | 跨 Session 或跨 Agent 的继承基线、第一动作和停止条件 |
 
 其余文档类别（原型、Runbook、Release、复盘和经验）的目录契约与建档规则见 `docs/workflow.md` 第 2 章；各类目录在首次出现 canonical 文档时创建并加入本导航。
+
+## 2026-09-16 当前开发入口
+
+[知识驱动 GEO 全流程计划](plans/2026-09-16-knowledge-driven-geo-e2e-plan.md) 是当前 Owner 已要求实施的任务；旧真实周期 roadmap 已归档。自定义模型只保留切换配置，本次真实提取使用 DeepSeek。
+
+最终工程验收已完成：两个演练周期共 240 个真实模型提取槽，三个真实平台各一次采集，GSC 718 行。见 [实施记录](records/2026-09-16-knowledge-driven-geo-e2e-record.md) 与 [能力边界](records/2026-09-16-geo-capability-matrix.md)。

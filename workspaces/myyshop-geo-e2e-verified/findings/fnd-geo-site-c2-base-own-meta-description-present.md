@@ -1,0 +1,53 @@
+---
+id: FND-GEO-SITE-C2-BASE-OWN-META-DESCRIPTION-PRESENT
+test_scope:
+  kind: synthetic
+  knowledge_base_ref: KBASE-GEO-E2E-377EC2E00B68
+  merchant_ref: MER-MYYSHOP-001
+  usage: test_only
+  workspace_id: ws_377ec2e00b68d35bf465ab5d6e
+record_type: finding
+status: open
+version: 1.0.0
+created_at: '2026-09-30T00:00:00.000Z'
+updated_at: '2026-09-30T00:00:00.000Z'
+title: META_DESCRIPTION_PRESENT Finding
+finding_code: META_DESCRIPTION_PRESENT
+finding_kind: technical
+item_state: observed
+rule_version: m4-site-detectors-v1.0.2
+diagnosis_class: technical
+query_refs:
+  - Q-HOW-SHOULD-AN-ELIGIBLE-CREATOR-EN-D279
+  - Q-WHAT-ARE-THE-MYYSHOP-REHEARSAL-EN-57D1
+  - Q-WHAT-CAPABILITIES-DOES-THE-MYYSHOP-EN-747A
+  - Q-WHAT-EVIDENCE-LIMITS-PRIVACY-BOUNDARIES-EN-AB42
+  - Q-WHAT-IS-THE-MYYSHOP-REHEARSAL-EN-B7A5
+  - Q-WHO-IS-ELIGIBLE-TO-JOIN-EN-8E8A
+claim_refs:
+  - CLM-GEO-E2E-ANSWER-DEFINITION
+  - CLM-GEO-E2E-AUTOMATION
+  - CLM-GEO-E2E-CAMPAIGNS
+  - CLM-GEO-E2E-CASE
+  - CLM-GEO-E2E-COMPARISON
+  - CLM-GEO-E2E-ELIGIBILITY
+  - CLM-GEO-E2E-FEES
+  - CLM-GEO-E2E-GUARANTEES
+  - CLM-GEO-E2E-IDENTITY
+  - CLM-GEO-E2E-LEGACY
+  - CLM-GEO-E2E-NON-GOALS
+  - CLM-GEO-E2E-ONBOARDING
+  - CLM-GEO-E2E-POSITIONING
+  - CLM-GEO-E2E-PRIVACY
+  - CLM-GEO-E2E-REFUND
+  - CLM-GEO-E2E-VOICE
+evidence_refs:
+  - EVD-GEO-SITE-C2-BASE-OWN-META-DESCRIPTION-PRESENT
+asset_refs:
+  - AST-GEO-E2E-C2-OWN
+source_refs:
+  - SRC-GEO-SITE-C2-OWN
+---
+# META_DESCRIPTION_PRESENT Finding
+
+meta description 缺失或为空

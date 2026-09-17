@@ -1,0 +1,10 @@
+{
+  "answer_text": "Rehearsal eligibility FAQ Creator eligibility and evidence FAQ Details will be supplied after the new Goal review.\n\nSynthetic consumer input for: Who is eligible to join the MyyShop rehearsal as a creator, and what onboarding requirements apply?",
+  "ordinal": 1,
+  "platform": "google_ai",
+  "purpose": "baseline",
+  "query_ref": "Q-WHO-IS-ELIGIBLE-TO-JOIN-EN-8E8A",
+  "query_version": "1.0.0",
+  "source": "business-input assets/knowledge",
+  "synthetic": true
+}

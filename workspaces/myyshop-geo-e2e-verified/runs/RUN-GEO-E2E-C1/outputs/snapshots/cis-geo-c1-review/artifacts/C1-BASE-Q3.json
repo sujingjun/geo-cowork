@@ -1,0 +1,608 @@
+{
+  "audit": {
+    "completed_at": "2026-09-15T20:28:43.136Z",
+    "duration_ms": 36010,
+    "finish_reason": "stop",
+    "http_status": 200,
+    "id": "MODEL-f9838c91-5763-4f95-8c25-f33385a22e05",
+    "input_sha256": "83aa38318b4357b855941ae4d8db07032c274daeee20a0bda42996cc91a6d6d7",
+    "model": "deepseek-flash",
+    "output_sha256": "8693689187a15ee42dedf410fc05386ae47668e99840230d8ef7495b7255591e",
+    "prompt_sha256": "94cb4bcf35cc23090c7271eaeb868a4612f150cd09551c6f5e1a6d6e77a143e1",
+    "provider": "deepseek",
+    "request_options": {
+      "reasoning_effort": "low",
+      "thinking": "enabled"
+    },
+    "response_model": "deepseek-flash",
+    "started_at": "2026-09-15T20:28:07.126Z",
+    "status": "completed",
+    "usage": {
+      "completion_tokens": 10496,
+      "completion_tokens_details": {
+        "reasoning_tokens": 6076
+      },
+      "prompt_cache_hit_tokens": 640,
+      "prompt_cache_miss_tokens": 1027,
+      "prompt_tokens": 1667,
+      "prompt_tokens_details": {
+        "cached_tokens": 640
+      },
+      "total_tokens": 12163
+    }
+  },
+  "output": {
+    "reviews": [
+      {
+        "core": {
+          "citation_quality": "not_applicable",
+          "core_fact_accuracy": "fail",
+          "current_positioning": "fail",
+          "entity_recognition": "partial",
+          "risk_boundary": "fail"
+        },
+        "judgments": [
+          {
+            "assessment": "partial",
+            "claim_ref": "CLM-GEO-E2E-IDENTITY",
+            "quote": "MyyShop rehearsal",
+            "reason": "Names the entity, but does not describe it as connecting adult creators with simulated brand campaigns."
+          },
+          {
+            "assessment": "fail",
+            "claim_ref": "CLM-GEO-E2E-LEGACY",
+            "quote": "Wholesale marketplace",
+            "reason": "Contradicts the supplied claim that the rehearsal service is not a wholesale marketplace."
+          },
+          {
+            "assessment": "fail",
+            "claim_ref": "CLM-GEO-E2E-GUARANTEES",
+            "quote": "Guaranteed income for everyone",
+            "reason": "Contradicts the supplied claim that the rehearsal cannot guarantee income or placement."
+          },
+          {
+            "assessment": "fail",
+            "claim_ref": "CLM-GEO-E2E-POSITIONING",
+            "quote": "Guaranteed income for everyone",
+            "reason": "Opposes the supplied positioning that transparent campaign requirements are prioritized over guaranteed earnings."
+          },
+          {
+            "assessment": "fail",
+            "claim_ref": "CLM-GEO-E2E-FEES",
+            "quote": "Synthetic consumer input for: What are the MyyShop rehearsal fees, trial length, cancellation and refund rules?",
+            "reason": "Does not state USD 9 per month after a 14-day trial or any cancellation/refund rule from the supplied knowledge."
+          },
+          {
+            "assessment": "not_applicable",
+            "claim_ref": "CLM-GEO-E2E-IDENTITY",
+            "quote": "MyyShop rehearsal",
+            "reason": "No citations appear in the answer; citation_quality is not applicable."
+          }
+        ],
+        "sample_ref": "SMP-GEO-C1-BASE-Q3-CHATGPT-1"
+      },
+      {
+        "core": {
+          "citation_quality": "not_applicable",
+          "core_fact_accuracy": "partial",
+          "current_positioning": "pass",
+          "entity_recognition": "pass",
+          "risk_boundary": "pass"
+        },
+        "judgments": [
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-IDENTITY",
+            "quote": "MyyShop rehearsal connects adult creators with simulated brand campaigns.",
+            "reason": "Matches the supplied identity claim."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-LEGACY",
+            "quote": "The rehearsal service is not a wholesale marketplace.",
+            "reason": "Matches the supplied legacy claim."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-POSITIONING",
+            "quote": "The rehearsal prioritizes transparent campaign requirements over guaranteed earnings.",
+            "reason": "Matches the supplied positioning claim."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-NON-GOALS",
+            "quote": "The rehearsal does not provide inventory, logistics or credit.",
+            "reason": "Matches the supplied non-goals claim."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-ELIGIBILITY",
+            "quote": "The rehearsal is open to adult creators in its simulated US region.",
+            "reason": "Matches the supplied eligibility claim."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-ONBOARDING",
+            "quote": "Creators complete a profile and accept individual campaign requirements.",
+            "reason": "Matches the supplied onboarding claim."
+          },
+          {
+            "assessment": "partial",
+            "claim_ref": "CLM-GEO-E2E-FEES",
+            "quote": "Synthetic consumer input for: What are the MyyShop rehearsal fees, trial length, cancellation and refund rules?",
+            "reason": "Fees and trial length are omitted; supplied knowledge says USD 9 per month after a 14-day trial."
+          },
+          {
+            "assessment": "partial",
+            "claim_ref": "CLM-GEO-E2E-REFUND",
+            "quote": "Synthetic consumer input for: What are the MyyShop rehearsal fees, trial length, cancellation and refund rules?",
+            "reason": "Cancellation and refund rules are omitted; supplied knowledge says cancellation stops the next renewal and does not guarantee retroactive refunds."
+          },
+          {
+            "assessment": "not_applicable",
+            "claim_ref": "CLM-GEO-E2E-IDENTITY",
+            "quote": "MyyShop rehearsal connects adult creators with simulated brand campaigns.",
+            "reason": "No citations appear in the answer; citation_quality is not applicable."
+          }
+        ],
+        "sample_ref": "SMP-GEO-C1-BASE-Q3-CHATGPT-2"
+      },
+      {
+        "core": {
+          "citation_quality": "not_applicable",
+          "core_fact_accuracy": "fail",
+          "current_positioning": "fail",
+          "entity_recognition": "partial",
+          "risk_boundary": "fail"
+        },
+        "judgments": [
+          {
+            "assessment": "partial",
+            "claim_ref": "CLM-GEO-E2E-IDENTITY",
+            "quote": "MyyShop rehearsal",
+            "reason": "Names the entity, but does not describe it as connecting adult creators with simulated brand campaigns."
+          },
+          {
+            "assessment": "fail",
+            "claim_ref": "CLM-GEO-E2E-LEGACY",
+            "quote": "Wholesale marketplace",
+            "reason": "Contradicts the supplied claim that the rehearsal service is not a wholesale marketplace."
+          },
+          {
+            "assessment": "fail",
+            "claim_ref": "CLM-GEO-E2E-GUARANTEES",
+            "quote": "Guaranteed income for everyone",
+            "reason": "Contradicts the supplied claim that the rehearsal cannot guarantee income or placement."
+          },
+          {
+            "assessment": "fail",
+            "claim_ref": "CLM-GEO-E2E-POSITIONING",
+            "quote": "Guaranteed income for everyone",
+            "reason": "Opposes the supplied positioning that transparent campaign requirements are prioritized over guaranteed earnings."
+          },
+          {
+            "assessment": "fail",
+            "claim_ref": "CLM-GEO-E2E-FEES",
+            "quote": "Synthetic consumer input for: What are the MyyShop rehearsal fees, trial length, cancellation and refund rules?",
+            "reason": "Does not state USD 9 per month after a 14-day trial or any cancellation/refund rule from the supplied knowledge."
+          },
+          {
+            "assessment": "not_applicable",
+            "claim_ref": "CLM-GEO-E2E-IDENTITY",
+            "quote": "MyyShop rehearsal",
+            "reason": "No citations appear in the answer; citation_quality is not applicable."
+          }
+        ],
+        "sample_ref": "SMP-GEO-C1-BASE-Q3-GEMINI-1"
+      },
+      {
+        "core": {
+          "citation_quality": "not_applicable",
+          "core_fact_accuracy": "partial",
+          "current_positioning": "pass",
+          "entity_recognition": "pass",
+          "risk_boundary": "pass"
+        },
+        "judgments": [
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-IDENTITY",
+            "quote": "MyyShop rehearsal connects adult creators with simulated brand campaigns.",
+            "reason": "Matches the supplied identity claim."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-LEGACY",
+            "quote": "The rehearsal service is not a wholesale marketplace.",
+            "reason": "Matches the supplied legacy claim."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-POSITIONING",
+            "quote": "The rehearsal prioritizes transparent campaign requirements over guaranteed earnings.",
+            "reason": "Matches the supplied positioning claim."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-NON-GOALS",
+            "quote": "The rehearsal does not provide inventory, logistics or credit.",
+            "reason": "Matches the supplied non-goals claim."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-ELIGIBILITY",
+            "quote": "The rehearsal is open to adult creators in its simulated US region.",
+            "reason": "Matches the supplied eligibility claim."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-ONBOARDING",
+            "quote": "Creators complete a profile and accept individual campaign requirements.",
+            "reason": "Matches the supplied onboarding claim."
+          },
+          {
+            "assessment": "partial",
+            "claim_ref": "CLM-GEO-E2E-FEES",
+            "quote": "Synthetic consumer input for: What are the MyyShop rehearsal fees, trial length, cancellation and refund rules?",
+            "reason": "Fees and trial length are omitted; supplied knowledge says USD 9 per month after a 14-day trial."
+          },
+          {
+            "assessment": "partial",
+            "claim_ref": "CLM-GEO-E2E-REFUND",
+            "quote": "Synthetic consumer input for: What are the MyyShop rehearsal fees, trial length, cancellation and refund rules?",
+            "reason": "Cancellation and refund rules are omitted; supplied knowledge says cancellation stops the next renewal and does not guarantee retroactive refunds."
+          },
+          {
+            "assessment": "not_applicable",
+            "claim_ref": "CLM-GEO-E2E-IDENTITY",
+            "quote": "MyyShop rehearsal connects adult creators with simulated brand campaigns.",
+            "reason": "No citations appear in the answer; citation_quality is not applicable."
+          }
+        ],
+        "sample_ref": "SMP-GEO-C1-BASE-Q3-GEMINI-2"
+      },
+      {
+        "core": {
+          "citation_quality": "not_applicable",
+          "core_fact_accuracy": "fail",
+          "current_positioning": "fail",
+          "entity_recognition": "partial",
+          "risk_boundary": "fail"
+        },
+        "judgments": [
+          {
+            "assessment": "partial",
+            "claim_ref": "CLM-GEO-E2E-IDENTITY",
+            "quote": "MyyShop rehearsal",
+            "reason": "Names the entity, but does not describe it as connecting adult creators with simulated brand campaigns."
+          },
+          {
+            "assessment": "fail",
+            "claim_ref": "CLM-GEO-E2E-LEGACY",
+            "quote": "Wholesale marketplace",
+            "reason": "Contradicts the supplied claim that the rehearsal service is not a wholesale marketplace."
+          },
+          {
+            "assessment": "fail",
+            "claim_ref": "CLM-GEO-E2E-GUARANTEES",
+            "quote": "Guaranteed income for everyone",
+            "reason": "Contradicts the supplied claim that the rehearsal cannot guarantee income or placement."
+          },
+          {
+            "assessment": "fail",
+            "claim_ref": "CLM-GEO-E2E-POSITIONING",
+            "quote": "Guaranteed income for everyone",
+            "reason": "Opposes the supplied positioning that transparent campaign requirements are prioritized over guaranteed earnings."
+          },
+          {
+            "assessment": "fail",
+            "claim_ref": "CLM-GEO-E2E-FEES",
+            "quote": "Synthetic consumer input for: What are the MyyShop rehearsal fees, trial length, cancellation and refund rules?",
+            "reason": "Does not state USD 9 per month after a 14-day trial or any cancellation/refund rule from the supplied knowledge."
+          },
+          {
+            "assessment": "not_applicable",
+            "claim_ref": "CLM-GEO-E2E-IDENTITY",
+            "quote": "MyyShop rehearsal",
+            "reason": "No citations appear in the answer; citation_quality is not applicable."
+          }
+        ],
+        "sample_ref": "SMP-GEO-C1-BASE-Q3-PERPLEXITY-1"
+      },
+      {
+        "core": {
+          "citation_quality": "not_applicable",
+          "core_fact_accuracy": "partial",
+          "current_positioning": "pass",
+          "entity_recognition": "pass",
+          "risk_boundary": "pass"
+        },
+        "judgments": [
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-IDENTITY",
+            "quote": "MyyShop rehearsal connects adult creators with simulated brand campaigns.",
+            "reason": "Matches the supplied identity claim."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-LEGACY",
+            "quote": "The rehearsal service is not a wholesale marketplace.",
+            "reason": "Matches the supplied legacy claim."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-POSITIONING",
+            "quote": "The rehearsal prioritizes transparent campaign requirements over guaranteed earnings.",
+            "reason": "Matches the supplied positioning claim."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-NON-GOALS",
+            "quote": "The rehearsal does not provide inventory, logistics or credit.",
+            "reason": "Matches the supplied non-goals claim."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-ELIGIBILITY",
+            "quote": "The rehearsal is open to adult creators in its simulated US region.",
+            "reason": "Matches the supplied eligibility claim."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-ONBOARDING",
+            "quote": "Creators complete a profile and accept individual campaign requirements.",
+            "reason": "Matches the supplied onboarding claim."
+          },
+          {
+            "assessment": "partial",
+            "claim_ref": "CLM-GEO-E2E-FEES",
+            "quote": "Synthetic consumer input for: What are the MyyShop rehearsal fees, trial length, cancellation and refund rules?",
+            "reason": "Fees and trial length are omitted; supplied knowledge says USD 9 per month after a 14-day trial."
+          },
+          {
+            "assessment": "partial",
+            "claim_ref": "CLM-GEO-E2E-REFUND",
+            "quote": "Synthetic consumer input for: What are the MyyShop rehearsal fees, trial length, cancellation and refund rules?",
+            "reason": "Cancellation and refund rules are omitted; supplied knowledge says cancellation stops the next renewal and does not guarantee retroactive refunds."
+          },
+          {
+            "assessment": "not_applicable",
+            "claim_ref": "CLM-GEO-E2E-IDENTITY",
+            "quote": "MyyShop rehearsal connects adult creators with simulated brand campaigns.",
+            "reason": "No citations appear in the answer; citation_quality is not applicable."
+          }
+        ],
+        "sample_ref": "SMP-GEO-C1-BASE-Q3-PERPLEXITY-2"
+      },
+      {
+        "core": {
+          "citation_quality": "not_applicable",
+          "core_fact_accuracy": "fail",
+          "current_positioning": "fail",
+          "entity_recognition": "partial",
+          "risk_boundary": "fail"
+        },
+        "judgments": [
+          {
+            "assessment": "partial",
+            "claim_ref": "CLM-GEO-E2E-IDENTITY",
+            "quote": "MyyShop rehearsal",
+            "reason": "Names the entity, but does not describe it as connecting adult creators with simulated brand campaigns."
+          },
+          {
+            "assessment": "fail",
+            "claim_ref": "CLM-GEO-E2E-LEGACY",
+            "quote": "Wholesale marketplace",
+            "reason": "Contradicts the supplied claim that the rehearsal service is not a wholesale marketplace."
+          },
+          {
+            "assessment": "fail",
+            "claim_ref": "CLM-GEO-E2E-GUARANTEES",
+            "quote": "Guaranteed income for everyone",
+            "reason": "Contradicts the supplied claim that the rehearsal cannot guarantee income or placement."
+          },
+          {
+            "assessment": "fail",
+            "claim_ref": "CLM-GEO-E2E-POSITIONING",
+            "quote": "Guaranteed income for everyone",
+            "reason": "Opposes the supplied positioning that transparent campaign requirements are prioritized over guaranteed earnings."
+          },
+          {
+            "assessment": "fail",
+            "claim_ref": "CLM-GEO-E2E-FEES",
+            "quote": "Synthetic consumer input for: What are the MyyShop rehearsal fees, trial length, cancellation and refund rules?",
+            "reason": "Does not state USD 9 per month after a 14-day trial or any cancellation/refund rule from the supplied knowledge."
+          },
+          {
+            "assessment": "not_applicable",
+            "claim_ref": "CLM-GEO-E2E-IDENTITY",
+            "quote": "MyyShop rehearsal",
+            "reason": "No citations appear in the answer; citation_quality is not applicable."
+          }
+        ],
+        "sample_ref": "SMP-GEO-C1-BASE-Q3-GOOGLE-AI-1"
+      },
+      {
+        "core": {
+          "citation_quality": "not_applicable",
+          "core_fact_accuracy": "partial",
+          "current_positioning": "pass",
+          "entity_recognition": "pass",
+          "risk_boundary": "pass"
+        },
+        "judgments": [
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-IDENTITY",
+            "quote": "MyyShop rehearsal connects adult creators with simulated brand campaigns.",
+            "reason": "Matches the supplied identity claim."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-LEGACY",
+            "quote": "The rehearsal service is not a wholesale marketplace.",
+            "reason": "Matches the supplied legacy claim."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-POSITIONING",
+            "quote": "The rehearsal prioritizes transparent campaign requirements over guaranteed earnings.",
+            "reason": "Matches the supplied positioning claim."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-NON-GOALS",
+            "quote": "The rehearsal does not provide inventory, logistics or credit.",
+            "reason": "Matches the supplied non-goals claim."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-ELIGIBILITY",
+            "quote": "The rehearsal is open to adult creators in its simulated US region.",
+            "reason": "Matches the supplied eligibility claim."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-ONBOARDING",
+            "quote": "Creators complete a profile and accept individual campaign requirements.",
+            "reason": "Matches the supplied onboarding claim."
+          },
+          {
+            "assessment": "partial",
+            "claim_ref": "CLM-GEO-E2E-FEES",
+            "quote": "Synthetic consumer input for: What are the MyyShop rehearsal fees, trial length, cancellation and refund rules?",
+            "reason": "Fees and trial length are omitted; supplied knowledge says USD 9 per month after a 14-day trial."
+          },
+          {
+            "assessment": "partial",
+            "claim_ref": "CLM-GEO-E2E-REFUND",
+            "quote": "Synthetic consumer input for: What are the MyyShop rehearsal fees, trial length, cancellation and refund rules?",
+            "reason": "Cancellation and refund rules are omitted; supplied knowledge says cancellation stops the next renewal and does not guarantee retroactive refunds."
+          },
+          {
+            "assessment": "not_applicable",
+            "claim_ref": "CLM-GEO-E2E-IDENTITY",
+            "quote": "MyyShop rehearsal connects adult creators with simulated brand campaigns.",
+            "reason": "No citations appear in the answer; citation_quality is not applicable."
+          }
+        ],
+        "sample_ref": "SMP-GEO-C1-BASE-Q3-GOOGLE-AI-2"
+      },
+      {
+        "core": {
+          "citation_quality": "not_applicable",
+          "core_fact_accuracy": "fail",
+          "current_positioning": "fail",
+          "entity_recognition": "partial",
+          "risk_boundary": "fail"
+        },
+        "judgments": [
+          {
+            "assessment": "partial",
+            "claim_ref": "CLM-GEO-E2E-IDENTITY",
+            "quote": "MyyShop rehearsal",
+            "reason": "Names the entity, but does not describe it as connecting adult creators with simulated brand campaigns."
+          },
+          {
+            "assessment": "fail",
+            "claim_ref": "CLM-GEO-E2E-LEGACY",
+            "quote": "Wholesale marketplace",
+            "reason": "Contradicts the supplied claim that the rehearsal service is not a wholesale marketplace."
+          },
+          {
+            "assessment": "fail",
+            "claim_ref": "CLM-GEO-E2E-GUARANTEES",
+            "quote": "Guaranteed income for everyone",
+            "reason": "Contradicts the supplied claim that the rehearsal cannot guarantee income or placement."
+          },
+          {
+            "assessment": "fail",
+            "claim_ref": "CLM-GEO-E2E-POSITIONING",
+            "quote": "Guaranteed income for everyone",
+            "reason": "Opposes the supplied positioning that transparent campaign requirements are prioritized over guaranteed earnings."
+          },
+          {
+            "assessment": "fail",
+            "claim_ref": "CLM-GEO-E2E-FEES",
+            "quote": "Synthetic consumer input for: What are the MyyShop rehearsal fees, trial length, cancellation and refund rules?",
+            "reason": "Does not state USD 9 per month after a 14-day trial or any cancellation/refund rule from the supplied knowledge."
+          },
+          {
+            "assessment": "not_applicable",
+            "claim_ref": "CLM-GEO-E2E-IDENTITY",
+            "quote": "MyyShop rehearsal",
+            "reason": "No citations appear in the answer; citation_quality is not applicable."
+          }
+        ],
+        "sample_ref": "SMP-GEO-C1-BASE-Q3-CLAUDE-1"
+      },
+      {
+        "core": {
+          "citation_quality": "not_applicable",
+          "core_fact_accuracy": "partial",
+          "current_positioning": "pass",
+          "entity_recognition": "pass",
+          "risk_boundary": "pass"
+        },
+        "judgments": [
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-IDENTITY",
+            "quote": "MyyShop rehearsal connects adult creators with simulated brand campaigns.",
+            "reason": "Matches the supplied identity claim."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-LEGACY",
+            "quote": "The rehearsal service is not a wholesale marketplace.",
+            "reason": "Matches the supplied legacy claim."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-POSITIONING",
+            "quote": "The rehearsal prioritizes transparent campaign requirements over guaranteed earnings.",
+            "reason": "Matches the supplied positioning claim."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-NON-GOALS",
+            "quote": "The rehearsal does not provide inventory, logistics or credit.",
+            "reason": "Matches the supplied non-goals claim."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-ELIGIBILITY",
+            "quote": "The rehearsal is open to adult creators in its simulated US region.",
+            "reason": "Matches the supplied eligibility claim."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-ONBOARDING",
+            "quote": "Creators complete a profile and accept individual campaign requirements.",
+            "reason": "Matches the supplied onboarding claim."
+          },
+          {
+            "assessment": "partial",
+            "claim_ref": "CLM-GEO-E2E-FEES",
+            "quote": "Synthetic consumer input for: What are the MyyShop rehearsal fees, trial length, cancellation and refund rules?",
+            "reason": "Fees and trial length are omitted; supplied knowledge says USD 9 per month after a 14-day trial."
+          },
+          {
+            "assessment": "partial",
+            "claim_ref": "CLM-GEO-E2E-REFUND",
+            "quote": "Synthetic consumer input for: What are the MyyShop rehearsal fees, trial length, cancellation and refund rules?",
+            "reason": "Cancellation and refund rules are omitted; supplied knowledge says cancellation stops the next renewal and does not guarantee retroactive refunds."
+          },
+          {
+            "assessment": "not_applicable",
+            "claim_ref": "CLM-GEO-E2E-IDENTITY",
+            "quote": "MyyShop rehearsal connects adult creators with simulated brand campaigns.",
+            "reason": "No citations appear in the answer; citation_quality is not applicable."
+          }
+        ],
+        "sample_ref": "SMP-GEO-C1-BASE-Q3-CLAUDE-2"
+      }
+    ]
+  }
+}

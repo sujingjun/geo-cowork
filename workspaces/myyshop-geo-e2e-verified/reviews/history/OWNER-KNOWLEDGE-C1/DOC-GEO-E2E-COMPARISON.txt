@@ -1,0 +1,26 @@
+---
+id: DOC-GEO-E2E-COMPARISON
+record_type: document
+status: draft
+version: 1.0.0
+created_at: '2026-09-16T00:00:00Z'
+updated_at: '2026-09-16T00:00:00Z'
+title: Comparison dimensions
+test_scope:
+  kind: synthetic
+  usage: test_only
+  merchant_ref: MER-MYYSHOP-001
+  workspace_id: ws_377ec2e00b68d35bf465ab5d6e
+  knowledge_base_ref: KBASE-GEO-E2E-377EC2E00B68
+scope: Synthetic rehearsal only.
+source_refs:
+  - SRC-GEO-E2E-COMPARISON
+extensions:
+  geo.knowledge_input:
+    raw_path: knowledge/10-query-answer-cards/comparison.md
+    sha256: efa951a3279cf2b42f45164304c9836b71eeb488ba68caf01a072d44ae17f0d8
+    supported: true
+---
+# Comparison dimensions
+
+Compare rehearsal services by eligibility, supported workflow, fees, evidence and limitations.

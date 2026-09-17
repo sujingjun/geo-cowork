@@ -1,0 +1,105 @@
+{
+  "audit": {
+    "completed_at": "2026-09-15T18:10:39.843Z",
+    "duration_ms": 22801,
+    "finish_reason": "stop",
+    "http_status": 200,
+    "id": "MODEL-ce160ca8-a038-47bd-a078-844410f9399c",
+    "input_sha256": "40f340fdfa0b17799b4e197e1fae7df738c24d7fdb48d25b2124426e4b753fc3",
+    "model": "deepseek-flash",
+    "output_sha256": "7ad698595b9c17aa33fa6fa44e55400279d1e008a6fa6794208ea39a0ded97f3",
+    "prompt_sha256": "a5c6da8b86c2113a55b49fbc5da052ef4a76cb9533c6cccc4b2d914e78918ac9",
+    "provider": "deepseek",
+    "response_model": "deepseek-flash",
+    "started_at": "2026-09-15T18:10:17.042Z",
+    "status": "completed",
+    "usage": {
+      "completion_tokens": 6547,
+      "completion_tokens_details": {
+        "reasoning_tokens": 5722
+      },
+      "prompt_cache_hit_tokens": 0,
+      "prompt_cache_miss_tokens": 965,
+      "prompt_tokens": 965,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "total_tokens": 7512
+    }
+  },
+  "output": {
+    "findings": [
+      {
+        "claim_refs": [
+          "CLM-GEO-E2E-LEGACY",
+          "CLM-GEO-E2E-IDENTITY",
+          "CLM-GEO-E2E-NON-GOALS"
+        ],
+        "kind": "product_gap",
+        "next_action": "Revise the own asset heading to describe the rehearsal's creator-campaign identity and remove wholesale marketplace positioning.",
+        "quote": "<h1>Wholesale marketplace</h1>",
+        "rationale": "The asset labels the rehearsal as a wholesale marketplace, but supplied knowledge states it is not a wholesale marketplace, connects adult creators with simulated brand campaigns, and does not provide inventory, logistics or credit."
+      },
+      {
+        "claim_refs": [
+          "CLM-GEO-E2E-GUARANTEES",
+          "CLM-GEO-E2E-POSITIONING",
+          "CLM-GEO-E2E-ANSWER-DEFINITION"
+        ],
+        "kind": "evidence_gap",
+        "next_action": "Remove or replace the guarantee with supported campaign-opportunity language; do not publish an income guarantee without approved evidence.",
+        "quote": "<p>Guaranteed income for everyone.</p>",
+        "rationale": "The asset makes an absolute income guarantee; supplied knowledge says the rehearsal cannot guarantee income, prioritizes transparent campaign requirements over guaranteed earnings, and requires description with no income guarantee. The unresolved input also identifies guaranteed-income wording as superseded."
+      },
+      {
+        "claim_refs": [
+          "CLM-GEO-E2E-ELIGIBILITY",
+          "CLM-GEO-E2E-ONBOARDING",
+          "CLM-GEO-E2E-ANSWER-DEFINITION"
+        ],
+        "kind": "content_gap",
+        "next_action": "Add explicit eligibility and onboarding steps aligned with the cited claims.",
+        "quote": "The rehearsal is open to adult creators in its simulated US region.",
+        "rationale": "The asset omits required eligibility and onboarding information; the supplied knowledge specifies adult creators in a simulated US region and profile plus individual campaign requirement acceptance."
+      },
+      {
+        "claim_refs": [
+          "CLM-GEO-E2E-FEES",
+          "CLM-GEO-E2E-REFUND"
+        ],
+        "kind": "content_gap",
+        "next_action": "Add fee, trial and refund terms aligned with the cited claims.",
+        "quote": "The simulated service charges USD 9 per month after a 14-day trial.",
+        "rationale": "The asset omits fees, trial terms, and refund/cancellation rules that the supplied knowledge and queries require."
+      },
+      {
+        "claim_refs": [
+          "CLM-GEO-E2E-CAMPAIGNS",
+          "CLM-GEO-E2E-AUTOMATION",
+          "CLM-GEO-E2E-COMPARISON"
+        ],
+        "kind": "content_gap",
+        "next_action": "Add supported workflow capabilities, unavailable automation limits, and comparison criteria.",
+        "quote": "The rehearsal supports campaign discovery, application and aggregate performance reports.",
+        "rationale": "The asset omits supported campaign discovery/application/reporting capabilities, unavailable automatic acceptance, and comparison criteria that the supplied knowledge defines."
+      },
+      {
+        "claim_refs": [
+          "CLM-GEO-E2E-PRIVACY",
+          "CLM-GEO-E2E-NON-GOALS",
+          "CLM-GEO-E2E-GUARANTEES"
+        ],
+        "kind": "content_gap",
+        "next_action": "Add privacy, non-goal and guarantee limitation disclosures aligned with the cited claims.",
+        "quote": "Rehearsal reports contain aggregate metrics and exclude personal customer records.",
+        "rationale": "The asset omits privacy reporting limits, non-goals, and guarantee limitations that the supplied knowledge defines."
+      }
+    ],
+    "limitations": [
+      "The supplied knowledge does not include approved legal, regulatory, accessibility, or production-state review; findings are limited to alignment with provided CLM IDs.",
+      "No approved supporting evidence for the income guarantee was supplied; the unresolved 'growth' input remains unresolved and is not treated as a content gap.",
+      "The asset is controlled/own; this diagnosis does not authorize publication or approve any fact or decision.",
+      "No verification of current production behavior, actual campaign availability, or third-party source accuracy was possible."
+    ]
+  }
+}

@@ -30,7 +30,9 @@ interface RuntimeConfig {
  * @returns 配置好的语言模型实例
  */
 export function initializeAIProvider(modelString: string, config: RuntimeConfig): LanguageModel {
-  const [provider, modelName] = modelString.split('/')
+  const slash = modelString.indexOf('/')
+  const provider = modelString.slice(0, slash)
+  const modelName = slash >= 0 ? modelString.slice(slash + 1) : ''
 
   if (!modelName) {
     throw createError({
@@ -53,8 +55,8 @@ export function initializeAIProvider(modelString: string, config: RuntimeConfig)
           // 使用默认配置（需要环境变量 ANTHROPIC_API_KEY）
           return anthropic(modelName) as LanguageModel
         }
-      } catch (error: any) {
-        console.error(`Anthropic initialization error: ${error.message}`)
+      } catch (error: unknown) {
+        console.error(`Anthropic initialization error: ${error instanceof Error ? error.message : 'Unknown provider error'}`)
         throw createError({
           statusCode: 500,
           statusMessage: `Failed to initialize Anthropic model: ${modelName}. Please check your ANTHROPIC_API_KEY environment variable.`
@@ -75,8 +77,8 @@ export function initializeAIProvider(modelString: string, config: RuntimeConfig)
           // 使用默认配置（需要环境变量 OPENAI_API_KEY）
           return openai(modelName) as LanguageModel
         }
-      } catch (error: any) {
-        console.error(`OpenAI initialization error: ${error.message}`)
+      } catch (error: unknown) {
+        console.error(`OpenAI initialization error: ${error instanceof Error ? error.message : 'Unknown provider error'}`)
         throw createError({
           statusCode: 500,
           statusMessage: `Failed to initialize OpenAI model: ${modelName}. Please check your OPENAI_API_KEY environment variable. See docs/ai-配置-修复.md for help.`
@@ -97,8 +99,8 @@ export function initializeAIProvider(modelString: string, config: RuntimeConfig)
           // 使用默认配置（需要环境变量 GOOGLE_GENERATIVE_AI_API_KEY）
           return google(modelName) as LanguageModel
         }
-      } catch (error: any) {
-        console.error(`Google initialization error: ${error.message}`)
+      } catch (error: unknown) {
+        console.error(`Google initialization error: ${error instanceof Error ? error.message : 'Unknown provider error'}`)
         throw createError({
           statusCode: 500,
           statusMessage: `Failed to initialize Google model: ${modelName}. Please check your GOOGLE_GENERATIVE_AI_API_KEY environment variable.`
@@ -119,8 +121,8 @@ export function initializeAIProvider(modelString: string, config: RuntimeConfig)
           // 使用默认配置（需要环境变量 DEEPSEEK_API_KEY）
           return deepseek(modelName) as LanguageModel
         }
-      } catch (error: any) {
-        console.error(`DeepSeek initialization error: ${error.message}`)
+      } catch (error: unknown) {
+        console.error(`DeepSeek initialization error: ${error instanceof Error ? error.message : 'Unknown provider error'}`)
         throw createError({
           statusCode: 500,
           statusMessage: `Failed to initialize DeepSeek model: ${modelName}. Please check your DEEPSEEK_API_KEY environment variable.`
@@ -145,8 +147,8 @@ export function initializeTitleGeneratorModel(config: RuntimeConfig): LanguageMo
   try {
     // 优先使用 OpenAI 生成标题（成本低、速度快）
     return initializeAIProvider('deepseek/deepseek-v4-flash', config)
-  } catch (error: any) {
-    console.error(`Title generator initialization failed: ${error.message}`)
+  } catch (error: unknown) {
+    console.error(`Title generator initialization failed: ${error instanceof Error ? error.message : 'Unknown provider error'}`)
     console.error('Please configure OPENAI_API_KEY environment variable')
     console.error('See docs/ai-配置-修复.md for detailed setup instructions')
     throw error

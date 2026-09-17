@@ -306,7 +306,7 @@ export async function proposeCycleTwo({ workspace, reviewId, plan }) {
     }
   }
   const strategyRuns = new Set([...strategyByInput.values()].map((item) => item.run_ref));
-  const runRef = plan.strategy_materialization?.run_ref
+  const runRef = plan.run_ref ?? plan.strategy_materialization?.run_ref
     ?? (strategyRuns.size === 1 ? [...strategyRuns][0] : null);
   if (!runRef || (strategyRuns.size > 0 && !strategyRuns.has(runRef))) {
     throw makeFailure('GOAL_CANDIDATE_STRATEGY_GATE_MISMATCH', 'Candidate Run 与 Strategy Output 不一致');
@@ -333,7 +333,7 @@ export async function proposeCycleTwo({ workspace, reviewId, plan }) {
       limitations: [...rule.data.derived_fields.limitations],
       evidence_gaps: [...input.evidence_gaps],
       risks: [...input.risks],
-      priority: input.rank_inputs.priority,
+      priority: /^P[0-3]$/.test(String(input.rank_inputs.priority)) ? Number(input.rank_inputs.priority.slice(1)) : input.rank_inputs.priority,
       ...(strategy ? { strategy_gate_versions: strategy.versions } : {}),
     };
     descriptors.push(descriptor);

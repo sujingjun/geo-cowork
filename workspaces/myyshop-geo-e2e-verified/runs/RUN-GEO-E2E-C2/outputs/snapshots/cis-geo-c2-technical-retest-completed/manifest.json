@@ -1,0 +1,152 @@
+{
+  "artifact_entries": [
+    {
+      "entry_key": "11564f4256e2976ab8e67571fc671caca59f5badf0f60fb201336e8a0b8c20b2",
+      "media_type": "text/plain",
+      "role": "supporting_artifact",
+      "snapshot_path": "outputs/snapshots/cis-geo-c2-technical-retest-completed/artifacts/html.txt",
+      "snapshot_sha256": "8ced087cfe6244a1ce1293c9383920112204d2a96f108384a6a1f5ddc59b7ec1",
+      "source_path": "assets/snapshots/C2/AFTER/own/html.txt",
+      "source_sha256": "8ced087cfe6244a1ce1293c9383920112204d2a96f108384a6a1f5ddc59b7ec1"
+    },
+    {
+      "entry_key": "28b4357120a2ed4a8b29b3c66a5144e79fcd5024c6de2f5ce5daa8ab029d81bc",
+      "media_type": "application/json",
+      "role": "measurement_contract",
+      "snapshot_path": "outputs/snapshots/cis-geo-c2-technical-retest-completed/artifacts/measurement-contract.json",
+      "snapshot_sha256": "38c1980f471f579564f81aff27132a5682cb647f38f19c0021698e39b4b41967",
+      "source_path": "execution/contracts/measurement-contract.json",
+      "source_sha256": "38c1980f471f579564f81aff27132a5682cb647f38f19c0021698e39b4b41967"
+    }
+  ],
+  "base_freeze_snapshot_version": null,
+  "fingerprint": "08abbe757778b4b77dca9a232f133f20e5a758c53babdc482978e89c4c10edf3",
+  "pre_review_entry_keys": [],
+  "pre_review_transition_snapshot_versions": [],
+  "schema_version": "cycle-input-snapshot/1.0.0",
+  "snapshot_id": "CIS-GEO-C2-TECHNICAL-RETEST-COMPLETED",
+  "snapshot_kind": "transition",
+  "source_entries": [
+    {
+      "content_sha256": "3e7856bc7aa2708f3d69660ee3534f2bd20ea087732b7a14c567a002b2200068",
+      "entry_key": "1f8bc7bf9db0af499ccb95d091273e2cbaf31cf28dc84fefaa82a05cf1823fa1",
+      "file_sha256": "7640e6174cd8bb638141a46d4343a8816d092a8dd70f4c4e09dc28ba73e5e822",
+      "object_id": "EVD-GEO-SITE-C2-AFTER-OWN-SCHEMA-SYNTAX",
+      "object_path": "evidence/records/evd-geo-site-c2-after-own-schema-syntax.md",
+      "object_version": "1.0.0",
+      "record_type": "evidence",
+      "snapshot_path": "outputs/snapshots/cis-geo-c2-technical-retest-completed/objects/evidence/records/evd-geo-site-c2-after-own-schema-syntax.md",
+      "snapshot_sha256": "7640e6174cd8bb638141a46d4343a8816d092a8dd70f4c4e09dc28ba73e5e822"
+    },
+    {
+      "content_sha256": "5e6cf5a5e24db76c78f00a3863a7b044540531e72d5b1e991d5f9774e2e3c9d2",
+      "entry_key": "3045fd00700794451e38af62e6a931556113aa79c3d9243c1f5a5ff0cdb6d81f",
+      "file_sha256": "14b0432c8b2bfe9e178ab310b6b5268db49e281de15ae1448b1576c283b2187e",
+      "object_id": "FND-GEO-SITE-C2-AFTER-OWN-CRAWLABILITY",
+      "object_path": "findings/fnd-geo-site-c2-after-own-crawlability.md",
+      "object_version": "1.0.0",
+      "record_type": "finding",
+      "snapshot_path": "outputs/snapshots/cis-geo-c2-technical-retest-completed/objects/findings/fnd-geo-site-c2-after-own-crawlability.md",
+      "snapshot_sha256": "14b0432c8b2bfe9e178ab310b6b5268db49e281de15ae1448b1576c283b2187e"
+    },
+    {
+      "content_sha256": "56c4116d7f7f2ac780c42020a71241e0a3b1a9e5de76a38657a31ff2f469700e",
+      "entry_key": "43e5758c25c8fe3a3744ce3c8bdf6e932e40e9d5f494d17b6adc1f3ea1e895b3",
+      "file_sha256": "22db8759300af9224feb866a4f7b41a0a2fef598c965358ced275d911f8fcb6a",
+      "object_id": "EVD-GEO-SITE-C2-AFTER-OWN-CRAWLABILITY",
+      "object_path": "evidence/records/evd-geo-site-c2-after-own-crawlability.md",
+      "object_version": "1.0.0",
+      "record_type": "evidence",
+      "snapshot_path": "outputs/snapshots/cis-geo-c2-technical-retest-completed/objects/evidence/records/evd-geo-site-c2-after-own-crawlability.md",
+      "snapshot_sha256": "22db8759300af9224feb866a4f7b41a0a2fef598c965358ced275d911f8fcb6a"
+    },
+    {
+      "content_sha256": "fb9ac32410a8fab8378c152359d2f895b1ca404eb83f5eb7a583e16528c783e9",
+      "entry_key": "46c23ed24b65db539b6481246e2db3c4b8b08a7e913311c2047d01093226b12e",
+      "file_sha256": "5bc892538825f72cb9de93a014767b5bb0499e46d0d60cf4c10f5f6b0af10039",
+      "object_id": "FND-GEO-SITE-C2-AFTER-OWN-META-DESCRIPTION-PRESENT",
+      "object_path": "findings/fnd-geo-site-c2-after-own-meta-description-present.md",
+      "object_version": "1.0.0",
+      "record_type": "finding",
+      "snapshot_path": "outputs/snapshots/cis-geo-c2-technical-retest-completed/objects/findings/fnd-geo-site-c2-after-own-meta-description-present.md",
+      "snapshot_sha256": "5bc892538825f72cb9de93a014767b5bb0499e46d0d60cf4c10f5f6b0af10039"
+    },
+    {
+      "content_sha256": "3e6dc7819cc82b834438792a1446182ea7c6a51497bc3cd5050d7eafad9de198",
+      "entry_key": "549566b9588207aa9588db8c1f4d877f53dabceefb93315faf8325cf458b0b95",
+      "file_sha256": "11debbaf7eaf763a1e28d42e3959d8c906fac6ae1a38c231416136ee03ff27b4",
+      "object_id": "SRC-GEO-SITE-C2-OWN",
+      "object_path": "evidence/sources/src-geo-site-c2-own.md",
+      "object_version": "1.0.0",
+      "record_type": "source",
+      "snapshot_path": "outputs/snapshots/cis-geo-c2-technical-retest-completed/objects/evidence/sources/src-geo-site-c2-own.md",
+      "snapshot_sha256": "11debbaf7eaf763a1e28d42e3959d8c906fac6ae1a38c231416136ee03ff27b4"
+    },
+    {
+      "content_sha256": "29fd65af8389b0839d119057dc50d366b82b4856a0e46bcc6bf5b908b3ea4548",
+      "entry_key": "689a96b88e232dec4d0ad64e9fc5e6347ba1e61a494ee989d770cd5017a38348",
+      "file_sha256": "96232193a97604c3d761440c68c86185978524d3605b251757b46131617e0d81",
+      "object_id": "EVD-GEO-SITE-C2-AFTER-OWN-META-DESCRIPTION-PRESENT",
+      "object_path": "evidence/records/evd-geo-site-c2-after-own-meta-description-present.md",
+      "object_version": "1.0.0",
+      "record_type": "evidence",
+      "snapshot_path": "outputs/snapshots/cis-geo-c2-technical-retest-completed/objects/evidence/records/evd-geo-site-c2-after-own-meta-description-present.md",
+      "snapshot_sha256": "96232193a97604c3d761440c68c86185978524d3605b251757b46131617e0d81"
+    },
+    {
+      "content_sha256": "f9af0880fd4c17b32a11a2bb12a53edbc4fee9ea8aed96279fa7001a433e0c3e",
+      "entry_key": "6c5f0321796e7a55edbca557fbb0de6746ff739d354019b59c4605f319c99390",
+      "file_sha256": "611bea970378371e3791816fa09d5cbf597e7a82cb2c177ddbb65c0298e9d07b",
+      "object_id": "EVD-GEO-SITE-C2-AFTER-OWN-CONTENT",
+      "object_path": "evidence/records/evd-geo-site-c2-after-own-content.md",
+      "object_version": "1.0.0",
+      "record_type": "evidence",
+      "snapshot_path": "outputs/snapshots/cis-geo-c2-technical-retest-completed/objects/evidence/records/evd-geo-site-c2-after-own-content.md",
+      "snapshot_sha256": "611bea970378371e3791816fa09d5cbf597e7a82cb2c177ddbb65c0298e9d07b"
+    },
+    {
+      "content_sha256": "244a981e42498c711e3740d3112d53310afbde553689b1b91b95a3ad38319587",
+      "entry_key": "86a71f21cfaf337d373b88dace4f719c0732f258974e47c3fed7a73a1ef5ecab",
+      "file_sha256": "3a0acc5b1ef4bd6cc3b4c8875cca1c6e320ff95d2bdf30dc33f731c0dca10a71",
+      "object_id": "EVD-GEO-SITE-C2-AFTER-OWN-CANONICAL",
+      "object_path": "evidence/records/evd-geo-site-c2-after-own-canonical.md",
+      "object_version": "1.0.0",
+      "record_type": "evidence",
+      "snapshot_path": "outputs/snapshots/cis-geo-c2-technical-retest-completed/objects/evidence/records/evd-geo-site-c2-after-own-canonical.md",
+      "snapshot_sha256": "3a0acc5b1ef4bd6cc3b4c8875cca1c6e320ff95d2bdf30dc33f731c0dca10a71"
+    },
+    {
+      "content_sha256": "c56af95ee672b8ffea6954607444ccd50222ac59a1a2bd809e7905c2955f9431",
+      "entry_key": "c8a57fa3b05be2158cdf69049725f5dd1aacf32af307d50a3d952e8638d8f157",
+      "file_sha256": "22e2018eca80518704e1c7eb67e5df70b32cbe97ba9e00bb3ee471e173c2b2c8",
+      "object_id": "FND-GEO-SITE-C2-AFTER-OWN-CANONICAL",
+      "object_path": "findings/fnd-geo-site-c2-after-own-canonical.md",
+      "object_version": "1.0.0",
+      "record_type": "finding",
+      "snapshot_path": "outputs/snapshots/cis-geo-c2-technical-retest-completed/objects/findings/fnd-geo-site-c2-after-own-canonical.md",
+      "snapshot_sha256": "22e2018eca80518704e1c7eb67e5df70b32cbe97ba9e00bb3ee471e173c2b2c8"
+    },
+    {
+      "content_sha256": "e290ee14e0f8b35e919f1150df577332e4eac9a32061fd1a1fd9ffbcda1ffdc0",
+      "entry_key": "e7692f8a39c612ec406a67f8d911f26795bbb4f52e40d23a08561521c1ec5ef6",
+      "file_sha256": "d9c1eabdd3f16c67950182372df4d4a6049dd96b891d64afdda1c2f43bc18c9c",
+      "object_id": "RUN-GEO-SITE-C2-AFTER-OWN",
+      "object_path": "cycles/m4/runs/run-geo-site-c2-after-own.md",
+      "object_version": "1.0.0",
+      "record_type": "run",
+      "snapshot_path": "outputs/snapshots/cis-geo-c2-technical-retest-completed/objects/cycles/m4/runs/run-geo-site-c2-after-own.md",
+      "snapshot_sha256": "d9c1eabdd3f16c67950182372df4d4a6049dd96b891d64afdda1c2f43bc18c9c"
+    },
+    {
+      "content_sha256": "f75f3e8d00e214448464a9a652c802996e26bec05b316753ba053efd15dc4376",
+      "entry_key": "f0d5ca7e7db79ee483dd829de68112d628000e3099607efa22c33d422653eff6",
+      "file_sha256": "f2f559c289fa52d10220e7b6ad9e53ddd3a1687662b3d5e375ea555cc8dac244",
+      "object_id": "FND-GEO-SITE-C2-AFTER-OWN-SCHEMA-SYNTAX",
+      "object_path": "findings/fnd-geo-site-c2-after-own-schema-syntax.md",
+      "object_version": "1.0.0",
+      "record_type": "finding",
+      "snapshot_path": "outputs/snapshots/cis-geo-c2-technical-retest-completed/objects/findings/fnd-geo-site-c2-after-own-schema-syntax.md",
+      "snapshot_sha256": "f2f559c289fa52d10220e7b6ad9e53ddd3a1687662b3d5e375ea555cc8dac244"
+    }
+  ]
+}

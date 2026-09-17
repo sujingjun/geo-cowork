@@ -1,0 +1,41 @@
+{
+  "audit": {
+    "completed_at": "2026-09-15T17:55:34.014Z",
+    "duration_ms": 3518,
+    "finish_reason": "stop",
+    "http_status": 200,
+    "id": "MODEL-a0b652ef-b3d2-4523-9ea7-88227a7653e6",
+    "input_sha256": "beb774eb1fac7b02005bf4050509fc87ab15628b61472f31a0ca1753f7568527",
+    "model": "deepseek-flash",
+    "output_sha256": "f2305aafcfaba9560e27819373877a098903c267031a9001fcb551e1dc1fc9dc",
+    "prompt_sha256": "e5d2c9a2481b77f774d18dc813bd55ef7805d120c8b02d6e068af72999a4b872",
+    "provider": "deepseek",
+    "response_model": "deepseek-flash",
+    "started_at": "2026-09-15T17:55:30.496Z",
+    "status": "completed",
+    "usage": {
+      "completion_tokens": 579,
+      "completion_tokens_details": {
+        "reasoning_tokens": 482
+      },
+      "prompt_cache_hit_tokens": 512,
+      "prompt_cache_miss_tokens": 240,
+      "prompt_tokens": 752,
+      "prompt_tokens_details": {
+        "cached_tokens": 512
+      },
+      "total_tokens": 1331
+    }
+  },
+  "output": {
+    "answer": {
+      "completeness": "partial",
+      "html_structure_summary": "Plain text with two paragraphs separated by a blank line; no HTML elements present.",
+      "refusal": false,
+      "text": "MyyShop rehearsal Wholesale marketplace Guaranteed income for everyone.\n\nSynthetic consumer input for: What are the fees, trial terms, and refund rules for the rehearsal service?"
+    },
+    "citations": [],
+    "platform_annotations": [],
+    "warnings": []
+  }
+}

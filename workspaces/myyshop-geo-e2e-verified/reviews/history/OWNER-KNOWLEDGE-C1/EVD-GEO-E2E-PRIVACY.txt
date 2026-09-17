@@ -1,0 +1,28 @@
+---
+id: EVD-GEO-E2E-PRIVACY
+record_type: evidence
+status: candidate
+version: 1.0.0
+created_at: '2026-09-16T00:00:00Z'
+updated_at: '2026-09-16T00:00:00Z'
+title: Privacy
+test_scope:
+  kind: synthetic
+  usage: test_only
+  merchant_ref: MER-MYYSHOP-001
+  workspace_id: ws_377ec2e00b68d35bf465ab5d6e
+  knowledge_base_ref: KBASE-GEO-E2E-377EC2E00B68
+source_refs:
+  - SRC-GEO-E2E-PRIVACY
+locator: 'https://knowledge.geo-e2e.invalid/privacy'
+captured_at: '2026-09-16T00:00:00Z'
+snapshot:
+  path: evidence/snapshots/privacy.txt
+  sha256: e96c165fd9313d0dc51c77f32c5e9b8871da7a54eab96400c0080e4d728f51f3
+  media_type: text/plain
+collector:
+  name: business-input-reader
+  version: 1.0.0
+scope: Synthetic rehearsal only.
+---
+# Privacy

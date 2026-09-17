@@ -50,6 +50,7 @@ export function validateVersionRefs(graph, refs, type) {
 export function commonData(item, recordType, status, now, existing) {
   return {
     id: item.id,
+    ...(item.test_scope ? { test_scope: { ...item.test_scope } } : {}),
     record_type: recordType,
     status,
     version: item.version ?? existing?.data.version ?? '1.0.0',

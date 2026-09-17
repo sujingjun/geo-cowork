@@ -22,7 +22,7 @@ function testService() {
     },
     extractor: {
       profile: {
-        provider: 'fake', model: 'fake', promptVersion: 'v1',
+        provider: 'not-invoked', model: 'not-invoked', promptVersion: 'v1',
         promptSha256: 'b'.repeat(64), schemaVersion: 'geo-browser-extraction-result-v1'
       },
       async extract() {

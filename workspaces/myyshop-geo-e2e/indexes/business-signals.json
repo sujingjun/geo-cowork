@@ -1,0 +1,36 @@
+{
+  "objects": [
+    {
+      "id": "BSIG-GEO-C1",
+      "path": "cycles/m6/analytics/bsig-geo-c1.md",
+      "refs": [
+        "ANO-GEO-C1",
+        "CYC-GEO-E2E-C1",
+        "GOAL-GEO-E2E-C1",
+        "KBASE-GEO-E2E-2BB19816EE72",
+        "MER-MYYSHOP-001",
+        "RUN-GEO-ANALYTICS-C1"
+      ],
+      "status": "computed",
+      "updated_at": "2026-09-25T00:00:00.000Z",
+      "version": "1.0.0"
+    },
+    {
+      "id": "BSIG-GEO-C2",
+      "path": "cycles/m6/analytics/bsig-geo-c2.md",
+      "refs": [
+        "ANO-GEO-C2",
+        "CYC-GEO-E2E-C2",
+        "GOAL-GEO-E2E-C2",
+        "KBASE-GEO-E2E-2BB19816EE72",
+        "MER-MYYSHOP-001",
+        "RUN-GEO-ANALYTICS-C2"
+      ],
+      "status": "computed",
+      "updated_at": "2026-10-09T00:00:00.000Z",
+      "version": "1.0.0"
+    }
+  ],
+  "record_type": "business_signal",
+  "schema_version": "1.1.0"
+}

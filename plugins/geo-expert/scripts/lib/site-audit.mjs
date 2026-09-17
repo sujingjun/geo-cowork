@@ -332,7 +332,7 @@ function resultOutputs({ graph, manifest, plan, evaluation, now, retest }) {
     }
     return [finding.data.finding_code, finding];
   }));
-  const applicable = retest
+  const applicable = retest && retestByCode.size > 0
     ? evaluation.checks.filter((check) => retestByCode.has(check.code))
     : evaluation.checks.filter((check) => check.state !== 'pass');
   for (const check of applicable) {
@@ -469,7 +469,7 @@ export async function technicalRetest({ workspace, manifest, plan, now }) {
   } else if (!isFixtureLocator(manifest.target?.locator)) {
     throw new DiagnosisError('INPUT_NOT_M4_READY', 'Fixture Retest 只能使用 .invalid 或 workspace locator');
   }
-  if ((plan.retest_of_refs?.length ?? 0) === 0) {
+  if ((plan.retest_of_refs?.length ?? 0) === 0 && (plan.publication_refs?.length ?? 0) === 0) {
     throw new DiagnosisError('RETEST_INPUT_DRIFT', 'Technical Retest 缺少旧 Finding refs');
   }
   return materializeSite({ workspace, manifest, plan, now, retest: true });

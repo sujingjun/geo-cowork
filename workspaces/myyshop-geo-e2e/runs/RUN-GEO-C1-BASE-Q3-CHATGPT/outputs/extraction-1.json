@@ -1,0 +1,41 @@
+{
+  "audit": {
+    "completed_at": "2026-09-15T17:56:17.052Z",
+    "duration_ms": 12476,
+    "finish_reason": "stop",
+    "http_status": 200,
+    "id": "MODEL-e5db0085-5337-439b-9b09-9a9dce1e87f1",
+    "input_sha256": "4c4847787d888b0fac3edd71756a8da57bac92e0415af84d25d99821fa1d61ed",
+    "model": "deepseek-flash",
+    "output_sha256": "eef68fbfa5dc3764f259ee6f36055038b8f273ab29229019c796bd46efa82f30",
+    "prompt_sha256": "e5d2c9a2481b77f774d18dc813bd55ef7805d120c8b02d6e068af72999a4b872",
+    "provider": "deepseek",
+    "response_model": "deepseek-flash",
+    "started_at": "2026-09-15T17:56:04.576Z",
+    "status": "completed",
+    "usage": {
+      "completion_tokens": 2599,
+      "completion_tokens_details": {
+        "reasoning_tokens": 2497
+      },
+      "prompt_cache_hit_tokens": 128,
+      "prompt_cache_miss_tokens": 656,
+      "prompt_tokens": 784,
+      "prompt_tokens_details": {
+        "cached_tokens": 128
+      },
+      "total_tokens": 3383
+    }
+  },
+  "output": {
+    "answer": {
+      "completeness": "partial",
+      "html_structure_summary": "Plain text with two paragraphs separated by a blank line; no HTML tags.",
+      "refusal": false,
+      "text": "MyyShop rehearsal Wholesale marketplace Guaranteed income for everyone.\n\nSynthetic consumer input for: What capabilities does the rehearsal service support for campaign discovery, applications, and performance reporting, and what is unavailable?"
+    },
+    "citations": [],
+    "platform_annotations": [],
+    "warnings": []
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "answer_text": "MyyShop rehearsal Wholesale marketplace Guaranteed income for everyone.\n\nSynthetic consumer input for: What is the rehearsal service, what does it connect adult creators with, and is it a wholesale marketplace?",
+  "ordinal": 1,
+  "platform": "google_ai",
+  "purpose": "baseline",
+  "query_ref": "Q-WHAT-IS-THE-REHEARSAL-SERVICE-EN-B466",
+  "query_version": "1.0.0",
+  "source": "business-input assets/knowledge",
+  "synthetic": true
+}

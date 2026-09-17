@@ -1,0 +1,110 @@
+[
+  {
+    "category": "02-brand-identity",
+    "key": "identity",
+    "path": "knowledge/02-brand-identity/identity.md",
+    "state": "candidate"
+  },
+  {
+    "category": "02-brand-identity",
+    "key": "legacy",
+    "path": "knowledge/02-brand-identity/legacy.md",
+    "state": "candidate"
+  },
+  {
+    "category": "03-positioning-strategy",
+    "key": "positioning",
+    "path": "knowledge/03-positioning-strategy/positioning.md",
+    "state": "candidate"
+  },
+  {
+    "category": "03-positioning-strategy",
+    "key": "non-goals",
+    "path": "knowledge/03-positioning-strategy/non-goals.md",
+    "state": "candidate"
+  },
+  {
+    "category": "04-audience-lifecycle",
+    "key": "eligibility",
+    "path": "knowledge/04-audience-lifecycle/eligibility.md",
+    "state": "candidate"
+  },
+  {
+    "category": "04-audience-lifecycle",
+    "key": "onboarding",
+    "path": "knowledge/04-audience-lifecycle/onboarding.md",
+    "state": "candidate"
+  },
+  {
+    "category": "05-products-services",
+    "key": "campaigns",
+    "path": "knowledge/05-products-services/campaigns.md",
+    "state": "candidate"
+  },
+  {
+    "category": "05-products-services",
+    "key": "automation",
+    "path": "knowledge/05-products-services/automation.md",
+    "state": "candidate"
+  },
+  {
+    "category": "06-commercial-rules",
+    "key": "fees",
+    "path": "knowledge/06-commercial-rules/fees.md",
+    "state": "candidate"
+  },
+  {
+    "category": "06-commercial-rules",
+    "key": "refund",
+    "path": "knowledge/06-commercial-rules/refund.md",
+    "state": "candidate"
+  },
+  {
+    "category": "07-trust-safety",
+    "key": "privacy",
+    "path": "knowledge/07-trust-safety/privacy.md",
+    "state": "candidate"
+  },
+  {
+    "category": "07-trust-safety",
+    "key": "guarantees",
+    "path": "knowledge/07-trust-safety/guarantees.md",
+    "state": "candidate"
+  },
+  {
+    "category": "08-proof-authority",
+    "key": "case",
+    "path": "knowledge/08-proof-authority/case.md",
+    "state": "candidate"
+  },
+  {
+    "category": "08-proof-authority",
+    "key": "growth",
+    "path": "knowledge/08-proof-authority/growth.md",
+    "state": "stale"
+  },
+  {
+    "category": "09-voice-messaging",
+    "key": "voice",
+    "path": "knowledge/09-voice-messaging/voice.md",
+    "state": "candidate"
+  },
+  {
+    "category": "09-voice-messaging",
+    "key": "expired",
+    "path": "knowledge/09-voice-messaging/expired.md",
+    "state": "stale"
+  },
+  {
+    "category": "10-query-answer-cards",
+    "key": "answer-definition",
+    "path": "knowledge/10-query-answer-cards/answer-definition.md",
+    "state": "candidate"
+  },
+  {
+    "category": "10-query-answer-cards",
+    "key": "comparison",
+    "path": "knowledge/10-query-answer-cards/comparison.md",
+    "state": "candidate"
+  }
+]

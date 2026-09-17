@@ -1,0 +1,8 @@
+{
+  "content_sha256": "8ced087cfe6244a1ce1293c9383920112204d2a96f108384a6a1f5ddc59b7ec1",
+  "logical_locator": "https://brand.geo-e2e.invalid/faq",
+  "read_at": "2026-09-15T20:44:53.613Z",
+  "status": 200,
+  "synthetic": true,
+  "transport": "http://127.0.0.1:62089/asset"
+}

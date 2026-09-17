@@ -1,0 +1,8 @@
+{
+  "content_sha256": "a9f2cb0b88dda8fd957d3c44d8c46d08ae2bbfe9742a41b6ad3c96a452fc4f77",
+  "logical_locator": "https://social.geo-e2e.invalid/brand",
+  "read_at": "2026-09-15T18:21:44.871Z",
+  "status": 200,
+  "synthetic": true,
+  "transport": "http://127.0.0.1:51989/asset"
+}

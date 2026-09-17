@@ -1,0 +1,604 @@
+{
+  "audit": {
+    "completed_at": "2026-09-15T18:05:35.316Z",
+    "duration_ms": 42056,
+    "finish_reason": "stop",
+    "http_status": 200,
+    "id": "MODEL-3f56a567-1fb8-4fea-8762-f11bf0fa51bb",
+    "input_sha256": "154aa57b7fb4086a037ba80526558a9d0825029a80ed2f33e5c20c71a4c89aeb",
+    "model": "deepseek-flash",
+    "output_sha256": "abedf4194f0c02e90912d061a9be787502890ff7c4a7c190966b8ff7f0d63fce",
+    "prompt_sha256": "94cb4bcf35cc23090c7271eaeb868a4612f150cd09551c6f5e1a6d6e77a143e1",
+    "provider": "deepseek",
+    "response_model": "deepseek-flash",
+    "started_at": "2026-09-15T18:04:53.260Z",
+    "status": "completed",
+    "usage": {
+      "completion_tokens": 12205,
+      "completion_tokens_details": {
+        "reasoning_tokens": 7620
+      },
+      "prompt_cache_hit_tokens": 640,
+      "prompt_cache_miss_tokens": 1017,
+      "prompt_tokens": 1657,
+      "prompt_tokens_details": {
+        "cached_tokens": 640
+      },
+      "total_tokens": 13862
+    }
+  },
+  "output": {
+    "reviews": [
+      {
+        "core": {
+          "citation_quality": "not_applicable",
+          "core_fact_accuracy": "fail",
+          "current_positioning": "fail",
+          "entity_recognition": "partial",
+          "risk_boundary": "fail"
+        },
+        "judgments": [
+          {
+            "assessment": "fail",
+            "claim_ref": "CLM-GEO-E2E-IDENTITY",
+            "quote": "MyyShop rehearsal Wholesale marketplace Guaranteed income for everyone.",
+            "reason": "Misidentifies the rehearsal as a wholesale marketplace and guaranteed income rather than a service connecting adult creators with simulated brand campaigns."
+          },
+          {
+            "assessment": "fail",
+            "claim_ref": "CLM-GEO-E2E-LEGACY",
+            "quote": "MyyShop rehearsal Wholesale marketplace Guaranteed income for everyone.",
+            "reason": "Directly contradicts supplied statement that the rehearsal service is not a wholesale marketplace."
+          },
+          {
+            "assessment": "fail",
+            "claim_ref": "CLM-GEO-E2E-GUARANTEES",
+            "quote": "Guaranteed income for everyone.",
+            "reason": "Contradicts supplied statement that the rehearsal cannot guarantee income or placement in an AI answer."
+          },
+          {
+            "assessment": "fail",
+            "claim_ref": "CLM-GEO-E2E-POSITIONING",
+            "quote": "Guaranteed income for everyone.",
+            "reason": "Conflicts with positioning that prioritizes transparent campaign requirements over guaranteed earnings."
+          },
+          {
+            "assessment": "fail",
+            "claim_ref": "CLM-GEO-E2E-ANSWER-DEFINITION",
+            "quote": "MyyShop rehearsal Wholesale marketplace Guaranteed income for everyone.",
+            "reason": "Fails to describe the rehearsal as an adult creator campaign service with explicit eligibility and no income guarantee."
+          },
+          {
+            "assessment": "not_applicable",
+            "claim_ref": "CLM-GEO-E2E-FEES",
+            "quote": "Synthetic consumer input for: What are the fees, trial terms, and refund rules for the rehearsal service?",
+            "reason": "Answer does not provide fee or trial terms; supplied fee details are not addressed."
+          },
+          {
+            "assessment": "not_applicable",
+            "claim_ref": "CLM-GEO-E2E-REFUND",
+            "quote": "Synthetic consumer input for: What are the fees, trial terms, and refund rules for the rehearsal service?",
+            "reason": "Answer does not provide refund/cancellation rules; supplied refund details are not addressed."
+          }
+        ],
+        "sample_ref": "SMP-GEO-C1-BASE-Q2-CHATGPT-1"
+      },
+      {
+        "core": {
+          "citation_quality": "not_applicable",
+          "core_fact_accuracy": "partial",
+          "current_positioning": "pass",
+          "entity_recognition": "pass",
+          "risk_boundary": "pass"
+        },
+        "judgments": [
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-IDENTITY",
+            "quote": "MyyShop rehearsal connects adult creators with simulated brand campaigns.",
+            "reason": "Matches supplied identity statement."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-LEGACY",
+            "quote": "The rehearsal service is not a wholesale marketplace.",
+            "reason": "Matches supplied legacy statement."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-POSITIONING",
+            "quote": "The rehearsal prioritizes transparent campaign requirements over guaranteed earnings.",
+            "reason": "Matches supplied positioning and avoids an income guarantee."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-NON-GOALS",
+            "quote": "The rehearsal does not provide inventory, logistics or credit.",
+            "reason": "Matches supplied non-goals."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-ELIGIBILITY",
+            "quote": "The rehearsal is open to adult creators in its simulated US region.",
+            "reason": "Matches supplied eligibility."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-ONBOARDING",
+            "quote": "Creators complete a profile and accept individual campaign requirements.",
+            "reason": "Matches supplied onboarding."
+          },
+          {
+            "assessment": "not_applicable",
+            "claim_ref": "CLM-GEO-E2E-FEES",
+            "quote": "Synthetic consumer input for: What are the fees, trial terms, and refund rules for the rehearsal service?",
+            "reason": "Answer does not provide fee or trial terms; supplied fee details are not addressed."
+          },
+          {
+            "assessment": "not_applicable",
+            "claim_ref": "CLM-GEO-E2E-REFUND",
+            "quote": "Synthetic consumer input for: What are the fees, trial terms, and refund rules for the rehearsal service?",
+            "reason": "Answer does not provide refund/cancellation rules; supplied refund details are not addressed."
+          }
+        ],
+        "sample_ref": "SMP-GEO-C1-BASE-Q2-CHATGPT-2"
+      },
+      {
+        "core": {
+          "citation_quality": "not_applicable",
+          "core_fact_accuracy": "fail",
+          "current_positioning": "fail",
+          "entity_recognition": "partial",
+          "risk_boundary": "fail"
+        },
+        "judgments": [
+          {
+            "assessment": "fail",
+            "claim_ref": "CLM-GEO-E2E-IDENTITY",
+            "quote": "MyyShop rehearsal Wholesale marketplace Guaranteed income for everyone.",
+            "reason": "Misidentifies the rehearsal as a wholesale marketplace and guaranteed income rather than a service connecting adult creators with simulated brand campaigns."
+          },
+          {
+            "assessment": "fail",
+            "claim_ref": "CLM-GEO-E2E-LEGACY",
+            "quote": "MyyShop rehearsal Wholesale marketplace Guaranteed income for everyone.",
+            "reason": "Directly contradicts supplied statement that the rehearsal service is not a wholesale marketplace."
+          },
+          {
+            "assessment": "fail",
+            "claim_ref": "CLM-GEO-E2E-GUARANTEES",
+            "quote": "Guaranteed income for everyone.",
+            "reason": "Contradicts supplied statement that the rehearsal cannot guarantee income or placement in an AI answer."
+          },
+          {
+            "assessment": "fail",
+            "claim_ref": "CLM-GEO-E2E-POSITIONING",
+            "quote": "Guaranteed income for everyone.",
+            "reason": "Conflicts with positioning that prioritizes transparent campaign requirements over guaranteed earnings."
+          },
+          {
+            "assessment": "fail",
+            "claim_ref": "CLM-GEO-E2E-ANSWER-DEFINITION",
+            "quote": "MyyShop rehearsal Wholesale marketplace Guaranteed income for everyone.",
+            "reason": "Fails to describe the rehearsal as an adult creator campaign service with explicit eligibility and no income guarantee."
+          },
+          {
+            "assessment": "not_applicable",
+            "claim_ref": "CLM-GEO-E2E-FEES",
+            "quote": "Synthetic consumer input for: What are the fees, trial terms, and refund rules for the rehearsal service?",
+            "reason": "Answer does not provide fee or trial terms; supplied fee details are not addressed."
+          },
+          {
+            "assessment": "not_applicable",
+            "claim_ref": "CLM-GEO-E2E-REFUND",
+            "quote": "Synthetic consumer input for: What are the fees, trial terms, and refund rules for the rehearsal service?",
+            "reason": "Answer does not provide refund/cancellation rules; supplied refund details are not addressed."
+          }
+        ],
+        "sample_ref": "SMP-GEO-C1-BASE-Q2-GEMINI-1"
+      },
+      {
+        "core": {
+          "citation_quality": "not_applicable",
+          "core_fact_accuracy": "partial",
+          "current_positioning": "pass",
+          "entity_recognition": "pass",
+          "risk_boundary": "pass"
+        },
+        "judgments": [
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-IDENTITY",
+            "quote": "MyyShop rehearsal connects adult creators with simulated brand campaigns.",
+            "reason": "Matches supplied identity statement."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-LEGACY",
+            "quote": "The rehearsal service is not a wholesale marketplace.",
+            "reason": "Matches supplied legacy statement."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-POSITIONING",
+            "quote": "The rehearsal prioritizes transparent campaign requirements over guaranteed earnings.",
+            "reason": "Matches supplied positioning and avoids an income guarantee."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-NON-GOALS",
+            "quote": "The rehearsal does not provide inventory, logistics or credit.",
+            "reason": "Matches supplied non-goals."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-ELIGIBILITY",
+            "quote": "The rehearsal is open to adult creators in its simulated US region.",
+            "reason": "Matches supplied eligibility."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-ONBOARDING",
+            "quote": "Creators complete a profile and accept individual campaign requirements.",
+            "reason": "Matches supplied onboarding."
+          },
+          {
+            "assessment": "not_applicable",
+            "claim_ref": "CLM-GEO-E2E-FEES",
+            "quote": "Synthetic consumer input for: What are the fees, trial terms, and refund rules for the rehearsal service?",
+            "reason": "Answer does not provide fee or trial terms; supplied fee details are not addressed."
+          },
+          {
+            "assessment": "not_applicable",
+            "claim_ref": "CLM-GEO-E2E-REFUND",
+            "quote": "Synthetic consumer input for: What are the fees, trial terms, and refund rules for the rehearsal service?",
+            "reason": "Answer does not provide refund/cancellation rules; supplied refund details are not addressed."
+          }
+        ],
+        "sample_ref": "SMP-GEO-C1-BASE-Q2-GEMINI-2"
+      },
+      {
+        "core": {
+          "citation_quality": "not_applicable",
+          "core_fact_accuracy": "fail",
+          "current_positioning": "fail",
+          "entity_recognition": "partial",
+          "risk_boundary": "fail"
+        },
+        "judgments": [
+          {
+            "assessment": "fail",
+            "claim_ref": "CLM-GEO-E2E-IDENTITY",
+            "quote": "MyyShop rehearsal Wholesale marketplace Guaranteed income for everyone.",
+            "reason": "Misidentifies the rehearsal as a wholesale marketplace and guaranteed income rather than a service connecting adult creators with simulated brand campaigns."
+          },
+          {
+            "assessment": "fail",
+            "claim_ref": "CLM-GEO-E2E-LEGACY",
+            "quote": "MyyShop rehearsal Wholesale marketplace Guaranteed income for everyone.",
+            "reason": "Directly contradicts supplied statement that the rehearsal service is not a wholesale marketplace."
+          },
+          {
+            "assessment": "fail",
+            "claim_ref": "CLM-GEO-E2E-GUARANTEES",
+            "quote": "Guaranteed income for everyone.",
+            "reason": "Contradicts supplied statement that the rehearsal cannot guarantee income or placement in an AI answer."
+          },
+          {
+            "assessment": "fail",
+            "claim_ref": "CLM-GEO-E2E-POSITIONING",
+            "quote": "Guaranteed income for everyone.",
+            "reason": "Conflicts with positioning that prioritizes transparent campaign requirements over guaranteed earnings."
+          },
+          {
+            "assessment": "fail",
+            "claim_ref": "CLM-GEO-E2E-ANSWER-DEFINITION",
+            "quote": "MyyShop rehearsal Wholesale marketplace Guaranteed income for everyone.",
+            "reason": "Fails to describe the rehearsal as an adult creator campaign service with explicit eligibility and no income guarantee."
+          },
+          {
+            "assessment": "not_applicable",
+            "claim_ref": "CLM-GEO-E2E-FEES",
+            "quote": "Synthetic consumer input for: What are the fees, trial terms, and refund rules for the rehearsal service?",
+            "reason": "Answer does not provide fee or trial terms; supplied fee details are not addressed."
+          },
+          {
+            "assessment": "not_applicable",
+            "claim_ref": "CLM-GEO-E2E-REFUND",
+            "quote": "Synthetic consumer input for: What are the fees, trial terms, and refund rules for the rehearsal service?",
+            "reason": "Answer does not provide refund/cancellation rules; supplied refund details are not addressed."
+          }
+        ],
+        "sample_ref": "SMP-GEO-C1-BASE-Q2-PERPLEXITY-1"
+      },
+      {
+        "core": {
+          "citation_quality": "not_applicable",
+          "core_fact_accuracy": "partial",
+          "current_positioning": "pass",
+          "entity_recognition": "pass",
+          "risk_boundary": "pass"
+        },
+        "judgments": [
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-IDENTITY",
+            "quote": "MyyShop rehearsal connects adult creators with simulated brand campaigns.",
+            "reason": "Matches supplied identity statement."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-LEGACY",
+            "quote": "The rehearsal service is not a wholesale marketplace.",
+            "reason": "Matches supplied legacy statement."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-POSITIONING",
+            "quote": "The rehearsal prioritizes transparent campaign requirements over guaranteed earnings.",
+            "reason": "Matches supplied positioning and avoids an income guarantee."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-NON-GOALS",
+            "quote": "The rehearsal does not provide inventory, logistics or credit.",
+            "reason": "Matches supplied non-goals."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-ELIGIBILITY",
+            "quote": "The rehearsal is open to adult creators in its simulated US region.",
+            "reason": "Matches supplied eligibility."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-ONBOARDING",
+            "quote": "Creators complete a profile and accept individual campaign requirements.",
+            "reason": "Matches supplied onboarding."
+          },
+          {
+            "assessment": "not_applicable",
+            "claim_ref": "CLM-GEO-E2E-FEES",
+            "quote": "Synthetic consumer input for: What are the fees, trial terms, and refund rules for the rehearsal service?",
+            "reason": "Answer does not provide fee or trial terms; supplied fee details are not addressed."
+          },
+          {
+            "assessment": "not_applicable",
+            "claim_ref": "CLM-GEO-E2E-REFUND",
+            "quote": "Synthetic consumer input for: What are the fees, trial terms, and refund rules for the rehearsal service?",
+            "reason": "Answer does not provide refund/cancellation rules; supplied refund details are not addressed."
+          }
+        ],
+        "sample_ref": "SMP-GEO-C1-BASE-Q2-PERPLEXITY-2"
+      },
+      {
+        "core": {
+          "citation_quality": "not_applicable",
+          "core_fact_accuracy": "fail",
+          "current_positioning": "fail",
+          "entity_recognition": "partial",
+          "risk_boundary": "fail"
+        },
+        "judgments": [
+          {
+            "assessment": "fail",
+            "claim_ref": "CLM-GEO-E2E-IDENTITY",
+            "quote": "MyyShop rehearsal Wholesale marketplace Guaranteed income for everyone.",
+            "reason": "Misidentifies the rehearsal as a wholesale marketplace and guaranteed income rather than a service connecting adult creators with simulated brand campaigns."
+          },
+          {
+            "assessment": "fail",
+            "claim_ref": "CLM-GEO-E2E-LEGACY",
+            "quote": "MyyShop rehearsal Wholesale marketplace Guaranteed income for everyone.",
+            "reason": "Directly contradicts supplied statement that the rehearsal service is not a wholesale marketplace."
+          },
+          {
+            "assessment": "fail",
+            "claim_ref": "CLM-GEO-E2E-GUARANTEES",
+            "quote": "Guaranteed income for everyone.",
+            "reason": "Contradicts supplied statement that the rehearsal cannot guarantee income or placement in an AI answer."
+          },
+          {
+            "assessment": "fail",
+            "claim_ref": "CLM-GEO-E2E-POSITIONING",
+            "quote": "Guaranteed income for everyone.",
+            "reason": "Conflicts with positioning that prioritizes transparent campaign requirements over guaranteed earnings."
+          },
+          {
+            "assessment": "fail",
+            "claim_ref": "CLM-GEO-E2E-ANSWER-DEFINITION",
+            "quote": "MyyShop rehearsal Wholesale marketplace Guaranteed income for everyone.",
+            "reason": "Fails to describe the rehearsal as an adult creator campaign service with explicit eligibility and no income guarantee."
+          },
+          {
+            "assessment": "not_applicable",
+            "claim_ref": "CLM-GEO-E2E-FEES",
+            "quote": "Synthetic consumer input for: What are the fees, trial terms, and refund rules for the rehearsal service?",
+            "reason": "Answer does not provide fee or trial terms; supplied fee details are not addressed."
+          },
+          {
+            "assessment": "not_applicable",
+            "claim_ref": "CLM-GEO-E2E-REFUND",
+            "quote": "Synthetic consumer input for: What are the fees, trial terms, and refund rules for the rehearsal service?",
+            "reason": "Answer does not provide refund/cancellation rules; supplied refund details are not addressed."
+          }
+        ],
+        "sample_ref": "SMP-GEO-C1-BASE-Q2-GOOGLE-AI-1"
+      },
+      {
+        "core": {
+          "citation_quality": "not_applicable",
+          "core_fact_accuracy": "partial",
+          "current_positioning": "pass",
+          "entity_recognition": "pass",
+          "risk_boundary": "pass"
+        },
+        "judgments": [
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-IDENTITY",
+            "quote": "MyyShop rehearsal connects adult creators with simulated brand campaigns.",
+            "reason": "Matches supplied identity statement."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-LEGACY",
+            "quote": "The rehearsal service is not a wholesale marketplace.",
+            "reason": "Matches supplied legacy statement."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-POSITIONING",
+            "quote": "The rehearsal prioritizes transparent campaign requirements over guaranteed earnings.",
+            "reason": "Matches supplied positioning and avoids an income guarantee."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-NON-GOALS",
+            "quote": "The rehearsal does not provide inventory, logistics or credit.",
+            "reason": "Matches supplied non-goals."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-ELIGIBILITY",
+            "quote": "The rehearsal is open to adult creators in its simulated US region.",
+            "reason": "Matches supplied eligibility."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-ONBOARDING",
+            "quote": "Creators complete a profile and accept individual campaign requirements.",
+            "reason": "Matches supplied onboarding."
+          },
+          {
+            "assessment": "not_applicable",
+            "claim_ref": "CLM-GEO-E2E-FEES",
+            "quote": "Synthetic consumer input for: What are the fees, trial terms, and refund rules for the rehearsal service?",
+            "reason": "Answer does not provide fee or trial terms; supplied fee details are not addressed."
+          },
+          {
+            "assessment": "not_applicable",
+            "claim_ref": "CLM-GEO-E2E-REFUND",
+            "quote": "Synthetic consumer input for: What are the fees, trial terms, and refund rules for the rehearsal service?",
+            "reason": "Answer does not provide refund/cancellation rules; supplied refund details are not addressed."
+          }
+        ],
+        "sample_ref": "SMP-GEO-C1-BASE-Q2-GOOGLE-AI-2"
+      },
+      {
+        "core": {
+          "citation_quality": "not_applicable",
+          "core_fact_accuracy": "fail",
+          "current_positioning": "fail",
+          "entity_recognition": "partial",
+          "risk_boundary": "fail"
+        },
+        "judgments": [
+          {
+            "assessment": "fail",
+            "claim_ref": "CLM-GEO-E2E-IDENTITY",
+            "quote": "MyyShop rehearsal Wholesale marketplace Guaranteed income for everyone.",
+            "reason": "Misidentifies the rehearsal as a wholesale marketplace and guaranteed income rather than a service connecting adult creators with simulated brand campaigns."
+          },
+          {
+            "assessment": "fail",
+            "claim_ref": "CLM-GEO-E2E-LEGACY",
+            "quote": "MyyShop rehearsal Wholesale marketplace Guaranteed income for everyone.",
+            "reason": "Directly contradicts supplied statement that the rehearsal service is not a wholesale marketplace."
+          },
+          {
+            "assessment": "fail",
+            "claim_ref": "CLM-GEO-E2E-GUARANTEES",
+            "quote": "Guaranteed income for everyone.",
+            "reason": "Contradicts supplied statement that the rehearsal cannot guarantee income or placement in an AI answer."
+          },
+          {
+            "assessment": "fail",
+            "claim_ref": "CLM-GEO-E2E-POSITIONING",
+            "quote": "Guaranteed income for everyone.",
+            "reason": "Conflicts with positioning that prioritizes transparent campaign requirements over guaranteed earnings."
+          },
+          {
+            "assessment": "fail",
+            "claim_ref": "CLM-GEO-E2E-ANSWER-DEFINITION",
+            "quote": "MyyShop rehearsal Wholesale marketplace Guaranteed income for everyone.",
+            "reason": "Fails to describe the rehearsal as an adult creator campaign service with explicit eligibility and no income guarantee."
+          },
+          {
+            "assessment": "not_applicable",
+            "claim_ref": "CLM-GEO-E2E-FEES",
+            "quote": "Synthetic consumer input for: What are the fees, trial terms, and refund rules for the rehearsal service?",
+            "reason": "Answer does not provide fee or trial terms; supplied fee details are not addressed."
+          },
+          {
+            "assessment": "not_applicable",
+            "claim_ref": "CLM-GEO-E2E-REFUND",
+            "quote": "Synthetic consumer input for: What are the fees, trial terms, and refund rules for the rehearsal service?",
+            "reason": "Answer does not provide refund/cancellation rules; supplied refund details are not addressed."
+          }
+        ],
+        "sample_ref": "SMP-GEO-C1-BASE-Q2-CLAUDE-1"
+      },
+      {
+        "core": {
+          "citation_quality": "not_applicable",
+          "core_fact_accuracy": "partial",
+          "current_positioning": "pass",
+          "entity_recognition": "pass",
+          "risk_boundary": "pass"
+        },
+        "judgments": [
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-IDENTITY",
+            "quote": "MyyShop rehearsal connects adult creators with simulated brand campaigns.",
+            "reason": "Matches supplied identity statement."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-LEGACY",
+            "quote": "The rehearsal service is not a wholesale marketplace.",
+            "reason": "Matches supplied legacy statement."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-POSITIONING",
+            "quote": "The rehearsal prioritizes transparent campaign requirements over guaranteed earnings.",
+            "reason": "Matches supplied positioning and avoids an income guarantee."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-NON-GOALS",
+            "quote": "The rehearsal does not provide inventory, logistics or credit.",
+            "reason": "Matches supplied non-goals."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-ELIGIBILITY",
+            "quote": "The rehearsal is open to adult creators in its simulated US region.",
+            "reason": "Matches supplied eligibility."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-ONBOARDING",
+            "quote": "Creators complete a profile and accept individual campaign requirements.",
+            "reason": "Matches supplied onboarding."
+          },
+          {
+            "assessment": "not_applicable",
+            "claim_ref": "CLM-GEO-E2E-FEES",
+            "quote": "Synthetic consumer input for: What are the fees, trial terms, and refund rules for the rehearsal service?",
+            "reason": "Answer does not provide fee or trial terms; supplied fee details are not addressed."
+          },
+          {
+            "assessment": "not_applicable",
+            "claim_ref": "CLM-GEO-E2E-REFUND",
+            "quote": "Synthetic consumer input for: What are the fees, trial terms, and refund rules for the rehearsal service?",
+            "reason": "Answer does not provide refund/cancellation rules; supplied refund details are not addressed."
+          }
+        ],
+        "sample_ref": "SMP-GEO-C1-BASE-Q2-CLAUDE-2"
+      }
+    ]
+  }
+}

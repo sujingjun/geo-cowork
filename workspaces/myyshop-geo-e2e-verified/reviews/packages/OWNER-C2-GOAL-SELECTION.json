@@ -1,0 +1,27 @@
+{
+  "actions": [
+    "approve",
+    "reject",
+    "defer"
+  ],
+  "body": "- GCD-0183096EDF1F038092E4E492: Improve eligibility and evidence clarity using the previous cycle review.\n  Basis: Address reviewed evidence_gap using its exact source snapshot.",
+  "body_sha256": "a38d01c7a06ea58ec3af1830ea4d2332ee9a5e945a774f2841c37dc4c4adf91b",
+  "id": "OWNER-C2-GOAL-SELECTION",
+  "kind": "goal_selection",
+  "schema_version": "geo-owner-package-v1",
+  "targets": [
+    {
+      "id": "GSEL-3F302FC0E6AA39A5D985EC3A",
+      "path": "cycles/m7/selections/gsel-3f302fc0e6aa39a5d985ec3a.md",
+      "sha256": "f43302e6f2cbfef68eea4f7336436d52170392514dc68ef8c1590e826807ba3a",
+      "version": "1.0.0"
+    },
+    {
+      "id": "GCD-0183096EDF1F038092E4E492",
+      "path": "cycles/m7/candidates/gcd-0183096edf1f038092e4e492.md",
+      "sha256": "bbb184414468c92176791cb899eb00f1208ccf75838fed8ea911687f5bbb422b",
+      "version": "1.0.0"
+    }
+  ],
+  "title": "Choose the next Goal from Cycle 1 Review"
+}

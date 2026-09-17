@@ -3,6 +3,8 @@ import { readFile } from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
+import { parseQueryImport, ingestQueryInputs, collectGscQueries, generateKnowledgeQueries } from './lib/query-inputs.mjs';
+
 import {
   assemblePortfolioQuerySet,
   intakeQueryPortfolio,
@@ -12,6 +14,9 @@ import {
 } from './lib/query-portfolio.mjs';
 
 const COMMAND_FLAGS = {
+  import: new Set(['workspace', 'goal', 'file', 'text', 'format', 'language', 'owner']),
+  'collect-gsc': new Set(['workspace', 'goal', 'site', 'start', 'end', 'output']),
+  generate: new Set(['workspace', 'goal', 'knowledge', 'clues', 'count', 'provider', 'model']),
   intake: new Set(['workspace', 'plan', 'now']),
   report: new Set(['workspace', 'goal', 'now']),
   assemble: new Set(['workspace', 'plan', 'now']),
@@ -51,7 +56,25 @@ async function main() {
     const workspace = path.resolve(args.workspace);
     const now = args.now ?? new Date().toISOString();
     let result;
-    if (args.command === 'intake') {
+    if (args.command === 'import') {
+      const raw = args.file ? await readFile(path.resolve(args.file), 'utf8') : args.text;
+      if (!raw || !args.goal) throw new Error('import requires goal and file/text');
+      const format = args.format ?? (args.file ? path.extname(args.file).slice(1) : 'txt');
+      const entries = parseQueryImport(raw, format, args.language);
+      result = await ingestQueryInputs({ workspace, goal: args.goal, entries, raw, owner: args.owner,
+        sourceKind: 'manual_import', sourceDetail: { filename: args.file ? path.basename(args.file) : null, format } });
+    } else if (args.command === 'collect-gsc') {
+      const report = await collectGscQueries({ workspace, site: args.site, start: args.start, end: args.end, outputDir: args.output });
+      result = { status: report.status, rows: report.rows.length, input_path: report.input_path, error: report.error };
+      if (report.status === 'completed' && args.goal) result.intake = await ingestQueryInputs({ workspace, goal: args.goal,
+        entries: parseQueryImport(JSON.stringify(report.rows), 'json'), raw: report, sourceKind: 'gsc_search_query',
+        sourceDetail: { site: report.site, window: report.window, coverage: report.coverage } });
+      if (['failed', 'partial'].includes(report.status)) process.exitCode = 1;
+    } else if (args.command === 'generate') {
+      result = await generateKnowledgeQueries({ workspace, goal: args.goal, knowledgeFiles: (args.knowledge ?? '').split(',').filter(Boolean),
+        clues: args.clues ? JSON.parse(await readFile(path.resolve(args.clues), 'utf8')) : [],
+        count: Number(args.count ?? 6), provider: args.provider, model: args.model });
+    } else if (args.command === 'intake') {
       result = await intakeQueryPortfolio({ workspace, plan: await planFrom(args.plan), now });
     } else if (args.command === 'report') {
       result = await reportQueryPortfolio({ workspace, goalRef: args.goal, now });

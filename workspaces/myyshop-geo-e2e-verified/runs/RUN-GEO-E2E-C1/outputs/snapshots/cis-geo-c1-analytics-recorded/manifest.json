@@ -1,0 +1,66 @@
+{
+  "artifact_entries": [
+    {
+      "entry_key": "bf4ba17942a4daef5519024e48c74a3a2ed972b1726821f20a6e8030009305f4",
+      "media_type": "application/json",
+      "role": "measurement_contract",
+      "snapshot_path": "outputs/snapshots/cis-geo-c1-analytics-recorded/artifacts/measurement-contract.json",
+      "snapshot_sha256": "38c1980f471f579564f81aff27132a5682cb647f38f19c0021698e39b4b41967",
+      "source_path": "execution/contracts/measurement-contract.json",
+      "source_sha256": "38c1980f471f579564f81aff27132a5682cb647f38f19c0021698e39b4b41967"
+    }
+  ],
+  "base_freeze_snapshot_version": null,
+  "fingerprint": "4870b2f127f4028aab6fe0e6f9aebf34046da0aaf10f21b6eed9ec49661af396",
+  "pre_review_entry_keys": [],
+  "pre_review_transition_snapshot_versions": [],
+  "schema_version": "cycle-input-snapshot/1.0.0",
+  "snapshot_id": "CIS-GEO-C1-ANALYTICS-RECORDED",
+  "snapshot_kind": "transition",
+  "source_entries": [
+    {
+      "content_sha256": "65421194cea985633a204dd88ab9ec5d85d9acd9c3404dedd94dab8cbff18608",
+      "entry_key": "0de073fcb2cb4dc63b8191a0763ca71ff0dfc58ce30cd4b7704379435848aa7f",
+      "file_sha256": "800d44bc5703394989eba1ffc803813447a3d357757569710fb09179f8cff4e0",
+      "object_id": "ANO-GEO-C1",
+      "object_path": "cycles/m6/analytics/ano-geo-c1.md",
+      "object_version": "1.0.0",
+      "record_type": "analytics_observation",
+      "snapshot_path": "outputs/snapshots/cis-geo-c1-analytics-recorded/objects/cycles/m6/analytics/ano-geo-c1.md",
+      "snapshot_sha256": "800d44bc5703394989eba1ffc803813447a3d357757569710fb09179f8cff4e0"
+    },
+    {
+      "content_sha256": "77f7fa9817029cd22399a9b9d6cba84bc5bf1c0cc8e98fe50ab467109becf65a",
+      "entry_key": "c52cc05ebf363fd2ed28ac5fa3af903c91e1b7004bdfdd096110d9cbe6e9567c",
+      "file_sha256": "c0931706d18e6dffad03fc3440567b8053550023e6a765418b114dcd3ddc1b50",
+      "object_id": "EPL-GEO-C1-OFFICIAL-4",
+      "object_path": "evidence/plans/epl-geo-c1-official-4.md",
+      "object_version": "1.0.0",
+      "record_type": "evidence_plan",
+      "snapshot_path": "outputs/snapshots/cis-geo-c1-analytics-recorded/objects/evidence/plans/epl-geo-c1-official-4.md",
+      "snapshot_sha256": "c0931706d18e6dffad03fc3440567b8053550023e6a765418b114dcd3ddc1b50"
+    },
+    {
+      "content_sha256": "77f7fa9817029cd22399a9b9d6cba84bc5bf1c0cc8e98fe50ab467109becf65a",
+      "entry_key": "ceea2011689d466d5b01bc25aee3415cc8182ecd267c5b54ee7ce1d5839adfa3",
+      "file_sha256": "4096760bf036c7325f6329bf7598ebfeff7dbcb24dc5bfdee54eb3612685f213",
+      "object_id": "EPL-GEO-C1-THIRD-PARTY-3",
+      "object_path": "evidence/plans/epl-geo-c1-third-party-3.md",
+      "object_version": "1.0.0",
+      "record_type": "evidence_plan",
+      "snapshot_path": "outputs/snapshots/cis-geo-c1-analytics-recorded/objects/evidence/plans/epl-geo-c1-third-party-3.md",
+      "snapshot_sha256": "4096760bf036c7325f6329bf7598ebfeff7dbcb24dc5bfdee54eb3612685f213"
+    },
+    {
+      "content_sha256": "2c1327c1293d94e47fed4fb3502e2ba54e0201149f847835b4027e6d9c6e00dc",
+      "entry_key": "e92a1eb26f4f2da3163672c34e583151e99a1c1877a6a9cf51636a3ffac08342",
+      "file_sha256": "770f0126127d674f222f1b91bc7e0cda494e6f1a99d1598304d69976bbff0240",
+      "object_id": "BSIG-GEO-C1",
+      "object_path": "cycles/m6/analytics/bsig-geo-c1.md",
+      "object_version": "1.0.0",
+      "record_type": "business_signal",
+      "snapshot_path": "outputs/snapshots/cis-geo-c1-analytics-recorded/objects/cycles/m6/analytics/bsig-geo-c1.md",
+      "snapshot_sha256": "770f0126127d674f222f1b91bc7e0cda494e6f1a99d1598304d69976bbff0240"
+    }
+  ]
+}

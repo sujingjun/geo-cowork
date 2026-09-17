@@ -1,0 +1,308 @@
+{
+  "objects": [
+    {
+      "id": "CIS-GEO-C1-ADOPTION-DECIDED",
+      "path": "cycles/m6/snapshots/cis-geo-c1-adoption-decided.md",
+      "refs": [
+        "CYC-GEO-E2E-C1",
+        "KBASE-GEO-E2E-2BB19816EE72",
+        "MER-MYYSHOP-001",
+        "RUN-GEO-E2E-C1"
+      ],
+      "status": "recorded",
+      "updated_at": "2026-09-16T00:00:00Z",
+      "version": "1.0.0"
+    },
+    {
+      "id": "CIS-GEO-C1-ANALYTICS-RECORDED",
+      "path": "cycles/m6/snapshots/cis-geo-c1-analytics-recorded.md",
+      "refs": [
+        "CYC-GEO-E2E-C1",
+        "KBASE-GEO-E2E-2BB19816EE72",
+        "MER-MYYSHOP-001",
+        "RUN-GEO-E2E-C1"
+      ],
+      "status": "recorded",
+      "updated_at": "2026-09-16T00:00:00Z",
+      "version": "1.0.0"
+    },
+    {
+      "id": "CIS-GEO-C1-ANSWER-RETEST-COMPLETED",
+      "path": "cycles/m6/snapshots/cis-geo-c1-answer-retest-completed.md",
+      "refs": [
+        "CYC-GEO-E2E-C1",
+        "KBASE-GEO-E2E-2BB19816EE72",
+        "MER-MYYSHOP-001",
+        "RUN-GEO-E2E-C1"
+      ],
+      "status": "recorded",
+      "updated_at": "2026-09-16T00:00:00Z",
+      "version": "1.0.0"
+    },
+    {
+      "id": "CIS-GEO-C1-BASELINE-RECORDED",
+      "path": "cycles/m6/snapshots/cis-geo-c1-baseline-recorded.md",
+      "refs": [
+        "CYC-GEO-E2E-C1",
+        "KBASE-GEO-E2E-2BB19816EE72",
+        "MER-MYYSHOP-001",
+        "RUN-GEO-E2E-C1"
+      ],
+      "status": "recorded",
+      "updated_at": "2026-09-16T00:00:00Z",
+      "version": "1.0.0"
+    },
+    {
+      "id": "CIS-GEO-C1-DIAGNOSIS-READY",
+      "path": "cycles/m6/snapshots/cis-geo-c1-diagnosis-ready.md",
+      "refs": [
+        "CYC-GEO-E2E-C1",
+        "KBASE-GEO-E2E-2BB19816EE72",
+        "MER-MYYSHOP-001",
+        "RUN-GEO-E2E-C1"
+      ],
+      "status": "recorded",
+      "updated_at": "2026-09-16T00:00:00Z",
+      "version": "1.0.0"
+    },
+    {
+      "id": "CIS-GEO-C1-PUBLICATION-CONFIRMED",
+      "path": "cycles/m6/snapshots/cis-geo-c1-publication-confirmed.md",
+      "refs": [
+        "CYC-GEO-E2E-C1",
+        "KBASE-GEO-E2E-2BB19816EE72",
+        "MER-MYYSHOP-001",
+        "RUN-GEO-E2E-C1"
+      ],
+      "status": "recorded",
+      "updated_at": "2026-09-16T00:00:00Z",
+      "version": "1.0.0"
+    },
+    {
+      "id": "CIS-GEO-C1-REVIEW",
+      "path": "cycles/m6/snapshots/cis-geo-c1-review.md",
+      "refs": [
+        "CIS-GEO-C1-ADOPTION-DECIDED",
+        "CIS-GEO-C1-ANALYTICS-RECORDED",
+        "CIS-GEO-C1-ANSWER-RETEST-COMPLETED",
+        "CIS-GEO-C1-BASELINE-RECORDED",
+        "CIS-GEO-C1-DIAGNOSIS-READY",
+        "CIS-GEO-C1-PUBLICATION-CONFIRMED",
+        "CIS-GEO-C1-TECHNICAL-RETEST-COMPLETED",
+        "CIS-GEO-E2E-FREEZE-C1",
+        "CYC-GEO-E2E-C1",
+        "KBASE-GEO-E2E-2BB19816EE72",
+        "MER-MYYSHOP-001",
+        "RUN-GEO-E2E-C1"
+      ],
+      "status": "recorded",
+      "updated_at": "2026-09-16T00:00:00Z",
+      "version": "1.0.0"
+    },
+    {
+      "id": "CIS-GEO-C1-REVIEW-DECIDED",
+      "path": "cycles/m6/snapshots/cis-geo-c1-review-decided.md",
+      "refs": [
+        "CYC-GEO-E2E-C1",
+        "KBASE-GEO-E2E-2BB19816EE72",
+        "MER-MYYSHOP-001",
+        "RUN-GEO-E2E-C1"
+      ],
+      "status": "recorded",
+      "updated_at": "2026-09-16T00:00:00Z",
+      "version": "1.0.0"
+    },
+    {
+      "id": "CIS-GEO-C1-REVIEW-WAITING-HUMAN",
+      "path": "cycles/m6/snapshots/cis-geo-c1-review-waiting-human.md",
+      "refs": [
+        "CYC-GEO-E2E-C1",
+        "KBASE-GEO-E2E-2BB19816EE72",
+        "MER-MYYSHOP-001",
+        "RUN-GEO-E2E-C1"
+      ],
+      "status": "recorded",
+      "updated_at": "2026-09-16T00:00:00Z",
+      "version": "1.0.0"
+    },
+    {
+      "id": "CIS-GEO-C1-TECHNICAL-RETEST-COMPLETED",
+      "path": "cycles/m6/snapshots/cis-geo-c1-technical-retest-completed.md",
+      "refs": [
+        "CYC-GEO-E2E-C1",
+        "KBASE-GEO-E2E-2BB19816EE72",
+        "MER-MYYSHOP-001",
+        "RUN-GEO-E2E-C1"
+      ],
+      "status": "recorded",
+      "updated_at": "2026-09-16T00:00:00Z",
+      "version": "1.0.0"
+    },
+    {
+      "id": "CIS-GEO-C2-ADOPTION-DECIDED",
+      "path": "cycles/m6/snapshots/cis-geo-c2-adoption-decided.md",
+      "refs": [
+        "CYC-GEO-E2E-C2",
+        "KBASE-GEO-E2E-2BB19816EE72",
+        "MER-MYYSHOP-001",
+        "RUN-GEO-E2E-C2"
+      ],
+      "status": "recorded",
+      "updated_at": "2026-09-16T00:00:00Z",
+      "version": "1.0.0"
+    },
+    {
+      "id": "CIS-GEO-C2-ANALYTICS-RECORDED",
+      "path": "cycles/m6/snapshots/cis-geo-c2-analytics-recorded.md",
+      "refs": [
+        "CYC-GEO-E2E-C2",
+        "KBASE-GEO-E2E-2BB19816EE72",
+        "MER-MYYSHOP-001",
+        "RUN-GEO-E2E-C2"
+      ],
+      "status": "recorded",
+      "updated_at": "2026-09-16T00:00:00Z",
+      "version": "1.0.0"
+    },
+    {
+      "id": "CIS-GEO-C2-ANSWER-RETEST-COMPLETED",
+      "path": "cycles/m6/snapshots/cis-geo-c2-answer-retest-completed.md",
+      "refs": [
+        "CYC-GEO-E2E-C2",
+        "KBASE-GEO-E2E-2BB19816EE72",
+        "MER-MYYSHOP-001",
+        "RUN-GEO-E2E-C2"
+      ],
+      "status": "recorded",
+      "updated_at": "2026-09-16T00:00:00Z",
+      "version": "1.0.0"
+    },
+    {
+      "id": "CIS-GEO-C2-BASELINE-RECORDED",
+      "path": "cycles/m6/snapshots/cis-geo-c2-baseline-recorded.md",
+      "refs": [
+        "CYC-GEO-E2E-C2",
+        "KBASE-GEO-E2E-2BB19816EE72",
+        "MER-MYYSHOP-001",
+        "RUN-GEO-E2E-C2"
+      ],
+      "status": "recorded",
+      "updated_at": "2026-09-16T00:00:00Z",
+      "version": "1.0.0"
+    },
+    {
+      "id": "CIS-GEO-C2-DIAGNOSIS-READY",
+      "path": "cycles/m6/snapshots/cis-geo-c2-diagnosis-ready.md",
+      "refs": [
+        "CYC-GEO-E2E-C2",
+        "KBASE-GEO-E2E-2BB19816EE72",
+        "MER-MYYSHOP-001",
+        "RUN-GEO-E2E-C2"
+      ],
+      "status": "recorded",
+      "updated_at": "2026-09-16T00:00:00Z",
+      "version": "1.0.0"
+    },
+    {
+      "id": "CIS-GEO-C2-PUBLICATION-CONFIRMED",
+      "path": "cycles/m6/snapshots/cis-geo-c2-publication-confirmed.md",
+      "refs": [
+        "CYC-GEO-E2E-C2",
+        "KBASE-GEO-E2E-2BB19816EE72",
+        "MER-MYYSHOP-001",
+        "RUN-GEO-E2E-C2"
+      ],
+      "status": "recorded",
+      "updated_at": "2026-09-16T00:00:00Z",
+      "version": "1.0.0"
+    },
+    {
+      "id": "CIS-GEO-C2-REVIEW",
+      "path": "cycles/m6/snapshots/cis-geo-c2-review.md",
+      "refs": [
+        "CIS-GEO-C2-ADOPTION-DECIDED",
+        "CIS-GEO-C2-ANALYTICS-RECORDED",
+        "CIS-GEO-C2-ANSWER-RETEST-COMPLETED",
+        "CIS-GEO-C2-BASELINE-RECORDED",
+        "CIS-GEO-C2-DIAGNOSIS-READY",
+        "CIS-GEO-C2-PUBLICATION-CONFIRMED",
+        "CIS-GEO-C2-TECHNICAL-RETEST-COMPLETED",
+        "CIS-GEO-E2E-FREEZE-C2",
+        "CYC-GEO-E2E-C2",
+        "KBASE-GEO-E2E-2BB19816EE72",
+        "MER-MYYSHOP-001",
+        "RUN-GEO-E2E-C2"
+      ],
+      "status": "recorded",
+      "updated_at": "2026-09-16T00:00:00Z",
+      "version": "1.0.0"
+    },
+    {
+      "id": "CIS-GEO-C2-REVIEW-DECIDED",
+      "path": "cycles/m6/snapshots/cis-geo-c2-review-decided.md",
+      "refs": [
+        "CYC-GEO-E2E-C2",
+        "KBASE-GEO-E2E-2BB19816EE72",
+        "MER-MYYSHOP-001",
+        "RUN-GEO-E2E-C2"
+      ],
+      "status": "recorded",
+      "updated_at": "2026-09-16T00:00:00Z",
+      "version": "1.0.0"
+    },
+    {
+      "id": "CIS-GEO-C2-REVIEW-WAITING-HUMAN",
+      "path": "cycles/m6/snapshots/cis-geo-c2-review-waiting-human.md",
+      "refs": [
+        "CYC-GEO-E2E-C2",
+        "KBASE-GEO-E2E-2BB19816EE72",
+        "MER-MYYSHOP-001",
+        "RUN-GEO-E2E-C2"
+      ],
+      "status": "recorded",
+      "updated_at": "2026-09-16T00:00:00Z",
+      "version": "1.0.0"
+    },
+    {
+      "id": "CIS-GEO-C2-TECHNICAL-RETEST-COMPLETED",
+      "path": "cycles/m6/snapshots/cis-geo-c2-technical-retest-completed.md",
+      "refs": [
+        "CYC-GEO-E2E-C2",
+        "KBASE-GEO-E2E-2BB19816EE72",
+        "MER-MYYSHOP-001",
+        "RUN-GEO-E2E-C2"
+      ],
+      "status": "recorded",
+      "updated_at": "2026-09-16T00:00:00Z",
+      "version": "1.0.0"
+    },
+    {
+      "id": "CIS-GEO-E2E-FREEZE-C1",
+      "path": "cycles/m6/snapshots/cis-geo-e2e-freeze-c1.md",
+      "refs": [
+        "CYC-GEO-E2E-C1",
+        "KBASE-GEO-E2E-2BB19816EE72",
+        "MER-MYYSHOP-001",
+        "RUN-GEO-E2E-C1"
+      ],
+      "status": "recorded",
+      "updated_at": "2026-09-16T00:00:00Z",
+      "version": "1.0.0"
+    },
+    {
+      "id": "CIS-GEO-E2E-FREEZE-C2",
+      "path": "cycles/m7/snapshots/cis-geo-e2e-freeze-c2.md",
+      "refs": [
+        "CYC-GEO-E2E-C2",
+        "KBASE-GEO-E2E-2BB19816EE72",
+        "MER-MYYSHOP-001",
+        "RUN-GEO-E2E-C2"
+      ],
+      "status": "recorded",
+      "updated_at": "2026-09-16T00:00:00Z",
+      "version": "1.0.0"
+    }
+  ],
+  "record_type": "cycle_input_snapshot",
+  "schema_version": "1.1.0"
+}

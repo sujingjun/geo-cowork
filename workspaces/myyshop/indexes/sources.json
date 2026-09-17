@@ -499,6 +499,14 @@
       "status": "active",
       "updated_at": "2026-08-26T19:10:37+08:00",
       "version": "1.0.1"
+    },
+    {
+      "id": "SRC-QINPUT-518035755C24DC136B8F",
+      "path": "evidence/sources/src-qinput-518035755c24dc136b8f.md",
+      "refs": [],
+      "status": "active",
+      "updated_at": "2026-09-15T18:31:39.544Z",
+      "version": "1.0.0"
     }
   ],
   "record_type": "source",

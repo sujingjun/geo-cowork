@@ -1,0 +1,90 @@
+{
+  "objects": [
+    {
+      "id": "PUB-GEO-C1-OFFICIAL-V2",
+      "path": "assets/publications/pub-geo-c1-official-v2.md",
+      "refs": [
+        "ADR-GEO-C1-OFFICIAL-DECIDED",
+        "AST-GEO-E2E-C1-OFFICIAL",
+        "KBASE-GEO-E2E-377EC2E00B68",
+        "MER-MYYSHOP-001",
+        "PRP-GEO-C1-OFFICIAL"
+      ],
+      "status": "draft",
+      "updated_at": "2026-09-16T00:00:00Z",
+      "version": "1.0.0"
+    },
+    {
+      "id": "PUB-GEO-C1-OFFICIAL-V2-CONFIRMED",
+      "path": "assets/publications/pub-geo-c1-official-v2-confirmed.md",
+      "refs": [
+        "ADR-GEO-C1-OFFICIAL-DECIDED",
+        "AST-GEO-E2E-C1-OFFICIAL",
+        "KBASE-GEO-E2E-377EC2E00B68",
+        "MER-MYYSHOP-001",
+        "PRP-GEO-C1-OFFICIAL"
+      ],
+      "status": "confirmed",
+      "updated_at": "2026-09-16T00:00:00Z",
+      "version": "1.0.0"
+    },
+    {
+      "id": "PUB-GEO-C1-OWN-V2",
+      "path": "assets/publications/pub-geo-c1-own-v2.md",
+      "refs": [
+        "ADR-GEO-C1-OWN-DECIDED",
+        "AST-GEO-E2E-C1-OWN",
+        "KBASE-GEO-E2E-377EC2E00B68",
+        "MER-MYYSHOP-001",
+        "PRP-GEO-C1-OWN"
+      ],
+      "status": "draft",
+      "updated_at": "2026-09-16T00:00:00Z",
+      "version": "1.0.0"
+    },
+    {
+      "id": "PUB-GEO-C1-OWN-V2-CONFIRMED",
+      "path": "assets/publications/pub-geo-c1-own-v2-confirmed.md",
+      "refs": [
+        "ADR-GEO-C1-OWN-DECIDED",
+        "AST-GEO-E2E-C1-OWN",
+        "KBASE-GEO-E2E-377EC2E00B68",
+        "MER-MYYSHOP-001",
+        "PRP-GEO-C1-OWN"
+      ],
+      "status": "confirmed",
+      "updated_at": "2026-09-16T00:00:00Z",
+      "version": "1.0.0"
+    },
+    {
+      "id": "PUB-GEO-C2-OWN-V2",
+      "path": "assets/publications/pub-geo-c2-own-v2.md",
+      "refs": [
+        "ADR-GEO-C2-OWN-DECIDED",
+        "AST-GEO-E2E-C2-OWN",
+        "KBASE-GEO-E2E-377EC2E00B68",
+        "MER-MYYSHOP-001",
+        "PRP-GEO-C2-OWN"
+      ],
+      "status": "draft",
+      "updated_at": "2026-09-30T00:00:00.000Z",
+      "version": "1.0.0"
+    },
+    {
+      "id": "PUB-GEO-C2-OWN-V2-CONFIRMED",
+      "path": "assets/publications/pub-geo-c2-own-v2-confirmed.md",
+      "refs": [
+        "ADR-GEO-C2-OWN-DECIDED",
+        "AST-GEO-E2E-C2-OWN",
+        "KBASE-GEO-E2E-377EC2E00B68",
+        "MER-MYYSHOP-001",
+        "PRP-GEO-C2-OWN"
+      ],
+      "status": "confirmed",
+      "updated_at": "2026-09-30T00:00:00.000Z",
+      "version": "1.0.0"
+    }
+  ],
+  "record_type": "asset_publication",
+  "schema_version": "1.1.0"
+}

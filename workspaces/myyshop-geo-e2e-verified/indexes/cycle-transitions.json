@@ -1,0 +1,276 @@
+{
+  "objects": [
+    {
+      "id": "CTR-GEO-C1-ADOPTION-DECIDED",
+      "path": "cycles/m6/transitions/ctr-geo-c1-adoption-decided.md",
+      "refs": [
+        "CIS-GEO-C1-ADOPTION-DECIDED",
+        "CIS-GEO-E2E-FREEZE-C1",
+        "CYC-GEO-E2E-C1",
+        "GOAL-GEO-E2E-C1",
+        "KBASE-GEO-E2E-377EC2E00B68",
+        "MER-MYYSHOP-001"
+      ],
+      "status": "recorded",
+      "updated_at": "2026-09-17T00:00:00.000Z",
+      "version": "1.0.0"
+    },
+    {
+      "id": "CTR-GEO-C1-ANALYTICS-RECORDED",
+      "path": "cycles/m6/transitions/ctr-geo-c1-analytics-recorded.md",
+      "refs": [
+        "CIS-GEO-C1-ANALYTICS-RECORDED",
+        "CIS-GEO-E2E-FREEZE-C1",
+        "CYC-GEO-E2E-C1",
+        "GOAL-GEO-E2E-C1",
+        "KBASE-GEO-E2E-377EC2E00B68",
+        "MER-MYYSHOP-001"
+      ],
+      "status": "recorded",
+      "updated_at": "2026-09-25T00:00:00.000Z",
+      "version": "1.0.0"
+    },
+    {
+      "id": "CTR-GEO-C1-ANSWER-RETEST-COMPLETED",
+      "path": "cycles/m6/transitions/ctr-geo-c1-answer-retest-completed.md",
+      "refs": [
+        "CIS-GEO-C1-ANSWER-RETEST-COMPLETED",
+        "CIS-GEO-E2E-FREEZE-C1",
+        "CYC-GEO-E2E-C1",
+        "GOAL-GEO-E2E-C1",
+        "KBASE-GEO-E2E-377EC2E00B68",
+        "MER-MYYSHOP-001"
+      ],
+      "status": "recorded",
+      "updated_at": "2026-09-24T00:00:00.000Z",
+      "version": "1.0.0"
+    },
+    {
+      "id": "CTR-GEO-C1-BASELINE-RECORDED",
+      "path": "cycles/m6/transitions/ctr-geo-c1-baseline-recorded.md",
+      "refs": [
+        "CIS-GEO-C1-BASELINE-RECORDED",
+        "CIS-GEO-E2E-FREEZE-C1",
+        "CYC-GEO-E2E-C1",
+        "GOAL-GEO-E2E-C1",
+        "KBASE-GEO-E2E-377EC2E00B68",
+        "MER-MYYSHOP-001"
+      ],
+      "status": "recorded",
+      "updated_at": "2026-09-17T00:00:00.000Z",
+      "version": "1.0.0"
+    },
+    {
+      "id": "CTR-GEO-C1-DIAGNOSIS-READY",
+      "path": "cycles/m6/transitions/ctr-geo-c1-diagnosis-ready.md",
+      "refs": [
+        "CIS-GEO-C1-DIAGNOSIS-READY",
+        "CIS-GEO-E2E-FREEZE-C1",
+        "CYC-GEO-E2E-C1",
+        "GOAL-GEO-E2E-C1",
+        "KBASE-GEO-E2E-377EC2E00B68",
+        "MER-MYYSHOP-001"
+      ],
+      "status": "recorded",
+      "updated_at": "2026-09-17T00:00:00.000Z",
+      "version": "1.0.0"
+    },
+    {
+      "id": "CTR-GEO-C1-PUBLICATION-CONFIRMED",
+      "path": "cycles/m6/transitions/ctr-geo-c1-publication-confirmed.md",
+      "refs": [
+        "CIS-GEO-C1-PUBLICATION-CONFIRMED",
+        "CIS-GEO-E2E-FREEZE-C1",
+        "CYC-GEO-E2E-C1",
+        "GOAL-GEO-E2E-C1",
+        "KBASE-GEO-E2E-377EC2E00B68",
+        "MER-MYYSHOP-001"
+      ],
+      "status": "recorded",
+      "updated_at": "2026-09-18T00:00:00.000Z",
+      "version": "1.0.0"
+    },
+    {
+      "id": "CTR-GEO-C1-REVIEW-DECIDED",
+      "path": "cycles/m6/transitions/ctr-geo-c1-review-decided.md",
+      "refs": [
+        "CIS-GEO-C1-REVIEW-DECIDED",
+        "CIS-GEO-E2E-FREEZE-C1",
+        "CYC-GEO-E2E-C1",
+        "GOAL-GEO-E2E-C1",
+        "KBASE-GEO-E2E-377EC2E00B68",
+        "MER-MYYSHOP-001"
+      ],
+      "status": "recorded",
+      "updated_at": "2026-09-25T00:00:00.000Z",
+      "version": "1.0.0"
+    },
+    {
+      "id": "CTR-GEO-C1-REVIEW-WAITING-HUMAN",
+      "path": "cycles/m6/transitions/ctr-geo-c1-review-waiting-human.md",
+      "refs": [
+        "CIS-GEO-C1-REVIEW-WAITING-HUMAN",
+        "CIS-GEO-E2E-FREEZE-C1",
+        "CYC-GEO-E2E-C1",
+        "GOAL-GEO-E2E-C1",
+        "KBASE-GEO-E2E-377EC2E00B68",
+        "MER-MYYSHOP-001"
+      ],
+      "status": "recorded",
+      "updated_at": "2026-09-25T00:00:00.000Z",
+      "version": "1.0.0"
+    },
+    {
+      "id": "CTR-GEO-C1-TECHNICAL-RETEST-COMPLETED",
+      "path": "cycles/m6/transitions/ctr-geo-c1-technical-retest-completed.md",
+      "refs": [
+        "CIS-GEO-C1-TECHNICAL-RETEST-COMPLETED",
+        "CIS-GEO-E2E-FREEZE-C1",
+        "CYC-GEO-E2E-C1",
+        "GOAL-GEO-E2E-C1",
+        "KBASE-GEO-E2E-377EC2E00B68",
+        "MER-MYYSHOP-001"
+      ],
+      "status": "recorded",
+      "updated_at": "2026-09-19T00:00:00.000Z",
+      "version": "1.0.0"
+    },
+    {
+      "id": "CTR-GEO-C2-ADOPTION-DECIDED",
+      "path": "cycles/m6/transitions/ctr-geo-c2-adoption-decided.md",
+      "refs": [
+        "CIS-GEO-C2-ADOPTION-DECIDED",
+        "CIS-GEO-E2E-FREEZE-C2",
+        "CYC-GEO-E2E-C2",
+        "GOAL-GEO-E2E-C2",
+        "KBASE-GEO-E2E-377EC2E00B68",
+        "MER-MYYSHOP-001"
+      ],
+      "status": "recorded",
+      "updated_at": "2026-10-01T00:00:00.000Z",
+      "version": "1.0.0"
+    },
+    {
+      "id": "CTR-GEO-C2-ANALYTICS-RECORDED",
+      "path": "cycles/m6/transitions/ctr-geo-c2-analytics-recorded.md",
+      "refs": [
+        "CIS-GEO-C2-ANALYTICS-RECORDED",
+        "CIS-GEO-E2E-FREEZE-C2",
+        "CYC-GEO-E2E-C2",
+        "GOAL-GEO-E2E-C2",
+        "KBASE-GEO-E2E-377EC2E00B68",
+        "MER-MYYSHOP-001"
+      ],
+      "status": "recorded",
+      "updated_at": "2026-10-09T00:00:00.000Z",
+      "version": "1.0.0"
+    },
+    {
+      "id": "CTR-GEO-C2-ANSWER-RETEST-COMPLETED",
+      "path": "cycles/m6/transitions/ctr-geo-c2-answer-retest-completed.md",
+      "refs": [
+        "CIS-GEO-C2-ANSWER-RETEST-COMPLETED",
+        "CIS-GEO-E2E-FREEZE-C2",
+        "CYC-GEO-E2E-C2",
+        "GOAL-GEO-E2E-C2",
+        "KBASE-GEO-E2E-377EC2E00B68",
+        "MER-MYYSHOP-001"
+      ],
+      "status": "recorded",
+      "updated_at": "2026-10-08T00:00:00.000Z",
+      "version": "1.0.0"
+    },
+    {
+      "id": "CTR-GEO-C2-BASELINE-RECORDED",
+      "path": "cycles/m6/transitions/ctr-geo-c2-baseline-recorded.md",
+      "refs": [
+        "CIS-GEO-C2-BASELINE-RECORDED",
+        "CIS-GEO-E2E-FREEZE-C2",
+        "CYC-GEO-E2E-C2",
+        "GOAL-GEO-E2E-C2",
+        "KBASE-GEO-E2E-377EC2E00B68",
+        "MER-MYYSHOP-001"
+      ],
+      "status": "recorded",
+      "updated_at": "2026-10-01T00:00:00.000Z",
+      "version": "1.0.0"
+    },
+    {
+      "id": "CTR-GEO-C2-DIAGNOSIS-READY",
+      "path": "cycles/m6/transitions/ctr-geo-c2-diagnosis-ready.md",
+      "refs": [
+        "CIS-GEO-C2-DIAGNOSIS-READY",
+        "CIS-GEO-E2E-FREEZE-C2",
+        "CYC-GEO-E2E-C2",
+        "GOAL-GEO-E2E-C2",
+        "KBASE-GEO-E2E-377EC2E00B68",
+        "MER-MYYSHOP-001"
+      ],
+      "status": "recorded",
+      "updated_at": "2026-10-01T00:00:00.000Z",
+      "version": "1.0.0"
+    },
+    {
+      "id": "CTR-GEO-C2-PUBLICATION-CONFIRMED",
+      "path": "cycles/m6/transitions/ctr-geo-c2-publication-confirmed.md",
+      "refs": [
+        "CIS-GEO-C2-PUBLICATION-CONFIRMED",
+        "CIS-GEO-E2E-FREEZE-C2",
+        "CYC-GEO-E2E-C2",
+        "GOAL-GEO-E2E-C2",
+        "KBASE-GEO-E2E-377EC2E00B68",
+        "MER-MYYSHOP-001"
+      ],
+      "status": "recorded",
+      "updated_at": "2026-10-02T00:00:00.000Z",
+      "version": "1.0.0"
+    },
+    {
+      "id": "CTR-GEO-C2-REVIEW-DECIDED",
+      "path": "cycles/m6/transitions/ctr-geo-c2-review-decided.md",
+      "refs": [
+        "CIS-GEO-C2-REVIEW-DECIDED",
+        "CIS-GEO-E2E-FREEZE-C2",
+        "CYC-GEO-E2E-C2",
+        "GOAL-GEO-E2E-C2",
+        "KBASE-GEO-E2E-377EC2E00B68",
+        "MER-MYYSHOP-001"
+      ],
+      "status": "recorded",
+      "updated_at": "2026-10-09T00:00:00.000Z",
+      "version": "1.0.0"
+    },
+    {
+      "id": "CTR-GEO-C2-REVIEW-WAITING-HUMAN",
+      "path": "cycles/m6/transitions/ctr-geo-c2-review-waiting-human.md",
+      "refs": [
+        "CIS-GEO-C2-REVIEW-WAITING-HUMAN",
+        "CIS-GEO-E2E-FREEZE-C2",
+        "CYC-GEO-E2E-C2",
+        "GOAL-GEO-E2E-C2",
+        "KBASE-GEO-E2E-377EC2E00B68",
+        "MER-MYYSHOP-001"
+      ],
+      "status": "recorded",
+      "updated_at": "2026-10-09T00:00:00.000Z",
+      "version": "1.0.0"
+    },
+    {
+      "id": "CTR-GEO-C2-TECHNICAL-RETEST-COMPLETED",
+      "path": "cycles/m6/transitions/ctr-geo-c2-technical-retest-completed.md",
+      "refs": [
+        "CIS-GEO-C2-TECHNICAL-RETEST-COMPLETED",
+        "CIS-GEO-E2E-FREEZE-C2",
+        "CYC-GEO-E2E-C2",
+        "GOAL-GEO-E2E-C2",
+        "KBASE-GEO-E2E-377EC2E00B68",
+        "MER-MYYSHOP-001"
+      ],
+      "status": "recorded",
+      "updated_at": "2026-10-03T00:00:00.000Z",
+      "version": "1.0.0"
+    }
+  ],
+  "record_type": "cycle_transition",
+  "schema_version": "1.1.0"
+}

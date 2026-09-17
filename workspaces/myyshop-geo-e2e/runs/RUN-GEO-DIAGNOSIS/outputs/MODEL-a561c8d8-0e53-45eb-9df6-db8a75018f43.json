@@ -1,0 +1,52 @@
+{
+  "audit": {
+    "completed_at": "2026-09-15T19:14:21.713Z",
+    "duration_ms": 9397,
+    "finish_reason": "stop",
+    "http_status": 200,
+    "id": "MODEL-a561c8d8-0e53-45eb-9df6-db8a75018f43",
+    "input_sha256": "cb68d6da18984aa42f2dd8d76c1678c845498895c8da7b58e7c0d94af75f5241",
+    "model": "deepseek-flash",
+    "output_sha256": "3ea8136ba38f5b233c5db6dc226406dd970de52721bd30a2496c513978869131",
+    "prompt_sha256": "3923f12b156b2c822b487a67c1cbdfc52864056aa857d67a85838af31b5e241e",
+    "provider": "deepseek",
+    "request_options": {
+      "reasoning_effort": "low",
+      "thinking": "enabled"
+    },
+    "response_model": "deepseek-flash",
+    "started_at": "2026-09-15T19:14:12.316Z",
+    "status": "completed",
+    "usage": {
+      "completion_tokens": 1835,
+      "completion_tokens_details": {
+        "reasoning_tokens": 1665
+      },
+      "prompt_cache_hit_tokens": 0,
+      "prompt_cache_miss_tokens": 1051,
+      "prompt_tokens": 1051,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "total_tokens": 2886
+    }
+  },
+  "output": {
+    "findings": [
+      {
+        "claim_refs": [
+          "CLM-GEO-E2E-LEGACY",
+          "CLM-GEO-E2E-IDENTITY",
+          "CLM-GEO-E2E-DEFINITION"
+        ],
+        "kind": "content_gap",
+        "next_action": "Recommend a correction request to the third-party page owner to replace the wholesale-provider wording with the supported rehearsal campaign-service description; do not claim authority to publish directly.",
+        "quote": "Possibly a wholesale provider; details have not been checked.",
+        "rationale": "Current knowledge states the rehearsal is not a wholesale marketplace and instead connects adult creators with simulated brand campaigns. The asset's tentative wholesale-provider positioning is outdated/mismatched with the supported service definition."
+      }
+    ],
+    "limitations": [
+      "No user demand evidence was supplied, so no product_gap finding was emitted."
+    ]
+  }
+}

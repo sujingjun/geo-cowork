@@ -8,6 +8,7 @@ import {
 import { validateGoalSelection } from './cycle-goal-selection.mjs';
 import {
   buildCycleSnapshotPlan,
+  assertSnapshotArtifactScope,
   materializeCycleFreeze,
   previewCycleSnapshotTargets,
 } from './cycle-snapshot.mjs';
@@ -217,7 +218,7 @@ function validatePlannedObjects(plan, validation, existing) {
         || data.test_scope?.knowledge_base_ref !== validation.knowledgeBase.id) {
       throw makeFailure('SYNTHETIC_REAL_REF_CONTAMINATION', 'Cycle 2 source scope 跨 Workspace');
     }
-    const body = `# ${data.title}\n`;
+    const body = item.body ?? `# ${data.title}\n`;
     const bytes = Buffer.from(serializeMarkdownObject(data, body));
     const prior = existing.get(data.id);
     if (prior && (prior.path !== item.path || !prior.bytes.equals(bytes))) {
@@ -297,7 +298,7 @@ async function materializationInputs(root, plan, validation, existing) {
   const artifactBytes = new Map();
   for (const artifact of plan.artifact_paths) {
     const bytes = await readFile(resolveWithin(root, artifact.path));
-    assertNoTestKnowledgeContamination(bytes.toString('utf8'));
+    assertSnapshotArtifactScope(bytes, artifact.role);
     artifactBytes.set(artifact.path, bytes);
   }
   return { planned, raw, sourceBytes, artifactBytes };

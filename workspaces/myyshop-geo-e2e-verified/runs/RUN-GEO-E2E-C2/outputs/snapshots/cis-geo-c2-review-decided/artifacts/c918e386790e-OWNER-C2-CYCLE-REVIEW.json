@@ -1,0 +1,10 @@
+{
+  "actor": "Independent fixture human (test_only)",
+  "at": "2026-10-09T00:05:00.000Z",
+  "decision": "approve",
+  "package_id": "OWNER-C2-CYCLE-REVIEW",
+  "package_sha256": "428b4cdf6184e09b36eb7f805428b991d8c7296409bb52f2e34dc39047181376",
+  "raw_feedback": "包：OWNER-C2-CYCLE-REVIEW\n校验：428b4cdf6184e09b36eb7f805428b991d8c7296409bb52f2e34dc39047181376\n决定：approve\n决定人：Independent fixture human (test_only)\n时间：2026-10-09T00:05:00.000Z\n说明：Accept an inconclusive, non-causal rehearsal review. Prioritize eligibility and evidence clarity in the next independent cycle.\n",
+  "reason": "Accept an inconclusive, non-causal rehearsal review. Prioritize eligibility and evidence clarity in the next independent cycle.",
+  "scope": "test_only"
+}

@@ -1,0 +1,21 @@
+{
+  "objects": [
+    {
+      "id": "GCB-D1111482C86DC97758E9EF32",
+      "path": "cycles/m7/candidate-batches/gcb-d1111482c86dc97758e9ef32.md",
+      "refs": [
+        "CIS-GEO-C1-REVIEW",
+        "CRV-GEO-C1-DECIDED",
+        "GCD-01EAD6E6BA18255C90C8A930",
+        "KBASE-GEO-E2E-2BB19816EE72",
+        "MER-MYYSHOP-001",
+        "RUN-GEO-C2-CANDIDATES"
+      ],
+      "status": "recorded",
+      "updated_at": "2026-09-25T00:05:00Z",
+      "version": "1.0.0"
+    }
+  ],
+  "record_type": "cycle_goal_candidate_batch",
+  "schema_version": "1.1.0"
+}

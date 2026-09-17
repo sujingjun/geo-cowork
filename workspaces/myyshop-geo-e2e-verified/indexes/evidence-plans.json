@@ -1,0 +1,68 @@
+{
+  "objects": [
+    {
+      "id": "EPL-GEO-C1-OFFICIAL-4",
+      "path": "evidence/plans/epl-geo-c1-official-4.md",
+      "refs": [
+        "AST-GEO-E2E-C1-OFFICIAL",
+        "CLM-GEO-E2E-GUARANTEES",
+        "FND-GEO-C1-OFFICIAL-4",
+        "KBASE-GEO-E2E-377EC2E00B68",
+        "MER-MYYSHOP-001",
+        "Q-DOES-THE-MYYSHOP-REHEARSAL-GUARANTEE-EN-F889",
+        "Q-HOW-CAN-I-COMPARE-THE-EN-B48D",
+        "Q-WHAT-ARE-THE-MYYSHOP-REHEARSAL-EN-3BC4",
+        "Q-WHAT-CAPABILITIES-DOES-THE-MYYSHOP-EN-2DE3",
+        "Q-WHAT-IS-THE-MYYSHOP-REHEARSAL-EN-2B21",
+        "Q-WHO-IS-ELIGIBLE-TO-USE-EN-1531"
+      ],
+      "status": "draft",
+      "updated_at": "2026-09-16T00:00:00Z",
+      "version": "1.0.0"
+    },
+    {
+      "id": "EPL-GEO-C1-THIRD-PARTY-3",
+      "path": "evidence/plans/epl-geo-c1-third-party-3.md",
+      "refs": [
+        "AST-GEO-E2E-C1-THIRD-PARTY",
+        "CLM-GEO-E2E-ANSWER-DEFINITION",
+        "CLM-GEO-E2E-GUARANTEES",
+        "FND-GEO-C1-THIRD-PARTY-3",
+        "KBASE-GEO-E2E-377EC2E00B68",
+        "MER-MYYSHOP-001",
+        "Q-DOES-THE-MYYSHOP-REHEARSAL-GUARANTEE-EN-F889",
+        "Q-HOW-CAN-I-COMPARE-THE-EN-B48D",
+        "Q-WHAT-ARE-THE-MYYSHOP-REHEARSAL-EN-3BC4",
+        "Q-WHAT-CAPABILITIES-DOES-THE-MYYSHOP-EN-2DE3",
+        "Q-WHAT-IS-THE-MYYSHOP-REHEARSAL-EN-2B21",
+        "Q-WHO-IS-ELIGIBLE-TO-USE-EN-1531"
+      ],
+      "status": "draft",
+      "updated_at": "2026-09-16T00:00:00Z",
+      "version": "1.0.0"
+    },
+    {
+      "id": "EPL-GEO-C2-OWN-2",
+      "path": "evidence/plans/epl-geo-c2-own-2.md",
+      "refs": [
+        "AST-GEO-E2E-C2-OWN",
+        "CLM-GEO-E2E-GUARANTEES",
+        "CLM-GEO-E2E-POSITIONING",
+        "FND-GEO-C2-OWN-2",
+        "KBASE-GEO-E2E-377EC2E00B68",
+        "MER-MYYSHOP-001",
+        "Q-HOW-SHOULD-AN-ELIGIBLE-CREATOR-EN-D279",
+        "Q-WHAT-ARE-THE-MYYSHOP-REHEARSAL-EN-57D1",
+        "Q-WHAT-CAPABILITIES-DOES-THE-MYYSHOP-EN-747A",
+        "Q-WHAT-EVIDENCE-LIMITS-PRIVACY-BOUNDARIES-EN-AB42",
+        "Q-WHAT-IS-THE-MYYSHOP-REHEARSAL-EN-B7A5",
+        "Q-WHO-IS-ELIGIBLE-TO-JOIN-EN-8E8A"
+      ],
+      "status": "draft",
+      "updated_at": "2026-09-30T00:00:00.000Z",
+      "version": "1.0.0"
+    }
+  ],
+  "record_type": "evidence_plan",
+  "schema_version": "1.1.0"
+}

@@ -1,0 +1,44 @@
+---
+id: ARV-GEO-C1-BASE-Q1-CLAUDE-2
+record_type: answer_review
+status: candidate
+version: 1.0.0
+created_at: '2026-09-16T00:00:02.000Z'
+updated_at: '2026-09-16T00:00:02.000Z'
+title: Answer Review SMP-GEO-C1-BASE-Q1-CLAUDE-2
+test_scope:
+  kind: synthetic
+  knowledge_base_ref: KBASE-GEO-E2E-377EC2E00B68
+  merchant_ref: MER-MYYSHOP-001
+  usage: test_only
+  workspace_id: ws_377ec2e00b68d35bf465ab5d6e
+extensions:
+  geo.analysis:
+    path: cycles/m5/analysis/C1-BASE-Q1.json
+    sha256: 7c39973f3e630d5b4dde5ad3fd15f656f8bf20f9b638ba86778e28688ab77977
+    model_call: MODEL-4c7ce3f8-f0de-4c61-8cfa-da98097a8543
+sample_ref: SMP-GEO-C1-BASE-Q1-CLAUDE-2
+sample_raw_manifest_sha256: d53b1b60d382b3c9d9391f3677b7222cf5f2af9761a0a7a5a02994dca22632c0
+rubric:
+  version: 1.0.0
+  sha256: 4168d5f1c3c65cedb003985a7505b729bf45f2128e520a0bb807acba94415007
+claim_support_review_refs: []
+core:
+  entity_recognition: pass
+  core_fact_accuracy: partial
+  current_positioning: pass
+  risk_boundary: pass
+  citation_quality: not_applicable
+exploratory:
+  comparison_dimensions: []
+  recommendation_reasons: []
+  exclusion_reasons: []
+  competitor_mentions: []
+  source_structure_notes: []
+  decision_dimension_candidates: []
+reviewer:
+  kind: geo_expert
+  identifier: deepseek/deepseek-flash
+review_required: true
+---
+# Answer Review SMP-GEO-C1-BASE-Q1-CLAUDE-2

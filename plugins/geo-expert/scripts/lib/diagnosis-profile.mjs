@@ -292,6 +292,7 @@ function hasSection(body, section) {
 function validateProposal(graph, object, errors) {
   const data = object.data;
   const asset = graph.byId.get(data.asset_ref)?.data;
+  if (data.supersedes_ref) { const prior=graph.byId.get(data.supersedes_ref)?.data; if (!prior || prior.record_type!=='asset_proposal' || prior.id===data.id || proposalUniqueKey(prior)!==proposalUniqueKey(data)) addError(errors,'PROPOSAL_CONFLICT',object); }
   if (!asset
       || stableStringify(sortedUnique(data.goal_refs)) !== stableStringify(sortedUnique(asset.goal_refs))
       || stableStringify(sortedUnique(data.query_refs)) !== stableStringify(sortedUnique(asset.query_refs))
@@ -434,8 +435,9 @@ export async function validateDiagnosisWorkspace({ workspace }) {
     errors.push(...result.errors);
     warnings.push(...result.warnings);
   }
+  const replaced = new Set(graph.objects.filter(o=>o.data.record_type==='asset_proposal').map(o=>o.data.supersedes_ref).filter(Boolean));
   const proposals = graph.objects.filter(({ data }) =>
-    data.record_type === 'asset_proposal' && data.status !== 'superseded');
+    data.record_type === 'asset_proposal' && data.status !== 'superseded' && !replaced.has(data.id));
   const seen = new Map();
   for (const proposal of proposals) {
     const key = proposalUniqueKey(proposal.data);

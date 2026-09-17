@@ -18,7 +18,7 @@ import {
   validateCycleAdvance,
 } from './cycle-state.mjs';
 export { deriveCycleSummary, validateCycleAdvance } from './cycle-state.mjs';
-import { preflightTestKnowledgeWrite } from './workspace-scope.mjs';
+import { preflightLifecycleWrite } from './workspace-scope.mjs';
 import { serializeMarkdownObject } from './object-contract.mjs';
 import {
   atomicWrite,
@@ -191,7 +191,7 @@ function transitionData({ plan, cycle, gateSnapshot, leaseRevision, toStatus, no
     created_at: now,
     updated_at: now,
     title: `${plan.from_stage} to ${plan.to_stage}`,
-    test_scope: { ...cycle.test_scope },
+    ...(cycle.test_scope ? { test_scope: { ...cycle.test_scope } } : { execution_scope: cycle.execution_scope, merchant_ref: cycle.merchant_ref, knowledge_base_ref: cycle.knowledge_base_ref }),
     cycle_ref: cycle.id,
     goal_ref: plan.goal_ref ?? null,
     ...(supersedesRef ? { supersedes_ref: supersedesRef } : {}),
@@ -234,6 +234,7 @@ async function applyIntent({
     ...current.data,
     ...summary,
     goal_tracks: updatedTracks,
+    ...(transition.to_stage === 'review_decided' ? { cycle_review_version: (() => { const r = gateSnapshot.source_entries.find(e => e.record_type === 'cycle_review'); return { ref: r.object_id, version: r.object_version }; })() } : {}),
     transition_refs: [...new Set([...current.data.transition_refs, transition.id])],
     version: bumpPatch(current.data.version),
     updated_at: transition.updated_at,
@@ -278,8 +279,9 @@ export async function advanceCycle({ workspace, plan }) {
     gateGoalEntryKey: plan.gate_goal_entry_key ?? goalKey,
   });
   const gateSnapshot = await gateSnapshotPlan(root, plan, cycleObject.data);
-  await materializeCycleSnapshot({ workspace: root, plan: gateSnapshot });
-  const steps = ['gate_snapshot_written'];
+  if (cycleObject.data.version !== plan.expected_cycle_version) throw new CycleLifecycleError('CYCLE_CAS_MISMATCH', 'expected Cycle version 不匹配');
+  await assertStageGate(root, gateSnapshot, plan.to_stage);
+  const steps = [];
   const lease = await acquireCycleLease({
     workspace: root,
     cycleId: plan.cycle_ref,
@@ -320,12 +322,17 @@ export async function advanceCycle({ workspace, plan }) {
       now,
     });
     const transitionPath = `cycles/m6/transitions/${transition.id.toLowerCase()}.md`;
-    await preflightTestKnowledgeWrite({
+    await preflightLifecycleWrite({
       workspace: root,
       data: transition,
       body: `# Cycle Transition ${transition.id}\n`,
       manifest: plan,
+      refClosure: false,
     });
+    await materializeCycleSnapshot({ workspace: root, plan: gateSnapshot });
+    steps.push('gate_snapshot_written');
+    const postCopyCheck = await compareLiveInputsWithFreeze({ workspace: root, plan: gateSnapshot });
+    if (!postCopyCheck.ok) throw new CycleLifecycleError('CYCLE_CAS_MISMATCH', 'gate 在 snapshot 持久化期间发生变化', { diagnostics: postCopyCheck.errors });
     await writeCreateOnly(root, transitionPath, serializeMarkdownObject(
       transition,
       `# Cycle Transition ${transition.id}\n`,
@@ -377,7 +384,7 @@ export async function resumeCycleTransition({
     throw new CycleLifecycleError('TRANSITION_INTENT_ORPHANED', '找不到 orphan transition intent');
   }
   const old = intents[0];
-  const cycle = await findCycle(root, cycleId);
+  let cycle = await findCycle(root, cycleId);
   if (cycle.data.transition_refs.includes(old.data.id)) {
     return { action: 'kept', transition_id: old.data.id, old_intent_applied: true };
   }
@@ -391,18 +398,25 @@ export async function resumeCycleTransition({
     inputFingerprint: old.data.operation_fingerprint,
   });
   try {
+    cycle = await findCycle(root, cycleId);
+    const gateObject = (await findObjects(root, data => data.id === old.data.gate_snapshot_version.ref))[0];
+    if (!gateObject) throw new CycleLifecycleError('CYCLE_GATE_REQUIRED', 'orphan gate snapshot 缺失');
+    const gateSnapshot = await snapshotPlanFromCanonical(root, gateObject);
+    const gateCheck = await compareLiveInputsWithFreeze({ workspace: root, plan: gateSnapshot });
+    if (!gateCheck.ok) throw new CycleLifecycleError('CYCLE_CAS_MISMATCH', 'orphan gate 输入漂移');
     if (old.data.expected_cycle_version === expectedCycleVersion
         && cycle.data.version === expectedCycleVersion) {
     const goalEntryKey = await goalEntryKeyForRef(root, cycle.data, old.data.goal_ref);
     if (!goalEntryKey) throw new CycleLifecycleError('CYCLE_GATE_REQUIRED', 'orphan intent Goal 无法解析');
     const updatedTracks = cycle.data.goal_tracks.map((track) =>
       track.goal_entry_key === goalEntryKey
-        ? { ...track, stage: old.data.to_stage }
+        ? { ...track, ...trackGatePatch(gateSnapshot, old.data.to_stage), stage: old.data.to_stage }
         : track);
     const updated = {
       ...cycle.data,
       ...deriveCycleSummary(updatedTracks),
       goal_tracks: updatedTracks,
+    ...(old.data.to_stage === 'review_decided' ? { cycle_review_version: (() => { const r = gateSnapshot.source_entries.find(e => e.record_type === 'cycle_review'); return { ref: r.object_id, version: r.object_version }; })() } : {}),
       transition_refs: [...cycle.data.transition_refs, old.data.id],
       version: bumpPatch(cycle.data.version),
       updated_at: old.data.updated_at,

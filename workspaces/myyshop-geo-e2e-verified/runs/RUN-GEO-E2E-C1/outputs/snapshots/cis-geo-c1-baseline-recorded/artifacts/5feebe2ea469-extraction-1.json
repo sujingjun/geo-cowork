@@ -1,0 +1,46 @@
+{
+  "audit": {
+    "attempts": [
+      "MODEL-2a4c2db5-181d-4246-a9c1-c8a9646a9120"
+    ],
+    "completed_at": "2026-09-15T20:26:11.759Z",
+    "duration_ms": 1022,
+    "extraction_validation": "passed",
+    "finish_reason": "stop",
+    "http_status": 200,
+    "id": "MODEL-2a4c2db5-181d-4246-a9c1-c8a9646a9120",
+    "input_sha256": "9c215212645a55490ff24682c780948b6e079d9a822b5b7ce065d019302baa32",
+    "model": "deepseek-flash",
+    "output_sha256": "31e119c69ef2ac03d705add1d1f41953b2a2ae4a6cb49bc76b9c7b7b7e458859",
+    "prompt_sha256": "e5d2c9a2481b77f774d18dc813bd55ef7805d120c8b02d6e068af72999a4b872",
+    "provider": "deepseek",
+    "request_options": {
+      "reasoning_effort": null,
+      "thinking": "disabled"
+    },
+    "response_model": "deepseek-flash",
+    "started_at": "2026-09-15T20:26:10.737Z",
+    "status": "completed",
+    "usage": {
+      "completion_tokens": 96,
+      "prompt_cache_hit_tokens": 512,
+      "prompt_cache_miss_tokens": 218,
+      "prompt_tokens": 730,
+      "prompt_tokens_details": {
+        "cached_tokens": 512
+      },
+      "total_tokens": 826
+    }
+  },
+  "output": {
+    "answer": {
+      "completeness": "partial",
+      "html_structure_summary": "Plain text with two paragraphs separated by a blank line; no HTML elements present.",
+      "refusal": false,
+      "text": "MyyShop rehearsal Wholesale marketplace Guaranteed income for everyone.\n\nSynthetic consumer input for: How can I compare the MyyShop rehearsal service with other creator campaign services?"
+    },
+    "citations": [],
+    "platform_annotations": [],
+    "warnings": []
+  }
+}

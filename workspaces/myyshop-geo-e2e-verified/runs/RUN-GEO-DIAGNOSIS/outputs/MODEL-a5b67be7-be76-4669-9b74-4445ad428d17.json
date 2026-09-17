@@ -1,0 +1,66 @@
+{
+  "audit": {
+    "completed_at": "2026-09-15T20:30:08.966Z",
+    "duration_ms": 8690,
+    "finish_reason": "stop",
+    "http_status": 200,
+    "id": "MODEL-a5b67be7-be76-4669-9b74-4445ad428d17",
+    "input_sha256": "d7ecbe3346b9b63f9f5dd516918cc8191ce496d47c0a55395f1b2562fbf911c8",
+    "model": "deepseek-flash",
+    "output_sha256": "4df8824da5e6fd777ff2c824892028c9e9b9ba22d2d9dfe6c3797891ff5f2c9a",
+    "prompt_sha256": "3923f12b156b2c822b487a67c1cbdfc52864056aa857d67a85838af31b5e241e",
+    "provider": "deepseek",
+    "request_options": {
+      "reasoning_effort": "low",
+      "thinking": "enabled"
+    },
+    "response_model": "deepseek-flash",
+    "started_at": "2026-09-15T20:30:00.276Z",
+    "status": "completed",
+    "usage": {
+      "completion_tokens": 1726,
+      "completion_tokens_details": {
+        "reasoning_tokens": 1421
+      },
+      "prompt_cache_hit_tokens": 768,
+      "prompt_cache_miss_tokens": 262,
+      "prompt_tokens": 1030,
+      "prompt_tokens_details": {
+        "cached_tokens": 768
+      },
+      "total_tokens": 2756
+    }
+  },
+  "output": {
+    "findings": [
+      {
+        "claim_refs": [
+          "CLM-GEO-E2E-LEGACY",
+          "CLM-GEO-E2E-IDENTITY",
+          "CLM-GEO-E2E-ANSWER-DEFINITION"
+        ],
+        "kind": "content_gap",
+        "next_action": "Recommend correcting the page to describe the rehearsal as an adult creator campaign service, not a wholesale marketplace.",
+        "quote": "Wholesale marketplace",
+        "rationale": "The asset labels the rehearsal as a wholesale marketplace, but current knowledge states the rehearsal service is not a wholesale marketplace and should be described as an adult creator campaign service with explicit eligibility."
+      },
+      {
+        "claim_refs": [
+          "CLM-GEO-E2E-GUARANTEES",
+          "CLM-GEO-E2E-POSITIONING",
+          "CLM-GEO-E2E-ANSWER-DEFINITION"
+        ],
+        "kind": "content_gap",
+        "next_action": "Recommend removing the income guarantee and replacing it with a statement that the rehearsal cannot guarantee income or placement, plus clear eligibility or campaign requirements.",
+        "quote": "Guaranteed income for everyone.",
+        "rationale": "The asset promises guaranteed income, but current knowledge states the rehearsal cannot guarantee income or placement and prioritizes transparent campaign requirements over guaranteed earnings."
+      }
+    ],
+    "limitations": [
+      "Unproven growth claim lacks approved supporting evidence (unresolved input growth).",
+      "Expired wording 'guaranteed income' is superseded (unresolved input expired).",
+      "No user demand evidence supplied; product_gap not emitted."
+    ]
+  },
+  "validation_errors": []
+}

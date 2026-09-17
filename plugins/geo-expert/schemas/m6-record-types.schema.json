@@ -62,7 +62,7 @@
               "entry_key": { "$ref": "common#/$defs/sha256" },
               "role": {
                 "enum": [
-                  "measurement_contract", "signal_rule", "sensitive_data_policy",
+                  "supporting_artifact", "measurement_contract", "signal_rule", "sensitive_data_policy",
                   "raw_manifest", "rubric", "other_contract"
                 ]
               },
@@ -102,43 +102,163 @@
     },
     "cycle_transition": {
       "x-id-prefix": "CTR-",
-      "x-statuses": ["recorded", "superseded"],
+      "x-statuses": [
+        "recorded",
+        "superseded"
+      ],
       "required": [
-        "test_scope", "cycle_ref", "goal_ref", "operation_id", "operation_fingerprint",
-        "expected_cycle_version", "input_snapshot_version", "gate_snapshot_version",
-        "from_status", "to_status", "from_stage", "to_stage", "required_gate_entry_keys",
-        "lease_revision", "actor"
+        "cycle_ref",
+        "goal_ref",
+        "operation_id",
+        "operation_fingerprint",
+        "expected_cycle_version",
+        "input_snapshot_version",
+        "gate_snapshot_version",
+        "from_status",
+        "to_status",
+        "from_stage",
+        "to_stage",
+        "required_gate_entry_keys",
+        "lease_revision",
+        "actor"
       ],
       "properties": {
-        "cycle_ref": { "type": "string", "pattern": "^CYC-(?:[A-Z0-9]+-)*[A-Z0-9]+$" },
-        "goal_ref": { "type": ["string", "null"], "pattern": "^GOAL-(?:[A-Z0-9]+-)*[A-Z0-9]+$" },
-        "supersedes_ref": { "type": "string", "pattern": "^CTR-(?:[A-Z0-9]+-)*[A-Z0-9]+$" },
-        "operation_id": { "type": "string", "minLength": 1 },
-        "operation_fingerprint": { "$ref": "common#/$defs/sha256" },
-        "expected_cycle_version": { "type": "string", "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$" },
-        "input_snapshot_version": { "$ref": "common#/$defs/refVersion" },
-        "gate_snapshot_version": { "$ref": "common#/$defs/refVersion" },
-        "from_status": { "enum": ["proposed", "active", "waiting_human", "completed", "cancelled", "superseded"] },
-        "to_status": { "enum": ["proposed", "active", "waiting_human", "completed", "cancelled", "superseded"] },
-        "from_stage": { "type": "string", "minLength": 1 },
-        "to_stage": { "type": "string", "minLength": 1 },
+        "cycle_ref": {
+          "type": "string",
+          "pattern": "^CYC-(?:[A-Z0-9]+-)*[A-Z0-9]+$"
+        },
+        "goal_ref": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "pattern": "^GOAL-(?:[A-Z0-9]+-)*[A-Z0-9]+$"
+        },
+        "supersedes_ref": {
+          "type": "string",
+          "pattern": "^CTR-(?:[A-Z0-9]+-)*[A-Z0-9]+$"
+        },
+        "operation_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "operation_fingerprint": {
+          "$ref": "common#/$defs/sha256"
+        },
+        "expected_cycle_version": {
+          "type": "string",
+          "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$"
+        },
+        "input_snapshot_version": {
+          "$ref": "common#/$defs/refVersion"
+        },
+        "gate_snapshot_version": {
+          "$ref": "common#/$defs/refVersion"
+        },
+        "from_status": {
+          "enum": [
+            "proposed",
+            "active",
+            "waiting_human",
+            "completed",
+            "cancelled",
+            "superseded"
+          ]
+        },
+        "to_status": {
+          "enum": [
+            "proposed",
+            "active",
+            "waiting_human",
+            "completed",
+            "cancelled",
+            "superseded"
+          ]
+        },
+        "from_stage": {
+          "type": "string",
+          "minLength": 1
+        },
+        "to_stage": {
+          "type": "string",
+          "minLength": 1
+        },
         "required_gate_entry_keys": {
           "type": "array",
           "minItems": 1,
           "uniqueItems": true,
-          "items": { "$ref": "common#/$defs/sha256" }
+          "items": {
+            "$ref": "common#/$defs/sha256"
+          }
         },
-        "lease_revision": { "type": "integer", "minimum": 1 },
+        "lease_revision": {
+          "type": "integer",
+          "minimum": 1
+        },
         "actor": {
           "type": "object",
-          "required": ["kind"],
+          "required": [
+            "kind"
+          ],
           "properties": {
-            "kind": { "enum": ["deterministic_tool", "fixture_human"] },
-            "decision_ref": { "type": "string", "minLength": 1 }
+            "kind": {
+              "enum": [
+                "deterministic_tool",
+                "fixture_human"
+              ]
+            },
+            "decision_ref": {
+              "type": "string",
+              "minLength": 1
+            }
           },
           "additionalProperties": false
+        },
+        "execution_scope": {
+          "enum": [
+            "synthetic_test",
+            "authorized_real"
+          ]
+        },
+        "merchant_ref": {
+          "type": "string",
+          "pattern": "^MER-"
+        },
+        "knowledge_base_ref": {
+          "type": "string",
+          "pattern": "^KBASE-"
         }
-      }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "execution_scope": {
+                "const": "authorized_real"
+              }
+            },
+            "required": [
+              "execution_scope"
+            ]
+          },
+          "then": {
+            "required": [
+              "merchant_ref",
+              "knowledge_base_ref"
+            ],
+            "not": {
+              "required": [
+                "test_scope"
+              ]
+            }
+          },
+          "else": {
+            "required": [
+              "test_scope"
+            ]
+          }
+        }
+      ]
     },
     "analytics_observation": {
       "x-id-prefix": "ANO-",
@@ -317,51 +437,161 @@
     },
     "cycle_review": {
       "x-id-prefix": "CRV-",
-      "x-statuses": ["draft", "waiting_human", "decided", "superseded"],
+      "x-statuses": [
+        "draft",
+        "waiting_human",
+        "decided",
+        "superseded"
+      ],
       "required": [
-        "test_scope", "merchant_ref", "cycle_ref", "reviewed_cycle_input_version",
-        "review_input_snapshot_version", "review_input_fingerprint", "goal_results",
+        "merchant_ref",
+        "cycle_ref",
+        "reviewed_cycle_input_version",
+        "review_input_snapshot_version",
+        "review_input_fingerprint",
+        "goal_results",
         "next_cycle_candidate_inputs"
       ],
       "properties": {
-        "merchant_ref": { "type": "string", "pattern": "^MER-(?:[A-Z0-9]+-)*[A-Z0-9]+$" },
-        "cycle_ref": { "type": "string", "pattern": "^CYC-(?:[A-Z0-9]+-)*[A-Z0-9]+$" },
-        "reviewed_cycle_input_version": { "type": "string", "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$" },
-        "review_input_snapshot_version": { "$ref": "common#/$defs/refVersion" },
-        "review_input_fingerprint": { "$ref": "common#/$defs/sha256" },
+        "merchant_ref": {
+          "type": "string",
+          "pattern": "^MER-"
+        },
+        "cycle_ref": {
+          "type": "string",
+          "pattern": "^CYC-(?:[A-Z0-9]+-)*[A-Z0-9]+$"
+        },
+        "reviewed_cycle_input_version": {
+          "type": "string",
+          "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$"
+        },
+        "review_input_snapshot_version": {
+          "$ref": "common#/$defs/refVersion"
+        },
+        "review_input_fingerprint": {
+          "$ref": "common#/$defs/sha256"
+        },
         "goal_results": {
           "type": "array",
           "minItems": 1,
           "items": {
             "type": "object",
             "required": [
-              "goal_entry_key", "perception_goal", "observations",
-              "business_signal_entry_keys", "limitations", "forbidden_conclusions"
+              "goal_entry_key",
+              "perception_goal",
+              "observations",
+              "business_signal_entry_keys",
+              "limitations",
+              "forbidden_conclusions"
             ],
             "properties": {
-              "goal_entry_key": { "$ref": "common#/$defs/sha256" },
-              "perception_goal": { "enum": ["achieved", "partial", "not_achieved", "inconclusive"] },
-              "observations": { "$ref": "common#/$defs/stringArray", "type": "array", "minItems": 1 },
-              "business_signal_entry_keys": {
-                "type": "array", "minItems": 1, "items": { "$ref": "common#/$defs/sha256" }
+              "goal_entry_key": {
+                "$ref": "common#/$defs/sha256"
               },
-              "limitations": { "$ref": "common#/$defs/stringArray", "type": "array", "minItems": 1 },
-              "forbidden_conclusions": { "$ref": "common#/$defs/stringArray", "type": "array", "minItems": 1 }
+              "perception_goal": {
+                "enum": [
+                  "achieved",
+                  "partial",
+                  "not_achieved",
+                  "inconclusive"
+                ]
+              },
+              "observations": {
+                "$ref": "common#/$defs/stringArray",
+                "type": "array",
+                "minItems": 1
+              },
+              "business_signal_entry_keys": {
+                "type": "array",
+                "minItems": 1,
+                "items": {
+                  "$ref": "common#/$defs/sha256"
+                }
+              },
+              "limitations": {
+                "$ref": "common#/$defs/stringArray",
+                "type": "array",
+                "minItems": 1
+              },
+              "forbidden_conclusions": {
+                "$ref": "common#/$defs/stringArray",
+                "type": "array",
+                "minItems": 1
+              }
             },
             "additionalProperties": false
           }
         },
         "next_cycle_candidate_inputs": {
           "type": "array",
-          "items": { "type": "object" }
+          "items": {
+            "type": "object"
+          }
         },
-        "approval": { "$ref": "common#/$defs/approval" },
-        "supersedes_ref": { "type": "string", "pattern": "^CRV-(?:[A-Z0-9]+-)*[A-Z0-9]+$" }
+        "approval": {
+          "$ref": "common#/$defs/approval"
+        },
+        "supersedes_ref": {
+          "type": "string",
+          "pattern": "^CRV-(?:[A-Z0-9]+-)*[A-Z0-9]+$"
+        },
+        "execution_scope": {
+          "enum": [
+            "synthetic_test",
+            "authorized_real"
+          ]
+        },
+        "knowledge_base_ref": {
+          "type": "string",
+          "pattern": "^KBASE-"
+        }
       },
       "allOf": [
         {
-          "if": { "properties": { "status": { "const": "decided" } }, "required": ["status"] },
-          "then": { "required": ["approval", "supersedes_ref"] }
+          "if": {
+            "properties": {
+              "status": {
+                "const": "decided"
+              }
+            },
+            "required": [
+              "status"
+            ]
+          },
+          "then": {
+            "required": [
+              "approval",
+              "supersedes_ref"
+            ]
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "execution_scope": {
+                "const": "authorized_real"
+              }
+            },
+            "required": [
+              "execution_scope"
+            ]
+          },
+          "then": {
+            "required": [
+              "merchant_ref",
+              "knowledge_base_ref"
+            ],
+            "not": {
+              "required": [
+                "test_scope"
+              ]
+            }
+          },
+          "else": {
+            "required": [
+              "test_scope"
+            ]
+          }
         }
       ]
     },

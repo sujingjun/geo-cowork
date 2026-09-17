@@ -29,3 +29,9 @@ M2—M5 历史工程状态保持。2026-09-02 已登记唯一线上 Merchant `ME
 ## 下一动作
 
 工程侧继续使用 `KBASE-MYYSHOP-DEVTEST-001` 回归；当前先审阅 `docs/prd/2026-09-04-authorized-real-geo-cycle.md`，PRD 获批后再起草 authorized-real 全链 Spec。真实启动不等待全部 120 条知识，只等待英文 `What is MyyShop?` Goal 的真实知识切片形成批准闭包，并按 `docs/runbooks/myyshop-real-cycle-start.md` 切换显式 `knowledge_base_ref`。由事实 Owner 单独审阅新 Analytics candidate Evidence；不得自动绑定 Claim 或解释为因果效果。M5 的 10 个 candidate Answer Review 与 M4 Publication/Retest 仍是对应阶段门；60 个 Source 差额独立并行，不阻塞 Cycle。
+
+## 2026-09-16 Query 来源接入
+
+本次明确授权的 GSC 查询词读取成功：718 行原始记录，按文本和语言归一化为 714 个候选；GSC 不提供语言信息，保存为 `unknown`。当前原始输入与指标见 `queries/inputs/518035755c24dc136b8f4fb1ea051a17c1f7e1b86d20b5a1cc79c5f993de2b57/input.json`。首次默认英文的导入已归档到 `runs/RUN-GEO-QUERY-LANGUAGE-20260916/outputs/original`，旧正式 Query 和品牌事实未改写。
+
+这些是候选输入，不是新的冻结 Query Set，也不代表真实 Cycle 或 GEO 效果。知识驱动演练及其模拟决定保存在独立 `myyshop-geo-e2e-verified` 工作区；三平台单槽真实工程采集另有独立 Run，不计作正式 Baseline。

@@ -1,0 +1,50 @@
+{
+  "audit": {
+    "completed_at": "2026-09-15T17:47:16.534Z",
+    "duration_ms": 8845,
+    "finish_reason": "stop",
+    "http_status": 200,
+    "id": "MODEL-fa8c4caa-6073-4faf-ac47-19a503941ba9",
+    "input_sha256": "74365bd111e597c015c50587c3ea7340cf8f898988b9aa98db9a206c5d598d3f",
+    "model": "deepseek-flash",
+    "output_sha256": "7d4ccb8cca9c149b5b8562285655df53118ce0a54b09ea590e344d5b28a7202e",
+    "prompt_sha256": "e5d2c9a2481b77f774d18dc813bd55ef7805d120c8b02d6e068af72999a4b872",
+    "provider": "deepseek",
+    "response_model": "deepseek-flash",
+    "started_at": "2026-09-15T17:47:07.690Z",
+    "status": "completed",
+    "usage": {
+      "completion_tokens": 2150,
+      "completion_tokens_details": {
+        "reasoning_tokens": 1702
+      },
+      "prompt_cache_hit_tokens": 128,
+      "prompt_cache_miss_tokens": 959,
+      "prompt_tokens": 1087,
+      "prompt_tokens_details": {
+        "cached_tokens": 128
+      },
+      "total_tokens": 3237
+    }
+  },
+  "capture_sha256": "0b6b90b8ebed613da24df025cb1a2a6695a45a68302287f29dd028844407af3e",
+  "output": {
+    "answer": {
+      "completeness": "complete",
+      "html_structure_summary": "Plain text with paragraph breaks, section headings, and inline source markers.",
+      "refusal": false,
+      "text": "MyyShop is an AI-driven creator-marketing platform that helps social-media creators connect with brands and earn money through collaborations. It describes itself as charging creators no platform commission and uses algorithmic matching to surface relevant opportunities.\nmyyshop\n+1\n\nWhat creators can do\n\nDepending on the campaign, a creator may be able to:\n\nMake sponsored content for a brand.\n\nPromote products on social platforms and receive a fixed payment or performance-based earnings.\n\nJoin affiliate campaigns and earn commission on qualifying sales.\n\nParticipate in TikTok-oriented campaigns, including some that compensate eligible creators based on verified video views.\nfinance.yahoo\n+1\n\nFor example, a beauty creator might receive a brand brief, publish a product video, and be paid either a set campaign fee, a commission on sales, or—in a CPM/view-based campaign—according to approved video performance.\n\nWho is behind it\n\nMyyShop says it is backed by DHgate Group, the cross-border e-commerce company. It originally launched around 2020 as a SaaS platform for store creation and dropshipping, helping merchants source products, manage fulfillment, and sell through channels such as social media. Its current positioning emphasizes creator-brand collaborations and influencer monetization instead.\nfinance.yahoo\n+1\n\nThings to keep in mind\n\nMyyShop is a platform for accessing opportunities, not a guarantee of income. Carefully check each campaign’s deliverables, usage rights, payment terms, required disclosure, eligibility rules, and how/when performance is verified before creating or posting content. Public app reviews include both positive and negative experiences, so it is sensible to document agreements and keep records of submitted work and communications.\napple"
+    },
+    "citations": [
+      {
+        "context": "apple",
+        "occurrence_ordinal": 1,
+        "title": "apple",
+        "url": "https://apps.apple.com/us/app/myyshop/id6449818392"
+      }
+    ],
+    "platform_annotations": [],
+    "warnings": []
+  },
+  "schema_version": "geo-engineering-extraction-v1"
+}

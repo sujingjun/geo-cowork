@@ -1,0 +1,26 @@
+{
+  "created": [
+    "queries/candidates/q-what-is-myyshop-rehearsal-en-3dbe.md"
+  ],
+  "duplicates": [],
+  "goal_ref": "GOAL-GEO-E2E-C1",
+  "input_path": "queries/inputs/b4a7f3a49879d5f3de0e8685e54f233e69fad1d4bc122a78de2af53fe41c9ca1/input.json",
+  "kept": [],
+  "queries": [
+    {
+      "id": "Q-WHAT-IS-MYYSHOP-REHEARSAL-EN-3DBE",
+      "intent": "brand_definition",
+      "normalized_text": "what is myyshop rehearsal",
+      "path": "queries/candidates/q-what-is-myyshop-rehearsal-en-3dbe.md",
+      "priority": "P2",
+      "query_text": "What is MyyShop rehearsal?",
+      "source_classes": [
+        "manual_import"
+      ]
+    }
+  ],
+  "run_id": "RUN-QINPUT-B4A7F3A49879D5F3DE0E",
+  "source_kind": "manual_import",
+  "source_ref": "SRC-QINPUT-B4A7F3A49879D5F3DE0E",
+  "updated": []
+}

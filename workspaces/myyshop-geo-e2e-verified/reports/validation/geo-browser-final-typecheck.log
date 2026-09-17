@@ -1,0 +1,3 @@
+$ nuxt typecheck
+ℹ Nuxt Icon server bundle mode is set to local
+✔ Nuxt Icon discovered local-installed 4 collections: heroicons, logos, lucide, simple-icons

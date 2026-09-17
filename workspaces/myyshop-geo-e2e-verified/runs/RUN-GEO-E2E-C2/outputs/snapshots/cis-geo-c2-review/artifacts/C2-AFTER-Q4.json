@@ -1,0 +1,758 @@
+{
+  "audit": {
+    "completed_at": "2026-09-15T20:49:34.801Z",
+    "duration_ms": 28235,
+    "finish_reason": "stop",
+    "http_status": 200,
+    "id": "MODEL-07072b05-9f5e-4192-9a65-bb79a394d76f",
+    "input_sha256": "c03685c71bacf0e883dfabf19b684ba96e57e5384787803db15b20a0fd123c0d",
+    "model": "deepseek-flash",
+    "output_sha256": "e6a61c46e51c5e9036b23e196c0f30c966251f8843130d21717227ee99a842f2",
+    "prompt_sha256": "94cb4bcf35cc23090c7271eaeb868a4612f150cd09551c6f5e1a6d6e77a143e1",
+    "provider": "deepseek",
+    "request_options": {
+      "reasoning_effort": "low",
+      "thinking": "enabled"
+    },
+    "response_model": "deepseek-flash",
+    "started_at": "2026-09-15T20:49:06.566Z",
+    "status": "completed",
+    "usage": {
+      "completion_tokens": 8795,
+      "completion_tokens_details": {
+        "reasoning_tokens": 3680
+      },
+      "prompt_cache_hit_tokens": 896,
+      "prompt_cache_miss_tokens": 2536,
+      "prompt_tokens": 3432,
+      "prompt_tokens_details": {
+        "cached_tokens": 896
+      },
+      "total_tokens": 12227
+    }
+  },
+  "output": {
+    "reviews": [
+      {
+        "core": {
+          "citation_quality": "not_applicable",
+          "core_fact_accuracy": "pass",
+          "current_positioning": "pass",
+          "entity_recognition": "pass",
+          "risk_boundary": "pass"
+        },
+        "judgments": [
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-IDENTITY",
+            "quote": "MyyShop rehearsal connects adult creators with simulated brand campaigns.",
+            "reason": "Matches the supplied identity statement verbatim."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-ELIGIBILITY",
+            "quote": "The rehearsal is open to adult creators in its simulated US region.",
+            "reason": "Matches the supplied eligibility statement."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-FEES",
+            "quote": "The simulated service charges USD 9 per month after a 14-day trial.",
+            "reason": "Matches the supplied fee statement."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-GUARANTEES",
+            "quote": "The rehearsal cannot guarantee income or placement in an AI answer.",
+            "reason": "Matches the supplied guarantee-limitation statement."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-POSITIONING",
+            "quote": "The rehearsal prioritizes transparent campaign requirements over guaranteed earnings.",
+            "reason": "Matches the supplied positioning statement."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-PRIVACY",
+            "quote": "Rehearsal reports contain aggregate metrics and exclude personal customer records.",
+            "reason": "Matches the supplied privacy statement."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-NON-GOALS",
+            "quote": "The rehearsal does not provide inventory, logistics or credit.",
+            "reason": "Matches the supplied non-goals statement."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-REFUND",
+            "quote": "The rehearsal cancellation stops the next renewal and does not guarantee retroactive refunds.",
+            "reason": "Matches the supplied refund statement."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-AUTOMATION",
+            "quote": "Automatic acceptance of every brand campaign is unavailable.",
+            "reason": "Matches the supplied automation-limitation statement."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-CASE",
+            "quote": "A simulated pilot had 12 participants and four completed campaign applications.",
+            "reason": "Matches the supplied case-evidence statement."
+          }
+        ],
+        "sample_ref": "SMP-GEO-C2-AFTER-Q4-CHATGPT-1"
+      },
+      {
+        "core": {
+          "citation_quality": "not_applicable",
+          "core_fact_accuracy": "pass",
+          "current_positioning": "pass",
+          "entity_recognition": "pass",
+          "risk_boundary": "pass"
+        },
+        "judgments": [
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-IDENTITY",
+            "quote": "MyyShop rehearsal connects adult creators with simulated brand campaigns.",
+            "reason": "Matches the supplied identity statement verbatim."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-ELIGIBILITY",
+            "quote": "The rehearsal is open to adult creators in its simulated US region.",
+            "reason": "Matches the supplied eligibility statement."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-FEES",
+            "quote": "The simulated service charges USD 9 per month after a 14-day trial.",
+            "reason": "Matches the supplied fee statement."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-GUARANTEES",
+            "quote": "The rehearsal cannot guarantee income or placement in an AI answer.",
+            "reason": "Matches the supplied guarantee-limitation statement."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-POSITIONING",
+            "quote": "The rehearsal prioritizes transparent campaign requirements over guaranteed earnings.",
+            "reason": "Matches the supplied positioning statement."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-PRIVACY",
+            "quote": "Rehearsal reports contain aggregate metrics and exclude personal customer records.",
+            "reason": "Matches the supplied privacy statement."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-NON-GOALS",
+            "quote": "The rehearsal does not provide inventory, logistics or credit.",
+            "reason": "Matches the supplied non-goals statement."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-REFUND",
+            "quote": "The rehearsal cancellation stops the next renewal and does not guarantee retroactive refunds.",
+            "reason": "Matches the supplied refund statement."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-AUTOMATION",
+            "quote": "Automatic acceptance of every brand campaign is unavailable.",
+            "reason": "Matches the supplied automation-limitation statement."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-CASE",
+            "quote": "A simulated pilot had 12 participants and four completed campaign applications.",
+            "reason": "Matches the supplied case-evidence statement."
+          }
+        ],
+        "sample_ref": "SMP-GEO-C2-AFTER-Q4-CHATGPT-2"
+      },
+      {
+        "core": {
+          "citation_quality": "not_applicable",
+          "core_fact_accuracy": "pass",
+          "current_positioning": "pass",
+          "entity_recognition": "pass",
+          "risk_boundary": "pass"
+        },
+        "judgments": [
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-IDENTITY",
+            "quote": "MyyShop rehearsal connects adult creators with simulated brand campaigns.",
+            "reason": "Matches the supplied identity statement verbatim."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-ELIGIBILITY",
+            "quote": "The rehearsal is open to adult creators in its simulated US region.",
+            "reason": "Matches the supplied eligibility statement."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-FEES",
+            "quote": "The simulated service charges USD 9 per month after a 14-day trial.",
+            "reason": "Matches the supplied fee statement."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-GUARANTEES",
+            "quote": "The rehearsal cannot guarantee income or placement in an AI answer.",
+            "reason": "Matches the supplied guarantee-limitation statement."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-POSITIONING",
+            "quote": "The rehearsal prioritizes transparent campaign requirements over guaranteed earnings.",
+            "reason": "Matches the supplied positioning statement."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-PRIVACY",
+            "quote": "Rehearsal reports contain aggregate metrics and exclude personal customer records.",
+            "reason": "Matches the supplied privacy statement."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-NON-GOALS",
+            "quote": "The rehearsal does not provide inventory, logistics or credit.",
+            "reason": "Matches the supplied non-goals statement."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-REFUND",
+            "quote": "The rehearsal cancellation stops the next renewal and does not guarantee retroactive refunds.",
+            "reason": "Matches the supplied refund statement."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-AUTOMATION",
+            "quote": "Automatic acceptance of every brand campaign is unavailable.",
+            "reason": "Matches the supplied automation-limitation statement."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-CASE",
+            "quote": "A simulated pilot had 12 participants and four completed campaign applications.",
+            "reason": "Matches the supplied case-evidence statement."
+          }
+        ],
+        "sample_ref": "SMP-GEO-C2-AFTER-Q4-GEMINI-1"
+      },
+      {
+        "core": {
+          "citation_quality": "not_applicable",
+          "core_fact_accuracy": "pass",
+          "current_positioning": "pass",
+          "entity_recognition": "pass",
+          "risk_boundary": "pass"
+        },
+        "judgments": [
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-IDENTITY",
+            "quote": "MyyShop rehearsal connects adult creators with simulated brand campaigns.",
+            "reason": "Matches the supplied identity statement verbatim."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-ELIGIBILITY",
+            "quote": "The rehearsal is open to adult creators in its simulated US region.",
+            "reason": "Matches the supplied eligibility statement."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-FEES",
+            "quote": "The simulated service charges USD 9 per month after a 14-day trial.",
+            "reason": "Matches the supplied fee statement."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-GUARANTEES",
+            "quote": "The rehearsal cannot guarantee income or placement in an AI answer.",
+            "reason": "Matches the supplied guarantee-limitation statement."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-POSITIONING",
+            "quote": "The rehearsal prioritizes transparent campaign requirements over guaranteed earnings.",
+            "reason": "Matches the supplied positioning statement."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-PRIVACY",
+            "quote": "Rehearsal reports contain aggregate metrics and exclude personal customer records.",
+            "reason": "Matches the supplied privacy statement."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-NON-GOALS",
+            "quote": "The rehearsal does not provide inventory, logistics or credit.",
+            "reason": "Matches the supplied non-goals statement."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-REFUND",
+            "quote": "The rehearsal cancellation stops the next renewal and does not guarantee retroactive refunds.",
+            "reason": "Matches the supplied refund statement."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-AUTOMATION",
+            "quote": "Automatic acceptance of every brand campaign is unavailable.",
+            "reason": "Matches the supplied automation-limitation statement."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-CASE",
+            "quote": "A simulated pilot had 12 participants and four completed campaign applications.",
+            "reason": "Matches the supplied case-evidence statement."
+          }
+        ],
+        "sample_ref": "SMP-GEO-C2-AFTER-Q4-GEMINI-2"
+      },
+      {
+        "core": {
+          "citation_quality": "not_applicable",
+          "core_fact_accuracy": "pass",
+          "current_positioning": "pass",
+          "entity_recognition": "pass",
+          "risk_boundary": "pass"
+        },
+        "judgments": [
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-IDENTITY",
+            "quote": "MyyShop rehearsal connects adult creators with simulated brand campaigns.",
+            "reason": "Matches the supplied identity statement verbatim."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-ELIGIBILITY",
+            "quote": "The rehearsal is open to adult creators in its simulated US region.",
+            "reason": "Matches the supplied eligibility statement."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-FEES",
+            "quote": "The simulated service charges USD 9 per month after a 14-day trial.",
+            "reason": "Matches the supplied fee statement."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-GUARANTEES",
+            "quote": "The rehearsal cannot guarantee income or placement in an AI answer.",
+            "reason": "Matches the supplied guarantee-limitation statement."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-POSITIONING",
+            "quote": "The rehearsal prioritizes transparent campaign requirements over guaranteed earnings.",
+            "reason": "Matches the supplied positioning statement."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-PRIVACY",
+            "quote": "Rehearsal reports contain aggregate metrics and exclude personal customer records.",
+            "reason": "Matches the supplied privacy statement."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-NON-GOALS",
+            "quote": "The rehearsal does not provide inventory, logistics or credit.",
+            "reason": "Matches the supplied non-goals statement."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-REFUND",
+            "quote": "The rehearsal cancellation stops the next renewal and does not guarantee retroactive refunds.",
+            "reason": "Matches the supplied refund statement."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-AUTOMATION",
+            "quote": "Automatic acceptance of every brand campaign is unavailable.",
+            "reason": "Matches the supplied automation-limitation statement."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-CASE",
+            "quote": "A simulated pilot had 12 participants and four completed campaign applications.",
+            "reason": "Matches the supplied case-evidence statement."
+          }
+        ],
+        "sample_ref": "SMP-GEO-C2-AFTER-Q4-PERPLEXITY-1"
+      },
+      {
+        "core": {
+          "citation_quality": "not_applicable",
+          "core_fact_accuracy": "pass",
+          "current_positioning": "pass",
+          "entity_recognition": "pass",
+          "risk_boundary": "pass"
+        },
+        "judgments": [
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-IDENTITY",
+            "quote": "MyyShop rehearsal connects adult creators with simulated brand campaigns.",
+            "reason": "Matches the supplied identity statement verbatim."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-ELIGIBILITY",
+            "quote": "The rehearsal is open to adult creators in its simulated US region.",
+            "reason": "Matches the supplied eligibility statement."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-FEES",
+            "quote": "The simulated service charges USD 9 per month after a 14-day trial.",
+            "reason": "Matches the supplied fee statement."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-GUARANTEES",
+            "quote": "The rehearsal cannot guarantee income or placement in an AI answer.",
+            "reason": "Matches the supplied guarantee-limitation statement."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-POSITIONING",
+            "quote": "The rehearsal prioritizes transparent campaign requirements over guaranteed earnings.",
+            "reason": "Matches the supplied positioning statement."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-PRIVACY",
+            "quote": "Rehearsal reports contain aggregate metrics and exclude personal customer records.",
+            "reason": "Matches the supplied privacy statement."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-NON-GOALS",
+            "quote": "The rehearsal does not provide inventory, logistics or credit.",
+            "reason": "Matches the supplied non-goals statement."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-REFUND",
+            "quote": "The rehearsal cancellation stops the next renewal and does not guarantee retroactive refunds.",
+            "reason": "Matches the supplied refund statement."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-AUTOMATION",
+            "quote": "Automatic acceptance of every brand campaign is unavailable.",
+            "reason": "Matches the supplied automation-limitation statement."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-CASE",
+            "quote": "A simulated pilot had 12 participants and four completed campaign applications.",
+            "reason": "Matches the supplied case-evidence statement."
+          }
+        ],
+        "sample_ref": "SMP-GEO-C2-AFTER-Q4-PERPLEXITY-2"
+      },
+      {
+        "core": {
+          "citation_quality": "not_applicable",
+          "core_fact_accuracy": "pass",
+          "current_positioning": "pass",
+          "entity_recognition": "pass",
+          "risk_boundary": "pass"
+        },
+        "judgments": [
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-IDENTITY",
+            "quote": "MyyShop rehearsal connects adult creators with simulated brand campaigns.",
+            "reason": "Matches the supplied identity statement verbatim."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-ELIGIBILITY",
+            "quote": "The rehearsal is open to adult creators in its simulated US region.",
+            "reason": "Matches the supplied eligibility statement."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-FEES",
+            "quote": "The simulated service charges USD 9 per month after a 14-day trial.",
+            "reason": "Matches the supplied fee statement."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-GUARANTEES",
+            "quote": "The rehearsal cannot guarantee income or placement in an AI answer.",
+            "reason": "Matches the supplied guarantee-limitation statement."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-POSITIONING",
+            "quote": "The rehearsal prioritizes transparent campaign requirements over guaranteed earnings.",
+            "reason": "Matches the supplied positioning statement."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-PRIVACY",
+            "quote": "Rehearsal reports contain aggregate metrics and exclude personal customer records.",
+            "reason": "Matches the supplied privacy statement."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-NON-GOALS",
+            "quote": "The rehearsal does not provide inventory, logistics or credit.",
+            "reason": "Matches the supplied non-goals statement."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-REFUND",
+            "quote": "The rehearsal cancellation stops the next renewal and does not guarantee retroactive refunds.",
+            "reason": "Matches the supplied refund statement."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-AUTOMATION",
+            "quote": "Automatic acceptance of every brand campaign is unavailable.",
+            "reason": "Matches the supplied automation-limitation statement."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-CASE",
+            "quote": "A simulated pilot had 12 participants and four completed campaign applications.",
+            "reason": "Matches the supplied case-evidence statement."
+          }
+        ],
+        "sample_ref": "SMP-GEO-C2-AFTER-Q4-GOOGLE-AI-1"
+      },
+      {
+        "core": {
+          "citation_quality": "not_applicable",
+          "core_fact_accuracy": "pass",
+          "current_positioning": "pass",
+          "entity_recognition": "pass",
+          "risk_boundary": "pass"
+        },
+        "judgments": [
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-IDENTITY",
+            "quote": "MyyShop rehearsal connects adult creators with simulated brand campaigns.",
+            "reason": "Matches the supplied identity statement verbatim."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-ELIGIBILITY",
+            "quote": "The rehearsal is open to adult creators in its simulated US region.",
+            "reason": "Matches the supplied eligibility statement."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-FEES",
+            "quote": "The simulated service charges USD 9 per month after a 14-day trial.",
+            "reason": "Matches the supplied fee statement."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-GUARANTEES",
+            "quote": "The rehearsal cannot guarantee income or placement in an AI answer.",
+            "reason": "Matches the supplied guarantee-limitation statement."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-POSITIONING",
+            "quote": "The rehearsal prioritizes transparent campaign requirements over guaranteed earnings.",
+            "reason": "Matches the supplied positioning statement."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-PRIVACY",
+            "quote": "Rehearsal reports contain aggregate metrics and exclude personal customer records.",
+            "reason": "Matches the supplied privacy statement."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-NON-GOALS",
+            "quote": "The rehearsal does not provide inventory, logistics or credit.",
+            "reason": "Matches the supplied non-goals statement."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-REFUND",
+            "quote": "The rehearsal cancellation stops the next renewal and does not guarantee retroactive refunds.",
+            "reason": "Matches the supplied refund statement."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-AUTOMATION",
+            "quote": "Automatic acceptance of every brand campaign is unavailable.",
+            "reason": "Matches the supplied automation-limitation statement."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-CASE",
+            "quote": "A simulated pilot had 12 participants and four completed campaign applications.",
+            "reason": "Matches the supplied case-evidence statement."
+          }
+        ],
+        "sample_ref": "SMP-GEO-C2-AFTER-Q4-GOOGLE-AI-2"
+      },
+      {
+        "core": {
+          "citation_quality": "not_applicable",
+          "core_fact_accuracy": "pass",
+          "current_positioning": "pass",
+          "entity_recognition": "pass",
+          "risk_boundary": "pass"
+        },
+        "judgments": [
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-IDENTITY",
+            "quote": "MyyShop rehearsal connects adult creators with simulated brand campaigns.",
+            "reason": "Matches the supplied identity statement verbatim."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-ELIGIBILITY",
+            "quote": "The rehearsal is open to adult creators in its simulated US region.",
+            "reason": "Matches the supplied eligibility statement."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-FEES",
+            "quote": "The simulated service charges USD 9 per month after a 14-day trial.",
+            "reason": "Matches the supplied fee statement."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-GUARANTEES",
+            "quote": "The rehearsal cannot guarantee income or placement in an AI answer.",
+            "reason": "Matches the supplied guarantee-limitation statement."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-POSITIONING",
+            "quote": "The rehearsal prioritizes transparent campaign requirements over guaranteed earnings.",
+            "reason": "Matches the supplied positioning statement."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-PRIVACY",
+            "quote": "Rehearsal reports contain aggregate metrics and exclude personal customer records.",
+            "reason": "Matches the supplied privacy statement."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-NON-GOALS",
+            "quote": "The rehearsal does not provide inventory, logistics or credit.",
+            "reason": "Matches the supplied non-goals statement."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-REFUND",
+            "quote": "The rehearsal cancellation stops the next renewal and does not guarantee retroactive refunds.",
+            "reason": "Matches the supplied refund statement."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-AUTOMATION",
+            "quote": "Automatic acceptance of every brand campaign is unavailable.",
+            "reason": "Matches the supplied automation-limitation statement."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-CASE",
+            "quote": "A simulated pilot had 12 participants and four completed campaign applications.",
+            "reason": "Matches the supplied case-evidence statement."
+          }
+        ],
+        "sample_ref": "SMP-GEO-C2-AFTER-Q4-CLAUDE-1"
+      },
+      {
+        "core": {
+          "citation_quality": "not_applicable",
+          "core_fact_accuracy": "pass",
+          "current_positioning": "pass",
+          "entity_recognition": "pass",
+          "risk_boundary": "pass"
+        },
+        "judgments": [
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-IDENTITY",
+            "quote": "MyyShop rehearsal connects adult creators with simulated brand campaigns.",
+            "reason": "Matches the supplied identity statement verbatim."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-ELIGIBILITY",
+            "quote": "The rehearsal is open to adult creators in its simulated US region.",
+            "reason": "Matches the supplied eligibility statement."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-FEES",
+            "quote": "The simulated service charges USD 9 per month after a 14-day trial.",
+            "reason": "Matches the supplied fee statement."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-GUARANTEES",
+            "quote": "The rehearsal cannot guarantee income or placement in an AI answer.",
+            "reason": "Matches the supplied guarantee-limitation statement."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-POSITIONING",
+            "quote": "The rehearsal prioritizes transparent campaign requirements over guaranteed earnings.",
+            "reason": "Matches the supplied positioning statement."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-PRIVACY",
+            "quote": "Rehearsal reports contain aggregate metrics and exclude personal customer records.",
+            "reason": "Matches the supplied privacy statement."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-NON-GOALS",
+            "quote": "The rehearsal does not provide inventory, logistics or credit.",
+            "reason": "Matches the supplied non-goals statement."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-REFUND",
+            "quote": "The rehearsal cancellation stops the next renewal and does not guarantee retroactive refunds.",
+            "reason": "Matches the supplied refund statement."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-AUTOMATION",
+            "quote": "Automatic acceptance of every brand campaign is unavailable.",
+            "reason": "Matches the supplied automation-limitation statement."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-CASE",
+            "quote": "A simulated pilot had 12 participants and four completed campaign applications.",
+            "reason": "Matches the supplied case-evidence statement."
+          }
+        ],
+        "sample_ref": "SMP-GEO-C2-AFTER-Q4-CLAUDE-2"
+      }
+    ]
+  }
+}

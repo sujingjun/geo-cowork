@@ -3,6 +3,7 @@ title: geo-cowork 知识库导航
 kind: index
 status: verified
 sources:
+  - docs/plans/2026-09-16-knowledge-driven-geo-e2e-plan.md
   - AGENTS.md
   - CONTEXT.md
   - CONTEXT-MAP.md
@@ -32,7 +33,7 @@ sources:
   - docs/requirements/2026-08-25-platform-automation-permission-backlog.md
   - docs/specs/0006-consumer-answer-testing.md
   - docs/plans/2026-08-24-m5-consumer-answer-testing-plan.md
-updated: 2026-09-04
+updated: 2026-09-16
 ---
 
 # geo-cowork 知识库导航
@@ -55,8 +56,8 @@ updated: 2026-09-04
 - 领域上下文：[`../../CONTEXT-MAP.md`](../../CONTEXT-MAP.md)
 - 当前批准产品基线：[`../plans/2026-08-23-geo-cowork-final-product-plan.md`](../plans/2026-08-23-geo-cowork-final-product-plan.md)
 - Authorized-real/v1 PRD：[`../prd/2026-09-04-authorized-real-geo-cycle.md`](../prd/2026-09-04-authorized-real-geo-cycle.md)（`proposed`）
-- 当前下一行动计划：[`../plans/2026-09-04-real-cycle-blocker-closure-plan.md`](../plans/2026-09-04-real-cycle-blocker-closure-plan.md)（`proposed`）
-- 当前任务图：[`../tasks/2026-09-04-real-cycle-blocker-closure.md`](../tasks/2026-09-04-real-cycle-blocker-closure.md)（`proposed`）
+- 当前下一行动计划：[`../plans/2026-09-16-knowledge-driven-geo-e2e-plan.md`](../plans/2026-09-16-knowledge-driven-geo-e2e-plan.md)（`approved`）
+- 当前任务图：[`../tasks/2026-09-16-knowledge-driven-geo-e2e.md`](../tasks/2026-09-16-knowledge-driven-geo-e2e.md)
 - 当前规划记录：[`../records/2026-09-04-real-cycle-blocker-closure-planning-record.md`](../records/2026-09-04-real-cycle-blocker-closure-planning-record.md)（`verified`；仅规划范围）
 - MyyShop 当前状态：[`../../workspaces/myyshop/STATUS.md`](../../workspaces/myyshop/STATUS.md)
 - Real Cycle Readiness：[`../records/2026-09-02-myyshop-real-cycle-readiness-report.md`](../records/2026-09-02-myyshop-real-cycle-readiness-report.md)
@@ -82,3 +83,9 @@ updated: 2026-09-04
 - M5 approved Plan：[`../plans/2026-08-24-m5-consumer-answer-testing-plan.md`](../plans/2026-08-24-m5-consumer-answer-testing-plan.md)
 
 其他文档类别目录（架构、需求、PRD、原型、Spec、Plan、Task、Record、Runbook、Release、复盘、经验、Handoff）在首次出现 canonical 文档时创建，并由 `docs/README.md` 导航。
+
+## 2026-09-16 当前开发入口
+
+[知识驱动 GEO 全流程计划](../plans/2026-09-16-knowledge-driven-geo-e2e-plan.md) 是当前 Owner 已要求实施的任务；旧真实周期 roadmap 已归档。自定义模型只保留切换配置，本次真实提取使用 DeepSeek。
+
+最终工程验收已完成：两个演练周期共 240 个真实模型提取槽，三个真实平台各一次采集，GSC 718 行。见 [实施记录](../records/2026-09-16-knowledge-driven-geo-e2e-record.md) 与 [能力边界](../records/2026-09-16-geo-capability-matrix.md)。

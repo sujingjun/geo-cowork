@@ -1,0 +1,1395 @@
+---
+id: CIS-GEO-C2-BASELINE-RECORDED
+record_type: cycle_input_snapshot
+status: recorded
+version: 1.0.0
+created_at: '2026-09-16T00:00:00Z'
+updated_at: '2026-09-16T00:00:00Z'
+title: transition cycle input snapshot
+test_scope:
+  kind: synthetic
+  usage: test_only
+  merchant_ref: MER-MYYSHOP-001
+  workspace_id: ws_2bb19816ee725a38ea01cc1ee4
+  knowledge_base_ref: KBASE-GEO-E2E-2BB19816EE72
+execution_scope: synthetic_test
+merchant_ref: MER-MYYSHOP-001
+knowledge_base_ref: KBASE-GEO-E2E-2BB19816EE72
+cycle_ref: CYC-GEO-E2E-C2
+snapshot_kind: transition
+manifest:
+  schema_version: cycle-input-snapshot/1.0.0
+  artifact_path: outputs/snapshots/cis-geo-c2-baseline-recorded/manifest.json
+  sha256: 263c13f134a0a8e0cdf39fa3e2d96f267b0779dd7fae3a8bc70b70f5ede0bb83
+  fingerprint: ff153eff0779cb3929168823d17ccf0ea5e39cbb70642b6a860b30f306521c42
+source_entries:
+  - object_id: ARV-GEO-C2-BASE-Q4-CLAUDE-2-REVIEWED
+    record_type: answer_review
+    object_version: 1.0.0
+    object_path: cycles/m5/reviews/arv-geo-c2-base-q4-claude-2-reviewed.md
+    content_sha256: 231d50e54654ea5b8a42cb65801f8f48ef733358a8ac0e741d453b3bff5b5c4d
+    file_sha256: 362bcbb8cdc46632b80db93f44a59699953b4153bba764a58ea5bcc4d7756250
+    snapshot_path: outputs/snapshots/cis-geo-c2-baseline-recorded/objects/cycles/m5/reviews/arv-geo-c2-base-q4-claude-2-reviewed.md
+    snapshot_sha256: 362bcbb8cdc46632b80db93f44a59699953b4153bba764a58ea5bcc4d7756250
+    entry_key: 00c6755fac6ac464334647139a2ab23b3af6b4536a23ed9cac7e87714ed8d2d5
+  - object_id: SMP-GEO-C2-BASE-Q6-GOOGLE-AI-1
+    record_type: answer_sample
+    object_version: 1.0.0
+    object_path: cycles/m5/samples/smp-geo-c2-base-q6-google-ai-1.md
+    content_sha256: 8092e876e09e74c3385df01d30bdb28ca43c7c0a61b95e6118888c590824f75c
+    file_sha256: 8ce19a510bbe115806c855f35aa4b6f5da1470cff6531cc072cbcae082d6f5b7
+    snapshot_path: outputs/snapshots/cis-geo-c2-baseline-recorded/objects/cycles/m5/samples/smp-geo-c2-base-q6-google-ai-1.md
+    snapshot_sha256: 8ce19a510bbe115806c855f35aa4b6f5da1470cff6531cc072cbcae082d6f5b7
+    entry_key: 01f68adc43d47f7a81402786d9d9d456d0e343ee585e2e6c5a80cc70a6aadb3f
+  - object_id: AGG-GEO-C2-BASE-Q1-CLAUDE
+    record_type: answer_aggregation
+    object_version: 1.0.0
+    object_path: cycles/m5/aggregations/agg-geo-c2-base-q1-claude.md
+    content_sha256: 0b864a1843a73f9aeeb3fff2a30ecf802b7fccc9867171f8bbb391e249c04e08
+    file_sha256: a8dd30a6a6bb4b1ae33df382c90c30b6f2feb79ac565d13db6581501c7d448de
+    snapshot_path: outputs/snapshots/cis-geo-c2-baseline-recorded/objects/cycles/m5/aggregations/agg-geo-c2-base-q1-claude.md
+    snapshot_sha256: a8dd30a6a6bb4b1ae33df382c90c30b6f2feb79ac565d13db6581501c7d448de
+    entry_key: 02ad9ca9466bd9eeb1041b33b3f14f51a4df0e07692cdf2d707818f3a8222c29
+  - object_id: SMP-GEO-C2-BASE-Q4-GEMINI-1
+    record_type: answer_sample
+    object_version: 1.0.0
+    object_path: cycles/m5/samples/smp-geo-c2-base-q4-gemini-1.md
+    content_sha256: 8092e876e09e74c3385df01d30bdb28ca43c7c0a61b95e6118888c590824f75c
+    file_sha256: 7450c52f7510d49cdb1782a39ae75e9579c616583a808d9763ce3a42e31152ee
+    snapshot_path: outputs/snapshots/cis-geo-c2-baseline-recorded/objects/cycles/m5/samples/smp-geo-c2-base-q4-gemini-1.md
+    snapshot_sha256: 7450c52f7510d49cdb1782a39ae75e9579c616583a808d9763ce3a42e31152ee
+    entry_key: 0483a3159484178f404406a19cdb35aaa01edbafbb215d1bed2a2084f8b1a271
+  - object_id: ARV-GEO-C2-BASE-Q4-PERPLEXITY-2-REVIEWED
+    record_type: answer_review
+    object_version: 1.0.0
+    object_path: cycles/m5/reviews/arv-geo-c2-base-q4-perplexity-2-reviewed.md
+    content_sha256: f056a48b0e7b2e33505c470b7ac3462e63da8f6fe2295a5c23e8a1b96564367a
+    file_sha256: 644785b9fa6afae06500b97f9a1dbc6bb2300d3e0cebb75bf58b13f73a00fc24
+    snapshot_path: outputs/snapshots/cis-geo-c2-baseline-recorded/objects/cycles/m5/reviews/arv-geo-c2-base-q4-perplexity-2-reviewed.md
+    snapshot_sha256: 644785b9fa6afae06500b97f9a1dbc6bb2300d3e0cebb75bf58b13f73a00fc24
+    entry_key: 063c328f45b5c8cac89ed7e651aa3e145be081a417ed10d478e907a5f767a37f
+  - object_id: ARV-GEO-C2-BASE-Q1-PERPLEXITY-1-REVIEWED
+    record_type: answer_review
+    object_version: 1.0.0
+    object_path: cycles/m5/reviews/arv-geo-c2-base-q1-perplexity-1-reviewed.md
+    content_sha256: 67b47a65e6f2da95eae261bdffa58169308d903bff1bb8560c82cd2f564df147
+    file_sha256: 371d874760eca19a7d9c8ef0e9e94ff9aacdb6dff5a89a08e0f598466cfa0a53
+    snapshot_path: outputs/snapshots/cis-geo-c2-baseline-recorded/objects/cycles/m5/reviews/arv-geo-c2-base-q1-perplexity-1-reviewed.md
+    snapshot_sha256: 371d874760eca19a7d9c8ef0e9e94ff9aacdb6dff5a89a08e0f598466cfa0a53
+    entry_key: 06f4df2c141cb9f38ea94c73084d0f08d0b3e29cccf2de60f2708ee2415286e0
+  - object_id: AGG-GEO-C2-BASE-Q3-GEMINI
+    record_type: answer_aggregation
+    object_version: 1.0.0
+    object_path: cycles/m5/aggregations/agg-geo-c2-base-q3-gemini.md
+    content_sha256: 2e4b2e16278f7b8f55dafe8069a5b1249c202399459197dc7bc777b5b50c9f89
+    file_sha256: b890508fdaa5db5735052644c67b53e0ed7e0d9f517e09b7095bdfc9d28023a2
+    snapshot_path: outputs/snapshots/cis-geo-c2-baseline-recorded/objects/cycles/m5/aggregations/agg-geo-c2-base-q3-gemini.md
+    snapshot_sha256: b890508fdaa5db5735052644c67b53e0ed7e0d9f517e09b7095bdfc9d28023a2
+    entry_key: 0774597f03c1e2cbd572ad658e12be76447b867d9bc4a5f840d346cd5a968204
+  - object_id: SMP-GEO-C2-BASE-Q4-CHATGPT-2
+    record_type: answer_sample
+    object_version: 1.0.0
+    object_path: cycles/m5/samples/smp-geo-c2-base-q4-chatgpt-2.md
+    content_sha256: dab2280854b840d20db2c76c5a64257cd9aba1325610a0e3ea4145d68c75370c
+    file_sha256: 41b216931ad157d71668012399934ca649effd3252577c601af4a0e794912a4b
+    snapshot_path: outputs/snapshots/cis-geo-c2-baseline-recorded/objects/cycles/m5/samples/smp-geo-c2-base-q4-chatgpt-2.md
+    snapshot_sha256: 41b216931ad157d71668012399934ca649effd3252577c601af4a0e794912a4b
+    entry_key: 0aea730f3410311e6f9bd1df7ce8abb0253ff67531a0458b02e22d2d1a16ebce
+  - object_id: SMP-GEO-C2-BASE-Q3-CHATGPT-1
+    record_type: answer_sample
+    object_version: 1.0.0
+    object_path: cycles/m5/samples/smp-geo-c2-base-q3-chatgpt-1.md
+    content_sha256: 8092e876e09e74c3385df01d30bdb28ca43c7c0a61b95e6118888c590824f75c
+    file_sha256: 673c58f11f374891e32a4930adfaddd576a7224120bc847ed0ce7d2a1af08746
+    snapshot_path: outputs/snapshots/cis-geo-c2-baseline-recorded/objects/cycles/m5/samples/smp-geo-c2-base-q3-chatgpt-1.md
+    snapshot_sha256: 673c58f11f374891e32a4930adfaddd576a7224120bc847ed0ce7d2a1af08746
+    entry_key: 0bd82ff4c8df8273b0a95831dd6887119fc0bb3dd2c1f1ed25c7575dccc04971
+  - object_id: SMP-GEO-C2-BASE-Q3-CLAUDE-2
+    record_type: answer_sample
+    object_version: 1.0.0
+    object_path: cycles/m5/samples/smp-geo-c2-base-q3-claude-2.md
+    content_sha256: dab2280854b840d20db2c76c5a64257cd9aba1325610a0e3ea4145d68c75370c
+    file_sha256: 313afe25c2877ad1b74ef0aec84228b52715d164e9ac61019b739f2ccd4a77c1
+    snapshot_path: outputs/snapshots/cis-geo-c2-baseline-recorded/objects/cycles/m5/samples/smp-geo-c2-base-q3-claude-2.md
+    snapshot_sha256: 313afe25c2877ad1b74ef0aec84228b52715d164e9ac61019b739f2ccd4a77c1
+    entry_key: 0da39371044d11c883eefc59857af074a67860b2602ccc7b1110e73b66216817
+  - object_id: SMP-GEO-C2-BASE-Q6-PERPLEXITY-2
+    record_type: answer_sample
+    object_version: 1.0.0
+    object_path: cycles/m5/samples/smp-geo-c2-base-q6-perplexity-2.md
+    content_sha256: dab2280854b840d20db2c76c5a64257cd9aba1325610a0e3ea4145d68c75370c
+    file_sha256: 6438fb3b429b7b88981453bad9ce125eaf3b438ff9d107ffabe9a7e447622240
+    snapshot_path: outputs/snapshots/cis-geo-c2-baseline-recorded/objects/cycles/m5/samples/smp-geo-c2-base-q6-perplexity-2.md
+    snapshot_sha256: 6438fb3b429b7b88981453bad9ce125eaf3b438ff9d107ffabe9a7e447622240
+    entry_key: 11836c8fbc1cfda312911d571b73d29648cf9a4bb4db268a2f64e347f39f4ec4
+  - object_id: ARV-GEO-C2-BASE-Q3-GOOGLE-AI-2-REVIEWED
+    record_type: answer_review
+    object_version: 1.0.0
+    object_path: cycles/m5/reviews/arv-geo-c2-base-q3-google-ai-2-reviewed.md
+    content_sha256: 1f87c9435c4991ca719020d809a5cb3cc002b0953c5fbf2e6d1f04d024b0bede
+    file_sha256: d892144be03599973384d5dcc45d1ddbfa3403e3b5c87c43421c3bfe59739d0a
+    snapshot_path: outputs/snapshots/cis-geo-c2-baseline-recorded/objects/cycles/m5/reviews/arv-geo-c2-base-q3-google-ai-2-reviewed.md
+    snapshot_sha256: d892144be03599973384d5dcc45d1ddbfa3403e3b5c87c43421c3bfe59739d0a
+    entry_key: 15fcadea8423e99559f75c6430160dc9ccc9f1e51f3f0eb492e4d1f0daea13c9
+  - object_id: ARV-GEO-C2-BASE-Q2-CHATGPT-1-REVIEWED
+    record_type: answer_review
+    object_version: 1.0.0
+    object_path: cycles/m5/reviews/arv-geo-c2-base-q2-chatgpt-1-reviewed.md
+    content_sha256: 8cf55388f4adeafeed86b97d136e9e1b167c4421218fffac7c21392a3b35e622
+    file_sha256: a66af57c9a88f2ce7444284d5e9d3e6764f228e3d0a20e11b948611aabe05900
+    snapshot_path: outputs/snapshots/cis-geo-c2-baseline-recorded/objects/cycles/m5/reviews/arv-geo-c2-base-q2-chatgpt-1-reviewed.md
+    snapshot_sha256: a66af57c9a88f2ce7444284d5e9d3e6764f228e3d0a20e11b948611aabe05900
+    entry_key: 1894c334f20f130cc2a01aaddbed5ed84d6be233b584f5693838f26464870d1e
+  - object_id: SMP-GEO-C2-BASE-Q6-CLAUDE-1
+    record_type: answer_sample
+    object_version: 1.0.0
+    object_path: cycles/m5/samples/smp-geo-c2-base-q6-claude-1.md
+    content_sha256: 8092e876e09e74c3385df01d30bdb28ca43c7c0a61b95e6118888c590824f75c
+    file_sha256: e90bfadb864d62c2aaf6fe22c0cbbcf98d34d999991da8bcd8f7cbf965b551f2
+    snapshot_path: outputs/snapshots/cis-geo-c2-baseline-recorded/objects/cycles/m5/samples/smp-geo-c2-base-q6-claude-1.md
+    snapshot_sha256: e90bfadb864d62c2aaf6fe22c0cbbcf98d34d999991da8bcd8f7cbf965b551f2
+    entry_key: 1f0f8238f427c798d8fc68f33c7f4e985bac3e315bf09abf6b6856534224b6ee
+  - object_id: SMP-GEO-C2-BASE-Q5-GOOGLE-AI-2
+    record_type: answer_sample
+    object_version: 1.0.0
+    object_path: cycles/m5/samples/smp-geo-c2-base-q5-google-ai-2.md
+    content_sha256: dab2280854b840d20db2c76c5a64257cd9aba1325610a0e3ea4145d68c75370c
+    file_sha256: adc4294432f9fcb080fdfb485abe195b9e06c9a22ba928848b71bd5cfc21c035
+    snapshot_path: outputs/snapshots/cis-geo-c2-baseline-recorded/objects/cycles/m5/samples/smp-geo-c2-base-q5-google-ai-2.md
+    snapshot_sha256: adc4294432f9fcb080fdfb485abe195b9e06c9a22ba928848b71bd5cfc21c035
+    entry_key: 2107dab1fc5d18b3510a2120c54ea3945efdb90d041f8672fa94eadb65f1e131
+  - object_id: AGG-GEO-C2-BASE-Q6-PERPLEXITY
+    record_type: answer_aggregation
+    object_version: 1.0.0
+    object_path: cycles/m5/aggregations/agg-geo-c2-base-q6-perplexity.md
+    content_sha256: a49db5aa73efdd9ba15da64f69cd25a9ce66f5f8c8c2b4b56951f041310bded4
+    file_sha256: b5c117a2f5cc94c9c1a60cca0421325eb49acff2606737c8428b37e9a8b9ddf9
+    snapshot_path: outputs/snapshots/cis-geo-c2-baseline-recorded/objects/cycles/m5/aggregations/agg-geo-c2-base-q6-perplexity.md
+    snapshot_sha256: b5c117a2f5cc94c9c1a60cca0421325eb49acff2606737c8428b37e9a8b9ddf9
+    entry_key: 2456e657a1155ddddceb283d1fe3c3c1ed2d01fd13c110e241281d4b327ec036
+  - object_id: ARV-GEO-C2-BASE-Q3-GOOGLE-AI-1-REVIEWED
+    record_type: answer_review
+    object_version: 1.0.0
+    object_path: cycles/m5/reviews/arv-geo-c2-base-q3-google-ai-1-reviewed.md
+    content_sha256: 05f54509daaa1a29d1b1173c9aa49876858fed77dd2bd8f92de873c4cfd1d72c
+    file_sha256: 23f703c7e70e06f43700f42f3731dfa0e64d625df2cb407cee735c1e2ad588b2
+    snapshot_path: outputs/snapshots/cis-geo-c2-baseline-recorded/objects/cycles/m5/reviews/arv-geo-c2-base-q3-google-ai-1-reviewed.md
+    snapshot_sha256: 23f703c7e70e06f43700f42f3731dfa0e64d625df2cb407cee735c1e2ad588b2
+    entry_key: 28acc12fed0e9df3d6ef84c9873ef422597252276d53783209a34136207eeca1
+  - object_id: SMP-GEO-C2-BASE-Q1-CHATGPT-2
+    record_type: answer_sample
+    object_version: 1.0.0
+    object_path: cycles/m5/samples/smp-geo-c2-base-q1-chatgpt-2.md
+    content_sha256: dab2280854b840d20db2c76c5a64257cd9aba1325610a0e3ea4145d68c75370c
+    file_sha256: 20e5aefb61ddfd421557f9e5610e25ce9e478ecd93f39d37199365e9d647f2bc
+    snapshot_path: outputs/snapshots/cis-geo-c2-baseline-recorded/objects/cycles/m5/samples/smp-geo-c2-base-q1-chatgpt-2.md
+    snapshot_sha256: 20e5aefb61ddfd421557f9e5610e25ce9e478ecd93f39d37199365e9d647f2bc
+    entry_key: 2bceddd46007353027174a4b782daae4eb422b27fbd634769c3ef0f67477416a
+  - object_id: ARV-GEO-C2-BASE-Q3-PERPLEXITY-1-REVIEWED
+    record_type: answer_review
+    object_version: 1.0.0
+    object_path: cycles/m5/reviews/arv-geo-c2-base-q3-perplexity-1-reviewed.md
+    content_sha256: d69f44f2cc13cd44205455dca7f93cf97a9431dcd807a201c154c239d03fb909
+    file_sha256: ebe78dbc640e794e9582540c3d0719ff0d77bbfa714eec9ea9c9258018c5d881
+    snapshot_path: outputs/snapshots/cis-geo-c2-baseline-recorded/objects/cycles/m5/reviews/arv-geo-c2-base-q3-perplexity-1-reviewed.md
+    snapshot_sha256: ebe78dbc640e794e9582540c3d0719ff0d77bbfa714eec9ea9c9258018c5d881
+    entry_key: 2cab73bffa59a72b501e0b466ebc0edc03fc9fc572e2ea9eaa2f6b2479c43f24
+  - object_id: SMP-GEO-C2-BASE-Q4-PERPLEXITY-2
+    record_type: answer_sample
+    object_version: 1.0.0
+    object_path: cycles/m5/samples/smp-geo-c2-base-q4-perplexity-2.md
+    content_sha256: dab2280854b840d20db2c76c5a64257cd9aba1325610a0e3ea4145d68c75370c
+    file_sha256: 00f89f2005384b94fef8e525117be895ba14c01dbba588aa56423a912e073124
+    snapshot_path: outputs/snapshots/cis-geo-c2-baseline-recorded/objects/cycles/m5/samples/smp-geo-c2-base-q4-perplexity-2.md
+    snapshot_sha256: 00f89f2005384b94fef8e525117be895ba14c01dbba588aa56423a912e073124
+    entry_key: 31cde58ddd34ba46b144b8aa561119241a739706fe62b8d4acf84a630f219e8a
+  - object_id: AGG-GEO-C2-BASE-Q1-PERPLEXITY
+    record_type: answer_aggregation
+    object_version: 1.0.0
+    object_path: cycles/m5/aggregations/agg-geo-c2-base-q1-perplexity.md
+    content_sha256: c3ce97665ab794f247f5e7b97ef64e1a920cb189998f95d4ff9f0fa0c0d4c863
+    file_sha256: 601ff68cd321cffe35cba358fe0c9e38c6edcae628e885f15bacadc56b81e5ed
+    snapshot_path: outputs/snapshots/cis-geo-c2-baseline-recorded/objects/cycles/m5/aggregations/agg-geo-c2-base-q1-perplexity.md
+    snapshot_sha256: 601ff68cd321cffe35cba358fe0c9e38c6edcae628e885f15bacadc56b81e5ed
+    entry_key: 35747674b660d62808f48c4389e5bf7ffb777570a74fbe14e4d96520457bedda
+  - object_id: AGG-GEO-C2-BASE-Q4-CHATGPT
+    record_type: answer_aggregation
+    object_version: 1.0.0
+    object_path: cycles/m5/aggregations/agg-geo-c2-base-q4-chatgpt.md
+    content_sha256: 21eb6671b3c030fa06a374b901fcd0c4b6a566af6519fedea314dcca5eaa0184
+    file_sha256: 05280d8ed728448048c0bec95f4b8d3e56b6a5a11700041e0dfb181a0ab66930
+    snapshot_path: outputs/snapshots/cis-geo-c2-baseline-recorded/objects/cycles/m5/aggregations/agg-geo-c2-base-q4-chatgpt.md
+    snapshot_sha256: 05280d8ed728448048c0bec95f4b8d3e56b6a5a11700041e0dfb181a0ab66930
+    entry_key: 3899e621d80a21887876de1e745038a6cc014f43460eb854a291ed1025fc8d35
+  - object_id: AGG-GEO-C2-BASE-Q4-GEMINI
+    record_type: answer_aggregation
+    object_version: 1.0.0
+    object_path: cycles/m5/aggregations/agg-geo-c2-base-q4-gemini.md
+    content_sha256: cab3fecfe3c606c8e9324c0de2be1714af79b595ecb0134ac8171f2cdbe3b6a2
+    file_sha256: 092f633fc2be746d9d59f07efc624a3692b5cbc54f4a293f75a1677537ed1ace
+    snapshot_path: outputs/snapshots/cis-geo-c2-baseline-recorded/objects/cycles/m5/aggregations/agg-geo-c2-base-q4-gemini.md
+    snapshot_sha256: 092f633fc2be746d9d59f07efc624a3692b5cbc54f4a293f75a1677537ed1ace
+    entry_key: 3a07b40bcee6f2e4eedaad1b2ae9a1c9a42456b3725e1c48b008adaca867287b
+  - object_id: AGG-GEO-C2-BASE-Q3-PERPLEXITY
+    record_type: answer_aggregation
+    object_version: 1.0.0
+    object_path: cycles/m5/aggregations/agg-geo-c2-base-q3-perplexity.md
+    content_sha256: a575111c193d3b7a8b37ef02c76ef3a3eb3253063730111a302c36a8739b438e
+    file_sha256: d88b74a495e0dfa1a5ec4dfa903c672351be9bf909b80c6ef551352268ec9163
+    snapshot_path: outputs/snapshots/cis-geo-c2-baseline-recorded/objects/cycles/m5/aggregations/agg-geo-c2-base-q3-perplexity.md
+    snapshot_sha256: d88b74a495e0dfa1a5ec4dfa903c672351be9bf909b80c6ef551352268ec9163
+    entry_key: 3e6a798511021afa7872d24041677b623894d103a2b0628bfd1e231490712685
+  - object_id: ARV-GEO-C2-BASE-Q1-CLAUDE-2-REVIEWED
+    record_type: answer_review
+    object_version: 1.0.0
+    object_path: cycles/m5/reviews/arv-geo-c2-base-q1-claude-2-reviewed.md
+    content_sha256: 8561f446465212a0c11b57ffc46a3c8ed901cc6b707a86dcff83781847b0b44d
+    file_sha256: 59f3610ea9e570676b5c69d2cfc55c922f6a9466c7d5e78c6c2e1357a6e89402
+    snapshot_path: outputs/snapshots/cis-geo-c2-baseline-recorded/objects/cycles/m5/reviews/arv-geo-c2-base-q1-claude-2-reviewed.md
+    snapshot_sha256: 59f3610ea9e570676b5c69d2cfc55c922f6a9466c7d5e78c6c2e1357a6e89402
+    entry_key: 3f9f885a074b862b5c7b0f534fad62b2cf5e30629fa6e5012a3ea5e353a68d69
+  - object_id: SMP-GEO-C2-BASE-Q1-PERPLEXITY-2
+    record_type: answer_sample
+    object_version: 1.0.0
+    object_path: cycles/m5/samples/smp-geo-c2-base-q1-perplexity-2.md
+    content_sha256: dab2280854b840d20db2c76c5a64257cd9aba1325610a0e3ea4145d68c75370c
+    file_sha256: 02c1edeecb9cb0e696a85b779608a9fbc1564b2915e8c21fb7dc1b96e08906b9
+    snapshot_path: outputs/snapshots/cis-geo-c2-baseline-recorded/objects/cycles/m5/samples/smp-geo-c2-base-q1-perplexity-2.md
+    snapshot_sha256: 02c1edeecb9cb0e696a85b779608a9fbc1564b2915e8c21fb7dc1b96e08906b9
+    entry_key: 40591fd2708336b91d8e1653a2849972529def1d0cfa9758f1f1bef948d4a324
+  - object_id: ARV-GEO-C2-BASE-Q4-GEMINI-1-REVIEWED
+    record_type: answer_review
+    object_version: 1.0.0
+    object_path: cycles/m5/reviews/arv-geo-c2-base-q4-gemini-1-reviewed.md
+    content_sha256: bdf8a948b7c40cf1373f773444e69abb6f1d71a391a8ac88e8802ae16cabff33
+    file_sha256: d4fffb3a7d4df9da02e6a356e328794ea31e383a193b84a5af2df246334aea4a
+    snapshot_path: outputs/snapshots/cis-geo-c2-baseline-recorded/objects/cycles/m5/reviews/arv-geo-c2-base-q4-gemini-1-reviewed.md
+    snapshot_sha256: d4fffb3a7d4df9da02e6a356e328794ea31e383a193b84a5af2df246334aea4a
+    entry_key: 41b4ba45f71187ff624aa9b941762a86949a007219d9882f1832f9d896491b06
+  - object_id: SMP-GEO-C2-BASE-Q4-CLAUDE-2
+    record_type: answer_sample
+    object_version: 1.0.0
+    object_path: cycles/m5/samples/smp-geo-c2-base-q4-claude-2.md
+    content_sha256: dab2280854b840d20db2c76c5a64257cd9aba1325610a0e3ea4145d68c75370c
+    file_sha256: 60a6a593423496afa70beb0d7c30412e1248d93c5502ea5acba02d27d08c57dc
+    snapshot_path: outputs/snapshots/cis-geo-c2-baseline-recorded/objects/cycles/m5/samples/smp-geo-c2-base-q4-claude-2.md
+    snapshot_sha256: 60a6a593423496afa70beb0d7c30412e1248d93c5502ea5acba02d27d08c57dc
+    entry_key: 4384debbcdf036aa531ef243750f96f996bb2a5ccb8a9e823aebe7501d5047b6
+  - object_id: ARV-GEO-C2-BASE-Q3-GEMINI-1-REVIEWED
+    record_type: answer_review
+    object_version: 1.0.0
+    object_path: cycles/m5/reviews/arv-geo-c2-base-q3-gemini-1-reviewed.md
+    content_sha256: 01260fb4b046b91e59bc239a244f25aa33599f57395ddcbb6d0504a0d7076d22
+    file_sha256: c005380dd9298794fe2f05e32d516d4a75b348e03e283b5bec41ab4544e342bc
+    snapshot_path: outputs/snapshots/cis-geo-c2-baseline-recorded/objects/cycles/m5/reviews/arv-geo-c2-base-q3-gemini-1-reviewed.md
+    snapshot_sha256: c005380dd9298794fe2f05e32d516d4a75b348e03e283b5bec41ab4544e342bc
+    entry_key: 4593a00119ae8192cc27961e8470b8f2aaffce40fa4df6d9a85ee25ee245fdef
+  - object_id: AGG-GEO-C2-BASE-Q2-GOOGLE-AI
+    record_type: answer_aggregation
+    object_version: 1.0.0
+    object_path: cycles/m5/aggregations/agg-geo-c2-base-q2-google-ai.md
+    content_sha256: 671edd285b88d4e785512d08180f0fd4bbcf0adeafb3d4c9d8c081eb5c493134
+    file_sha256: 34801e376012da951e5c002ba9c9a2721d6924f79fb46524b29a71417bc54a81
+    snapshot_path: outputs/snapshots/cis-geo-c2-baseline-recorded/objects/cycles/m5/aggregations/agg-geo-c2-base-q2-google-ai.md
+    snapshot_sha256: 34801e376012da951e5c002ba9c9a2721d6924f79fb46524b29a71417bc54a81
+    entry_key: 462a0e70fa237c515cee56e67bb12fe49f2ef43b7160efb7b14f2a1adfe1d251
+  - object_id: SMP-GEO-C2-BASE-Q2-GOOGLE-AI-2
+    record_type: answer_sample
+    object_version: 1.0.0
+    object_path: cycles/m5/samples/smp-geo-c2-base-q2-google-ai-2.md
+    content_sha256: dab2280854b840d20db2c76c5a64257cd9aba1325610a0e3ea4145d68c75370c
+    file_sha256: c4a4a5edd63354be5953fd12d65156c8c3f4cbcaf9566963f49a37206c785a4d
+    snapshot_path: outputs/snapshots/cis-geo-c2-baseline-recorded/objects/cycles/m5/samples/smp-geo-c2-base-q2-google-ai-2.md
+    snapshot_sha256: c4a4a5edd63354be5953fd12d65156c8c3f4cbcaf9566963f49a37206c785a4d
+    entry_key: 481afb05b1fed3a25477c94cb5667f3ba219d30243aba002e05b4c1a6ebc71f5
+  - object_id: SMP-GEO-C2-BASE-Q6-CHATGPT-1
+    record_type: answer_sample
+    object_version: 1.0.0
+    object_path: cycles/m5/samples/smp-geo-c2-base-q6-chatgpt-1.md
+    content_sha256: 8092e876e09e74c3385df01d30bdb28ca43c7c0a61b95e6118888c590824f75c
+    file_sha256: 1dcdb2e79399b6a62d33523cbfaac7070f8b8db88d1808c48c23391affa3c17b
+    snapshot_path: outputs/snapshots/cis-geo-c2-baseline-recorded/objects/cycles/m5/samples/smp-geo-c2-base-q6-chatgpt-1.md
+    snapshot_sha256: 1dcdb2e79399b6a62d33523cbfaac7070f8b8db88d1808c48c23391affa3c17b
+    entry_key: 4b576f4977ee70c8b8daceb4de5c1e7bb88373a4a068f9fec78b12acf774647d
+  - object_id: ARV-GEO-C2-BASE-Q5-GOOGLE-AI-2-REVIEWED
+    record_type: answer_review
+    object_version: 1.0.0
+    object_path: cycles/m5/reviews/arv-geo-c2-base-q5-google-ai-2-reviewed.md
+    content_sha256: f421032dd63dc3d3f54dde89ebc41607c67b817918ac9b1cfe9201167325520b
+    file_sha256: 263785006e87222ff218d7846dc2da3c1d123c8499d8ea4e3cb8718464f3e3ef
+    snapshot_path: outputs/snapshots/cis-geo-c2-baseline-recorded/objects/cycles/m5/reviews/arv-geo-c2-base-q5-google-ai-2-reviewed.md
+    snapshot_sha256: 263785006e87222ff218d7846dc2da3c1d123c8499d8ea4e3cb8718464f3e3ef
+    entry_key: 4d146e8c3a6b18a5c71933fe1a4483f1fb4b30f60c797973e5379598034a024d
+  - object_id: ARV-GEO-C2-BASE-Q4-GOOGLE-AI-2-REVIEWED
+    record_type: answer_review
+    object_version: 1.0.0
+    object_path: cycles/m5/reviews/arv-geo-c2-base-q4-google-ai-2-reviewed.md
+    content_sha256: 364ddd73778ce86764ae85f92b01526ffa899b1d4c44ce522dfed896994887a5
+    file_sha256: b4393ca27579e88b42c075519b3da2c1d73a40c0f692514312236c01a5426e02
+    snapshot_path: outputs/snapshots/cis-geo-c2-baseline-recorded/objects/cycles/m5/reviews/arv-geo-c2-base-q4-google-ai-2-reviewed.md
+    snapshot_sha256: b4393ca27579e88b42c075519b3da2c1d73a40c0f692514312236c01a5426e02
+    entry_key: 4f5b33bdffe97426615ed79cb8475b5a22de920214b8e03c2be07c56bc317466
+  - object_id: AGG-GEO-C2-BASE-Q6-CLAUDE
+    record_type: answer_aggregation
+    object_version: 1.0.0
+    object_path: cycles/m5/aggregations/agg-geo-c2-base-q6-claude.md
+    content_sha256: 71a76883e9db6549caf3888fdbd5ea39708939e3d4f7e586017cc16dda8fb300
+    file_sha256: 0ab19d3be76721418ce49e53266a428d81567aedc7ba5595266b2e61a06d2981
+    snapshot_path: outputs/snapshots/cis-geo-c2-baseline-recorded/objects/cycles/m5/aggregations/agg-geo-c2-base-q6-claude.md
+    snapshot_sha256: 0ab19d3be76721418ce49e53266a428d81567aedc7ba5595266b2e61a06d2981
+    entry_key: 4fdd61a059df5aca243ec85fa99abdc4096ed82f83bcf4af89d1a2a49aeef7b7
+  - object_id: ARV-GEO-C2-BASE-Q5-PERPLEXITY-1-REVIEWED
+    record_type: answer_review
+    object_version: 1.0.0
+    object_path: cycles/m5/reviews/arv-geo-c2-base-q5-perplexity-1-reviewed.md
+    content_sha256: 6426812f6335b1177847ed3bbd72a5e2087b01e51094fb8a49ae3bf98a5b26d3
+    file_sha256: 668cb92ca61469c0b682772a9026ea25d130af4b139ab223c06d8a0aa9814e69
+    snapshot_path: outputs/snapshots/cis-geo-c2-baseline-recorded/objects/cycles/m5/reviews/arv-geo-c2-base-q5-perplexity-1-reviewed.md
+    snapshot_sha256: 668cb92ca61469c0b682772a9026ea25d130af4b139ab223c06d8a0aa9814e69
+    entry_key: 51de5b3cae47ba54330e34429980b014402c363e981d552d569140476a917793
+  - object_id: ARV-GEO-C2-BASE-Q2-PERPLEXITY-1-REVIEWED
+    record_type: answer_review
+    object_version: 1.0.0
+    object_path: cycles/m5/reviews/arv-geo-c2-base-q2-perplexity-1-reviewed.md
+    content_sha256: 85f349ee4d5875b7fbbe1b054cf44b9824eb60218c9c098562bfdbf336877d98
+    file_sha256: 9dab5e0065b7d479f7b1ab638528001f44a78a06a59446653dc30960a33067cd
+    snapshot_path: outputs/snapshots/cis-geo-c2-baseline-recorded/objects/cycles/m5/reviews/arv-geo-c2-base-q2-perplexity-1-reviewed.md
+    snapshot_sha256: 9dab5e0065b7d479f7b1ab638528001f44a78a06a59446653dc30960a33067cd
+    entry_key: 51fc231437635bf7c54011681afdbda93b4ebe342e52e79f6e67ee826c4f5a96
+  - object_id: AGG-GEO-C2-BASE-Q2-GEMINI
+    record_type: answer_aggregation
+    object_version: 1.0.0
+    object_path: cycles/m5/aggregations/agg-geo-c2-base-q2-gemini.md
+    content_sha256: 9f78ba17f71217b02756a8757a3f211dfedff24c4007fe9a80bbb032e3dde58d
+    file_sha256: 1a9e75ace186c2ba0d9f8ae4ae3561f457ceb876ae7bd9d7bab6693bcb66e4be
+    snapshot_path: outputs/snapshots/cis-geo-c2-baseline-recorded/objects/cycles/m5/aggregations/agg-geo-c2-base-q2-gemini.md
+    snapshot_sha256: 1a9e75ace186c2ba0d9f8ae4ae3561f457ceb876ae7bd9d7bab6693bcb66e4be
+    entry_key: 526f9ed8ffc8ee0e0bd5f73ad9c911e0a20dd8d45f499edb6e7104286879a34a
+  - object_id: SMP-GEO-C2-BASE-Q5-CLAUDE-2
+    record_type: answer_sample
+    object_version: 1.0.0
+    object_path: cycles/m5/samples/smp-geo-c2-base-q5-claude-2.md
+    content_sha256: dab2280854b840d20db2c76c5a64257cd9aba1325610a0e3ea4145d68c75370c
+    file_sha256: 6c4130e64fd6cd14df6c6d0031f052eb187f5431a787e5cad4cead2b272a0ba7
+    snapshot_path: outputs/snapshots/cis-geo-c2-baseline-recorded/objects/cycles/m5/samples/smp-geo-c2-base-q5-claude-2.md
+    snapshot_sha256: 6c4130e64fd6cd14df6c6d0031f052eb187f5431a787e5cad4cead2b272a0ba7
+    entry_key: 562818aafa7ca1cc7ce8cc7508dd2c25f97db18883d298bd93fc075f3a2b80b4
+  - object_id: ARV-GEO-C2-BASE-Q5-CHATGPT-2-REVIEWED
+    record_type: answer_review
+    object_version: 1.0.0
+    object_path: cycles/m5/reviews/arv-geo-c2-base-q5-chatgpt-2-reviewed.md
+    content_sha256: e9ecc070c3279b26d591534b011e21d778ebdea6e48f978fb454c4f377c67ef3
+    file_sha256: 1149372ed2444b8a9975524cd269bbb71f94ec7ed717d4b7969fc2d278008170
+    snapshot_path: outputs/snapshots/cis-geo-c2-baseline-recorded/objects/cycles/m5/reviews/arv-geo-c2-base-q5-chatgpt-2-reviewed.md
+    snapshot_sha256: 1149372ed2444b8a9975524cd269bbb71f94ec7ed717d4b7969fc2d278008170
+    entry_key: 56ca68ce43e3a85ccaf6b3ecd30468ceb2f269b3b3c3c7ae3ee2601b2b8f05d2
+  - object_id: SMP-GEO-C2-BASE-Q5-CLAUDE-1
+    record_type: answer_sample
+    object_version: 1.0.0
+    object_path: cycles/m5/samples/smp-geo-c2-base-q5-claude-1.md
+    content_sha256: 8092e876e09e74c3385df01d30bdb28ca43c7c0a61b95e6118888c590824f75c
+    file_sha256: 4ee934c3e8a57c036c21b7a274a5c9469cbc484e3072852b52879b6e1769a407
+    snapshot_path: outputs/snapshots/cis-geo-c2-baseline-recorded/objects/cycles/m5/samples/smp-geo-c2-base-q5-claude-1.md
+    snapshot_sha256: 4ee934c3e8a57c036c21b7a274a5c9469cbc484e3072852b52879b6e1769a407
+    entry_key: 57abca8bd59dc3ca3280a96a971d2a2618fa28ea6943a74f931c43b4eba26d6e
+  - object_id: ARV-GEO-C2-BASE-Q5-PERPLEXITY-2-REVIEWED
+    record_type: answer_review
+    object_version: 1.0.0
+    object_path: cycles/m5/reviews/arv-geo-c2-base-q5-perplexity-2-reviewed.md
+    content_sha256: dd08da3ab2ce422bc9661674f577b6bdfff66d5b5e2da54d79db6e488a6510d9
+    file_sha256: 37e46648eecf536165782bc2d1c2fb4c9ab5a167729baafc4a0be8d362f94ea8
+    snapshot_path: outputs/snapshots/cis-geo-c2-baseline-recorded/objects/cycles/m5/reviews/arv-geo-c2-base-q5-perplexity-2-reviewed.md
+    snapshot_sha256: 37e46648eecf536165782bc2d1c2fb4c9ab5a167729baafc4a0be8d362f94ea8
+    entry_key: 597d3586dee1e8856bcf49a379238e053b336a00b9b199c7113d9f55389e518d
+  - object_id: SMP-GEO-C2-BASE-Q3-CLAUDE-1
+    record_type: answer_sample
+    object_version: 1.0.0
+    object_path: cycles/m5/samples/smp-geo-c2-base-q3-claude-1.md
+    content_sha256: 8092e876e09e74c3385df01d30bdb28ca43c7c0a61b95e6118888c590824f75c
+    file_sha256: 145ef2b2fed9049a0a1188830c1dcc79c45305a8390cc94f013b5a5e0041bd07
+    snapshot_path: outputs/snapshots/cis-geo-c2-baseline-recorded/objects/cycles/m5/samples/smp-geo-c2-base-q3-claude-1.md
+    snapshot_sha256: 145ef2b2fed9049a0a1188830c1dcc79c45305a8390cc94f013b5a5e0041bd07
+    entry_key: 5a8e7c57cbcc23077d41157b4cd583a937e367110d08f1206fe802b16ebb4f50
+  - object_id: AGG-GEO-C2-BASE-Q5-GEMINI
+    record_type: answer_aggregation
+    object_version: 1.0.0
+    object_path: cycles/m5/aggregations/agg-geo-c2-base-q5-gemini.md
+    content_sha256: 797c240e65bc80533a2890b4719ee57cd8438db455a30c1f983cdc6b2136c59e
+    file_sha256: f53ef5756ec6319c91405c70e4d67cb037a017679d6880c51f5ddee6bb0d971e
+    snapshot_path: outputs/snapshots/cis-geo-c2-baseline-recorded/objects/cycles/m5/aggregations/agg-geo-c2-base-q5-gemini.md
+    snapshot_sha256: f53ef5756ec6319c91405c70e4d67cb037a017679d6880c51f5ddee6bb0d971e
+    entry_key: 5b75da6b17ebe202875b440fe224dca08c420a38f020a4bba28698533b710318
+  - object_id: AGG-GEO-C2-BASE-Q5-CLAUDE
+    record_type: answer_aggregation
+    object_version: 1.0.0
+    object_path: cycles/m5/aggregations/agg-geo-c2-base-q5-claude.md
+    content_sha256: 7ae438214014336313e11ad86acfb54820c0871254b1e61614f1b5ba7e5870e9
+    file_sha256: fa5d2efd449331589d6cf24d861930d0feab7014961177478c5e99910f256d42
+    snapshot_path: outputs/snapshots/cis-geo-c2-baseline-recorded/objects/cycles/m5/aggregations/agg-geo-c2-base-q5-claude.md
+    snapshot_sha256: fa5d2efd449331589d6cf24d861930d0feab7014961177478c5e99910f256d42
+    entry_key: 5f30dad13378a4e85fce818050e88ea4cfe46176cbb8aa5ff2cffa71de4abd85
+  - object_id: ARV-GEO-C2-BASE-Q3-CLAUDE-2-REVIEWED
+    record_type: answer_review
+    object_version: 1.0.0
+    object_path: cycles/m5/reviews/arv-geo-c2-base-q3-claude-2-reviewed.md
+    content_sha256: e8cab6ccc8d0f4cf6e9550705593ff6c1b7d772f6e0b5a4e2cf3b2b22f84d689
+    file_sha256: 8b70c8c486caf480a4b7b99057ac0b523944254f661884525e53997cb250ada3
+    snapshot_path: outputs/snapshots/cis-geo-c2-baseline-recorded/objects/cycles/m5/reviews/arv-geo-c2-base-q3-claude-2-reviewed.md
+    snapshot_sha256: 8b70c8c486caf480a4b7b99057ac0b523944254f661884525e53997cb250ada3
+    entry_key: 6075fab359dd55155f7f0410fe0936444a3f49a1709ab8a4703c5ca583f012d4
+  - object_id: SMP-GEO-C2-BASE-Q1-CHATGPT-1
+    record_type: answer_sample
+    object_version: 1.0.0
+    object_path: cycles/m5/samples/smp-geo-c2-base-q1-chatgpt-1.md
+    content_sha256: 8092e876e09e74c3385df01d30bdb28ca43c7c0a61b95e6118888c590824f75c
+    file_sha256: 049a7ec7b62a443e4852100d20713af08bbfec015a2f870098a69910daab8dea
+    snapshot_path: outputs/snapshots/cis-geo-c2-baseline-recorded/objects/cycles/m5/samples/smp-geo-c2-base-q1-chatgpt-1.md
+    snapshot_sha256: 049a7ec7b62a443e4852100d20713af08bbfec015a2f870098a69910daab8dea
+    entry_key: 60a0ec2b72f0069d70e79120432eed97d025f637bbdb0a6ced5abbe6646ad6f5
+  - object_id: SMP-GEO-C2-BASE-Q4-CHATGPT-1
+    record_type: answer_sample
+    object_version: 1.0.0
+    object_path: cycles/m5/samples/smp-geo-c2-base-q4-chatgpt-1.md
+    content_sha256: 8092e876e09e74c3385df01d30bdb28ca43c7c0a61b95e6118888c590824f75c
+    file_sha256: 90cd384927bfce9f6c9807e98533daffc9a81c824fca269d462a321e889bceb4
+    snapshot_path: outputs/snapshots/cis-geo-c2-baseline-recorded/objects/cycles/m5/samples/smp-geo-c2-base-q4-chatgpt-1.md
+    snapshot_sha256: 90cd384927bfce9f6c9807e98533daffc9a81c824fca269d462a321e889bceb4
+    entry_key: 61fcd4d2f87c64fe726c686ef230a6ad7d40e945562ee9b7645e58edbfbfb1e0
+  - object_id: SMP-GEO-C2-BASE-Q1-CLAUDE-2
+    record_type: answer_sample
+    object_version: 1.0.0
+    object_path: cycles/m5/samples/smp-geo-c2-base-q1-claude-2.md
+    content_sha256: dab2280854b840d20db2c76c5a64257cd9aba1325610a0e3ea4145d68c75370c
+    file_sha256: 4b2114eed38e2c255d05227e2703f05b7d0657c37c8a0b660930bf9c8cb6529b
+    snapshot_path: outputs/snapshots/cis-geo-c2-baseline-recorded/objects/cycles/m5/samples/smp-geo-c2-base-q1-claude-2.md
+    snapshot_sha256: 4b2114eed38e2c255d05227e2703f05b7d0657c37c8a0b660930bf9c8cb6529b
+    entry_key: 62afe1007c77cdacff923f7969b932092b9feae1bde5ea933acebec9ed16106a
+  - object_id: SMP-GEO-C2-BASE-Q5-CHATGPT-2
+    record_type: answer_sample
+    object_version: 1.0.0
+    object_path: cycles/m5/samples/smp-geo-c2-base-q5-chatgpt-2.md
+    content_sha256: dab2280854b840d20db2c76c5a64257cd9aba1325610a0e3ea4145d68c75370c
+    file_sha256: 2d8a7c2a1d4b29f4908bf0528527191bc0fdbe55c9acb35351d2b73f83f376ca
+    snapshot_path: outputs/snapshots/cis-geo-c2-baseline-recorded/objects/cycles/m5/samples/smp-geo-c2-base-q5-chatgpt-2.md
+    snapshot_sha256: 2d8a7c2a1d4b29f4908bf0528527191bc0fdbe55c9acb35351d2b73f83f376ca
+    entry_key: 62ec4ff353e311a82f1ae0ec96260e9858d6910d69a6f16781d285ee5e7a11ae
+  - object_id: SMP-GEO-C2-BASE-Q4-GOOGLE-AI-1
+    record_type: answer_sample
+    object_version: 1.0.0
+    object_path: cycles/m5/samples/smp-geo-c2-base-q4-google-ai-1.md
+    content_sha256: 8092e876e09e74c3385df01d30bdb28ca43c7c0a61b95e6118888c590824f75c
+    file_sha256: 64e13ede619cffc83e959d0cc8acae605117d04f45f1bdca956afd9ddb885c73
+    snapshot_path: outputs/snapshots/cis-geo-c2-baseline-recorded/objects/cycles/m5/samples/smp-geo-c2-base-q4-google-ai-1.md
+    snapshot_sha256: 64e13ede619cffc83e959d0cc8acae605117d04f45f1bdca956afd9ddb885c73
+    entry_key: 631a489ba05d3e0018696f7a34a332af66b437fc99a6427f594c2be5a3ae5e7a
+  - object_id: SMP-GEO-C2-BASE-Q3-PERPLEXITY-2
+    record_type: answer_sample
+    object_version: 1.0.0
+    object_path: cycles/m5/samples/smp-geo-c2-base-q3-perplexity-2.md
+    content_sha256: dab2280854b840d20db2c76c5a64257cd9aba1325610a0e3ea4145d68c75370c
+    file_sha256: 66729c71febe16f0cc340bf1f12abbdec79b174f87571c660d732289aa2b4ef2
+    snapshot_path: outputs/snapshots/cis-geo-c2-baseline-recorded/objects/cycles/m5/samples/smp-geo-c2-base-q3-perplexity-2.md
+    snapshot_sha256: 66729c71febe16f0cc340bf1f12abbdec79b174f87571c660d732289aa2b4ef2
+    entry_key: 6630580a1f787434b0c66a3982f4e4ec7c92672a64288a908a460b7d89d37e27
+  - object_id: SMP-GEO-C2-BASE-Q1-GOOGLE-AI-1
+    record_type: answer_sample
+    object_version: 1.0.0
+    object_path: cycles/m5/samples/smp-geo-c2-base-q1-google-ai-1.md
+    content_sha256: 8092e876e09e74c3385df01d30bdb28ca43c7c0a61b95e6118888c590824f75c
+    file_sha256: f310ae8bbad927de3349675844e41f89161f00b47bbc107779ae7c535ef9d5de
+    snapshot_path: outputs/snapshots/cis-geo-c2-baseline-recorded/objects/cycles/m5/samples/smp-geo-c2-base-q1-google-ai-1.md
+    snapshot_sha256: f310ae8bbad927de3349675844e41f89161f00b47bbc107779ae7c535ef9d5de
+    entry_key: 688643d58a51a5ec276c2dac1e19b9f74e45bedcb43bff5ac463c2a9de93e069
+  - object_id: SMP-GEO-C2-BASE-Q5-GEMINI-2
+    record_type: answer_sample
+    object_version: 1.0.0
+    object_path: cycles/m5/samples/smp-geo-c2-base-q5-gemini-2.md
+    content_sha256: dab2280854b840d20db2c76c5a64257cd9aba1325610a0e3ea4145d68c75370c
+    file_sha256: 92af088a4c3b84f811727377cad30264402253dfb8fd50d5ef0efb139985f5e5
+    snapshot_path: outputs/snapshots/cis-geo-c2-baseline-recorded/objects/cycles/m5/samples/smp-geo-c2-base-q5-gemini-2.md
+    snapshot_sha256: 92af088a4c3b84f811727377cad30264402253dfb8fd50d5ef0efb139985f5e5
+    entry_key: 69b07d224974e29583c740de1f819117010b752f91aa7f6372b95ecf5ce444b1
+  - object_id: SMP-GEO-C2-BASE-Q3-GEMINI-1
+    record_type: answer_sample
+    object_version: 1.0.0
+    object_path: cycles/m5/samples/smp-geo-c2-base-q3-gemini-1.md
+    content_sha256: 8092e876e09e74c3385df01d30bdb28ca43c7c0a61b95e6118888c590824f75c
+    file_sha256: aca94f25924262a86ff26987480a4f1a1e43d5657fce5389b75fa414879da87f
+    snapshot_path: outputs/snapshots/cis-geo-c2-baseline-recorded/objects/cycles/m5/samples/smp-geo-c2-base-q3-gemini-1.md
+    snapshot_sha256: aca94f25924262a86ff26987480a4f1a1e43d5657fce5389b75fa414879da87f
+    entry_key: 69d7fddfa9685bc5eaa9ee3b57fb6248412fd182957741d27a707d851ed8f53c
+  - object_id: AGG-GEO-C2-BASE-Q5-GOOGLE-AI
+    record_type: answer_aggregation
+    object_version: 1.0.0
+    object_path: cycles/m5/aggregations/agg-geo-c2-base-q5-google-ai.md
+    content_sha256: 66c98ca91cd76fa700fa5568cc605f527988e74dc3481c458c5f72fa2342b478
+    file_sha256: 1eefb4aaaa213791a1cac75e0277c51ddad334d307d1051a6e1838e2849949e8
+    snapshot_path: outputs/snapshots/cis-geo-c2-baseline-recorded/objects/cycles/m5/aggregations/agg-geo-c2-base-q5-google-ai.md
+    snapshot_sha256: 1eefb4aaaa213791a1cac75e0277c51ddad334d307d1051a6e1838e2849949e8
+    entry_key: 6b86f58b6e25cda71f5a5c809ebb28a8088b870145718d597c0b2351cb4d9241
+  - object_id: SMP-GEO-C2-BASE-Q4-GOOGLE-AI-2
+    record_type: answer_sample
+    object_version: 1.0.0
+    object_path: cycles/m5/samples/smp-geo-c2-base-q4-google-ai-2.md
+    content_sha256: dab2280854b840d20db2c76c5a64257cd9aba1325610a0e3ea4145d68c75370c
+    file_sha256: 3557cec5e5cef6c8a12bbd026e79b993c986a045b1e7103150a54735635a896b
+    snapshot_path: outputs/snapshots/cis-geo-c2-baseline-recorded/objects/cycles/m5/samples/smp-geo-c2-base-q4-google-ai-2.md
+    snapshot_sha256: 3557cec5e5cef6c8a12bbd026e79b993c986a045b1e7103150a54735635a896b
+    entry_key: 6d4777cca451db0f35589ca669556fae78aae199c2d7326e237b1812c986a341
+  - object_id: SMP-GEO-C2-BASE-Q6-GEMINI-2
+    record_type: answer_sample
+    object_version: 1.0.0
+    object_path: cycles/m5/samples/smp-geo-c2-base-q6-gemini-2.md
+    content_sha256: dab2280854b840d20db2c76c5a64257cd9aba1325610a0e3ea4145d68c75370c
+    file_sha256: 7a41f943ee61cff9de356c61fe3179105905243d100974bd9285dc7ab41a6add
+    snapshot_path: outputs/snapshots/cis-geo-c2-baseline-recorded/objects/cycles/m5/samples/smp-geo-c2-base-q6-gemini-2.md
+    snapshot_sha256: 7a41f943ee61cff9de356c61fe3179105905243d100974bd9285dc7ab41a6add
+    entry_key: 6d9802fae8e9cde1b117af6f5886eb4b5744d6970da86e4e76d9cdd97e0e89a8
+  - object_id: AGG-GEO-C2-BASE-Q1-CHATGPT
+    record_type: answer_aggregation
+    object_version: 1.0.0
+    object_path: cycles/m5/aggregations/agg-geo-c2-base-q1-chatgpt.md
+    content_sha256: 4a6512b114004b84ed668f37c6baad0213b320bcd10105865c2f163689b3d455
+    file_sha256: e4fcbd1ac2aecdb02a745854f2102fd5e9670496825c8a3c2a1baa3363c96b71
+    snapshot_path: outputs/snapshots/cis-geo-c2-baseline-recorded/objects/cycles/m5/aggregations/agg-geo-c2-base-q1-chatgpt.md
+    snapshot_sha256: e4fcbd1ac2aecdb02a745854f2102fd5e9670496825c8a3c2a1baa3363c96b71
+    entry_key: 6f4771968e6a1f352f0d7a9c49469d91a135d1f807a4fc0f4c4ac5ff643363e1
+  - object_id: ARV-GEO-C2-BASE-Q2-PERPLEXITY-2-REVIEWED
+    record_type: answer_review
+    object_version: 1.0.0
+    object_path: cycles/m5/reviews/arv-geo-c2-base-q2-perplexity-2-reviewed.md
+    content_sha256: e04ac03bbb17d0ffedc7b805be2198b512e844204acda78a91872e7687f9aa8d
+    file_sha256: 3aa6da8d2f4b14d3f4d5a56108a7452457004c91d253e65d3148076a70ee342e
+    snapshot_path: outputs/snapshots/cis-geo-c2-baseline-recorded/objects/cycles/m5/reviews/arv-geo-c2-base-q2-perplexity-2-reviewed.md
+    snapshot_sha256: 3aa6da8d2f4b14d3f4d5a56108a7452457004c91d253e65d3148076a70ee342e
+    entry_key: 70035538055322a9b105abac04eb7de8f5ed3757205db7b83f9e8253da789f26
+  - object_id: SMP-GEO-C2-BASE-Q2-CHATGPT-1
+    record_type: answer_sample
+    object_version: 1.0.0
+    object_path: cycles/m5/samples/smp-geo-c2-base-q2-chatgpt-1.md
+    content_sha256: 8092e876e09e74c3385df01d30bdb28ca43c7c0a61b95e6118888c590824f75c
+    file_sha256: a02c33074f85fa092707b9046f7546904c8f736d533a14b9e0e02148d161c19c
+    snapshot_path: outputs/snapshots/cis-geo-c2-baseline-recorded/objects/cycles/m5/samples/smp-geo-c2-base-q2-chatgpt-1.md
+    snapshot_sha256: a02c33074f85fa092707b9046f7546904c8f736d533a14b9e0e02148d161c19c
+    entry_key: 70066817d8d592893b10a83f8fb40de28252286b19ffebd14c281bc73c0b3be5
+  - object_id: SMP-GEO-C2-BASE-Q3-GEMINI-2
+    record_type: answer_sample
+    object_version: 1.0.0
+    object_path: cycles/m5/samples/smp-geo-c2-base-q3-gemini-2.md
+    content_sha256: dab2280854b840d20db2c76c5a64257cd9aba1325610a0e3ea4145d68c75370c
+    file_sha256: 3f8565f2a8a2ed35c2061be71770697d8292001c81593c837956c8d66a68611e
+    snapshot_path: outputs/snapshots/cis-geo-c2-baseline-recorded/objects/cycles/m5/samples/smp-geo-c2-base-q3-gemini-2.md
+    snapshot_sha256: 3f8565f2a8a2ed35c2061be71770697d8292001c81593c837956c8d66a68611e
+    entry_key: 744ced1c861f125a06e2e8165b1dedf7d369155b51cea37cff2893321ff7d725
+  - object_id: SMP-GEO-C2-BASE-Q1-PERPLEXITY-1
+    record_type: answer_sample
+    object_version: 1.0.0
+    object_path: cycles/m5/samples/smp-geo-c2-base-q1-perplexity-1.md
+    content_sha256: 8092e876e09e74c3385df01d30bdb28ca43c7c0a61b95e6118888c590824f75c
+    file_sha256: 61b3902d4eaaf7c725dba7b887a4af556fc5ffcf7c223f0ac1ad3762db7f7e78
+    snapshot_path: outputs/snapshots/cis-geo-c2-baseline-recorded/objects/cycles/m5/samples/smp-geo-c2-base-q1-perplexity-1.md
+    snapshot_sha256: 61b3902d4eaaf7c725dba7b887a4af556fc5ffcf7c223f0ac1ad3762db7f7e78
+    entry_key: 75be4546d3b783173b53c4f2b7158816018e782b0710fa5f6306e84ad0dd01cc
+  - object_id: ARV-GEO-C2-BASE-Q6-CLAUDE-1-REVIEWED
+    record_type: answer_review
+    object_version: 1.0.0
+    object_path: cycles/m5/reviews/arv-geo-c2-base-q6-claude-1-reviewed.md
+    content_sha256: ba9c61bb151e9642cd00e3162728099b39e5c2dc29f8ee9b46400a639b88c972
+    file_sha256: 5affd54c1489390d8605ff2657159b9e4c644cd4add3029440776c4aaaa8d12b
+    snapshot_path: outputs/snapshots/cis-geo-c2-baseline-recorded/objects/cycles/m5/reviews/arv-geo-c2-base-q6-claude-1-reviewed.md
+    snapshot_sha256: 5affd54c1489390d8605ff2657159b9e4c644cd4add3029440776c4aaaa8d12b
+    entry_key: 781931a9dc016bff8441aca2ade9bd9040f4d72f71a0970d04891fbbb4d221f3
+  - object_id: SMP-GEO-C2-BASE-Q3-PERPLEXITY-1
+    record_type: answer_sample
+    object_version: 1.0.0
+    object_path: cycles/m5/samples/smp-geo-c2-base-q3-perplexity-1.md
+    content_sha256: 8092e876e09e74c3385df01d30bdb28ca43c7c0a61b95e6118888c590824f75c
+    file_sha256: 63feebc245128ffbfb373a433a41b06d546560a3a6615942df5234634ad49e0c
+    snapshot_path: outputs/snapshots/cis-geo-c2-baseline-recorded/objects/cycles/m5/samples/smp-geo-c2-base-q3-perplexity-1.md
+    snapshot_sha256: 63feebc245128ffbfb373a433a41b06d546560a3a6615942df5234634ad49e0c
+    entry_key: 795a0609ed30faa105f7fbfb19ecde8c1363052c432e016c0aef5c5792468e55
+  - object_id: ARV-GEO-C2-BASE-Q2-CLAUDE-2-REVIEWED
+    record_type: answer_review
+    object_version: 1.0.0
+    object_path: cycles/m5/reviews/arv-geo-c2-base-q2-claude-2-reviewed.md
+    content_sha256: 4fdfe54a0bc3a237d8475b4d420f65b2e307e718bae955a49934c82616411c39
+    file_sha256: d45caeb293039c4b69a1acc6df0485b07713534d9e74d85112d903107b86cfb3
+    snapshot_path: outputs/snapshots/cis-geo-c2-baseline-recorded/objects/cycles/m5/reviews/arv-geo-c2-base-q2-claude-2-reviewed.md
+    snapshot_sha256: d45caeb293039c4b69a1acc6df0485b07713534d9e74d85112d903107b86cfb3
+    entry_key: 7e37df1c73149f8afd717bc44b7329f43c1f05e0551627be6312fdf9bb253007
+  - object_id: ARV-GEO-C2-BASE-Q4-GEMINI-2-REVIEWED
+    record_type: answer_review
+    object_version: 1.0.0
+    object_path: cycles/m5/reviews/arv-geo-c2-base-q4-gemini-2-reviewed.md
+    content_sha256: 0ea890f9177a7a4a7b54c6745c15f44f0076e74939af974ae8152f165413b09e
+    file_sha256: 5156c075c59b8fb183f24ce7d5c4dcbdc25a5a20526dc0e54f2ad25d58dcf081
+    snapshot_path: outputs/snapshots/cis-geo-c2-baseline-recorded/objects/cycles/m5/reviews/arv-geo-c2-base-q4-gemini-2-reviewed.md
+    snapshot_sha256: 5156c075c59b8fb183f24ce7d5c4dcbdc25a5a20526dc0e54f2ad25d58dcf081
+    entry_key: 7e67c8354ba93c37e74457d4986727a8e19d7be6935995beef0863f1eae92f04
+  - object_id: ARV-GEO-C2-BASE-Q4-GOOGLE-AI-1-REVIEWED
+    record_type: answer_review
+    object_version: 1.0.0
+    object_path: cycles/m5/reviews/arv-geo-c2-base-q4-google-ai-1-reviewed.md
+    content_sha256: c35dea39763b508d00b3b2c16691a0fc1a181318c7bfd59ee9d86f62c4aa9312
+    file_sha256: 7616049cb9dfa757451a6f6876a5cfd9fe574f1cc94fe709746889cdb575e48f
+    snapshot_path: outputs/snapshots/cis-geo-c2-baseline-recorded/objects/cycles/m5/reviews/arv-geo-c2-base-q4-google-ai-1-reviewed.md
+    snapshot_sha256: 7616049cb9dfa757451a6f6876a5cfd9fe574f1cc94fe709746889cdb575e48f
+    entry_key: 7e82b8498b63abc4ac5f74dc6fa7acde453a844bbab0de89bd61afddf080de59
+  - object_id: SMP-GEO-C2-BASE-Q6-PERPLEXITY-1
+    record_type: answer_sample
+    object_version: 1.0.0
+    object_path: cycles/m5/samples/smp-geo-c2-base-q6-perplexity-1.md
+    content_sha256: 8092e876e09e74c3385df01d30bdb28ca43c7c0a61b95e6118888c590824f75c
+    file_sha256: d60f8bd669d4629a5faeb19a9dfe272b3fc2bb2b3bef3de942fd2614f5eaa168
+    snapshot_path: outputs/snapshots/cis-geo-c2-baseline-recorded/objects/cycles/m5/samples/smp-geo-c2-base-q6-perplexity-1.md
+    snapshot_sha256: d60f8bd669d4629a5faeb19a9dfe272b3fc2bb2b3bef3de942fd2614f5eaa168
+    entry_key: 7f06d4b0fc2eb1380b6da44b5824d69903f4f1fff58dbef070c45c1f32cca6b3
+  - object_id: ARV-GEO-C2-BASE-Q2-CHATGPT-2-REVIEWED
+    record_type: answer_review
+    object_version: 1.0.0
+    object_path: cycles/m5/reviews/arv-geo-c2-base-q2-chatgpt-2-reviewed.md
+    content_sha256: 3f3f9c7d44657bfc6062f04f2f097e92b7aa6c2fd81302f00c51ce412f236b9d
+    file_sha256: 67980685cdece5a0efa84f92a83f5fe9c524512fc4cadefec6156442862aa9a1
+    snapshot_path: outputs/snapshots/cis-geo-c2-baseline-recorded/objects/cycles/m5/reviews/arv-geo-c2-base-q2-chatgpt-2-reviewed.md
+    snapshot_sha256: 67980685cdece5a0efa84f92a83f5fe9c524512fc4cadefec6156442862aa9a1
+    entry_key: 824f300bcd8faa5879c86ec438f29c2108f6fefd5211d67522cfe1fc6433f61c
+  - object_id: ARV-GEO-C2-BASE-Q6-GEMINI-1-REVIEWED
+    record_type: answer_review
+    object_version: 1.0.0
+    object_path: cycles/m5/reviews/arv-geo-c2-base-q6-gemini-1-reviewed.md
+    content_sha256: 445314d6aaaa6f1e7988c4007ccbde094758b0b55a3e332254e4e04dba48ed50
+    file_sha256: 180e11305f533c2c9996e2bb04580526c921625226c3203ad7e5a987b6116f88
+    snapshot_path: outputs/snapshots/cis-geo-c2-baseline-recorded/objects/cycles/m5/reviews/arv-geo-c2-base-q6-gemini-1-reviewed.md
+    snapshot_sha256: 180e11305f533c2c9996e2bb04580526c921625226c3203ad7e5a987b6116f88
+    entry_key: 83d65d628eba77ab7693e155ccc2b2c745f04233c60e3b0df18b0bdbf7ea46e3
+  - object_id: ARV-GEO-C2-BASE-Q1-GEMINI-2-REVIEWED
+    record_type: answer_review
+    object_version: 1.0.0
+    object_path: cycles/m5/reviews/arv-geo-c2-base-q1-gemini-2-reviewed.md
+    content_sha256: 10fd996ddc398e457aab9a5d9f75b1a055d0d3d42a7acc5868c9057a37835030
+    file_sha256: 2d1a8c337c6c3faad7e1344df7281725059eb455846bda67a27438f2d08f22c2
+    snapshot_path: outputs/snapshots/cis-geo-c2-baseline-recorded/objects/cycles/m5/reviews/arv-geo-c2-base-q1-gemini-2-reviewed.md
+    snapshot_sha256: 2d1a8c337c6c3faad7e1344df7281725059eb455846bda67a27438f2d08f22c2
+    entry_key: 85320da3ffb765dc56455dfba1b05250068dd468cfcbaf8036301b53f8877240
+  - object_id: ARV-GEO-C2-BASE-Q6-GOOGLE-AI-2-REVIEWED
+    record_type: answer_review
+    object_version: 1.0.0
+    object_path: cycles/m5/reviews/arv-geo-c2-base-q6-google-ai-2-reviewed.md
+    content_sha256: 24318c1d4d2c1646290d6cfa5556ea642806737b4bc84a8b6c4900c2e20e7634
+    file_sha256: e36d49500db8b62a2ddf29baaae2afaa21fad637d0fa222fd573c5d82b6a6fca
+    snapshot_path: outputs/snapshots/cis-geo-c2-baseline-recorded/objects/cycles/m5/reviews/arv-geo-c2-base-q6-google-ai-2-reviewed.md
+    snapshot_sha256: e36d49500db8b62a2ddf29baaae2afaa21fad637d0fa222fd573c5d82b6a6fca
+    entry_key: 88b6602740e8cf6d37c830c71d895200a5cbc4c61024fa68942fc68027d964b9
+  - object_id: AGG-GEO-C2-BASE-Q6-GEMINI
+    record_type: answer_aggregation
+    object_version: 1.0.0
+    object_path: cycles/m5/aggregations/agg-geo-c2-base-q6-gemini.md
+    content_sha256: 3006c1d3d9d592e4bdf2d39541b7585515f7fa894c9306c9956c059e1a94de36
+    file_sha256: e3c49de67de2ffe45de7cc1aad1e4403055934f3d6cbc3bcebbd5e6a1251ded3
+    snapshot_path: outputs/snapshots/cis-geo-c2-baseline-recorded/objects/cycles/m5/aggregations/agg-geo-c2-base-q6-gemini.md
+    snapshot_sha256: e3c49de67de2ffe45de7cc1aad1e4403055934f3d6cbc3bcebbd5e6a1251ded3
+    entry_key: 89f8f40c2b94ac772afb1aa09e0a0989b788d78f65c28660bda7410ee2572cd5
+  - object_id: SMP-GEO-C2-BASE-Q3-GOOGLE-AI-2
+    record_type: answer_sample
+    object_version: 1.0.0
+    object_path: cycles/m5/samples/smp-geo-c2-base-q3-google-ai-2.md
+    content_sha256: dab2280854b840d20db2c76c5a64257cd9aba1325610a0e3ea4145d68c75370c
+    file_sha256: 5b9ee8a6a748fb370d3f96d5ba55bac301e5b006c10f28c120d7884ea42f1a0d
+    snapshot_path: outputs/snapshots/cis-geo-c2-baseline-recorded/objects/cycles/m5/samples/smp-geo-c2-base-q3-google-ai-2.md
+    snapshot_sha256: 5b9ee8a6a748fb370d3f96d5ba55bac301e5b006c10f28c120d7884ea42f1a0d
+    entry_key: 8ae5312dc1e4544f57c86c318ecba64ae0e55980bfccd4110364e423ac3b578d
+  - object_id: ARV-GEO-C2-BASE-Q6-GEMINI-2-REVIEWED
+    record_type: answer_review
+    object_version: 1.0.0
+    object_path: cycles/m5/reviews/arv-geo-c2-base-q6-gemini-2-reviewed.md
+    content_sha256: 679018de3e5a966d5c8f604971ecbf027e8c78c2a3e032255deb5854294c5991
+    file_sha256: 29089474de188dbc16aa633df2e4d8ab50ff1b6e9abbd455a5284bf3a48ea776
+    snapshot_path: outputs/snapshots/cis-geo-c2-baseline-recorded/objects/cycles/m5/reviews/arv-geo-c2-base-q6-gemini-2-reviewed.md
+    snapshot_sha256: 29089474de188dbc16aa633df2e4d8ab50ff1b6e9abbd455a5284bf3a48ea776
+    entry_key: 8c2dff80807786ead78b503d13f29a771574220d8bfdabd46c0fef2b1621fc8e
+  - object_id: ARV-GEO-C2-BASE-Q1-GEMINI-1-REVIEWED
+    record_type: answer_review
+    object_version: 1.0.0
+    object_path: cycles/m5/reviews/arv-geo-c2-base-q1-gemini-1-reviewed.md
+    content_sha256: 52466ae9c1f9c3a61959ff1944b9ab681f8c48521fbc1b188fa74e37329bef0a
+    file_sha256: f9189c16d10006eea823a511f854584027f0104c59c7a50997479675b307a897
+    snapshot_path: outputs/snapshots/cis-geo-c2-baseline-recorded/objects/cycles/m5/reviews/arv-geo-c2-base-q1-gemini-1-reviewed.md
+    snapshot_sha256: f9189c16d10006eea823a511f854584027f0104c59c7a50997479675b307a897
+    entry_key: 8c4b870f1fdcbd987b3a1b2b28c5c13798efc8ccf726a0dc4fede4dcd5dd2e12
+  - object_id: SMP-GEO-C2-BASE-Q2-PERPLEXITY-2
+    record_type: answer_sample
+    object_version: 1.0.0
+    object_path: cycles/m5/samples/smp-geo-c2-base-q2-perplexity-2.md
+    content_sha256: dab2280854b840d20db2c76c5a64257cd9aba1325610a0e3ea4145d68c75370c
+    file_sha256: 274476236413ad372d12c318a5bf544c5f0fd4b8fd253adff1477f81a04c2c87
+    snapshot_path: outputs/snapshots/cis-geo-c2-baseline-recorded/objects/cycles/m5/samples/smp-geo-c2-base-q2-perplexity-2.md
+    snapshot_sha256: 274476236413ad372d12c318a5bf544c5f0fd4b8fd253adff1477f81a04c2c87
+    entry_key: 8ca9ea5422e6a42cc19c429d9ba8645920e108b4243279577613fb852e6f5a0b
+  - object_id: SMP-GEO-C2-BASE-Q5-GOOGLE-AI-1
+    record_type: answer_sample
+    object_version: 1.0.0
+    object_path: cycles/m5/samples/smp-geo-c2-base-q5-google-ai-1.md
+    content_sha256: 8092e876e09e74c3385df01d30bdb28ca43c7c0a61b95e6118888c590824f75c
+    file_sha256: 363783789dce0c394b966358116d473a237caf5d96f3f2d87d389dce908e2db9
+    snapshot_path: outputs/snapshots/cis-geo-c2-baseline-recorded/objects/cycles/m5/samples/smp-geo-c2-base-q5-google-ai-1.md
+    snapshot_sha256: 363783789dce0c394b966358116d473a237caf5d96f3f2d87d389dce908e2db9
+    entry_key: 8dd478e73bc422cab5d35bc6eccb7180441373167e21a72439287aa5a23ebe56
+  - object_id: ARV-GEO-C2-BASE-Q1-PERPLEXITY-2-REVIEWED
+    record_type: answer_review
+    object_version: 1.0.0
+    object_path: cycles/m5/reviews/arv-geo-c2-base-q1-perplexity-2-reviewed.md
+    content_sha256: ecf721f168b1649a0d2f1f39b92d653af1c99e29421e1428addfb8ab65997338
+    file_sha256: 959f6e669aa8e9da7a55c5c457ac152ca0100ff5774a47b1658410cfe8b32a75
+    snapshot_path: outputs/snapshots/cis-geo-c2-baseline-recorded/objects/cycles/m5/reviews/arv-geo-c2-base-q1-perplexity-2-reviewed.md
+    snapshot_sha256: 959f6e669aa8e9da7a55c5c457ac152ca0100ff5774a47b1658410cfe8b32a75
+    entry_key: 90b268a0abbfe60b40c5d82ab370099cef50db9d4defafabe5882807112e2fb9
+  - object_id: ARV-GEO-C2-BASE-Q1-GOOGLE-AI-2-REVIEWED
+    record_type: answer_review
+    object_version: 1.0.0
+    object_path: cycles/m5/reviews/arv-geo-c2-base-q1-google-ai-2-reviewed.md
+    content_sha256: 0dd3b5382db197cfb5bd982df38d5bce99c04d1900fbb899a35abb564414513b
+    file_sha256: 31811f40efd965b0a16e5720a4e821c6f8f019a7e86e89f01657ea63da552624
+    snapshot_path: outputs/snapshots/cis-geo-c2-baseline-recorded/objects/cycles/m5/reviews/arv-geo-c2-base-q1-google-ai-2-reviewed.md
+    snapshot_sha256: 31811f40efd965b0a16e5720a4e821c6f8f019a7e86e89f01657ea63da552624
+    entry_key: 90dbf30ce7d12958870bc1dda46151f3237cb2797056b2a03fc38d30291a4d41
+  - object_id: AGG-GEO-C2-BASE-Q3-CLAUDE
+    record_type: answer_aggregation
+    object_version: 1.0.0
+    object_path: cycles/m5/aggregations/agg-geo-c2-base-q3-claude.md
+    content_sha256: dc66941caafb32ede361c385c1fdfd0bba80d72a8999ee413937a1e55f567a7f
+    file_sha256: 451f00d586cd13e5288fffe73ced61fee80b0c354f237c0d9666e938da52c113
+    snapshot_path: outputs/snapshots/cis-geo-c2-baseline-recorded/objects/cycles/m5/aggregations/agg-geo-c2-base-q3-claude.md
+    snapshot_sha256: 451f00d586cd13e5288fffe73ced61fee80b0c354f237c0d9666e938da52c113
+    entry_key: 92f041eb7da2ed2666e87d56f8f4a28d39796c25792216757f235d08b4344ee5
+  - object_id: ARV-GEO-C2-BASE-Q1-GOOGLE-AI-1-REVIEWED
+    record_type: answer_review
+    object_version: 1.0.0
+    object_path: cycles/m5/reviews/arv-geo-c2-base-q1-google-ai-1-reviewed.md
+    content_sha256: c1fc75f0ba0f2d0dc16d6b52a697b477a4c08d110fa7a1e87c0e1ac44da26538
+    file_sha256: bc0758b826b9f958722e655f5009c9623796f1d6150c58d52f921139705d53d5
+    snapshot_path: outputs/snapshots/cis-geo-c2-baseline-recorded/objects/cycles/m5/reviews/arv-geo-c2-base-q1-google-ai-1-reviewed.md
+    snapshot_sha256: bc0758b826b9f958722e655f5009c9623796f1d6150c58d52f921139705d53d5
+    entry_key: 937bcd7ec1da7d64ef3a2aa94a2e9c00ea01f0d57869327bb9e30cd31d01d4a9
+  - object_id: SMP-GEO-C2-BASE-Q2-GOOGLE-AI-1
+    record_type: answer_sample
+    object_version: 1.0.0
+    object_path: cycles/m5/samples/smp-geo-c2-base-q2-google-ai-1.md
+    content_sha256: 8092e876e09e74c3385df01d30bdb28ca43c7c0a61b95e6118888c590824f75c
+    file_sha256: 576ff5b258f67f67afa37aee239933616913a3a2dd3206b57a8ee48ec9260336
+    snapshot_path: outputs/snapshots/cis-geo-c2-baseline-recorded/objects/cycles/m5/samples/smp-geo-c2-base-q2-google-ai-1.md
+    snapshot_sha256: 576ff5b258f67f67afa37aee239933616913a3a2dd3206b57a8ee48ec9260336
+    entry_key: 94fc72c2f6c70ee5899232fb4ba15696fef42d3146ccdfbe21eec1c436f99e1f
+  - object_id: ARV-GEO-C2-BASE-Q1-CHATGPT-2-REVIEWED
+    record_type: answer_review
+    object_version: 1.0.0
+    object_path: cycles/m5/reviews/arv-geo-c2-base-q1-chatgpt-2-reviewed.md
+    content_sha256: 42fc9cb3765a0e61821edbc761783cf363389a09aa1888cb478c21cd895f4f7d
+    file_sha256: 2b6bec2844e5e211c3376bd54d8305d385c251e18faa945474c45c680d0438f9
+    snapshot_path: outputs/snapshots/cis-geo-c2-baseline-recorded/objects/cycles/m5/reviews/arv-geo-c2-base-q1-chatgpt-2-reviewed.md
+    snapshot_sha256: 2b6bec2844e5e211c3376bd54d8305d385c251e18faa945474c45c680d0438f9
+    entry_key: 95bc032eba2a5c42c74a8aa3bde2f63dfa118d77a478331a4f9490965af59b3e
+  - object_id: AGG-GEO-C2-BASE-Q6-CHATGPT
+    record_type: answer_aggregation
+    object_version: 1.0.0
+    object_path: cycles/m5/aggregations/agg-geo-c2-base-q6-chatgpt.md
+    content_sha256: 45ee053aa38a5bbf0d036740aa1807442da54467916cbbad0639b4bdc99fd14a
+    file_sha256: b18e984b956f2a411968376a428a07c77335088515e5300c0619aacb2d1f6029
+    snapshot_path: outputs/snapshots/cis-geo-c2-baseline-recorded/objects/cycles/m5/aggregations/agg-geo-c2-base-q6-chatgpt.md
+    snapshot_sha256: b18e984b956f2a411968376a428a07c77335088515e5300c0619aacb2d1f6029
+    entry_key: 9924b77e64ec40c0148f08f065b9180168bfcfdea472e327b4ba675ddd58ca10
+  - object_id: SMP-GEO-C2-BASE-Q2-CLAUDE-2
+    record_type: answer_sample
+    object_version: 1.0.0
+    object_path: cycles/m5/samples/smp-geo-c2-base-q2-claude-2.md
+    content_sha256: dab2280854b840d20db2c76c5a64257cd9aba1325610a0e3ea4145d68c75370c
+    file_sha256: afb0f072945f59ec3b4f9428e0452584846ba6a516121c96f967c11d477a3b57
+    snapshot_path: outputs/snapshots/cis-geo-c2-baseline-recorded/objects/cycles/m5/samples/smp-geo-c2-base-q2-claude-2.md
+    snapshot_sha256: afb0f072945f59ec3b4f9428e0452584846ba6a516121c96f967c11d477a3b57
+    entry_key: 9bb98dcc499aaf9cb00d6587eca2eb600c7b58175e27f7061fce21bf0d7bba83
+  - object_id: SMP-GEO-C2-BASE-Q2-GEMINI-2
+    record_type: answer_sample
+    object_version: 1.0.0
+    object_path: cycles/m5/samples/smp-geo-c2-base-q2-gemini-2.md
+    content_sha256: dab2280854b840d20db2c76c5a64257cd9aba1325610a0e3ea4145d68c75370c
+    file_sha256: b21f78f99116e8f8c5f3999649e341acbecda0ea69b8b9cec493c65cd147fb71
+    snapshot_path: outputs/snapshots/cis-geo-c2-baseline-recorded/objects/cycles/m5/samples/smp-geo-c2-base-q2-gemini-2.md
+    snapshot_sha256: b21f78f99116e8f8c5f3999649e341acbecda0ea69b8b9cec493c65cd147fb71
+    entry_key: 9bc2c40cf2a583520d1e0751a40f56b86756eb07085ceb28dda02823eba72a3a
+  - object_id: ARV-GEO-C2-BASE-Q3-GEMINI-2-REVIEWED
+    record_type: answer_review
+    object_version: 1.0.0
+    object_path: cycles/m5/reviews/arv-geo-c2-base-q3-gemini-2-reviewed.md
+    content_sha256: 80d9f8d80ea05fe2022eeec22a93e6c080ee57b62bf19c2e06590ee13cdad66f
+    file_sha256: 608c6fe6d1adf4c0377e84658fc3b1d7ae16791dd1ed40588807ae2e52d00f0f
+    snapshot_path: outputs/snapshots/cis-geo-c2-baseline-recorded/objects/cycles/m5/reviews/arv-geo-c2-base-q3-gemini-2-reviewed.md
+    snapshot_sha256: 608c6fe6d1adf4c0377e84658fc3b1d7ae16791dd1ed40588807ae2e52d00f0f
+    entry_key: 9c367277df6cd17dab42f5f5165b1cf11346314b594672b26bf452e6d3a63a29
+  - object_id: AGG-GEO-C2-BASE-Q4-GOOGLE-AI
+    record_type: answer_aggregation
+    object_version: 1.0.0
+    object_path: cycles/m5/aggregations/agg-geo-c2-base-q4-google-ai.md
+    content_sha256: d95ec814a1a4b5371cb5f2608ef7cab5f98af1be021690800678390baa31cb28
+    file_sha256: 53a13d528d19b314f90ba98775313dc409ba05e20ff840fb255f7533ba820aa5
+    snapshot_path: outputs/snapshots/cis-geo-c2-baseline-recorded/objects/cycles/m5/aggregations/agg-geo-c2-base-q4-google-ai.md
+    snapshot_sha256: 53a13d528d19b314f90ba98775313dc409ba05e20ff840fb255f7533ba820aa5
+    entry_key: 9d9e531dbcad33b8d33caea1bb74d5d47650bd010d34d17d4b45ff4644e82c51
+  - object_id: ARV-GEO-C2-BASE-Q2-GEMINI-1-REVIEWED
+    record_type: answer_review
+    object_version: 1.0.0
+    object_path: cycles/m5/reviews/arv-geo-c2-base-q2-gemini-1-reviewed.md
+    content_sha256: 45866d9b49217ca41167501e64d794561c4417258cac82ce9de04602dc667a0e
+    file_sha256: 184f3c30ea6e7011f427444857d64fc8a58db2361a3b02983be81520f511b778
+    snapshot_path: outputs/snapshots/cis-geo-c2-baseline-recorded/objects/cycles/m5/reviews/arv-geo-c2-base-q2-gemini-1-reviewed.md
+    snapshot_sha256: 184f3c30ea6e7011f427444857d64fc8a58db2361a3b02983be81520f511b778
+    entry_key: 9feb4a63b655fb2f646aef79c1aa370c688d38cafcfcb3b2405da3bf0f06f78c
+  - object_id: AGG-GEO-C2-BASE-Q6-GOOGLE-AI
+    record_type: answer_aggregation
+    object_version: 1.0.0
+    object_path: cycles/m5/aggregations/agg-geo-c2-base-q6-google-ai.md
+    content_sha256: 63e258b095c6abe9dc10c0cec3d5c2325497ddfdc20c2d8463c811dd0b260618
+    file_sha256: 1caa032fc25c08d91609c6c1bedad69a28961ea4add1ecb7f8c153d58f625329
+    snapshot_path: outputs/snapshots/cis-geo-c2-baseline-recorded/objects/cycles/m5/aggregations/agg-geo-c2-base-q6-google-ai.md
+    snapshot_sha256: 1caa032fc25c08d91609c6c1bedad69a28961ea4add1ecb7f8c153d58f625329
+    entry_key: a0d9740a13daf3c5f08460f67e1fb7efe1ee3eb8d9a8b081f0ffb8c27bd56e31
+  - object_id: SMP-GEO-C2-BASE-Q4-PERPLEXITY-1
+    record_type: answer_sample
+    object_version: 1.0.0
+    object_path: cycles/m5/samples/smp-geo-c2-base-q4-perplexity-1.md
+    content_sha256: 8092e876e09e74c3385df01d30bdb28ca43c7c0a61b95e6118888c590824f75c
+    file_sha256: ef094af6dcb6e8de57f8403f40ed83c210331b4bf02d381606541eb070c8ff0d
+    snapshot_path: outputs/snapshots/cis-geo-c2-baseline-recorded/objects/cycles/m5/samples/smp-geo-c2-base-q4-perplexity-1.md
+    snapshot_sha256: ef094af6dcb6e8de57f8403f40ed83c210331b4bf02d381606541eb070c8ff0d
+    entry_key: a1abf6e07006043c219a6571ac475859ea998cd2884ff577916d933d4303c7dc
+  - object_id: AGG-GEO-C2-BASE-Q1-GEMINI
+    record_type: answer_aggregation
+    object_version: 1.0.0
+    object_path: cycles/m5/aggregations/agg-geo-c2-base-q1-gemini.md
+    content_sha256: a27daf600b9decad4759187ea77392f099fe4d79a6c46ad61a276169e191ec66
+    file_sha256: e8a9c43dedf7515fd1df520d00e6cf189cd23d860a5e154c2eed2e8902a52fed
+    snapshot_path: outputs/snapshots/cis-geo-c2-baseline-recorded/objects/cycles/m5/aggregations/agg-geo-c2-base-q1-gemini.md
+    snapshot_sha256: e8a9c43dedf7515fd1df520d00e6cf189cd23d860a5e154c2eed2e8902a52fed
+    entry_key: a2124679af9fb7dda4cc8d17497a39ee3a610bada4305e7088da99f80a777619
+  - object_id: ARV-GEO-C2-BASE-Q1-CHATGPT-1-REVIEWED
+    record_type: answer_review
+    object_version: 1.0.0
+    object_path: cycles/m5/reviews/arv-geo-c2-base-q1-chatgpt-1-reviewed.md
+    content_sha256: 6d87b375141a8e9b7eafe32e746f44dc59ce1004c2e422186bcce4ec0b231552
+    file_sha256: c1a332652df539565d290a667d84bc3bfe719bcd78059cfa72f8ae15ac0cd52f
+    snapshot_path: outputs/snapshots/cis-geo-c2-baseline-recorded/objects/cycles/m5/reviews/arv-geo-c2-base-q1-chatgpt-1-reviewed.md
+    snapshot_sha256: c1a332652df539565d290a667d84bc3bfe719bcd78059cfa72f8ae15ac0cd52f
+    entry_key: a4dcc02b70730e6b0821234a1d60694a2f53d0629140f7af730487d5a51c4bd4
+  - object_id: AGG-GEO-C2-BASE-Q2-CHATGPT
+    record_type: answer_aggregation
+    object_version: 1.0.0
+    object_path: cycles/m5/aggregations/agg-geo-c2-base-q2-chatgpt.md
+    content_sha256: a44c763afd940dfbc92a13b57c4f6241f38c1f95f7d020d90488a1650de49a4f
+    file_sha256: 152e1686dd4fdfbe2cea1db74af120707c569f9f676d859235d7e7f4e4962926
+    snapshot_path: outputs/snapshots/cis-geo-c2-baseline-recorded/objects/cycles/m5/aggregations/agg-geo-c2-base-q2-chatgpt.md
+    snapshot_sha256: 152e1686dd4fdfbe2cea1db74af120707c569f9f676d859235d7e7f4e4962926
+    entry_key: a4f2522d386f0e0aed7cc8dfe35f526f27106bff5f3f93dccc96a8717deff5bf
+  - object_id: ARV-GEO-C2-BASE-Q6-CHATGPT-2-REVIEWED
+    record_type: answer_review
+    object_version: 1.0.0
+    object_path: cycles/m5/reviews/arv-geo-c2-base-q6-chatgpt-2-reviewed.md
+    content_sha256: 78e1320c0ac18270b4cc6cdedfa37f937eb3e38d44bb8ff65d5d6deb9653b527
+    file_sha256: 17020d95a3df9a8d4e3335d9ef3bf6cb3c4916a38eb873e65dfe99d7a2739a95
+    snapshot_path: outputs/snapshots/cis-geo-c2-baseline-recorded/objects/cycles/m5/reviews/arv-geo-c2-base-q6-chatgpt-2-reviewed.md
+    snapshot_sha256: 17020d95a3df9a8d4e3335d9ef3bf6cb3c4916a38eb873e65dfe99d7a2739a95
+    entry_key: a9f46e5e4d87a119ecc2dad18f2a1d88dab316ac72b223efc25429fc8be2902a
+  - object_id: SMP-GEO-C2-BASE-Q6-CLAUDE-2
+    record_type: answer_sample
+    object_version: 1.0.0
+    object_path: cycles/m5/samples/smp-geo-c2-base-q6-claude-2.md
+    content_sha256: dab2280854b840d20db2c76c5a64257cd9aba1325610a0e3ea4145d68c75370c
+    file_sha256: 14c7d2672facb183bb91fe711dc9ee7ca81c475ca8c2c8dc095b8136250f0ada
+    snapshot_path: outputs/snapshots/cis-geo-c2-baseline-recorded/objects/cycles/m5/samples/smp-geo-c2-base-q6-claude-2.md
+    snapshot_sha256: 14c7d2672facb183bb91fe711dc9ee7ca81c475ca8c2c8dc095b8136250f0ada
+    entry_key: aa10e0775e57de3d7cf40b6c5d9472cfb5655826c35bc8b024c275f8df3a4456
+  - object_id: SMP-GEO-C2-BASE-Q1-GEMINI-1
+    record_type: answer_sample
+    object_version: 1.0.0
+    object_path: cycles/m5/samples/smp-geo-c2-base-q1-gemini-1.md
+    content_sha256: 8092e876e09e74c3385df01d30bdb28ca43c7c0a61b95e6118888c590824f75c
+    file_sha256: b0bf9c728eda00cc53b8b0af449ae7991c8a46aae0617c873f7a261c6a437817
+    snapshot_path: outputs/snapshots/cis-geo-c2-baseline-recorded/objects/cycles/m5/samples/smp-geo-c2-base-q1-gemini-1.md
+    snapshot_sha256: b0bf9c728eda00cc53b8b0af449ae7991c8a46aae0617c873f7a261c6a437817
+    entry_key: aafb09bdce3e3bfbd27c3ea4625be26a9079db84cf17343485890098808ae79c
+  - object_id: SMP-GEO-C2-BASE-Q5-PERPLEXITY-1
+    record_type: answer_sample
+    object_version: 1.0.0
+    object_path: cycles/m5/samples/smp-geo-c2-base-q5-perplexity-1.md
+    content_sha256: 8092e876e09e74c3385df01d30bdb28ca43c7c0a61b95e6118888c590824f75c
+    file_sha256: 27ff28bf71b231ad0a9587b2101c7b87a4864519c55209bebb2b8c59538a7bec
+    snapshot_path: outputs/snapshots/cis-geo-c2-baseline-recorded/objects/cycles/m5/samples/smp-geo-c2-base-q5-perplexity-1.md
+    snapshot_sha256: 27ff28bf71b231ad0a9587b2101c7b87a4864519c55209bebb2b8c59538a7bec
+    entry_key: ab8d9efa535ffd40bb3815a835fc3779dea918ef5222c9cf45ba94000920f2bb
+  - object_id: ARV-GEO-C2-BASE-Q5-CLAUDE-1-REVIEWED
+    record_type: answer_review
+    object_version: 1.0.0
+    object_path: cycles/m5/reviews/arv-geo-c2-base-q5-claude-1-reviewed.md
+    content_sha256: 19d8d42ed7a0c0117d490a2c747be0b39e6bebcb651ee4e9cb25f958a0d2850b
+    file_sha256: e01897022512f64a3f434ba27558e7fd6748141033ae119adcc49cef1bf3bd6d
+    snapshot_path: outputs/snapshots/cis-geo-c2-baseline-recorded/objects/cycles/m5/reviews/arv-geo-c2-base-q5-claude-1-reviewed.md
+    snapshot_sha256: e01897022512f64a3f434ba27558e7fd6748141033ae119adcc49cef1bf3bd6d
+    entry_key: adda896c3a65426f6fdc412d613190f9d0c6eb2666d57596400268a9132f642a
+  - object_id: ARV-GEO-C2-BASE-Q6-CHATGPT-1-REVIEWED
+    record_type: answer_review
+    object_version: 1.0.0
+    object_path: cycles/m5/reviews/arv-geo-c2-base-q6-chatgpt-1-reviewed.md
+    content_sha256: ed5c4877d7e47468ca8cedc85b5796cb52b46816e8f6cd0243938ae345bcac52
+    file_sha256: 5a6f06703c40b1caa4bfc5450647d8f747fa32d093100ddd7459eb7b1608949b
+    snapshot_path: outputs/snapshots/cis-geo-c2-baseline-recorded/objects/cycles/m5/reviews/arv-geo-c2-base-q6-chatgpt-1-reviewed.md
+    snapshot_sha256: 5a6f06703c40b1caa4bfc5450647d8f747fa32d093100ddd7459eb7b1608949b
+    entry_key: afa40c45f2ccd9b3ab7ad7e702f3a99160649fcc4be5ae02711389e51c77427d
+  - object_id: ARV-GEO-C2-BASE-Q6-PERPLEXITY-1-REVIEWED
+    record_type: answer_review
+    object_version: 1.0.0
+    object_path: cycles/m5/reviews/arv-geo-c2-base-q6-perplexity-1-reviewed.md
+    content_sha256: 64208a69fa7670cfc054c587b7599b613dc3b7b459f10c917a5749580f75af37
+    file_sha256: 09db6e83c513559d30890e5689ac74c9264d93ab44fd83c4ce3512bacc9853d3
+    snapshot_path: outputs/snapshots/cis-geo-c2-baseline-recorded/objects/cycles/m5/reviews/arv-geo-c2-base-q6-perplexity-1-reviewed.md
+    snapshot_sha256: 09db6e83c513559d30890e5689ac74c9264d93ab44fd83c4ce3512bacc9853d3
+    entry_key: afca611b9f93875a86c39f64170c660d66bcdee1d929c0001a6ac578c699afeb
+  - object_id: SMP-GEO-C2-BASE-Q5-PERPLEXITY-2
+    record_type: answer_sample
+    object_version: 1.0.0
+    object_path: cycles/m5/samples/smp-geo-c2-base-q5-perplexity-2.md
+    content_sha256: dab2280854b840d20db2c76c5a64257cd9aba1325610a0e3ea4145d68c75370c
+    file_sha256: 08a7174f14ed58410f298c176ce391b2de3cce782ebe4bc52e265a293c4588b0
+    snapshot_path: outputs/snapshots/cis-geo-c2-baseline-recorded/objects/cycles/m5/samples/smp-geo-c2-base-q5-perplexity-2.md
+    snapshot_sha256: 08a7174f14ed58410f298c176ce391b2de3cce782ebe4bc52e265a293c4588b0
+    entry_key: b12fe4ddfe8bc72cc9e2e6565a0c57d5c295cf7071871b83fd7b4608250e52eb
+  - object_id: ARV-GEO-C2-BASE-Q4-CHATGPT-1-REVIEWED
+    record_type: answer_review
+    object_version: 1.0.0
+    object_path: cycles/m5/reviews/arv-geo-c2-base-q4-chatgpt-1-reviewed.md
+    content_sha256: 7f05f774f1ed5cee5ec65035508898e0367ccd679ff7dd55eb763e3b3cba47b6
+    file_sha256: f1ca7d3808a1ade73d2b4add3e706e159fe5c008ecb080aa4b688f9bc0f11e4e
+    snapshot_path: outputs/snapshots/cis-geo-c2-baseline-recorded/objects/cycles/m5/reviews/arv-geo-c2-base-q4-chatgpt-1-reviewed.md
+    snapshot_sha256: f1ca7d3808a1ade73d2b4add3e706e159fe5c008ecb080aa4b688f9bc0f11e4e
+    entry_key: b57c3e555dde1f9af77410af57313da81f250780606d7164a0f5c1ecdcb2330b
+  - object_id: ARV-GEO-C2-BASE-Q4-CHATGPT-2-REVIEWED
+    record_type: answer_review
+    object_version: 1.0.0
+    object_path: cycles/m5/reviews/arv-geo-c2-base-q4-chatgpt-2-reviewed.md
+    content_sha256: 4639a3eae1295b507aa2f68c214f48a1e60899abfac999a3ff2b5af8354598b2
+    file_sha256: 5d274ceaf8d783d912e24b370604e0c2c8d494d98155da01356135ca45f2a931
+    snapshot_path: outputs/snapshots/cis-geo-c2-baseline-recorded/objects/cycles/m5/reviews/arv-geo-c2-base-q4-chatgpt-2-reviewed.md
+    snapshot_sha256: 5d274ceaf8d783d912e24b370604e0c2c8d494d98155da01356135ca45f2a931
+    entry_key: b5de4e4ee3dc01a8de892091aea0a5fc46ab76a040a3f9a148503aae92910a69
+  - object_id: SMP-GEO-C2-BASE-Q1-GEMINI-2
+    record_type: answer_sample
+    object_version: 1.0.0
+    object_path: cycles/m5/samples/smp-geo-c2-base-q1-gemini-2.md
+    content_sha256: dab2280854b840d20db2c76c5a64257cd9aba1325610a0e3ea4145d68c75370c
+    file_sha256: 659cc65323d35ad709461ecc86896eea79e5fc876f8ff0a96a371cb7175e1df6
+    snapshot_path: outputs/snapshots/cis-geo-c2-baseline-recorded/objects/cycles/m5/samples/smp-geo-c2-base-q1-gemini-2.md
+    snapshot_sha256: 659cc65323d35ad709461ecc86896eea79e5fc876f8ff0a96a371cb7175e1df6
+    entry_key: b79d0093e17d920d95e153b75e8244cbe3bc2252da27a4a6c6ff80115a7bd78b
+  - object_id: ARV-GEO-C2-BASE-Q5-CHATGPT-1-REVIEWED
+    record_type: answer_review
+    object_version: 1.0.0
+    object_path: cycles/m5/reviews/arv-geo-c2-base-q5-chatgpt-1-reviewed.md
+    content_sha256: 5caf1d8e18c119eb963580dd746bc6271e62360b86e0b54af5f75e7e3dbbb410
+    file_sha256: b669ce3ae563b406219614233af1f0158404cca370abd0d3f66542d9e3c1774c
+    snapshot_path: outputs/snapshots/cis-geo-c2-baseline-recorded/objects/cycles/m5/reviews/arv-geo-c2-base-q5-chatgpt-1-reviewed.md
+    snapshot_sha256: b669ce3ae563b406219614233af1f0158404cca370abd0d3f66542d9e3c1774c
+    entry_key: ba2d0c431a8739eec69c890e26c99bc370e45c3868086fe9488830b5f283a1a8
+  - object_id: SMP-GEO-C2-BASE-Q1-GOOGLE-AI-2
+    record_type: answer_sample
+    object_version: 1.0.0
+    object_path: cycles/m5/samples/smp-geo-c2-base-q1-google-ai-2.md
+    content_sha256: dab2280854b840d20db2c76c5a64257cd9aba1325610a0e3ea4145d68c75370c
+    file_sha256: ba974580881850493ca3e1eb508ad03fa8a9713499c71f624cd2c62906c48949
+    snapshot_path: outputs/snapshots/cis-geo-c2-baseline-recorded/objects/cycles/m5/samples/smp-geo-c2-base-q1-google-ai-2.md
+    snapshot_sha256: ba974580881850493ca3e1eb508ad03fa8a9713499c71f624cd2c62906c48949
+    entry_key: ba5ab0766a54d5a16987520314b268d613f83bdeeab7ab2161b11fcded63c7be
+  - object_id: SMP-GEO-C2-BASE-Q4-CLAUDE-1
+    record_type: answer_sample
+    object_version: 1.0.0
+    object_path: cycles/m5/samples/smp-geo-c2-base-q4-claude-1.md
+    content_sha256: 8092e876e09e74c3385df01d30bdb28ca43c7c0a61b95e6118888c590824f75c
+    file_sha256: 848aaf3f53defe17385cc304cf8671c11b6dceaaed67d3b0e7613600e16f805f
+    snapshot_path: outputs/snapshots/cis-geo-c2-baseline-recorded/objects/cycles/m5/samples/smp-geo-c2-base-q4-claude-1.md
+    snapshot_sha256: 848aaf3f53defe17385cc304cf8671c11b6dceaaed67d3b0e7613600e16f805f
+    entry_key: bdd9745ed77ab49f0ceddffac02bd420dd927095616962570709c5150225b96b
+  - object_id: AGG-GEO-C2-BASE-Q3-GOOGLE-AI
+    record_type: answer_aggregation
+    object_version: 1.0.0
+    object_path: cycles/m5/aggregations/agg-geo-c2-base-q3-google-ai.md
+    content_sha256: 9547d8186a18af4b7e09b3675389ad8e2802aeeab117659c686a3cef0d256910
+    file_sha256: 82c7dc50d3bd36b1c35e79de7e0c65dd2c9d684e966fe575d825b68a51f5d43c
+    snapshot_path: outputs/snapshots/cis-geo-c2-baseline-recorded/objects/cycles/m5/aggregations/agg-geo-c2-base-q3-google-ai.md
+    snapshot_sha256: 82c7dc50d3bd36b1c35e79de7e0c65dd2c9d684e966fe575d825b68a51f5d43c
+    entry_key: bf65f060b4bbaac44f9703a0f9e95b2243641e3e0aa0af7d017eb975418b805e
+  - object_id: AGG-GEO-C2-BASE-Q5-PERPLEXITY
+    record_type: answer_aggregation
+    object_version: 1.0.0
+    object_path: cycles/m5/aggregations/agg-geo-c2-base-q5-perplexity.md
+    content_sha256: dbff1fe93af8f40dac52ffe55257101752b744f726bfc291f3e265625e04ce5c
+    file_sha256: 4909fdad81716f84153403cc0ddda6ef527a8c85618fb2d33f39e2b99046a326
+    snapshot_path: outputs/snapshots/cis-geo-c2-baseline-recorded/objects/cycles/m5/aggregations/agg-geo-c2-base-q5-perplexity.md
+    snapshot_sha256: 4909fdad81716f84153403cc0ddda6ef527a8c85618fb2d33f39e2b99046a326
+    entry_key: bfeeaf20f170d48e52879b12f423b649a3448476573a25635f23ea5e14fdab92
+  - object_id: ARV-GEO-C2-BASE-Q1-CLAUDE-1-REVIEWED
+    record_type: answer_review
+    object_version: 1.0.0
+    object_path: cycles/m5/reviews/arv-geo-c2-base-q1-claude-1-reviewed.md
+    content_sha256: 21db148fba5788e40fc1902065137275a797d35cdf6a5d87f19ca7e9b97ae132
+    file_sha256: 7bff8070eed505872c3a75fe332b5446c164aeb83bc14ad80c9d67e88bd37099
+    snapshot_path: outputs/snapshots/cis-geo-c2-baseline-recorded/objects/cycles/m5/reviews/arv-geo-c2-base-q1-claude-1-reviewed.md
+    snapshot_sha256: 7bff8070eed505872c3a75fe332b5446c164aeb83bc14ad80c9d67e88bd37099
+    entry_key: c01a13a26f6c8dcae1a8e4f18ab249490942930dda09f6e821a93a6ff506c4cb
+  - object_id: ARV-GEO-C2-BASE-Q4-CLAUDE-1-REVIEWED
+    record_type: answer_review
+    object_version: 1.0.0
+    object_path: cycles/m5/reviews/arv-geo-c2-base-q4-claude-1-reviewed.md
+    content_sha256: 2d29ef351141f9eec0b4774b8c4d81fae3e8cc6819b00a7846fd489bffcc2e2d
+    file_sha256: e045eed93d1bfff48a5c39ea7063717c310b16a21301a92ab843e69cca1bc3a8
+    snapshot_path: outputs/snapshots/cis-geo-c2-baseline-recorded/objects/cycles/m5/reviews/arv-geo-c2-base-q4-claude-1-reviewed.md
+    snapshot_sha256: e045eed93d1bfff48a5c39ea7063717c310b16a21301a92ab843e69cca1bc3a8
+    entry_key: c1f76d12b32733bc3fed998e159164599931274f8b0dc5786441ed2c12c2cb7b
+  - object_id: ARV-GEO-C2-BASE-Q2-CLAUDE-1-REVIEWED
+    record_type: answer_review
+    object_version: 1.0.0
+    object_path: cycles/m5/reviews/arv-geo-c2-base-q2-claude-1-reviewed.md
+    content_sha256: 1b56fd3ff4f05973536f8f5495c5a834023219eb7c56d35d1fe858d0f2fe62ba
+    file_sha256: 8245e784ceafda2bb04ce665c03b22d5589c5ab417965f015d763a70478dd129
+    snapshot_path: outputs/snapshots/cis-geo-c2-baseline-recorded/objects/cycles/m5/reviews/arv-geo-c2-base-q2-claude-1-reviewed.md
+    snapshot_sha256: 8245e784ceafda2bb04ce665c03b22d5589c5ab417965f015d763a70478dd129
+    entry_key: c5658766ffba2eba1e3c14cc2bdd2be28f36470b0cddcb11ed1a215d6f68f584
+  - object_id: ARV-GEO-C2-BASE-Q3-CHATGPT-1-REVIEWED
+    record_type: answer_review
+    object_version: 1.0.0
+    object_path: cycles/m5/reviews/arv-geo-c2-base-q3-chatgpt-1-reviewed.md
+    content_sha256: 88a4ab91bb7df38f93342d7164bd490bff79aad45d713f9c22449a1dc5de1116
+    file_sha256: 391b0d3c1681da425b5dadbd7b68889fa42d79f976f5c365a1b2c78a627d6327
+    snapshot_path: outputs/snapshots/cis-geo-c2-baseline-recorded/objects/cycles/m5/reviews/arv-geo-c2-base-q3-chatgpt-1-reviewed.md
+    snapshot_sha256: 391b0d3c1681da425b5dadbd7b68889fa42d79f976f5c365a1b2c78a627d6327
+    entry_key: c5a964496f3c8d5400948e733f46cbaf64b4d8d4f5e62a011407e9bba583d7d5
+  - object_id: ARV-GEO-C2-BASE-Q3-CLAUDE-1-REVIEWED
+    record_type: answer_review
+    object_version: 1.0.0
+    object_path: cycles/m5/reviews/arv-geo-c2-base-q3-claude-1-reviewed.md
+    content_sha256: c3e4c4736b741de7f9cf0e1de5ccd32cbac673e70e662c89e2534331c93b6f41
+    file_sha256: 2bfba2c67c9cf7d24260866592d5224412fd6ddd43873687c4b9a9c9d2a08220
+    snapshot_path: outputs/snapshots/cis-geo-c2-baseline-recorded/objects/cycles/m5/reviews/arv-geo-c2-base-q3-claude-1-reviewed.md
+    snapshot_sha256: 2bfba2c67c9cf7d24260866592d5224412fd6ddd43873687c4b9a9c9d2a08220
+    entry_key: c67bd4f5c2095fa0ff0dc3ae5cb1c09d5f8bcd4eec389f6ffb7b27a22f40ea02
+  - object_id: ARV-GEO-C2-BASE-Q6-CLAUDE-2-REVIEWED
+    record_type: answer_review
+    object_version: 1.0.0
+    object_path: cycles/m5/reviews/arv-geo-c2-base-q6-claude-2-reviewed.md
+    content_sha256: c7be9cb2fe8bf0bb316f80787e06b8a4e3e196d7b0cc5ebed238a11053d6ef45
+    file_sha256: 2e3958e79dcbfd3d802859e3302f2f40c09257bb5015a983461499be81fe3b20
+    snapshot_path: outputs/snapshots/cis-geo-c2-baseline-recorded/objects/cycles/m5/reviews/arv-geo-c2-base-q6-claude-2-reviewed.md
+    snapshot_sha256: 2e3958e79dcbfd3d802859e3302f2f40c09257bb5015a983461499be81fe3b20
+    entry_key: c8aeb1cc44ba0f522102a0a42f25a11f75a2b5f651a415c611ee3268535fdc07
+  - object_id: ARV-GEO-C2-BASE-Q5-CLAUDE-2-REVIEWED
+    record_type: answer_review
+    object_version: 1.0.0
+    object_path: cycles/m5/reviews/arv-geo-c2-base-q5-claude-2-reviewed.md
+    content_sha256: 20d948a79472510898801e28da749ec42a3a2a32d6e8525f082631a18210db69
+    file_sha256: 9c77757367218490ae59898490c38379c2f6667b68369458c2086da6e9aa6ecd
+    snapshot_path: outputs/snapshots/cis-geo-c2-baseline-recorded/objects/cycles/m5/reviews/arv-geo-c2-base-q5-claude-2-reviewed.md
+    snapshot_sha256: 9c77757367218490ae59898490c38379c2f6667b68369458c2086da6e9aa6ecd
+    entry_key: cbeb6013216cd0292fa936c7701aab5b7edb44913dc7320c6078176cbbca96ae
+  - object_id: ARV-GEO-C2-BASE-Q3-PERPLEXITY-2-REVIEWED
+    record_type: answer_review
+    object_version: 1.0.0
+    object_path: cycles/m5/reviews/arv-geo-c2-base-q3-perplexity-2-reviewed.md
+    content_sha256: 0156d1118873c6ea57a5b55a784b4a1ebdee0f27c40082366af4e971f55d0f75
+    file_sha256: dd04edf909df98822835a326239dd9ce068e38b4040fc37002bda0cf5af28a17
+    snapshot_path: outputs/snapshots/cis-geo-c2-baseline-recorded/objects/cycles/m5/reviews/arv-geo-c2-base-q3-perplexity-2-reviewed.md
+    snapshot_sha256: dd04edf909df98822835a326239dd9ce068e38b4040fc37002bda0cf5af28a17
+    entry_key: cd197c0daa67696d547c3d57121b4e7f2ebceebedcdbb26c8a683fef2eefea8b
+  - object_id: ARV-GEO-C2-BASE-Q2-GEMINI-2-REVIEWED
+    record_type: answer_review
+    object_version: 1.0.0
+    object_path: cycles/m5/reviews/arv-geo-c2-base-q2-gemini-2-reviewed.md
+    content_sha256: a3ea747f8e9b10122089a338c1d82e671fe474922385bb28d20605093842b18c
+    file_sha256: 2d9fe33c6c94a44dd5ceceb6d166a75f2ae6ac7ce0117535755921a966a0e897
+    snapshot_path: outputs/snapshots/cis-geo-c2-baseline-recorded/objects/cycles/m5/reviews/arv-geo-c2-base-q2-gemini-2-reviewed.md
+    snapshot_sha256: 2d9fe33c6c94a44dd5ceceb6d166a75f2ae6ac7ce0117535755921a966a0e897
+    entry_key: ce38d4c3357c46f0714bffbd0f8a21fb073e8dcb9aee70716918b8177790e4b2
+  - object_id: SMP-GEO-C2-BASE-Q2-CHATGPT-2
+    record_type: answer_sample
+    object_version: 1.0.0
+    object_path: cycles/m5/samples/smp-geo-c2-base-q2-chatgpt-2.md
+    content_sha256: dab2280854b840d20db2c76c5a64257cd9aba1325610a0e3ea4145d68c75370c
+    file_sha256: 74622d081cde59d925c3fe0d8900314a9de187af3d7d9fd413ac5e68684c6e10
+    snapshot_path: outputs/snapshots/cis-geo-c2-baseline-recorded/objects/cycles/m5/samples/smp-geo-c2-base-q2-chatgpt-2.md
+    snapshot_sha256: 74622d081cde59d925c3fe0d8900314a9de187af3d7d9fd413ac5e68684c6e10
+    entry_key: ced8cd10dc1d04c5f73f20c91c4b7df098d82dbe572eb8220c71e9018b3bf95c
+  - object_id: AGG-GEO-C2-BASE-Q3-CHATGPT
+    record_type: answer_aggregation
+    object_version: 1.0.0
+    object_path: cycles/m5/aggregations/agg-geo-c2-base-q3-chatgpt.md
+    content_sha256: 8063f0e7dc3a96fae0fd86758a83fb7048632f02842a6ad048f8be8a5f4fc1df
+    file_sha256: a260c73e1be5cb45e961d9eeae651067fcd5c448d26b932bbfdd0311cc21b267
+    snapshot_path: outputs/snapshots/cis-geo-c2-baseline-recorded/objects/cycles/m5/aggregations/agg-geo-c2-base-q3-chatgpt.md
+    snapshot_sha256: a260c73e1be5cb45e961d9eeae651067fcd5c448d26b932bbfdd0311cc21b267
+    entry_key: d1b80a700a723c3477b5981193decddb4899df53b460e5c7a98b5047b588a7ab
+  - object_id: AGG-GEO-C2-BASE-Q1-GOOGLE-AI
+    record_type: answer_aggregation
+    object_version: 1.0.0
+    object_path: cycles/m5/aggregations/agg-geo-c2-base-q1-google-ai.md
+    content_sha256: 15b27427c2bbd98b7931efce332880d6b62b11cbae545332f6aa7383f214dcfc
+    file_sha256: ecfe349ba0764728ac01df175edfb293f3d7f45c199ea129f8b6965a64a2fd7a
+    snapshot_path: outputs/snapshots/cis-geo-c2-baseline-recorded/objects/cycles/m5/aggregations/agg-geo-c2-base-q1-google-ai.md
+    snapshot_sha256: ecfe349ba0764728ac01df175edfb293f3d7f45c199ea129f8b6965a64a2fd7a
+    entry_key: d4565cb03d86428056103bd2ba48f0a83a3d967b9122ac71d723099646c20637
+  - object_id: ARV-GEO-C2-BASE-Q5-GOOGLE-AI-1-REVIEWED
+    record_type: answer_review
+    object_version: 1.0.0
+    object_path: cycles/m5/reviews/arv-geo-c2-base-q5-google-ai-1-reviewed.md
+    content_sha256: 19232c6471a4fd06a8214779b2f9a1406349e25fd59487a7bdf486a32725db4b
+    file_sha256: 7161da06cd699feee1b4691503d828d8d5338b087f028ae1a509920ae6a4ddc7
+    snapshot_path: outputs/snapshots/cis-geo-c2-baseline-recorded/objects/cycles/m5/reviews/arv-geo-c2-base-q5-google-ai-1-reviewed.md
+    snapshot_sha256: 7161da06cd699feee1b4691503d828d8d5338b087f028ae1a509920ae6a4ddc7
+    entry_key: d486012c795cc846b6d1e72623718e04fd3ecc58ed575803d30036a9801aadfc
+  - object_id: SMP-GEO-C2-BASE-Q3-GOOGLE-AI-1
+    record_type: answer_sample
+    object_version: 1.0.0
+    object_path: cycles/m5/samples/smp-geo-c2-base-q3-google-ai-1.md
+    content_sha256: 8092e876e09e74c3385df01d30bdb28ca43c7c0a61b95e6118888c590824f75c
+    file_sha256: e91e9cd0b6713dc7801c10ef09c1179a604fbc4fe8b65d0a67633d0db9aa78e7
+    snapshot_path: outputs/snapshots/cis-geo-c2-baseline-recorded/objects/cycles/m5/samples/smp-geo-c2-base-q3-google-ai-1.md
+    snapshot_sha256: e91e9cd0b6713dc7801c10ef09c1179a604fbc4fe8b65d0a67633d0db9aa78e7
+    entry_key: d4886427855965d5857d8f876c37a5369c54bee361ac089468dab5a3b4f45e62
+  - object_id: SMP-GEO-C2-BASE-Q2-CLAUDE-1
+    record_type: answer_sample
+    object_version: 1.0.0
+    object_path: cycles/m5/samples/smp-geo-c2-base-q2-claude-1.md
+    content_sha256: 8092e876e09e74c3385df01d30bdb28ca43c7c0a61b95e6118888c590824f75c
+    file_sha256: 8df128f14f662fff36310f148d127efc46376b8bd1d57992301c5afa09d60d7b
+    snapshot_path: outputs/snapshots/cis-geo-c2-baseline-recorded/objects/cycles/m5/samples/smp-geo-c2-base-q2-claude-1.md
+    snapshot_sha256: 8df128f14f662fff36310f148d127efc46376b8bd1d57992301c5afa09d60d7b
+    entry_key: d6e6c19637bf23093bfb4e9428ce40c7741f2d926c02e9e1335987554b11a531
+  - object_id: SMP-GEO-C2-BASE-Q6-GEMINI-1
+    record_type: answer_sample
+    object_version: 1.0.0
+    object_path: cycles/m5/samples/smp-geo-c2-base-q6-gemini-1.md
+    content_sha256: 8092e876e09e74c3385df01d30bdb28ca43c7c0a61b95e6118888c590824f75c
+    file_sha256: 24ae0dff6261f82773e76059d2633a13f137a3b0143d1ce14bfb08e1d0bbc3e4
+    snapshot_path: outputs/snapshots/cis-geo-c2-baseline-recorded/objects/cycles/m5/samples/smp-geo-c2-base-q6-gemini-1.md
+    snapshot_sha256: 24ae0dff6261f82773e76059d2633a13f137a3b0143d1ce14bfb08e1d0bbc3e4
+    entry_key: d7437d01c9a97ad0727c977b0773463b981739083425231c7fab9973be84c151
+  - object_id: ARV-GEO-C2-BASE-Q5-GEMINI-2-REVIEWED
+    record_type: answer_review
+    object_version: 1.0.0
+    object_path: cycles/m5/reviews/arv-geo-c2-base-q5-gemini-2-reviewed.md
+    content_sha256: def54416bcade5975bf5e09d13de3b4e4b2166ec83c2de5a5a717e7da7dd92b0
+    file_sha256: 3c03c43052308d84f74a817b316b0304e98c1f2f96ca5ff375ae739c9abc3f75
+    snapshot_path: outputs/snapshots/cis-geo-c2-baseline-recorded/objects/cycles/m5/reviews/arv-geo-c2-base-q5-gemini-2-reviewed.md
+    snapshot_sha256: 3c03c43052308d84f74a817b316b0304e98c1f2f96ca5ff375ae739c9abc3f75
+    entry_key: d9ea5d667b2298cd628adcf01c7278b077fdc3e6c72abf14c43dbd2e44aa60c1
+  - object_id: SMP-GEO-C2-BASE-Q6-CHATGPT-2
+    record_type: answer_sample
+    object_version: 1.0.0
+    object_path: cycles/m5/samples/smp-geo-c2-base-q6-chatgpt-2.md
+    content_sha256: dab2280854b840d20db2c76c5a64257cd9aba1325610a0e3ea4145d68c75370c
+    file_sha256: 139c2e5fb4cb2a6f8457161833667627a41858f4ee6cec37623382b42fd747ed
+    snapshot_path: outputs/snapshots/cis-geo-c2-baseline-recorded/objects/cycles/m5/samples/smp-geo-c2-base-q6-chatgpt-2.md
+    snapshot_sha256: 139c2e5fb4cb2a6f8457161833667627a41858f4ee6cec37623382b42fd747ed
+    entry_key: da5a33502d2a6aa4f163b1a809526f7f363c44474a77fd1bccaf65aa71a91964
+  - object_id: ARV-GEO-C2-BASE-Q3-CHATGPT-2-REVIEWED
+    record_type: answer_review
+    object_version: 1.0.0
+    object_path: cycles/m5/reviews/arv-geo-c2-base-q3-chatgpt-2-reviewed.md
+    content_sha256: 71b6100e5d1a62fe05aaa54248184a6724492ade931f9960cc1da3745ee8aaa7
+    file_sha256: dedc6c2fe936c900ce2c1717020ea7660748aefee1d176f06c24d4055884f827
+    snapshot_path: outputs/snapshots/cis-geo-c2-baseline-recorded/objects/cycles/m5/reviews/arv-geo-c2-base-q3-chatgpt-2-reviewed.md
+    snapshot_sha256: dedc6c2fe936c900ce2c1717020ea7660748aefee1d176f06c24d4055884f827
+    entry_key: db61cefb7db1699372266507614a20cacc086e538dacdeb28674ffde96fb5cc4
+  - object_id: ARV-GEO-C2-BASE-Q2-GOOGLE-AI-2-REVIEWED
+    record_type: answer_review
+    object_version: 1.0.0
+    object_path: cycles/m5/reviews/arv-geo-c2-base-q2-google-ai-2-reviewed.md
+    content_sha256: 5cea086e5446e123730aad3478754ef8268dc6422c4a30e0990903531c33d57d
+    file_sha256: eaf5dbb2748ac5a6ce6c171c38d16d3638fec25048327e63147aae2a63cc4517
+    snapshot_path: outputs/snapshots/cis-geo-c2-baseline-recorded/objects/cycles/m5/reviews/arv-geo-c2-base-q2-google-ai-2-reviewed.md
+    snapshot_sha256: eaf5dbb2748ac5a6ce6c171c38d16d3638fec25048327e63147aae2a63cc4517
+    entry_key: e06ae77c4ba39b11a501332a3d714b8a108596e68574ee8e7d3b40d505d3e381
+  - object_id: ARV-GEO-C2-BASE-Q4-PERPLEXITY-1-REVIEWED
+    record_type: answer_review
+    object_version: 1.0.0
+    object_path: cycles/m5/reviews/arv-geo-c2-base-q4-perplexity-1-reviewed.md
+    content_sha256: 03bc41d0284340134285ec629357df82fa7f00710ce27cf5940038420bdf96ce
+    file_sha256: 8b1625b6a7f52358a932c3fc73c0712ab9737638e51ebad635bd1b46ef142643
+    snapshot_path: outputs/snapshots/cis-geo-c2-baseline-recorded/objects/cycles/m5/reviews/arv-geo-c2-base-q4-perplexity-1-reviewed.md
+    snapshot_sha256: 8b1625b6a7f52358a932c3fc73c0712ab9737638e51ebad635bd1b46ef142643
+    entry_key: e0be65edf24d13812f77fc08f0ce4c47bedbcdab2808f482b828a2a4d04426c2
+  - object_id: ARV-GEO-C2-BASE-Q2-GOOGLE-AI-1-REVIEWED
+    record_type: answer_review
+    object_version: 1.0.0
+    object_path: cycles/m5/reviews/arv-geo-c2-base-q2-google-ai-1-reviewed.md
+    content_sha256: 077d90d19bb43f9e01e8f93d28d5b881a1ca112519de11aca51a36cd825e8c1f
+    file_sha256: e19125d67a1330fe5fd7d2af02b87cf82f351cbc2c7303bd82ce07e2b14e86d4
+    snapshot_path: outputs/snapshots/cis-geo-c2-baseline-recorded/objects/cycles/m5/reviews/arv-geo-c2-base-q2-google-ai-1-reviewed.md
+    snapshot_sha256: e19125d67a1330fe5fd7d2af02b87cf82f351cbc2c7303bd82ce07e2b14e86d4
+    entry_key: e0f1d70a253989c99f6c0e98aa36e132f4c1cc8dcdb7b614dba089ff4f0105e7
+  - object_id: SMP-GEO-C2-BASE-Q2-GEMINI-1
+    record_type: answer_sample
+    object_version: 1.0.0
+    object_path: cycles/m5/samples/smp-geo-c2-base-q2-gemini-1.md
+    content_sha256: 8092e876e09e74c3385df01d30bdb28ca43c7c0a61b95e6118888c590824f75c
+    file_sha256: 33425a5d6212c990c774c868004b055b2f1a9f8efb6af2875024f2075d13c3f4
+    snapshot_path: outputs/snapshots/cis-geo-c2-baseline-recorded/objects/cycles/m5/samples/smp-geo-c2-base-q2-gemini-1.md
+    snapshot_sha256: 33425a5d6212c990c774c868004b055b2f1a9f8efb6af2875024f2075d13c3f4
+    entry_key: e19c3a6ebb701b4e6bb71426eb87d5fd6b6e5a58bbf4502fdf1e2c7b0cbf097f
+  - object_id: SMP-GEO-C2-BASE-Q2-PERPLEXITY-1
+    record_type: answer_sample
+    object_version: 1.0.0
+    object_path: cycles/m5/samples/smp-geo-c2-base-q2-perplexity-1.md
+    content_sha256: 8092e876e09e74c3385df01d30bdb28ca43c7c0a61b95e6118888c590824f75c
+    file_sha256: e92ce998c0c8e78413b779ddeb869286537b30f79386290a0a6c92b95bd62e26
+    snapshot_path: outputs/snapshots/cis-geo-c2-baseline-recorded/objects/cycles/m5/samples/smp-geo-c2-base-q2-perplexity-1.md
+    snapshot_sha256: e92ce998c0c8e78413b779ddeb869286537b30f79386290a0a6c92b95bd62e26
+    entry_key: e450fb7050823aacfa18a501f80c785133e2a1a8369ad552ebf816d0cd461e8a
+  - object_id: AGG-GEO-C2-BASE-Q4-PERPLEXITY
+    record_type: answer_aggregation
+    object_version: 1.0.0
+    object_path: cycles/m5/aggregations/agg-geo-c2-base-q4-perplexity.md
+    content_sha256: 6769f1a923553d615b6aadb3bc87b98c4c27252886d23ffe12e19a0411e73085
+    file_sha256: 2b8a952ce1931f96ae9e1d31f3c2491f075a1a9ef053f67e3a2284a62b4da505
+    snapshot_path: outputs/snapshots/cis-geo-c2-baseline-recorded/objects/cycles/m5/aggregations/agg-geo-c2-base-q4-perplexity.md
+    snapshot_sha256: 2b8a952ce1931f96ae9e1d31f3c2491f075a1a9ef053f67e3a2284a62b4da505
+    entry_key: e51e188684a19cc35fdf95056ee3ec13260b5001ec3b01e5fe5f1d8278f98843
+  - object_id: ARV-GEO-C2-BASE-Q6-GOOGLE-AI-1-REVIEWED
+    record_type: answer_review
+    object_version: 1.0.0
+    object_path: cycles/m5/reviews/arv-geo-c2-base-q6-google-ai-1-reviewed.md
+    content_sha256: c97a4c7879d7b5d96640371900b234f98213d456438bc634f3fc2cf4e7084ef9
+    file_sha256: d0232b8526f686067d980192de1af48d341526c431b092f864e6601a11f11a12
+    snapshot_path: outputs/snapshots/cis-geo-c2-baseline-recorded/objects/cycles/m5/reviews/arv-geo-c2-base-q6-google-ai-1-reviewed.md
+    snapshot_sha256: d0232b8526f686067d980192de1af48d341526c431b092f864e6601a11f11a12
+    entry_key: e69695459b2e528550797ddf69a64db878c22ddff6aeeb27786dcb8b7f83337c
+  - object_id: ARV-GEO-C2-BASE-Q6-PERPLEXITY-2-REVIEWED
+    record_type: answer_review
+    object_version: 1.0.0
+    object_path: cycles/m5/reviews/arv-geo-c2-base-q6-perplexity-2-reviewed.md
+    content_sha256: b8895a003175831d3132daf85a1c64fb84647fd375ef1bf50d50af573d03acd8
+    file_sha256: 30875920110ecb4f3b3630ffdcee42b188cea754b70b341caf3194dc109324f7
+    snapshot_path: outputs/snapshots/cis-geo-c2-baseline-recorded/objects/cycles/m5/reviews/arv-geo-c2-base-q6-perplexity-2-reviewed.md
+    snapshot_sha256: 30875920110ecb4f3b3630ffdcee42b188cea754b70b341caf3194dc109324f7
+    entry_key: e6d2b060e3153731d1bb8bbdf9a7c1d7eca2db4268ce5a2026a41388ad7c6462
+  - object_id: AGG-GEO-C2-BASE-Q2-CLAUDE
+    record_type: answer_aggregation
+    object_version: 1.0.0
+    object_path: cycles/m5/aggregations/agg-geo-c2-base-q2-claude.md
+    content_sha256: a60ad63e629c00718aff483c36987be311c87b88a77861e349facb398645704e
+    file_sha256: e4cef26cec3e95d22df3d8615ed87587139e0cd26baf95004591261e4719f6f0
+    snapshot_path: outputs/snapshots/cis-geo-c2-baseline-recorded/objects/cycles/m5/aggregations/agg-geo-c2-base-q2-claude.md
+    snapshot_sha256: e4cef26cec3e95d22df3d8615ed87587139e0cd26baf95004591261e4719f6f0
+    entry_key: e7db45e9da9009bcdba18163b92d3d474995382319111e0ff43d259bad1f9570
+  - object_id: SMP-GEO-C2-BASE-Q5-GEMINI-1
+    record_type: answer_sample
+    object_version: 1.0.0
+    object_path: cycles/m5/samples/smp-geo-c2-base-q5-gemini-1.md
+    content_sha256: 8092e876e09e74c3385df01d30bdb28ca43c7c0a61b95e6118888c590824f75c
+    file_sha256: 81467891f715585718dfdb41027196ba45ce704819b479a9b43baa5d350fa819
+    snapshot_path: outputs/snapshots/cis-geo-c2-baseline-recorded/objects/cycles/m5/samples/smp-geo-c2-base-q5-gemini-1.md
+    snapshot_sha256: 81467891f715585718dfdb41027196ba45ce704819b479a9b43baa5d350fa819
+    entry_key: e899c83e7483471d3121c5fc22813783c4c08af0ab479a557855fbd3983076ae
+  - object_id: AGG-GEO-C2-BASE-Q4-CLAUDE
+    record_type: answer_aggregation
+    object_version: 1.0.0
+    object_path: cycles/m5/aggregations/agg-geo-c2-base-q4-claude.md
+    content_sha256: 688e5956cb8d93a0cfc859cae44320f2cf49eef184a17217fb7263fa43a64ea0
+    file_sha256: 996c372e97465f60dbfef3da09499f361d98941b3a099fb8a8124f7c4e8d8817
+    snapshot_path: outputs/snapshots/cis-geo-c2-baseline-recorded/objects/cycles/m5/aggregations/agg-geo-c2-base-q4-claude.md
+    snapshot_sha256: 996c372e97465f60dbfef3da09499f361d98941b3a099fb8a8124f7c4e8d8817
+    entry_key: e97a43d3c506f8b4032097742bebdce6b2b96987dda7017fa6bde52a9af85d3a
+  - object_id: AGG-GEO-C2-BASE-Q5-CHATGPT
+    record_type: answer_aggregation
+    object_version: 1.0.0
+    object_path: cycles/m5/aggregations/agg-geo-c2-base-q5-chatgpt.md
+    content_sha256: deb242afbd6b4f8c637a91051e63a6d3ed6016d70754cd1868f1518fec74ca66
+    file_sha256: a9867cc01fd79e1505789d8d9bd88ef568019ee7ba65e060f47f6282dec24fb4
+    snapshot_path: outputs/snapshots/cis-geo-c2-baseline-recorded/objects/cycles/m5/aggregations/agg-geo-c2-base-q5-chatgpt.md
+    snapshot_sha256: a9867cc01fd79e1505789d8d9bd88ef568019ee7ba65e060f47f6282dec24fb4
+    entry_key: e9c0cbec77b3f03573eb75acac83b10f831c64e7a85f7b68c4d4347573d9d287
+  - object_id: ARV-GEO-C2-BASE-Q5-GEMINI-1-REVIEWED
+    record_type: answer_review
+    object_version: 1.0.0
+    object_path: cycles/m5/reviews/arv-geo-c2-base-q5-gemini-1-reviewed.md
+    content_sha256: d41a5e565d02fdd5440c21dce29e9e204dc28b115e9d06c3b259002b713db7de
+    file_sha256: 33c7baa415e7598365ec5e2ce7648db2740581dbc274a7b1317d3466a87b89bb
+    snapshot_path: outputs/snapshots/cis-geo-c2-baseline-recorded/objects/cycles/m5/reviews/arv-geo-c2-base-q5-gemini-1-reviewed.md
+    snapshot_sha256: 33c7baa415e7598365ec5e2ce7648db2740581dbc274a7b1317d3466a87b89bb
+    entry_key: ea6e516c956d48c9c96551f7f8d3dbee0063cc20cd56d8566e794a06a4d21dfa
+  - object_id: SMP-GEO-C2-BASE-Q3-CHATGPT-2
+    record_type: answer_sample
+    object_version: 1.0.0
+    object_path: cycles/m5/samples/smp-geo-c2-base-q3-chatgpt-2.md
+    content_sha256: dab2280854b840d20db2c76c5a64257cd9aba1325610a0e3ea4145d68c75370c
+    file_sha256: 9dd9a1c6613d8cdae35152d1ecdb41a6fc770ccf10076cd884837baf1dbdaeff
+    snapshot_path: outputs/snapshots/cis-geo-c2-baseline-recorded/objects/cycles/m5/samples/smp-geo-c2-base-q3-chatgpt-2.md
+    snapshot_sha256: 9dd9a1c6613d8cdae35152d1ecdb41a6fc770ccf10076cd884837baf1dbdaeff
+    entry_key: f01863e65925706d0cdce70909e2e388a6bc4629130f756698cba9c619d4f565
+  - object_id: SMP-GEO-C2-BASE-Q5-CHATGPT-1
+    record_type: answer_sample
+    object_version: 1.0.0
+    object_path: cycles/m5/samples/smp-geo-c2-base-q5-chatgpt-1.md
+    content_sha256: 8092e876e09e74c3385df01d30bdb28ca43c7c0a61b95e6118888c590824f75c
+    file_sha256: a888f91eea063693172adf5a24a1bcfe74970483ae0bf2ab2040e36fee33f278
+    snapshot_path: outputs/snapshots/cis-geo-c2-baseline-recorded/objects/cycles/m5/samples/smp-geo-c2-base-q5-chatgpt-1.md
+    snapshot_sha256: a888f91eea063693172adf5a24a1bcfe74970483ae0bf2ab2040e36fee33f278
+    entry_key: f3281fd7d9fbe9ee113bf08cc0839c3165abdf9b2ae59991601dd1e9251f9ab1
+  - object_id: SMP-GEO-C2-BASE-Q1-CLAUDE-1
+    record_type: answer_sample
+    object_version: 1.0.0
+    object_path: cycles/m5/samples/smp-geo-c2-base-q1-claude-1.md
+    content_sha256: 8092e876e09e74c3385df01d30bdb28ca43c7c0a61b95e6118888c590824f75c
+    file_sha256: 72d14ed231019dfa1cd5532b1bced4c717d968a685f1addc2913d3b3cc23b608
+    snapshot_path: outputs/snapshots/cis-geo-c2-baseline-recorded/objects/cycles/m5/samples/smp-geo-c2-base-q1-claude-1.md
+    snapshot_sha256: 72d14ed231019dfa1cd5532b1bced4c717d968a685f1addc2913d3b3cc23b608
+    entry_key: f5725861f81420a7b6077d170edfd6bceca8147d4cc9ba2118e13c505ebcbd19
+  - object_id: SMP-GEO-C2-BASE-Q4-GEMINI-2
+    record_type: answer_sample
+    object_version: 1.0.0
+    object_path: cycles/m5/samples/smp-geo-c2-base-q4-gemini-2.md
+    content_sha256: dab2280854b840d20db2c76c5a64257cd9aba1325610a0e3ea4145d68c75370c
+    file_sha256: dbc2f386540d292417e7325cef40b5e9e93a912ed3cf3c4e3e361c868503209a
+    snapshot_path: outputs/snapshots/cis-geo-c2-baseline-recorded/objects/cycles/m5/samples/smp-geo-c2-base-q4-gemini-2.md
+    snapshot_sha256: dbc2f386540d292417e7325cef40b5e9e93a912ed3cf3c4e3e361c868503209a
+    entry_key: fb50291c46520ba8b9b068153a6f0d0f00f9f09f70788809bcdde3f4e9a416c2
+  - object_id: SMP-GEO-C2-BASE-Q6-GOOGLE-AI-2
+    record_type: answer_sample
+    object_version: 1.0.0
+    object_path: cycles/m5/samples/smp-geo-c2-base-q6-google-ai-2.md
+    content_sha256: dab2280854b840d20db2c76c5a64257cd9aba1325610a0e3ea4145d68c75370c
+    file_sha256: eb5e14fd741081980740bcb3e9d7b5896c1bdac76b80f1be16500a0640d71d61
+    snapshot_path: outputs/snapshots/cis-geo-c2-baseline-recorded/objects/cycles/m5/samples/smp-geo-c2-base-q6-google-ai-2.md
+    snapshot_sha256: eb5e14fd741081980740bcb3e9d7b5896c1bdac76b80f1be16500a0640d71d61
+    entry_key: fc50f2d5bdc5711fceb6bb59457095c04d3f6faa57251ef0420f21dbba2a37b1
+  - object_id: AGG-GEO-C2-BASE-Q2-PERPLEXITY
+    record_type: answer_aggregation
+    object_version: 1.0.0
+    object_path: cycles/m5/aggregations/agg-geo-c2-base-q2-perplexity.md
+    content_sha256: 061ee9bdf3774731224141ebb52fdcd7d768a6ca00ae6b4e00811846ca5f230d
+    file_sha256: 06a8ce34c13372f635b53d4e1a18fc72194680d2c81820db0463d6c2c55c9063
+    snapshot_path: outputs/snapshots/cis-geo-c2-baseline-recorded/objects/cycles/m5/aggregations/agg-geo-c2-base-q2-perplexity.md
+    snapshot_sha256: 06a8ce34c13372f635b53d4e1a18fc72194680d2c81820db0463d6c2c55c9063
+    entry_key: fe4a6b354ab91935a7fabbceffaa85dbc0fe9f7e361f8e5e92fb15115a468b96
+artifact_entries:
+  - role: other_contract
+    source_path: cycles/preparation/matrix-C2-BASE.json
+    snapshot_path: outputs/snapshots/cis-geo-c2-baseline-recorded/artifacts/matrix-C2-BASE.json
+    media_type: application/json
+    source_sha256: e677d8108ab14c7090f9bc3fdb6ec39cb57acb1cea4d28c2e4cbad250dbe8af2
+    snapshot_sha256: e677d8108ab14c7090f9bc3fdb6ec39cb57acb1cea4d28c2e4cbad250dbe8af2
+    entry_key: 5066e8ddc169ea83063fdd1d17ced214178b27051cf72368b925fa6c6b2a9f67
+  - role: measurement_contract
+    source_path: execution/contracts/measurement-contract.json
+    snapshot_path: outputs/snapshots/cis-geo-c2-baseline-recorded/artifacts/measurement-contract.json
+    media_type: application/json
+    source_sha256: 38c1980f471f579564f81aff27132a5682cb647f38f19c0021698e39b4b41967
+    snapshot_sha256: 38c1980f471f579564f81aff27132a5682cb647f38f19c0021698e39b4b41967
+    entry_key: e2044550b9da92bdbaf985412f7d5266f6ae1ef30f33e0a7b345625677ca4043
+pre_review_transition_snapshot_versions: []
+pre_review_entry_keys: []
+run_ref: RUN-GEO-E2E-C2
+---
+# Cycle Input Snapshot CIS-GEO-C2-BASELINE-RECORDED

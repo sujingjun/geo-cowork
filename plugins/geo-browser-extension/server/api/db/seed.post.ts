@@ -13,7 +13,7 @@ function withAmazonProductMetadata<T extends { asin: string }>(products: T[]) {
  * Initialize database with test data
  * WARNING: This endpoint should be protected or removed in production
  */
-export default defineEventHandler(async (event) => {
+export default defineEventHandler(async () => {
   // Only allow in development
   if (process.env.NODE_ENV === 'production') {
     throw createError({
@@ -416,11 +416,11 @@ export default defineEventHandler(async (event) => {
         ]
       }
     }
-  } catch (error: any) {
+  } catch (error: unknown) {
     console.error('❌ Seed failed:', error)
     throw createError({
       statusCode: 500,
-      message: `Seed failed: ${error.message}`
+      message: `Seed failed: ${(error instanceof Error ? error.message : 'Unknown seed error')}`
     })
   }
 })

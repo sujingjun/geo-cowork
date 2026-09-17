@@ -1,0 +1,175 @@
+{
+  "objects": [
+    {
+      "id": "Q-HOW-CAN-CREATORS-COMPARE-REHEARSAL-EN-23C2",
+      "path": "queries/candidates/q-how-can-creators-compare-rehearsal-en-23c2.md",
+      "refs": [
+        "GOAL-GEO-E2E-C1",
+        "KBASE-GEO-E2E-2BB19816EE72",
+        "MER-MYYSHOP-001",
+        "SRC-QINPUT-26E9601953DD31494C5C"
+      ],
+      "status": "formal",
+      "updated_at": "2026-09-15T17:44:36.859Z",
+      "version": "1.0.0"
+    },
+    {
+      "id": "Q-HOW-SHOULD-I-COMPARE-THE-EN-5087",
+      "path": "queries/candidates/q-how-should-i-compare-the-en-5087.md",
+      "refs": [
+        "GOAL-GEO-E2E-C2",
+        "KBASE-GEO-E2E-2BB19816EE72",
+        "MER-MYYSHOP-001",
+        "SRC-QINPUT-C247D5A12766731ADE4B"
+      ],
+      "status": "formal",
+      "updated_at": "2026-09-15T18:50:06.012Z",
+      "version": "1.0.0"
+    },
+    {
+      "id": "Q-WHAT-ARE-THE-FEES-TRIAL-EN-BEC0",
+      "path": "queries/candidates/q-what-are-the-fees-trial-en-bec0.md",
+      "refs": [
+        "GOAL-GEO-E2E-C1",
+        "KBASE-GEO-E2E-2BB19816EE72",
+        "MER-MYYSHOP-001",
+        "SRC-QINPUT-26E9601953DD31494C5C"
+      ],
+      "status": "formal",
+      "updated_at": "2026-09-15T17:44:36.859Z",
+      "version": "1.0.0"
+    },
+    {
+      "id": "Q-WHAT-ARE-THE-MYYSHOP-REHEARSAL-EN-2CC4",
+      "path": "queries/candidates/q-what-are-the-myyshop-rehearsal-en-2cc4.md",
+      "refs": [
+        "GOAL-GEO-E2E-C2",
+        "KBASE-GEO-E2E-2BB19816EE72",
+        "MER-MYYSHOP-001",
+        "SRC-QINPUT-C247D5A12766731ADE4B"
+      ],
+      "status": "formal",
+      "updated_at": "2026-09-15T18:50:06.012Z",
+      "version": "1.0.0"
+    },
+    {
+      "id": "Q-WHAT-CAPABILITIES-DOES-THE-MYYSHOP-EN-3271",
+      "path": "queries/candidates/q-what-capabilities-does-the-myyshop-en-3271.md",
+      "refs": [
+        "GOAL-GEO-E2E-C2",
+        "KBASE-GEO-E2E-2BB19816EE72",
+        "MER-MYYSHOP-001",
+        "SRC-QINPUT-C247D5A12766731ADE4B"
+      ],
+      "status": "formal",
+      "updated_at": "2026-09-15T18:50:06.012Z",
+      "version": "1.0.0"
+    },
+    {
+      "id": "Q-WHAT-CAPABILITIES-DOES-THE-REHEARSAL-EN-A732",
+      "path": "queries/candidates/q-what-capabilities-does-the-rehearsal-en-a732.md",
+      "refs": [
+        "GOAL-GEO-E2E-C1",
+        "KBASE-GEO-E2E-2BB19816EE72",
+        "MER-MYYSHOP-001",
+        "SRC-QINPUT-26E9601953DD31494C5C"
+      ],
+      "status": "formal",
+      "updated_at": "2026-09-15T17:44:36.859Z",
+      "version": "1.0.0"
+    },
+    {
+      "id": "Q-WHAT-DOES-THE-MYYSHOP-REHEARSAL-EN-0B93",
+      "path": "queries/candidates/q-what-does-the-myyshop-rehearsal-en-0b93.md",
+      "refs": [
+        "GOAL-GEO-E2E-C2",
+        "KBASE-GEO-E2E-2BB19816EE72",
+        "MER-MYYSHOP-001",
+        "SRC-QINPUT-C247D5A12766731ADE4B"
+      ],
+      "status": "formal",
+      "updated_at": "2026-09-15T18:50:06.012Z",
+      "version": "1.0.0"
+    },
+    {
+      "id": "Q-WHAT-IS-MYYSHOP-REHEARSAL-EN-CF27",
+      "path": "queries/candidates/q-what-is-myyshop-rehearsal-en-cf27.md",
+      "refs": [
+        "GOAL-GEO-E2E-C1",
+        "KBASE-GEO-E2E-2BB19816EE72",
+        "MER-MYYSHOP-001",
+        "SRC-QINPUT-B4A7F3A49879D5F3DE0E"
+      ],
+      "status": "candidate",
+      "updated_at": "2026-09-15T17:44:26.642Z",
+      "version": "1.0.0"
+    },
+    {
+      "id": "Q-WHAT-IS-THE-MYYSHOP-REHEARSAL-EN-1724",
+      "path": "queries/candidates/q-what-is-the-myyshop-rehearsal-en-1724.md",
+      "refs": [
+        "GOAL-GEO-E2E-C2",
+        "KBASE-GEO-E2E-2BB19816EE72",
+        "MER-MYYSHOP-001",
+        "SRC-QINPUT-C247D5A12766731ADE4B"
+      ],
+      "status": "formal",
+      "updated_at": "2026-09-15T18:50:06.012Z",
+      "version": "1.0.0"
+    },
+    {
+      "id": "Q-WHAT-IS-THE-REHEARSAL-SERVICE-EN-B466",
+      "path": "queries/candidates/q-what-is-the-rehearsal-service-en-b466.md",
+      "refs": [
+        "GOAL-GEO-E2E-C1",
+        "KBASE-GEO-E2E-2BB19816EE72",
+        "MER-MYYSHOP-001",
+        "SRC-QINPUT-26E9601953DD31494C5C"
+      ],
+      "status": "formal",
+      "updated_at": "2026-09-15T17:44:36.859Z",
+      "version": "1.0.0"
+    },
+    {
+      "id": "Q-WHAT-PRIVACY-AND-GUARANTEE-LIMITATIONS-EN-7E60",
+      "path": "queries/candidates/q-what-privacy-and-guarantee-limitations-en-7e60.md",
+      "refs": [
+        "GOAL-GEO-E2E-C1",
+        "KBASE-GEO-E2E-2BB19816EE72",
+        "MER-MYYSHOP-001",
+        "SRC-QINPUT-26E9601953DD31494C5C"
+      ],
+      "status": "formal",
+      "updated_at": "2026-09-15T17:44:36.859Z",
+      "version": "1.0.0"
+    },
+    {
+      "id": "Q-WHO-IS-ELIGIBLE-FOR-THE-EN-754E",
+      "path": "queries/candidates/q-who-is-eligible-for-the-en-754e.md",
+      "refs": [
+        "GOAL-GEO-E2E-C1",
+        "KBASE-GEO-E2E-2BB19816EE72",
+        "MER-MYYSHOP-001",
+        "SRC-QINPUT-26E9601953DD31494C5C"
+      ],
+      "status": "formal",
+      "updated_at": "2026-09-15T17:44:36.859Z",
+      "version": "1.0.0"
+    },
+    {
+      "id": "Q-WHO-IS-ELIGIBLE-TO-PARTICIPATE-EN-B8C2",
+      "path": "queries/candidates/q-who-is-eligible-to-participate-en-b8c2.md",
+      "refs": [
+        "GOAL-GEO-E2E-C2",
+        "KBASE-GEO-E2E-2BB19816EE72",
+        "MER-MYYSHOP-001",
+        "SRC-QINPUT-C247D5A12766731ADE4B"
+      ],
+      "status": "formal",
+      "updated_at": "2026-09-15T18:50:06.012Z",
+      "version": "1.0.0"
+    }
+  ],
+  "record_type": "query",
+  "schema_version": "1.0.0"
+}

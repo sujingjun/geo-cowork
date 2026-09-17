@@ -5,6 +5,12 @@ description: 编排 M5 Consumer Answer Testing 的 Profile、Browser MCP 结果�
 
 # geo-answer-cycle
 
+## 真实工程采集（Spec 0014）
+
+`geo-playwright.mjs collect-playwright --platform <chatgpt|gemini|perplexity> --output <run-dir>` 与 `resume-collection` 通过固定 Playwright MCP 0.0.81 连接浏览器。先保存提交意图，三个指定平台各一次、全局串行至少 120 秒；未知提交不重发。raw → 真实 DeepSeek 提取 → 带 checksum 的本地接收；模型失败不重做 Query。
+
+该入口使用独立工程验证 Run，不要求先创建正式真实 Cycle，也不计为双槽 Baseline。已经完成的 Run 续跑必须幂等。Browser Extractor 不再提供 Fake 成功路径。OpenAI-compatible 当前只验证配置和切换，真实访问由公司网络条件决定。
+
 ## 触发场景
 
 - 用脱敏录制 Fixture 验证 M5 Answer Testing 全链；

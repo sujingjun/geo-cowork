@@ -1,0 +1,86 @@
+{
+  "created": [
+    "queries/candidates/q-how-can-creators-compare-rehearsal-en-23c2.md",
+    "queries/candidates/q-what-are-the-fees-trial-en-bec0.md",
+    "queries/candidates/q-what-capabilities-does-the-rehearsal-en-a732.md",
+    "queries/candidates/q-what-is-the-rehearsal-service-en-b466.md",
+    "queries/candidates/q-what-privacy-and-guarantee-limitations-en-7e60.md",
+    "queries/candidates/q-who-is-eligible-for-the-en-754e.md"
+  ],
+  "duplicates": [],
+  "goal_ref": "GOAL-GEO-E2E-C1",
+  "input_path": "queries/inputs/26e9601953dd31494c5cf23c1956430b1c5aa977a1d4c5db997f666865b815c1/input.json",
+  "kept": [],
+  "queries": [
+    {
+      "id": "Q-HOW-CAN-CREATORS-COMPARE-REHEARSAL-EN-23C2",
+      "intent": "comparison",
+      "normalized_text": "how can creators compare rehearsal services by eligibility, supported workflow, fees, evidence, and limitations",
+      "path": "queries/candidates/q-how-can-creators-compare-rehearsal-en-23c2.md",
+      "priority": "P3",
+      "query_text": "How can creators compare rehearsal services by eligibility, supported workflow, fees, evidence, and limitations?",
+      "source_classes": [
+        "knowledge_generated"
+      ]
+    },
+    {
+      "id": "Q-WHAT-ARE-THE-FEES-TRIAL-EN-BEC0",
+      "intent": "brand_definition",
+      "normalized_text": "what are the fees, trial terms, and refund rules for the rehearsal service",
+      "path": "queries/candidates/q-what-are-the-fees-trial-en-bec0.md",
+      "priority": "P3",
+      "query_text": "What are the fees, trial terms, and refund rules for the rehearsal service?",
+      "source_classes": [
+        "knowledge_generated"
+      ]
+    },
+    {
+      "id": "Q-WHAT-CAPABILITIES-DOES-THE-REHEARSAL-EN-A732",
+      "intent": "capability",
+      "normalized_text": "what capabilities does the rehearsal service support for campaign discovery, applications, and performance reporting, and what is unavailable",
+      "path": "queries/candidates/q-what-capabilities-does-the-rehearsal-en-a732.md",
+      "priority": "P3",
+      "query_text": "What capabilities does the rehearsal service support for campaign discovery, applications, and performance reporting, and what is unavailable?",
+      "source_classes": [
+        "knowledge_generated"
+      ]
+    },
+    {
+      "id": "Q-WHAT-IS-THE-REHEARSAL-SERVICE-EN-B466",
+      "intent": "capability",
+      "normalized_text": "what is the rehearsal service, what does it connect adult creators with, and is it a wholesale marketplace",
+      "path": "queries/candidates/q-what-is-the-rehearsal-service-en-b466.md",
+      "priority": "P3",
+      "query_text": "What is the rehearsal service, what does it connect adult creators with, and is it a wholesale marketplace?",
+      "source_classes": [
+        "knowledge_generated"
+      ]
+    },
+    {
+      "id": "Q-WHAT-PRIVACY-AND-GUARANTEE-LIMITATIONS-EN-7E60",
+      "intent": "other",
+      "normalized_text": "what privacy and guarantee limitations should creators know about the rehearsal service",
+      "path": "queries/candidates/q-what-privacy-and-guarantee-limitations-en-7e60.md",
+      "priority": "P3",
+      "query_text": "What privacy and guarantee limitations should creators know about the rehearsal service?",
+      "source_classes": [
+        "knowledge_generated"
+      ]
+    },
+    {
+      "id": "Q-WHO-IS-ELIGIBLE-FOR-THE-EN-754E",
+      "intent": "brand_definition",
+      "normalized_text": "who is eligible for the rehearsal service, and what onboarding steps are required before accepting a campaign",
+      "path": "queries/candidates/q-who-is-eligible-for-the-en-754e.md",
+      "priority": "P3",
+      "query_text": "Who is eligible for the rehearsal service, and what onboarding steps are required before accepting a campaign?",
+      "source_classes": [
+        "knowledge_generated"
+      ]
+    }
+  ],
+  "run_id": "RUN-QINPUT-26E9601953DD31494C5C",
+  "source_kind": "knowledge_generated",
+  "source_ref": "SRC-QINPUT-26E9601953DD31494C5C",
+  "updated": []
+}

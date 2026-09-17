@@ -1,0 +1,46 @@
+{
+  "audit": {
+    "attempts": [
+      "MODEL-b75eaa0f-0a2b-4547-a1d6-b7143f1c074e"
+    ],
+    "completed_at": "2026-09-15T18:56:47.871Z",
+    "duration_ms": 1686,
+    "extraction_validation": "passed",
+    "finish_reason": "stop",
+    "http_status": 200,
+    "id": "MODEL-b75eaa0f-0a2b-4547-a1d6-b7143f1c074e",
+    "input_sha256": "5a2599cb317d58c9f1ea8f64476e701c0dc6b0b59ce90b8b724b8c6224d9a523",
+    "model": "deepseek-flash",
+    "output_sha256": "81a456bc7b2be992486606c19ef13867bdca448adfdd5cee6eb9c609a0d5712c",
+    "prompt_sha256": "e5d2c9a2481b77f774d18dc813bd55ef7805d120c8b02d6e068af72999a4b872",
+    "provider": "deepseek",
+    "request_options": {
+      "reasoning_effort": null,
+      "thinking": "disabled"
+    },
+    "response_model": "deepseek-flash",
+    "started_at": "2026-09-15T18:56:46.185Z",
+    "status": "completed",
+    "usage": {
+      "completion_tokens": 303,
+      "prompt_cache_hit_tokens": 128,
+      "prompt_cache_miss_tokens": 1008,
+      "prompt_tokens": 1136,
+      "prompt_tokens_details": {
+        "cached_tokens": 128
+      },
+      "total_tokens": 1439
+    }
+  },
+  "output": {
+    "answer": {
+      "completeness": "partial",
+      "html_structure_summary": "Plain text answer with no HTML markup; consists of a single paragraph followed by a blank line and a synthetic consumer input line.",
+      "refusal": false,
+      "text": "MyyShop rehearsal MyyShop rehearsal Describe the rehearsal as an adult creator campaign service with explicit eligibility and no income guarantee. Automatic acceptance of every brand campaign is unavailable. The rehearsal supports campaign discovery, application and aggregate performance reports. A simulated pilot had 12 participants and four completed campaign applications. Compare rehearsal services by eligibility, supported workflow, fees, evidence and limitations. The rehearsal is open to adult creators in its simulated US region. The simulated service charges USD 9 per month after a 14-day trial. The rehearsal cannot guarantee income or placement in an AI answer. MyyShop rehearsal connects adult creators with simulated brand campaigns. The rehearsal service is not a wholesale marketplace. The rehearsal does not provide inventory, logistics or credit. Creators complete a profile and accept individual campaign requirements. The rehearsal prioritizes transparent campaign requirements over guaranteed earnings. Rehearsal reports contain aggregate metrics and exclude personal customer records. The rehearsal cancellation stops the next renewal and does not guarantee retroactive refunds. Use campaign opportunities and clear requirements when describing the rehearsal.\n\nSynthetic consumer input for: Who is eligible to participate in the MyyShop rehearsal, and what onboarding is required?"
+    },
+    "citations": [],
+    "platform_annotations": [],
+    "warnings": []
+  }
+}

@@ -1,6 +1,16 @@
 {
   "objects": [
     {
+      "id": "RUN-GEO-QUERY-LANGUAGE-20260916",
+      "path": "runs/RUN-GEO-QUERY-LANGUAGE-20260916/run.md",
+      "refs": [
+        "GOAL-MYYSHOP-DEFINITION-001"
+      ],
+      "status": "completed",
+      "updated_at": "2026-09-15T18:31:40.375Z",
+      "version": "1.0.2"
+    },
+    {
       "id": "RUN-MYYSHOP-GA4-GSC-OBS-20260902",
       "path": "runs/RUN-MYYSHOP-GA4-GSC-OBS-20260902/run.md",
       "refs": [

@@ -63,6 +63,8 @@ function proposalObject(graph, item, now) {
   const data = {
     ...commonData(item, 'asset_proposal', 'draft', now, graph.byId.get(item.id)),
     title: item.title ?? `Asset Proposal ${item.id}`,
+    ...(item.supersedes_ref ? {supersedes_ref:item.supersedes_ref} : {}),
+    ...(item.extensions ? {extensions:item.extensions} : {}),
     asset_ref: item.asset_ref,
     goal_refs: sortedUnique(item.goal_refs),
     query_refs: sortedUnique(item.query_refs),
@@ -86,6 +88,7 @@ function proposalObject(graph, item, now) {
 
 function assertUniqueProposalKeys(graph, outputs) {
   const planned = new Map();
+  const replaced = new Set([...graph.objects.filter(o=>o.data.record_type==='asset_proposal').map(o=>o.data.supersedes_ref),...outputs.map(o=>o.data.supersedes_ref)].filter(Boolean));
   for (const output of outputs) {
     const key = proposalUniqueKey(output.data);
     const previous = planned.get(key);
@@ -97,7 +100,7 @@ function assertUniqueProposalKeys(graph, outputs) {
     planned.set(key, output);
   }
   for (const existing of graph.objects.filter(({ data }) =>
-    data.record_type === 'asset_proposal' && data.status !== 'superseded')) {
+    data.record_type === 'asset_proposal' && data.status !== 'superseded' && !replaced.has(data.id))) {
     const plannedOutput = planned.get(proposalUniqueKey(existing.data));
     if (!plannedOutput || plannedOutput.data.id === existing.data.id) continue;
     throw new DiagnosisError('DUPLICATE_ASSET_PROPOSAL', '同一 Asset 与输入版本集合已有 Proposal', {
@@ -208,7 +211,7 @@ export async function prepareAdoption({
   const graph = await loadWorkspaceGraph({ workspace });
   const proposal = requireObject(graph, proposalId, 'asset_proposal');
   const data = {
-    ...commonData({ id }, 'adoption_record', 'draft', now, graph.byId.get(id)),
+    ...commonData({ id, test_scope: proposal.data.test_scope }, 'adoption_record', 'draft', now, graph.byId.get(id)),
     title: `Adoption for ${proposalId}`,
     proposal_ref: proposalId,
     asset_ref: proposal.data.asset_ref,
@@ -247,7 +250,7 @@ export async function preparePublication({
   const graph = await loadWorkspaceGraph({ workspace });
   const adoption = requireObject(graph, adoptionId, 'adoption_record');
   const data = {
-    ...commonData({ id }, 'asset_publication', 'draft', now, graph.byId.get(id)),
+    ...commonData({ id, test_scope: adoption.data.test_scope }, 'asset_publication', 'draft', now, graph.byId.get(id)),
     title: `Publication for ${adoption.data.proposal_ref}`,
     proposal_ref: adoption.data.proposal_ref,
     adoption_ref: adoptionId,

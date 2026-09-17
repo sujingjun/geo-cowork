@@ -1,0 +1,28 @@
+---
+id: CLM-GEO-E2E-PRIVACY
+record_type: claim
+status: candidate
+version: 1.0.0
+created_at: '2026-09-16T00:00:00Z'
+updated_at: '2026-09-16T00:00:00Z'
+title: Privacy
+test_scope:
+  kind: synthetic
+  usage: test_only
+  merchant_ref: MER-MYYSHOP-001
+  workspace_id: ws_2bb19816ee725a38ea01cc1ee4
+  knowledge_base_ref: KBASE-GEO-E2E-2BB19816EE72
+statement: Rehearsal reports contain aggregate metrics and exclude personal customer records.
+risk_type: capability_fact
+risk_level: low
+evidence_refs:
+  - EVD-GEO-E2E-PRIVACY
+document_refs:
+  - DOC-GEO-E2E-PRIVACY
+scope: Synthetic rehearsal only.
+evidence_sufficiency:
+  status: unknown
+  rule_version: m3-evidence-sufficiency-v1
+  missing: []
+---
+# Privacy

@@ -5,7 +5,7 @@ export function traceStageGateValid(objects, toStage) {
     diagnosis_ready: [['finding', 1], ['asset_proposal', 1]],
     adoption_decided: [['adoption_record', 1]],
     publication_confirmed: [['asset_publication', 1]],
-    technical_retest_completed: [['run', 1], ['finding', 1]],
+    technical_retest_completed: [['run', 1]],
     answer_retest_completed: [['answer_sample', 2], ['answer_review', 2], ['answer_aggregation', 1]],
     analytics_recorded: [['analytics_observation', 1], ['business_signal', 1]],
     review_waiting_human: [['cycle_review', 1]],

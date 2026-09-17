@@ -1,0 +1,458 @@
+{
+  "audit": {
+    "completed_at": "2026-09-15T20:49:01.645Z",
+    "duration_ms": 24063,
+    "finish_reason": "stop",
+    "http_status": 200,
+    "id": "MODEL-0aee6b4d-88f1-48af-ad35-7333dde736f3",
+    "input_sha256": "1f4370736519f4e6eee09aa2e7ab83f5c4f727ea2eb67184fed44ae305b9955d",
+    "model": "deepseek-flash",
+    "output_sha256": "9821f25bd47aa001d0acb53b28b1e9f1c211fe5730230bca74c6814725ac3a2a",
+    "prompt_sha256": "94cb4bcf35cc23090c7271eaeb868a4612f150cd09551c6f5e1a6d6e77a143e1",
+    "provider": "deepseek",
+    "request_options": {
+      "reasoning_effort": "low",
+      "thinking": "enabled"
+    },
+    "response_model": "deepseek-flash",
+    "started_at": "2026-09-15T20:48:37.582Z",
+    "status": "completed",
+    "usage": {
+      "completion_tokens": 6701,
+      "completion_tokens_details": {
+        "reasoning_tokens": 3606
+      },
+      "prompt_cache_hit_tokens": 896,
+      "prompt_cache_miss_tokens": 2556,
+      "prompt_tokens": 3452,
+      "prompt_tokens_details": {
+        "cached_tokens": 896
+      },
+      "total_tokens": 10153
+    }
+  },
+  "output": {
+    "reviews": [
+      {
+        "core": {
+          "citation_quality": "not_applicable",
+          "core_fact_accuracy": "pass",
+          "current_positioning": "pass",
+          "entity_recognition": "pass",
+          "risk_boundary": "pass"
+        },
+        "judgments": [
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-IDENTITY",
+            "quote": "MyyShop rehearsal connects adult creators with simulated brand campaigns.",
+            "reason": "Identifies MyyShop rehearsal, adult creators, and simulated brand campaigns as supplied."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-CASE",
+            "quote": "A simulated pilot had 12 participants and four completed campaign applications.",
+            "reason": "Matches the supplied simulated pilot facts exactly."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-POSITIONING",
+            "quote": "The rehearsal prioritizes transparent campaign requirements over guaranteed earnings.",
+            "reason": "Matches the supplied positioning statement."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-GUARANTEES",
+            "quote": "The rehearsal cannot guarantee income or placement in an AI answer.",
+            "reason": "Captures the supplied guarantee limitation."
+          },
+          {
+            "assessment": "not_applicable",
+            "claim_ref": "CLM-GEO-E2E-CAMPAIGNS",
+            "quote": "The rehearsal supports campaign discovery, application and aggregate performance reports.",
+            "reason": "No citation markers or source attributions are present in the answer; citation quality is not applicable."
+          }
+        ],
+        "sample_ref": "SMP-GEO-C2-AFTER-Q3-CHATGPT-1"
+      },
+      {
+        "core": {
+          "citation_quality": "not_applicable",
+          "core_fact_accuracy": "pass",
+          "current_positioning": "pass",
+          "entity_recognition": "pass",
+          "risk_boundary": "pass"
+        },
+        "judgments": [
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-IDENTITY",
+            "quote": "MyyShop rehearsal connects adult creators with simulated brand campaigns.",
+            "reason": "Identifies MyyShop rehearsal, adult creators, and simulated brand campaigns as supplied."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-CASE",
+            "quote": "A simulated pilot had 12 participants and four completed campaign applications.",
+            "reason": "Matches the supplied simulated pilot facts exactly."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-POSITIONING",
+            "quote": "The rehearsal prioritizes transparent campaign requirements over guaranteed earnings.",
+            "reason": "Matches the supplied positioning statement."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-GUARANTEES",
+            "quote": "The rehearsal cannot guarantee income or placement in an AI answer.",
+            "reason": "Captures the supplied guarantee limitation."
+          },
+          {
+            "assessment": "not_applicable",
+            "claim_ref": "CLM-GEO-E2E-CAMPAIGNS",
+            "quote": "The rehearsal supports campaign discovery, application and aggregate performance reports.",
+            "reason": "No citation markers or source attributions are present in the answer; citation quality is not applicable."
+          }
+        ],
+        "sample_ref": "SMP-GEO-C2-AFTER-Q3-CHATGPT-2"
+      },
+      {
+        "core": {
+          "citation_quality": "not_applicable",
+          "core_fact_accuracy": "pass",
+          "current_positioning": "pass",
+          "entity_recognition": "pass",
+          "risk_boundary": "pass"
+        },
+        "judgments": [
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-IDENTITY",
+            "quote": "MyyShop rehearsal connects adult creators with simulated brand campaigns.",
+            "reason": "Identifies MyyShop rehearsal, adult creators, and simulated brand campaigns as supplied."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-CASE",
+            "quote": "A simulated pilot had 12 participants and four completed campaign applications.",
+            "reason": "Matches the supplied simulated pilot facts exactly."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-POSITIONING",
+            "quote": "The rehearsal prioritizes transparent campaign requirements over guaranteed earnings.",
+            "reason": "Matches the supplied positioning statement."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-GUARANTEES",
+            "quote": "The rehearsal cannot guarantee income or placement in an AI answer.",
+            "reason": "Captures the supplied guarantee limitation."
+          },
+          {
+            "assessment": "not_applicable",
+            "claim_ref": "CLM-GEO-E2E-CAMPAIGNS",
+            "quote": "The rehearsal supports campaign discovery, application and aggregate performance reports.",
+            "reason": "No citation markers or source attributions are present in the answer; citation quality is not applicable."
+          }
+        ],
+        "sample_ref": "SMP-GEO-C2-AFTER-Q3-GEMINI-1"
+      },
+      {
+        "core": {
+          "citation_quality": "not_applicable",
+          "core_fact_accuracy": "pass",
+          "current_positioning": "pass",
+          "entity_recognition": "pass",
+          "risk_boundary": "pass"
+        },
+        "judgments": [
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-IDENTITY",
+            "quote": "MyyShop rehearsal connects adult creators with simulated brand campaigns.",
+            "reason": "Identifies MyyShop rehearsal, adult creators, and simulated brand campaigns as supplied."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-CASE",
+            "quote": "A simulated pilot had 12 participants and four completed campaign applications.",
+            "reason": "Matches the supplied simulated pilot facts exactly."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-POSITIONING",
+            "quote": "The rehearsal prioritizes transparent campaign requirements over guaranteed earnings.",
+            "reason": "Matches the supplied positioning statement."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-GUARANTEES",
+            "quote": "The rehearsal cannot guarantee income or placement in an AI answer.",
+            "reason": "Captures the supplied guarantee limitation."
+          },
+          {
+            "assessment": "not_applicable",
+            "claim_ref": "CLM-GEO-E2E-CAMPAIGNS",
+            "quote": "The rehearsal supports campaign discovery, application and aggregate performance reports.",
+            "reason": "No citation markers or source attributions are present in the answer; citation quality is not applicable."
+          }
+        ],
+        "sample_ref": "SMP-GEO-C2-AFTER-Q3-GEMINI-2"
+      },
+      {
+        "core": {
+          "citation_quality": "not_applicable",
+          "core_fact_accuracy": "pass",
+          "current_positioning": "pass",
+          "entity_recognition": "pass",
+          "risk_boundary": "pass"
+        },
+        "judgments": [
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-IDENTITY",
+            "quote": "MyyShop rehearsal connects adult creators with simulated brand campaigns.",
+            "reason": "Identifies MyyShop rehearsal, adult creators, and simulated brand campaigns as supplied."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-CASE",
+            "quote": "A simulated pilot had 12 participants and four completed campaign applications.",
+            "reason": "Matches the supplied simulated pilot facts exactly."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-POSITIONING",
+            "quote": "The rehearsal prioritizes transparent campaign requirements over guaranteed earnings.",
+            "reason": "Matches the supplied positioning statement."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-GUARANTEES",
+            "quote": "The rehearsal cannot guarantee income or placement in an AI answer.",
+            "reason": "Captures the supplied guarantee limitation."
+          },
+          {
+            "assessment": "not_applicable",
+            "claim_ref": "CLM-GEO-E2E-CAMPAIGNS",
+            "quote": "The rehearsal supports campaign discovery, application and aggregate performance reports.",
+            "reason": "No citation markers or source attributions are present in the answer; citation quality is not applicable."
+          }
+        ],
+        "sample_ref": "SMP-GEO-C2-AFTER-Q3-PERPLEXITY-1"
+      },
+      {
+        "core": {
+          "citation_quality": "not_applicable",
+          "core_fact_accuracy": "pass",
+          "current_positioning": "pass",
+          "entity_recognition": "pass",
+          "risk_boundary": "pass"
+        },
+        "judgments": [
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-IDENTITY",
+            "quote": "MyyShop rehearsal connects adult creators with simulated brand campaigns.",
+            "reason": "Identifies MyyShop rehearsal, adult creators, and simulated brand campaigns as supplied."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-CASE",
+            "quote": "A simulated pilot had 12 participants and four completed campaign applications.",
+            "reason": "Matches the supplied simulated pilot facts exactly."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-POSITIONING",
+            "quote": "The rehearsal prioritizes transparent campaign requirements over guaranteed earnings.",
+            "reason": "Matches the supplied positioning statement."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-GUARANTEES",
+            "quote": "The rehearsal cannot guarantee income or placement in an AI answer.",
+            "reason": "Captures the supplied guarantee limitation."
+          },
+          {
+            "assessment": "not_applicable",
+            "claim_ref": "CLM-GEO-E2E-CAMPAIGNS",
+            "quote": "The rehearsal supports campaign discovery, application and aggregate performance reports.",
+            "reason": "No citation markers or source attributions are present in the answer; citation quality is not applicable."
+          }
+        ],
+        "sample_ref": "SMP-GEO-C2-AFTER-Q3-PERPLEXITY-2"
+      },
+      {
+        "core": {
+          "citation_quality": "not_applicable",
+          "core_fact_accuracy": "pass",
+          "current_positioning": "pass",
+          "entity_recognition": "pass",
+          "risk_boundary": "pass"
+        },
+        "judgments": [
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-IDENTITY",
+            "quote": "MyyShop rehearsal connects adult creators with simulated brand campaigns.",
+            "reason": "Identifies MyyShop rehearsal, adult creators, and simulated brand campaigns as supplied."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-CASE",
+            "quote": "A simulated pilot had 12 participants and four completed campaign applications.",
+            "reason": "Matches the supplied simulated pilot facts exactly."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-POSITIONING",
+            "quote": "The rehearsal prioritizes transparent campaign requirements over guaranteed earnings.",
+            "reason": "Matches the supplied positioning statement."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-GUARANTEES",
+            "quote": "The rehearsal cannot guarantee income or placement in an AI answer.",
+            "reason": "Captures the supplied guarantee limitation."
+          },
+          {
+            "assessment": "not_applicable",
+            "claim_ref": "CLM-GEO-E2E-CAMPAIGNS",
+            "quote": "The rehearsal supports campaign discovery, application and aggregate performance reports.",
+            "reason": "No citation markers or source attributions are present in the answer; citation quality is not applicable."
+          }
+        ],
+        "sample_ref": "SMP-GEO-C2-AFTER-Q3-GOOGLE-AI-1"
+      },
+      {
+        "core": {
+          "citation_quality": "not_applicable",
+          "core_fact_accuracy": "pass",
+          "current_positioning": "pass",
+          "entity_recognition": "pass",
+          "risk_boundary": "pass"
+        },
+        "judgments": [
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-IDENTITY",
+            "quote": "MyyShop rehearsal connects adult creators with simulated brand campaigns.",
+            "reason": "Identifies MyyShop rehearsal, adult creators, and simulated brand campaigns as supplied."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-CASE",
+            "quote": "A simulated pilot had 12 participants and four completed campaign applications.",
+            "reason": "Matches the supplied simulated pilot facts exactly."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-POSITIONING",
+            "quote": "The rehearsal prioritizes transparent campaign requirements over guaranteed earnings.",
+            "reason": "Matches the supplied positioning statement."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-GUARANTEES",
+            "quote": "The rehearsal cannot guarantee income or placement in an AI answer.",
+            "reason": "Captures the supplied guarantee limitation."
+          },
+          {
+            "assessment": "not_applicable",
+            "claim_ref": "CLM-GEO-E2E-CAMPAIGNS",
+            "quote": "The rehearsal supports campaign discovery, application and aggregate performance reports.",
+            "reason": "No citation markers or source attributions are present in the answer; citation quality is not applicable."
+          }
+        ],
+        "sample_ref": "SMP-GEO-C2-AFTER-Q3-GOOGLE-AI-2"
+      },
+      {
+        "core": {
+          "citation_quality": "not_applicable",
+          "core_fact_accuracy": "pass",
+          "current_positioning": "pass",
+          "entity_recognition": "pass",
+          "risk_boundary": "pass"
+        },
+        "judgments": [
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-IDENTITY",
+            "quote": "MyyShop rehearsal connects adult creators with simulated brand campaigns.",
+            "reason": "Identifies MyyShop rehearsal, adult creators, and simulated brand campaigns as supplied."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-CASE",
+            "quote": "A simulated pilot had 12 participants and four completed campaign applications.",
+            "reason": "Matches the supplied simulated pilot facts exactly."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-POSITIONING",
+            "quote": "The rehearsal prioritizes transparent campaign requirements over guaranteed earnings.",
+            "reason": "Matches the supplied positioning statement."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-GUARANTEES",
+            "quote": "The rehearsal cannot guarantee income or placement in an AI answer.",
+            "reason": "Captures the supplied guarantee limitation."
+          },
+          {
+            "assessment": "not_applicable",
+            "claim_ref": "CLM-GEO-E2E-CAMPAIGNS",
+            "quote": "The rehearsal supports campaign discovery, application and aggregate performance reports.",
+            "reason": "No citation markers or source attributions are present in the answer; citation quality is not applicable."
+          }
+        ],
+        "sample_ref": "SMP-GEO-C2-AFTER-Q3-CLAUDE-1"
+      },
+      {
+        "core": {
+          "citation_quality": "not_applicable",
+          "core_fact_accuracy": "pass",
+          "current_positioning": "pass",
+          "entity_recognition": "pass",
+          "risk_boundary": "pass"
+        },
+        "judgments": [
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-IDENTITY",
+            "quote": "MyyShop rehearsal connects adult creators with simulated brand campaigns.",
+            "reason": "Identifies MyyShop rehearsal, adult creators, and simulated brand campaigns as supplied."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-CASE",
+            "quote": "A simulated pilot had 12 participants and four completed campaign applications.",
+            "reason": "Matches the supplied simulated pilot facts exactly."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-POSITIONING",
+            "quote": "The rehearsal prioritizes transparent campaign requirements over guaranteed earnings.",
+            "reason": "Matches the supplied positioning statement."
+          },
+          {
+            "assessment": "pass",
+            "claim_ref": "CLM-GEO-E2E-GUARANTEES",
+            "quote": "The rehearsal cannot guarantee income or placement in an AI answer.",
+            "reason": "Captures the supplied guarantee limitation."
+          },
+          {
+            "assessment": "not_applicable",
+            "claim_ref": "CLM-GEO-E2E-CAMPAIGNS",
+            "quote": "The rehearsal supports campaign discovery, application and aggregate performance reports.",
+            "reason": "No citation markers or source attributions are present in the answer; citation quality is not applicable."
+          }
+        ],
+        "sample_ref": "SMP-GEO-C2-AFTER-Q3-CLAUDE-2"
+      }
+    ]
+  }
+}

@@ -297,6 +297,7 @@
         "core", "exploratory", "reviewer", "review_required"
       ],
       "properties": {
+        "approval": { "$ref": "common#/$defs/approval" },
         "sample_ref": { "type": "string", "pattern": "^SMP-(?:[A-Z0-9]+-)*[A-Z0-9]+$" },
         "sample_raw_manifest_sha256": { "$ref": "common#/$defs/sha256" },
         "rubric": {

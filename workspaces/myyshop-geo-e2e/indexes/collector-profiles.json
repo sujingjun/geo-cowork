@@ -1,0 +1,226 @@
+{
+  "objects": [
+    {
+      "id": "CPF-GEO-E2E-C1-AFTER-CHATGPT",
+      "path": "cycles/preparation/profiles/cpf-geo-e2e-c1-after-chatgpt.md",
+      "refs": [
+        "KBASE-GEO-E2E-2BB19816EE72",
+        "MER-MYYSHOP-001"
+      ],
+      "status": "frozen",
+      "updated_at": "2026-09-16T00:00:00Z",
+      "version": "1.0.0"
+    },
+    {
+      "id": "CPF-GEO-E2E-C1-AFTER-CLAUDE",
+      "path": "cycles/preparation/profiles/cpf-geo-e2e-c1-after-claude.md",
+      "refs": [
+        "KBASE-GEO-E2E-2BB19816EE72",
+        "MER-MYYSHOP-001"
+      ],
+      "status": "frozen",
+      "updated_at": "2026-09-16T00:00:00Z",
+      "version": "1.0.0"
+    },
+    {
+      "id": "CPF-GEO-E2E-C1-AFTER-GEMINI",
+      "path": "cycles/preparation/profiles/cpf-geo-e2e-c1-after-gemini.md",
+      "refs": [
+        "KBASE-GEO-E2E-2BB19816EE72",
+        "MER-MYYSHOP-001"
+      ],
+      "status": "frozen",
+      "updated_at": "2026-09-16T00:00:00Z",
+      "version": "1.0.0"
+    },
+    {
+      "id": "CPF-GEO-E2E-C1-AFTER-GOOGLE-AI",
+      "path": "cycles/preparation/profiles/cpf-geo-e2e-c1-after-google-ai.md",
+      "refs": [
+        "KBASE-GEO-E2E-2BB19816EE72",
+        "MER-MYYSHOP-001"
+      ],
+      "status": "frozen",
+      "updated_at": "2026-09-16T00:00:00Z",
+      "version": "1.0.0"
+    },
+    {
+      "id": "CPF-GEO-E2E-C1-AFTER-PERPLEXITY",
+      "path": "cycles/preparation/profiles/cpf-geo-e2e-c1-after-perplexity.md",
+      "refs": [
+        "KBASE-GEO-E2E-2BB19816EE72",
+        "MER-MYYSHOP-001"
+      ],
+      "status": "frozen",
+      "updated_at": "2026-09-16T00:00:00Z",
+      "version": "1.0.0"
+    },
+    {
+      "id": "CPF-GEO-E2E-C1-BASE-CHATGPT",
+      "path": "cycles/preparation/profiles/cpf-geo-e2e-c1-base-chatgpt.md",
+      "refs": [
+        "KBASE-GEO-E2E-2BB19816EE72",
+        "MER-MYYSHOP-001"
+      ],
+      "status": "frozen",
+      "updated_at": "2026-09-16T00:00:00Z",
+      "version": "1.0.0"
+    },
+    {
+      "id": "CPF-GEO-E2E-C1-BASE-CLAUDE",
+      "path": "cycles/preparation/profiles/cpf-geo-e2e-c1-base-claude.md",
+      "refs": [
+        "KBASE-GEO-E2E-2BB19816EE72",
+        "MER-MYYSHOP-001"
+      ],
+      "status": "frozen",
+      "updated_at": "2026-09-16T00:00:00Z",
+      "version": "1.0.0"
+    },
+    {
+      "id": "CPF-GEO-E2E-C1-BASE-GEMINI",
+      "path": "cycles/preparation/profiles/cpf-geo-e2e-c1-base-gemini.md",
+      "refs": [
+        "KBASE-GEO-E2E-2BB19816EE72",
+        "MER-MYYSHOP-001"
+      ],
+      "status": "frozen",
+      "updated_at": "2026-09-16T00:00:00Z",
+      "version": "1.0.0"
+    },
+    {
+      "id": "CPF-GEO-E2E-C1-BASE-GOOGLE-AI",
+      "path": "cycles/preparation/profiles/cpf-geo-e2e-c1-base-google-ai.md",
+      "refs": [
+        "KBASE-GEO-E2E-2BB19816EE72",
+        "MER-MYYSHOP-001"
+      ],
+      "status": "frozen",
+      "updated_at": "2026-09-16T00:00:00Z",
+      "version": "1.0.0"
+    },
+    {
+      "id": "CPF-GEO-E2E-C1-BASE-PERPLEXITY",
+      "path": "cycles/preparation/profiles/cpf-geo-e2e-c1-base-perplexity.md",
+      "refs": [
+        "KBASE-GEO-E2E-2BB19816EE72",
+        "MER-MYYSHOP-001"
+      ],
+      "status": "frozen",
+      "updated_at": "2026-09-16T00:00:00Z",
+      "version": "1.0.0"
+    },
+    {
+      "id": "CPF-GEO-E2E-C2-AFTER-CHATGPT",
+      "path": "cycles/preparation/profiles/cpf-geo-e2e-c2-after-chatgpt.md",
+      "refs": [
+        "KBASE-GEO-E2E-2BB19816EE72",
+        "MER-MYYSHOP-001"
+      ],
+      "status": "frozen",
+      "updated_at": "2026-09-30T00:00:00.000Z",
+      "version": "1.0.0"
+    },
+    {
+      "id": "CPF-GEO-E2E-C2-AFTER-CLAUDE",
+      "path": "cycles/preparation/profiles/cpf-geo-e2e-c2-after-claude.md",
+      "refs": [
+        "KBASE-GEO-E2E-2BB19816EE72",
+        "MER-MYYSHOP-001"
+      ],
+      "status": "frozen",
+      "updated_at": "2026-09-30T00:00:00.000Z",
+      "version": "1.0.0"
+    },
+    {
+      "id": "CPF-GEO-E2E-C2-AFTER-GEMINI",
+      "path": "cycles/preparation/profiles/cpf-geo-e2e-c2-after-gemini.md",
+      "refs": [
+        "KBASE-GEO-E2E-2BB19816EE72",
+        "MER-MYYSHOP-001"
+      ],
+      "status": "frozen",
+      "updated_at": "2026-09-30T00:00:00.000Z",
+      "version": "1.0.0"
+    },
+    {
+      "id": "CPF-GEO-E2E-C2-AFTER-GOOGLE-AI",
+      "path": "cycles/preparation/profiles/cpf-geo-e2e-c2-after-google-ai.md",
+      "refs": [
+        "KBASE-GEO-E2E-2BB19816EE72",
+        "MER-MYYSHOP-001"
+      ],
+      "status": "frozen",
+      "updated_at": "2026-09-30T00:00:00.000Z",
+      "version": "1.0.0"
+    },
+    {
+      "id": "CPF-GEO-E2E-C2-AFTER-PERPLEXITY",
+      "path": "cycles/preparation/profiles/cpf-geo-e2e-c2-after-perplexity.md",
+      "refs": [
+        "KBASE-GEO-E2E-2BB19816EE72",
+        "MER-MYYSHOP-001"
+      ],
+      "status": "frozen",
+      "updated_at": "2026-09-30T00:00:00.000Z",
+      "version": "1.0.0"
+    },
+    {
+      "id": "CPF-GEO-E2E-C2-BASE-CHATGPT",
+      "path": "cycles/preparation/profiles/cpf-geo-e2e-c2-base-chatgpt.md",
+      "refs": [
+        "KBASE-GEO-E2E-2BB19816EE72",
+        "MER-MYYSHOP-001"
+      ],
+      "status": "frozen",
+      "updated_at": "2026-09-30T00:00:00.000Z",
+      "version": "1.0.0"
+    },
+    {
+      "id": "CPF-GEO-E2E-C2-BASE-CLAUDE",
+      "path": "cycles/preparation/profiles/cpf-geo-e2e-c2-base-claude.md",
+      "refs": [
+        "KBASE-GEO-E2E-2BB19816EE72",
+        "MER-MYYSHOP-001"
+      ],
+      "status": "frozen",
+      "updated_at": "2026-09-30T00:00:00.000Z",
+      "version": "1.0.0"
+    },
+    {
+      "id": "CPF-GEO-E2E-C2-BASE-GEMINI",
+      "path": "cycles/preparation/profiles/cpf-geo-e2e-c2-base-gemini.md",
+      "refs": [
+        "KBASE-GEO-E2E-2BB19816EE72",
+        "MER-MYYSHOP-001"
+      ],
+      "status": "frozen",
+      "updated_at": "2026-09-30T00:00:00.000Z",
+      "version": "1.0.0"
+    },
+    {
+      "id": "CPF-GEO-E2E-C2-BASE-GOOGLE-AI",
+      "path": "cycles/preparation/profiles/cpf-geo-e2e-c2-base-google-ai.md",
+      "refs": [
+        "KBASE-GEO-E2E-2BB19816EE72",
+        "MER-MYYSHOP-001"
+      ],
+      "status": "frozen",
+      "updated_at": "2026-09-30T00:00:00.000Z",
+      "version": "1.0.0"
+    },
+    {
+      "id": "CPF-GEO-E2E-C2-BASE-PERPLEXITY",
+      "path": "cycles/preparation/profiles/cpf-geo-e2e-c2-base-perplexity.md",
+      "refs": [
+        "KBASE-GEO-E2E-2BB19816EE72",
+        "MER-MYYSHOP-001"
+      ],
+      "status": "frozen",
+      "updated_at": "2026-09-30T00:00:00.000Z",
+      "version": "1.0.0"
+    }
+  ],
+  "record_type": "collector_profile",
+  "schema_version": "1.1.0"
+}

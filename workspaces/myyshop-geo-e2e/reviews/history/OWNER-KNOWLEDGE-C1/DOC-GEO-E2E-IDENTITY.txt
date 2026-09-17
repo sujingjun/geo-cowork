@@ -1,0 +1,26 @@
+---
+id: DOC-GEO-E2E-IDENTITY
+record_type: document
+status: draft
+version: 1.0.0
+created_at: '2026-09-16T00:00:00Z'
+updated_at: '2026-09-16T00:00:00Z'
+title: Definition
+test_scope:
+  kind: synthetic
+  usage: test_only
+  merchant_ref: MER-MYYSHOP-001
+  workspace_id: ws_2bb19816ee725a38ea01cc1ee4
+  knowledge_base_ref: KBASE-GEO-E2E-2BB19816EE72
+scope: Synthetic rehearsal only.
+source_refs:
+  - SRC-GEO-E2E-IDENTITY
+extensions:
+  geo.knowledge_input:
+    raw_path: knowledge/02-brand-identity/identity.md
+    sha256: 49e5074d3673bb3fe5ab94db911574b45d16f76803c9dee0831fda9fa6d47e75
+    supported: true
+---
+# Definition
+
+MyyShop rehearsal connects adult creators with simulated brand campaigns.

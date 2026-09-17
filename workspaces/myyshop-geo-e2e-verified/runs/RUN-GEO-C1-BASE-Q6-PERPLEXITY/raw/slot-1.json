@@ -1,0 +1,10 @@
+{
+  "answer_text": "MyyShop rehearsal Wholesale marketplace Guaranteed income for everyone.\n\nSynthetic consumer input for: Who is eligible to use the MyyShop rehearsal, and what onboarding steps apply?",
+  "ordinal": 1,
+  "platform": "perplexity",
+  "purpose": "baseline",
+  "query_ref": "Q-WHO-IS-ELIGIBLE-TO-USE-EN-1531",
+  "query_version": "1.0.0",
+  "source": "business-input assets/knowledge",
+  "synthetic": true
+}

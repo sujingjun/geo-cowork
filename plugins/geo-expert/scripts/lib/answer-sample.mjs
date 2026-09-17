@@ -152,6 +152,8 @@ export async function materializeFixtureSample({ workspace, plan, sample }) {
     created_at: sample.captured_at,
     updated_at: sample.captured_at,
     title: `Recorded sample ${sample.ordinal}`,
+    ...(profile.test_scope ? { test_scope: { ...profile.test_scope } } : {}),
+    ...(sample.extraction ? {extensions:{'geo.extraction':sample.extraction}} : {}),
     purpose: plan.purpose,
     query_ref: query.id,
     query_version: query.version,
@@ -187,6 +189,7 @@ export async function materializeFixtureSample({ workspace, plan, sample }) {
       answer_region_only: true,
       redaction_notes: ['Synthetic .invalid recorded fixture; no account data.'],
     },
+    ...(plan.purpose === 'post_change_retest' ? { publication_refs: sample.publication_refs ?? [], technical_retest_run_refs: sample.technical_retest_run_refs ?? [], baseline_aggregation_refs: sample.baseline_aggregation_refs ?? [] } : {}),
     ...(sample.cancellation ? { cancellation: sample.cancellation } : {}),
   };
   validateObjectData(data, { path: sample.path });

@@ -1,0 +1,26 @@
+---
+id: DOC-GEO-E2E-NON-GOALS
+record_type: document
+status: draft
+version: 1.0.0
+created_at: '2026-09-16T00:00:00Z'
+updated_at: '2026-09-16T00:00:00Z'
+title: Non-goals
+test_scope:
+  kind: synthetic
+  usage: test_only
+  merchant_ref: MER-MYYSHOP-001
+  workspace_id: ws_377ec2e00b68d35bf465ab5d6e
+  knowledge_base_ref: KBASE-GEO-E2E-377EC2E00B68
+scope: Synthetic rehearsal only.
+source_refs:
+  - SRC-GEO-E2E-NON-GOALS
+extensions:
+  geo.knowledge_input:
+    raw_path: knowledge/03-positioning-strategy/non-goals.md
+    sha256: 2fd1e92836adc8597725a5f67a8d19392bad43367b520b9ae1f502828f89bad5
+    supported: true
+---
+# Non-goals
+
+The rehearsal does not provide inventory, logistics or credit.

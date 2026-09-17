@@ -1,0 +1,31 @@
+{
+  "actor": {
+    "decision_ref": "workspace://reviews/decisions/OWNER-C1-CYCLE-REVIEW.json",
+    "kind": "fixture_human"
+  },
+  "cycle_ref": "CYC-GEO-E2E-C1",
+  "expected_cycle_version": "1.0.8",
+  "from_stage": "review_waiting_human",
+  "gate": {
+    "artifact_paths": [
+      {
+        "media_type": "application/json",
+        "path": "execution/contracts/measurement-contract.json",
+        "role": "measurement_contract"
+      }
+    ],
+    "source_paths": [
+      "cycles/m6/reviews/crv-geo-c1-decided.md"
+    ]
+  },
+  "gate_snapshot_id": "CIS-GEO-C1-REVIEW-DECIDED",
+  "goal_entry_key": "1d6c2c65eb0de8987719f58c08e3b6b873f36ad588fe9f1dcb4e1930cab8cb33",
+  "lease": {
+    "now": "2026-09-25T00:00:00.000Z",
+    "owner_id": "knowledge-journey",
+    "ttl_ms": 60000
+  },
+  "operation_id": "CYC-GEO-E2E-C1:review_decided",
+  "to_stage": "review_decided",
+  "transition_id": "CTR-GEO-C1-REVIEW-DECIDED"
+}
