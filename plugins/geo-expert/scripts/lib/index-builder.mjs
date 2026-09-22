@@ -136,6 +136,7 @@ const REF_FIELDS = {
   },
   adoption_record: { proposal_ref: ['asset_proposal'], asset_ref: ['asset'] },
   asset_publication: {
+    supersedes_ref: ['asset_publication'],
     proposal_ref: ['asset_proposal'],
     adoption_ref: ['adoption_record'],
     asset_ref: ['asset'],
@@ -223,11 +224,13 @@ const REF_FIELDS = {
   },
   cycle_goal_candidate_batch: {
     merchant_ref: ['merchant'],
+    knowledge_base_ref: ['brand_knowledge_base'],
     run_ref: ['run'],
   },
-  cycle_goal_candidate: { merchant_ref: ['merchant'] },
+  cycle_goal_candidate: { merchant_ref: ['merchant'], knowledge_base_ref: ['brand_knowledge_base'] },
   cycle_goal_selection: {
     merchant_ref: ['merchant'],
+    knowledge_base_ref: ['brand_knowledge_base'],
     supersedes_ref: ['cycle_goal_selection'],
   },
   strategy_output: {

@@ -1,0 +1,55 @@
+TAP version 13
+# Subtest: four completed real-code-path weeks require all 40 independent observations
+ok 1 - four completed real-code-path weeks require all 40 independent observations
+  ---
+  duration_ms: 23392.635125
+  ...
+# Subtest: a three-week schedule cannot shrink the required post-change matrix
+ok 2 - a three-week schedule cannot shrink the required post-change matrix
+  ---
+  duration_ms: 755.374709
+  ...
+# Subtest: post-change gate rejects completion before the actual fourth week ends
+ok 3 - post-change gate rejects completion before the actual fourth week ends
+  ---
+  duration_ms: 780.4955
+  ...
+# Subtest: each observation retains its confirmed publication and technical-retest lineage
+ok 4 - each observation retains its confirmed publication and technical-retest lineage
+  ---
+  duration_ms: 1006.392833
+  ...
+# Subtest: sample time cannot precede the actual publication completion
+ok 5 - sample time cannot precede the actual publication completion
+  ---
+  duration_ms: 916.185916
+  ...
+# Subtest: sample time cannot precede the actual technical completion
+ok 6 - sample time cannot precede the actual technical completion
+  ---
+  duration_ms: 917.537417
+  ...
+# Subtest: post-change aggregate cannot borrow another week reviews pair
+ok 7 - post-change aggregate cannot borrow another week reviews pair
+  ---
+  duration_ms: 823.139875
+  ...
+# Subtest: post-change aggregate cannot borrow another week samples pair
+ok 8 - post-change aggregate cannot borrow another week samples pair
+  ---
+  duration_ms: 952.019958
+  ...
+# Subtest: schedule anchor metadata is immutable even when its windows and matrix remain unchanged
+ok 9 - schedule anchor metadata is immutable even when its windows and matrix remain unchanged
+  ---
+  duration_ms: 847.448917
+  ...
+1..9
+# tests 9
+# suites 0
+# pass 9
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 31104.285375

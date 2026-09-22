@@ -1,0 +1,60 @@
+{
+  "artifacts": [
+    {
+      "path": "root-tests.log",
+      "sha256": "62e4564ae9effdc3626834b95e7a886c70be168c66a175ae230f36bd41c945e4"
+    },
+    {
+      "path": "transition-recovery-tests.log",
+      "sha256": "e4d76c1f2b1a9f0762b5ef770c0a4a7ae70bb4acf9a90985df46d636a8c784ef"
+    },
+    {
+      "path": "postchange-tests.log",
+      "sha256": "a1ef7d8baa35426f88cf1732f5c32826d40e21ead7423477f25cd59e01032ac8"
+    },
+    {
+      "path": "owner-recovery-tests.log",
+      "sha256": "f28b279c77765ddf5502e5dcf36aa49ba0af5bf2a0977a0b918ba7b4beebda13"
+    },
+    {
+      "path": "receiver-real-model-smoke/summary.json",
+      "sha256": "d89bd650854f6efae01894857439d6da2b700a2ea3c87d737cb2de5b40ac3639"
+    },
+    {
+      "path": "analytics-resource-probe.json",
+      "sha256": "e4db0a65feba08294a091a6a4630a0068964435997847b6245d6ed724cc1792a"
+    }
+  ],
+  "business_execution": "paused_by_owner",
+  "checked_at": "2026-09-20T14:09:57.916Z",
+  "formal_real_cycles_completed": 0,
+  "formal_real_cycles_created": 0,
+  "google_adc_login": {
+    "credentials_saved": true,
+    "data_api_verified_after_login": false,
+    "process_exit_code": 0
+  },
+  "heartbeat_status": "PAUSED",
+  "knowledge_decision": "defer",
+  "last_execution_clock_recovery": {
+    "passed": 24,
+    "tests": 24
+  },
+  "owner_recovery_and_publication": {
+    "passed": 31,
+    "tests": 31
+  },
+  "publication_week_boundaries": {
+    "passed": 9,
+    "tests": 9
+  },
+  "real_business_effect_verified": false,
+  "root": {
+    "failed": 0,
+    "passed": 448,
+    "skipped": 0,
+    "tests": 448
+  },
+  "schema_version": "geo-real-cycle-engineering-acceptance-v1",
+  "scope": "Local engineering and isolated real-model validation. Formal business cycles have not started."
+}

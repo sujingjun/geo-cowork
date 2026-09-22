@@ -15,13 +15,35 @@ if (['collect-playwright', 'resume-collection'].includes(command)) {
   };
   const { collectPlaywright } = await import('./lib/playwright-collector.mjs');
   try {
-    const result = await collectPlaywright({
-      outputDir,
-      platform: option('platform'),
-      provider: option('provider'),
-      model: option('model'),
-      resume: command === 'resume-collection',
-    });
+    let result;
+    if (option('workspace')) {
+      const { formalSlots, collectFormalSlot } = await import(
+        './lib/real-sampling.mjs'
+      );
+      const workspace = path.resolve(option('workspace'));
+      const slots = await formalSlots(
+        workspace,
+        option('purpose') ?? 'baseline',
+      );
+      const slot = slots.find((item) => item.id === option('slot'));
+      if (!slot)
+        throw Object.assign(
+          new Error('Select an exact frozen --slot in the formal workspace'),
+          { code: 'FORMAL_SLOT_MISMATCH' },
+        );
+      if (option('platform') && option('platform') !== slot.platform)
+        throw Object.assign(new Error('Platform differs from frozen slot'), {
+          code: 'FORMAL_SLOT_MISMATCH',
+        });
+      result = await collectFormalSlot(workspace, slot);
+    } else
+      result = await collectPlaywright({
+        outputDir,
+        platform: option('platform'),
+        provider: option('provider'),
+        model: option('model'),
+        resume: command === 'resume-collection',
+      });
     console.log(JSON.stringify(result, null, 2));
     if (result.status === 'waiting_human') process.exitCode = 1;
   } catch (error) {

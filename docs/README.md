@@ -1,5 +1,10 @@
 # 文档导航
 
+## 2026-09-20 正式真实双周期
+
+当前执行入口：[Spec 0015](specs/0015-authorized-real-two-cycle.md)、[Plan](plans/2026-09-20-authorized-real-two-cycle-plan.md)、[Task](tasks/2026-09-20-authorized-real-two-cycle.md)、[主 Agent 验收 Record](records/2026-09-20-authorized-real-two-cycle-record.md)、[操作手册](runbooks/authorized-real-two-cycle.md)。工程实现和真实业务周期分别验收；Owner当前要求仅工程复验收尾，真实执行与heartbeat已暂停，知识批准为defer。
+
+
 本页只负责导航当前权威入口、现有目录和迁移说明；流程、文档分类、状态与交接规则以 [`docs/workflow.md`](workflow.md) 为唯一细节来源，本页不复制或改变其规则。
 
 ## 权威入口
@@ -214,7 +219,7 @@ Owner 已批准 M5 两槽英文主线、中文可选辅助和同对象语义合�
 
 其余文档类别（原型、Runbook、Release、复盘和经验）的目录契约与建档规则见 `docs/workflow.md` 第 2 章；各类目录在首次出现 canonical 文档时创建并加入本导航。
 
-## 2026-09-16 当前开发入口
+## 2026-09-16 历史工程验收入口
 
 [知识驱动 GEO 全流程计划](plans/2026-09-16-knowledge-driven-geo-e2e-plan.md) 是当前 Owner 已要求实施的任务；旧真实周期 roadmap 已归档。自定义模型只保留切换配置，本次真实提取使用 DeepSeek。
 

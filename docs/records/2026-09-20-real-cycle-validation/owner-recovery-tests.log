@@ -1,0 +1,165 @@
+TAP version 13
+# Subtest: real Review fields bind exact snapshot sources and preserve adverse/unknown outcomes
+ok 1 - real Review fields bind exact snapshot sources and preserve adverse/unknown outcomes
+  ---
+  duration_ms: 502.50325
+  ...
+# Subtest: real candidate batch and selection materialize with explicit scope and complete hash closure
+ok 2 - real candidate batch and selection materialize with explicit scope and complete hash closure
+  ---
+  duration_ms: 661.845125
+  ...
+# Subtest: multiple candidates require a valid explicit choice before persisting approval
+ok 3 - multiple candidates require a valid explicit choice before persisting approval
+  ---
+  duration_ms: 649.725333
+  ...
+# Subtest: selected candidate is exact, all others are deferred, and Goal approval stays separate
+ok 4 - selected candidate is exact, all others are deferred, and Goal approval stays separate
+  ---
+  duration_ms: 1654.621875
+  ...
+# Subtest: candidate rule drift and a changed decided Review block next-goal execution
+ok 5 - candidate rule drift and a changed decided Review block next-goal execution
+  ---
+  duration_ms: 691.228875
+  ...
+# Subtest: Cycle 2 accepts only its separately approved goal-specific knowledge slice
+ok 6 - Cycle 2 accepts only its separately approved goal-specific knowledge slice
+  ---
+  duration_ms: 1002.373209
+  ...
+# Subtest: interrupted approved Cycle 2 publication resumes its exact object bundle and root plan
+ok 7 - interrupted approved Cycle 2 publication resumes its exact object bundle and root plan
+  ---
+  duration_ms: 1151.192125
+  ...
+# Subtest: real Review assembly creates a scoped review snapshot through the actual cutoff interface
+ok 8 - real Review assembly creates a scoped review snapshot through the actual cutoff interface
+  ---
+  duration_ms: 509.379791
+  ...
+# Subtest: online preflight and inbox are repeatable zero-write reports with absent KBASE and no plan
+ok 9 - online preflight and inbox are repeatable zero-write reports with absent KBASE and no plan
+  ---
+  duration_ms: 227.711791
+  ...
+# Subtest: preflight/inbox with preparation plan preserve all files and expose specific data limitations
+ok 10 - preflight/inbox with preparation plan preserve all files and expose specific data limitations
+  ---
+  duration_ms: 145.802333
+  ...
+# Subtest: report writes only its requested overview and cannot imply a missing KBASE is a completed cycle
+ok 11 - report writes only its requested overview and cannot imply a missing KBASE is a completed cycle
+  ---
+  duration_ms: 120.982375
+  ...
+# Subtest: start prepares one immutable knowledge review package using only explicitly cached observations
+ok 12 - start prepares one immutable knowledge review package using only explicitly cached observations
+  ---
+  duration_ms: 351.130667
+  ...
+# Subtest: Owner reject stays visible, does not approve knowledge and replays without unrelated drift
+ok 13 - Owner reject stays visible, does not approve knowledge and replays without unrelated drift
+  ---
+  duration_ms: 349.739541
+  ...
+# Subtest: Owner defer stays visible, does not approve knowledge and replays without unrelated drift
+ok 14 - Owner defer stays visible, does not approve knowledge and replays without unrelated drift
+  ---
+  duration_ms: 395.061625
+  ...
+# Subtest: defer can become reject with a historical receipt; a final rejection cannot be turned into approval
+ok 15 - defer can become reject with a historical receipt; a final rejection cannot be turned into approval
+  ---
+  duration_ms: 188.076208
+  ...
+# Subtest: changed review target is refused without recording Owner approval or creating KBASE
+ok 16 - changed review target is refused without recording Owner approval or creating KBASE
+  ---
+  duration_ms: 121.366375
+  ...
+# Subtest: online execution_scope contamination is rejected before any preparation write
+ok 17 - online execution_scope contamination is rejected before any preparation write
+  ---
+  duration_ms: 32.096667
+  ...
+# Subtest: authorization byte drift is reported read-only and rejects write commands before recovery journals are processed
+ok 18 - authorization byte drift is reported read-only and rejects write commands before recovery journals are processed
+  ---
+  duration_ms: 92.051083
+  ...
+# Subtest: expired authorization fails before starting knowledge preparation and preserves all artifacts
+ok 19 - expired authorization fails before starting knowledge preparation and preserves all artifacts
+  ---
+  duration_ms: 55.067959
+  ...
+# Subtest: Owner approval publishes the complete KBASE/Answer/Release group with one directory rename and preserves old facts
+ok 20 - Owner approval publishes the complete KBASE/Answer/Release group with one directory rename and preserves old facts
+  ---
+  duration_ms: 283.407916
+  ...
+# Subtest: continue recovers a persisted Owner approval after group publish but before identity switch and application receipt
+ok 21 - continue recovers a persisted Owner approval after group publish but before identity switch and application receipt
+  ---
+  duration_ms: 381.558417
+  ...
+# Subtest: public read-back rejects private, mapped, reserved and multicast DNS answers
+ok 22 - public read-back rejects private, mapped, reserved and multicast DNS answers
+  ---
+  duration_ms: 4.504875
+  ...
+# Subtest: HTTPS socket is pinned to checked DNS and cross-origin redirects are rejected
+ok 23 - HTTPS socket is pinned to checked DNS and cross-origin redirects are rejected
+  ---
+  duration_ms: 1.128667
+  ...
+# Subtest: same-origin bounded redirects work and non-HTML responses are not publication proof
+ok 24 - same-origin bounded redirects work and non-HTML responses are not publication proof
+  ---
+  duration_ms: 2.7065
+  ...
+# Subtest: manual receipt creates a draft before a distinct Owner confirmation; retries reuse capture
+ok 25 - manual receipt creates a draft before a distinct Owner confirmation; retries reuse capture
+  ---
+  duration_ms: 770.034
+  ...
+# Subtest: read-back rejects partial excerpts and text absent from actual page
+ok 26 - read-back rejects partial excerpts and text absent from actual page
+  ---
+  duration_ms: 322.371791
+  ...
+# Subtest: foreign or modified publication decisions cannot confirm a draft
+ok 27 - foreign or modified publication decisions cannot confirm a draft
+  ---
+  duration_ms: 554.552584
+  ...
+# Subtest: confirmed proof rejects stale proposal bytes and raw proof tampering
+ok 28 - confirmed proof rejects stale proposal bytes and raw proof tampering
+  ---
+  duration_ms: 441.886542
+  ...
+# Subtest: technical retest records all nine M4 outcomes, warnings, and recovers missing schedule
+ok 29 - technical retest records all nine M4 outcomes, warnings, and recovers missing schedule
+  ---
+  duration_ms: 884.831
+  ...
+# Subtest: content modification creates an immutable successor and requires a new Owner decision
+ok 30 - content modification creates an immutable successor and requires a new Owner decision
+  ---
+  duration_ms: 395.193
+  ...
+# Subtest: evidence-only recommendations remain nonpublishable after modification and reapproval
+ok 31 - evidence-only recommendations remain nonpublishable after modification and reapproval
+  ---
+  duration_ms: 469.634125
+  ...
+1..31
+# tests 31
+# suites 0
+# pass 31
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 7284.033875

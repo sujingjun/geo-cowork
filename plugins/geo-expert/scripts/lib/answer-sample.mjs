@@ -72,6 +72,24 @@ export function assertManualAnswerPrivacy(answerText) {
   return answerText;
 }
 
+// Formal metadata includes an authorization *reference*, never credentials.
+export function assertRealCapturePrivacy(capture) {
+  const visit = (value, trail = []) => {
+    if (Array.isArray(value)) { value.forEach((item, i) => visit(item, [...trail, i])); return; }
+    if (value && typeof value === 'object') {
+      for (const [key, item] of Object.entries(value)) {
+        if (key === 'authorization' && trail.length === 0 && item && typeof item === 'object'
+            && Object.keys(item).every(k => ['ref', 'sha256', 'expires_at'].includes(k))) continue;
+        if (FORBIDDEN_KEYS.has(key.toLowerCase()) || ['answer_html', 'html', 'screenshot', 'dom', 'account_id', 'user_id', 'email', 'email_address', 'session_id', 'localstorage', 'sessionstorage', 'apikey'].includes(key.toLowerCase()))
+          throw new AnswerSampleError('PRIVACY_SCOPE_VIOLATION', 'Formal capture contains account, credential or unscoped page data');
+        visit(item, [...trail, key]);
+      }
+    } else if (typeof value === 'string' && value.trim()) assertManualAnswerPrivacy(value);
+  };
+  visit(capture);
+  return capture;
+}
+
 function requiredRoles(sample) {
   if (['success', 'refusal'].includes(sample.outcome)) return ['answer_text'];
   if (['timeout', 'no_result', 'challenge', 'system_failure'].includes(sample.outcome)) {
@@ -128,7 +146,17 @@ async function writeArtifacts({ workspace, runId, sample }) {
   return descriptors;
 }
 
-export async function materializeFixtureSample({ workspace, plan, sample }) {
+export async function materializeFixtureSample(args) {
+  return materializeRecordedSample(args);
+}
+
+export async function materializeRealSample(args) {
+  const { assertRealSlot } = await import('./real-cycle-contract.mjs');
+  assertRealSlot(args.slot, args.capture, args.priorCaptures ?? []);
+  return materializeRecordedSample({ ...args, realCapture: args.capture });
+}
+
+async function materializeRecordedSample({ workspace, plan, sample, realCapture }) {
   assertNoSensitiveFixtureInput(sample);
   validateArtifactPlan(sample);
   const graph = await loadWorkspaceGraph({ workspace });
@@ -153,7 +181,12 @@ export async function materializeFixtureSample({ workspace, plan, sample }) {
     updated_at: sample.captured_at,
     title: `Recorded sample ${sample.ordinal}`,
     ...(profile.test_scope ? { test_scope: { ...profile.test_scope } } : {}),
-    ...(sample.extraction ? {extensions:{'geo.extraction':sample.extraction}} : {}),
+    ...((sample.extraction || realCapture) ? {extensions:{
+      ...(sample.extraction ? {'geo.extraction':sample.extraction} : {}),
+      ...(realCapture ? {'geo.real_capture': { cycle_ref: realCapture.cycle_ref, knowledge_base_ref: realCapture.knowledge_base_ref,
+        conversation_id: realCapture.conversation_id, result_url: realCapture.result_url, window_id: realCapture.window.id,
+        raw_path: sample.capture_path, raw_sha256: sample.capture_sha256 }} : {}),
+    }} : {}),
     purpose: plan.purpose,
     query_ref: query.id,
     query_version: query.version,
@@ -180,14 +213,14 @@ export async function materializeFixtureSample({ workspace, plan, sample }) {
     ...(sample.retry_of_ref ? { retry_of_ref: sample.retry_of_ref } : {}),
     outcome: sample.outcome,
     captured_at: sample.captured_at,
-    collection_method: 'recorded_fixture',
+    collection_method: realCapture ? profile.collection_method : 'recorded_fixture',
     artifacts,
     raw_manifest_sha256: rawManifestSha(artifacts),
     privacy: {
       account_identifier_stored: false,
       credentials_stored: false,
       answer_region_only: true,
-      redaction_notes: ['Synthetic .invalid recorded fixture; no account data.'],
+      redaction_notes: [realCapture ? 'Real consumer answer region only; account data excluded.' : 'Synthetic .invalid recorded fixture; no account data.'],
     },
     ...(plan.purpose === 'post_change_retest' ? { publication_refs: sample.publication_refs ?? [], technical_retest_run_refs: sample.technical_retest_run_refs ?? [], baseline_aggregation_refs: sample.baseline_aggregation_refs ?? [] } : {}),
     ...(sample.cancellation ? { cancellation: sample.cancellation } : {}),

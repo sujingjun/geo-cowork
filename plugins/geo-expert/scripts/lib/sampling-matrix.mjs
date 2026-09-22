@@ -14,6 +14,13 @@ export async function assertSamplingMatrix(
 ) {
   const graph = await loadWorkspaceGraph({ workspace });
   const cycle = graph.byId.get(snapshot.cycle_ref)?.data;
+  if (cycle?.execution_scope === 'authorized_real')
+    return (await import('./real-cycle-progress.mjs')).assertRealSamplingGate(
+      workspace,
+      snapshot,
+      stage,
+      objects,
+    );
   if (!cycle?.extensions?.['geo.journey']) return;
   if (!['baseline_recorded', 'answer_retest_completed'].includes(stage)) return;
   const purpose =

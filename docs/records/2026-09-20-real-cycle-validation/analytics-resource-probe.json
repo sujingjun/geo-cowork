@@ -1,0 +1,21 @@
+{
+  "schema_version": "geo-analytics-resource-probe-v1",
+  "captured_at": "2026-09-20T12:58:21.734Z",
+  "property_id": "356373250",
+  "site_url": "https://www.myyshop.com/",
+  "access_mode": "read_only",
+  "registration_owner_confirmed": false,
+  "candidate_allowlist": [
+    "sign_up",
+    "signup",
+    "register",
+    "registration",
+    "registration_complete",
+    "complete_registration"
+  ],
+  "status": "unavailable",
+  "error_category": "HTTP_400",
+  "authentication_status": "unavailable",
+  "authentication_error": "invalid_grant",
+  "authentication_subtype": "invalid_rapt"
+}

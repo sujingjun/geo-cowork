@@ -1,0 +1,233 @@
+{
+  "scope": "isolated semantic validation only; all business input is explicit fixture data",
+  "input": {
+    "goal": {
+      "id": "GOAL-ISOLATED-REVIEW",
+      "record_type": "perception_goal",
+      "goal_statement": "Represent documented scope accurately."
+    },
+    "baseline": [
+      {
+        "id": "AGG-ISOLATED-BASE",
+        "record_type": "answer_aggregation",
+        "purpose": "baseline",
+        "status": "computed",
+        "metrics": {
+          "correct_observations": 2,
+          "total_observations": 2
+        }
+      }
+    ],
+    "retests": [
+      {
+        "id": "AGG-ISOLATED-RETEST",
+        "record_type": "answer_aggregation",
+        "purpose": "post_change_retest",
+        "status": "computed",
+        "metrics": {
+          "correct_observations": 1,
+          "total_observations": 2
+        }
+      }
+    ],
+    "signals": [
+      {
+        "id": "BSIG-ISOLATED-REVIEW",
+        "record_type": "business_signal",
+        "calculation": {
+          "state": "insufficient_data",
+          "value": null,
+          "explanation": "Registration event definition is unavailable."
+        },
+        "causal_claim": false
+      }
+    ],
+    "analytics": [
+      {
+        "metric": "ai_visits",
+        "value": 0,
+        "state": "observed"
+      },
+      {
+        "metric": "registrations",
+        "value": null,
+        "state": "unavailable"
+      }
+    ],
+    "evidence": [
+      {
+        "id": "Q-ISOLATED-REVIEW",
+        "record_type": "query",
+        "status": "formal",
+        "query_text": "What scope is documented?"
+      },
+      {
+        "id": "AGG-ISOLATED-BASE",
+        "record_type": "answer_aggregation",
+        "purpose": "baseline",
+        "status": "computed",
+        "metrics": {
+          "correct_observations": 2,
+          "total_observations": 2
+        }
+      },
+      {
+        "id": "AGG-ISOLATED-RETEST",
+        "record_type": "answer_aggregation",
+        "purpose": "post_change_retest",
+        "status": "computed",
+        "metrics": {
+          "correct_observations": 1,
+          "total_observations": 2
+        }
+      }
+    ]
+  },
+  "analysis": {
+    "output": {
+      "perception_goal": "partial",
+      "observations": [
+        "Baseline answer aggregation AGG-ISOLATED-BASE is computed with correct_observations=2 of total_observations=2.",
+        "Post-change retest aggregation AGG-ISOLATED-RETEST is computed with correct_observations=1 of total_observations=2.",
+        "Formal query Q-ISOLATED-REVIEW asks 'What scope is documented?'.",
+        "Business signal BSIG-ISOLATED-REVIEW has insufficient_data state, value null, and no causal claim.",
+        "Analytics: ai_visits observed value 0; registrations unavailable with value null."
+      ],
+      "limitations": [
+        "Only aggregate counts are supplied; individual answers or incorrect observation details are not available.",
+        "Both baseline and retest have total_observations=2, so the observed change is based on a very small sample.",
+        "The business signal is insufficient_data and registrations are unavailable, so business outcome cannot be assessed.",
+        "No causal inference can be made about any change or intervention.",
+        "The post-change retest shows 1 correct out of 2, but without per-observation labels the nature of the incorrect observation is unknown."
+      ],
+      "next_candidates": [
+        {
+          "kind": "query_cluster",
+          "source_refs": [
+            "Q-ISOLATED-REVIEW",
+            "AGG-ISOLATED-BASE",
+            "AGG-ISOLATED-RETEST"
+          ],
+          "goal_statement": "Clarify whether the documented scope is represented accurately after the change.",
+          "success_question": "Do additional observations on the documented-scope query cluster show correct representation of the documented scope?",
+          "query_cluster_key": "documented_scope",
+          "rationale": "Baseline was 2/2 correct and post-change retest was 1/2 correct; this small adverse shift warrants targeted follow-up without asserting causation.",
+          "priority": 0
+        }
+      ]
+    },
+    "audit": {
+      "id": "MODEL-7d997d12-25d1-4f36-9b37-759b23368aba",
+      "provider": "deepseek",
+      "model": "deepseek-flash",
+      "prompt_sha256": "04b8f574561bde8296c2806fcfe96188ddecb35654c97cd2647313a41349bcc1",
+      "input_sha256": "24196ed2117d6665de3cc7aa743983a0c0479365a01fbe1767883bdf2d9a7391",
+      "started_at": "2026-09-20T13:31:15.115Z",
+      "status": "completed",
+      "request_options": {
+        "thinking": "enabled",
+        "reasoning_effort": "low"
+      },
+      "http_status": 200,
+      "response_model": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 601,
+        "completion_tokens": 2188,
+        "total_tokens": 2789,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 1802
+        },
+        "prompt_cache_hit_tokens": 0,
+        "prompt_cache_miss_tokens": 601
+      },
+      "finish_reason": "stop",
+      "output_sha256": "50ca1229be90fb86a96cabec3318e77bcbaa49f5b28e28e9f0105ea2c99e73a0",
+      "completed_at": "2026-09-20T13:31:26.262Z",
+      "duration_ms": 11147
+    }
+  },
+  "fields": {
+    "goal_results": [
+      {
+        "goal_entry_key": "1111111111111111111111111111111111111111111111111111111111111111",
+        "perception_goal": "partial",
+        "observations": [
+          "Baseline answer aggregation AGG-ISOLATED-BASE is computed with correct_observations=2 of total_observations=2.",
+          "Post-change retest aggregation AGG-ISOLATED-RETEST is computed with correct_observations=1 of total_observations=2.",
+          "Formal query Q-ISOLATED-REVIEW asks 'What scope is documented?'.",
+          "Business signal BSIG-ISOLATED-REVIEW has insufficient_data state, value null, and no causal claim.",
+          "Analytics: ai_visits observed value 0; registrations unavailable with value null."
+        ],
+        "business_signal_entry_keys": [
+          "5555555555555555555555555555555555555555555555555555555555555555"
+        ],
+        "limitations": [
+          "Only aggregate counts are supplied; individual answers or incorrect observation details are not available.",
+          "Both baseline and retest have total_observations=2, so the observed change is based on a very small sample.",
+          "The business signal is insufficient_data and registrations are unavailable, so business outcome cannot be assessed.",
+          "No causal inference can be made about any change or intervention.",
+          "The post-change retest shows 1 correct out of 2, but without per-observation labels the nature of the incorrect observation is unknown.",
+          "Observed changes do not establish causality.",
+          "Workflow completion does not prove positive business impact."
+        ],
+        "forbidden_conclusions": [
+          "Observed changes do not establish causality.",
+          "Workflow completion does not prove positive business impact."
+        ]
+      }
+    ],
+    "next_cycle_candidate_inputs": [
+      {
+        "candidate_kind": "query_cluster",
+        "source_goal_entry": {
+          "entry_key": "1111111111111111111111111111111111111111111111111111111111111111",
+          "object_id": "GOAL-ISOLATED-REVIEW",
+          "record_type": "perception_goal",
+          "object_version": "1.0.0",
+          "file_sha256": "ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff"
+        },
+        "source_entries": [
+          {
+            "entry_key": "2222222222222222222222222222222222222222222222222222222222222222",
+            "object_id": "Q-ISOLATED-REVIEW",
+            "record_type": "query",
+            "object_version": "1.0.0",
+            "file_sha256": "ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff"
+          },
+          {
+            "entry_key": "3333333333333333333333333333333333333333333333333333333333333333",
+            "object_id": "AGG-ISOLATED-BASE",
+            "record_type": "answer_aggregation",
+            "object_version": "1.0.0",
+            "file_sha256": "ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff"
+          },
+          {
+            "entry_key": "4444444444444444444444444444444444444444444444444444444444444444",
+            "object_id": "AGG-ISOLATED-RETEST",
+            "record_type": "answer_aggregation",
+            "object_version": "1.0.0",
+            "file_sha256": "ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff"
+          }
+        ],
+        "goal_statement": "Clarify whether the documented scope is represented accurately after the change.",
+        "success_question": "Do additional observations on the documented-scope query cluster show correct representation of the documented scope?",
+        "query_cluster_key": "documented_scope",
+        "evidence_gaps": [],
+        "risks": [
+          "Only aggregate counts are supplied; individual answers or incorrect observation details are not available.",
+          "Both baseline and retest have total_observations=2, so the observed change is based on a very small sample.",
+          "The business signal is insufficient_data and registrations are unavailable, so business outcome cannot be assessed.",
+          "No causal inference can be made about any change or intervention.",
+          "The post-change retest shows 1 correct out of 2, but without per-observation labels the nature of the incorrect observation is unknown."
+        ],
+        "rank_inputs": {
+          "priority": 0
+        },
+        "rationale": "Baseline was 2/2 correct and post-change retest was 1/2 correct; this small adverse shift warrants targeted follow-up without asserting causation."
+      }
+    ]
+  }
+}

@@ -221,7 +221,7 @@ export async function assembleCycleReview({ workspace, plan }) {
     version: '1.0.0',
     created_at: cutoff.cycle.data.updated_at,
     updated_at: cutoff.cycle.data.updated_at,
-    title: 'Synthetic Cycle Review',
+    title: cutoff.cycle.data.test_scope ? 'Synthetic Cycle Review' : 'Real Cycle Review',
     ...(cutoff.cycle.data.test_scope ? { test_scope: { ...cutoff.cycle.data.test_scope } } : { execution_scope: cutoff.cycle.data.execution_scope, knowledge_base_ref: cutoff.cycle.data.knowledge_base_ref }),
     merchant_ref: plan.merchant_ref,
     cycle_ref: plan.cycle_ref,
@@ -231,14 +231,15 @@ export async function assembleCycleReview({ workspace, plan }) {
     goal_results: plan.goal_results,
     next_cycle_candidate_inputs: plan.next_cycle_candidate_inputs,
   };
+  const body = cutoff.cycle.data.test_scope ? '# Synthetic Cycle Review\n' : '# Real Cycle Review\n';
   await preflightLifecycleWrite({
-    workspace: root, data, body: '# Synthetic Cycle Review\n', refClosure: false,
+    workspace: root, data, body, refClosure: false,
   });
   await materializeCycleSnapshot({ workspace: root, plan: snapshot });
   const result = await writeCreateOnly(
     root,
     plan.waiting_review.path,
-    serializeMarkdownObject(data, '# Synthetic Cycle Review\n'),
+    serializeMarkdownObject(data, body),
     { idempotent: true, conflictCode: 'CYCLE_INPUT_SNAPSHOT_CONFLICT' },
   );
   return { action: result.action, data, review_snapshot: snapshot };
@@ -299,13 +300,14 @@ export async function decideCycleReview({ workspace, decision }) {
   };
   const relative = decision.decided_review.path
     ?? `cycles/m6/reviews/${data.id.toLowerCase()}.md`;
+  const body = waiting.data.test_scope ? '# Decided Synthetic Cycle Review\n' : '# Decided Real Cycle Review\n';
   await preflightLifecycleWrite({
-    workspace: root, data, body: '# Decided Synthetic Cycle Review\n', refClosure: false,
+    workspace: root, data, body, refClosure: false,
   });
   const result = await writeCreateOnly(
     root,
     relative,
-    serializeMarkdownObject(data, '# Decided Synthetic Cycle Review\n'),
+    serializeMarkdownObject(data, body),
     { idempotent: true, conflictCode: 'CYCLE_REVIEW_APPROVAL_REQUIRED' },
   );
   return { action: result.action, data };

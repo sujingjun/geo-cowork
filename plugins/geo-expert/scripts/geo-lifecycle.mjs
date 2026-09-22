@@ -34,7 +34,7 @@ import {
   walkMarkdownFiles,
   writeCreateOnly,
 } from './lib/workspace-paths.mjs';
-const JOURNEY_COMMANDS = ['start', 'continue', 'inbox', 'apply-feedback', 'report'];
+const JOURNEY_COMMANDS = ['preflight', 'start', 'continue', 'inbox', 'apply-feedback', 'report', 'receive-answer', 'record-publication'];
 const COMMANDS = new Set([
   ...JOURNEY_COMMANDS,
   'prepare-development-workspace', 'create-cycle', 'advance',
@@ -105,11 +105,23 @@ export async function createCycle(workspace, plan) {
     throw error;
   }
   const testOnly = validation.identity.workspace_mode === 'development_test';
+  if(testOnly && plan.runtime)throw Object.assign(new Error('Real runtime cannot be installed in a test workspace'),{code:'SYNTHETIC_REAL_REF_CONTAMINATION'});
+  if(!testOnly) {
+    const runtime=plan.runtime;
+    if(!runtime || runtime.cycle_ref!==plan.cycle_id || runtime.run_ref!==plan.run_id
+      ||runtime.merchant_ref!==plan.merchant_ref||runtime.knowledge_base_ref!==plan.knowledge_base_ref
+      ||runtime.goal_ref!==plan.goal_ref||runtime.query_set_ref!==plan.query_set_ref)
+      throw Object.assign(new Error('Real Cycle creation requires a bound execution runtime; use start/preflight'),{code:'REAL_CYCLE_PLAN_REQUIRED'});
+    await (await import('./lib/real-journey-store.mjs')).assertRealAuthorization(root,runtime);
+  }
+  if(!testOnly && plan.cycle_number===2)
+    await (await import('./lib/real-cycle-review.mjs')).assertRealCycleTwoBindings(root,plan.runtime??plan);
   if (!testOnly) {
     const readiness = await assessLifecycleReadiness({
       workspace: root,
       knowledgeBaseRef: plan.knowledge_base_ref,
       goalRef: plan.goal_ref,
+      querySetRef: plan.query_set_ref,
     });
     if (!readiness.real_cycle_start_ready) {
       const error = new Error('Real Cycle start readiness 未通过');
@@ -168,7 +180,7 @@ export async function createCycle(workspace, plan) {
       review_input_snapshot_version: null,
     });
   }
-  const createdAt = validation.knowledgeBase.updated_at;
+  const createdAt = testOnly ? validation.knowledgeBase.updated_at : (plan.created_at ?? new Date().toISOString());
   const cycle = {
     id: plan.cycle_id,
     record_type: 'cycle',
@@ -187,15 +199,16 @@ export async function createCycle(workspace, plan) {
     merchant_ref: plan.merchant_ref,
     knowledge_base_ref: plan.knowledge_base_ref,
     execution_scope: testOnly ? 'synthetic_test' : 'authorized_real',
-    cycle_number: 1,
+    cycle_number: plan.cycle_number ?? 1,
+    ...(plan.runtime ? { extensions: { 'geo.real_cycle': plan.runtime } } : {}),
     core_versions: { input_snapshot: { ref: snapshot.snapshot.id, version: snapshot.snapshot.version } },
     aggregate_stage: 'frozen',
     completion_scope: 'none',
     goal_tracks: tracks,
     transition_refs: [],
     cycle_review_version: null,
-    predecessor_review_version: null,
-    goal_selection_version: null,
+    predecessor_review_version: plan.predecessor_review_version ?? null,
+    goal_selection_version: plan.goal_selection_version ?? null,
   };
   snapshot.cycle = { path: plan.cycle_path, data: cycle };
   const materialized = await materializeCycleFreeze({ workspace: root, plan: snapshot });
@@ -406,6 +419,7 @@ export async function completeReviewPlan(root, request) {
 
 async function execute(args) {
   const root = path.resolve(args.workspace);
+  if(JOURNEY_COMMANDS.includes(args.command))return (await import('./lib/journey-entrypoints.mjs')).executeKnowledgeJourney(args);
   if (args.command === 'validate') return validateLifecycleWorkspace({ workspace: root });
   if (args.command === 'trace') return traceCycle({ workspace: root, cycleId: args.cycle });
   const plan = await readPlan(args.plan);
@@ -435,7 +449,7 @@ async function main() {
   try {
     const args = parseArgs(process.argv.slice(2));
     if (args.help) {
-      console.log('geo-lifecycle commands: start continue inbox apply-feedback report prepare-development-workspace create-cycle advance assemble-review trace validate propose-cycle-two apply-goal-selection');
+      console.log(`geo-lifecycle commands: ${[...COMMANDS].join(' ')}`);
       return;
     }
     if (!JOURNEY_COMMANDS.includes(args.command)) assertNetworkDisabled(args.command);

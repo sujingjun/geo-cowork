@@ -1,0 +1,43 @@
+# 首轮真实知识切片：事实与范围确认
+
+## 首轮目标
+让受众在有充分证据与明确边界的前提下准确理解 MyyShop 是什么。
+
+## 拟使用的英文答案
+MyyShop is a creator services platform for content creators worldwide. It provides tools, opportunities and services around creator onboarding, growth, engagement and monetization. Actual capabilities, eligibility, regional availability and service coverage remain subject to official information and business confirmation. This description does not mean every lifecycle service is currently available and does not promise income or growth.
+
+## 沿用的已批准事实
+- MyyShop 面向全球内容创作者。
+- MyyShop 围绕达人加入、成长、活跃与商业化提供工具、机会和服务。
+
+## 必须保留的限制
+- 地区范围、创作者定义与服务可用性均待业务负责人核验
+- Evidence remains insufficient: first_party
+- 生命周期阶段、产品能力、地区、资格与可用条件均待业务负责人核验
+- Evidence remains insufficient: data_or_case
+
+## 当前官网观察
+### https://www.myyshop.com/
+状态：200
+Opportunities — Brand Deals MyyFinds — Earn from Views Find Your Lane Get Your Free Value Report Blog Academy Newsroom What's New Creator Services Resources About Us Log in as Merchants Log in as Creators MyyShop - AI-driven global creator marketing platform MyyCompass Find Your Lane Start 100% Paid Collaborations 100% Free Samples 100% Cash Payouts 100% Paid Collabs 100% Free Samples 100% Cash Payouts MyyShop is an Al-driven global creator marketing platform Start Earning 50.9 K 8574 8 M 61.8 K Creators Thrive with MyyShop MyyShop supports creators at every stage. From nano influencers growing their first audience to established creators managing large-scale campaigns. Our platform is built to scale with your creativity. @alydoill 4.5 M Follows Why Join MyyShop Campaign Opportunities Massive global campaigns yearly; creators of all sizes can apply for content creation tasks. Growth Support Al tools + expert guidance to enhance content quality and campaign execution Transparent Earnings Real-time analytics dashboard; no platform withdrawal fees How to Register as MyyShop Creator 01 Register as MyyShop Creator Click "Log in as Creators", sign up with your Email or Phone. Check your email to verify. Jump to the home page. Connect your social media accounts to view offers. 02 Apply Offers After filling in your address, go to the Opportunities page. Apply for offers you are interested in. 03 Submit Content Go to “My Offers”. Check the progress of your offer. 04 Check and Withdraw Earnings Go to “Wallet”, check your earnings details and withdraw your earnings once reach $50. Start Earning M y y S h o p . . . *Free Samples only applicable to promotion order - original contents. MyyShop MyyFinds — Earn from Views Opportunities — Brand Deals About Us Resources Blog Academy Newsroom What's New Follow us Instagram Tiktok [email protected] 6161 Santa Monica Blvd., Los Angeles, CA 90038 Legal Terms of Condition Privacy Policy © 2020-2026 MyyShop Inc. All Rights Reserved 京ICP备18054285号 Email Top
+原始快照：cycles/real/20260920-cycle-1/knowledge-sources/AST-MYYSHOP-HOMEPAGE-001.json
+
+### https://www.myyshop.com/about-us
+状态：200
+Opportunities — Brand Deals MyyFinds — Earn from Views Find Your Lane Get Your Free Value Report Blog Academy Newsroom What's New Creator Services Resources About Us Log in as Merchants Log in as Creators This is MyyShop Empowering creators to monetize their influence and grow their earnings with AI-driven monetization tools. Start Monetizing Start Monetizing Our Mission At MyyShop, our mission is to redefine how creators monetize their influence. We believe the future of the creator economy belongs to those who can turn creativity into sustainable income. By building an open and intelligent ecosystem, we empower creators worldwide to unlock new possibilities, scale their impact, and shape the next generation of digital entrepreneurship. Who We Serve MyyShop supports creators worldwide—from beginners to those with millions of followers—by offering collaboration opportunities across multiple fields. Through brand deals and monetization tools such as MyyFinds, Free Value Reports, and a growing suite of creator tools, earning becomes simple and accessible. Creators can discover the right business path and grow with MyyShop. What We Do AI-Powered Monetization Powered by AI trained on 33M+ SKUs and 1.66M creators, MyyShop intelligently matches you with the most relevant brand opportunities. By continuously learning from creator feedback, we develop tools that help you boost productivity and monetize your content. Our current offerings, including MyyFinds and Free Value Reports, empower you to turn your influence into a sustainable source of income. Transparent Earnings MyyShop tracks the value your content generates, ensuring transparent payouts with clear attribution. By turning your creative work and MyyFinds sharing into quantifiable rewards, MyyShop empowers creators to build sustainable income streams . Platform Support If any issues arise during the collaboration, please contact our support team. We will review each case in accordance with our platform policies and provide a fair, transparent, and efficient resolution. In addition, our courses and case studies will help creators enhance monetization skills. Why Creators Choose MyyShop No Registration Restrictions & No Platform Fees Creators can use MyyShop even with 0 fans. MyyShop takes no commission on the earnings you generate through the platform, allowing you to focus entirely on your content creation. 100% Paid Cooperation & Free Samples Quickly connect your accounts on TikTok, Instagram, or YouTube to begin monetizing. Multiple Earning Methods & Ultra-low Withdrawal Threshold Creators on MyyShop can earn through brand deals—including content creation, product promotion, affiliate promotion, and exposure-based tools like MyyFinds. Additional rewards are available through platform campaigns and referrals. Once your balance reaches $50, you can request a withdrawal. Free Insight Report & Copyright Protection We offer creators Free Value Reports to see the real potential of their account. At the same time, your work is strictly protected, and no one can download them until your earn have been credited to your account. Reshape the Creator Economy The creator economy is evolving, and your creativity deserves to be rewarded. Join MyyShop to amplify your influence and turn your creativity into sustainable income . Start Monetizing M y y S h o p . . . *Free Samples only applicable to promotion order - original contents. MyyShop MyyFinds — Earn from Views Opportunities — Brand Deals About Us Resources Blog Academy Newsroom What's New Follow us Instagram Tiktok [email protected] 6161 Santa Monica Blvd., Los Angeles, CA 90038 Legal Terms of Condition Privacy Policy © 2020-2026 MyyShop Inc. All Rights Reserved 京ICP备18054285号 Email Top
+原始快照：cycles/real/20260920-cycle-1/knowledge-sources/AST-MYYSHOP-ABOUT-001.json
+
+批准仅确认该知识切片和英文表述供本轮使用，不表示公开网页已经更新，也不消除证据不足提示。当前官网观察尚未自动作为 Claim 支持证据。
+
+## 反馈
+
+请填写独立反馈文件：
+
+包：OWNER-KNOWLEDGE-CYC-MYYSHOP-REAL-20260920-01
+校验：734cafc352fe14878554f9caa4c0b0eb13f10ab3e2a9074daaf222adca7bbc21
+决定：approve / reject / defer
+决定人：
+时间：
+说明：
+
+本包为待审核材料，尚无批准。

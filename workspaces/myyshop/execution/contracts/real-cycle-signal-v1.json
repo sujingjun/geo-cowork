@@ -1,0 +1,15 @@
+{
+  "baseline_window": "PRE28",
+  "calculation": "daily_mean_difference_from_pre28",
+  "causal_claim": false,
+  "id": "myyshop-real-cycle-signal-v1",
+  "metric_ids": [
+    "ai_visits",
+    "ai_registration_events",
+    "gsc_clicks",
+    "gsc_impressions"
+  ],
+  "schema_version": "m6-signal-rule/1.0.0",
+  "scope": "authorized_real",
+  "version": "1.0.0"
+}

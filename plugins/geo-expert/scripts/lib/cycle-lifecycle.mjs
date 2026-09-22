@@ -243,7 +243,7 @@ async function applyIntent({
   return { updated, transitionPath, ownerId };
 }
 
-export async function advanceCycle({ workspace, plan }) {
+export async function advanceCycle({ workspace, plan, executionNow }) {
   const root = path.resolve(workspace);
   const computedFingerprint = operationPlanFingerprint(plan);
   const existing = await transitionsForOperation(root, plan.cycle_ref, plan.operation_id);
@@ -286,7 +286,7 @@ export async function advanceCycle({ workspace, plan }) {
     workspace: root,
     cycleId: plan.cycle_ref,
     ownerId: plan.lease.owner_id,
-    now: plan.lease.now,
+    now: executionNow ?? plan.lease.now,
     ttlMs: plan.lease.ttl_ms,
     inputFingerprint: computedFingerprint,
   });
@@ -310,7 +310,7 @@ export async function advanceCycle({ workspace, plan }) {
       ? { ...track, stage: plan.to_stage }
       : track);
     const summary = deriveCycleSummary(previewTracks);
-    const now = plan.lease.now;
+    const now = executionNow ?? plan.lease.now;
     const goalRef = await goalRefForEntryKey(root, lockedCycle.data, goalKey);
     if (!goalRef) throw new CycleLifecycleError('CYCLE_GATE_REQUIRED', 'Goal entry 未解析到 freeze CIS');
     const transition = transitionData({

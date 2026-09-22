@@ -1,0 +1,130 @@
+TAP version 13
+# Subtest: multi-goal fixture 明确每个 track 独立，aggregate 只可派生不直接推进其他 Goal
+ok 1 - multi-goal fixture 明确每个 track 独立，aggregate 只可派生不直接推进其他 Goal
+  ---
+  duration_ms: 0.842
+  ...
+# Subtest: Cycle aggregate 覆盖 prepared、waiting、completed/full、cancelled 与 terminal partial
+ok 2 - Cycle aggregate 覆盖 prepared、waiting、completed/full、cancelled 与 terminal partial
+  ---
+  duration_ms: 6.493875
+  ...
+# Subtest: 非法跳阶段、倒退、terminal 继续与跨 Goal gate 均在任何写入前失败
+ok 3 - 非法跳阶段、倒退、terminal 继续与跨 Goal gate 均在任何写入前失败
+  ---
+  duration_ms: 0.412792
+  ...
+# Subtest: advance 先预检与 exclusive lock，再持久化 transition CIS 和 CAS
+ok 4 - advance 先预检与 exclusive lock，再持久化 transition CIS 和 CAS
+  ---
+  duration_ms: 585.168834
+  ...
+# Subtest: expected Cycle version 不匹配时 CTR 不 applied，Cycle bytes 不变
+ok 5 - expected Cycle version 不匹配时 CTR 不 applied，Cycle bytes 不变
+  ---
+  duration_ms: 168.17275
+  ...
+# Subtest: 同 operation/fingerprint 幂等 kept；同 operation 不同 fingerprint 冲突
+ok 6 - 同 operation/fingerprint 幂等 kept；同 operation 不同 fingerprint 冲突
+  ---
+  duration_ms: 467.406875
+  ...
+# Subtest: CTR orphan intent 不计 applied；同输入 resume 附加，版本漂移新 CTR supersede 旧 intent
+ok 7 - CTR orphan intent 不计 applied；同输入 resume 附加，版本漂移新 CTR supersede 旧 intent
+  ---
+  duration_ms: 943.794125
+  ...
+# Subtest: lease 双 owner 竞争只有一个成功；stale takeover 保留前 owner 并提升 revision
+ok 8 - lease 双 owner 竞争只有一个成功；stale takeover 保留前 owner 并提升 revision
+  ---
+  duration_ms: 330.057
+  ...
+# Subtest: four completed real-code-path weeks require all 40 independent observations
+ok 9 - four completed real-code-path weeks require all 40 independent observations
+  ---
+  duration_ms: 18490.669208
+  ...
+# Subtest: a three-week schedule cannot shrink the required post-change matrix
+ok 10 - a three-week schedule cannot shrink the required post-change matrix
+  ---
+  duration_ms: 556.241583
+  ...
+# Subtest: post-change gate rejects completion before the actual fourth week ends
+ok 11 - post-change gate rejects completion before the actual fourth week ends
+  ---
+  duration_ms: 572.623125
+  ...
+# Subtest: each observation retains its confirmed publication and technical-retest lineage
+ok 12 - each observation retains its confirmed publication and technical-retest lineage
+  ---
+  duration_ms: 734.314625
+  ...
+# Subtest: sample time cannot precede the actual publication completion
+ok 13 - sample time cannot precede the actual publication completion
+  ---
+  duration_ms: 646.764625
+  ...
+# Subtest: sample time cannot precede the actual technical completion
+ok 14 - sample time cannot precede the actual technical completion
+  ---
+  duration_ms: 664.905667
+  ...
+# Subtest: post-change aggregate cannot borrow another week reviews pair
+ok 15 - post-change aggregate cannot borrow another week reviews pair
+  ---
+  duration_ms: 580.251916
+  ...
+# Subtest: post-change aggregate cannot borrow another week samples pair
+ok 16 - post-change aggregate cannot borrow another week samples pair
+  ---
+  duration_ms: 626.967458
+  ...
+# Subtest: schedule anchor metadata is immutable even when its windows and matrix remain unchanged
+ok 17 - schedule anchor metadata is immutable even when its windows and matrix remain unchanged
+  ---
+  duration_ms: 559.75025
+  ...
+# Subtest: full five-platform two-slot baseline advances only after exact Owner review, then freezes Matrix and trace evidence
+ok 18 - full five-platform two-slot baseline advances only after exact Owner review, then freezes Matrix and trace evidence
+  ---
+  duration_ms: 4984.431583
+  ...
+# Subtest: formal gate rejects omitted sample or reviewed successor without advancing Cycle
+ok 19 - formal gate rejects omitted sample or reviewed successor without advancing Cycle
+  ---
+  duration_ms: 2555.979833
+  ...
+# Subtest: formal gate rejects a missing canonical citation even when the raw and sample remain unchanged
+ok 20 - formal gate rejects a missing canonical citation even when the raw and sample remain unchanged
+  ---
+  duration_ms: 1376.671708
+  ...
+# Subtest: formal gate rejects window drift even if the raw file and its declared checksum are changed together
+ok 21 - formal gate rejects window drift even if the raw file and its declared checksum are changed together
+  ---
+  duration_ms: 1323.626584
+  ...
+# Subtest: formal gate requires exactly one byte-verified frozen matrix with the current full slot contract
+ok 22 - formal gate requires exactly one byte-verified frozen matrix with the current full slot contract
+  ---
+  duration_ms: 1267.873
+  ...
+# Subtest: phase recovery applies one persisted transition intent and repeated resume keeps the same Cycle bytes
+ok 23 - phase recovery applies one persisted transition intent and repeated resume keeps the same Cycle bytes
+  ---
+  duration_ms: 3146.95275
+  ...
+# Subtest: phase recovery reuses a completed gate snapshot after interruption before transition intent
+ok 24 - phase recovery reuses a completed gate snapshot after interruption before transition intent
+  ---
+  duration_ms: 2946.583916
+  ...
+1..24
+# tests 24
+# suites 0
+# pass 24
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 23940.331458

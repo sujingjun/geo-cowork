@@ -18,6 +18,8 @@ export async function executeKnowledgeJourney(args) {
     const identity = JSON.parse(
       await readFile(resolveWithin(args.workspace, 'workspace.json'), 'utf8'),
     );
+    if (identity.workspace_mode === 'online')
+      return (await import('./real-journey.mjs')).executeRealJourney(args);
     if (identity.workspace_mode !== 'development_test')
       throw Object.assign(
         new Error(

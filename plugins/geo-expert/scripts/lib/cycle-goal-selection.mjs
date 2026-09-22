@@ -19,8 +19,9 @@ function common(context, id, status) {
     version: '1.0.0',
     created_at: context.created_at,
     updated_at: context.created_at,
-    title: 'Synthetic Cycle Goal Selection',
-    test_scope: { ...context.test_scope },
+    title: context.test_scope ? 'Synthetic Cycle Goal Selection' : 'Real Cycle Goal Selection',
+    ...(context.test_scope ? {test_scope: { ...context.test_scope }} : {}),
+    ...(context.execution_scope === 'authorized_real' ? { execution_scope: 'authorized_real', knowledge_base_ref: context.knowledge_base_ref } : {}),
     merchant_ref: context.merchant_ref,
   };
 }
@@ -113,6 +114,8 @@ export function validateGoalSelection(data, { prior = null } = {}) {
         || data.merchant_ref !== prior.merchant_ref
         || data.batch_key !== prior.batch_key
         || !same(data.test_scope, prior.test_scope)
+        || data.execution_scope !== prior.execution_scope
+        || data.knowledge_base_ref !== prior.knowledge_base_ref
         || !same(data.source_cycle_review_version, prior.source_cycle_review_version)
         || !same(data.candidate_batch_version, prior.candidate_batch_version)
         || !same(data.candidate_versions, prior.candidate_versions)) {

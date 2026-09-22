@@ -1,0 +1,48 @@
+{
+  "ai_sources": [
+    "chatgpt.com",
+    "chat.openai.com",
+    "perplexity.ai",
+    "www.perplexity.ai",
+    "claude.ai",
+    "gemini.google.com",
+    "copilot.microsoft.com"
+  ],
+  "analytics": {
+    "calendar_policy": "complete_days_after_anchor",
+    "final_lag_days": 3,
+    "property_id": "356373250",
+    "property_time_zone": null,
+    "registration_approval_ref": null,
+    "registration_approval_sha256": null,
+    "registration_event": null,
+    "site_url": "https://www.myyshop.com/"
+  },
+  "causal_claim_allowed": false,
+  "id": "myyshop-real-cycle-measurement-v1",
+  "metrics": [
+    {
+      "definition": "Recognized allowlisted AI sessionSource sessions.",
+      "metric_id": "ai_visits",
+      "unit": "sessions"
+    },
+    {
+      "definition": "Owner-confirmed completed-registration event counts in recognized AI-source sessions; not deduplicated people.",
+      "metric_id": "ai_registration_events",
+      "unit": "events"
+    },
+    {
+      "definition": "GSC web property clicks.",
+      "metric_id": "gsc_clicks",
+      "unit": "clicks"
+    },
+    {
+      "definition": "GSC web property impressions.",
+      "metric_id": "gsc_impressions",
+      "unit": "impressions"
+    }
+  ],
+  "schema_version": "m6-measurement-contract/1.0.0",
+  "scope": "authorized_real",
+  "version": "1.0.0"
+}

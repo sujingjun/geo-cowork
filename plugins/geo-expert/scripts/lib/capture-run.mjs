@@ -6,6 +6,7 @@ import {
   stableStringify,
   resolveWithin,
 } from './workspace-paths.mjs';
+import { assertRealCapturePrivacy } from './answer-sample.mjs';
 import {
   extractAnswer,
   loadModelEnvironment,
@@ -23,11 +24,51 @@ const fail = (code, message) => {
 async function load(root) {
   return JSON.parse(await readFile(path.join(root, 'run.json'), 'utf8'));
 }
-async function withLock(root, work) {
+export async function withCaptureLock(root, work, name = 'run.lock') {
   await mkdir(root, { recursive: true });
-  const file = path.join(root, 'run.lock');
-  const lock = await open(file, 'wx').catch(() =>
-    fail('CAPTURE_RUN_BUSY', 'Another collector holds the run lease'),
+  const file = path.join(root, name);
+  let lock;
+  for (let attempt = 0; attempt < 2; attempt++) {
+    try {
+      lock = await open(file, 'wx');
+      break;
+    } catch (error) {
+      if (error.code !== 'EEXIST') throw error;
+      let recovery;
+      try {
+        recovery = await open(`${file}.recovery`, 'wx');
+      } catch (e) {
+        if (e.code === 'EEXIST')
+          fail('CAPTURE_RUN_BUSY', 'Capture lease recovery is in progress');
+        throw e;
+      }
+      try {
+        let owner;
+        try {
+          owner = JSON.parse(await readFile(file, 'utf8'));
+        } catch (e) {
+          if (e.code === 'ENOENT') continue;
+          fail('CAPTURE_RUN_BUSY', 'Capture lease requires inspection');
+        }
+        if (!Number.isSafeInteger(owner.pid) || owner.pid <= 0)
+          fail('CAPTURE_RUN_BUSY', 'Capture lease requires inspection');
+        try {
+          process.kill(owner.pid, 0);
+          fail('CAPTURE_RUN_BUSY', 'Another collector holds the run lease');
+        } catch (e) {
+          if (e.code !== 'ESRCH') throw e;
+        }
+        if (attempt) fail('CAPTURE_RUN_BUSY', 'Capture lease changed');
+        await unlink(file);
+      } finally {
+        await recovery.close();
+        await unlink(`${file}.recovery`);
+      }
+    }
+  }
+  if (!lock) fail('CAPTURE_RUN_BUSY', 'Capture lease changed during recovery');
+  await lock.writeFile(
+    JSON.stringify({ pid: process.pid, acquired_at: new Date().toISOString() }),
   );
   try {
     return await work();
@@ -39,25 +80,38 @@ async function withLock(root, work) {
 export async function prepareEngineeringCapture(
   root,
   query = 'What is MyyShop?',
+  formalPlan,
 ) {
   try {
     const old = await load(root);
     if (old.query.text !== query)
       fail('CAPTURE_QUERY_CONFLICT', 'Run query differs');
+    if (
+      (old.formal_plan_sha256 ?? null) !==
+      (formalPlan ? modelHash(stableStringify(formalPlan)) : null)
+    )
+      fail('CAPTURE_QUERY_CONFLICT', 'Frozen formal slot differs');
     return old;
   } catch (e) {
     if (e.code !== 'ENOENT') throw e;
   }
   const data = {
     schema_version: 'geo-engineering-capture-run-v1',
-    run_id: 'RUN-GEO-MCP-20260916',
-    purpose: 'engineering_validation',
+    run_id: formalPlan?.run_ref ?? 'RUN-GEO-MCP-20260916',
+    purpose: formalPlan?.purpose ?? 'engineering_validation',
     execution_scope: 'authorized_real',
     authorization:
+      formalPlan?.authorization ??
       'Owner 2026-09-16 implementation request: ChatGPT/Gemini/Perplexity once each, >=120 seconds apart',
+    ...(formalPlan
+      ? {
+          formal_plan_sha256: modelHash(stableStringify(formalPlan)),
+          formal_slot: formalPlan,
+        }
+      : {}),
     query: {
-      ref: 'Q-MYYSHOP-WHAT-IS-EN-BASELINE-001',
-      version: '1.0.0',
+      ref: formalPlan?.query_ref ?? 'Q-MYYSHOP-WHAT-IS-EN-BASELINE-001',
+      version: formalPlan?.query_version ?? '1.0.0',
       text: query,
       sha256: modelHash(query),
     },
@@ -80,10 +134,15 @@ export async function claimEngineeringSubmission(
   root,
   platform,
   now = new Date(),
+  beforeSubmit,
 ) {
-  return withLock(root, async () => {
+  return withCaptureLock(root, async () => {
     const run = await load(root);
     const item = run.platforms[platform];
+    if (run.formal_slot && run.formal_slot.platform !== platform)
+      fail('FORMAL_SLOT_MISMATCH', 'Wrong platform for frozen slot');
+    if (!Number.isFinite(now.getTime()))
+      fail('CAPTURE_INVALID', 'Invalid submission time');
     if (!item || item.submissions !== 0)
       fail(
         'SUBMISSION_UNKNOWN',
@@ -97,6 +156,7 @@ export async function claimEngineeringSubmission(
         'COLLECTION_RATE_LIMIT',
         'Wait at least 120 seconds between submissions',
       );
+    if (beforeSubmit) await beforeSubmit();
     item.status = 'submission_unknown';
     item.submissions = 1;
     item.submitted_at = now.toISOString();
@@ -106,14 +166,18 @@ export async function claimEngineeringSubmission(
   });
 }
 export async function recordEngineeringCapture(root, platform, raw) {
-  return withLock(root, async () => {
+  return withCaptureLock(root, async () => {
     const run = await load(root);
     const item = run.platforms[platform];
     if (!item || item.submissions !== 1)
       fail('CAPTURE_NOT_SUBMITTED', 'No matching submission');
     if (
-      !raw.answer_text?.trim() ||
-      !raw.captured_at ||
+      (!(
+        run.formal_slot &&
+        ['timeout', 'no_result', 'challenge', 'cancelled'].includes(raw.outcome)
+      ) &&
+        !raw.answer_text?.trim()) ||
+      !Number.isFinite(Date.parse(raw.captured_at)) ||
       Date.parse(raw.captured_at) < Date.parse(item.submitted_at)
     )
       fail('CAPTURE_INVALID', 'Missing answer or invalid collection time');
@@ -129,6 +193,11 @@ export async function recordEngineeringCapture(root, platform, raw) {
       return JSON.parse(
         await readFile(resolveWithin(root, item.capture_path), 'utf8'),
       );
+    if (run.formal_slot) {
+      if (raw.context_token !== item.context_token || !item.context_token)
+        fail('RESULT_BINDING_CHANGED', 'Capture context changed');
+      assertRealCapturePrivacy(raw);
+    }
     const data = {
       ...raw,
       platform,
@@ -197,7 +266,7 @@ export async function extractEngineeringCapture(root, platform, options = {}) {
   await writeCreateOnly(root, relative, stableStringify(extraction, 2), {
     idempotent: true,
   });
-  await withLock(root, async () => {
+  await withCaptureLock(root, async () => {
     const current = await load(root);
     current.platforms[platform].status = 'completed';
     current.platforms[platform].extractions = [
@@ -211,7 +280,7 @@ export async function extractEngineeringCapture(root, platform, options = {}) {
 export const readEngineeringCaptureRun = load;
 
 export async function bindEngineeringContext(root, platform, token) {
-  return withLock(root, async () => {
+  return withCaptureLock(root, async () => {
     const run = await load(root);
     const item = run.platforms[platform];
     if (!item || item.submissions)
@@ -220,4 +289,45 @@ export async function bindEngineeringContext(root, platform, token) {
     await atomicWrite(root, 'run.json', stableStringify(run, 2));
     return token;
   });
+}
+
+export async function claimRealWorkspaceSubmission(
+  workspace,
+  slotId,
+  now = new Date(),
+) {
+  return withCaptureLock(
+    path.join(workspace, 'execution'),
+    async () => {
+      let previous;
+      try {
+        previous = JSON.parse(
+          await readFile(
+            path.join(workspace, 'execution/real-capture-rate.json'),
+            'utf8',
+          ),
+        );
+      } catch (e) {
+        if (e.code !== 'ENOENT') throw e;
+      }
+      if (
+        !Number.isFinite(now.getTime()) ||
+        (previous &&
+          (!Number.isFinite(Date.parse(previous.submitted_at)) ||
+            now.getTime() - Date.parse(previous.submitted_at) < 120000))
+      )
+        fail(
+          'COLLECTION_RATE_LIMIT',
+          'At least 120 seconds between real submissions across the workspace',
+        );
+      const data = { submitted_at: now.toISOString(), slot_id: slotId };
+      await atomicWrite(
+        workspace,
+        'execution/real-capture-rate.json',
+        stableStringify(data, 2),
+      );
+      return data;
+    },
+    'real-capture-rate.lock',
+  );
 }

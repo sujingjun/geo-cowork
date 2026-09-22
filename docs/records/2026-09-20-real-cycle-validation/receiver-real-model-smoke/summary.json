@@ -1,0 +1,14 @@
+{
+  "completed_at": "2026-09-20T13:58:41.210Z",
+  "extraction_sha256": "89bdb37868995fb9831372bcc1d49e8cfb99301df005adcddde9bdcaaf47a15c",
+  "extraction_validation": "passed",
+  "model": "deepseek-flash",
+  "model_call": "MODEL-cbd3fd25-b278-41a1-96bc-fc6bfd235b79",
+  "original_answer_preserved": true,
+  "performed_by": "root final acceptance",
+  "provider": "deepseek",
+  "replay_kept_extraction": true,
+  "scope": "Isolated state-contract input with an actual DeepSeek call. This is not consumer-platform data, a formal MyyShop baseline, or a business decision.",
+  "status": "completed",
+  "zero_citations_preserved": true
+}

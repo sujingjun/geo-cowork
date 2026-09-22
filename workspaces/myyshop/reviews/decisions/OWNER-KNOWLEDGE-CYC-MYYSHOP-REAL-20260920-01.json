@@ -1,0 +1,10 @@
+{
+  "actor": "MyyShop Owner",
+  "at": "2026-09-20T14:05:35.222Z",
+  "decision": "defer",
+  "package_id": "OWNER-KNOWLEDGE-CYC-MYYSHOP-REAL-20260920-01",
+  "package_sha256": "734cafc352fe14878554f9caa4c0b0eb13f10ab3e2a9074daaf222adca7bbc21",
+  "raw_feedback": "包：OWNER-KNOWLEDGE-CYC-MYYSHOP-REAL-20260920-01\n校验：734cafc352fe14878554f9caa4c0b0eb13f10ab3e2a9074daaf222adca7bbc21\n决定：defer\n决定人：MyyShop Owner\n时间：2026-09-20T14:05:35.222Z\n说明：用户原文：暂缓知识批准。真实业务周期先不推进，复验后整体收尾。\n",
+  "reason": "用户原文：暂缓知识批准。真实业务周期先不推进，复验后整体收尾。",
+  "scope": "authorized_real"
+}

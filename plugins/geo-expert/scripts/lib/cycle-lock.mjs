@@ -7,7 +7,8 @@ import {
   stableStringify,
   writeCreateOnly,
 } from './workspace-paths.mjs';
-import { assertDevelopmentWorkspaceWriteAllowed } from './workspace-scope.mjs';
+import { assertDevelopmentWorkspaceWriteAllowed, readWorkspaceIdentity, validateLifecycleWorkspace } from './workspace-scope.mjs';
+import { loadWorkspaceGraph } from './index-builder.mjs';
 
 export class CycleLockError extends Error {
   constructor(code, message, details = {}) {
@@ -20,6 +21,17 @@ export class CycleLockError extends Error {
 
 function lockPath(cycleId) {
   return `cycles/.locks/${cycleId.toLowerCase()}.json`;
+}
+
+async function assertCycleWorkspace(workspace,cycleId) {
+  const identity=await readWorkspaceIdentity(workspace);
+  if(identity.workspace_mode==='development_test')return assertDevelopmentWorkspaceWriteAllowed({workspace});
+  const validation=await validateLifecycleWorkspace({workspace,knowledgeBaseRef:identity.knowledge_base_ref});
+  if(validation.errors.length)throw new CycleLockError(validation.errors[0].code,'Real lifecycle workspace is invalid');
+  const cycle=(await loadWorkspaceGraph({workspace})).byId.get(cycleId)?.data;
+  if(!cycle||cycle.record_type!=='cycle'||cycle.execution_scope!=='authorized_real'||cycle.test_scope
+    ||cycle.merchant_ref!==identity.merchant_ref||cycle.knowledge_base_ref!==identity.knowledge_base_ref)
+    throw new CycleLockError('WORKSPACE_SCOPE_INVALID','Real lease must bind the current Merchant and knowledge base');
 }
 
 function takeoverPath(cycleId, revision) {
@@ -74,7 +86,7 @@ export async function acquireCycleLease({
   inputFingerprint = null,
 }) {
   const root = path.resolve(workspace);
-  await assertDevelopmentWorkspaceWriteAllowed({ workspace: root });
+  await assertCycleWorkspace(root,cycleId);
   const data = leaseData({
     cycleId, ownerId, now, ttlMs, revision: 1, inputFingerprint,
   });
@@ -111,7 +123,7 @@ export async function recoverStaleCycleLease({
   ttlMs = 60_000,
 }) {
   const root = path.resolve(workspace);
-  await assertDevelopmentWorkspaceWriteAllowed({ workspace: root });
+  await assertCycleWorkspace(root,cycleId);
   const existing = await readLease(root, cycleId);
   if (!existing) throw new CycleLockError('LEASE_STALE_RECOVERY_REQUIRED', '不存在可恢复 lease');
   if (Date.parse(existing.expires_at) > Date.parse(now)) {

@@ -8,6 +8,7 @@ import { modelHash } from './model-client.mjs';
 export async function connectPlaywrightMcp({
   outputDir,
   extension = true,
+  auditMode = 'full',
 } = {}) {
   const require = createRequire(import.meta.url);
   const manifestPath = require.resolve('@playwright/mcp/package.json');
@@ -47,11 +48,15 @@ export async function connectPlaywrightMcp({
       `${JSON.stringify({
         sequence_no,
         name,
-        arguments: args,
+        ...(auditMode === 'metadata'
+          ? { arguments_sha256: modelHash(args) }
+          : { arguments: args }),
         started_at,
         completed_at: new Date().toISOString(),
         result_sha256: modelHash(result),
-        result,
+        ...(auditMode === 'metadata'
+          ? { is_error: Boolean(result.isError) }
+          : { result }),
       })}\n`,
       { mode: 0o600 },
     );

@@ -1,9 +1,27 @@
 ---
 name: geo-lifecycle
-description: 在同一线上 Merchant 的 development-test 品牌知识库中编排 synthetic GEO Cycle 输入冻结、阶段门、并发恢复、人工 Review 与 snapshot trace；不替代人工决定。
+description: 用于启动、推进、恢复和复盘 GEO Cycle，包括显式授权的 online 真实周期与隔离 development-test 演练；不用于代替 Owner 事实、采用、发布或复盘决定。
 ---
 
 # geo-lifecycle
+
+## 正式真实周期（Spec 0015）
+
+读取 Workspace identity 与当前 `cycles/preparation/real-cycle-plan.json`。`online/authorized_real` 自动进入真实编排，不能复制演练 seed 或 fixture feedback。运行 `preflight` 和 `inbox` 获取零写检查；`start` 准备知识审核包，知识批准和运行前置齐备后才冻结真实 Cycle。
+
+```bash
+node <plugin-root>/scripts/geo-lifecycle.mjs preflight --workspace <real-workspace>
+node <plugin-root>/scripts/geo-lifecycle.mjs start --workspace <real-workspace>
+node <plugin-root>/scripts/geo-lifecycle.mjs continue --workspace <real-workspace>
+node <plugin-root>/scripts/geo-lifecycle.mjs receive-answer --workspace <real-workspace> --file <bound-capture.json>
+node <plugin-root>/scripts/geo-lifecycle.mjs record-publication --workspace <real-workspace> --file <publication-receipt.json>
+```
+
+由 Agent 根据冻结槽位和 Owner 原始材料生成上述文件，Owner 不维护内部 ID/hash。五平台两槽、提交间隔、原文与引用、实际窗口均由工具校验；`submission_unknown` 不重新提交。真实模型提取不以 Fake 替代。人工反馈继续使用 `apply-feedback`，原始审核包不可改写。
+
+`continue` 每次只执行一个可恢复动作；返回 `progress` 后可继续，节流等待后再执行；`waiting_human`、`waiting_window`、`needs_input` 分别指实际人工输入、尚未到期或具名缺口。仅补证建议不能发布。W1–W4 不能补造时间，第二轮必须来自真实已决定 Review 和独立 Goal/知识批准。
+
+完成以 canonical required stages、完整矩阵、Trace 和 Owner Review 为准；工程测试或真实输入 smoke 均不代表两个真实周期完成。`report` 输出 `reports/real-cycle-overview.md`。深层合同与操作详见开发仓库 Spec 0015 和 `docs/runbooks/authorized-real-two-cycle.md`；安装后以当前用户工作区的执行计划和工具诊断为准。
 
 ## 当前知识驱动入口（Spec 0014）
 

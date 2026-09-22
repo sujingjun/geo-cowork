@@ -1,0 +1,55 @@
+{
+  "analytics": {
+    "calendar_policy": "complete_days_after_anchor",
+    "final_lag_days": 3,
+    "property_id": "356373250",
+    "property_time_zone": null,
+    "registration_approval_ref": null,
+    "registration_approval_sha256": null,
+    "registration_event": null,
+    "site_url": "https://www.myyshop.com/"
+  },
+  "asset_refs": [
+    "AST-MYYSHOP-HOMEPAGE-001",
+    "AST-MYYSHOP-ABOUT-001"
+  ],
+  "authorization": {
+    "expires_at": "2027-01-18T13:25:00.158Z",
+    "ref": "workspace://cycles/preparation/decisions/2026-09-20-real-cycle-execution-approved.md",
+    "sha256": "041c636de06dfdfc8161062e27af1e9aa6302ad055467160fe99b085c5ad6be7"
+  },
+  "collection_methods": {
+    "chatgpt": "browser_automation",
+    "claude": "manual",
+    "gemini": "browser_automation",
+    "google_ai": "manual",
+    "perplexity": "browser_automation"
+  },
+  "contracts": {
+    "measurement_contract": "execution/contracts/real-cycle-measurement-v1.json",
+    "sensitive_data_policy": "execution/contracts/real-cycle-policy-v1.json",
+    "signal_rule": "execution/contracts/real-cycle-signal-v1.json"
+  },
+  "created_at": "2026-09-20T13:25:00.150Z",
+  "cycle_dir": "cycles/real/20260920-cycle-1",
+  "cycle_number": 1,
+  "cycle_ref": "CYC-MYYSHOP-REAL-20260920-01",
+  "execution_owner": "MyyShop Owner",
+  "execution_paused": true,
+  "goal_ref": "GOAL-MYYSHOP-DEFINITION-001",
+  "knowledge": {
+    "answer_ref": "ANS-MYYSHOP-REAL-C1-001",
+    "claim_refs": [
+      "CLM-MYYSHOP-AUDIENCE-001",
+      "CLM-MYYSHOP-LIFECYCLE-SERVICE-001"
+    ],
+    "english_answer": "MyyShop is a creator services platform for content creators worldwide. It provides tools, opportunities and services around creator onboarding, growth, engagement and monetization. Actual capabilities, eligibility, regional availability and service coverage remain subject to official information and business confirmation. This description does not mean every lifecycle service is currently available and does not promise income or growth.",
+    "release_ref": "KR-MYYSHOP-REAL-C1-001"
+  },
+  "knowledge_base_ref": "KBASE-MYYSHOP-REAL-001",
+  "merchant_ref": "MER-MYYSHOP-001",
+  "provider": "deepseek",
+  "query_set_ref": "QS-MYYSHOP-DEFINITION-EN-BASELINE-001",
+  "run_ref": "RUN-MYYSHOP-REAL-20260920-01",
+  "schema_version": "geo-real-cycle-plan-v1"
+}

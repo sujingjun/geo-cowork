@@ -197,8 +197,10 @@
     "cycle_goal_candidate_batch": {
       "x-id-prefix": "GCB-",
       "x-statuses": ["recorded"],
-      "required": ["test_scope", "merchant_ref", "source_cycle_review_version", "review_input_snapshot_version", "generator_rule", "batch_key", "ordered_candidates", "run_ref"],
+      "required": ["merchant_ref", "source_cycle_review_version", "review_input_snapshot_version", "generator_rule", "batch_key", "ordered_candidates", "run_ref"],
       "properties": {
+        "execution_scope": { "const": "authorized_real" },
+        "knowledge_base_ref": { "type": "string", "pattern": "^KBASE-(?:[A-Z0-9]+-)*[A-Z0-9]+$" },
         "merchant_ref": { "type": "string", "pattern": "^MER-(?:[A-Z0-9]+-)*[A-Z0-9]+$" },
         "source_cycle_review_version": {
           "type": "object",
@@ -261,19 +263,26 @@
           }
         },
         "run_ref": { "type": "string", "pattern": "^RUN-(?:[A-Z0-9]+-)*[A-Z0-9]+$" }
-      }
+      },
+      "allOf": [{
+        "if": { "properties": { "execution_scope": { "const": "authorized_real" } }, "required": ["execution_scope"] },
+        "then": { "required": ["knowledge_base_ref"], "not": { "required": ["test_scope"] } },
+        "else": { "required": ["test_scope"] }
+      }]
     },
     "cycle_goal_candidate": {
       "x-id-prefix": "GCD-",
       "x-statuses": ["candidate"],
       "required": [
-        "test_scope", "merchant_ref", "candidate_batch_version",
+        "merchant_ref", "candidate_batch_version",
         "source_cycle_review_version", "review_input_snapshot_version",
         "candidate_content_key", "candidate_instance_key", "candidate_kind",
         "source_goal_entry_key", "source_entry_keys", "proposed_goal", "rationale",
         "limitations", "evidence_gaps", "risks", "rank_inputs", "rank"
       ],
       "properties": {
+        "execution_scope": { "const": "authorized_real" },
+        "knowledge_base_ref": { "type": "string", "pattern": "^KBASE-(?:[A-Z0-9]+-)*[A-Z0-9]+$" },
         "merchant_ref": { "type": "string", "pattern": "^MER-(?:[A-Z0-9]+-)*[A-Z0-9]+$" },
         "candidate_batch_version": { "$ref": "common#/$defs/refVersion" },
         "source_cycle_review_version": {
@@ -355,17 +364,24 @@
           },
           "additionalProperties": false
         }
-      }
+      },
+      "allOf": [{
+        "if": { "properties": { "execution_scope": { "const": "authorized_real" } }, "required": ["execution_scope"] },
+        "then": { "required": ["knowledge_base_ref"], "not": { "required": ["test_scope"] } },
+        "else": { "required": ["test_scope"] }
+      }]
     },
     "cycle_goal_selection": {
       "x-id-prefix": "GSEL-",
       "x-statuses": ["draft", "decided", "superseded"],
       "required": [
-        "test_scope", "merchant_ref", "source_cycle_review_version",
+        "merchant_ref", "source_cycle_review_version",
         "candidate_batch_version", "batch_key", "decision_key",
         "candidate_versions", "decision"
       ],
       "properties": {
+        "execution_scope": { "const": "authorized_real" },
+        "knowledge_base_ref": { "type": "string", "pattern": "^KBASE-(?:[A-Z0-9]+-)*[A-Z0-9]+$" },
         "merchant_ref": { "type": "string", "pattern": "^MER-(?:[A-Z0-9]+-)*[A-Z0-9]+$" },
         "source_cycle_review_version": {
           "type": "object",
@@ -399,7 +415,12 @@
         },
         "approval": { "$ref": "common#/$defs/approval" },
         "supersedes_ref": { "type": "string", "pattern": "^GSEL-(?:[A-Z0-9]+-)*[A-Z0-9]+$" }
-      }
+      },
+      "allOf": [{
+        "if": { "properties": { "execution_scope": { "const": "authorized_real" } }, "required": ["execution_scope"] },
+        "then": { "required": ["knowledge_base_ref"], "not": { "required": ["test_scope"] } },
+        "else": { "required": ["test_scope"] }
+      }]
     },
     "strategy_output": {
       "x-id-prefix": "STO-",

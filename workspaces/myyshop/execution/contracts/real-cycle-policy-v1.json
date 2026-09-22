@@ -1,0 +1,25 @@
+{
+  "aggregate_only": true,
+  "allowed_dimensions": [
+    "date",
+    "sessionSource",
+    "sessionMedium"
+  ],
+  "forbidden_field_patterns": [
+    "email",
+    "phone",
+    "userId",
+    "userPseudoId",
+    "ip",
+    "cookie",
+    "token",
+    "secret",
+    "password"
+  ],
+  "id": "myyshop-real-cycle-policy-v1",
+  "max_input_bytes": 1048576,
+  "schema_version": "m6-sensitive-data-policy/1.0.0",
+  "scope": "authorized_real",
+  "unknown_fields": "reject",
+  "version": "1.0.0"
+}

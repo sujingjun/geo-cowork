@@ -3,6 +3,8 @@ title: geo-cowork 知识库导航
 kind: index
 status: verified
 sources:
+  - docs/specs/0015-authorized-real-two-cycle.md
+  - docs/records/2026-09-20-authorized-real-two-cycle-record.md
   - docs/plans/2026-09-16-knowledge-driven-geo-e2e-plan.md
   - AGENTS.md
   - CONTEXT.md
@@ -33,7 +35,7 @@ sources:
   - docs/requirements/2026-08-25-platform-automation-permission-backlog.md
   - docs/specs/0006-consumer-answer-testing.md
   - docs/plans/2026-08-24-m5-consumer-answer-testing-plan.md
-updated: 2026-09-16
+updated: 2026-09-20
 ---
 
 # geo-cowork 知识库导航
@@ -44,9 +46,14 @@ updated: 2026-09-16
 
 | 页面 | kind | status | updated |
 | --- | --- | --- | --- |
-| [index.md](index.md)（本页） | index | verified | 2026-09-04 |
+| [index.md](index.md)（本页） | index | verified | 2026-09-20 |
+| [正式真实双周期](real-cycles.md) | product | implemented | 2026-09-20 |
 
 新 Wiki 页面按 `docs/workflow.md` 第 2 章 Frontmatter 要求建档后加入本索引；原始来源变更而未同步时须标明过期或更新 `updated`。
+
+## 当前正式真实周期
+
+见[正式真实双周期导航](real-cycles.md)。当前下一行动以2026-09-20批准Plan与实际preflight为准；下方旧专题入口保留历史追溯。
 
 ## Canonical 入口
 
@@ -84,7 +91,7 @@ updated: 2026-09-16
 
 其他文档类别目录（架构、需求、PRD、原型、Spec、Plan、Task、Record、Runbook、Release、复盘、经验、Handoff）在首次出现 canonical 文档时创建，并由 `docs/README.md` 导航。
 
-## 2026-09-16 当前开发入口
+## 2026-09-16 历史工程验收入口
 
 [知识驱动 GEO 全流程计划](../plans/2026-09-16-knowledge-driven-geo-e2e-plan.md) 是当前 Owner 已要求实施的任务；旧真实周期 roadmap 已归档。自定义模型只保留切换配置，本次真实提取使用 DeepSeek。
 

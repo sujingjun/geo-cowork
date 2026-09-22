@@ -1,10 +1,14 @@
 # MyyShop 工作区状态
 
-> 最近更新：2026-09-04
+> 最近更新：2026-09-20
 
 ## 当前阶段
 
-M2—M5 历史工程状态保持。2026-09-02 已登记唯一线上 Merchant `MER-MYYSHOP-001` 与真实 GA4/GSC 非凭据配置；真实品牌知识库 ref 当前为空。独立 `workspaces/myyshop-development-test` 已用同一 Merchant 建立 `KBASE-MYYSHOP-DEVTEST-001` 并完成 knowledge-independent 工程验收。真实 Cycle Readiness 只读报告为 `real_cycle_start_ready:false`，原因是 real KBASE 尚未提供；未创建正式 Cycle。
+当前状态为工程复验收尾、真实业务暂停。2026-09-20已批准正式真实双周期，见[Spec 0015](../../docs/specs/0015-authorized-real-two-cycle.md)、[主 Agent 验收记录](../../docs/records/2026-09-20-authorized-real-two-cycle-record.md)。真实编排、正式采样、发布读回、分周Analytics及第二轮Goal入口已实现；主Agent最终448/448测试和文档/插件/Workspace/index检查通过，工程已收尾，真实业务暂停。
+
+当前仍为0个真实KBASE、0个正式Cycle、0个Publication；`knowledge_base_ref:null`。首轮英文知识切片已整理并展示[Owner审核包](reviews/packages/OWNER-KNOWLEDGE-CYC-MYYSHOP-REAL-20260920-01.md)，Owner明确回复“暂缓知识批准”。Google重新登录进程已报告ADC保存成功，但按暂停指令未继续读取或验证GA4/GSC，时区/事件定义仍未确认。preflight `real_cycle_start_ready:false`、`safe_to_create:false`；尚未新增正式Baseline样本。执行计划为 `execution_paused:true`，每日北京时间10:00 heartbeat已暂停（PAUSED），不会自动推进。
+
+历史2026-09-16双周期仍为隔离演练，不计入当前两个真实周期。
 
 ## 当前边界
 
@@ -26,9 +30,11 @@ M2—M5 历史工程状态保持。2026-09-02 已登记唯一线上 Merchant `ME
 - GA4/GSC → ANO/BSIG/candidate EVD 的真实 `collect-observe` 已通过：两个 ANO recorded、一个 BSIG computed/non-causal、一个 EVD candidate 且无 approval；GA4/GSC 各 7 行、0 warning。Business file adapter 已验证，但当前无获授权真实聚合文件，保持 `BUSINESS_FILE_NOT_PROVIDED`。
 - M8 required packaging/shared Tool/WorkBuddy semantic fixture 已通过；Codex/Claude native interactive 与 WorkBuddy manual/native 均未执行。
 
-## 下一动作
+## 当前收尾与未来恢复
 
-工程侧继续使用 `KBASE-MYYSHOP-DEVTEST-001` 回归；当前先审阅 `docs/prd/2026-09-04-authorized-real-geo-cycle.md`，PRD 获批后再起草 authorized-real 全链 Spec。真实启动不等待全部 120 条知识，只等待英文 `What is MyyShop?` Goal 的真实知识切片形成批准闭包，并按 `docs/runbooks/myyshop-real-cycle-start.md` 切换显式 `knowledge_base_ref`。由事实 Owner 单独审阅新 Analytics candidate Evidence；不得自动绑定 Claim 或解释为因果效果。M5 的 10 个 candidate Answer Review 与 M4 Publication/Retest 仍是对应阶段门；60 个 Source 差额独立并行，不阻塞 Cycle。
+本次仅完成工程复验、验收记录和文档整理，不再推进真实知识批准、平台采样、发布或业务观察。原知识材料与现有历史证据保留，延期决定已落盘。
+
+只有Owner明确恢复真实业务时，才重核知识决定、Google访问与测量定义，再解除执行计划和heartbeat的暂停；恢复自动化不代表知识已批准。后续遵循[操作手册](../../docs/runbooks/authorized-real-two-cycle.md)。commit/push/部署/飞书同步未执行。
 
 ## 2026-09-16 Query 来源接入
 

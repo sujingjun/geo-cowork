@@ -77,8 +77,11 @@ export async function assertStageGate(workspace, snapshotPlan, toStage) {
   } else if (toStage === 'publication_confirmed') {
     for (const object of byType('asset_publication')) {
       let locatorInvalid = true;
-      try { locatorInvalid = !new URL(object.published_locator).hostname.endsWith('.invalid'); } catch {}
-      if (cycle?.extensions?.['geo.journey']) {
+      if (cycle?.execution_scope === 'authorized_real') {
+        await (await import('./real-publication.mjs')).validateRealPublicationProof(workspace, object);
+        locatorInvalid = false;
+      } else try { locatorInvalid = !new URL(object.published_locator).hostname.endsWith('.invalid'); } catch {}
+      if (cycle?.extensions?.['geo.journey'] && cycle.execution_scope !== 'authorized_real') {
         const proofRef = object.extensions?.['geo.publication_proof'];
         if (!proofRef?.path || !proofRef.sha256) throw gateError('Publication 缺少读回证明');
         await assertNoSymlinkPath(workspace, proofRef.path);
@@ -103,6 +106,8 @@ export async function assertStageGate(workspace, snapshotPlan, toStage) {
     invalid = byType('run').some((object) => object.status !== 'completed')
       || byType('finding').some((object) => !['resolved', 'open'].includes(object.status));
   } else if (toStage === 'analytics_recorded') {
+    if (cycle?.execution_scope === 'authorized_real')
+      await (await import('./real-analytics.mjs')).assertRealAnalyticsGate(workspace, objects);
     invalid = byType('analytics_observation').some((object) => object.status !== 'recorded')
       || byType('business_signal').some((object) => object.status !== 'computed');
   } else if (toStage === 'review_waiting_human') {

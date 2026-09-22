@@ -32,7 +32,8 @@ function common(context, id, recordType, status, title) {
     created_at: context.created_at,
     updated_at: context.created_at,
     title,
-    test_scope: { ...context.test_scope },
+    ...(context.test_scope ? {test_scope: { ...context.test_scope }} : {}),
+    ...(context.execution_scope === 'authorized_real' ? { execution_scope: 'authorized_real', knowledge_base_ref: context.knowledge_base_ref } : {}),
   };
 }
 
@@ -106,7 +107,7 @@ function candidateInstanceKey(batch, item) {
 
 function assertContext(context, descriptors) {
   const required = [
-    'merchant_ref', 'test_scope', 'created_at', 'run_ref', 'review_ref',
+    'merchant_ref', 'created_at', 'run_ref', 'review_ref',
     'review_version', 'review_file_sha256', 'review_input_snapshot_version',
     'review_snapshot_fingerprint', 'generator_rule',
   ];
@@ -141,7 +142,7 @@ export function buildCandidateBatchPlan({ context, descriptors }) {
         `GCD-${instanceKey.slice(0, 24).toUpperCase()}`,
         'cycle_goal_candidate',
         'candidate',
-        'Synthetic cycle goal candidate',
+        context.test_scope ? 'Synthetic cycle goal candidate' : 'Real cycle goal candidate',
       ),
       merchant_ref: context.merchant_ref,
       candidate_batch_version: { ref: batchId, version: '1.0.0' },
@@ -165,7 +166,7 @@ export function buildCandidateBatchPlan({ context, descriptors }) {
     };
   });
   const batch = {
-    ...common(context, batchId, 'cycle_goal_candidate_batch', 'recorded', 'Synthetic candidate batch'),
+    ...common(context, batchId, 'cycle_goal_candidate_batch', 'recorded', context.test_scope ? 'Synthetic candidate batch' : 'Real candidate batch'),
     merchant_ref: context.merchant_ref,
     source_cycle_review_version: reviewVersion,
     review_input_snapshot_version: snapshotVersion,
@@ -207,6 +208,8 @@ export function validateCandidateBatchClosure({ batch, candidates }) {
     const context = {
       merchant_ref: batch.merchant_ref,
       test_scope: batch.test_scope,
+      execution_scope: batch.execution_scope,
+      knowledge_base_ref: batch.knowledge_base_ref,
       created_at: batch.created_at,
       run_ref: batch.run_ref,
       review_ref: batch.source_cycle_review_version?.ref,

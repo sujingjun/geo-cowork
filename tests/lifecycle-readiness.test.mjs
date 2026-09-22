@@ -95,7 +95,7 @@ test('knowledge_base_ref 不匹配时 fail loud', async () => {
   );
 });
 
-test('真实知识切片 fixture 到位后，同一 create-cycle 无需改代码即可启动 authorized_real', async () => {
+test('真实知识切片 ready 不等于可用旧裸 plan 创建正式周期；必须显式绑定运行计划', async () => {
   const root = await createM6FixtureWorkspace();
   const inputs = await seedM6FreezeInputs(root);
   const identityPath = path.join(root, 'workspace.json');
@@ -144,12 +144,7 @@ test('真实知识切片 fixture 到位后，同一 create-cycle 无需改代码
     goalRef: cyclePlan.goal_ref,
   });
   assert.equal(readiness.real_cycle_start_ready, true);
-  const created = await executeLifecycle({
-    command: 'create-cycle', workspace: root, plan: planPath,
-  });
-  assert.equal(created.cycle_id, cyclePlan.cycle_id);
-  const cycle = matter(await readFile(path.join(root, cyclePlan.cycle_path), 'utf8')).data;
-  assert.equal(cycle.execution_scope, 'authorized_real');
-  assert.equal(cycle.knowledge_base_ref, KNOWLEDGE_BASE_REF);
-  assert.equal(cycle.test_scope, undefined);
+  await assert.rejects(executeLifecycle({command:'create-cycle',workspace:root,plan:planPath}),
+    error=>error.code==='REAL_CYCLE_PLAN_REQUIRED');
+  await assert.rejects(readFile(path.join(root,cyclePlan.cycle_path)),error=>error.code==='ENOENT');
 });

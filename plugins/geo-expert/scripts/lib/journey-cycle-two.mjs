@@ -1,4 +1,5 @@
 import { readFile } from 'node:fs/promises';
+import { selectNextGoal } from './real-cycle-contract.mjs';
 import {
   findJourneyCycle,
   journeyObjectPath,
@@ -140,12 +141,7 @@ export async function selectJourneyCycleTwo(workspace, feedback) {
   const candidates = feedback.package.targets
     .map((t) => graph.byId.get(t.id))
     .filter((o) => o.data.record_type === 'cycle_goal_candidate');
-  if (candidates.length !== 1)
-    throw Object.assign(
-      new Error('Select an explicit candidate when there is more than one'),
-      { code: 'GOAL_SELECTION_REQUIRED' },
-    );
-  const selected = candidates[0];
+  const selected = selectNextGoal(candidates, feedback.decision.next_goal);
   const approval = {
     approved_by: feedback.decision.actor,
     approved_at: feedback.decision.at,

@@ -235,6 +235,7 @@
       "x-statuses": ["draft", "confirmed", "withdrawn", "superseded"],
       "required": ["proposal_ref", "adoption_ref", "asset_ref"],
       "properties": {
+        "supersedes_ref": { "type": "string", "pattern": "^PUB-(?:[A-Z0-9]+-)*[A-Z0-9]+$" },
         "proposal_ref": { "type": "string", "pattern": "^PRP-(?:[A-Z0-9]+-)*[A-Z0-9]+$" },
         "adoption_ref": { "type": "string", "pattern": "^ADR-(?:[A-Z0-9]+-)*[A-Z0-9]+$" },
         "asset_ref": { "type": "string", "pattern": "^AST-(?:[A-Z0-9]+-)*[A-Z0-9]+$" },

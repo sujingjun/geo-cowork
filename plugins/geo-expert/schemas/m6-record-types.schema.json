@@ -204,6 +204,7 @@
             "kind": {
               "enum": [
                 "deterministic_tool",
+                "human",
                 "fixture_human"
               ]
             },

@@ -1,0 +1,42 @@
+{
+  "answer_text": "Isolated contract test: Example Brand supports creator onboarding. Scope and regional availability are unverified.",
+  "authorization": {
+    "expires_at": "2026-09-21T13:58:39.867Z",
+    "ref": "workspace://execution/formal-authorization.json",
+    "sha256": "52f2f37b1af70f06f149e59b0877eec248ac3bea1509d9f186dd06be8ba1ae4c"
+  },
+  "browser_conditions": {
+    "conversation_state": "new",
+    "memory": "unknown",
+    "model_mode": "not-a-consumer-platform-run",
+    "region": "unknown"
+  },
+  "captured_at": "2026-09-20T13:58:40.013Z",
+  "citations": [],
+  "collection_method": "manual",
+  "conversation_id": "isolated-contract-extraction",
+  "cycle_ref": "CYC-REAL-SAMPLING-001",
+  "id": "SLOT-REAL-SAMPLING-001-BASE-Q1-CLAUDE-1",
+  "knowledge_base_ref": "KBASE-MYYSHOP-DEVTEST-001",
+  "ordinal": 1,
+  "outcome": "success",
+  "platform": "claude",
+  "profile_ref": "CPF-REAL-SAMPLING-001-BASE-CLAUDE",
+  "profile_version": "1.0.0",
+  "purpose": "baseline",
+  "query_ref": "Q-M6-TEST-001",
+  "query_set_ref": "QS-M6-TEST-001",
+  "query_set_version": "1.0.0",
+  "query_text": "What is the synthetic development knowledge scenario?",
+  "query_version": "1.0.0",
+  "result_url": "https://claude.ai/share/isolated-contract-extraction",
+  "run_ref": "RUN-REAL-SAMPLING-001-BASE-Q1-CLAUDE-1",
+  "sample_ref": "SMP-REAL-SAMPLING-001-BASE-Q1-CLAUDE-1",
+  "slot_id": "SLOT-REAL-SAMPLING-001-BASE-Q1-CLAUDE-1",
+  "synthetic": false,
+  "window": {
+    "ends_at": "2026-09-27T13:58:39.884Z",
+    "id": "BASE",
+    "starts_at": "2026-09-20T13:58:39.884Z"
+  }
+}

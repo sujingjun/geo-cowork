@@ -1,3 +1,4 @@
+import { readFile, readdir } from 'node:fs/promises';
 import {
   readMarkdownObject,
   serializeMarkdownObject,
@@ -5,8 +6,10 @@ import {
 } from './object-contract.mjs';
 import { loadWorkspaceGraph } from './index-builder.mjs';
 import { readRun } from './run-store.mjs';
+import { sourceClassificationQueueStatus } from './m5-policy.mjs';
 import {
   resolveWithin,
+  atomicWrite,
   sha256,
   stableStringify,
   writeCreateOnly,
@@ -74,9 +77,11 @@ async function validateSourceRun({ workspace, sample }) {
   const run = await readRun({ workspace, runId: sample.run_ref });
   const recordedAllowed = sample.collection_method === 'recorded_fixture'
     && run.data.authorization_ref?.startsWith('fixture://');
-  const manualAllowed = sample.collection_method === 'manual'
+  const manualAllowed = sample.collection_method === 'manual' && !sample.extensions?.['geo.real_capture']
     && run.data.authorization_ref?.startsWith('workspace://');
-  if (run.data.skill !== 'geo-answer-cycle' || (!recordedAllowed && !manualAllowed)) {
+  const realAllowed = ['browser_automation', 'manual'].includes(sample.collection_method) && sample.extensions?.['geo.real_capture']
+    && run.data.execution_scope === 'authorized_real' && run.data.authorization_ref?.startsWith('workspace://');
+  if (run.data.skill !== 'geo-answer-cycle' || (!recordedAllowed && !manualAllowed && !realAllowed)) {
     throw new SourceRegistryError(
       'SOURCE_CANDIDATE_UNOBSERVED',
       'Source 候选必须来自具备匹配授权的 M5 Run',
@@ -120,6 +125,7 @@ function pairData({ sample, occurrence, now }) {
     source_kind: 'consumer_citation',
     locator: occurrence.source.locator,
     identity: occurrence.source.identity,
+    ...(occurrence.source.classification_queue ? { classification_queue: occurrence.source.classification_queue } : {}),
     discovery: {
       method: 'consumer_citation',
       citation_ref: occurrence.id,
@@ -143,6 +149,12 @@ export async function materializeCitationSourcePair({
   const citationContent = serializeMarkdownObject(citation, `# ${citation.title}\n`);
   const sourceContent = serializeMarkdownObject(source, `# ${source.title}\n`);
   const existingSource = await readExistingSource(workspace, occurrence, source);
+  // Journal precedes either side of the cyclic Citation/Source reference. A
+  // restart can repair the pair before the workspace graph is loaded.
+  const { action: _action, ...canonicalSample } = sample;
+  const journal = { sample: canonicalSample, occurrence, now };
+  await writeCreateOnly(workspace, `runs/${sample.run_ref}/outputs/citation-pairs/${occurrence.id}.json`,
+    stableStringify({ ...journal, sha256: sha256(stableStringify(journal)) }, 2), { idempotent: true, conflictCode: 'CITATION_SOURCE_PAIR_INCOMPLETE' });
   const citationResult = await writeCreateOnly(
     workspace,
     occurrence.path,
@@ -233,4 +245,45 @@ export function deriveSourceLifecycle(citations, currentWindow) {
     observation_count: sorted.length,
     lifecycle: prior ? 'returning' : 'new',
   };
+}
+
+export async function recoverCitationSourcePairs(workspace) {
+  let runs;
+  try { runs = await readdir(resolveWithin(workspace, 'runs'), { withFileTypes: true }); }
+  catch (e) { if (e.code === 'ENOENT') return; throw e; }
+  for (const run of runs.filter(r => r.isDirectory())) {
+    const folder = `runs/${run.name}/outputs/citation-pairs`;
+    let files;
+    try { files = await readdir(resolveWithin(workspace, folder)); }
+    catch (e) { if (e.code === 'ENOENT') continue; throw e; }
+    for (const file of files.filter(f => /^CIT-[A-Z0-9-]+\.json$/.test(f))) {
+      const { sha256: checksum, ...journal } = JSON.parse(await readFile(resolveWithin(workspace, `${folder}/${file}`), 'utf8'));
+      if (checksum !== sha256(stableStringify(journal)) || journal.sample.run_ref !== run.name || file !== `${journal.occurrence.id}.json`)
+        throw new SourceRegistryError('CITATION_SOURCE_PAIR_INCOMPLETE', 'Citation recovery journal changed');
+      const present = await Promise.all([journal.occurrence.path, journal.occurrence.source.path].map(async p => {
+        try { await readFile(resolveWithin(workspace, p)); return true; }
+        catch (e) { if (e.code === 'ENOENT') return false; throw e; }
+      }));
+      if (present.every(Boolean)) continue;
+      await materializeCitationSourcePair({ workspace, ...journal });
+    }
+  }
+}
+
+// Queue maintenance never replaces a classification or promotes a candidate.
+export async function refreshFormalSourceQueue(workspace, now, { sampleRef, decisionRef } = {}) {
+  const graph = await loadWorkspaceGraph({ workspace });
+  const observed = new Set(graph.objects.filter(o => o.data.record_type === 'citation_observation' && o.data.status !== 'superseded').map(o => o.data.source_ref));
+  const status = sourceClassificationQueueStatus(observed.size);
+  const sampleSources = new Set(graph.objects.filter(o => o.data.record_type === 'citation_observation' && o.data.sample_ref === sampleRef).map(o => o.data.source_ref));
+  for (const id of observed) {
+    const source = graph.byId.get(id), originalQueue = source?.data.classification_queue;
+    const queue = originalQueue ?? (sampleSources.has(id) && decisionRef?.startsWith('workspace://') ? { status, threshold: 100, decision_ref: decisionRef } : null);
+    if (!queue || queue.status === 'classified' || originalQueue?.status === status) continue;
+    const parts = source.data.version.split('.').map(Number);parts[2]++;
+    const data = { ...source.data, version: parts.join('.'), updated_at: now, classification_queue: { ...queue, status } };
+    validateObjectData(data, { path: source.path });
+    await atomicWrite(workspace, source.path, serializeMarkdownObject(data, source.content));
+  }
+  return { status, threshold: 100, unique_source_count: observed.size };
 }

@@ -13,6 +13,14 @@ import {
   bindEngineeringContext,
 } from './capture-run.mjs';
 
+export const FORMAL_COLLECTION_METHODS = Object.freeze({
+  chatgpt: 'browser_automation',
+  gemini: 'browser_automation',
+  perplexity: 'browser_automation',
+  google_ai: 'manual',
+  claude: 'manual',
+});
+
 const adapters = {
   chatgpt: {
     entry: 'https://chatgpt.com/?temporary-chat=true',
@@ -51,14 +59,29 @@ export async function collectPlaywright({
   model,
   resume = false,
   query = 'What is MyyShop?',
+  formalPlan,
+  beforeSubmit,
+  extract = true,
 }) {
-  await prepareEngineeringCapture(outputDir, query);
+  if (
+    formalPlan &&
+    (formalPlan.platform !== platform ||
+      formalPlan.query_text !== query ||
+      formalPlan.collection_method !== FORMAL_COLLECTION_METHODS[platform] ||
+      formalPlan.collection_method !== 'browser_automation')
+  )
+    throw Object.assign(
+      new Error('Formal MCP execution differs from its frozen slot'),
+      { code: 'FORMAL_SLOT_MISMATCH' },
+    );
+  await prepareEngineeringCapture(outputDir, query, formalPlan);
   const run = await readEngineeringCaptureRun(outputDir);
   if (!adapters[platform]) throw new Error('Unsupported engineering platform');
   const state = run.platforms[platform];
   await loadModelEnvironment();
   provider ??= process.env.GEO_MODEL_PROVIDER ?? 'deepseek';
   if (state.status === 'completed') {
+    if (!extract) return { platform, status: 'captured', replay: true };
     const latest = JSON.parse(
       await readFile(path.join(outputDir, state.extractions.at(-1)), 'utf8'),
     );
@@ -81,7 +104,9 @@ export async function collectPlaywright({
     };
   }
   if (state.status === 'captured')
-    return extractEngineeringCapture(outputDir, platform, { provider, model });
+    return extract
+      ? extractEngineeringCapture(outputDir, platform, { provider, model })
+      : { platform, status: 'captured' };
   if (state.submissions && !resume)
     throw Object.assign(
       new Error('Use resume-collection; never resubmit an unknown Query'),
@@ -94,18 +119,22 @@ export async function collectPlaywright({
       reason: 'RESULT_BINDING_REQUIRED',
       message: '请选择原始结果；没有已持久化的页面绑定，不能猜测或重新提交。',
     };
-  const session = await connectPlaywrightMcp({ outputDir });
+  const session = await connectPlaywrightMcp({
+    outputDir,
+    auditMode: formalPlan ? 'metadata' : 'full',
+  });
   const adapter = adapters[platform];
   try {
     if (!state.submissions) {
       await session.call('browser_tabs', { action: 'new', url: adapter.entry });
       const ready = resultJSON(
         await session.call('browser_evaluate', {
-          function: `() => ({input:!!document.querySelector(${JSON.stringify(adapter.input)})?.getBoundingClientRect().width,existing_answer:!!document.querySelector(${JSON.stringify(adapter.answer)}),url:location.href})`,
+          function: `() => ({input:!!document.querySelector(${JSON.stringify(adapter.input)})?.getBoundingClientRect().width,existing_answer:!!document.querySelector(${JSON.stringify(adapter.answer)}),challenge:!!document.querySelector('iframe[src*="captcha"],iframe[src*="challenges.cloudflare"],[data-testid="challenge-stage"]'),url:location.href})`,
         }),
       );
       if (
         !ready.input ||
+        ready.challenge ||
         ready.existing_answer ||
         new URL(ready.url).origin !==
           new URL(ENGINEERING_PLATFORMS[platform]).origin
@@ -113,7 +142,9 @@ export async function collectPlaywright({
         return {
           platform,
           status: 'waiting_human',
-          reason: 'login_or_input_required',
+          reason: ready.challenge
+            ? 'challenge_no_submission'
+            : 'login_or_input_required',
         };
       const token = randomUUID();
       await bindEngineeringContext(outputDir, platform, token);
@@ -127,7 +158,12 @@ export async function collectPlaywright({
           status: 'waiting_human',
           reason: 'CONTEXT_BINDING_FAILED',
         };
-      await claimEngineeringSubmission(outputDir, platform);
+      await claimEngineeringSubmission(
+        outputDir,
+        platform,
+        new Date(),
+        beforeSubmit,
+      );
       const typed = await session.call('browser_type', {
         target: adapter.input,
         text: run.query.text,
@@ -145,7 +181,7 @@ export async function collectPlaywright({
     for (let step = 0; step < 60; step++) {
       const result = resultJSON(
         await session.call('browser_evaluate', {
-          function: `() => {const a=document.querySelector(${JSON.stringify(adapter.answer)});return {url:location.href,context_token:document.documentElement.dataset.geoCaptureContext,answer:a?.innerText||'',busy:!!document.querySelector(${JSON.stringify(adapter.stop)})}}`,
+          function: `() => {const a=document.querySelector(${JSON.stringify(adapter.answer)});return {url:location.href,context_token:document.documentElement.dataset.geoCaptureContext,answer:a?.innerText||'',busy:!!document.querySelector(${JSON.stringify(adapter.stop)}),challenge:!!document.querySelector('iframe[src*="captcha"],iframe[src*="challenges.cloudflare"],[data-testid="challenge-stage"]')}}`,
         }),
       );
       if (
@@ -163,6 +199,12 @@ export async function collectPlaywright({
           status: 'waiting_human',
           reason: 'RESULT_BINDING_CHANGED',
         };
+      if (result.challenge)
+        return {
+          platform,
+          status: 'waiting_human',
+          reason: 'challenge_no_resubmission',
+        };
       stable =
         result.answer && !result.busy && result.answer === previous
           ? stable + 1
@@ -171,10 +213,17 @@ export async function collectPlaywright({
       if (stable >= 2) {
         const raw = resultJSON(
           await session.call('browser_evaluate', {
-            function: `() => {const a=document.querySelector(${JSON.stringify(adapter.answer)});return {answer_text:a.innerText,answer_html:a.outerHTML,result_url:location.href,captured_at:new Date().toISOString(),outcome:'success',conversation_state:'new',observed_model:'unknown',citations:[...a.querySelectorAll('a[href],[data-pplx-citation-url]')].filter(e=>/^https?:/.test(e.getAttribute('data-pplx-citation-url')||e.href)).map((e,i)=>({occurrence_ordinal:i+1,url:e.getAttribute('data-pplx-citation-url')||e.href,title:e.innerText||'unknown',context:e.closest('p,li')?.innerText||e.parentElement?.innerText||'unknown'}))}}`,
+            function: `() => {const a=document.querySelector(${JSON.stringify(adapter.answer)});return {answer_text:a.innerText,${formalPlan ? '' : 'answer_html:a.outerHTML,'}context_token:document.documentElement.dataset.geoCaptureContext,result_url:location.href,captured_at:new Date().toISOString(),outcome:'success',conversation_state:'new',observed_model:'unknown',citations:[...a.querySelectorAll('a[href],[data-pplx-citation-url]')].filter(e=>/^https?:/.test(e.getAttribute('data-pplx-citation-url')||e.href)).map((e,i)=>({occurrence_ordinal:i+1,url:e.getAttribute('data-pplx-citation-url')||e.href,title:e.innerText||'unknown',context:e.closest('p,li')?.innerText||e.parentElement?.innerText||'unknown'}))}}`,
           }),
         );
+        if (raw.context_token !== state.context_token)
+          return {
+            platform,
+            status: 'waiting_human',
+            reason: 'RESULT_BINDING_CHANGED',
+          };
         await recordEngineeringCapture(outputDir, platform, raw);
+        if (!extract) return { platform, status: 'captured' };
         return extractEngineeringCapture(outputDir, platform, {
           provider,
           model,

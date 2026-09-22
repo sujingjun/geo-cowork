@@ -21,7 +21,7 @@ function isApproved(data) {
     && ['approved', 'published', 'formal', 'frozen', 'active'].includes(data.status);
 }
 
-function knowledgeClosure({ graph, knowledgeBase, goalRef }) {
+function knowledgeClosure({ graph, knowledgeBase, goalRef, querySetRef }) {
   const failures = [];
   const refs = [];
   const goal = graph.byId.get(goalRef)?.data;
@@ -29,9 +29,9 @@ function knowledgeClosure({ graph, knowledgeBase, goalRef }) {
     return { ready: false, failures: ['goal'], refs };
   }
   refs.push(goal.id);
-  const querySets = (goal.query_set_refs ?? [])
+  const querySets = (querySetRef ? [querySetRef] : goal.query_set_refs ?? [])
     .map((ref) => graph.byId.get(ref)?.data)
-    .filter((item) => item?.record_type === 'query_set' && item.status === 'frozen' && item.approval);
+    .filter((item) => item?.record_type === 'query_set' && item.goal_refs?.includes(goalRef) && item.status === 'frozen' && item.approval);
   if (querySets.length === 0) failures.push('query_set');
   const releaseObjects = graph.objects.filter(({ data, path: objectPath }) =>
     data.record_type === 'knowledge_release'
@@ -58,6 +58,11 @@ function knowledgeClosure({ graph, knowledgeBase, goalRef }) {
           && (!knowledgeBase || objectPath.startsWith(`${knowledgeBase.root_path}/`)));
       if (answers.length === 0) failures.push(`answer_card:${query.id}`);
       for (const { data: answer } of answers) {
+        if (!releaseObjects.some(({data: release}) => release.readiness === 'ready'
+          && release.answer_card_versions?.some(v => v.ref === answer.id && v.version === answer.version)
+          && answer.claim_versions?.length && answer.claim_versions.every(c => release.claim_versions?.some(v => v.ref === c.ref && v.version === c.version)))) {
+          failures.push(`release_membership:${answer.id}`);
+        }
         refs.push(answer.id);
         for (const claimVersion of answer.claim_versions ?? []) {
           const claimObject = graph.byId.get(claimVersion.ref);
@@ -76,6 +81,10 @@ function knowledgeClosure({ graph, knowledgeBase, goalRef }) {
               failures.push(`evidence:${evidenceRef}`);
             } else {
               refs.push(evidence.id, ...(evidence.source_refs ?? []));
+              for (const sourceRef of evidence.source_refs ?? []) {
+                const source = graph.byId.get(sourceRef)?.data;
+                if (!source || source.record_type !== 'source' || source.status !== 'active') failures.push(`source:${sourceRef}`);
+              }
             }
           }
           for (const documentRef of claim.document_refs ?? []) {
@@ -96,7 +105,7 @@ function knowledgeClosure({ graph, knowledgeBase, goalRef }) {
   return { ready: failures.length === 0, failures: [...new Set(failures)].sort(), refs };
 }
 
-export async function assessLifecycleReadiness({ workspace, knowledgeBaseRef, goalRef }) {
+export async function assessLifecycleReadiness({ workspace, knowledgeBaseRef, goalRef, querySetRef }) {
   const root = path.resolve(workspace);
   let identity;
   try {
@@ -119,7 +128,7 @@ export async function assessLifecycleReadiness({ workspace, knowledgeBaseRef, go
     throw new LifecycleReadinessError('KNOWLEDGE_BASE_SCOPE_MISMATCH', 'Knowledge Base 不属于当前 Merchant');
   }
   const closure = knowledgeBase
-    ? knowledgeClosure({ graph, knowledgeBase, goalRef })
+    ? knowledgeClosure({ graph, knowledgeBase, goalRef, querySetRef })
     : { ready: false, failures: ['knowledge_base'], refs: [] };
   const testMode = knowledgeBase?.mode === 'test_only';
   const analyticsConfigured = Boolean(

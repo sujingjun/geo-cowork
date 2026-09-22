@@ -1,0 +1,114 @@
+{
+  "scope": "isolated semantic validation only; inputs are explicit fixtures, not real brand observations or business approval",
+  "input": {
+    "asset": {
+      "id": "AST-ISOLATED-CHECK",
+      "locator": "https://www.example.com/about",
+      "title": "Isolated semantic validation"
+    },
+    "page_text": "The company website says: We connect creators with suppliers.",
+    "knowledge": [
+      {
+        "id": "CLM-ISOLATED-CHECK",
+        "status": "published",
+        "statement": "The company connects creators with suppliers.",
+        "scope": "This statement alone does not establish supplier coverage or product availability.",
+        "evidence_refs": [
+          "EVD-ISOLATED-CHECK"
+        ],
+        "evidence_sufficiency": {
+          "status": "insufficient",
+          "missing": [
+            "Dated supplier coverage and availability documentation"
+          ]
+        }
+      }
+    ],
+    "evidence": [
+      {
+        "id": "EVD-ISOLATED-CHECK",
+        "status": "approved",
+        "scope": "Corporate self-description only; no independent coverage evidence."
+      }
+    ],
+    "observations": [
+      {
+        "sample_ref": "SMP-ISOLATED-CHECK",
+        "platform": "chatgpt",
+        "answer": "The company connects creators with suppliers, but current supplier coverage and availability are unclear.",
+        "review": {
+          "core_fact_accuracy": "partial",
+          "risk_boundary": "pass"
+        },
+        "review_ref": "ARV-ISOLATED-CHECK"
+      }
+    ]
+  },
+  "analysis": {
+    "output": {
+      "findings": [
+        {
+          "kind": "evidence_gap",
+          "quote": "The company connects creators with suppliers, but current supplier coverage and availability are unclear.",
+          "sample_refs": [
+            "SMP-ISOLATED-CHECK"
+          ],
+          "claim_refs": [
+            "CLM-ISOLATED-CHECK"
+          ],
+          "sample_quotes": [
+            {
+              "sample_ref": "SMP-ISOLATED-CHECK",
+              "quote": "The company connects creators with suppliers, but current supplier coverage and availability are unclear."
+            }
+          ],
+          "rationale": "The observed ChatGPT answer raises supplier coverage and availability as unclear. The approved claim CLM-ISOLATED-CHECK is limited to the statement that the company connects creators with suppliers, and its explicit scope says this statement alone does not establish supplier coverage or product availability. The claim's evidence sufficiency is marked insufficient and is missing dated supplier coverage and availability documentation. Therefore this is an evidence gap, not a content gap.",
+          "next_action": "Obtain dated supplier coverage and availability documentation from an authorized internal owner; update CLM-ISOLATED-CHECK evidence sufficiency and EVD-ISOLATED-CHECK scope as appropriate; retest the same user query after approval.",
+          "evidence_needed": [
+            "Dated supplier coverage and availability documentation from an authorized internal source.",
+            "Provider action: update CLM-ISOLATED-CHECK evidence sufficiency and EVD-ISOLATED-CHECK scope once approved documentation is available before any content change."
+          ]
+        }
+      ],
+      "proposal_markdown": "## Recommendation\n\n**Observed issue:** For `SMP-ISOLATED-CHECK`, the answer states: “The company connects creators with suppliers, but current supplier coverage and availability are unclear.” The consumer evaluation is `core_fact_accuracy: partial`, indicating the answer is not fully satisfied by the currently approved evidence.\n\n**Claim and evidence references:** `CLM-ISOLATED-CHECK` is published and states that the company connects creators with suppliers. Its scope explicitly limits this statement: it does not establish supplier coverage or product availability. The claim's evidence sufficiency is `insufficient`, missing dated supplier coverage and availability documentation. `EVD-ISOLATED-CHECK` is approved only for corporate self-description and provides no independent coverage evidence.\n\n**Risk:** Publishing or implying coverage or availability without approved dated evidence would overstate what is supported. The current approved claim and evidence do not support adding coverage or availability language.\n\n**Evidence acquisition:** The internal owner should provide dated supplier coverage and availability documentation. Once approved, update `CLM-ISOLATED-CHECK` evidence sufficiency and `EVD-ISOLATED-CHECK` scope. Do not publish coverage or availability content under the current evidence.\n\n**Expected query retest:** After evidence and claim updates are approved, retest the same prompt and verify that any answer about supplier coverage or availability is grounded in the updated approved evidence. Continue monitoring `core_fact_accuracy` and `risk_boundary` for `SMP-ISOLATED-CHECK`.\n\n**Proposed content status:** Evidence-only recommendation. No publishable replacement text is approved at this time.",
+      "replacement_text": "",
+      "limitations": [
+        "No approved evidence of current supplier coverage or availability was supplied.",
+        "The approved claim CLM-ISOLATED-CHECK does not establish supplier coverage or product availability.",
+        "No independent coverage evidence is available; EVD-ISOLATED-CHECK is limited to corporate self-description."
+      ]
+    },
+    "audit": {
+      "id": "MODEL-af268ef5-aae1-488f-ba4a-f4422b43c240",
+      "provider": "deepseek",
+      "model": "deepseek-flash",
+      "prompt_sha256": "7e9343a4d43fd1692ab5aaf6c9e9452ef7d54b931ab7c93d50973c0e9f9ba72d",
+      "input_sha256": "c3d23049863cfd3b062aced4bf56cbeddc1ade864011b42c9fed28fa4ab2c578",
+      "started_at": "2026-09-20T13:08:03.564Z",
+      "status": "completed",
+      "request_options": {
+        "thinking": "enabled",
+        "reasoning_effort": "low"
+      },
+      "http_status": 200,
+      "response_model": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 579,
+        "completion_tokens": 2383,
+        "total_tokens": 2962,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 1670
+        },
+        "prompt_cache_hit_tokens": 0,
+        "prompt_cache_miss_tokens": 579
+      },
+      "finish_reason": "stop",
+      "output_sha256": "b38351d910b7bc086088b69952a4ac17378e85a93477810d72697005282b08d7",
+      "completed_at": "2026-09-20T13:08:15.019Z",
+      "duration_ms": 11455
+    }
+  }
+}

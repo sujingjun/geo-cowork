@@ -86,7 +86,11 @@ export function validateStrategyObject(data, { prior = null } = {}) {
   const errors = [];
   const warnings = [];
   if (!M7_TYPES.has(data?.record_type)) return { errors, warnings };
-  if (!validTestScope(data)) add(errors, 'TEST_KNOWLEDGE_SCOPE_REQUIRED');
+  const realGoalObject = ['cycle_goal_candidate_batch', 'cycle_goal_candidate', 'cycle_goal_selection'].includes(data.record_type)
+    && data.execution_scope === 'authorized_real' && !data.test_scope
+    && /^MER-(?:[A-Z0-9]+-)*[A-Z0-9]+$/.test(data.merchant_ref ?? '')
+    && /^KBASE-(?:[A-Z0-9]+-)*[A-Z0-9]+$/.test(data.knowledge_base_ref ?? '');
+  if (!validTestScope(data) && !realGoalObject) add(errors, 'TEST_KNOWLEDGE_SCOPE_REQUIRED');
   switch (data.record_type) {
     case 'strategy_assessment':
       validateAssessment(data, prior, errors);

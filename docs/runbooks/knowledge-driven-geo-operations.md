@@ -5,6 +5,10 @@
 - 来源：[Plan](../plans/2026-09-16-knowledge-driven-geo-e2e-plan.md)、[Spec](../specs/0014-knowledge-driven-geo-e2e.md)
 - 范围：当前仓库的隔离演练、真实模型、Query 输入和三平台工程采集。
 
+## 正式真实周期入口
+
+本页下方命令与自动驱动属于2026-09-16隔离演练。真实MyyShop工作区现使用[正式真实双周期操作手册](authorized-real-two-cycle.md)及Spec 0015；不得把演练seed/feedback用于真实周期。
+
 ## 环境
 
 使用 Node >=22.14.0，根目录执行 `npm ci`。Browser 子项目按自身 pnpm lock 安装。根 `.env` 保存 DEEPSEEK_API_KEY/BASE_URL/MODEL 和 OPENAI_API_KEY/BASE_URL/MODEL；不要将值写入工件。`GEO_ENV_FILE` 可显式指定配置文件，已有进程变量优先。

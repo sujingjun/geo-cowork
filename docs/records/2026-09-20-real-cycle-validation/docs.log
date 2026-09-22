@@ -1,0 +1,10 @@
+
+> geo-cowork@0.3.0 check:docs
+> node plugins/geo-expert/scripts/check-doc-links.mjs
+
+{
+  "ok": true,
+  "checked_files": 159,
+  "checked_links": 292,
+  "errors": []
+}
