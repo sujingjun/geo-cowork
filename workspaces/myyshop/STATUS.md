@@ -1,6 +1,6 @@
 # MyyShop 工作区状态
 
-> 最近更新：2026-09-20
+> 最近更新：2026-10-17
 
 ## 当前阶段
 
@@ -9,6 +9,20 @@
 当前仍为0个真实KBASE、0个正式Cycle、0个Publication；`knowledge_base_ref:null`。首轮英文知识切片已整理并展示[Owner审核包](reviews/packages/OWNER-KNOWLEDGE-CYC-MYYSHOP-REAL-20260920-01.md)，Owner明确回复“暂缓知识批准”。Google重新登录进程已报告ADC保存成功，但按暂停指令未继续读取或验证GA4/GSC，时区/事件定义仍未确认。preflight `real_cycle_start_ready:false`、`safe_to_create:false`；尚未新增正式Baseline样本。执行计划为 `execution_paused:true`，每日北京时间10:00 heartbeat已暂停（PAUSED），不会自动推进。
 
 历史2026-09-16双周期仍为隔离演练，不计入当前两个真实周期。
+
+## 当前源码的完整流程试跑（2026-10-17）
+
+采集 Agent 与 MCP Server 均从 `/Users/sujingjun/dhnb/oneglanse` 构建和运行。复用已授权登录凭证后，新的 `what is myyshop` / Gemini 原生运行成功，内部第 3 次尝试完成；MCP 仅启动一次 job。新回答为 1,151 bytes、sources=[]，存储与接收 hash 一致，来源覆盖含义保持未知。
+
+当前官网首页/About/robots/sitemap 已只读采集；真实 DeepSeek 生成并校验了 4 条候选观察、4 条建议。正式知识构建在临时副本中产生 candidate 英文 Answer Card 与 draft Release，并补齐关系追溯；临时副本已删除，草案仅以审阅 bundle 保存。真实工作区仍无 KBASE/Cycle/Publication，未生成新的正式 Sample/Review 或批准。
+
+正式完整闭环尚未成立：英文 Query 原始追溯返回 TRACE_INCOMPLETE；正式诊断返回 BASELINE_REQUIRED，OneGlanse intake 缺少正式接续及采样证明。OneGlanse 本仓分析凭据已配置但网关连接失败；这与下方历史运行环境缺凭据的原因不同。详见[整体流程与能力缺口](../../docs/records/2026-10-17-myyshop-geo-full-flow-audit.md)。正式执行暂停不变。
+
+## OneGlanse 单 Query 首次工程联调（历史证据）（2026-10-17）
+
+本次明确授权的 `what is myyshop` / Gemini 已通过 MCP 完成保存、原生运行、状态查询和完整接收：1 条回答、6 条 Source（4 个不同 URL），5,053 bytes 与 OneGlanse 保存值的 SHA-256 一致。来源 Query 版本与原文/发送文本映射保存在 [intake](runs/RUN-ONEGLANSE-MYYSHOP-20261017-01/oneglanse-intake/received.json)，[候选 GEO 分析](../../docs/records/2026-10-17-oneglanse-geo-observation.md)已完成。
+
+OneGlanse 默认后台分析已触发，但因运行环境未配置分析模型凭据而失败；本次没有关闭它或重发 Query。此工程结果不属于正式 Baseline，也不创建 KBASE/Cycle/Publication，`execution_paused:true` 保持。详细测试、hash 与限制见[联调记录](../../docs/records/2026-10-17-oneglanse-mcp-integration-record.md)。本次只同步仓库文档，未写飞书镜像。
 
 ## 当前边界
 

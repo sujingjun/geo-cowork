@@ -1,0 +1,27 @@
+{
+  "merged_prompts": [
+    "what is myyshop"
+  ],
+  "original_prompts": {
+    "prompts": [
+      {
+        "created_at": "2026-10-17 05:30:38",
+        "id": "f66bf31d-bf94-4cfb-901e-fb2f4654e824",
+        "prompt": "what is myyshop"
+      }
+    ],
+    "revision": "b42654753cc6e7595eef2225868b037de0641683c38752fded9ac0130bd5c160"
+  },
+  "query": {
+    "discovery_source_refs": [
+      "SRC-MYYSHOP-FINAL-PRODUCT-PLAN-001"
+    ],
+    "field": "normalized_text",
+    "original_text": "What is MyyShop?",
+    "path": "queries/formal/q-myyshop-what-is-en-baseline-001.md",
+    "ref": "Q-MYYSHOP-WHAT-IS-EN-BASELINE-001",
+    "source_sha256": "9218cd8e2a8460ebc589c1a553b924cf1f8482b08a7f391bf6e53099c9138e80",
+    "submitted_text": "what is myyshop",
+    "version": "1.0.0"
+  }
+}

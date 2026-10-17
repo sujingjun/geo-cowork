@@ -1,0 +1,5 @@
+{
+  "exit_code": 0,
+  "stdout": "{\n  \"created\": [\n    \"knowledge/releases/kr-myyshop-geo-trial-20261017.md\"\n  ],\n  \"kept\": [],\n  \"data\": {\n    \"id\": \"KR-MYYSHOP-GEO-TRIAL-20261017\",\n    \"record_type\": \"knowledge_release\",\n    \"status\": \"draft\",\n    \"version\": \"1.0.0\",\n    \"created_at\": \"2026-10-17T08:21:00.988Z\",\n    \"updated_at\": \"2026-10-17T08:21:00.988Z\",\n    \"title\": \"MyyShop English knowledge draft — temporary engineering replay\",\n    \"release_version\": \"0.1.0\",\n    \"claim_versions\": [\n      {\n        \"ref\": \"CLM-MYYSHOP-AUDIENCE-001\",\n        \"version\": \"1.0.1\"\n      },\n      {\n        \"ref\": \"CLM-MYYSHOP-LIFECYCLE-SERVICE-001\",\n        \"version\": \"1.0.1\"\n      }\n    ],\n    \"answer_card_versions\": [\n      {\n        \"ref\": \"ANS-MYYSHOP-WHAT-IS-EN-TRIAL-20261017\",\n        \"version\": \"1.0.0\"\n      }\n    ],\n    \"readiness\": \"incomplete\"\n  }\n}\n",
+  "stderr": ""
+}

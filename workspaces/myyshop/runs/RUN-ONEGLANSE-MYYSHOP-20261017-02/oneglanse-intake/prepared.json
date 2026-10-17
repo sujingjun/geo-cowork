@@ -1,0 +1,109 @@
+{
+  "accepted_text": "what is myyshop",
+  "capabilities": {
+    "allowed": {
+      "prompt_texts": [
+        "what is myyshop"
+      ],
+      "providers": [
+        "gemini"
+      ],
+      "scopes": [
+        "read",
+        "prompts:write",
+        "run:start",
+        "run:stop"
+      ]
+    },
+    "collector_version": "b2c6e73+source-e252c1b710a3",
+    "contract_version": "1.0.0",
+    "limits": {
+      "actual_model_version": "unknown",
+      "analysis_status_in_run_progress": false,
+      "automatic_analysis": true,
+      "automatic_analysis_scope": "native workspace analysis; may include previously stored responses",
+      "citation_occurrences": false,
+      "exact_job_response_binding": false,
+      "independent_session": "unknown",
+      "internal_retries": "native; may submit a prompt multiple times",
+      "max_chunk_bytes": 49152,
+      "prompt_save": "native trim/deduplicate/replacement; MCP rejects deletion and stale revision",
+      "provider_readiness": "native stored-session check; worker liveness and provider UI are not checked",
+      "raw_dom": false,
+      "run_scope": "workspace-selected prompts and authenticated enabled providers",
+      "source_semantics": "stored source list after native extraction/normalization; repeated URLs may remain; cited_text is not fetched page evidence",
+      "status_expiry": "native Redis TTL; missing means unavailable",
+      "time_zone": "UTC",
+      "transport": "stdio"
+    },
+    "response_fields": [
+      "id",
+      "workspace_id",
+      "prompt_id",
+      "prompt",
+      "model",
+      "model_provider",
+      "prompt_run_at",
+      "created_at",
+      "response",
+      "sources"
+    ],
+    "server_version": "0.1.0",
+    "source_fields": [
+      "title",
+      "cited_text",
+      "url",
+      "domain",
+      "favicon"
+    ],
+    "supported_providers": [
+      "chatgpt",
+      "perplexity",
+      "gemini",
+      "claude",
+      "ai-overview"
+    ]
+  },
+  "prepared_at": "2026-10-17T08:24:31.508Z",
+  "prompt_id": "f66bf31d-bf94-4cfb-901e-fb2f4654e824",
+  "query": {
+    "discovery_source_refs": [
+      "SRC-MYYSHOP-FINAL-PRODUCT-PLAN-001"
+    ],
+    "field": "normalized_text",
+    "original_text": "What is MyyShop?",
+    "path": "queries/formal/q-myyshop-what-is-en-baseline-001.md",
+    "ref": "Q-MYYSHOP-WHAT-IS-EN-BASELINE-001",
+    "source_sha256": "9218cd8e2a8460ebc589c1a553b924cf1f8482b08a7f391bf6e53099c9138e80",
+    "submitted_text": "what is myyshop",
+    "version": "1.0.0"
+  },
+  "workspace": {
+    "domain": "www.myyshop.com",
+    "enabled_providers": null,
+    "id": "workspace_abeabd53-ba17-4fae-b3c8-c2001f208a4e",
+    "name": "MyyShop",
+    "run_scope": {
+      "configured_providers": [
+        "chatgpt",
+        "perplexity",
+        "gemini",
+        "claude",
+        "ai-overview"
+      ],
+      "prompts": [
+        {
+          "id": "f66bf31d-bf94-4cfb-901e-fb2f4654e824",
+          "prompt": "what is myyshop"
+        }
+      ],
+      "ready_providers": [
+        "gemini"
+      ],
+      "revision": "7034ccb4cd0a8289e26eb334ba38a7bffc520eee312802ade8d56597f7ce905d"
+    },
+    "schedule": null,
+    "selected_prompt_ids": null,
+    "slug": "myyshop"
+  }
+}

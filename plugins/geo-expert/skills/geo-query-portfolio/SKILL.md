@@ -17,6 +17,8 @@ node <plugin-root>/scripts/query-portfolio.mjs generate --workspace <workspace> 
 
 候选 Query 的新来源会合并并保留原始批次；已冻结对象不原地变更。完整演练中用 geo-lifecycle 的审核包和 apply-feedback 完成选择/冻结，Owner 不手写 ID/hash/status。独立 Portfolio 的底层接口仍保留，Agent 只能根据 Owner 的明确决定物化批准。
 
+需要交给 OneGlanse 采集时，将已选 Query 的工作区相对路径、ref、version 和明确的文本字段交给 `geo-answer-cycle` 的 [OneGlanse 分支](../geo-answer-cycle/references/oneglanse.md)。该分支保存原文/来源版本/发送文本及服务接受的 prompt ID；本 Skill 不直接操作 OneGlanse 的存储或采集，不因工程对接改写 formal/frozen 状态。
+
 ## 触发场景
 
 - 从授权观察来源（生成式平台观察、第一方用户数据、社区表达、竞品材料）登记 candidate Query；

@@ -1,0 +1,51 @@
+{
+  "byte_length": 959,
+  "captured_at": "2026-10-17T08:19:01.910Z",
+  "collector": {
+    "mode": "public_http",
+    "name": "geo-cowork-public-site",
+    "version": "0.3.0"
+  },
+  "expectation": {
+    "expected_media_types": [
+      "text/plain"
+    ],
+    "expected_statuses": [
+      200
+    ],
+    "media_type_met": true,
+    "status_met": true
+  },
+  "final_url": "https://www.myyshop.com/robots.txt",
+  "plan_fingerprint": "bdd54c8e2d22e8d5f878151324682d7f5a857a60c880a11f16a71ff5956d9c6d",
+  "raw_retention_days": 90,
+  "redirects": [],
+  "request": {
+    "attempts": 1,
+    "headers": {
+      "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,text/plain;q=0.8,*/*;q=0.1",
+      "accept-language": "en-US,en;q=0.9",
+      "user-agent": "geo-cowork-m4/0.3.0"
+    },
+    "method": "GET",
+    "redirect_count": 0
+  },
+  "requested_url": "https://www.myyshop.com/robots.txt",
+  "response": {
+    "headers": {
+      "cache-control": "public, max-age=14400",
+      "content-type": "text/plain; charset=utf-8",
+      "etag": "W/\"3bf-jq4E5OIrnntAxdyCTS/0XljnaWA\"",
+      "last-modified": "Thu, 06 Aug 2026 06:08:22 GMT"
+    },
+    "status": 200,
+    "status_text": "OK"
+  },
+  "reviewer_role": "MyyShop Owner",
+  "schema_version": "1.0.0",
+  "sha256": "61f72bad0b67837d7d85213ad4ee4f588bfa076bc06ff40260435a55df7051c4",
+  "snapshot_path": "runs/RUN-GEO-FLOW-SITE-MYYSHOP-20261017-01/raw/public-site/robots.txt",
+  "state": "captured",
+  "target_fingerprint": "6b247209a5547eeba832384ac9d04091e2acdc2db111fc8618595beef2edd204",
+  "target_id": "robots"
+}

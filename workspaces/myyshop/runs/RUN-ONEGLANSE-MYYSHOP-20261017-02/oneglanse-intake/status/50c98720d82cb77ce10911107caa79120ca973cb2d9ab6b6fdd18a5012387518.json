@@ -1,0 +1,19 @@
+{
+  "availability": "available",
+  "job_id": "05b614de-3647-4907-b87b-4e63495a368d",
+  "progress": {
+    "providers": {
+      "gemini": "running"
+    },
+    "results": {
+      "gemini": 1
+    },
+    "stats": {
+      "actualResponses": 1,
+      "expectedResponses": 1,
+      "totalPrompts": 1
+    },
+    "status": "pending",
+    "updateId": 2
+  }
+}

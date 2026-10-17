@@ -1,0 +1,9 @@
+{
+  "authorization": {
+    "automatic_analysis": true,
+    "reference": "user://2026-10-17-oneglanse-single-query-development",
+    "scope": "single-query-engineering"
+  },
+  "scope_revision": "7034ccb4cd0a8289e26eb334ba38a7bffc520eee312802ade8d56597f7ce905d",
+  "submitted_at": "2026-10-17T06:38:15.485Z"
+}

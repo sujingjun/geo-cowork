@@ -1,9 +1,15 @@
 ---
 name: geo-answer-cycle
-description: 编排 M5 Consumer Answer Testing 的 Profile、Browser MCP 结果接收、两次独立样本、Citation-driven Source 归档、100 Source 批量分类、Review 与聚合；真实消费者平台仅在逐平台授权门通过后使用。
+description: 用于 M5 答案采样、Browser MCP 结果接收及 OneGlanse MCP 单 Query 工程对接；不用于自动批准正式 Baseline 或业务结论。
 ---
 
 # geo-answer-cycle
+
+## OneGlanse MCP 工程对接
+
+目标为使用 OneGlanse 现有采集能力时，先读 [OneGlanse 调用与接收](references/oneglanse.md)，走该独立工程分支。OneGlanse 维护 Server、身份授权、Tools 和原生运行；本 Skill 通过公开 MCP 读取能力、保存 Query 映射、启动、查状态、完整接收并交给 `geo-answer`。完成条件是原生 response/全部 Source 字段的接收 hash 闭合及本地候选分析，而非正式 Baseline。
+
+该分支不要求创建正式 Cycle；下方 M5 Profile/双槽与 Browser 专属步骤只适用于对应路径。已有授权在同一 Query/provider 范围内持续有效，轮询和本地恢复不重复确认。不得直接访问 OneGlanse 数据库、队列、Cookie、浏览器或源码函数。
 
 ## 真实工程采集（Spec 0014）
 

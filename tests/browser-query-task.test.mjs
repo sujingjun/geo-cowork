@@ -436,10 +436,10 @@ test('消费者平台 manual assist 可保存人工提供的完整结果', async
   };
   await addManualAuthorization(workspace, plan);
   try {
-    const opened = await openBrowserQueryTask({ workspace, plan });
+    const opened = await openBrowserQueryTask({ workspace, plan, now: '2026-09-02T10:00:00Z' });
     assert.equal(opened.state.platform.execution_mode, 'manual_assist');
     assert.equal(opened.state.platform.policy.status, 'manual_only');
-    await startBrowserQuery({ workspace, plan, queryRef: 'Q-M6-TEST-001' });
+    await startBrowserQuery({ workspace, plan, queryRef: 'Q-M6-TEST-001', now: '2026-09-02T10:01:00Z' });
     const completed = await completeBrowserQuery({
       workspace,
       plan,
@@ -447,6 +447,7 @@ test('消费者平台 manual assist 可保存人工提供的完整结果', async
       answerText: 'Owner supplied complete answer.',
       citations: [],
       resultUrl: 'https://chatgpt.com/share/fixture-result',
+      now: '2026-09-02T10:02:00Z',
     });
     assert.equal(completed.state.status, 'completed');
     assert.equal(completed.capture.execution_mode, 'manual_assist');
@@ -468,7 +469,7 @@ test('真实平台 authorization bytes 漂移时在创建 task 前失败', async
   plan.authorization_sha256 = '0'.repeat(64);
   try {
     await assert.rejects(
-      openBrowserQueryTask({ workspace, plan }),
+      openBrowserQueryTask({ workspace, plan, now: '2026-09-02T10:00:00Z' }),
       error => error.code === 'COLLECTION_AUTHORIZATION_REQUIRED',
     );
   } finally {

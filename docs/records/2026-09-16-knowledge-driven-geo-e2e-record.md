@@ -59,11 +59,11 @@ Perplexity 补充：同一份保留 DOM 包含 `data-pplx-citation-url`，无需
 | Workspace `--objects` / index `--check` | 通过，1273 个 canonical 对象，无错误或警告 |
 | `validate-knowledge-journey.mjs` | 两轮矩阵、全部阶段、血缘、提取审计与附件校验通过 |
 
-复核入口：
+复核入口（2026-10-17 更新：常驻演练目录已按用户要求移出，历史路径与结果保留；恢复见[清理记录](2026-10-17-oneglanse-boundary-workspace-cleanup-record.md)）：
 
-- [完整周期报告](../../workspaces/myyshop-geo-e2e-verified/reports/geo-cycle-overview.md)
-- [结构化验收结果](../../workspaces/myyshop-geo-e2e-verified/reports/engineering-acceptance.json)
-- [根测试日志](../../workspaces/myyshop-geo-e2e-verified/reports/validation/geo-all-tests-final.log)
+- 完整周期报告历史路径：`workspaces/myyshop-geo-e2e-verified/reports/geo-cycle-overview.md`
+- 结构化验收结果历史路径：`workspaces/myyshop-geo-e2e-verified/reports/engineering-acceptance.json`
+- 根测试日志历史路径：`workspaces/myyshop-geo-e2e-verified/reports/validation/geo-all-tests-final.log`
 - [真实采集接收摘要](../../workspaces/myyshop/runs/RUN-GEO-MCP-20260916/outputs/real-captures/summary.json)
 - [Owner 操作手册](../runbooks/knowledge-driven-geo-operations.md)
 

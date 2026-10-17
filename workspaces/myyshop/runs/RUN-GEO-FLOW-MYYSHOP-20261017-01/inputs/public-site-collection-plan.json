@@ -1,0 +1,76 @@
+{
+  "schema_version": "1.0.0",
+  "run_id": "RUN-GEO-FLOW-SITE-MYYSHOP-20261017-01",
+  "origin": "https://www.myyshop.com",
+  "development_fixture": false,
+  "collector": {
+    "name": "geo-cowork-public-site",
+    "version": "0.3.0",
+    "mode": "public_http"
+  },
+  "request": {
+    "user_agent": "geo-cowork-m4/0.3.0",
+    "accept_language": "en-US,en;q=0.9",
+    "concurrency": 1,
+    "request_interval_ms": 1000,
+    "timeout_ms": 20000,
+    "max_retries": 0,
+    "max_redirects": 5,
+    "max_response_bytes": 5242880
+  },
+  "raw_retention_days": 90,
+  "reviewer_role": "MyyShop Owner",
+  "allowlist": [
+    "/",
+    "/about-us",
+    "/robots.txt",
+    "/__sitemap__/pages.xml"
+  ],
+  "targets": [
+    {
+      "id": "homepage",
+      "path": "/",
+      "file": "homepage.html",
+      "expected_statuses": [
+        200
+      ],
+      "expected_media_types": [
+        "text/html"
+      ]
+    },
+    {
+      "id": "about-us",
+      "path": "/about-us",
+      "file": "about-us.html",
+      "expected_statuses": [
+        200
+      ],
+      "expected_media_types": [
+        "text/html"
+      ]
+    },
+    {
+      "id": "robots",
+      "path": "/robots.txt",
+      "file": "robots.txt",
+      "expected_statuses": [
+        200
+      ],
+      "expected_media_types": [
+        "text/plain"
+      ]
+    },
+    {
+      "id": "sitemap-pages",
+      "path": "/__sitemap__/pages.xml",
+      "file": "sitemap-pages.xml",
+      "expected_statuses": [
+        200
+      ],
+      "expected_media_types": [
+        "application/xml",
+        "text/xml"
+      ]
+    }
+  ]
+}

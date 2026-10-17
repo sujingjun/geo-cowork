@@ -1,0 +1,22 @@
+{
+  "errors": [],
+  "warnings": [
+    {
+      "code": "EVIDENCE_INSUFFICIENT",
+      "id": "CLM-MYYSHOP-AUDIENCE-001",
+      "path": "knowledge/claims/clm-myyshop-audience-001.md",
+      "missing": [
+        "first_party"
+      ]
+    },
+    {
+      "code": "EVIDENCE_INSUFFICIENT",
+      "id": "CLM-MYYSHOP-LIFECYCLE-SERVICE-001",
+      "path": "knowledge/claims/clm-myyshop-lifecycle-service-001.md",
+      "missing": [
+        "first_party",
+        "data_or_case"
+      ]
+    }
+  ]
+}

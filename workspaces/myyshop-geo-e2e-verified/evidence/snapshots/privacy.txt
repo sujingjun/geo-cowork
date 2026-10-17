@@ -1,1 +1,0 @@
-The data policy permits aggregate campaign metrics only.

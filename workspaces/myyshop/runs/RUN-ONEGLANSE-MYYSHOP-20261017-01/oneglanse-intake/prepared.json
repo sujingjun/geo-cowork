@@ -1,0 +1,106 @@
+{
+  "accepted_text": "what is myyshop",
+  "capabilities": {
+    "allowed": {
+      "prompt_texts": [
+        "what is myyshop"
+      ],
+      "providers": [
+        "gemini"
+      ],
+      "scopes": [
+        "read",
+        "prompts:write",
+        "run:start",
+        "run:stop"
+      ]
+    },
+    "collector_version": "92640e2+local-78409ddf2ef0",
+    "contract_version": "1.0.0",
+    "limits": {
+      "actual_model_version": "unknown",
+      "automatic_analysis": true,
+      "citation_occurrences": false,
+      "exact_job_response_binding": false,
+      "independent_session": "unknown",
+      "internal_retries": "native; may submit a prompt multiple times",
+      "max_chunk_bytes": 49152,
+      "prompt_save": "native trim/deduplicate/replacement; MCP rejects deletion and stale revision",
+      "raw_dom": false,
+      "run_scope": "workspace-selected prompts and authenticated enabled providers",
+      "source_semantics": "stored normalized/filtered/deduplicated source list; cited_text is not fetched page evidence",
+      "status_expiry": "native Redis TTL; missing means unavailable",
+      "time_zone": "UTC",
+      "transport": "stdio"
+    },
+    "response_fields": [
+      "id",
+      "workspace_id",
+      "prompt_id",
+      "prompt",
+      "model",
+      "model_provider",
+      "prompt_run_at",
+      "created_at",
+      "response",
+      "sources"
+    ],
+    "server_version": "0.1.0",
+    "source_fields": [
+      "title",
+      "cited_text",
+      "url",
+      "domain",
+      "favicon"
+    ],
+    "supported_providers": [
+      "chatgpt",
+      "perplexity",
+      "gemini",
+      "claude",
+      "ai-overview"
+    ]
+  },
+  "prepared_at": "2026-10-17T06:37:32.264Z",
+  "prompt_id": "f66bf31d-bf94-4cfb-901e-fb2f4654e824",
+  "query": {
+    "discovery_source_refs": [
+      "SRC-MYYSHOP-FINAL-PRODUCT-PLAN-001"
+    ],
+    "field": "normalized_text",
+    "original_text": "What is MyyShop?",
+    "path": "queries/formal/q-myyshop-what-is-en-baseline-001.md",
+    "ref": "Q-MYYSHOP-WHAT-IS-EN-BASELINE-001",
+    "source_sha256": "9218cd8e2a8460ebc589c1a553b924cf1f8482b08a7f391bf6e53099c9138e80",
+    "submitted_text": "what is myyshop",
+    "version": "1.0.0"
+  },
+  "workspace": {
+    "domain": "www.myyshop.com",
+    "enabled_providers": null,
+    "id": "workspace_abeabd53-ba17-4fae-b3c8-c2001f208a4e",
+    "name": "MyyShop",
+    "run_scope": {
+      "configured_providers": [
+        "chatgpt",
+        "perplexity",
+        "gemini",
+        "claude",
+        "ai-overview"
+      ],
+      "prompts": [
+        {
+          "id": "f66bf31d-bf94-4cfb-901e-fb2f4654e824",
+          "prompt": "what is myyshop"
+        }
+      ],
+      "ready_providers": [
+        "gemini"
+      ],
+      "revision": "7034ccb4cd0a8289e26eb334ba38a7bffc520eee312802ade8d56597f7ce905d"
+    },
+    "schedule": null,
+    "selected_prompt_ids": null,
+    "slug": "myyshop"
+  }
+}

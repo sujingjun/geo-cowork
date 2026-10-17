@@ -1,0 +1,51 @@
+{
+  "byte_length": 11102,
+  "captured_at": "2026-10-17T08:19:01.910Z",
+  "collector": {
+    "mode": "public_http",
+    "name": "geo-cowork-public-site",
+    "version": "0.3.0"
+  },
+  "expectation": {
+    "expected_media_types": [
+      "application/xml",
+      "text/xml"
+    ],
+    "expected_statuses": [
+      200
+    ],
+    "media_type_met": true,
+    "status_met": true
+  },
+  "final_url": "https://www.myyshop.com/__sitemap__/pages.xml",
+  "plan_fingerprint": "bdd54c8e2d22e8d5f878151324682d7f5a857a60c880a11f16a71ff5956d9c6d",
+  "raw_retention_days": 90,
+  "redirects": [],
+  "request": {
+    "attempts": 1,
+    "headers": {
+      "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,text/plain;q=0.8,*/*;q=0.1",
+      "accept-language": "en-US,en;q=0.9",
+      "user-agent": "geo-cowork-m4/0.3.0"
+    },
+    "method": "GET",
+    "redirect_count": 0
+  },
+  "requested_url": "https://www.myyshop.com/__sitemap__/pages.xml",
+  "response": {
+    "headers": {
+      "cache-control": "public, max-age=14400",
+      "content-type": "text/xml; charset=utf-8",
+      "last-modified": "Sat, 17 Oct 2026 08:19:05 GMT"
+    },
+    "status": 200,
+    "status_text": "OK"
+  },
+  "reviewer_role": "MyyShop Owner",
+  "schema_version": "1.0.0",
+  "sha256": "cbbfdc47e4b30562146c88f2386acd1762c5c2425725cc413920f900edc4cf5c",
+  "snapshot_path": "runs/RUN-GEO-FLOW-SITE-MYYSHOP-20261017-01/raw/public-site/sitemap-pages.xml",
+  "state": "captured",
+  "target_fingerprint": "f02f80d5bb143cbf0671d096fa2d243af2e36b0f381e737eff05f68e416a9587",
+  "target_id": "sitemap-pages"
+}

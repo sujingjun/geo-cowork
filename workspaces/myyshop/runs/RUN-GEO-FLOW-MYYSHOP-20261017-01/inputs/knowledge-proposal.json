@@ -1,0 +1,38 @@
+{
+  "document_ref": "DOC-MYYSHOP-WHAT-IS-001",
+  "claims": [],
+  "answer_cards": [
+    {
+      "id": "ANS-MYYSHOP-WHAT-IS-EN-TRIAL-20261017",
+      "path": "knowledge/answer-cards/ans-myyshop-what-is-en-trial-20261017.md",
+      "title": "What is MyyShop? — candidate for engineering trial",
+      "query_refs": [
+        "Q-MYYSHOP-WHAT-IS-EN-BASELINE-001"
+      ],
+      "claim_versions": [
+        {
+          "ref": "CLM-MYYSHOP-AUDIENCE-001",
+          "version": "1.0.1"
+        },
+        {
+          "ref": "CLM-MYYSHOP-LIFECYCLE-SERVICE-001",
+          "version": "1.0.1"
+        }
+      ],
+      "evidence_refs": [
+        "EVD-MYYSHOP-LEGACY-DEFINITION-001"
+      ],
+      "direct_answer": "MyyShop is a creator services platform for content creators worldwide. It provides tools, opportunities and services around creator onboarding, growth, engagement and monetization. Actual capabilities, eligibility, regional availability and service coverage remain subject to official information and business confirmation. This description does not mean every lifecycle service is currently available and does not promise income or growth.",
+      "limitations": [
+        "This is a candidate English rendering of existing approved statements, not a newly approved knowledge release.",
+        "Approved internal usage still lacks sufficient first-party and data/case evidence.",
+        "Regional and lifecycle service coverage remain unconfirmed."
+      ],
+      "forbidden_statements": [
+        "Do not claim all services are live.",
+        "Do not promise income or growth.",
+        "Do not treat this temporary replay as a real KBASE activation or publication."
+      ]
+    }
+  ]
+}

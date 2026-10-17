@@ -1,5 +1,9 @@
 # 文档导航
 
+## 2026-10-17 OneGlanse MCP 对接规划
+
+[开发计划](plans/2026-10-17-oneglanse-mcp-integration-plan.md)（implemented）按双方职责实现首版接口：OneGlanse 维护 MCP 授权/9 Tools，cowork 更新现有 Skill 并完整接收答案与引用。[任务与范围](tasks/2026-10-17-oneglanse-mcp-integration.md)、[联调记录](records/2026-10-17-oneglanse-mcp-integration-record.md)记录 MyyShop 单 Query/Gemini 的真实链路与 hash；[GEO 候选观察](records/2026-10-17-oneglanse-geo-observation.md)保持业务证据边界。当前采集 Agent 与 MCP 均以 `dhnb/oneglanse` 为准；[整体流程试跑与能力缺口](records/2026-10-17-myyshop-geo-full-flow-audit.md)确认单 Query 回传和实际 DeepSeek 候选诊断成功，但正式接续、知识批准、采集证据与测量条件尚未闭合。当前 OneGlanse 默认模型调用连接失败，正式 Cycle 仍暂停。[边界与清理记录](records/2026-10-17-oneglanse-boundary-workspace-cleanup-record.md)和[首次源码核验](records/2026-10-17-oneglanse-mcp-planning-record.md)保留历史依据。
+
 ## 2026-09-20 正式真实双周期
 
 当前执行入口：[Spec 0015](specs/0015-authorized-real-two-cycle.md)、[Plan](plans/2026-09-20-authorized-real-two-cycle-plan.md)、[Task](tasks/2026-09-20-authorized-real-two-cycle.md)、[主 Agent 验收 Record](records/2026-09-20-authorized-real-two-cycle-record.md)、[操作手册](runbooks/authorized-real-two-cycle.md)。工程实现和真实业务周期分别验收；Owner当前要求仅工程复验收尾，真实执行与heartbeat已暂停，知识批准为defer。

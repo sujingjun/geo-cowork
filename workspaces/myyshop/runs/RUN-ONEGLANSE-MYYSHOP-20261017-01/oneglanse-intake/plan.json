@@ -1,0 +1,18 @@
+{
+  "authorization": {
+    "automatic_analysis": true,
+    "reference": "user://2026-10-17-oneglanse-single-query-development",
+    "scope": "single-query-engineering"
+  },
+  "oneglanse_workspace_id": "workspace_abeabd53-ba17-4fae-b3c8-c2001f208a4e",
+  "provider": "gemini",
+  "query": {
+    "field": "normalized_text",
+    "path": "queries/formal/q-myyshop-what-is-en-baseline-001.md",
+    "ref": "Q-MYYSHOP-WHAT-IS-EN-BASELINE-001",
+    "version": "1.0.0"
+  },
+  "run_id": "RUN-ONEGLANSE-MYYSHOP-20261017-01",
+  "schema_version": "oneglanse-run-plan-v1",
+  "workspace_id": "ws_myyshop2026082400000000000"
+}

@@ -8,7 +8,7 @@
     "node": ">=22.14.0"
   },
   "scripts": {
-    "test": "node --test",
+    "test": "node --test tests/*.test.mjs",
     "test:m2-contract": "node --test tests/m2-*.test.mjs",
     "test:m3-knowledge-query": "node --test tests/m3-knowledge-query.test.mjs",
     "test:m4-diagnosis": "node --test tests/m4-*.test.mjs",
@@ -34,9 +34,11 @@
     "test:semantic-quality": "node plugins/geo-expert/scripts/validate-semantic-quality.mjs",
     "validate:geo-e2e": "node plugins/geo-expert/scripts/validate-knowledge-journey.mjs",
     "format:geo-e2e": "prettier --single-quote --trailing-comma all --write 'plugins/geo-expert/scripts/lib/{model-client,query-inputs,capture-run,playwright-collector,playwright-mcp-client,owner-feedback,knowledge-workspace,knowledge-markdown,snapshot-support,sampling-matrix,proposal-revision,journey-*}.mjs' 'plugins/geo-expert/scripts/{geo-playwright,geo-runtime,demo-knowledge-journey,validate-semantic-quality,validate-knowledge-journey}.mjs' 'tests/{capture-run,owner-feedback,query-inputs,source-maintenance,snapshot-support,knowledge-markdown,journey-lock}.test.mjs'",
-    "format:check": "prettier --single-quote --trailing-comma all --check 'plugins/geo-expert/scripts/lib/{model-client,query-inputs,capture-run,playwright-collector,playwright-mcp-client,owner-feedback,knowledge-workspace,knowledge-markdown,snapshot-support,sampling-matrix,proposal-revision,journey-*}.mjs' 'plugins/geo-expert/scripts/{geo-playwright,geo-runtime,demo-knowledge-journey,validate-semantic-quality,validate-knowledge-journey}.mjs' 'tests/{capture-run,owner-feedback,query-inputs,source-maintenance,snapshot-support,knowledge-markdown,journey-lock}.test.mjs' 'plugins/geo-expert/scripts/lib/{real-analytics,real-cycle-*,real-diagnosis,real-journey*,real-knowledge,real-publication,real-sampling}.mjs' 'tests/real-*.test.mjs' 'tests/helpers/real-*.mjs'",
+    "format:check": "prettier --single-quote --trailing-comma all --check 'plugins/geo-expert/scripts/lib/{model-client,query-inputs,capture-run,playwright-collector,playwright-mcp-client,owner-feedback,knowledge-workspace,knowledge-markdown,snapshot-support,sampling-matrix,proposal-revision,journey-*}.mjs' 'plugins/geo-expert/scripts/{geo-playwright,geo-runtime,demo-knowledge-journey,validate-semantic-quality,validate-knowledge-journey}.mjs' 'tests/{capture-run,owner-feedback,query-inputs,source-maintenance,snapshot-support,knowledge-markdown,journey-lock}.test.mjs' 'plugins/geo-expert/scripts/lib/{real-analytics,real-cycle-*,real-diagnosis,real-journey*,real-knowledge,real-publication,real-sampling}.mjs' 'tests/real-*.test.mjs' 'tests/helpers/real-*.mjs' 'plugins/geo-expert/scripts/oneglanse.mjs' 'plugins/geo-expert/scripts/lib/oneglanse-*.mjs' 'tests/oneglanse-intake.test.mjs'",
     "test:real-cycle": "node --test tests/real-*.test.mjs",
-    "format:real-cycle": "prettier --single-quote --trailing-comma all --write 'plugins/geo-expert/scripts/lib/{real-analytics,real-cycle-*,real-diagnosis,real-journey*,real-knowledge,real-publication,real-sampling}.mjs' 'tests/real-*.test.mjs' 'tests/helpers/real-*.mjs'"
+    "format:real-cycle": "prettier --single-quote --trailing-comma all --write 'plugins/geo-expert/scripts/lib/{real-analytics,real-cycle-*,real-diagnosis,real-journey*,real-knowledge,real-publication,real-sampling}.mjs' 'tests/real-*.test.mjs' 'tests/helpers/real-*.mjs'",
+    "oneglanse": "node plugins/geo-expert/scripts/oneglanse.mjs",
+    "test:oneglanse": "node --test tests/oneglanse-intake.test.mjs"
   },
   "dependencies": {
     "ajv": "8.20.0",

@@ -1,0 +1,5 @@
+{
+  "exit_code": 0,
+  "stdout": "{\n  \"errors\": [],\n  \"warnings\": [\n    {\n      \"code\": \"EVIDENCE_INSUFFICIENT\",\n      \"id\": \"CLM-MYYSHOP-AUDIENCE-001\",\n      \"path\": \"knowledge/claims/clm-myyshop-audience-001.md\",\n      \"missing\": [\n        \"first_party\"\n      ]\n    },\n    {\n      \"code\": \"EVIDENCE_INSUFFICIENT\",\n      \"id\": \"CLM-MYYSHOP-LIFECYCLE-SERVICE-001\",\n      \"path\": \"knowledge/claims/clm-myyshop-lifecycle-service-001.md\",\n      \"missing\": [\n        \"first_party\",\n        \"data_or_case\"\n      ]\n    }\n  ]\n}\n",
+  "stderr": ""
+}

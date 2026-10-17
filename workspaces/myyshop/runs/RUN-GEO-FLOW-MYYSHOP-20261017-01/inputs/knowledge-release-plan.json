@@ -1,0 +1,22 @@
+{
+  "id": "KR-MYYSHOP-GEO-TRIAL-20261017",
+  "path": "knowledge/releases/kr-myyshop-geo-trial-20261017.md",
+  "title": "MyyShop English knowledge draft — temporary engineering replay",
+  "release_version": "0.1.0",
+  "claim_versions": [
+    {
+      "ref": "CLM-MYYSHOP-AUDIENCE-001",
+      "version": "1.0.1"
+    },
+    {
+      "ref": "CLM-MYYSHOP-LIFECYCLE-SERVICE-001",
+      "version": "1.0.1"
+    }
+  ],
+  "answer_card_versions": [
+    {
+      "ref": "ANS-MYYSHOP-WHAT-IS-EN-TRIAL-20261017",
+      "version": "1.0.0"
+    }
+  ]
+}

@@ -1,12 +1,11 @@
 import assert from 'node:assert/strict';
+import { mkdir, rm, writeFile } from 'node:fs/promises';
 import path from 'node:path';
-import { fileURLToPath } from 'node:url';
 import test from 'node:test';
 
 import { evaluateConformance } from '../plugins/geo-expert/scripts/lib/conformance.mjs';
 import { runConformance } from '../plugins/geo-expert/scripts/geo-conformance.mjs';
-
-const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
+import { createM6FixtureWorkspace, seedM6FreezeInputs } from './helpers/m6-fixtures.mjs';
 
 const profile = {
   schema_version: 'cross-host-conformance/1.0.0',
@@ -113,10 +112,30 @@ test('M8 任一 host output 含 PII 时在比较前失败', () => {
   );
 });
 
-test('M8 实际检查两套 packaging、shared Tool 与 WorkBuddy semantic fixture', async () => {
+test('M8 实际检查两套 packaging、shared Tool 与 WorkBuddy semantic fixture', async (t) => {
+  const workspace = await createM6FixtureWorkspace();
+  t.after(() => rm(workspace, { recursive: true, force: true }));
+  await seedM6FreezeInputs(workspace);
+  const directory = path.join(workspace, 'execution/conformance');
+  await mkdir(directory, { recursive: true });
+  const profilePath = path.join(directory, 'profile.json');
+  await writeFile(profilePath, JSON.stringify({
+    ...profile,
+    goal_ref: 'GOAL-M6-TEST-001',
+    workbuddy_semantic_fixture: 'execution/conformance/workbuddy-semantic-fixture.json',
+  }));
+  await writeFile(path.join(directory, 'workbuddy-semantic-fixture.json'), JSON.stringify({
+    schema_version: 'workbuddy-cn-test-only-semantic/1.0.0',
+    merchant_ref: profile.merchant_ref,
+    knowledge_base_ref: profile.knowledge_base_ref,
+    native_adapter_present: false,
+    native_host_verified: false,
+    packaging_contract_available: false,
+    native_packaging_conformance_applicable: false,
+  }));
   const result = await runConformance({
-    workspace: path.join(ROOT, 'workspaces/myyshop-development-test'),
-    profilePath: path.join(ROOT, 'workspaces/myyshop-development-test/execution/conformance/profile.json'),
+    workspace,
+    profilePath,
   });
   assert.equal(result.required_passed, true);
   assert.equal(result.host_runs.length, 5);

@@ -1,0 +1,44 @@
+{
+  "business_approval": false,
+  "formal_cycle_resumed": false,
+  "observations": [
+    {
+      "brand_mentioned": true,
+      "citation_domains": [],
+      "fact_accuracy": null,
+      "formal_baseline_eligible": false,
+      "missing_evidence": [
+        "independent_session",
+        "actual_model_version",
+        "actual_submission_time",
+        "collector_profile_and_slot",
+        "citation_occurrences",
+        "exact_job_response_binding"
+      ],
+      "positioning_review": "pending-human-or-geo-expert-review",
+      "provider": "gemini",
+      "query_ref": "Q-MYYSHOP-WHAT-IS-EN-BASELINE-001",
+      "raw_path": "runs/RUN-ONEGLANSE-MYYSHOP-20261017-02/oneglanse-intake/responses/6fc8f5cc8a5674a9e0efeb2fe4c25cae27b9dd7e919eaf2228c204f80a3cae45.json",
+      "raw_sha256": "6e62e28c1a4e2aac031d0de20e977fec6a745b2c5da07568322e21dc1ba02b78",
+      "response_characters": 813,
+      "response_id": "fd5dc1e6-e872-48f2-b0dc-70ebae4aca9b",
+      "source_list_entry_count": 0,
+      "sources": [],
+      "unique_url_count": 0
+    }
+  ],
+  "query": {
+    "discovery_source_refs": [
+      "SRC-MYYSHOP-FINAL-PRODUCT-PLAN-001"
+    ],
+    "field": "normalized_text",
+    "original_text": "What is MyyShop?",
+    "path": "queries/formal/q-myyshop-what-is-en-baseline-001.md",
+    "ref": "Q-MYYSHOP-WHAT-IS-EN-BASELINE-001",
+    "source_sha256": "9218cd8e2a8460ebc589c1a553b924cf1f8482b08a7f391bf6e53099c9138e80",
+    "submitted_text": "what is myyshop",
+    "version": "1.0.0"
+  },
+  "schema_version": "oneglanse-geo-observation-v1",
+  "scope": "engineering-candidate"
+}

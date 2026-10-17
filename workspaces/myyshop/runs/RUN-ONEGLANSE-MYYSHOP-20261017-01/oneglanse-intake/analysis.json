@@ -1,0 +1,140 @@
+{
+  "business_approval": false,
+  "formal_cycle_resumed": false,
+  "observations": [
+    {
+      "brand_mentioned": true,
+      "citation_domains": [
+        "apps.apple.com",
+        "businesswire.com",
+        "dhgate.com",
+        "stufftotalk.wordpress.com"
+      ],
+      "fact_accuracy": null,
+      "formal_baseline_eligible": false,
+      "missing_evidence": [
+        "independent_session",
+        "actual_model_version",
+        "actual_submission_time",
+        "collector_profile_and_slot",
+        "citation_occurrences",
+        "exact_job_response_binding"
+      ],
+      "positioning_review": "pending-human-or-geo-expert-review",
+      "provider": "gemini",
+      "query_ref": "Q-MYYSHOP-WHAT-IS-EN-BASELINE-001",
+      "raw_path": "runs/RUN-ONEGLANSE-MYYSHOP-20261017-01/oneglanse-intake/responses/751ef8f4008668c49ca333e0f02cde919cbd392a49348aa17ff9f3696bca2064.json",
+      "raw_sha256": "c99edfa62d5feee8b4ec0f3fe806a019b35cdb9313c5a25843d4152f255b882e",
+      "response_characters": 1954,
+      "response_id": "503b9927-2727-4f65-a699-50d49aad512a",
+      "source_list_entry_count": 6,
+      "sources": [
+        {
+          "citation_domain": "businesswire.com",
+          "cited_text": "“MyyShop is a Software-as-a-Service (SaaS) based platform, incubated by DHgate. It provides one-stop trustworthy, convenient, and accessible tools and services”",
+          "claim_support": null,
+          "domain": "businesswire.com",
+          "evidence_kind": "source-list",
+          "favicon": "https://www.google.com/s2/favicons?sz=64&domain=businesswire.com",
+          "occurrence_count": null,
+          "page_content_verified": false,
+          "source_list_index": 0,
+          "source_type": null,
+          "title": "DHgate Launches MyyShop to Build a Decentralized Ecosystem",
+          "url": "https://www.businesswire.com/news/home/20200921005309/en/DHgate-Launches-MyyShop-to-Build-a-Decentralized-Ecosystem",
+          "url_normalized": "https://www.businesswire.com/news/home/20200921005309/en/DHgate-Launches-MyyShop-to-Build-a-Decentralized-Ecosystem"
+        },
+        {
+          "citation_domain": "dhgate.com",
+          "cited_text": "“ Our founder and CEO, Diane Wang, reiterated what an exciting moment it was. She added that MyyShop was set to help dropshippers from across the globe in servin...”",
+          "claim_support": null,
+          "domain": "dhgate.com",
+          "evidence_kind": "source-list",
+          "favicon": "https://www.google.com/s2/favicons?sz=64&domain=dhgate.com",
+          "occurrence_count": null,
+          "page_content_verified": false,
+          "source_list_index": 1,
+          "source_type": null,
+          "title": "DHgate's Launch Of MyyShop - A Step Towards Inclusive Growth In",
+          "url": "https://www.dhgate.com/blog/dhgate-launch-of-myyshop-a-step-towards-inclusive-growth-in-global-trade/",
+          "url_normalized": "https://www.dhgate.com/blog/dhgate-launch-of-myyshop-a-step-towards-inclusive-growth-in-global-trade/"
+        },
+        {
+          "citation_domain": "apps.apple.com",
+          "cited_text": "“MyyShop is an AI-driven global creator marketing platform that connects creators like you with trusted, high-quality brand collaborations,”",
+          "claim_support": null,
+          "domain": "apps.apple.com",
+          "evidence_kind": "source-list",
+          "favicon": "https://www.google.com/s2/favicons?sz=64&domain=apps.apple.com",
+          "occurrence_count": null,
+          "page_content_verified": false,
+          "source_list_index": 2,
+          "source_type": null,
+          "title": "MyyShop - App Store - Apple",
+          "url": "https://apps.apple.com/us/app/myyshop/id6449818392",
+          "url_normalized": "https://apps.apple.com/us/app/myyshop/id6449818392"
+        },
+        {
+          "citation_domain": "stufftotalk.wordpress.com",
+          "cited_text": "“The first one being the Opportunities section which is further divided into 3 sections that are : * Content Creation – Create content based on the brand brief —...”",
+          "claim_support": null,
+          "domain": "stufftotalk.wordpress.com",
+          "evidence_kind": "source-list",
+          "favicon": "https://www.google.com/s2/favicons?sz=64&domain=stufftotalk.wordpress.com",
+          "occurrence_count": null,
+          "page_content_verified": false,
+          "source_list_index": 3,
+          "source_type": null,
+          "title": "Everything You Need To Know about Myyshop Review",
+          "url": "https://stufftotalk.wordpress.com/2025/11/30/everything-you-need-to-know-about-myyshop-review/",
+          "url_normalized": "https://stufftotalk.wordpress.com/2025/11/30/everything-you-need-to-know-about-myyshop-review/"
+        },
+        {
+          "citation_domain": "stufftotalk.wordpress.com",
+          "cited_text": "“* Affiliate Promotion – Create and publish promotional content on your social media and earn commission based on sales. For example, Urgently looking for a fash...”",
+          "claim_support": null,
+          "domain": "stufftotalk.wordpress.com",
+          "evidence_kind": "source-list",
+          "favicon": "https://www.google.com/s2/favicons?sz=64&domain=stufftotalk.wordpress.com",
+          "occurrence_count": null,
+          "page_content_verified": false,
+          "source_list_index": 4,
+          "source_type": null,
+          "title": "Everything You Need To Know about Myyshop Review",
+          "url": "https://stufftotalk.wordpress.com/2025/11/30/everything-you-need-to-know-about-myyshop-review/",
+          "url_normalized": "https://stufftotalk.wordpress.com/2025/11/30/everything-you-need-to-know-about-myyshop-review/"
+        },
+        {
+          "citation_domain": "businesswire.com",
+          "cited_text": "“Dropshipping is an e-commerce order fulfillment method that allows resellers to sell products to their customers in their online channels without holding invent...”",
+          "claim_support": null,
+          "domain": "businesswire.com",
+          "evidence_kind": "source-list",
+          "favicon": "https://www.google.com/s2/favicons?sz=64&domain=businesswire.com",
+          "occurrence_count": null,
+          "page_content_verified": false,
+          "source_list_index": 5,
+          "source_type": null,
+          "title": "DHgate Launches MyyShop to Build a Decentralized Ecosystem",
+          "url": "https://www.businesswire.com/news/home/20200921005309/en/DHgate-Launches-MyyShop-to-Build-a-Decentralized-Ecosystem",
+          "url_normalized": "https://www.businesswire.com/news/home/20200921005309/en/DHgate-Launches-MyyShop-to-Build-a-Decentralized-Ecosystem"
+        }
+      ],
+      "unique_url_count": 4
+    }
+  ],
+  "query": {
+    "discovery_source_refs": [
+      "SRC-MYYSHOP-FINAL-PRODUCT-PLAN-001"
+    ],
+    "field": "normalized_text",
+    "original_text": "What is MyyShop?",
+    "path": "queries/formal/q-myyshop-what-is-en-baseline-001.md",
+    "ref": "Q-MYYSHOP-WHAT-IS-EN-BASELINE-001",
+    "source_sha256": "9218cd8e2a8460ebc589c1a553b924cf1f8482b08a7f391bf6e53099c9138e80",
+    "submitted_text": "what is myyshop",
+    "version": "1.0.0"
+  },
+  "schema_version": "oneglanse-geo-observation-v1",
+  "scope": "engineering-candidate"
+}

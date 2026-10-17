@@ -1,0 +1,9 @@
+{
+  "authorization": {
+    "automatic_analysis": true,
+    "reference": "user://2026-10-17-current-oneglanse-full-flow-trial",
+    "scope": "single-query-engineering"
+  },
+  "scope_revision": "7034ccb4cd0a8289e26eb334ba38a7bffc520eee312802ade8d56597f7ce905d",
+  "submitted_at": "2026-10-17T08:24:32.494Z"
+}

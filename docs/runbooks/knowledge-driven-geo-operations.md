@@ -1,7 +1,7 @@
 # 知识驱动 GEO 操作手册
 
 - 状态：implemented
-- 更新：2026-09-16
+- 更新：2026-10-17
 - 来源：[Plan](../plans/2026-09-16-knowledge-driven-geo-e2e-plan.md)、[Spec](../specs/0014-knowledge-driven-geo-e2e.md)
 - 范围：当前仓库的隔离演练、真实模型、Query 输入和三平台工程采集。
 
@@ -19,12 +19,14 @@
 
 ## Owner 日常入口
 
+以下路径指已明确创建的临时演练工作区。2026-10-17 已清理常驻演练目录，`workspaces/` 只保留真实 `myyshop`；执行真实模型演练仍需对应授权，不得用真实工作区代替临时路径。
+
 ```bash
-node plugins/geo-expert/scripts/geo-lifecycle.mjs start --workspace workspaces/myyshop-geo-e2e
-node plugins/geo-expert/scripts/geo-lifecycle.mjs inbox --workspace workspaces/myyshop-geo-e2e
-node plugins/geo-expert/scripts/geo-lifecycle.mjs apply-feedback --workspace workspaces/myyshop-geo-e2e --file <feedback.md>
-node plugins/geo-expert/scripts/geo-lifecycle.mjs continue --workspace workspaces/myyshop-geo-e2e
-node plugins/geo-expert/scripts/geo-lifecycle.mjs report --workspace workspaces/myyshop-geo-e2e
+node plugins/geo-expert/scripts/geo-lifecycle.mjs start --workspace <temporary-rehearsal-workspace>
+node plugins/geo-expert/scripts/geo-lifecycle.mjs inbox --workspace <temporary-rehearsal-workspace>
+node plugins/geo-expert/scripts/geo-lifecycle.mjs apply-feedback --workspace <temporary-rehearsal-workspace> --file <feedback.md>
+node plugins/geo-expert/scripts/geo-lifecycle.mjs continue --workspace <temporary-rehearsal-workspace>
+node plugins/geo-expert/scripts/geo-lifecycle.mjs report --workspace <temporary-rehearsal-workspace>
 ```
 
 `start` 默认使用九类模拟原始知识、页面和业务输入。Agent 可以通过 `--input` 转入同合同的业务输入；Owner 维护的演练 Markdown 可通过 `--input-dir <knowledge-directory> --goal-text <goal>` 导入新隔离工作区，原文及 hash 保留。Owner 阅读 Markdown 审核包并给出决定，Agent 原样保存反馈并调用工具；包 ID/hash 由工具提供，不由 Owner 拼写。反馈使用“包、校验、决定、决定人、时间、说明”字段；修改建议另外提供“对象”（资产网址）与“修改内容”。修改产生新 Proposal 和新审核包，不自动采用。
@@ -34,7 +36,7 @@ node plugins/geo-expert/scripts/geo-lifecycle.mjs report --workspace workspaces/
 ## 自动演练
 
 ```bash
-npm run demo:geo-e2e -- --workspace workspaces/myyshop-geo-e2e-verified
+npm run demo:geo-e2e -- --workspace <temporary-rehearsal-workspace>
 ```
 
 驱动器只调用公开生命周期入口，并在审核包生成后读取独立 fixture 反馈。它不注入 Findings、Publication、Review 或 gate fixture。所有模拟反馈标注 fixture human/test_only，不能用于真实工作区或冒充真实业务批准。

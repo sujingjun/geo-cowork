@@ -3,6 +3,11 @@ title: geo-cowork 知识库导航
 kind: index
 status: verified
 sources:
+  - docs/records/2026-10-17-myyshop-geo-full-flow-audit.md
+  - docs/records/2026-10-17-oneglanse-mcp-integration-record.md
+  - docs/plans/2026-10-17-oneglanse-mcp-integration-plan.md
+  - docs/records/2026-10-17-oneglanse-boundary-workspace-cleanup-record.md
+  - docs/records/2026-10-17-oneglanse-mcp-planning-record.md
   - docs/specs/0015-authorized-real-two-cycle.md
   - docs/records/2026-09-20-authorized-real-two-cycle-record.md
   - docs/plans/2026-09-16-knowledge-driven-geo-e2e-plan.md
@@ -35,7 +40,7 @@ sources:
   - docs/requirements/2026-08-25-platform-automation-permission-backlog.md
   - docs/specs/0006-consumer-answer-testing.md
   - docs/plans/2026-08-24-m5-consumer-answer-testing-plan.md
-updated: 2026-09-20
+updated: 2026-10-17
 ---
 
 # geo-cowork 知识库导航
@@ -46,8 +51,9 @@ updated: 2026-09-20
 
 | 页面 | kind | status | updated |
 | --- | --- | --- | --- |
-| [index.md](index.md)（本页） | index | verified | 2026-09-20 |
-| [正式真实双周期](real-cycles.md) | product | implemented | 2026-09-20 |
+| [index.md](index.md)（本页） | index | verified | 2026-10-17 |
+| [OneGlanse 对接](oneglanse-integration.md) | architecture | implemented | 2026-10-17 |
+| [正式真实双周期](real-cycles.md) | product | implemented | 2026-10-17 |
 
 新 Wiki 页面按 `docs/workflow.md` 第 2 章 Frontmatter 要求建档后加入本索引；原始来源变更而未同步时须标明过期或更新 `updated`。
 

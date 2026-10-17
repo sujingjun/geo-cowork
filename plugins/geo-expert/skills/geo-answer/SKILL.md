@@ -5,6 +5,12 @@ description: 复核 M5 Answer Sample 的 Citation、Source identity/五层角色
 
 # geo-answer
 
+## OneGlanse 接收结果
+
+输入来自 `oneglanse-intake/received.json` 时，先运行 `oneglanse.mjs analyze` 校验本地原始字节与接收 SHA-256，再阅读完整回答和 `analysis.json`。记录答案如何描述品牌、可观察的定位混杂、Source 列表覆盖和待核实事实；以 response ID/hash 作为证据引用。
+
+这里的 Source 只是 OneGlanse 已保存的来源条目。同一 URL 可能有多条记录，不能据此计算原始引用次数；`cited_text` 不是已抓取的页面原文，`sources:[]` 也不是已证明无引用。只保留工程/候选观察，source type、Claim support 和正式评分缺证据时为 null。下方要求 occurrence/Profile/slot 的正式步骤不适用于此分支，不用伪造字段补齐。
+
 ## 触发场景
 
 - 复核一次 Answer Sample 的 Citation 与 Claim 支撑；

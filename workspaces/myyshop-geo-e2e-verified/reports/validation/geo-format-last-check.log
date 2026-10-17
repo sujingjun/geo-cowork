@@ -1,6 +1,0 @@
-
-> geo-cowork@0.3.0 format:check
-> prettier --single-quote --trailing-comma all --check 'plugins/geo-expert/scripts/lib/{model-client,query-inputs,capture-run,playwright-collector,playwright-mcp-client,owner-feedback,knowledge-workspace,knowledge-markdown,snapshot-support,sampling-matrix,proposal-revision,journey-*}.mjs' 'plugins/geo-expert/scripts/{geo-playwright,geo-runtime,demo-knowledge-journey,validate-semantic-quality,validate-knowledge-journey}.mjs' 'tests/{capture-run,owner-feedback,query-inputs,source-maintenance,snapshot-support,knowledge-markdown,journey-lock}.test.mjs'
-
-Checking formatting...
-All matched files use Prettier code style!

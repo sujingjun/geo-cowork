@@ -73,3 +73,9 @@ node plugins/geo-expert/scripts/browser-query-result.mjs verify --workspace <wor
 - 工作区位于插件目录之外；插件不向安装目录或宿主缓存写业务文件；
 - 除 Spec 0013 明确允许的同机 Browser MCP 外，不提供云端 MCP/SaaS；不自动批准知识、不自动发布、不写 CRM、不连接云端 geo-agents；
 - M2—M4 工程验收与真实执行证据分别建档；MyyShop 业务批准由 Owner 的独立决定记录证明。公开 collector 不自动发现 URL、不登录、不携带 cookie，并与只读 Site/Research manifest 分离；Proposal、Adoption、Publication 与 Technical Retest 也不互相等同。安装缓存依赖、账号/Analytics/消费者平台采集、跨宿主复验、外部发布与部署仍不在本次验收范围。
+
+## 可选 OneGlanse MCP
+
+OneGlanse 的 Server、授权、Tools 和原生 Agent 由其项目运行；本插件通过公开 stdio 合同调用，不导入对方源码。参见 [geo-answer-cycle 对接说明](skills/geo-answer-cycle/references/oneglanse.md)，使用 `scripts/oneglanse.mjs` 保存 Query 映射、运行、查状态、完整接收和离线候选分析。
+
+连接配置保存在用户本地，默认 `.mcp.json` 不新增必需 Server。业务返回值保存在显式工作区 `runs/<run>/oneglanse-intake/`；Source 列表不替代原始引用 occurrence，工程结果不自动成为正式 Baseline。

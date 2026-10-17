@@ -60,13 +60,15 @@ node plugins/geo-expert/scripts/workspace-init.mjs --workspace ./workspaces/<bra
 node plugins/geo-expert/scripts/workspace-validate.mjs --workspace ./workspaces/<brand>
 ```
 
-初始化幂等，已有文件默认不覆盖，`workspace.json` 中的 `workspace_id` 稳定不变。契约详见 `docs/specs/0002-workspace-contract.md`。仓库内 `workspaces/myyshop/` 是 MyyShop 真实工作区；`workspaces/myyshop-development-test/` 是同一线上 Merchant 在 0→1 开发期使用的隔离 `test_only` 品牌知识库，不是第二商户，也不得自动转正。
+初始化幂等，已有文件默认不覆盖，`workspace.json` 中的 `workspace_id` 稳定不变。契约详见 `docs/specs/0002-workspace-contract.md`。当前 `workspaces/` 仅保留 MyyShop 真实工作区 `myyshop/`。确定性样例位于 `tests/fixtures/`，测试通过 helper 建立并清理临时工作区；历史演练目录已按[清理记录](docs/records/2026-10-17-oneglanse-boundary-workspace-cleanup-record.md)移出。
+
+OneGlanse 已有独立 MyyShop 工作区；双方通过 Skill/MCP 对接。首版封装 OneGlanse 现有能力，服务授权和 Tools 由 OneGlanse 维护，GEO 知识与分析由 cowork 维护，见[开发计划](docs/plans/2026-10-17-oneglanse-mcp-integration-plan.md)及[单 Query 联调记录](docs/records/2026-10-17-oneglanse-mcp-integration-record.md)。当前已验证 Gemini 的完整回传和 cowork 候选分析，当前仓库原生模型已配置凭据但调用连接失败，正式 Cycle 保持暂停。最新[整体试跑与能力缺口](docs/records/2026-10-17-myyshop-geo-full-flow-audit.md)明确其尚未形成正式业务闭环。
 
 ## 开发与验证
 
 ```bash
 npm install --ignore-scripts                             # 安装锁定的本地运行依赖
-npm test                                                 # 全量 node:test
+npm test                                                 # 根 tests/*.test.mjs；Browser 子项目用各自命令
 npm run test:m2-contract                                 # M2 专项测试
 npm run test:m3-knowledge-query                          # M3 Knowledge/Query 专项测试
 npm run test:m4-diagnosis                               # M4 Diagnosis/Site/Asset 专项测试
@@ -86,9 +88,7 @@ node plugins/geo-expert/scripts/knowledge-query.mjs validate --workspace workspa
 node plugins/geo-expert/scripts/query-portfolio.mjs validate --workspace workspaces/myyshop
 node plugins/geo-expert/scripts/diagnosis.mjs validate --workspace workspaces/myyshop
 node plugins/geo-expert/scripts/answer-cycle.mjs validate --workspace workspaces/myyshop
-node plugins/geo-expert/scripts/geo-lifecycle.mjs validate --workspace workspaces/myyshop-development-test
-node plugins/geo-expert/scripts/geo-readiness.mjs report --workspace workspaces/myyshop-development-test --knowledge-base KBASE-MYYSHOP-DEVTEST-001 --goal GOAL-M6-TEST-001
-node plugins/geo-expert/scripts/geo-conformance.mjs run --workspace workspaces/myyshop-development-test --profile workspaces/myyshop-development-test/execution/conformance/profile.json
+node --test tests/lifecycle-readiness.test.mjs tests/m8-conformance.test.mjs
 ```
 
 真实公开 HTTP snapshot 必须另有逐项授权并使用显式 plan；采集和 M4 输入桥接命令为：
@@ -111,7 +111,7 @@ npm run prepare:m4-public-inputs -- --workspace <workspace> --summary <workspace
 当前 [实施计划](docs/plans/2026-09-16-knowledge-driven-geo-e2e-plan.md) 与 [操作手册](docs/runbooks/knowledge-driven-geo-operations.md) 覆盖：真实 DeepSeek、可切换 OpenAI-compatible、人工/GSC/知识生成 Query、Playwright MCP 工程采集，以及可读审核包驱动的双周期。
 
 ```bash
-npm run demo:geo-e2e -- --workspace workspaces/myyshop-geo-e2e-verified
+npm run demo:geo-e2e -- --workspace <temporary-rehearsal-workspace>
 ```
 
-这是显式 synthetic/test_only 原始输入与独立模拟反馈的演练，所有提取调用真实模型。三平台真实采集和 GSC 输入另列工程证据，演练不代表真实发布或 GEO 效果。运行环境 Node >=22.14.0，配置使用根 `.env` 或显式 `GEO_ENV_FILE`。
+这是显式 synthetic/test_only 原始输入与独立模拟反馈的演练，所有提取调用真实模型，执行前须有对应授权；临时路径不得指向 `workspaces/myyshop`。三平台真实采集和 GSC 输入另列工程证据，演练不代表真实发布或 GEO 效果。运行环境 Node >=22.14.0，配置使用根 `.env` 或显式 `GEO_ENV_FILE`。

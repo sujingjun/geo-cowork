@@ -1,0 +1,187 @@
+{
+  "scope": "engineering-candidate",
+  "formal_baseline": false,
+  "business_approval": false,
+  "raw_response_ref": {
+    "association": "candidate-by-workspace-prompt-provider-time",
+    "exact_job_binding": false,
+    "path": "runs/RUN-ONEGLANSE-MYYSHOP-20261017-02/oneglanse-intake/responses/6fc8f5cc8a5674a9e0efeb2fe4c25cae27b9dd7e919eaf2228c204f80a3cae45.json",
+    "response_id": "fd5dc1e6-e872-48f2-b0dc-70ebae4aca9b",
+    "sha256": "6e62e28c1a4e2aac031d0de20e977fec6a745b2c5da07568322e21dc1ba02b78",
+    "source_entry_count": 0,
+    "total_bytes": 1151
+  },
+  "model_audit": {
+    "id": "MODEL-1507e472-517f-4cfa-9a58-0bc9514110ad",
+    "provider": "deepseek",
+    "model": "deepseek-flash",
+    "prompt_sha256": "8d30fa66d80d4d72069386ded95b2cf378cf2317bd7663069d91cfa851bad7b3",
+    "input_sha256": "da263f4c3b31e208064c3261f5fc5b433ff0d0daa02a224156aa0f2865c8bc41",
+    "started_at": "2026-10-17T08:30:22.610Z",
+    "status": "completed",
+    "request_options": {
+      "thinking": "enabled",
+      "reasoning_effort": "low"
+    },
+    "http_status": 200,
+    "response_model": "deepseek-flash",
+    "usage": {
+      "prompt_tokens": 2607,
+      "completion_tokens": 2994,
+      "total_tokens": 5601,
+      "prompt_tokens_details": {
+        "cached_tokens": 2432
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 1266
+      },
+      "prompt_cache_hit_tokens": 2432,
+      "prompt_cache_miss_tokens": 175
+    },
+    "finish_reason": "stop",
+    "output_sha256": "be4ce3dc7e8fc0e927952416af81751c5af82acb31cc26ee8915a537ef17d0e5",
+    "completed_at": "2026-10-17T08:30:37.329Z",
+    "duration_ms": 14719
+  },
+  "review": {
+    "observations": [
+      {
+        "id": "OBS-1",
+        "kind": "positioning_mismatch",
+        "answer_quote": "AI-driven global creator marketing and cross-border e-commerce platform launched by DHGATE Group",
+        "claim_refs": [
+          "CLM-MYYSHOP-AUDIENCE-001",
+          "CLM-MYYSHOP-LIFECYCLE-SERVICE-001"
+        ],
+        "reason": "回答把“创作者营销平台”（与当前公开页面及已批准声明的方向一致）与“跨境电商平台”（历史电商定位）合并成单一身份。已批准声明只覆盖“面向全球内容创作者”和“达人生命周期服务”，且范围标注为待业务负责人核验，并未支持“跨境电商平台”这一定位；当前公开页面（homepage/about-us）只呈现 AI 驱动的达人营销与变现工具。需要区分历史电商定位与当前创作者服务定位，但不能据此断言电商能力已停止或不准确。",
+        "evidence_needed": [
+          "业务负责人对当前定位口径的一手确认（含电商/创作者业务关系说明）",
+          "官方定义文档 DOC-MYYSHOP-WHAT-IS-001 的现行版本"
+        ]
+      },
+      {
+        "id": "OBS-2",
+        "kind": "evidence_gap",
+        "answer_quote": "It provides tools to help creators set up online storefronts, select curated products, manage product listings, and streamline cross-border selling directly to their followers.",
+        "claim_refs": [
+          "CLM-MYYSHOP-LIFECYCLE-SERVICE-001"
+        ],
+        "reason": "“建店、选品、商品管理、跨境直销”属于具体产品能力描述，已批准声明仅为概括性的生命周期服务能力，且证据充分性标记为不足（缺 first_party、data_or_case），范围明确写着产品能力、地区、资格待核验；当前公开页面文本也未出现店铺或跨境销售工具的表述。该句属于未经批准证据支撑的能力细节。",
+        "evidence_needed": [
+          "first_party 产品文档或功能页，说明建店/选品/商品管理/跨境销售功能是否存在及当前状态",
+          "功能可用地区、资格与上线时间说明"
+        ]
+      },
+      {
+        "id": "OBS-3",
+        "kind": "evidence_gap",
+        "answer_quote": "Leveraging DHGATE Group's supply chain network, MyyShop links sellers and influencers directly to manufacturers and suppliers worldwide.",
+        "claim_refs": [
+          "CLM-MYYSHOP-LIFECYCLE-SERVICE-001"
+        ],
+        "reason": "供应链、货源对接与“卖家”角色均无对应已批准声明；现有声明未涉及供应商/制造商对接能力，也未确认与 DHGATE Group 的归属关系表述。公开页面为未批准观察，且其内容集中在品牌合作（Brand Deals）与 MyyFinds 变现，未见供应链对接描述。",
+        "evidence_needed": [
+          "first_party 说明 MyyShop 与 DHGATE Group 的关系及供应链服务范围",
+          "供应商/制造商对接能力的官方页面或产品资料"
+        ]
+      },
+      {
+        "id": "OBS-4",
+        "kind": "unverified_capability",
+        "answer_quote": "enabling creators to monetize their audience through product recommendations, social commerce, and affiliate sales",
+        "claim_refs": [
+          "CLM-MYYSHOP-LIFECYCLE-SERVICE-001",
+          "CLM-MYYSHOP-AUDIENCE-001"
+        ],
+        "reason": "“社交电商、联盟销售”等变现路径属于能力主张，已批准的生命周期服务声明证据充分性为不足，且范围要求核验生命周期阶段、能力与可用条件；公开页面虽提到品牌合作与 MyyFinds 曝光变现，但公开页面文本属未批准观察，不能作为发布依据。",
+        "evidence_needed": [
+          "first_party 变现产品清单（品牌合作、MyyFinds、联盟推广等）及各自规则说明",
+          "变现路径的地区/资格/结算条件说明"
+        ]
+      }
+    ],
+    "recommendations": [
+      {
+        "id": "REC-1",
+        "title": "起草“定位口径澄清”内容",
+        "action": "在知识草案中分别陈述历史电商业务背景与当前“AI 驱动全球达人营销平台”定位，避免合并为单一身份表述。",
+        "reason": "回答将两种定位混为一体，而已批准声明只覆盖创作者受众与生命周期服务，公开页面呈现的是达人营销定位。",
+        "required_evidence": [
+          "业务负责人对定位口径的一手确认",
+          "官方定义文档现行版本"
+        ],
+        "owner_role": "MyyShop 业务负责人",
+        "acceptance_criteria": [
+          "草案中历史电商定位与当前创作者服务定位分开表述",
+          "不使用已停止/不准确等判断性措辞",
+          "不新增无已批准声明支持的定位描述"
+        ]
+      },
+      {
+        "id": "REC-2",
+        "title": "达人生命周期服务能力取证后再发布",
+        "action": "向业务方索取生命周期阶段、产品能力、地区与资格条件的一手证据与案例数据，证据到位前该能力描述仅作待核验草稿。",
+        "reason": "已批准声明 CLM-MYYSHOP-LIFECYCLE-SERVICE-001 标注证据不足（缺 first_party、data_or_case），范围待核验。",
+        "required_evidence": [
+          "first_party 产品能力文档",
+          "可用地区与资格条件说明",
+          "至少一个可引用案例或数据"
+        ],
+        "owner_role": "产品/运营负责人",
+        "acceptance_criteria": [
+          "每项能力主张均可回溯到 first_party 证据",
+          "地区与资格限制在文本中显式标注"
+        ]
+      },
+      {
+        "id": "REC-3",
+        "title": "建店/跨境销售/供应链能力单列待证清单",
+        "action": "将建店、选品、商品管理、跨境直销、供应链与货源对接等能力列入待证清单，取得一手证据前不纳入对外答案。",
+        "reason": "这些能力细节无对应已批准声明，公开页面文本亦不支持，属未经批准证据支撑的描述。",
+        "required_evidence": [
+          "功能页或产品资料证明功能存在及当前状态",
+          "DHGATE Group 关系与供应链服务范围的官方说明"
+        ],
+        "owner_role": "产品负责人",
+        "acceptance_criteria": [
+          "待证清单中每项均有明确负责人与证据要求",
+          "未取证项在草案中标记为未验证"
+        ]
+      },
+      {
+        "id": "REC-4",
+        "title": "补齐来源采集说明",
+        "action": "在知识草案中注明本次 sources 为空表示采集覆盖未知，不代表平台未引用任何来源，并补充可核验来源信息。",
+        "reason": "sources 为空仅为采集覆盖未知，不能作为引用行为的证据。",
+        "required_evidence": [
+          "来源采集日志或覆盖范围说明"
+        ],
+        "owner_role": "知识库运营",
+        "acceptance_criteria": [
+          "草案 limitations 中含来源覆盖未知的说明",
+          "不出现“未引用来源”等推断性表述"
+        ]
+      }
+    ],
+    "knowledge_draft": {
+      "direct_answer": "MyyShop is described in approved statements as serving global content creators (CLM-MYYSHOP-AUDIENCE-001) and providing tools, opportunities and services across creator lifecycle stages such as joining, growth, activity and monetization (CLM-MYYSHOP-LIFECYCLE-SERVICE-001). Current public pages describe MyyShop as an AI-driven global creator marketing platform focused on brand deals and creator monetization tools; historical cross-border e-commerce framing appears in the reviewed answer but is not covered by an approved statement.",
+      "claim_refs": [
+        "CLM-MYYSHOP-AUDIENCE-001",
+        "CLM-MYYSHOP-LIFECYCLE-SERVICE-001"
+      ],
+      "limitations": [
+        "两条已批准声明的证据充分性均为不足，地区范围、创作者定义、服务可用性、生命周期阶段与资格条件待业务负责人核验。",
+        "不区分历史电商定位与当前创作者服务的官方口径尚未取得一手证据，不对任何能力作停止或不准确的判断。",
+        "本次 sources 为空表示来源采集覆盖未知，不能据此判断平台未引用任何来源。",
+        "公开页面文本属未批准观察，不作为证据使用。"
+      ]
+    },
+    "unverified": [
+      "MyyShop 与 DHGATE Group 的归属关系表述缺少已批准声明支持。",
+      "建店、选品、商品管理、跨境直销等产品能力缺少已批准证据。",
+      "供应链与制造商/供应商对接能力缺少已批准证据。",
+      "社交电商与联盟销售等具体变现路径的规则、地区与资格条件未核验。",
+      "本次回答的引用来源未知（sources 为空），引用完整性无法确认。"
+    ]
+  }
+}

@@ -2,7 +2,7 @@
 title: MyyShop 真实 GEO Cycle 启动 Runbook
 status: implemented
 created: 2026-09-02
-updated: 2026-09-02
+updated: 2026-10-17
 source:
   - docs/specs/0012-knowledge-independent-lifecycle-readiness.md
   - docs/records/2026-09-02-myyshop-real-cycle-readiness-report.md
@@ -14,7 +14,7 @@ scope: 从 development-test KBASE 切换到 Goal-scoped 真实知识切片并启
 ## 1. 当前入口
 
 - 真实 Workspace：`workspaces/myyshop`
-- development-test Workspace：`workspaces/myyshop-development-test`
+- development-test：历史常驻工作区已于 2026-10-17 清理；确定性验证使用 `tests/fixtures/` 与临时工作区，不是当前业务入口。
 - 唯一 Merchant：`MER-MYYSHOP-001`
 - 测试知识库：`KBASE-MYYSHOP-DEVTEST-001`
 - 待提供真实知识库示例 ID：`KBASE-MYYSHOP-REAL-001`（当前不存在，不得伪造创建）
@@ -41,7 +41,7 @@ Goal
 1. 由事实 Owner 提供真实 Document/Evidence/Claim/Answer Card 及审批决定；不得复制 test-only 对象。
 2. 创建 `brand_knowledge_base`，`mode: real`、`merchant_ref: MER-MYYSHOP-001`、`root_path` 指向真实知识目录；active/frozen 状态必须有真实人工 approval。
 3. 在 `workspaces/myyshop/workspace.json` 把 `knowledge_base_ref:null` 改为该真实 KBASE ID，并把 `knowledge_base_mode` 改为 `real`。
-4. 不删除 test KBASE；先保留审计历史，真实启动验收通过后再把其对象状态改为 `archived`。任何自动转正或跨 KBASE ref 均停止。
+4. 历史 test KBASE 不自动转正，不复制到真实工作区。2026-10-17 用户已授权清理其常驻演练目录；恢复依据见[清理记录](../records/2026-10-17-oneglanse-boundary-workspace-cleanup-record.md)，不通过跨 KBASE 引用代替真实知识批准。
 
 ## 4. 启动前只读检查
 

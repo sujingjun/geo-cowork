@@ -1,0 +1,82 @@
+{
+  "schema_version": "geo-real-journey-status-v1",
+  "workspace": "/Users/sujingjun/geo-cowork/workspaces/myyshop",
+  "merchant_ref": "MER-MYYSHOP-001",
+  "knowledge_base_ref": "KBASE-MYYSHOP-REAL-001",
+  "goal_ref": "GOAL-MYYSHOP-DEFINITION-001",
+  "knowledge_base_mode": "missing",
+  "engineering_ready": false,
+  "real_cycle_start_ready": false,
+  "formal_cycle_created": false,
+  "gates": [
+    {
+      "code": "MERCHANT_IDENTITY",
+      "status": "pass",
+      "reason": "Merchant identity present.",
+      "refs": [
+        "MER-MYYSHOP-001"
+      ]
+    },
+    {
+      "code": "KNOWLEDGE_INPUT_ABSENT",
+      "status": "blocked",
+      "reason": "Missing knowledge inputs: knowledge_base",
+      "refs": []
+    },
+    {
+      "code": "ANALYTICS_CONFIGURATION",
+      "status": "pass",
+      "reason": "GA4/GSC non-secret resource configuration present.",
+      "refs": []
+    },
+    {
+      "code": "BUSINESS_FILE_NOT_PROVIDED",
+      "status": "not_applicable",
+      "reason": "No authorized aggregate business file was supplied for this readiness run.",
+      "refs": []
+    }
+  ],
+  "knowledge_absence": {
+    "missing": true,
+    "content_gap_inferred": false
+  },
+  "limitations": [
+    "Readiness is a read-only gate report.",
+    "It does not approve knowledge, create a Cycle, prove Publication, or claim business effect.",
+    "This preflight checks current inputs and local contracts; service login/availability is reported by actual execution."
+  ],
+  "cycle_ref": null,
+  "stage": "preparation",
+  "runtime_ready": false,
+  "safe_to_create": false,
+  "blockers": [
+    {
+      "code": "KNOWLEDGE_INPUT_ABSENT",
+      "kind": "knowledge",
+      "reason": "Missing knowledge inputs: knowledge_base"
+    },
+    {
+      "code": "REAL_EXECUTION_PAUSED",
+      "kind": "runtime",
+      "reason": "Owner paused real business execution; explicit resumption is required"
+    },
+    {
+      "code": "KNOWLEDGE_RELEASE_REQUIRED",
+      "kind": "knowledge",
+      "reason": "The selected real knowledge release needs Owner review."
+    },
+    {
+      "code": "GA4_TIMEZONE_UNCONFIRMED",
+      "kind": "runtime",
+      "reason": "Read the GA4 property time zone before freezing analytics windows."
+    }
+  ],
+  "pending": [
+    {
+      "id": "OWNER-KNOWLEDGE-CYC-MYYSHOP-REAL-20260920-01",
+      "file": "reviews/packages/OWNER-KNOWLEDGE-CYC-MYYSHOP-REAL-20260920-01.md",
+      "kind": "real_knowledge"
+    }
+  ],
+  "windows": []
+}

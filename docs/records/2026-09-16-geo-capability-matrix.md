@@ -24,10 +24,12 @@
 | WorkBuddy | 文档事实已更新 | 官方合同已存在；本次不声称已做原生适配/导入/调用验证 |
 | 真实业务效果 | 未执行 | 没有真实 CMS 发布、正式真实双周期或因果提升结论 |
 
-## 最终交付
+## 历史交付与恢复
 
-- [双周期报告](../../workspaces/myyshop-geo-e2e-verified/reports/geo-cycle-overview.md)
-- [矩阵与血缘验收](../../workspaces/myyshop-geo-e2e-verified/reports/engineering-acceptance.json)
+2026-10-17 用户要求清理常驻演练目录；原验收结论不变，以下旧文件可按[清理记录](2026-10-17-oneglanse-boundary-workspace-cleanup-record.md)从 Git 或本地恢复副本取回。
+
+- 双周期报告历史路径：`workspaces/myyshop-geo-e2e-verified/reports/geo-cycle-overview.md`
+- 矩阵与血缘验收历史路径：`workspaces/myyshop-geo-e2e-verified/reports/engineering-acceptance.json`
 - [Owner 操作手册](../runbooks/knowledge-driven-geo-operations.md)
 
 根测试 365/365、Browser 26/26、真实语义对照 5/5；typecheck、build（正常 exit 0）、格式、文档、插件、工作区及索引校验通过。lint 为 0 errors / 57 个既有 warnings。

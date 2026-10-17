@@ -1,0 +1,38 @@
+{
+  "collector_version": "b2c6e73+source-e252c1b710a3",
+  "contract_version": "1.0.0",
+  "filter": {
+    "from": "2026-10-17T08:24:32.000Z",
+    "limit": 25,
+    "prompt_id": "f66bf31d-bf94-4cfb-901e-fb2f4654e824",
+    "provider": "gemini",
+    "to": "2026-10-17T08:26:42.560Z",
+    "workspace_id": "workspace_abeabd53-ba17-4fae-b3c8-c2001f208a4e"
+  },
+  "native_job_id": "05b614de-3647-4907-b87b-4e63495a368d",
+  "prompt_id": "f66bf31d-bf94-4cfb-901e-fb2f4654e824",
+  "query": {
+    "discovery_source_refs": [
+      "SRC-MYYSHOP-FINAL-PRODUCT-PLAN-001"
+    ],
+    "field": "normalized_text",
+    "original_text": "What is MyyShop?",
+    "path": "queries/formal/q-myyshop-what-is-en-baseline-001.md",
+    "ref": "Q-MYYSHOP-WHAT-IS-EN-BASELINE-001",
+    "source_sha256": "9218cd8e2a8460ebc589c1a553b924cf1f8482b08a7f391bf6e53099c9138e80",
+    "submitted_text": "what is myyshop",
+    "version": "1.0.0"
+  },
+  "responses": [
+    {
+      "association": "candidate-by-workspace-prompt-provider-time",
+      "exact_job_binding": false,
+      "path": "runs/RUN-ONEGLANSE-MYYSHOP-20261017-02/oneglanse-intake/responses/6fc8f5cc8a5674a9e0efeb2fe4c25cae27b9dd7e919eaf2228c204f80a3cae45.json",
+      "response_id": "fd5dc1e6-e872-48f2-b0dc-70ebae4aca9b",
+      "sha256": "6e62e28c1a4e2aac031d0de20e977fec6a745b2c5da07568322e21dc1ba02b78",
+      "source_entry_count": 0,
+      "total_bytes": 1151
+    }
+  ],
+  "server_version": "0.1.0"
+}

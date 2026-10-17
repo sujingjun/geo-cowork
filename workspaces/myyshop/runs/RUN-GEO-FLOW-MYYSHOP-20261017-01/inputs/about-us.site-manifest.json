@@ -1,0 +1,47 @@
+{
+  "schema_version": "m4-site-manifest-v1",
+  "target": {
+    "asset_ref": "AST-MYYSHOP-ABOUT-001",
+    "locator": "https://www.myyshop.com/about-us"
+  },
+  "captured_at": "2026-10-17T08:19:01.910Z",
+  "collector": {
+    "name": "geo-cowork-public-site",
+    "version": "0.3.0",
+    "mode": "public_http"
+  },
+  "collection_state": "captured",
+  "http": {
+    "status": 200,
+    "headers": {
+      "content-type": "text/html; charset=utf-8"
+    },
+    "final_url": "https://www.myyshop.com/about-us"
+  },
+  "snapshots": [
+    {
+      "role": "html",
+      "path": "runs/RUN-GEO-FLOW-SITE-MYYSHOP-20261017-01/raw/public-site/about-us.html",
+      "sha256": "e1cd3403eeb59a184792c2087968b0508b80fa6e5984eae2203412eb001870b1",
+      "media_type": "text/html"
+    },
+    {
+      "role": "robots",
+      "path": "runs/RUN-GEO-FLOW-SITE-MYYSHOP-20261017-01/raw/public-site/robots.txt",
+      "sha256": "61f72bad0b67837d7d85213ad4ee4f588bfa076bc06ff40260435a55df7051c4",
+      "media_type": "text/plain"
+    },
+    {
+      "role": "sitemap",
+      "path": "runs/RUN-GEO-FLOW-SITE-MYYSHOP-20261017-01/raw/public-site/sitemap-pages.xml",
+      "sha256": "cbbfdc47e4b30562146c88f2386acd1762c5c2425725cc413920f900edc4cf5c",
+      "media_type": "text/xml"
+    }
+  ],
+  "expectations": {
+    "expected_http_statuses": [
+      200
+    ],
+    "target_path": "/about-us"
+  }
+}

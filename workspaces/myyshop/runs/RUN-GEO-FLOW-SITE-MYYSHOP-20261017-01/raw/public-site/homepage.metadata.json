@@ -1,0 +1,48 @@
+{
+  "byte_length": 85317,
+  "captured_at": "2026-10-17T08:19:01.910Z",
+  "collector": {
+    "mode": "public_http",
+    "name": "geo-cowork-public-site",
+    "version": "0.3.0"
+  },
+  "expectation": {
+    "expected_media_types": [
+      "text/html"
+    ],
+    "expected_statuses": [
+      200
+    ],
+    "media_type_met": true,
+    "status_met": true
+  },
+  "final_url": "https://www.myyshop.com/",
+  "plan_fingerprint": "bdd54c8e2d22e8d5f878151324682d7f5a857a60c880a11f16a71ff5956d9c6d",
+  "raw_retention_days": 90,
+  "redirects": [],
+  "request": {
+    "attempts": 1,
+    "headers": {
+      "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,text/plain;q=0.8,*/*;q=0.1",
+      "accept-language": "en-US,en;q=0.9",
+      "user-agent": "geo-cowork-m4/0.3.0"
+    },
+    "method": "GET",
+    "redirect_count": 0
+  },
+  "requested_url": "https://www.myyshop.com/",
+  "response": {
+    "headers": {
+      "content-type": "text/html; charset=utf-8"
+    },
+    "status": 200,
+    "status_text": "OK"
+  },
+  "reviewer_role": "MyyShop Owner",
+  "schema_version": "1.0.0",
+  "sha256": "4e48ce797335e030225898bfb95e07907b41982fa57028a2b10144cad82bfb5a",
+  "snapshot_path": "runs/RUN-GEO-FLOW-SITE-MYYSHOP-20261017-01/raw/public-site/homepage.html",
+  "state": "captured",
+  "target_fingerprint": "39d7520962711a8728e34d9c6b36c97405c5a3f85727c4ac28243a46cd416e62",
+  "target_id": "homepage"
+}
