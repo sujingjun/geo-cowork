@@ -1,42 +1,24 @@
 <script setup lang="ts">
 import type { NuxtError } from '#app'
 
-defineProps<{
-  error: NuxtError
-}>()
-
-useHead({
-  htmlAttrs: {
-    lang: 'en'
-  }
-})
-
-useSeoMeta({
-  title: 'Page not found',
-  description: 'We are sorry but this page could not be found.'
-})
-
-const { data: navigation } = await useAsyncData('navigation', () => queryCollectionNavigation('docs'))
-const { data: files } = useLazyAsyncData('search', () => queryCollectionSearchSections('docs'), {
-  server: false
-})
-
-provide('navigation', navigation)
+defineProps<{ error: NuxtError }>()
+useSeoMeta({ title: 'Knowledge page unavailable' })
 </script>
 
 <template>
   <UApp>
-    <AppHeader />
-
-    <UError :error="error" />
-
-    <AppFooter />
-
-    <ClientOnly>
-      <LazyUContentSearch
-        :files="files"
-        :navigation="navigation"
+    <UContainer class="py-20">
+      <UPageHeader
+        :title="error.statusCode === 404 ? 'Page not found / 页面不存在' : 'Unable to open this page / 暂时无法打开页面'"
+        :description="error.statusCode === 404 ? 'The file may have been removed or is outside this reader’s scope.' : 'Check the local server and try again.'"
       />
-    </ClientOnly>
+      <UButton
+        icon="i-lucide-arrow-left"
+        to="/en"
+        external
+      >
+        Back to knowledge / 返回知识库
+      </UButton>
+    </UContainer>
   </UApp>
 </template>

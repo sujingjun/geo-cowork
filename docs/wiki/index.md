@@ -3,6 +3,7 @@ title: geo-cowork 知识库导航
 kind: index
 status: verified
 sources:
+  - docs/records/2026-10-22-workspace-knowledge-reader-record.md
   - docs/records/2026-10-22-myyshop-initial-knowledge-curation-record.md
   - docs/tasks/2026-10-22-myyshop-initial-knowledge-curation.md
   - docs/plans/2026-10-22-myyshop-initial-knowledge-curation-plan.md
@@ -57,6 +58,7 @@ updated: 2026-10-22
 | 页面 | kind | status | updated |
 | --- | --- | --- | --- |
 | [index.md](index.md)（本页） | index | verified | 2026-10-22 |
+| [Workspace 知识库阅读器](knowledge-reader.md) | architecture | verified | 2026-10-22 |
 | [OneGlanse 对接](oneglanse-integration.md) | architecture | implemented | 2026-10-17 |
 | [正式真实双周期](real-cycles.md) | product | implemented | 2026-10-17 |
 

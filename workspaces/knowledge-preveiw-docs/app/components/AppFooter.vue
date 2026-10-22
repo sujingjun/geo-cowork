@@ -1,23 +1,12 @@
 <script setup lang="ts">
-const { footer } = useAppConfig()
+const language = useKnowledgeLocale()
+const { knowledge } = useRuntimeConfig().public
 </script>
 
 <template>
-  <UFooter>
+  <UFooter class="border-t border-default">
     <template #left>
-      {{ footer.credits }}
-    </template>
-
-    <template #right>
-      <UColorModeButton v-if="footer?.colorMode" />
-
-      <template v-if="footer?.links">
-        <UButton
-          v-for="(link, index) of footer?.links"
-          :key="index"
-          v-bind="{ color: 'neutral', variant: 'ghost', ...link }"
-        />
-      </template>
+      <span class="text-sm text-muted">{{ knowledge.brand }} · {{ knowledge.logicalEntries }} {{ language === 'en' ? 'knowledge entries · Source files remain authoritative' : '个知识条目 · 以工作区源文件为准' }}</span>
     </template>
   </UFooter>
 </template>

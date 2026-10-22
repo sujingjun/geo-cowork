@@ -236,3 +236,7 @@ Owner 已批准 M5 两槽英文主线、中文可选辅助和同对象语义合�
 [知识驱动 GEO 全流程计划](plans/2026-09-16-knowledge-driven-geo-e2e-plan.md) 是当前 Owner 已要求实施的任务；旧真实周期 roadmap 已归档。自定义模型只保留切换配置，本次真实提取使用 DeepSeek。
 
 最终工程验收已完成：两个演练周期共 240 个真实模型提取槽，三个真实平台各一次采集，GSC 718 行。见 [实施记录](records/2026-09-16-knowledge-driven-geo-e2e-record.md) 与 [能力边界](records/2026-09-16-geo-capability-matrix.md)。
+
+## Workspace 知识库阅读器
+
+[实施计划](plans/2026-10-22-workspace-knowledge-reader-plan.md) · [任务](tasks/2026-10-22-workspace-knowledge-reader.md) · [实际验证](records/2026-10-22-workspace-knowledge-reader-record.md) · [Wiki 导航](wiki/knowledge-reader.md)

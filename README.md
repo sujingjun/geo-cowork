@@ -115,3 +115,13 @@ npm run demo:geo-e2e -- --workspace <temporary-rehearsal-workspace>
 ```
 
 这是显式 synthetic/test_only 原始输入与独立模拟反馈的演练，所有提取调用真实模型，执行前须有对应授权；临时路径不得指向 `workspaces/myyshop`。三平台真实采集和 GSC 输入另列工程证据，演练不代表真实发布或 GEO 效果。运行环境 Node >=22.14.0，配置使用根 `.env` 或显式 `GEO_ENV_FILE`。
+
+## 本地知识库阅读
+
+共用 [Docs 应用](workspaces/knowledge-preveiw-docs/README.md) 可展示选定 workspace 的知识库、中英文对照和引用材料：
+
+```bash
+npm run dev:knowledge -- --workspace ./workspaces/myyshop
+```
+
+首次使用先按应用说明安装依赖；默认仅本机访问，源文件保持只读。

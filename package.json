@@ -38,7 +38,11 @@
     "test:real-cycle": "node --test tests/real-*.test.mjs",
     "format:real-cycle": "prettier --single-quote --trailing-comma all --write 'plugins/geo-expert/scripts/lib/{real-analytics,real-cycle-*,real-diagnosis,real-journey*,real-knowledge,real-publication,real-sampling}.mjs' 'tests/real-*.test.mjs' 'tests/helpers/real-*.mjs'",
     "oneglanse": "node plugins/geo-expert/scripts/oneglanse.mjs",
-    "test:oneglanse": "node --test tests/oneglanse-intake.test.mjs"
+    "test:oneglanse": "node --test tests/oneglanse-intake.test.mjs",
+    "dev:knowledge": "node --experimental-strip-types workspaces/knowledge-preveiw-docs/scripts/knowledge.mjs dev",
+    "build:knowledge": "node --experimental-strip-types workspaces/knowledge-preveiw-docs/scripts/knowledge.mjs build",
+    "test:knowledge": "node --experimental-strip-types --test workspaces/knowledge-preveiw-docs/tests/*.test.mjs",
+    "test:knowledge:runtime": "node --experimental-strip-types tests/knowledge-preview-runtime.mjs"
   },
   "dependencies": {
     "ajv": "8.20.0",

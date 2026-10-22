@@ -1,88 +1,36 @@
-// https://nuxt.com/docs/api/configuration/nuxt-config
+import path from 'node:path'
+import { catalog, snapshotDirectory } from './lib/build-context'
+import { projectAfterParse, projectBeforeParse } from './lib/content'
+
 export default defineNuxtConfig({
-  modules: [
-    '@nuxt/eslint',
-    '@nuxt/image',
-    '@nuxt/ui',
-    '@nuxt/content',
-    'nuxt-og-image',
-    'nuxt-llms',
-    'nuxt-agent-discovery',
-    '@nuxtjs/mcp-toolkit'
-  ],
-
-  devtools: {
-    enabled: true
-  },
-
+  modules: ['@nuxt/eslint', '@nuxt/ui', '@nuxt/content', './modules/knowledge'],
+  devtools: { enabled: false },
   css: ['~/assets/css/main.css'],
-
   content: {
-    build: {
-      markdown: {
-        toc: {
-          searchDepth: 1
-        }
+    watch: { enabled: false },
+    build: { markdown: { toc: { searchDepth: 3 } } },
+    experimental: { sqliteConnector: 'native' },
+    ...(snapshotDirectory ? { _localDatabase: { type: 'sqlite', filename: path.join(snapshotDirectory, 'content.sqlite') } } : {})
+  },
+  ui: { fonts: false },
+  runtimeConfig: {
+    public: {
+      knowledge: {
+        brand: catalog?.workspace.brand || 'Knowledge',
+        workspaceId: catalog?.workspace.id || '',
+        revision: catalog?.revision || '',
+        logicalEntries: catalog?.logicalEntries || 0
       }
-    },
-    experimental: {
-      sqliteConnector: 'native'
     }
   },
-
-  experimental: {
-    asyncContext: true
-  },
-
   compatibilityDate: '2026-06-30',
-
-  eslint: {
-    config: {
-      stylistic: {
-        commaDangle: 'never',
-        braceStyle: '1tbs'
-      }
-    }
+  nitro: {
+    serverAssets: snapshotDirectory ? [{ baseName: 'knowledge', dir: snapshotDirectory, pattern: 'snapshot.json' }] : [],
+    prerender: { crawlLinks: false }
   },
-
-  llms: {
-    domain: 'https://docs-template.nuxt.dev/',
-    title: 'Nuxt Docs Template',
-    description: 'A template for building documentation with Nuxt UI and Nuxt Content.',
-    full: {
-      title: 'Nuxt Docs Template - Full Documentation',
-      description: 'This is the full documentation for the Nuxt Docs Template.'
-    },
-    sections: [
-      {
-        title: 'Getting Started',
-        contentCollection: 'docs',
-        contentFilters: [
-          { field: 'path', operator: 'LIKE', value: '/getting-started%' }
-        ]
-      },
-      {
-        title: 'Essentials',
-        contentCollection: 'docs',
-        contentFilters: [
-          { field: 'path', operator: 'LIKE', value: '/essentials%' }
-        ]
-      }
-    ]
+  hooks: {
+    'content:file:beforeParse': (ctx) => { if (catalog) projectBeforeParse(catalog, ctx) },
+    'content:file:afterParse': (ctx) => { if (catalog) projectAfterParse(catalog, ctx) }
   },
-
-  mcp: {
-    name: 'Docs template'
-  },
-
-  ogImage: {
-    zeroRuntime: true
-  },
-
-  prerender: {
-    routes: [
-      '/'
-    ],
-    crawlLinks: true
-  }
+  eslint: { config: { stylistic: { commaDangle: 'never', braceStyle: '1tbs' } } }
 })
