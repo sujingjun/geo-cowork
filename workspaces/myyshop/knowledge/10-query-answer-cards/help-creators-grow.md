@@ -1,100 +1,67 @@
 ---
-record_type: knowledge_entry
-id: KB-ANSWER-011
-query_id: Q-ANSWER-011
-title: "MyyShop 如何帮助创作者成长？"
+record_type: "knowledge_entry"
+id: "KB-ANSWER-011"
+query_id: "Q-ANSWER-011"
+title: "How does MyyShop help creators grow?"
 title_en: "How does MyyShop help creators grow?"
-domain: 10-query-answer-cards
-entry_type: query_answer_card
-priority: P0
-status: draft
-version: 0.1.0
-owner: "GEO 运营 + 对应业务负责人"
-approver: "品牌负责人 + 对应事实负责人"
-canonical_target: "/creator-services/growth"
-last_reviewed: 2026-08-17
-next_review: 2026-09-17
+domain: "10-query-answer-cards"
+entry_type: "query_answer_card"
+priority: "P0"
+status: "draft"
+version: "0.2.0"
+owner: "Knowledge curator and relevant fact owner"
+approver: "Business confirmation pending"
+canonical_target: "https://www.myyshop.com/report"
+last_reviewed: "2026-10-22"
+next_review: "2026-11-22"
+language: "en"
 ---
-# MyyShop 如何帮助创作者成长？ / How does MyyShop help creators grow?
 
-## 1. 条目目的
+# How does MyyShop help creators grow?
 
-本条目用于统一 MyyShop 关于“MyyShop 如何帮助创作者成长？”的事实、表达、证据、适用范围和生成式平台答案，避免官网、帮助中心、结构化数据、客服与外部分发出现冲突。
+[Knowledge home](../README.md) · [中文对照](../translations/zh-CN/10-query-answer-cards/help-creators-grow.md)
 
-## 2. 标准结论
+Language: English (primary). Version: 0.2.0. Status: draft for internal review. Source observation date: 2026-10-22.
 
-> MyyShop 计划通过内容方向、表现反馈、持续参与、能力建设和阶段性机会支持达人发展；具体工具和效果以产品页与案例为准。
+## 1. Question
 
-## 3. 对应 Query
+How does MyyShop help creators grow?
 
-- **Query ID：** `Q-ANSWER-011`
-- **用户问题：** MyyShop 如何帮助创作者成长？
-- **主要意图：** 获取可直接引用、可核验且带边界的答案。
+## 2. Current answer
 
-## 4. 当前已知事实
+Public growth-oriented resources include account analysis, peer examples, creator education and feedback on submitted content. These describe support mechanisms, not a guaranteed follower increase, growth rate or business result. [S1](../../evidence/sources/src-myyshop-curation-20261022-report.md) [S2](../../evidence/sources/src-myyshop-curation-20261022-course.md) [S3](../../evidence/sources/src-myyshop-web-brand-deals-001.md)
 
-- 本答案卡基于当前品牌战略与知识条目草案。
+## 3. Details and conditions
 
-## 5. 待确认事实
+- The Co-Branded Masterclass page describes a MyyShop × MediaLabs Creator Monetization Program with content strategy, account growth, product selection and sales topics. The official Instagram also names The Social Commerce Playbook as the first course. Course access, pricing, completion and certification conditions need their own rules. [S2](../../evidence/sources/src-myyshop-curation-20261022-course.md) [S4](../../evidence/sources/src-myyshop-curation-20261022-instagram.md)
+- Free Value Report is presented as an AI-assisted commercial-value analysis offering: niche positioning, audience profile, persona assessment, peer benchmarking and potential brand opportunities. The inspected page is a product description; no live report was generated in this task. [S1](../../evidence/sources/src-myyshop-curation-20261022-report.md)
+- The inspected materials do not establish a reproducible result for every creator. Illustrative earnings, audience numbers, promotional comparisons and individual endorsements must remain separate from measured outcomes for a defined cohort. [S5](../../evidence/sources/src-myyshop-web-myyfinds-001.md) [S1](../../evidence/sources/src-myyshop-curation-20261022-report.md) [S6](../../evidence/sources/src-myyshop-globenewswire-cpm-001.md)
 
-- 引用前必须确认关联事实、政策和页面已审批。
+## 4. Scope and limits
 
-## 6. 证据与来源要求
+Use only within the conditions of the supporting knowledge below. This is a draft answer, not a sampled consumer-platform response or an approved external publication.
 
-- 对应知识条目
-- 官方政策或产品页
-- 答案测试记录
+## 5. Evidence gaps and review
 
-证据必须记录来源名称、URL 或内部位置、Owner、统计口径、生效日期、失效日期和审批状态。没有审批的 Claim 不进入站点或分发。
+- **G02**: Provide the current product-by-country, social-platform and creator-qualification matrix, including account checks and exceptions; verify availability separately from public navigation.
+- **G09**: Obtain definitions, populations, dates, baselines and reproducible records for scale, activity, efficiency, accuracy, creator-growth and income claims.
 
-## 7. 适用范围
+[Consolidated requests and acceptance requirements](../00-governance/pending-items.md)
 
-- ChatGPT、Perplexity、Gemini 等答案测试
-- 官网 FAQ
-- 客服标准答案
-- 媒体问答
+Proposed fact owner: Knowledge curator and relevant fact owner.
 
-## 8. 限制与例外
+## 6. Supporting knowledge
 
-- 当前条目为 v0.1.0 草案；未完成证据核验和审批前，不得作为正式对外事实。
+- [KB-SERVICE-005 — Creator Growth Services](../05-products-services/creator-growth-services.md)
+- [KB-PROOF-004 — Creator Growth Results](../08-proof-authority/creator-growth-results.md)
 
-## 9. 批准表述
+## 7. Sources
 
-> MyyShop 计划通过内容方向、表现反馈、持续参与、能力建设和阶段性机会支持达人发展；具体工具和效果以产品页与案例为准。
+- **S1**: [MyyShop | Turn your social impact into a good business](https://www.myyshop.com/report) — Locator: Growth Path Reference; Intelligent Commercial Value; Top Creator Benchmarking; Creator Case Examples. [Source record](../../evidence/sources/src-myyshop-curation-20261022-report.md). [Captured text](../../evidence/snapshots/2026-10-22-initial-knowledge/report.txt).
+- **S2**: [MyyShop | Turn your social impact into a good business](https://www.myyshop.com/course/home) — Locator: CONTENT STRATEGY; WHO WE ARE. [Source record](../../evidence/sources/src-myyshop-curation-20261022-course.md). [Captured text](../../evidence/snapshots/2026-10-22-initial-knowledge/course.txt).
+- **S3**: [Brand Deal Opportunities for Creators - Earn Through Content Creation | MyyShop](https://www.myyshop.com/brand-deals-opportunies) — Locator: Analyze from Feedback. [Source record](../../evidence/sources/src-myyshop-web-brand-deals-001.md). [Captured text](../../evidence/snapshots/2026-10-22-initial-knowledge/brand-deals.txt).
+- **S4**: [Official Instagram profile and captions](https://www.instagram.com/myyshopcreators/) — Locator: The Social Commerce Playbook. [Source record](../../evidence/sources/src-myyshop-curation-20261022-instagram.md). [Captured text](../../evidence/snapshots/2026-10-22-initial-knowledge/instagram.txt).
+- **S5**: [Earn From Every Product View with MyyFinds - No Sales Required | MyyShop](https://www.myyshop.com/earn-from-every-view-myyfinds) — Locator: Potential Earnings. [Source record](../../evidence/sources/src-myyshop-web-myyfinds-001.md). [Captured text](../../evidence/snapshots/2026-10-22-initial-knowledge/myyfinds.txt).
+- **S6**: [MyyShop TikTok CPM launch release](https://www.globenewswire.com/news-release/2026/08/12/3343441/0/en/myyshop-launches-paid-for-every-view-tiktok-cpm-model-to-give-creators-faster-more-transparent-monetization-opportunities.html) — Locator: Creator income can never. [Source record](../../evidence/sources/src-myyshop-globenewswire-cpm-001.md). [Captured text](../../evidence/snapshots/2026-10-22-initial-knowledge/pr-cpm.txt).
 
-## 10. 禁止或废弃表述
-
-- 不得承诺必然涨粉或增长。
-
-## 11. 关联条目
-
-- 由目录映射文件维护；正式发布前至少关联一个上游事实条目和一个权威页面。
-
-## 12. 发布映射
-
-- **建议权威页面：** `/creator-services/growth`
-- **结构化数据：** FAQPage（仅页面符合条件时）
-- **同步渠道：**
-  - 官网正文
-  - 帮助中心或 FAQ
-  - 结构化数据（如适用）
-  - 客服标准答案
-  - 媒体与合作伙伴资料
-  - 生成式平台答案测试
-
-## 13. 治理信息
-
-- **条目状态：** `draft`
-- **优先级：** `P0`
-- **内容负责人：** GEO 运营 + 对应业务负责人
-- **审批人：** 品牌负责人 + 对应事实负责人
-- **版本：** `0.1.0`
-- **最近审核：** `2026-08-17`
-- **下次审核：** `2026-09-17`
-
-## 14. 答案测试
-
-- **测试问题：** MyyShop 如何帮助创作者成长？
-- **期望核心答案：** MyyShop 计划通过内容方向、表现反馈、持续参与、能力建设和阶段性机会支持达人发展；具体工具和效果以产品页与案例为准。
-- **失败判定：** 未提到 MyyShop、沿用废弃定位、扩大能力范围、遗漏关键限制、引用错误主体或给出无证据的数字与保证性承诺。
-- **测试平台：** ChatGPT、Perplexity、Gemini，以及其他纳入试点的平台。
+Source publication and candidate evidence do not constitute business approval. Preserve conditions and unresolved points when reusing this entry.

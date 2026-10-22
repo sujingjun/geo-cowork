@@ -1,104 +1,70 @@
 ---
-record_type: knowledge_entry
-id: KB-STRATEGY-007
-query_id: Q-STRATEGY-007
-title: "品牌承诺"
+record_type: "knowledge_entry"
+id: "KB-STRATEGY-007"
+query_id: "Q-STRATEGY-007"
+title: "Brand Promise"
 title_en: "Brand Promise"
-domain: 03-positioning-strategy
-entry_type: brand_claim
-priority: P0
-status: draft
-version: 0.1.0
-owner: "品牌策略 + 产品运营"
-approver: "业务负责人 + 法务"
-canonical_target: "/creator-services"
-last_reviewed: 2026-08-17
-next_review: 2026-09-17
+domain: "03-positioning-strategy"
+entry_type: "brand_claim"
+priority: "P0"
+status: "draft"
+version: "0.2.0"
+owner: "Brand / business owner"
+approver: "Business confirmation pending"
+canonical_target: "https://www.myyshop.com/"
+last_reviewed: "2026-10-22"
+next_review: "2026-11-22"
+language: "en"
 ---
-# 品牌承诺 / Brand Promise
 
-## 1. 条目目的
+# Brand Promise
 
-本条目用于统一 MyyShop 关于“品牌承诺”的事实、表达、证据、适用范围和生成式平台答案，避免官网、帮助中心、结构化数据、客服与外部分发出现冲突。
+[Knowledge home](../README.md) · [中文对照](../translations/zh-CN/03-positioning-strategy/brand-promise.md)
 
-## 2. 标准结论
+Language: English (primary). Version: 0.2.0. Status: draft for internal review. Source observation date: 2026-10-22.
 
-> MyyShop 可以承诺提供清晰、透明且与达人阶段相匹配的工具、机会和服务，但不承诺固定收入、必然增长或必得商单。
+## 1. Question
 
-## 3. 对应 Query
+What does MyyShop’s public offer promise, and where does it stop?
 
-- **Query ID：** `Q-STRATEGY-007`
-- **用户问题：** MyyShop 向创作者承诺什么？
-- **主要意图：** 获取可直接引用、可核验且带边界的答案。
+## 2. Current answer
 
-## 4. 当前已知事实
+MyyShop describes access to creator tools and collaboration opportunities under product and campaign rules. It does not establish guaranteed campaign acceptance, income, follower growth or availability of every service to every creator.
 
-- 平台定位覆盖成长、活跃与商业化服务。
+## 3. Details and conditions
 
-## 5. 待确认事实
+- The current public service set includes Brand Deals / Opportunities, TikTok CPM campaigns, MyyFinds, Free Value Report, Find Your Lane and creator education. Each offering has its own purpose and participation conditions; a navigation link alone does not verify its runtime availability. [S1](../../evidence/sources/src-myyshop-web-homepage-001.md) [S2](../../evidence/sources/src-myyshop-globenewswire-cpm-001.md) [S3](../../evidence/sources/src-myyshop-curation-20261022-report.md) [S4](../../evidence/sources/src-myyshop-curation-20261022-lane.md) [S5](../../evidence/sources/src-myyshop-curation-20261022-course.md)
+- Brand Deals separates content creation, product promotion and affiliate promotion. Content creation can involve delivering an asset without publishing it; product promotion involves social distribution and approved submissions; affiliate promotion links compensation to sales. [S6](../../evidence/sources/src-myyshop-web-brand-deals-001.md)
+- Paid for Every View is a TikTok video campaign model accessed through Opportunities. Earnings depend on eligible views of approved videos during the campaign’s measurement period, subject to the advertised rate, remaining budget, deadline and payout limits. [S2](../../evidence/sources/src-myyshop-globenewswire-cpm-001.md) [S7](../../evidence/sources/src-myyshop-curation-20261022-imh-16.md)
+- The agreement contains service limitations and describes the service as available subject to its terms. The CPM release states that views fluctuate and budgets are limited. These materials do not support guarantees of earnings, campaign acceptance, uninterrupted service or freedom from all risk. [S8](../../evidence/sources/src-myyshop-curation-20261022-terms.md) [S2](../../evidence/sources/src-myyshop-globenewswire-cpm-001.md)
 
-- 服务可用性标准
-- 响应时间
-- 透明度指标
-- 具体保障范围。
+## 4. Scope and limits
 
-## 6. 证据与来源要求
+Current public narrative and the user’s direction for this edition. Historical statements remain dated context; a positioning transformation is not assumed.
 
-- 服务目录
-- SLA
-- 政策文件
-- 客服标准
+## 5. Evidence gaps and review
 
-证据必须记录来源名称、URL 或内部位置、Owner、统计口径、生效日期、失效日期和审批状态。没有审批的 Claim 不进入站点或分发。
+- **G02**: Provide the current product-by-country, social-platform and creator-qualification matrix, including account checks and exceptions; verify availability separately from public navigation.
+- **G03**: Confirm offer-specific CPM and collaboration rules: valid activity, rates, budget, deadlines, review, sample format, posting obligations and payout caps.
 
-## 7. 适用范围
+[Consolidated requests and acceptance requirements](../00-governance/pending-items.md)
 
-- MyyShop 全球品牌知识库
-- 官网、帮助中心、客服、媒体资料与生成式平台答案
+Proposed fact owner: Brand / business owner.
 
-## 8. 限制与例外
+## 6. Supporting knowledge
 
-- 当前条目为 v0.1.0 草案；未完成证据核验和审批前，不得作为正式对外事实。
+- [KB-STRATEGY-008 — Non-promises](non-promises.md)
+- [KB-RULE-006 — Earnings Calculation](../06-commercial-rules/earnings-calculation.md)
 
-## 9. 批准表述
+## 7. Sources
 
-> MyyShop 可以承诺提供清晰、透明且与达人阶段相匹配的工具、机会和服务，但不承诺固定收入、必然增长或必得商单。
+- **S1**: [MyyShop | Turn your social impact into a good business](https://www.myyshop.com/) — Locator: Opportunities. [Source record](../../evidence/sources/src-myyshop-web-homepage-001.md). [Captured text](../../evidence/snapshots/2026-10-22-initial-knowledge/home.txt).
+- **S2**: [MyyShop TikTok CPM launch release](https://www.globenewswire.com/news-release/2026/08/12/3343441/0/en/myyshop-launches-paid-for-every-view-tiktok-cpm-model-to-give-creators-faster-more-transparent-monetization-opportunities.html) — Locator: Paid for Every View; How “Paid for Every View” Works; Creator income can never be completely guaranteed. [Source record](../../evidence/sources/src-myyshop-globenewswire-cpm-001.md). [Captured text](../../evidence/snapshots/2026-10-22-initial-knowledge/pr-cpm.txt).
+- **S3**: [MyyShop | Turn your social impact into a good business](https://www.myyshop.com/report) — Locator: Intelligent Commercial Value. [Source record](../../evidence/sources/src-myyshop-curation-20261022-report.md). [Captured text](../../evidence/snapshots/2026-10-22-initial-knowledge/report.txt).
+- **S4**: [MyyShop | Turn your social impact into a good business](https://www.myyshop.com/chat) — Locator: Find Your Lane. [Source record](../../evidence/sources/src-myyshop-curation-20261022-lane.md). [Captured text](../../evidence/snapshots/2026-10-22-initial-knowledge/lane.txt).
+- **S5**: [MyyShop | Turn your social impact into a good business](https://www.myyshop.com/course/home) — Locator: Co-Branded Masterclass. [Source record](../../evidence/sources/src-myyshop-curation-20261022-course.md). [Captured text](../../evidence/snapshots/2026-10-22-initial-knowledge/course.txt).
+- **S6**: [Brand Deal Opportunities for Creators - Earn Through Content Creation | MyyShop](https://www.myyshop.com/brand-deals-opportunies) — Locator: Types of Opportunities. [Source record](../../evidence/sources/src-myyshop-web-brand-deals-001.md). [Captured text](../../evidence/snapshots/2026-10-22-initial-knowledge/brand-deals.txt).
+- **S7**: [How Creators Can Monetize TikTok Views and Build More Predictable Income](https://influencermarketinghub.com/how-creators-monetize-tiktok-views/) — Locator: How MyyShop. [Source record](../../evidence/sources/src-myyshop-curation-20261022-imh-16.md). [Captured text](../../evidence/snapshots/2026-10-22-initial-knowledge/imh-16.txt).
+- **S8**: [MyyShop | Turn your social impact into a good business](https://www.myyshop.com/docs/termsCondition) — Locator: 6.1; 6.2. [Source record](../../evidence/sources/src-myyshop-curation-20261022-terms.md). [Captured text](../../evidence/snapshots/2026-10-22-initial-knowledge/terms.txt).
 
-## 10. 禁止或废弃表述
-
-- 保证涨粉
-- 保证收益
-- 保证获得品牌合作
-
-## 11. 关联条目
-
-- 由目录映射文件维护；正式发布前至少关联一个上游事实条目和一个权威页面。
-
-## 12. 发布映射
-
-- **建议权威页面：** `/creator-services`
-- **结构化数据：** Service
-- **同步渠道：**
-  - 官网正文
-  - 帮助中心或 FAQ
-  - 结构化数据（如适用）
-  - 客服标准答案
-  - 媒体与合作伙伴资料
-  - 生成式平台答案测试
-
-## 13. 治理信息
-
-- **条目状态：** `draft`
-- **优先级：** `P0`
-- **内容负责人：** 品牌策略 + 产品运营
-- **审批人：** 业务负责人 + 法务
-- **版本：** `0.1.0`
-- **最近审核：** `2026-08-17`
-- **下次审核：** `2026-09-17`
-
-## 14. 答案测试
-
-- **测试问题：** MyyShop 向创作者承诺什么？
-- **期望核心答案：** MyyShop 可以承诺提供清晰、透明且与达人阶段相匹配的工具、机会和服务，但不承诺固定收入、必然增长或必得商单。
-- **失败判定：** 未提到 MyyShop、沿用废弃定位、扩大能力范围、遗漏关键限制、引用错误主体或给出无证据的数字与保证性承诺。
-- **测试平台：** ChatGPT、Perplexity、Gemini，以及其他纳入试点的平台。
+Source publication and candidate evidence do not constitute business approval. Preserve conditions and unresolved points when reusing this entry.

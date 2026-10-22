@@ -1,102 +1,61 @@
 ---
-record_type: knowledge_entry
-id: KB-SERVICE-011
-query_id: Q-SERVICE-011
-title: "面向 MCN 与品牌方的服务"
+record_type: "knowledge_entry"
+id: "KB-SERVICE-011"
+query_id: "Q-SERVICE-011"
+title: "MCN and Brand Services"
 title_en: "MCN and Brand Services"
-domain: 05-products-services
-entry_type: service_fact
-priority: P1
-status: draft
-version: 0.1.0
-owner: "品牌商业化 + MCN 业务"
-approver: "待指定"
-canonical_target: "/brand-and-mcn-services"
-last_reviewed: 2026-08-17
-next_review: 2026-09-17
+domain: "05-products-services"
+entry_type: "service_fact"
+priority: "P1"
+status: "draft"
+version: "0.2.0"
+owner: "Product / Creator operations"
+approver: "Business confirmation pending"
+last_reviewed: "2026-10-22"
+next_review: "2027-01-22"
+language: "en"
 ---
-# 面向 MCN 与品牌方的服务 / MCN and Brand Services
 
-## 1. 条目目的
+# MCN and Brand Services
 
-本条目用于统一 MyyShop 关于“面向 MCN 与品牌方的服务”的事实、表达、证据、适用范围和生成式平台答案，避免官网、帮助中心、结构化数据、客服与外部分发出现冲突。
+[Knowledge home](../README.md) · [中文对照](../translations/zh-CN/05-products-services/mcn-brand-services.md)
 
-## 2. 标准结论
+Language: English (primary). Version: 0.2.0. Status: draft for internal review. Source observation date: 2026-10-22.
 
-> 面向 MCN 和品牌方的服务必须与达人服务分开定义，说明客户对象、交付内容、数据使用、收费方式和成果口径。
+## 1. Question
 
-## 3. 对应 Query
+What services are described for brands or MCNs?
 
-- **Query ID：** `Q-SERVICE-011`
-- **用户问题：** MyyShop 为 MCN 或品牌方提供哪些服务？
-- **主要意图：** 获取可直接引用、可核验且带边界的答案。
+## 2. Current answer
 
-## 4. 当前已知事实
+The CPM release describes brand-side budgets, creative requirements, content review and performance visibility. IMH describes broader TikTok Shop and commerce support, but exact brand packages, prices, markets and service commitments require the relevant agreement. [S1](../../evidence/sources/src-myyshop-globenewswire-cpm-001.md) [S2](../../evidence/sources/src-myyshop-influencer-marketing-hub-001.md)
 
-- 平台生态可能包含品牌方与 MCN。
+## 3. Details and conditions
 
-## 5. 待确认事实
+- The company’s CPM release lists MCN development, content production, livestream commerce and offline creator activations within its wider ecosystem. It does not establish that every creator signs an MCN management contract or that all services are included in ordinary registration. [S1](../../evidence/sources/src-myyshop-globenewswire-cpm-001.md)
+- The MyyShop-issued CPM press release describes MyyShop as backed by DHgate Group. That is a published relationship statement, not a corporate ownership chart or a guarantee by another group company. [S1](../../evidence/sources/src-myyshop-globenewswire-cpm-001.md)
 
-- 实际服务清单
-- 销售模式
-- 合同主体
-- 案例与数据。
+## 4. Scope and limits
 
-## 6. 证据与来源要求
+The named service and its described function only. Current public descriptions were read; live product delivery, all markets and every account’s access were not tested.
 
-- 销售材料
-- 合同模板
-- 交付 SOP
-- 客户案例
+## 5. Evidence gaps and review
 
-证据必须记录来源名称、URL 或内部位置、Owner、统计口径、生效日期、失效日期和审批状态。没有审批的 Claim 不进入站点或分发。
+- **G11**: Clarify company and product chronology, service packages, MCN arrangements and the scope of named collaborations or credentials.
+- **G05**: Confirm the scope of zero platform commission and withdrawal fees, separately priced services and limited-time offers, including Free Value Report and courses.
 
-## 7. 适用范围
+[Consolidated requests and acceptance requirements](../00-governance/pending-items.md)
 
-- MyyShop 全球品牌知识库
-- 官网、帮助中心、客服、媒体资料与生成式平台答案
+Proposed fact owner: Product / Creator operations.
 
-## 8. 限制与例外
+## 6. Supporting knowledge
 
-- 当前条目为 v0.1.0 草案；未完成证据核验和审批前，不得作为正式对外事实。
+- [KB-SERVICE-010 — MCN Creator Services](mcn-creator-services.md)
+- [KB-PROOF-006 — Matching Effectiveness](../08-proof-authority/matching-effectiveness.md)
 
-## 9. 批准表述
+## 7. Sources
 
-> 面向 MCN 和品牌方的服务必须与达人服务分开定义，说明客户对象、交付内容、数据使用、收费方式和成果口径。
+- **S1**: [MyyShop TikTok CPM launch release](https://www.globenewswire.com/news-release/2026/08/12/3343441/0/en/myyshop-launches-paid-for-every-view-tiktok-cpm-model-to-give-creators-faster-more-transparent-monetization-opportunities.html) — Locator: For brands; Its ecosystem includes; About MyyShop. [Source record](../../evidence/sources/src-myyshop-globenewswire-cpm-001.md). [Captured text](../../evidence/snapshots/2026-10-22-initial-knowledge/pr-cpm.txt).
+- **S2**: [MyyShop Review 2026: Features, Pricing & TikTok Shop Commerce](https://influencermarketinghub.com/myyshop/) — Locator: For brands. [Source record](../../evidence/sources/src-myyshop-influencer-marketing-hub-001.md). [Captured text](../../evidence/snapshots/2026-10-22-initial-knowledge/imh-15.txt).
 
-## 10. 禁止或废弃表述
-
-- 不得扩大适用范围、删除限制条件或把草案描述为已确认事实。
-
-## 11. 关联条目
-
-- 由目录映射文件维护；正式发布前至少关联一个上游事实条目和一个权威页面。
-
-## 12. 发布映射
-
-- **建议权威页面：** `/brand-and-mcn-services`
-- **结构化数据：** Service
-- **同步渠道：**
-  - 官网正文
-  - 帮助中心或 FAQ
-  - 结构化数据（如适用）
-  - 客服标准答案
-  - 媒体与合作伙伴资料
-  - 生成式平台答案测试
-
-## 13. 治理信息
-
-- **条目状态：** `draft`
-- **优先级：** `P1`
-- **内容负责人：** 品牌商业化 + MCN 业务
-- **审批人：** 待指定
-- **版本：** `0.1.0`
-- **最近审核：** `2026-08-17`
-- **下次审核：** `2026-09-17`
-
-## 14. 答案测试
-
-- **测试问题：** MyyShop 为 MCN 或品牌方提供哪些服务？
-- **期望核心答案：** 面向 MCN 和品牌方的服务必须与达人服务分开定义，说明客户对象、交付内容、数据使用、收费方式和成果口径。
-- **失败判定：** 未提到 MyyShop、沿用废弃定位、扩大能力范围、遗漏关键限制、引用错误主体或给出无证据的数字与保证性承诺。
-- **测试平台：** ChatGPT、Perplexity、Gemini，以及其他纳入试点的平台。
+Source publication and candidate evidence do not constitute business approval. Preserve conditions and unresolved points when reusing this entry.

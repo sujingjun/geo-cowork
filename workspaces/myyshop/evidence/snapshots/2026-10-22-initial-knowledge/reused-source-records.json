@@ -1,0 +1,58 @@
+[
+  {
+    "path": "evidence/sources/src-myyshop-influencer-marketing-hub-001.md",
+    "id": "SRC-MYYSHOP-INFLUENCER-MARKETING-HUB-001",
+    "locator": "https://influencermarketinghub.com/myyshop/",
+    "sha256": "aaf95468f3faea41652a75ce62632befd3492155319d3c7191f093b5420c5088",
+    "capture_key": "imh-15"
+  },
+  {
+    "path": "evidence/sources/src-myyshop-globenewswire-cpm-001.md",
+    "id": "SRC-MYYSHOP-GLOBENEWSWIRE-CPM-001",
+    "locator": "https://www.globenewswire.com/news-release/2026/08/12/3343441/0/en/myyshop-launches-paid-for-every-view-tiktok-cpm-model-to-give-creators-faster-more-transparent-monetization-opportunities.html",
+    "sha256": "3298ad2ba0a7aa74a5edb7f3f706bb2ab5a98e922e4d6cbc8ddd16a52cc72a0d",
+    "capture_key": "pr-cpm"
+  },
+  {
+    "path": "evidence/sources/src-myyshop-web-homepage-001.md",
+    "id": "SRC-MYYSHOP-WEB-HOMEPAGE-001",
+    "locator": "https://www.myyshop.com/",
+    "sha256": "e54ec75297338e2b4deeb4113ca57ede4732af30e96ec39982bb0f6868560ff1",
+    "capture_key": "home"
+  },
+  {
+    "path": "evidence/sources/src-myyshop-web-about-001.md",
+    "id": "SRC-MYYSHOP-WEB-ABOUT-001",
+    "locator": "https://www.myyshop.com/about-us",
+    "sha256": "7beb11c66661b42f8fa8f1cecbc73ea023ea33081d79d02936cfbbb5a8e8baa1",
+    "capture_key": "about"
+  },
+  {
+    "path": "evidence/sources/src-myyshop-web-brand-deals-001.md",
+    "id": "SRC-MYYSHOP-WEB-BRAND-DEALS-001",
+    "locator": "https://www.myyshop.com/brand-deals-opportunies",
+    "sha256": "4b32d075263c16c37b18c2f271c3c19d092fcc2e2c90ec903020c311f53a34c3",
+    "capture_key": "brand-deals"
+  },
+  {
+    "path": "evidence/sources/src-myyshop-web-myyfinds-001.md",
+    "id": "SRC-MYYSHOP-WEB-MYYFINDS-001",
+    "locator": "https://www.myyshop.com/earn-from-every-view-myyfinds",
+    "sha256": "3d9304880b52926ae04f48963b089b8b1b927ff0e44b9b4c20e783d721f91706",
+    "capture_key": "myyfinds"
+  },
+  {
+    "path": "evidence/sources/src-myyshop-newsroom-001.md",
+    "id": "SRC-MYYSHOP-NEWSROOM-001",
+    "locator": "https://newsroom.myyshop.com/",
+    "sha256": "df14f2e9530c592c8ba85bc46fee88c6a1afb956a73673730f1bb797be5e7025",
+    "capture_key": "newsroom"
+  },
+  {
+    "path": "evidence/sources/src-myyshop-whatsnew-001.md",
+    "id": "SRC-MYYSHOP-WHATSNEW-001",
+    "locator": "https://whatsnew.myyshop.com/",
+    "sha256": "f9a5c4c8be2035dc4c6998d4594e67719a356e285c50116c91093b96af67f3fb",
+    "capture_key": "whatsnew"
+  }
+]

@@ -1,103 +1,63 @@
 ---
-record_type: knowledge_entry
-id: KB-SERVICE-003
-query_id: Q-SERVICE-003
-title: "免费价值报告"
+record_type: "knowledge_entry"
+id: "KB-SERVICE-003"
+query_id: "Q-SERVICE-003"
+title: "Free Value Report"
 title_en: "Free Value Report"
-domain: 05-products-services
-entry_type: service_fact
-priority: P1
-status: draft
-version: 0.1.0
-owner: "产品负责人"
-approver: "待指定"
-canonical_target: "/creator-tools/free-value-report"
-last_reviewed: 2026-08-17
-next_review: 2026-09-17
+domain: "05-products-services"
+entry_type: "service_fact"
+priority: "P1"
+status: "draft"
+version: "0.2.0"
+owner: "Product / Creator operations"
+approver: "Business confirmation pending"
+canonical_target: "https://www.myyshop.com/report"
+last_reviewed: "2026-10-22"
+next_review: "2027-01-22"
+language: "en"
 ---
-# 免费价值报告 / Free Value Report
 
-## 1. 条目目的
+# Free Value Report
 
-本条目用于统一 MyyShop 关于“免费价值报告”的事实、表达、证据、适用范围和生成式平台答案，避免官网、帮助中心、结构化数据、客服与外部分发出现冲突。
+[Knowledge home](../README.md) · [中文对照](../translations/zh-CN/05-products-services/free-value-report.md)
 
-## 2. 标准结论
+Language: English (primary). Version: 0.2.0. Status: draft for internal review. Source observation date: 2026-10-22.
 
-> 待产品核验：Free Value Report 应被定义为帮助创作者理解其账号、内容或商业价值的评估服务，并明确数据来源、输出内容、适用范围和非保证性质。
+## 1. Question
 
-## 3. 对应 Query
+What does Free Value Report offer, and is it permanently free?
 
-- **Query ID：** `Q-SERVICE-003`
-- **用户问题：** MyyShop 的 Free Value Report 是什么？
-- **主要意图：** 获取可直接引用、可核验且带边界的答案。
+## 2. Current answer
 
-## 4. 当前已知事实
+Free Value Report is presented as an AI-assisted commercial-value analysis offering: niche positioning, audience profile, persona assessment, peer benchmarking and potential brand opportunities. The inspected page is a product description; no live report was generated in this task. [S1](../../evidence/sources/src-myyshop-curation-20261022-report.md)
 
-- 该名称在当前候选服务清单中。
+## 3. Details and conditions
 
-## 5. 待确认事实
+- The report page displays “Limited-Time Free” alongside USD 29.99. Do not turn its name, Free Value Report, into a promise of permanent free access or apply that displayed amount to all MyyShop services. [S1](../../evidence/sources/src-myyshop-curation-20261022-report.md)
+- The Privacy Policy describes manual or automated opportunity recommendations using account and activity information. It also describes rights to seek an explanation and object to solely automated decisions, including possible human review. The actual request workflow and response performance were not tested. [S2](../../evidence/sources/src-myyshop-curation-20261022-privacy.md)
 
-- 是否仍上线
-- 输入数据
-- 评估维度
-- 准确性说明
-- 隐私与使用限制。
+## 4. Scope and limits
 
-## 6. 证据与来源要求
+The named service and its described function only. Current public descriptions were read; live product delivery, all markets and every account’s access were not tested.
 
-- 产品页面
-- 模型或规则说明
-- 隐私评估
-- 样例报告
+## 5. Evidence gaps and review
 
-证据必须记录来源名称、URL 或内部位置、Owner、统计口径、生效日期、失效日期和审批状态。没有审批的 Claim 不进入站点或分发。
+- **G02**: Provide the current product-by-country, social-platform and creator-qualification matrix, including account checks and exceptions; verify availability separately from public navigation.
+- **G05**: Confirm the scope of zero platform commission and withdrawal fees, separately priced services and limited-time offers, including Free Value Report and courses.
+- **G17**: Confirm AI capability, data provenance, model/measurement claims and explanation or human-review procedures before making stronger technical or effectiveness statements.
 
-## 7. 适用范围
+[Consolidated requests and acceptance requirements](../00-governance/pending-items.md)
 
-- MyyShop 全球品牌知识库
-- 官网、帮助中心、客服、媒体资料与生成式平台答案
+Proposed fact owner: Product / Creator operations.
 
-## 8. 限制与例外
+## 6. Supporting knowledge
 
-- 当前条目为 v0.1.0 草案；未完成证据核验和审批前，不得作为正式对外事实。
+- [KB-RULE-005 — Fees and Commissions](../06-commercial-rules/fees-and-commissions.md)
+- [KB-TRUST-003 — AI Use and Explainability](../07-trust-safety/ai-use.md)
 
-## 9. 批准表述
+## 7. Sources
 
-> 待事实核验和审批后填写。当前草案仅用于定义答案结构。
+- **S1**: [MyyShop | Turn your social impact into a good business](https://www.myyshop.com/report) — Locator: Intelligent Commercial Value; Top Creator Benchmarking; Limited-Time Free. [Source record](../../evidence/sources/src-myyshop-curation-20261022-report.md). [Captured text](../../evidence/snapshots/2026-10-22-initial-knowledge/report.txt).
+- **S2**: [MyyShop | Turn your social impact into a good business](https://www.myyshop.com/docs/privacy) — Locator: automated decision-making. [Source record](../../evidence/sources/src-myyshop-curation-20261022-privacy.md). [Captured text](../../evidence/snapshots/2026-10-22-initial-knowledge/privacy.txt).
 
-## 10. 禁止或废弃表述
-
-- 不得扩大适用范围、删除限制条件或把草案描述为已确认事实。
-
-## 11. 关联条目
-
-- 由目录映射文件维护；正式发布前至少关联一个上游事实条目和一个权威页面。
-
-## 12. 发布映射
-
-- **建议权威页面：** `/creator-tools/free-value-report`
-- **结构化数据：** Service / SoftwareApplication
-- **同步渠道：**
-  - 官网正文
-  - 帮助中心或 FAQ
-  - 结构化数据（如适用）
-  - 客服标准答案
-  - 媒体与合作伙伴资料
-  - 生成式平台答案测试
-
-## 13. 治理信息
-
-- **条目状态：** `draft`
-- **优先级：** `P1`
-- **内容负责人：** 产品负责人
-- **审批人：** 待指定
-- **版本：** `0.1.0`
-- **最近审核：** `2026-08-17`
-- **下次审核：** `2026-09-17`
-
-## 14. 答案测试
-
-- **测试问题：** MyyShop 的 Free Value Report 是什么？
-- **期望核心答案：** 待产品核验：Free Value Report 应被定义为帮助创作者理解其账号、内容或商业价值的评估服务，并明确数据来源、输出内容、适用范围和非保证性质。
-- **失败判定：** 未提到 MyyShop、沿用废弃定位、扩大能力范围、遗漏关键限制、引用错误主体或给出无证据的数字与保证性承诺。
-- **测试平台：** ChatGPT、Perplexity、Gemini，以及其他纳入试点的平台。
+Source publication and candidate evidence do not constitute business approval. Preserve conditions and unresolved points when reusing this entry.

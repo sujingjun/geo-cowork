@@ -61,6 +61,222 @@
       "version": "1.0.1"
     },
     {
+      "id": "SRC-MYYSHOP-CURATION-20261022-ACADEMY",
+      "path": "evidence/sources/src-myyshop-curation-20261022-academy.md",
+      "refs": [],
+      "status": "active",
+      "updated_at": "2026-10-22T17:45:06+08:00",
+      "version": "1.0.0"
+    },
+    {
+      "id": "SRC-MYYSHOP-CURATION-20261022-BLOG",
+      "path": "evidence/sources/src-myyshop-curation-20261022-blog.md",
+      "refs": [],
+      "status": "active",
+      "updated_at": "2026-10-22T17:45:06+08:00",
+      "version": "1.0.0"
+    },
+    {
+      "id": "SRC-MYYSHOP-CURATION-20261022-COURSE",
+      "path": "evidence/sources/src-myyshop-curation-20261022-course.md",
+      "refs": [],
+      "status": "active",
+      "updated_at": "2026-10-22T17:45:06+08:00",
+      "version": "1.0.0"
+    },
+    {
+      "id": "SRC-MYYSHOP-CURATION-20261022-DIRECTION",
+      "path": "evidence/sources/src-myyshop-curation-20261022-direction.md",
+      "refs": [],
+      "status": "active",
+      "updated_at": "2026-10-22T18:33:45+08:00",
+      "version": "1.0.0"
+    },
+    {
+      "id": "SRC-MYYSHOP-CURATION-20261022-IMH-02",
+      "path": "evidence/sources/src-myyshop-curation-20261022-imh-02.md",
+      "refs": [],
+      "status": "active",
+      "updated_at": "2026-10-22T17:38:11+08:00",
+      "version": "1.0.0"
+    },
+    {
+      "id": "SRC-MYYSHOP-CURATION-20261022-IMH-03",
+      "path": "evidence/sources/src-myyshop-curation-20261022-imh-03.md",
+      "refs": [],
+      "status": "active",
+      "updated_at": "2026-10-22T17:38:11+08:00",
+      "version": "1.0.0"
+    },
+    {
+      "id": "SRC-MYYSHOP-CURATION-20261022-IMH-04",
+      "path": "evidence/sources/src-myyshop-curation-20261022-imh-04.md",
+      "refs": [],
+      "status": "active",
+      "updated_at": "2026-10-22T17:38:11+08:00",
+      "version": "1.0.0"
+    },
+    {
+      "id": "SRC-MYYSHOP-CURATION-20261022-IMH-05",
+      "path": "evidence/sources/src-myyshop-curation-20261022-imh-05.md",
+      "refs": [],
+      "status": "active",
+      "updated_at": "2026-10-22T17:38:11+08:00",
+      "version": "1.0.0"
+    },
+    {
+      "id": "SRC-MYYSHOP-CURATION-20261022-IMH-06",
+      "path": "evidence/sources/src-myyshop-curation-20261022-imh-06.md",
+      "refs": [],
+      "status": "active",
+      "updated_at": "2026-10-22T17:38:11+08:00",
+      "version": "1.0.0"
+    },
+    {
+      "id": "SRC-MYYSHOP-CURATION-20261022-IMH-07",
+      "path": "evidence/sources/src-myyshop-curation-20261022-imh-07.md",
+      "refs": [],
+      "status": "active",
+      "updated_at": "2026-10-22T17:38:11+08:00",
+      "version": "1.0.0"
+    },
+    {
+      "id": "SRC-MYYSHOP-CURATION-20261022-IMH-08",
+      "path": "evidence/sources/src-myyshop-curation-20261022-imh-08.md",
+      "refs": [],
+      "status": "active",
+      "updated_at": "2026-10-22T17:38:11+08:00",
+      "version": "1.0.0"
+    },
+    {
+      "id": "SRC-MYYSHOP-CURATION-20261022-IMH-09",
+      "path": "evidence/sources/src-myyshop-curation-20261022-imh-09.md",
+      "refs": [],
+      "status": "active",
+      "updated_at": "2026-10-22T17:38:11+08:00",
+      "version": "1.0.0"
+    },
+    {
+      "id": "SRC-MYYSHOP-CURATION-20261022-IMH-10",
+      "path": "evidence/sources/src-myyshop-curation-20261022-imh-10.md",
+      "refs": [],
+      "status": "active",
+      "updated_at": "2026-10-22T17:38:11+08:00",
+      "version": "1.0.0"
+    },
+    {
+      "id": "SRC-MYYSHOP-CURATION-20261022-IMH-11",
+      "path": "evidence/sources/src-myyshop-curation-20261022-imh-11.md",
+      "refs": [],
+      "status": "active",
+      "updated_at": "2026-10-22T17:38:11+08:00",
+      "version": "1.0.0"
+    },
+    {
+      "id": "SRC-MYYSHOP-CURATION-20261022-IMH-12",
+      "path": "evidence/sources/src-myyshop-curation-20261022-imh-12.md",
+      "refs": [],
+      "status": "active",
+      "updated_at": "2026-10-22T17:38:11+08:00",
+      "version": "1.0.0"
+    },
+    {
+      "id": "SRC-MYYSHOP-CURATION-20261022-IMH-13",
+      "path": "evidence/sources/src-myyshop-curation-20261022-imh-13.md",
+      "refs": [],
+      "status": "active",
+      "updated_at": "2026-10-22T17:38:11+08:00",
+      "version": "1.0.0"
+    },
+    {
+      "id": "SRC-MYYSHOP-CURATION-20261022-IMH-14",
+      "path": "evidence/sources/src-myyshop-curation-20261022-imh-14.md",
+      "refs": [],
+      "status": "active",
+      "updated_at": "2026-10-22T17:38:11+08:00",
+      "version": "1.0.0"
+    },
+    {
+      "id": "SRC-MYYSHOP-CURATION-20261022-IMH-16",
+      "path": "evidence/sources/src-myyshop-curation-20261022-imh-16.md",
+      "refs": [],
+      "status": "active",
+      "updated_at": "2026-10-22T17:38:11+08:00",
+      "version": "1.0.0"
+    },
+    {
+      "id": "SRC-MYYSHOP-CURATION-20261022-IMH-17",
+      "path": "evidence/sources/src-myyshop-curation-20261022-imh-17.md",
+      "refs": [],
+      "status": "active",
+      "updated_at": "2026-10-22T17:38:11+08:00",
+      "version": "1.0.0"
+    },
+    {
+      "id": "SRC-MYYSHOP-CURATION-20261022-IMH-FINAL",
+      "path": "evidence/sources/src-myyshop-curation-20261022-imh-final.md",
+      "refs": [],
+      "status": "active",
+      "updated_at": "2026-10-22T18:33:45+08:00",
+      "version": "1.0.0"
+    },
+    {
+      "id": "SRC-MYYSHOP-CURATION-20261022-INPUTS",
+      "path": "evidence/sources/src-myyshop-curation-20261022-inputs.md",
+      "refs": [],
+      "status": "active",
+      "updated_at": "2026-10-22T18:33:45+08:00",
+      "version": "1.0.0"
+    },
+    {
+      "id": "SRC-MYYSHOP-CURATION-20261022-INSTAGRAM",
+      "path": "evidence/sources/src-myyshop-curation-20261022-instagram.md",
+      "refs": [],
+      "status": "active",
+      "updated_at": "2026-10-22T18:33:45+08:00",
+      "version": "1.0.0"
+    },
+    {
+      "id": "SRC-MYYSHOP-CURATION-20261022-LANE",
+      "path": "evidence/sources/src-myyshop-curation-20261022-lane.md",
+      "refs": [],
+      "status": "active",
+      "updated_at": "2026-10-22T17:45:06+08:00",
+      "version": "1.0.0"
+    },
+    {
+      "id": "SRC-MYYSHOP-CURATION-20261022-PRIVACY",
+      "path": "evidence/sources/src-myyshop-curation-20261022-privacy.md",
+      "refs": [],
+      "status": "active",
+      "updated_at": "2026-10-22T17:38:11+08:00",
+      "version": "1.0.0"
+    },
+    {
+      "id": "SRC-MYYSHOP-CURATION-20261022-REPORT",
+      "path": "evidence/sources/src-myyshop-curation-20261022-report.md",
+      "refs": [],
+      "status": "active",
+      "updated_at": "2026-10-22T17:45:06+08:00",
+      "version": "1.0.0"
+    },
+    {
+      "id": "SRC-MYYSHOP-CURATION-20261022-TERMS",
+      "path": "evidence/sources/src-myyshop-curation-20261022-terms.md",
+      "refs": [],
+      "status": "active",
+      "updated_at": "2026-10-22T17:38:11+08:00",
+      "version": "1.0.0"
+    },
+    {
+      "id": "SRC-MYYSHOP-CURATION-20261022-TIKTOK",
+      "path": "evidence/sources/src-myyshop-curation-20261022-tiktok.md",
+      "refs": [],
+      "status": "active",
+      "updated_at": "2026-10-22T18:33:45+08:00",
+      "version": "1.0.0"
+    },
+    {
       "id": "SRC-MYYSHOP-DHGATE-DROPSHIPPING-BLOG-001",
       "path": "evidence/sources/src-myyshop-dhgate-dropshipping-blog-001.md",
       "refs": [

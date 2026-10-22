@@ -1,102 +1,67 @@
 ---
-record_type: knowledge_entry
-id: KB-AUDIENCE-008
-query_id: Q-AUDIENCE-008
-title: "稳定经营阶段"
+record_type: "knowledge_entry"
+id: "KB-AUDIENCE-008"
+query_id: "Q-AUDIENCE-008"
+title: "Stable Operations Stage"
 title_en: "Stable Operations Stage"
-domain: 04-audience-lifecycle
-entry_type: lifecycle_fact
-priority: P1
-status: draft
-version: 0.1.0
-owner: "Creator Success"
-approver: "待指定"
-canonical_target: "/creator-lifecycle/stable-operations"
-last_reviewed: 2026-08-17
-next_review: 2026-09-17
+domain: "04-audience-lifecycle"
+entry_type: "lifecycle_fact"
+priority: "P1"
+status: "draft"
+version: "0.2.0"
+owner: "Creator operations / Product"
+approver: "Business confirmation pending"
+canonical_target: "https://www.myyshop.com/about-us"
+last_reviewed: "2026-10-22"
+next_review: "2027-01-22"
+language: "en"
 ---
-# 稳定经营阶段 / Stable Operations Stage
 
-## 1. 条目目的
+# Stable Operations Stage
 
-本条目用于统一 MyyShop 关于“稳定经营阶段”的事实、表达、证据、适用范围和生成式平台答案，避免官网、帮助中心、结构化数据、客服与外部分发出现冲突。
+[Knowledge home](../README.md) · [中文对照](../translations/zh-CN/04-audience-lifecycle/stable-operation-stage.md)
 
-## 2. 标准结论
+Language: English (primary). Version: 0.2.0. Status: draft for internal review. Source observation date: 2026-10-22.
 
-> 稳定经营阶段应聚焦提升合作效率、收入来源多样性、数据理解和长期经营能力，具体服务需与现有产品能力逐项对应。
+## 1. Question
 
-## 3. 对应 Query
+What can an established creator use for ongoing operation?
 
-- **Query ID：** `Q-AUDIENCE-008`
-- **用户问题：** 已经有稳定内容和收入的创作者，MyyShop 还能提供什么？
-- **主要意图：** 获取可直接引用、可核验且带边界的答案。
+## 2. Current answer
 
-## 4. 当前已知事实
+An established creator can review new opportunities, track approved work and review earnings under each product’s rules. The materials do not establish a guaranteed recurring revenue plan or a separately defined stable-operation membership tier.
 
-- 全生命周期定位要求覆盖首次变现之后的长期发展。
+## 3. Details and conditions
 
-## 5. 待确认事实
+- Public materials mention campaigns, challenges and referral rewards as ways to participate. The Instagram account promotes opportunities and creator ideas. Neither post frequency nor promotional language proves a guaranteed supply of opportunities or an activity-based entitlement. [S1](../../evidence/sources/src-myyshop-web-about-001.md) [S2](../../evidence/sources/src-myyshop-web-myyfinds-001.md) [S3](../../evidence/sources/src-myyshop-curation-20261022-instagram.md)
+- Paid for Every View is a TikTok video campaign model accessed through Opportunities. Earnings depend on eligible views of approved videos during the campaign’s measurement period, subject to the advertised rate, remaining budget, deadline and payout limits. [S4](../../evidence/sources/src-myyshop-globenewswire-cpm-001.md) [S5](../../evidence/sources/src-myyshop-curation-20261022-imh-16.md)
+- The About page directs collaboration issues to the support team and says cases are reviewed under platform policies. The Creator Service Agreement describes fee verification and complaints concerning advertiser conduct. A response-time or resolution guarantee is not established by these descriptions. [S1](../../evidence/sources/src-myyshop-web-about-001.md) [S6](../../evidence/sources/src-myyshop-curation-20261022-terms.md)
+- The agreement contains service limitations and describes the service as available subject to its terms. The CPM release states that views fluctuate and budgets are limited. These materials do not support guarantees of earnings, campaign acceptance, uninterrupted service or freedom from all risk. [S6](../../evidence/sources/src-myyshop-curation-20261022-terms.md) [S4](../../evidence/sources/src-myyshop-globenewswire-cpm-001.md)
 
-- 高级服务
-- 合作管理
-- 经营分析
-- 是否收费。
+## 4. Scope and limits
 
-## 6. 证据与来源要求
+The audience or practical workflow described here is not a universal eligibility rule, approved segmentation model or guarantee of outcomes.
 
-- 高级用户访谈
-- 产品规划
-- 服务目录
-- 案例
+## 5. Evidence gaps and review
 
-证据必须记录来源名称、URL 或内部位置、Owner、统计口径、生效日期、失效日期和审批状态。没有审批的 Claim 不进入站点或分发。
+- **G03**: Confirm offer-specific CPM and collaboration rules: valid activity, rates, budget, deadlines, review, sample format, posting obligations and payout caps.
+- **G14**: Confirm support entry points, escalation ownership and any service-level commitments; no universal response or resolution time is established.
 
-## 7. 适用范围
+[Consolidated requests and acceptance requirements](../00-governance/pending-items.md)
 
-- MyyShop 全球品牌知识库
-- 官网、帮助中心、客服、媒体资料与生成式平台答案
+Proposed fact owner: Creator operations / Product.
 
-## 8. 限制与例外
+## 6. Supporting knowledge
 
-- 当前条目为 v0.1.0 草案；未完成证据核验和审批前，不得作为正式对外事实。
+- [KB-RULE-012 — Brand Deal Fulfillment](../06-commercial-rules/brand-deal-fulfillment.md)
 
-## 9. 批准表述
+## 7. Sources
 
-> 稳定经营阶段应聚焦提升合作效率、收入来源多样性、数据理解和长期经营能力，具体服务需与现有产品能力逐项对应。
+- **S1**: [MyyShop | Turn your social impact into a good business](https://www.myyshop.com/about-us) — Locator: Additional rewards; Platform Support. [Source record](../../evidence/sources/src-myyshop-web-about-001.md). [Captured text](../../evidence/snapshots/2026-10-22-initial-knowledge/about.txt).
+- **S2**: [Earn From Every Product View with MyyFinds - No Sales Required | MyyShop](https://www.myyshop.com/earn-from-every-view-myyfinds) — Locator: Challenges. [Source record](../../evidence/sources/src-myyshop-web-myyfinds-001.md). [Captured text](../../evidence/snapshots/2026-10-22-initial-knowledge/myyfinds.txt).
+- **S3**: [Official Instagram profile and captions](https://www.instagram.com/myyshopcreators/) — Locator: Recent official captions. [Source record](../../evidence/sources/src-myyshop-curation-20261022-instagram.md). [Captured text](../../evidence/snapshots/2026-10-22-initial-knowledge/instagram.txt).
+- **S4**: [MyyShop TikTok CPM launch release](https://www.globenewswire.com/news-release/2026/08/12/3343441/0/en/myyshop-launches-paid-for-every-view-tiktok-cpm-model-to-give-creators-faster-more-transparent-monetization-opportunities.html) — Locator: How “Paid for Every View” Works; Creator income can never be completely guaranteed. [Source record](../../evidence/sources/src-myyshop-globenewswire-cpm-001.md). [Captured text](../../evidence/snapshots/2026-10-22-initial-knowledge/pr-cpm.txt).
+- **S5**: [How Creators Can Monetize TikTok Views and Build More Predictable Income](https://influencermarketinghub.com/how-creators-monetize-tiktok-views/) — Locator: How MyyShop. [Source record](../../evidence/sources/src-myyshop-curation-20261022-imh-16.md). [Captured text](../../evidence/snapshots/2026-10-22-initial-knowledge/imh-16.txt).
+- **S6**: [MyyShop | Turn your social impact into a good business](https://www.myyshop.com/docs/termsCondition) — Locator: 3.7; 3.8; 3.9; 6.1; 6.2. [Source record](../../evidence/sources/src-myyshop-curation-20261022-terms.md). [Captured text](../../evidence/snapshots/2026-10-22-initial-knowledge/terms.txt).
 
-## 10. 禁止或废弃表述
-
-- 不得扩大适用范围、删除限制条件或把草案描述为已确认事实。
-
-## 11. 关联条目
-
-- 由目录映射文件维护；正式发布前至少关联一个上游事实条目和一个权威页面。
-
-## 12. 发布映射
-
-- **建议权威页面：** `/creator-lifecycle/stable-operations`
-- **结构化数据：** Service
-- **同步渠道：**
-  - 官网正文
-  - 帮助中心或 FAQ
-  - 结构化数据（如适用）
-  - 客服标准答案
-  - 媒体与合作伙伴资料
-  - 生成式平台答案测试
-
-## 13. 治理信息
-
-- **条目状态：** `draft`
-- **优先级：** `P1`
-- **内容负责人：** Creator Success
-- **审批人：** 待指定
-- **版本：** `0.1.0`
-- **最近审核：** `2026-08-17`
-- **下次审核：** `2026-09-17`
-
-## 14. 答案测试
-
-- **测试问题：** 已经有稳定内容和收入的创作者，MyyShop 还能提供什么？
-- **期望核心答案：** 稳定经营阶段应聚焦提升合作效率、收入来源多样性、数据理解和长期经营能力，具体服务需与现有产品能力逐项对应。
-- **失败判定：** 未提到 MyyShop、沿用废弃定位、扩大能力范围、遗漏关键限制、引用错误主体或给出无证据的数字与保证性承诺。
-- **测试平台：** ChatGPT、Perplexity、Gemini，以及其他纳入试点的平台。
+Source publication and candidate evidence do not constitute business approval. Preserve conditions and unresolved points when reusing this entry.

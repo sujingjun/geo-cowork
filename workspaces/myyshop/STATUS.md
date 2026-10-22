@@ -1,6 +1,10 @@
 # MyyShop 工作区状态
 
-> 最近更新：2026-10-17
+> 最近更新：2026-10-22
+
+## 本地知识整理（2026-10-22）
+
+已根据本次授权生成 [120 条英文主版本](knowledge/README.md)及[完整中文对照](knowledge/translations/zh-CN/README.md)，沿用现状，不预设品牌转型。来源登记、集中缺口、版本和双语检查见[验证报告](knowledge/00-governance/validation-report.md)与[执行记录](../../docs/records/2026-10-22-myyshop-initial-knowledge-curation-record.md)。所有条目仍为内部审核 draft；本地整理不代表品牌事实已获批准，也未替换历史正式 Release、解除真实周期暂停或启动外部发布。
 
 ## 当前阶段
 
@@ -35,7 +39,7 @@ OneGlanse 默认后台分析已触发，但因运行环境未配置分析模型�
 - 当前 Site 技术结果：For Creators 与 MyyFinds 九项通过；首页、About、Brand Deals 有 canonical 相关 Finding，About 另缺 heading；sitemap 首次假阳性已由 `v1.0.2` 修复并保留旧 Run 轨迹；
 - 新采集的 11 份一方 Evidence 与本次 real slice 尚未获得人工批准；Content/Evidence/Product Gap、Proposal、Adoption、Publication、部署或业务效果也未确认。历史已批准 Evidence 继续保留原状态；GA4/GSC smoke 只证明指定窗口的只读接口可用，不证明业务效果。
 - M5 Requirement、PRD、Architecture、Spec 0006 与 Plan 均为 `approved`；五平台正式英文两槽 Baseline 已完成并可重算，但 Task 继续为 `implemented`：10 个 Answer Review 仍为 candidate，100 Source 批量 Classification/Claim Support 尚未触发，post-change Retest 另缺 M4 Publication/Technical Retest。账号标识、凭据、浏览器历史和完整 DOM 不落盘。
-- 信源体系的唯一候选发现入口是获授权真实 Run 的 Citation Observation；无外部综合榜、静态域名表或历史排名 import 路径。
+- 历史 M5 消费者答案信源的候选发现入口是获授权真实 Run 的 Citation Observation；该边界不限制本次明确授权的品牌 PR、官网与官媒材料整理，也不把本次材料登记变成 M5 分类或新的平台采样。
 - 当前 M5 共 133 个 Citation Observation，引用 40 个唯一 Source；全部进入 `archived_unclassified`，距离 100 Source 批量分类触发器还差 60 个。既有 27 个 candidate Classification 已转为 `superseded` 历史，不进入当前口径。
 - 2026-09-04 Owner 明确决定：Citation Observation 当前用于记录、Source identity、Baseline/Retest provenance 与质量指标；40→100 和后续 Classification/Claim Support 不得阻止真实 GEO Cycle 的启动、推进或完成。它是否仍为独立 M5/v1 交付门，由后续 authorized-real PRD 明确。
 - 五个平台各有两个 candidate Answer Review；Gemini 两槽 `current_positioning:fail`，其余平台两槽均为 `partial`。由于最新完整业务知识库尚未建立，所有 `core_fact_accuracy` 与 `citation_quality` 暂为 `partial`，不得升级为最终事实判断。

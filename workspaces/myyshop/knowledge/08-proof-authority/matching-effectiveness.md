@@ -1,103 +1,63 @@
 ---
-record_type: knowledge_entry
-id: KB-PROOF-006
-query_id: Q-PROOF-006
-title: "匹配效果"
+record_type: "knowledge_entry"
+id: "KB-PROOF-006"
+query_id: "Q-PROOF-006"
+title: "Matching Effectiveness"
 title_en: "Matching Effectiveness"
-domain: 08-proof-authority
-entry_type: evidence_claim
-priority: P1
-status: draft
-version: 0.1.0
-owner: "数据科学 + 商业化运营"
-approver: "待指定"
-canonical_target: "/creator-results/matching"
-last_reviewed: 2026-08-17
-next_review: 2026-09-17
+domain: "08-proof-authority"
+entry_type: "evidence_claim"
+priority: "P1"
+status: "draft"
+version: "0.2.0"
+owner: "Data / PR / case owner"
+approver: "Business confirmation pending"
+canonical_target: "https://www.myyshop.com/about-us"
+last_reviewed: "2026-10-22"
+next_review: "2027-01-22"
+language: "en"
 ---
-# 匹配效果 / Matching Effectiveness
 
-## 1. 条目目的
+# Matching Effectiveness
 
-本条目用于统一 MyyShop 关于“匹配效果”的事实、表达、证据、适用范围和生成式平台答案，避免官网、帮助中心、结构化数据、客服与外部分发出现冲突。
+[Knowledge home](../README.md) · [中文对照](../translations/zh-CN/08-proof-authority/matching-effectiveness.md)
 
-## 2. 标准结论
+Language: English (primary). Version: 0.2.0. Status: draft for internal review. Source observation date: 2026-10-22.
 
-> 匹配效果应使用明确指标，如申请转化、接受率、履约率、品牌满意度或达人满意度，并说明基准与样本。
+## 1. Question
 
-## 3. 对应 Query
+How should AI matching effectiveness be described?
 
-- **Query ID：** `Q-PROOF-006`
-- **用户问题：** MyyShop 的达人与机会匹配效果如何？
-- **主要意图：** 获取可直接引用、可核验且带边界的答案。
+## 2. Current answer
 
-## 4. 当前已知事实
+The CPM release attributes an 80% creator-selection efficiency improvement and up to 92% matching accuracy to company data. Definitions, baseline, sample, period and underlying records were not provided in this batch, so retain them as unverified reported claims. [S1](../../evidence/sources/src-myyshop-globenewswire-cpm-001.md)
 
-- 匹配可能是平台核心机制之一。
+## 3. Details and conditions
 
-## 5. 待确认事实
+- The About page and CPM release publish figures of 33M+ SKUs and 1.66M creators in an AI/matching context. They do not supply a dated, reproducible count of active creators, registered accounts, available products or currently open campaigns. [S2](../../evidence/sources/src-myyshop-web-about-001.md) [S1](../../evidence/sources/src-myyshop-globenewswire-cpm-001.md)
+- The Privacy Policy describes manual or automated opportunity recommendations using account and activity information. It also describes rights to seek an explanation and object to solely automated decisions, including possible human review. The actual request workflow and response performance were not tested. [S3](../../evidence/sources/src-myyshop-curation-20261022-privacy.md)
 
-- 匹配算法范围
-- 评价指标
-- 基准
-- 人工参与
-- 地区差异。
+## 4. Scope and limits
 
-## 6. 证据与来源要求
+Published claims and examples are recorded with attribution. They are not independently audited measurements or promises of typical individual results.
 
-- 模型评估
-- 运营数据
-- 实验报告
-- 用户反馈
+## 5. Evidence gaps and review
 
-证据必须记录来源名称、URL 或内部位置、Owner、统计口径、生效日期、失效日期和审批状态。没有审批的 Claim 不进入站点或分发。
+- **G09**: Obtain definitions, populations, dates, baselines and reproducible records for scale, activity, efficiency, accuracy, creator-growth and income claims.
+- **G17**: Confirm AI capability, data provenance, model/measurement claims and explanation or human-review procedures before making stronger technical or effectiveness statements.
 
-## 7. 适用范围
+[Consolidated requests and acceptance requirements](../00-governance/pending-items.md)
 
-- MyyShop 全球品牌知识库
-- 官网、帮助中心、客服、媒体资料与生成式平台答案
+Proposed fact owner: Data / PR / case owner.
 
-## 8. 限制与例外
+## 6. Supporting knowledge
 
-- 当前条目为 v0.1.0 草案；未完成证据核验和审批前，不得作为正式对外事实。
+- [KB-TRUST-003 — AI Use and Explainability](../07-trust-safety/ai-use.md)
+- [KB-PROOF-010 — Data Methodology](data-methodology.md)
 
-## 9. 批准表述
+## 7. Sources
 
-> 匹配效果应使用明确指标，如申请转化、接受率、履约率、品牌满意度或达人满意度，并说明基准与样本。
+- **S1**: [MyyShop TikTok CPM launch release](https://www.globenewswire.com/news-release/2026/08/12/3343441/0/en/myyshop-launches-paid-for-every-view-tiktok-cpm-model-to-give-creators-faster-more-transparent-monetization-opportunities.html) — Locator: According to company data; 1.66 million. [Source record](../../evidence/sources/src-myyshop-globenewswire-cpm-001.md). [Captured text](../../evidence/snapshots/2026-10-22-initial-knowledge/pr-cpm.txt).
+- **S2**: [MyyShop | Turn your social impact into a good business](https://www.myyshop.com/about-us) — Locator: 33M+ SKUs. [Source record](../../evidence/sources/src-myyshop-web-about-001.md). [Captured text](../../evidence/snapshots/2026-10-22-initial-knowledge/about.txt).
+- **S3**: [MyyShop | Turn your social impact into a good business](https://www.myyshop.com/docs/privacy) — Locator: automated decision-making. [Source record](../../evidence/sources/src-myyshop-curation-20261022-privacy.md). [Captured text](../../evidence/snapshots/2026-10-22-initial-knowledge/privacy.txt).
 
-## 10. 禁止或废弃表述
-
-- 不得扩大适用范围、删除限制条件或把草案描述为已确认事实。
-
-## 11. 关联条目
-
-- 由目录映射文件维护；正式发布前至少关联一个上游事实条目和一个权威页面。
-
-## 12. 发布映射
-
-- **建议权威页面：** `/creator-results/matching`
-- **结构化数据：** Dataset / TechArticle
-- **同步渠道：**
-  - 官网正文
-  - 帮助中心或 FAQ
-  - 结构化数据（如适用）
-  - 客服标准答案
-  - 媒体与合作伙伴资料
-  - 生成式平台答案测试
-
-## 13. 治理信息
-
-- **条目状态：** `draft`
-- **优先级：** `P1`
-- **内容负责人：** 数据科学 + 商业化运营
-- **审批人：** 待指定
-- **版本：** `0.1.0`
-- **最近审核：** `2026-08-17`
-- **下次审核：** `2026-09-17`
-
-## 14. 答案测试
-
-- **测试问题：** MyyShop 的达人与机会匹配效果如何？
-- **期望核心答案：** 匹配效果应使用明确指标，如申请转化、接受率、履约率、品牌满意度或达人满意度，并说明基准与样本。
-- **失败判定：** 未提到 MyyShop、沿用废弃定位、扩大能力范围、遗漏关键限制、引用错误主体或给出无证据的数字与保证性承诺。
-- **测试平台：** ChatGPT、Perplexity、Gemini，以及其他纳入试点的平台。
+Source publication and candidate evidence do not constitute business approval. Preserve conditions and unresolved points when reusing this entry.

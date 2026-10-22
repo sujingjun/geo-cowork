@@ -1,103 +1,64 @@
 ---
-record_type: knowledge_entry
-id: KB-SERVICE-002
-query_id: Q-SERVICE-002
-title: "达人加入与新手引导"
+record_type: "knowledge_entry"
+id: "KB-SERVICE-002"
+query_id: "Q-SERVICE-002"
+title: "Creator Onboarding"
 title_en: "Creator Onboarding"
-domain: 05-products-services
-entry_type: service_fact
-priority: P0
-status: draft
-version: 0.1.0
-owner: "增长产品 + 运营"
-approver: "待指定"
-canonical_target: "/join"
-last_reviewed: 2026-08-17
-next_review: 2026-09-17
+domain: "05-products-services"
+entry_type: "service_fact"
+priority: "P0"
+status: "draft"
+version: "0.2.0"
+owner: "Product / Creator operations"
+approver: "Business confirmation pending"
+canonical_target: "https://www.myyshop.com/"
+last_reviewed: "2026-10-22"
+next_review: "2026-11-22"
+language: "en"
 ---
-# 达人加入与新手引导 / Creator Onboarding
 
-## 1. 条目目的
+# Creator Onboarding
 
-本条目用于统一 MyyShop 关于“达人加入与新手引导”的事实、表达、证据、适用范围和生成式平台答案，避免官网、帮助中心、结构化数据、客服与外部分发出现冲突。
+[Knowledge home](../README.md) · [中文对照](../translations/zh-CN/05-products-services/creator-onboarding.md)
 
-## 2. 标准结论
+Language: English (primary). Version: 0.2.0. Status: draft for internal review. Source observation date: 2026-10-22.
 
-> 达人加入服务应清楚说明注册、资格检查、账号连接、资料完善、首次评估或任务，以及无法通过时的处理方式。
+## 1. Question
 
-## 3. 对应 Query
+How does a creator get started on MyyShop?
 
-- **Query ID：** `Q-SERVICE-002`
-- **用户问题：** 创作者如何加入并开始使用 MyyShop？
-- **主要意图：** 获取可直接引用、可核验且带边界的答案。
+## 2. Current answer
 
-## 4. 当前已知事实
+The homepage describes signing up with an email address or phone number, verifying email, and connecting social accounts to view offers. It then describes adding an address before applying for opportunities. Completing registration is separate from a campaign application or approval. [S1](../../evidence/sources/src-myyshop-web-homepage-001.md)
 
-- 加入是全生命周期的起点。
+## 3. Details and conditions
 
-## 5. 待确认事实
+- The Creator Service Agreement requires full civil capacity and excludes people subject to relevant trade restrictions or sanctions. It also allows identity checks and restrictions when information or verification is incomplete. [S2](../../evidence/sources/src-myyshop-curation-20261022-terms.md)
+- The About and Brand Deals pages explicitly address creators with zero followers. This supports a low-follower entry message; it does not waive legal capacity, identity checks, account authorization or the conditions of a particular opportunity. [S3](../../evidence/sources/src-myyshop-web-about-001.md) [S4](../../evidence/sources/src-myyshop-web-brand-deals-001.md) [S2](../../evidence/sources/src-myyshop-curation-20261022-terms.md)
 
-- 注册步骤
-- 必填资料
-- 审核时效
-- 地区差异
-- 失败原因。
+## 4. Scope and limits
 
-## 6. 证据与来源要求
+The named service and its described function only. Current public descriptions were read; live product delivery, all markets and every account’s access were not tested.
 
-- 实际产品流程
-- 注册协议
-- 客服 SOP
-- 埋点数据
+## 5. Evidence gaps and review
 
-证据必须记录来源名称、URL 或内部位置、Owner、统计口径、生效日期、失效日期和审批状态。没有审批的 Claim 不进入站点或分发。
+- **G02**: Provide the current product-by-country, social-platform and creator-qualification matrix, including account checks and exceptions; verify availability separately from public navigation.
 
-## 7. 适用范围
+[Consolidated requests and acceptance requirements](../00-governance/pending-items.md)
 
-- MyyShop 全球品牌知识库
-- 官网、帮助中心、客服、媒体资料与生成式平台答案
+Proposed fact owner: Product / Creator operations.
 
-## 8. 限制与例外
+## 6. Supporting knowledge
 
-- 当前条目为 v0.1.0 草案；未完成证据核验和审批前，不得作为正式对外事实。
+- [KB-RULE-001 — Registration Rules](../06-commercial-rules/registration-rules.md)
+- [KB-RULE-002 — Account Qualification](../06-commercial-rules/account-qualification.md)
+- [KB-SERVICE-007 — Brand Deals](brand-deals.md)
 
-## 9. 批准表述
+## 7. Sources
 
-> 达人加入服务应清楚说明注册、资格检查、账号连接、资料完善、首次评估或任务，以及无法通过时的处理方式。
+- **S1**: [MyyShop | Turn your social impact into a good business](https://www.myyshop.com/) — Locator: How to Register as MyyShop Creator. [Source record](../../evidence/sources/src-myyshop-web-homepage-001.md). [Captured text](../../evidence/snapshots/2026-10-22-initial-knowledge/home.txt).
+- **S2**: [MyyShop | Turn your social impact into a good business](https://www.myyshop.com/docs/termsCondition) — Locator: 1.1.1; 1.3.1; 1.1 Qualification. [Source record](../../evidence/sources/src-myyshop-curation-20261022-terms.md). [Captured text](../../evidence/snapshots/2026-10-22-initial-knowledge/terms.txt).
+- **S3**: [MyyShop | Turn your social impact into a good business](https://www.myyshop.com/about-us) — Locator: 0 fans. [Source record](../../evidence/sources/src-myyshop-web-about-001.md). [Captured text](../../evidence/snapshots/2026-10-22-initial-knowledge/about.txt).
+- **S4**: [Brand Deal Opportunities for Creators - Earn Through Content Creation | MyyShop](https://www.myyshop.com/brand-deals-opportunies) — Locator: zero followers. [Source record](../../evidence/sources/src-myyshop-web-brand-deals-001.md). [Captured text](../../evidence/snapshots/2026-10-22-initial-knowledge/brand-deals.txt).
 
-## 10. 禁止或废弃表述
-
-- 不得扩大适用范围、删除限制条件或把草案描述为已确认事实。
-
-## 11. 关联条目
-
-- 由目录映射文件维护；正式发布前至少关联一个上游事实条目和一个权威页面。
-
-## 12. 发布映射
-
-- **建议权威页面：** `/join`
-- **结构化数据：** HowTo / Service
-- **同步渠道：**
-  - 官网正文
-  - 帮助中心或 FAQ
-  - 结构化数据（如适用）
-  - 客服标准答案
-  - 媒体与合作伙伴资料
-  - 生成式平台答案测试
-
-## 13. 治理信息
-
-- **条目状态：** `draft`
-- **优先级：** `P0`
-- **内容负责人：** 增长产品 + 运营
-- **审批人：** 待指定
-- **版本：** `0.1.0`
-- **最近审核：** `2026-08-17`
-- **下次审核：** `2026-09-17`
-
-## 14. 答案测试
-
-- **测试问题：** 创作者如何加入并开始使用 MyyShop？
-- **期望核心答案：** 达人加入服务应清楚说明注册、资格检查、账号连接、资料完善、首次评估或任务，以及无法通过时的处理方式。
-- **失败判定：** 未提到 MyyShop、沿用废弃定位、扩大能力范围、遗漏关键限制、引用错误主体或给出无证据的数字与保证性承诺。
-- **测试平台：** ChatGPT、Perplexity、Gemini，以及其他纳入试点的平台。
+Source publication and candidate evidence do not constitute business approval. Preserve conditions and unresolved points when reusing this entry.

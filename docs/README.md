@@ -1,5 +1,13 @@
 # 文档导航
 
+## 2026-10-22 MyyShop 初始知识库整理
+
+[初始知识库整理计划](plans/2026-10-22-myyshop-initial-knowledge-curation-plan.md)已获用户明确实施授权；[任务](tasks/2026-10-22-myyshop-initial-knowledge-curation.md)与[执行记录](records/2026-10-22-myyshop-initial-knowledge-curation-record.md)覆盖实际结果。默认使用 [120 条英文知识](../workspaces/myyshop/knowledge/README.md)，中文查看[完整对照版](../workspaces/myyshop/knowledge/translations/zh-CN/README.md)。本版保留现有 94 条源事实、26 条派生答案，沿用现状，不预设品牌转型；初稿整理、业务确认与正式发布分别报告。
+
+## 2026-10-18 GEO 用户旅程访谈
+
+[用户旅程与持续循环草案](requirements/2026-10-18-geo-user-journey-and-loop-discovery.md)（proposed）的 Q1–Q51 核心业务选择已收敛：共享事实与答案卡、Agent 完整建议、运营批次确认执行、常规周采样及四周回顾；创作者账号创建为注册完成，GA4 自动读取，接入时创建含飞书智能体与对应人员的异常通知群。第 9 节汇总实际资料、配置与验收清单，第 8 节维护插件就绪后的本地手册要求。[信源监控、舆情与 Query 发现方案](plans/2026-10-19-source-monitoring-and-query-discovery-plan.md)另覆盖信源、双入口、日常检查及每周 25 USD 预算。文档收敛不改变既有批准 Spec、正式业务暂停或实际调度，也不表示接入已完成。
+
 ## 2026-10-17 OneGlanse MCP 对接规划
 
 [开发计划](plans/2026-10-17-oneglanse-mcp-integration-plan.md)（implemented）按双方职责实现首版接口：OneGlanse 维护 MCP 授权/9 Tools，cowork 更新现有 Skill 并完整接收答案与引用。[任务与范围](tasks/2026-10-17-oneglanse-mcp-integration.md)、[联调记录](records/2026-10-17-oneglanse-mcp-integration-record.md)记录 MyyShop 单 Query/Gemini 的真实链路与 hash；[GEO 候选观察](records/2026-10-17-oneglanse-geo-observation.md)保持业务证据边界。当前采集 Agent 与 MCP 均以 `dhnb/oneglanse` 为准；[整体流程试跑与能力缺口](records/2026-10-17-myyshop-geo-full-flow-audit.md)确认单 Query 回传和实际 DeepSeek 候选诊断成功，但正式接续、知识批准、采集证据与测量条件尚未闭合。当前 OneGlanse 默认模型调用连接失败，正式 Cycle 仍暂停。[边界与清理记录](records/2026-10-17-oneglanse-boundary-workspace-cleanup-record.md)和[首次源码核验](records/2026-10-17-oneglanse-mcp-planning-record.md)保留历史依据。

@@ -1,103 +1,64 @@
 ---
-record_type: knowledge_entry
-id: KB-SERVICE-005
-query_id: Q-SERVICE-005
-title: "达人成长服务"
+record_type: "knowledge_entry"
+id: "KB-SERVICE-005"
+query_id: "Q-SERVICE-005"
+title: "Creator Growth Services"
 title_en: "Creator Growth Services"
-domain: 05-products-services
-entry_type: service_fact
-priority: P0
-status: draft
-version: 0.1.0
-owner: "Creator Growth"
-approver: "待指定"
-canonical_target: "/creator-services/growth"
-last_reviewed: 2026-08-17
-next_review: 2026-09-17
+domain: "05-products-services"
+entry_type: "service_fact"
+priority: "P0"
+status: "draft"
+version: "0.2.0"
+owner: "Product / Creator operations"
+approver: "Business confirmation pending"
+canonical_target: "https://www.myyshop.com/report"
+last_reviewed: "2026-10-22"
+next_review: "2026-11-22"
+language: "en"
 ---
-# 达人成长服务 / Creator Growth Services
 
-## 1. 条目目的
+# Creator Growth Services
 
-本条目用于统一 MyyShop 关于“达人成长服务”的事实、表达、证据、适用范围和生成式平台答案，避免官网、帮助中心、结构化数据、客服与外部分发出现冲突。
+[Knowledge home](../README.md) · [中文对照](../translations/zh-CN/05-products-services/creator-growth-services.md)
 
-## 2. 标准结论
+Language: English (primary). Version: 0.2.0. Status: draft for internal review. Source observation date: 2026-10-22.
 
-> 达人成长服务应围绕内容方向、持续创作、表现反馈、能力建设和阶段性目标形成可核验服务清单。
+## 1. Question
 
-## 3. 对应 Query
+Which creator-growth services are publicly described?
 
-- **Query ID：** `Q-SERVICE-005`
-- **用户问题：** MyyShop 提供哪些达人成长服务？
-- **主要意图：** 获取可直接引用、可核验且带边界的答案。
+## 2. Current answer
 
-## 4. 当前已知事实
+Public growth-oriented resources include account analysis, peer examples, creator education and feedback on submitted content. These describe support mechanisms, not a guaranteed follower increase, growth rate or business result. [S1](../../evidence/sources/src-myyshop-curation-20261022-report.md) [S2](../../evidence/sources/src-myyshop-curation-20261022-course.md) [S3](../../evidence/sources/src-myyshop-web-brand-deals-001.md)
 
-- 成长是 Q3 核心服务维度。
+## 3. Details and conditions
 
-## 5. 待确认事实
+- The Co-Branded Masterclass page describes a MyyShop × MediaLabs Creator Monetization Program with content strategy, account growth, product selection and sales topics. The official Instagram also names The Social Commerce Playbook as the first course. Course access, pricing, completion and certification conditions need their own rules. [S2](../../evidence/sources/src-myyshop-curation-20261022-course.md) [S4](../../evidence/sources/src-myyshop-curation-20261022-instagram.md)
+- Free Value Report is presented as an AI-assisted commercial-value analysis offering: niche positioning, audience profile, persona assessment, peer benchmarking and potential brand opportunities. The inspected page is a product description; no live report was generated in this task. [S1](../../evidence/sources/src-myyshop-curation-20261022-report.md)
 
-- 具体服务模块
-- 交付方式
-- 服务对象
-- 收费
-- 效果指标。
+## 4. Scope and limits
 
-## 6. 证据与来源要求
+The named service and its described function only. Current public descriptions were read; live product delivery, all markets and every account’s access were not tested.
 
-- 产品路线图
-- 服务说明
-- 用户协议
-- 案例数据
+## 5. Evidence gaps and review
 
-证据必须记录来源名称、URL 或内部位置、Owner、统计口径、生效日期、失效日期和审批状态。没有审批的 Claim 不进入站点或分发。
+- **G02**: Provide the current product-by-country, social-platform and creator-qualification matrix, including account checks and exceptions; verify availability separately from public navigation.
+- **G09**: Obtain definitions, populations, dates, baselines and reproducible records for scale, activity, efficiency, accuracy, creator-growth and income claims.
 
-## 7. 适用范围
+[Consolidated requests and acceptance requirements](../00-governance/pending-items.md)
 
-- MyyShop 全球品牌知识库
-- 官网、帮助中心、客服、媒体资料与生成式平台答案
+Proposed fact owner: Product / Creator operations.
 
-## 8. 限制与例外
+## 6. Supporting knowledge
 
-- 当前条目为 v0.1.0 草案；未完成证据核验和审批前，不得作为正式对外事实。
+- [KB-PROOF-004 — Creator Growth Results](../08-proof-authority/creator-growth-results.md)
+- [KB-AUDIENCE-006 — Growth Stage](../04-audience-lifecycle/growth-stage.md)
 
-## 9. 批准表述
+## 7. Sources
 
-> 达人成长服务应围绕内容方向、持续创作、表现反馈、能力建设和阶段性目标形成可核验服务清单。
+- **S1**: [MyyShop | Turn your social impact into a good business](https://www.myyshop.com/report) — Locator: Growth Path Reference; Intelligent Commercial Value; Top Creator Benchmarking. [Source record](../../evidence/sources/src-myyshop-curation-20261022-report.md). [Captured text](../../evidence/snapshots/2026-10-22-initial-knowledge/report.txt).
+- **S2**: [MyyShop | Turn your social impact into a good business](https://www.myyshop.com/course/home) — Locator: CONTENT STRATEGY; WHO WE ARE. [Source record](../../evidence/sources/src-myyshop-curation-20261022-course.md). [Captured text](../../evidence/snapshots/2026-10-22-initial-knowledge/course.txt).
+- **S3**: [Brand Deal Opportunities for Creators - Earn Through Content Creation | MyyShop](https://www.myyshop.com/brand-deals-opportunies) — Locator: Analyze from Feedback. [Source record](../../evidence/sources/src-myyshop-web-brand-deals-001.md). [Captured text](../../evidence/snapshots/2026-10-22-initial-knowledge/brand-deals.txt).
+- **S4**: [Official Instagram profile and captions](https://www.instagram.com/myyshopcreators/) — Locator: The Social Commerce Playbook. [Source record](../../evidence/sources/src-myyshop-curation-20261022-instagram.md). [Captured text](../../evidence/snapshots/2026-10-22-initial-knowledge/instagram.txt).
 
-## 10. 禁止或废弃表述
-
-- 不得扩大适用范围、删除限制条件或把草案描述为已确认事实。
-
-## 11. 关联条目
-
-- 由目录映射文件维护；正式发布前至少关联一个上游事实条目和一个权威页面。
-
-## 12. 发布映射
-
-- **建议权威页面：** `/creator-services/growth`
-- **结构化数据：** Service
-- **同步渠道：**
-  - 官网正文
-  - 帮助中心或 FAQ
-  - 结构化数据（如适用）
-  - 客服标准答案
-  - 媒体与合作伙伴资料
-  - 生成式平台答案测试
-
-## 13. 治理信息
-
-- **条目状态：** `draft`
-- **优先级：** `P0`
-- **内容负责人：** Creator Growth
-- **审批人：** 待指定
-- **版本：** `0.1.0`
-- **最近审核：** `2026-08-17`
-- **下次审核：** `2026-09-17`
-
-## 14. 答案测试
-
-- **测试问题：** MyyShop 提供哪些达人成长服务？
-- **期望核心答案：** 达人成长服务应围绕内容方向、持续创作、表现反馈、能力建设和阶段性目标形成可核验服务清单。
-- **失败判定：** 未提到 MyyShop、沿用废弃定位、扩大能力范围、遗漏关键限制、引用错误主体或给出无证据的数字与保证性承诺。
-- **测试平台：** ChatGPT、Perplexity、Gemini，以及其他纳入试点的平台。
+Source publication and candidate evidence do not constitute business approval. Preserve conditions and unresolved points when reusing this entry.

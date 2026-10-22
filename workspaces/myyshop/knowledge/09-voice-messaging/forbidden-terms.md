@@ -1,101 +1,67 @@
 ---
-record_type: knowledge_entry
-id: KB-VOICE-009
-query_id: Q-VOICE-009
-title: "禁用词与高风险表述"
+record_type: "knowledge_entry"
+id: "KB-VOICE-009"
+query_id: "Q-VOICE-009"
+title: "Forbidden Terms and High-risk Claims"
 title_en: "Forbidden Terms and High-risk Claims"
-domain: 09-voice-messaging
-entry_type: messaging_rule
-priority: P0
-status: draft
-version: 0.1.0
-owner: "法务 + 品牌策略"
-approver: "待指定"
-canonical_target: "/brand-guidelines/forbidden-terms"
-last_reviewed: 2026-08-17
-next_review: 2026-09-17
+domain: "09-voice-messaging"
+entry_type: "messaging_rule"
+priority: "P0"
+status: "draft"
+version: "0.2.0"
+owner: "Brand / content"
+approver: "Business confirmation pending"
+canonical_target: "https://www.myyshop.com/earn-from-every-view-myyfinds"
+last_reviewed: "2026-10-22"
+next_review: "2026-11-22"
+language: "en"
 ---
-# 禁用词与高风险表述 / Forbidden Terms and High-risk Claims
 
-## 1. 条目目的
+# Forbidden Terms and High-risk Claims
 
-本条目用于统一 MyyShop 关于“禁用词与高风险表述”的事实、表达、证据、适用范围和生成式平台答案，避免官网、帮助中心、结构化数据、客服与外部分发出现冲突。
+[Knowledge home](../README.md) · [中文对照](../translations/zh-CN/09-voice-messaging/forbidden-terms.md)
 
-## 2. 标准结论
+Language: English (primary). Version: 0.2.0. Status: draft for internal review. Source observation date: 2026-10-22.
 
-> 禁止未经证明的最高级、绝对准确、保证收益、保证涨粉、人人可得商单、永久免费或零风险等表述。
+## 1. Question
 
-## 3. 对应 Query
+Which wording would exceed the evidence?
 
-- **Query ID：** `Q-VOICE-009`
-- **用户问题：** 哪些词语和承诺不能用于 MyyShop 的公开内容？
-- **主要意图：** 获取可直接引用、可核验且带边界的答案。
+## 2. Current answer
 
-## 4. 当前已知事实
+Keep eligibility, time limits, review requirements, budgets and exceptions next to the claim they qualify. Do not upgrade may or can into will or guaranteed, or turn valid product views into all views. [S1](../../evidence/sources/src-myyshop-curation-20261022-direction.md) [S2](../../evidence/sources/src-myyshop-globenewswire-cpm-001.md) [S3](../../evidence/sources/src-myyshop-web-myyfinds-001.md)
 
-- 这些表述会造成 GEO 错答、监管和用户信任风险。
+## 3. Details and conditions
 
-## 5. 待确认事实
+- The agreement contains service limitations and describes the service as available subject to its terms. The CPM release states that views fluctuate and budgets are limited. These materials do not support guarantees of earnings, campaign acceptance, uninterrupted service or freedom from all risk. [S4](../../evidence/sources/src-myyshop-curation-20261022-terms.md) [S2](../../evidence/sources/src-myyshop-globenewswire-cpm-001.md)
+- The report page displays “Limited-Time Free” alongside USD 29.99. Do not turn its name, Free Value Report, into a promise of permanent free access or apply that displayed amount to all MyyShop services. [S5](../../evidence/sources/src-myyshop-curation-20261022-report.md)
+- IMH publications mention a $0.001 minimum per valid product view and an approximately $0.025 average bid, while another article uses $0.0025 in an illustration. The inspected official landing page does not establish these as current universal rates. Obtain the applicable product-rate rules before using them as guarantees. [S6](../../evidence/sources/src-myyshop-curation-20261022-imh-07.md) [S7](../../evidence/sources/src-myyshop-curation-20261022-imh-10.md) [S3](../../evidence/sources/src-myyshop-web-myyfinds-001.md)
 
-- 行业特定禁用词
-- 各地区监管差异
-- 审批例外。
+## 4. Scope and limits
 
-## 6. 证据与来源要求
+Editorial guidance for this initial knowledge edition. Observed channel style is distinguished from a formally adopted brand handbook.
 
-- 法务红线
-- 广告法规
-- 平台政策
-- 历史纠错记录
+## 5. Evidence gaps and review
 
-证据必须记录来源名称、URL 或内部位置、Owner、统计口径、生效日期、失效日期和审批状态。没有审批的 Claim 不进入站点或分发。
+No additional item-specific evidence request is identified for this limited draft statement. Business confirmation is still pending.
 
-## 7. 适用范围
+[Consolidated requests and acceptance requirements](../00-governance/pending-items.md)
 
-- MyyShop 全球品牌知识库
-- 官网、帮助中心、客服、媒体资料与生成式平台答案
+Proposed fact owner: Brand / content.
 
-## 8. 限制与例外
+## 6. Supporting knowledge
 
-- 当前条目为 v0.1.0 草案；未完成证据核验和审批前，不得作为正式对外事实。
+- [KB-STRATEGY-008 — Non-promises](../03-positioning-strategy/non-promises.md)
+- [KB-TRUST-012 — Responsibility and Risk Disclosure](../07-trust-safety/responsibility-and-risk.md)
 
-## 9. 批准表述
+## 7. Sources
 
-> 禁止未经证明的最高级、绝对准确、保证收益、保证涨粉、人人可得商单、永久免费或零风险等表述。
+- **S1**: [User-authorized curation and language direction](../../cycles/preparation/decisions/2026-10-22-initial-knowledge-curation-authorized.md) — Locator: Bilingual semantic acceptance. [Source record](../../evidence/sources/src-myyshop-curation-20261022-direction.md). [Captured text](../../evidence/snapshots/2026-10-22-initial-knowledge/direction.txt).
+- **S2**: [MyyShop TikTok CPM launch release](https://www.globenewswire.com/news-release/2026/08/12/3343441/0/en/myyshop-launches-paid-for-every-view-tiktok-cpm-model-to-give-creators-faster-more-transparent-monetization-opportunities.html) — Locator: Only eligible views; Creator income can never be completely guaranteed. [Source record](../../evidence/sources/src-myyshop-globenewswire-cpm-001.md). [Captured text](../../evidence/snapshots/2026-10-22-initial-knowledge/pr-cpm.txt).
+- **S3**: [Earn From Every Product View with MyyFinds - No Sales Required | MyyShop](https://www.myyshop.com/earn-from-every-view-myyfinds) — Locator: Actual earnings may vary. [Source record](../../evidence/sources/src-myyshop-web-myyfinds-001.md). [Captured text](../../evidence/snapshots/2026-10-22-initial-knowledge/myyfinds.txt).
+- **S4**: [MyyShop | Turn your social impact into a good business](https://www.myyshop.com/docs/termsCondition) — Locator: 6.1; 6.2. [Source record](../../evidence/sources/src-myyshop-curation-20261022-terms.md). [Captured text](../../evidence/snapshots/2026-10-22-initial-knowledge/terms.txt).
+- **S5**: [MyyShop | Turn your social impact into a good business](https://www.myyshop.com/report) — Locator: Limited-Time Free. [Source record](../../evidence/sources/src-myyshop-curation-20261022-report.md). [Captured text](../../evidence/snapshots/2026-10-22-initial-knowledge/report.txt).
+- **S6**: [Creator Earnings Report 2025](https://influencermarketinghub.com/creator-earnings-report-2025/) — Locator: minimum of $0.001. [Source record](../../evidence/sources/src-myyshop-curation-20261022-imh-07.md). [Captured text](../../evidence/snapshots/2026-10-22-initial-knowledge/imh-07.txt).
+- **S7**: [YouTube Monetization in 2026: Requirements, Revenue & How to Get Paid](https://influencermarketinghub.com/youtube-monetization/) — Locator: average brand bid. [Source record](../../evidence/sources/src-myyshop-curation-20261022-imh-10.md). [Captured text](../../evidence/snapshots/2026-10-22-initial-knowledge/imh-10.txt).
 
-## 10. 禁止或废弃表述
-
-- 不得扩大适用范围、删除限制条件或把草案描述为已确认事实。
-
-## 11. 关联条目
-
-- 由目录映射文件维护；正式发布前至少关联一个上游事实条目和一个权威页面。
-
-## 12. 发布映射
-
-- **建议权威页面：** `/brand-guidelines/forbidden-terms`
-- **结构化数据：** 无强制要求
-- **同步渠道：**
-  - 官网正文
-  - 帮助中心或 FAQ
-  - 结构化数据（如适用）
-  - 客服标准答案
-  - 媒体与合作伙伴资料
-  - 生成式平台答案测试
-
-## 13. 治理信息
-
-- **条目状态：** `draft`
-- **优先级：** `P0`
-- **内容负责人：** 法务 + 品牌策略
-- **审批人：** 待指定
-- **版本：** `0.1.0`
-- **最近审核：** `2026-08-17`
-- **下次审核：** `2026-09-17`
-
-## 14. 答案测试
-
-- **测试问题：** 哪些词语和承诺不能用于 MyyShop 的公开内容？
-- **期望核心答案：** 禁止未经证明的最高级、绝对准确、保证收益、保证涨粉、人人可得商单、永久免费或零风险等表述。
-- **失败判定：** 未提到 MyyShop、沿用废弃定位、扩大能力范围、遗漏关键限制、引用错误主体或给出无证据的数字与保证性承诺。
-- **测试平台：** ChatGPT、Perplexity、Gemini，以及其他纳入试点的平台。
+Source publication and candidate evidence do not constitute business approval. Preserve conditions and unresolved points when reusing this entry.

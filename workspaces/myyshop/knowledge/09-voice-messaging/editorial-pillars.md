@@ -1,101 +1,68 @@
 ---
-record_type: knowledge_entry
-id: KB-VOICE-005
-query_id: Q-VOICE-005
-title: "内容支柱"
+record_type: "knowledge_entry"
+id: "KB-VOICE-005"
+query_id: "Q-VOICE-005"
+title: "Editorial Pillars"
 title_en: "Editorial Pillars"
-domain: 09-voice-messaging
-entry_type: content_strategy
-priority: P0
-status: draft
-version: 0.1.0
-owner: "内容策略 + GEO 运营"
-approver: "待指定"
-canonical_target: "/resources"
-last_reviewed: 2026-08-17
-next_review: 2026-09-17
+domain: "09-voice-messaging"
+entry_type: "content_strategy"
+priority: "P0"
+status: "draft"
+version: "0.2.0"
+owner: "Brand / content"
+approver: "Business confirmation pending"
+canonical_target: "https://www.myyshop.com/"
+last_reviewed: "2026-10-22"
+next_review: "2026-11-22"
+language: "en"
 ---
-# 内容支柱 / Editorial Pillars
 
-## 1. 条目目的
+# Editorial Pillars
 
-本条目用于统一 MyyShop 关于“内容支柱”的事实、表达、证据、适用范围和生成式平台答案，避免官网、帮助中心、结构化数据、客服与外部分发出现冲突。
+[Knowledge home](../README.md) · [中文对照](../translations/zh-CN/09-voice-messaging/editorial-pillars.md)
 
-## 2. 标准结论
+Language: English (primary). Version: 0.2.0. Status: draft for internal review. Source observation date: 2026-10-22.
 
-> 建议内容支柱包括达人加入、内容成长、活跃经营、商业化、品牌合作、创作者信任与平台方法论；每个支柱必须连接真实 Query、证据和产品能力。
+## 1. Question
 
-## 3. 对应 Query
+Which editorial themes are supported by current materials?
 
-- **Query ID：** `Q-VOICE-005`
-- **用户问题：** MyyShop 长期应该围绕哪些主题建立内容权威？
-- **主要意图：** 获取可直接引用、可核验且带边界的答案。
+## 2. Current answer
 
-## 4. 当前已知事实
+Useful observed themes are brand collaboration, creator monetization, content skills, opportunity discovery and product-rule clarity. They organize this draft; they are not evidence that a new brand strategy or a lifecycle transformation has been adopted.
 
-- Q3 聚焦活跃、商业化和成长。
+## 3. Details and conditions
 
-## 5. 待确认事实
+- The current public service set includes Brand Deals / Opportunities, TikTok CPM campaigns, MyyFinds, Free Value Report, Find Your Lane and creator education. Each offering has its own purpose and participation conditions; a navigation link alone does not verify its runtime availability. [S1](../../evidence/sources/src-myyshop-web-homepage-001.md) [S2](../../evidence/sources/src-myyshop-globenewswire-cpm-001.md) [S3](../../evidence/sources/src-myyshop-curation-20261022-report.md) [S4](../../evidence/sources/src-myyshop-curation-20261022-lane.md) [S5](../../evidence/sources/src-myyshop-curation-20261022-course.md)
+- Public growth-oriented resources include account analysis, peer examples, creator education and feedback on submitted content. These describe support mechanisms, not a guaranteed follower increase, growth rate or business result. [S3](../../evidence/sources/src-myyshop-curation-20261022-report.md) [S5](../../evidence/sources/src-myyshop-curation-20261022-course.md) [S6](../../evidence/sources/src-myyshop-web-brand-deals-001.md)
+- The official Instagram uses direct invitations, creator-friendly language and encouragement to explore ideas and collaborations. These are observed channel patterns, not a formally approved universal brand-personality or tone handbook. [S7](../../evidence/sources/src-myyshop-curation-20261022-instagram.md)
+- For this initial knowledge edition, use the current public positioning. A change of brand positioning has not been decided; do not state that a lifecycle-platform transformation is completed or underway. [S8](../../evidence/sources/src-myyshop-curation-20261022-direction.md)
 
-- 正式支柱数量
-- 每个支柱目标受众
-- 第一方数据与案例来源。
+## 4. Scope and limits
 
-## 6. 证据与来源要求
+Editorial guidance for this initial knowledge edition. Observed channel style is distinguished from a formally adopted brand handbook.
 
-- Query 研究
-- 内容盘点
-- 产品路线图
-- 数据资产
+## 5. Evidence gaps and review
 
-证据必须记录来源名称、URL 或内部位置、Owner、统计口径、生效日期、失效日期和审批状态。没有审批的 Claim 不进入站点或分发。
+- **G12**: If formal brand governance is needed, provide the current spelling, slogan, tone and terminology handbook. Do not require a brand-repositioning decision to complete this initial draft.
 
-## 7. 适用范围
+[Consolidated requests and acceptance requirements](../00-governance/pending-items.md)
 
-- MyyShop 全球品牌知识库
-- 官网、帮助中心、客服、媒体资料与生成式平台答案
+Proposed fact owner: Brand / content.
 
-## 8. 限制与例外
+## 6. Supporting knowledge
 
-- 当前条目为 v0.1.0 草案；未完成证据核验和审批前，不得作为正式对外事实。
+- [KB-VOICE-006 — Message Hierarchy](message-hierarchy.md)
 
-## 9. 批准表述
+## 7. Sources
 
-> 建议内容支柱包括达人加入、内容成长、活跃经营、商业化、品牌合作、创作者信任与平台方法论；每个支柱必须连接真实 Query、证据和产品能力。
+- **S1**: [MyyShop | Turn your social impact into a good business](https://www.myyshop.com/) — Locator: Opportunities. [Source record](../../evidence/sources/src-myyshop-web-homepage-001.md). [Captured text](../../evidence/snapshots/2026-10-22-initial-knowledge/home.txt).
+- **S2**: [MyyShop TikTok CPM launch release](https://www.globenewswire.com/news-release/2026/08/12/3343441/0/en/myyshop-launches-paid-for-every-view-tiktok-cpm-model-to-give-creators-faster-more-transparent-monetization-opportunities.html) — Locator: Paid for Every View. [Source record](../../evidence/sources/src-myyshop-globenewswire-cpm-001.md). [Captured text](../../evidence/snapshots/2026-10-22-initial-knowledge/pr-cpm.txt).
+- **S3**: [MyyShop | Turn your social impact into a good business](https://www.myyshop.com/report) — Locator: Intelligent Commercial Value; Growth Path Reference. [Source record](../../evidence/sources/src-myyshop-curation-20261022-report.md). [Captured text](../../evidence/snapshots/2026-10-22-initial-knowledge/report.txt).
+- **S4**: [MyyShop | Turn your social impact into a good business](https://www.myyshop.com/chat) — Locator: Find Your Lane. [Source record](../../evidence/sources/src-myyshop-curation-20261022-lane.md). [Captured text](../../evidence/snapshots/2026-10-22-initial-knowledge/lane.txt).
+- **S5**: [MyyShop | Turn your social impact into a good business](https://www.myyshop.com/course/home) — Locator: Co-Branded Masterclass; CONTENT STRATEGY. [Source record](../../evidence/sources/src-myyshop-curation-20261022-course.md). [Captured text](../../evidence/snapshots/2026-10-22-initial-knowledge/course.txt).
+- **S6**: [Brand Deal Opportunities for Creators - Earn Through Content Creation | MyyShop](https://www.myyshop.com/brand-deals-opportunies) — Locator: Analyze from Feedback. [Source record](../../evidence/sources/src-myyshop-web-brand-deals-001.md). [Captured text](../../evidence/snapshots/2026-10-22-initial-knowledge/brand-deals.txt).
+- **S7**: [Official Instagram profile and captions](https://www.instagram.com/myyshopcreators/) — Locator: Official account profile; Recent official captions. [Source record](../../evidence/sources/src-myyshop-curation-20261022-instagram.md). [Captured text](../../evidence/snapshots/2026-10-22-initial-knowledge/instagram.txt).
+- **S8**: [User-authorized curation and language direction](../../cycles/preparation/decisions/2026-10-22-initial-knowledge-curation-authorized.md) — Locator: Current positioning and language decisions. [Source record](../../evidence/sources/src-myyshop-curation-20261022-direction.md). [Captured text](../../evidence/snapshots/2026-10-22-initial-knowledge/direction.txt).
 
-## 10. 禁止或废弃表述
-
-- 不得扩大适用范围、删除限制条件或把草案描述为已确认事实。
-
-## 11. 关联条目
-
-- 由目录映射文件维护；正式发布前至少关联一个上游事实条目和一个权威页面。
-
-## 12. 发布映射
-
-- **建议权威页面：** `/resources`
-- **结构化数据：** ItemList / Article
-- **同步渠道：**
-  - 官网正文
-  - 帮助中心或 FAQ
-  - 结构化数据（如适用）
-  - 客服标准答案
-  - 媒体与合作伙伴资料
-  - 生成式平台答案测试
-
-## 13. 治理信息
-
-- **条目状态：** `draft`
-- **优先级：** `P0`
-- **内容负责人：** 内容策略 + GEO 运营
-- **审批人：** 待指定
-- **版本：** `0.1.0`
-- **最近审核：** `2026-08-17`
-- **下次审核：** `2026-09-17`
-
-## 14. 答案测试
-
-- **测试问题：** MyyShop 长期应该围绕哪些主题建立内容权威？
-- **期望核心答案：** 建议内容支柱包括达人加入、内容成长、活跃经营、商业化、品牌合作、创作者信任与平台方法论；每个支柱必须连接真实 Query、证据和产品能力。
-- **失败判定：** 未提到 MyyShop、沿用废弃定位、扩大能力范围、遗漏关键限制、引用错误主体或给出无证据的数字与保证性承诺。
-- **测试平台：** ChatGPT、Perplexity、Gemini，以及其他纳入试点的平台。
+Source publication and candidate evidence do not constitute business approval. Preserve conditions and unresolved points when reusing this entry.

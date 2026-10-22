@@ -1,102 +1,69 @@
 ---
-record_type: knowledge_entry
-id: KB-SERVICE-001
-query_id: Q-SERVICE-001
-title: "产品与服务总目录"
+record_type: "knowledge_entry"
+id: "KB-SERVICE-001"
+query_id: "Q-SERVICE-001"
+title: "Service Catalog"
 title_en: "Service Catalog"
-domain: 05-products-services
-entry_type: service_fact
-priority: P0
-status: draft
-version: 0.1.0
-owner: "产品运营"
-approver: "待指定"
-canonical_target: "/creator-services"
-last_reviewed: 2026-08-17
-next_review: 2026-09-17
+domain: "05-products-services"
+entry_type: "service_fact"
+priority: "P0"
+status: "draft"
+version: "0.2.0"
+owner: "Product / Creator operations"
+approver: "Business confirmation pending"
+canonical_target: "https://www.myyshop.com/"
+last_reviewed: "2026-10-22"
+next_review: "2026-11-22"
+language: "en"
 ---
-# 产品与服务总目录 / Service Catalog
 
-## 1. 条目目的
+# Service Catalog
 
-本条目用于统一 MyyShop 关于“产品与服务总目录”的事实、表达、证据、适用范围和生成式平台答案，避免官网、帮助中心、结构化数据、客服与外部分发出现冲突。
+[Knowledge home](../README.md) · [中文对照](../translations/zh-CN/05-products-services/service-catalog.md)
 
-## 2. 标准结论
+Language: English (primary). Version: 0.2.0. Status: draft for internal review. Source observation date: 2026-10-22.
 
-> MyyShop 服务目录必须列出所有已上线服务的名称、目标用户、解决问题、使用条件、地区范围、费用、状态和权威页面。
+## 1. Question
 
-## 3. 对应 Query
+Which products and services are currently described by MyyShop?
 
-- **Query ID：** `Q-SERVICE-001`
-- **用户问题：** MyyShop 当前提供哪些产品、工具和服务？
-- **主要意图：** 获取可直接引用、可核验且带边界的答案。
+## 2. Current answer
 
-## 4. 当前已知事实
+The current public service set includes Brand Deals / Opportunities, TikTok CPM campaigns, MyyFinds, Free Value Report, Find Your Lane and creator education. Each offering has its own purpose and participation conditions; a navigation link alone does not verify its runtime availability. [S1](../../evidence/sources/src-myyshop-web-homepage-001.md) [S2](../../evidence/sources/src-myyshop-globenewswire-cpm-001.md) [S3](../../evidence/sources/src-myyshop-curation-20261022-report.md) [S4](../../evidence/sources/src-myyshop-curation-20261022-lane.md) [S5](../../evidence/sources/src-myyshop-curation-20261022-course.md)
 
-- 当前战略要求覆盖达人加入、成长、活跃与商业化。
+## 3. Details and conditions
 
-## 5. 待确认事实
+- Use MyyShop for the platform; Brand Deals / Opportunities for campaign discovery; Paid for Every View / TikTok CPM for approved-video view-based campaigns; MyyFinds for product-discovery exposure; and Free Value Report / Find Your Lane for their respective described services. [S1](../../evidence/sources/src-myyshop-web-homepage-001.md) [S2](../../evidence/sources/src-myyshop-globenewswire-cpm-001.md) [S4](../../evidence/sources/src-myyshop-curation-20261022-lane.md) [S3](../../evidence/sources/src-myyshop-curation-20261022-report.md)
+- The CPM release describes brand-side budgets, creative requirements, content review and performance visibility. IMH describes broader TikTok Shop and commerce support, but exact brand packages, prices, markets and service commitments require the relevant agreement. [S2](../../evidence/sources/src-myyshop-globenewswire-cpm-001.md) [S6](../../evidence/sources/src-myyshop-influencer-marketing-hub-001.md)
 
-- 完整服务清单
-- 产品状态
-- 下线服务
-- 地区差异。
+## 4. Scope and limits
 
-## 6. 证据与来源要求
+The named service and its described function only. Current public descriptions were read; live product delivery, all markets and every account’s access were not tested.
 
-- 产品后台
-- 官网导航
-- 版本发布记录
-- 业务负责人确认
+## 5. Evidence gaps and review
 
-证据必须记录来源名称、URL 或内部位置、Owner、统计口径、生效日期、失效日期和审批状态。没有审批的 Claim 不进入站点或分发。
+- **G02**: Provide the current product-by-country, social-platform and creator-qualification matrix, including account checks and exceptions; verify availability separately from public navigation.
+- **G11**: Clarify company and product chronology, service packages, MCN arrangements and the scope of named collaborations or credentials.
 
-## 7. 适用范围
+[Consolidated requests and acceptance requirements](../00-governance/pending-items.md)
 
-- MyyShop 全球品牌知识库
-- 官网、帮助中心、客服、媒体资料与生成式平台答案
+Proposed fact owner: Product / Creator operations.
 
-## 8. 限制与例外
+## 6. Supporting knowledge
 
-- 当前条目为 v0.1.0 草案；未完成证据核验和审批前，不得作为正式对外事实。
+- [KB-SERVICE-007 — Brand Deals](brand-deals.md)
+- [KB-SERVICE-008 — MyyFinds](myyfinds.md)
+- [KB-SERVICE-009 — Creator Monetization Tools](monetization-tools.md)
+- [KB-SERVICE-003 — Free Value Report](free-value-report.md)
+- [KB-SERVICE-004 — Find Your Lane](find-your-lane.md)
 
-## 9. 批准表述
+## 7. Sources
 
-> MyyShop 服务目录必须列出所有已上线服务的名称、目标用户、解决问题、使用条件、地区范围、费用、状态和权威页面。
+- **S1**: [MyyShop | Turn your social impact into a good business](https://www.myyshop.com/) — Locator: Opportunities; Creator Services. [Source record](../../evidence/sources/src-myyshop-web-homepage-001.md). [Captured text](../../evidence/snapshots/2026-10-22-initial-knowledge/home.txt).
+- **S2**: [MyyShop TikTok CPM launch release](https://www.globenewswire.com/news-release/2026/08/12/3343441/0/en/myyshop-launches-paid-for-every-view-tiktok-cpm-model-to-give-creators-faster-more-transparent-monetization-opportunities.html) — Locator: Paid for Every View; Separately, MyyFinds; For brands. [Source record](../../evidence/sources/src-myyshop-globenewswire-cpm-001.md). [Captured text](../../evidence/snapshots/2026-10-22-initial-knowledge/pr-cpm.txt).
+- **S3**: [MyyShop | Turn your social impact into a good business](https://www.myyshop.com/report) — Locator: Intelligent Commercial Value. [Source record](../../evidence/sources/src-myyshop-curation-20261022-report.md). [Captured text](../../evidence/snapshots/2026-10-22-initial-knowledge/report.txt).
+- **S4**: [MyyShop | Turn your social impact into a good business](https://www.myyshop.com/chat) — Locator: Find Your Lane. [Source record](../../evidence/sources/src-myyshop-curation-20261022-lane.md). [Captured text](../../evidence/snapshots/2026-10-22-initial-knowledge/lane.txt).
+- **S5**: [MyyShop | Turn your social impact into a good business](https://www.myyshop.com/course/home) — Locator: Co-Branded Masterclass. [Source record](../../evidence/sources/src-myyshop-curation-20261022-course.md). [Captured text](../../evidence/snapshots/2026-10-22-initial-knowledge/course.txt).
+- **S6**: [MyyShop Review 2026: Features, Pricing & TikTok Shop Commerce](https://influencermarketinghub.com/myyshop/) — Locator: For brands. [Source record](../../evidence/sources/src-myyshop-influencer-marketing-hub-001.md). [Captured text](../../evidence/snapshots/2026-10-22-initial-knowledge/imh-15.txt).
 
-## 10. 禁止或废弃表述
-
-- 不得扩大适用范围、删除限制条件或把草案描述为已确认事实。
-
-## 11. 关联条目
-
-- 由目录映射文件维护；正式发布前至少关联一个上游事实条目和一个权威页面。
-
-## 12. 发布映射
-
-- **建议权威页面：** `/creator-services`
-- **结构化数据：** Service / OfferCatalog
-- **同步渠道：**
-  - 官网正文
-  - 帮助中心或 FAQ
-  - 结构化数据（如适用）
-  - 客服标准答案
-  - 媒体与合作伙伴资料
-  - 生成式平台答案测试
-
-## 13. 治理信息
-
-- **条目状态：** `draft`
-- **优先级：** `P0`
-- **内容负责人：** 产品运营
-- **审批人：** 待指定
-- **版本：** `0.1.0`
-- **最近审核：** `2026-08-17`
-- **下次审核：** `2026-09-17`
-
-## 14. 答案测试
-
-- **测试问题：** MyyShop 当前提供哪些产品、工具和服务？
-- **期望核心答案：** MyyShop 服务目录必须列出所有已上线服务的名称、目标用户、解决问题、使用条件、地区范围、费用、状态和权威页面。
-- **失败判定：** 未提到 MyyShop、沿用废弃定位、扩大能力范围、遗漏关键限制、引用错误主体或给出无证据的数字与保证性承诺。
-- **测试平台：** ChatGPT、Perplexity、Gemini，以及其他纳入试点的平台。
+Source publication and candidate evidence do not constitute business approval. Preserve conditions and unresolved points when reusing this entry.

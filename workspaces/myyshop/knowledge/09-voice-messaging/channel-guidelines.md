@@ -1,102 +1,66 @@
 ---
-record_type: knowledge_entry
-id: KB-VOICE-012
-query_id: Q-VOICE-012
-title: "渠道表达与分发规范"
+record_type: "knowledge_entry"
+id: "KB-VOICE-012"
+query_id: "Q-VOICE-012"
+title: "Channel Messaging Guidelines"
 title_en: "Channel Messaging Guidelines"
-domain: 09-voice-messaging
-entry_type: messaging_rule
-priority: P0
-status: draft
-version: 0.1.0
-owner: "品牌运营 + GEO 运营"
-approver: "待指定"
-canonical_target: "/brand-guidelines/channels"
-last_reviewed: 2026-08-17
-next_review: 2026-09-17
+domain: "09-voice-messaging"
+entry_type: "messaging_rule"
+priority: "P0"
+status: "draft"
+version: "0.2.0"
+owner: "Brand / content"
+approver: "Business confirmation pending"
+canonical_target: "https://www.myyshop.com/earn-from-every-view-myyfinds"
+last_reviewed: "2026-10-22"
+next_review: "2026-11-22"
+language: "en"
 ---
-# 渠道表达与分发规范 / Channel Messaging Guidelines
 
-## 1. 条目目的
+# Channel Messaging Guidelines
 
-本条目用于统一 MyyShop 关于“渠道表达与分发规范”的事实、表达、证据、适用范围和生成式平台答案，避免官网、帮助中心、结构化数据、客服与外部分发出现冲突。
+[Knowledge home](../README.md) · [中文对照](../translations/zh-CN/09-voice-messaging/channel-guidelines.md)
 
-## 2. 标准结论
+Language: English (primary). Version: 0.2.0. Status: draft for internal review. Source observation date: 2026-10-22.
 
-> 各渠道可调整长度和语气，但品牌类别、产品能力、费用、范围、限制和数据必须与同一批准知识条目一致。
+## 1. Question
 
-## 3. 对应 Query
+How should a factual message be reused across website, PR and social channels?
 
-- **Query ID：** `Q-VOICE-012`
-- **用户问题：** 官网、帮助中心、社交媒体、媒体资料和结构化数据应如何保持一致？
-- **主要意图：** 获取可直接引用、可核验且带边界的答案。
+## 2. Current answer
 
-## 4. 当前已知事实
+Adapt length and tone to the channel while retaining the same product, scope, conditions and evidence. A short social post can point to fuller rules; PR distribution cannot upgrade a claim’s evidence strength. Keep English and Chinese versions synchronized before reuse.
 
-- GEO 要求站点正文、结构化数据和分发资产说同一件事。
+## 3. Details and conditions
 
-## 5. 待确认事实
+- Official social captions invite users to explore opportunities, apply and obtain approval; they do not provide a complete eligibility or payment policy. Preserve campaign conditions when turning a short caption into an explanatory answer. [S1](../../evidence/sources/src-myyshop-curation-20261022-instagram.md)
+- Keep eligibility, time limits, review requirements, budgets and exceptions next to the claim they qualify. Do not upgrade may or can into will or guaranteed, or turn valid product views into all views. [S2](../../evidence/sources/src-myyshop-curation-20261022-direction.md) [S3](../../evidence/sources/src-myyshop-globenewswire-cpm-001.md) [S4](../../evidence/sources/src-myyshop-web-myyfinds-001.md)
+- The supplied PR spreadsheets are distribution and placement records. One N3 release appears across many listed domains; the IMH workbook explicitly labels article insertions and guest articles. Repetition or placement alone is not independent corroboration, an award, a partnership contract or endorsement by every publisher. [S5](../../evidence/sources/src-myyshop-curation-20261022-inputs.md)
+- English is the primary knowledge version and Simplified Chinese is the complete reading counterpart. Both versions share one knowledge ID, facts, evidence and fact version; a translation is not another knowledge object or a new independent source. [S2](../../evidence/sources/src-myyshop-curation-20261022-direction.md)
 
-- 各渠道模板
-- 同步机制
-- 负责人
-- 审计频率。
+## 4. Scope and limits
 
-## 6. 证据与来源要求
+Editorial guidance for this initial knowledge edition. Observed channel style is distinguished from a formally adopted brand handbook.
 
-- 内容发布流程
-- CMS 字段
-- Schema 生成逻辑
-- 分发清单
+## 5. Evidence gaps and review
 
-证据必须记录来源名称、URL 或内部位置、Owner、统计口径、生效日期、失效日期和审批状态。没有审批的 Claim 不进入站点或分发。
+No additional item-specific evidence request is identified for this limited draft statement. Business confirmation is still pending.
 
-## 7. 适用范围
+[Consolidated requests and acceptance requirements](../00-governance/pending-items.md)
 
-- MyyShop 全球品牌知识库
-- 官网、帮助中心、客服、媒体资料与生成式平台答案
+Proposed fact owner: Brand / content.
 
-## 8. 限制与例外
+## 6. Supporting knowledge
 
-- 当前条目为 v0.1.0 草案；未完成证据核验和审批前，不得作为正式对外事实。
+- [KB-VOICE-004 — Tone of Voice](tone-of-voice.md)
+- [KB-VOICE-006 — Message Hierarchy](message-hierarchy.md)
 
-## 9. 批准表述
+## 7. Sources
 
-> 各渠道可调整长度和语气，但品牌类别、产品能力、费用、范围、限制和数据必须与同一批准知识条目一致。
+- **S1**: [Official Instagram profile and captions](https://www.instagram.com/myyshopcreators/) — Locator: send in your application, get approved. [Source record](../../evidence/sources/src-myyshop-curation-20261022-instagram.md). [Captured text](../../evidence/snapshots/2026-10-22-initial-knowledge/instagram.txt).
+- **S2**: [User-authorized curation and language direction](../../cycles/preparation/decisions/2026-10-22-initial-knowledge-curation-authorized.md) — Locator: Bilingual semantic acceptance; English primary; Simplified Chinese reading copies. [Source record](../../evidence/sources/src-myyshop-curation-20261022-direction.md). [Captured text](../../evidence/snapshots/2026-10-22-initial-knowledge/direction.txt).
+- **S3**: [MyyShop TikTok CPM launch release](https://www.globenewswire.com/news-release/2026/08/12/3343441/0/en/myyshop-launches-paid-for-every-view-tiktok-cpm-model-to-give-creators-faster-more-transparent-monetization-opportunities.html) — Locator: Only eligible views. [Source record](../../evidence/sources/src-myyshop-globenewswire-cpm-001.md). [Captured text](../../evidence/snapshots/2026-10-22-initial-knowledge/pr-cpm.txt).
+- **S4**: [Earn From Every Product View with MyyFinds - No Sales Required | MyyShop](https://www.myyshop.com/earn-from-every-view-myyfinds) — Locator: Actual earnings may vary. [Source record](../../evidence/sources/src-myyshop-web-myyfinds-001.md). [Captured text](../../evidence/snapshots/2026-10-22-initial-knowledge/myyfinds.txt).
+- **S5**: [Provided PR files and link register](../../evidence/snapshots/2026-10-22-initial-knowledge/pr-link-register.json) — Locator: N3 and IMH workbook registers. [Source record](../../evidence/sources/src-myyshop-curation-20261022-inputs.md). [Captured text](../../evidence/snapshots/2026-10-22-initial-knowledge/inputs.txt).
 
-## 10. 禁止或废弃表述
-
-- 不得扩大适用范围、删除限制条件或把草案描述为已确认事实。
-
-## 11. 关联条目
-
-- 由目录映射文件维护；正式发布前至少关联一个上游事实条目和一个权威页面。
-
-## 12. 发布映射
-
-- **建议权威页面：** `/brand-guidelines/channels`
-- **结构化数据：** 无强制要求
-- **同步渠道：**
-  - 官网正文
-  - 帮助中心或 FAQ
-  - 结构化数据（如适用）
-  - 客服标准答案
-  - 媒体与合作伙伴资料
-  - 生成式平台答案测试
-
-## 13. 治理信息
-
-- **条目状态：** `draft`
-- **优先级：** `P0`
-- **内容负责人：** 品牌运营 + GEO 运营
-- **审批人：** 待指定
-- **版本：** `0.1.0`
-- **最近审核：** `2026-08-17`
-- **下次审核：** `2026-09-17`
-
-## 14. 答案测试
-
-- **测试问题：** 官网、帮助中心、社交媒体、媒体资料和结构化数据应如何保持一致？
-- **期望核心答案：** 各渠道可调整长度和语气，但品牌类别、产品能力、费用、范围、限制和数据必须与同一批准知识条目一致。
-- **失败判定：** 未提到 MyyShop、沿用废弃定位、扩大能力范围、遗漏关键限制、引用错误主体或给出无证据的数字与保证性承诺。
-- **测试平台：** ChatGPT、Perplexity、Gemini，以及其他纳入试点的平台。
+Source publication and candidate evidence do not constitute business approval. Preserve conditions and unresolved points when reusing this entry.

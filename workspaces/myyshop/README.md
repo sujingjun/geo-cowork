@@ -2,9 +2,15 @@
 
 本目录是 MyyShop 本地 GEO 工作的事实中心。Markdown 业务对象是权威内容；`indexes/` 仅为可删除重建的导航派生物。
 
-## 当前范围
+## 初始双语知识库（2026-10-22）
 
-- M2 为现有 120 条 legacy knowledge 建立兼容索引，不改写原文，也不把它们自动转换成已批准 Claim 或 Evidence。
+默认使用 [English knowledge base](knowledge/README.md)，中文查看[完整对照版](knowledge/translations/zh-CN/README.md)。本版沿用当前公开定位，120 个逻辑条目包含 94 条源事实和 26 条派生答案；英文与中文分别成文件，共用事实、证据及版本。品牌是否转型尚未确定，不沿用旧草案中“已完成转型”的预设。
+
+[双语索引](knowledge/00-governance/file-manifest.md)、[来源覆盖](knowledge/00-governance/source-register.md)、[集中补证](knowledge/translations/zh-CN/00-governance/pending-items.md)及[验证报告](knowledge/00-governance/validation-report.md)用于本批审阅。条目保持 draft，实际结果见[执行记录](../../docs/records/2026-10-22-myyshop-initial-knowledge-curation-record.md)。下方既有 M3 正式对象和历史流程不由本初稿自动替换。
+
+## 既有正式对象与历史基线
+
+- 历史 M2 为 120 条 legacy knowledge 建立兼容索引，当时不改写原文；本次已获授权更新其初稿并保存改写前快照，仍不自动转换为已批准 Claim 或 Evidence。
 - M3 已建立 “MyyShop 是什么” 的最窄关系链、补证计划与技术 Run；Owner 已批准全部 M3 业务对象，Query 为 `formal`、Query Set 为 `frozen`、Knowledge Release 为 `published/ready`，关系 trace 为 `lifecycle_ready:true`。
 - 两条 `EVIDENCE_INSUFFICIENT` warning、Claim Scope、Answer limitations 与禁止表述继续有效；这里的 `published` 只表示进入本地正式知识包，不表示任何官网、媒体、插件或生产环境已经发布。
 

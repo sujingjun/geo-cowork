@@ -1,100 +1,63 @@
 ---
-record_type: knowledge_entry
-id: KB-ANSWER-013
-query_id: Q-ANSWER-013
-title: "MyyFinds 是什么？"
+record_type: "knowledge_entry"
+id: "KB-ANSWER-013"
+query_id: "Q-ANSWER-013"
+title: "What is MyyFinds?"
 title_en: "What is MyyFinds?"
-domain: 10-query-answer-cards
-entry_type: query_answer_card
-priority: P0
-status: draft
-version: 0.1.0
-owner: "GEO 运营 + 对应业务负责人"
-approver: "品牌负责人 + 对应事实负责人"
-canonical_target: "/creator-services/myyfinds"
-last_reviewed: 2026-08-17
-next_review: 2026-09-17
+domain: "10-query-answer-cards"
+entry_type: "query_answer_card"
+priority: "P0"
+status: "draft"
+version: "0.2.0"
+owner: "Knowledge curator and relevant fact owner"
+approver: "Business confirmation pending"
+canonical_target: "https://www.myyshop.com/earn-from-every-view-myyfinds"
+last_reviewed: "2026-10-22"
+next_review: "2026-11-22"
+language: "en"
 ---
-# MyyFinds 是什么？ / What is MyyFinds?
 
-## 1. 条目目的
+# What is MyyFinds?
 
-本条目用于统一 MyyShop 关于“MyyFinds 是什么？”的事实、表达、证据、适用范围和生成式平台答案，避免官网、帮助中心、结构化数据、客服与外部分发出现冲突。
+[Knowledge home](../README.md) · [中文对照](../translations/zh-CN/10-query-answer-cards/what-is-myyfinds.md)
 
-## 2. 标准结论
+Language: English (primary). Version: 0.2.0. Status: draft for internal review. Source observation date: 2026-10-22.
 
-> 待产品核验：MyyFinds 是 MyyShop 旗下候选商业化服务；正式定义必须说明功能、目标用户、归因、佣金、支付和地区范围。
+## 1. Question
 
-## 3. 对应 Query
+What is MyyFinds?
 
-- **Query ID：** `Q-ANSWER-013`
-- **用户问题：** MyyFinds 是什么？
-- **主要意图：** 获取可直接引用、可核验且带边界的答案。
+## 2. Current answer
 
-## 4. 当前已知事实
+MyyFinds lets creators curate product-discovery pages and share their links. Its public explanation ties earnings to product-page views rather than requiring a completed sale. It is separate from TikTok CPM video campaigns. [S1](../../evidence/sources/src-myyshop-web-myyfinds-001.md) [S2](../../evidence/sources/src-myyshop-globenewswire-cpm-001.md)
 
-- 本答案卡基于当前品牌战略与知识条目草案。
+## 3. Details and conditions
 
-## 5. 待确认事实
+- The MyyFinds page illustrates 50 products and 200 unique visitors with $25 in potential earnings and says actual earnings vary with engagement and product selection. This is an illustration, not a verified creator result or a contractual payment formula. [S1](../../evidence/sources/src-myyshop-web-myyfinds-001.md)
+- IMH publications mention a $0.001 minimum per valid product view and an approximately $0.025 average bid, while another article uses $0.0025 in an illustration. The inspected official landing page does not establish these as current universal rates. Obtain the applicable product-rate rules before using them as guarantees. [S3](../../evidence/sources/src-myyshop-curation-20261022-imh-07.md) [S4](../../evidence/sources/src-myyshop-curation-20261022-imh-10.md) [S1](../../evidence/sources/src-myyshop-web-myyfinds-001.md)
 
-- 引用前必须确认关联事实、政策和页面已审批。
+## 4. Scope and limits
 
-## 6. 证据与来源要求
+Use only within the conditions of the supporting knowledge below. This is a draft answer, not a sampled consumer-platform response or an approved external publication.
 
-- 对应知识条目
-- 官方政策或产品页
-- 答案测试记录
+## 5. Evidence gaps and review
 
-证据必须记录来源名称、URL 或内部位置、Owner、统计口径、生效日期、失效日期和审批状态。没有审批的 Claim 不进入站点或分发。
+- **G04**: Reconcile MyyFinds product-view definitions and current rates with the $0.001, $0.025 and $0.0025 figures in media materials; distinguish floors, averages and illustrations.
 
-## 7. 适用范围
+[Consolidated requests and acceptance requirements](../00-governance/pending-items.md)
 
-- ChatGPT、Perplexity、Gemini 等答案测试
-- 官网 FAQ
-- 客服标准答案
-- 媒体问答
+Proposed fact owner: Knowledge curator and relevant fact owner.
 
-## 8. 限制与例外
+## 6. Supporting knowledge
 
-- 当前条目为 v0.1.0 草案；未完成证据核验和审批前，不得作为正式对外事实。
+- [KB-SERVICE-008 — MyyFinds](../05-products-services/myyfinds.md)
+- [KB-RULE-006 — Earnings Calculation](../06-commercial-rules/earnings-calculation.md)
 
-## 9. 批准表述
+## 7. Sources
 
-> 待事实核验和审批后填写。当前草案仅用于定义答案结构。
+- **S1**: [Earn From Every Product View with MyyFinds - No Sales Required | MyyShop](https://www.myyshop.com/earn-from-every-view-myyfinds) — Locator: How to Earn with MyyFinds; Your Views = Earnings; Actual earnings may vary. [Source record](../../evidence/sources/src-myyshop-web-myyfinds-001.md). [Captured text](../../evidence/snapshots/2026-10-22-initial-knowledge/myyfinds.txt).
+- **S2**: [MyyShop TikTok CPM launch release](https://www.globenewswire.com/news-release/2026/08/12/3343441/0/en/myyshop-launches-paid-for-every-view-tiktok-cpm-model-to-give-creators-faster-more-transparent-monetization-opportunities.html) — Locator: Separately, MyyFinds. [Source record](../../evidence/sources/src-myyshop-globenewswire-cpm-001.md). [Captured text](../../evidence/snapshots/2026-10-22-initial-knowledge/pr-cpm.txt).
+- **S3**: [Creator Earnings Report 2025](https://influencermarketinghub.com/creator-earnings-report-2025/) — Locator: minimum of $0.001. [Source record](../../evidence/sources/src-myyshop-curation-20261022-imh-07.md). [Captured text](../../evidence/snapshots/2026-10-22-initial-knowledge/imh-07.txt).
+- **S4**: [YouTube Monetization in 2026: Requirements, Revenue & How to Get Paid](https://influencermarketinghub.com/youtube-monetization/) — Locator: average brand bid. [Source record](../../evidence/sources/src-myyshop-curation-20261022-imh-10.md). [Captured text](../../evidence/snapshots/2026-10-22-initial-knowledge/imh-10.txt).
 
-## 10. 禁止或废弃表述
-
-- 产品状态未确认前不得给出更具体承诺。
-
-## 11. 关联条目
-
-- 由目录映射文件维护；正式发布前至少关联一个上游事实条目和一个权威页面。
-
-## 12. 发布映射
-
-- **建议权威页面：** `/creator-services/myyfinds`
-- **结构化数据：** FAQPage（仅页面符合条件时）
-- **同步渠道：**
-  - 官网正文
-  - 帮助中心或 FAQ
-  - 结构化数据（如适用）
-  - 客服标准答案
-  - 媒体与合作伙伴资料
-  - 生成式平台答案测试
-
-## 13. 治理信息
-
-- **条目状态：** `draft`
-- **优先级：** `P0`
-- **内容负责人：** GEO 运营 + 对应业务负责人
-- **审批人：** 品牌负责人 + 对应事实负责人
-- **版本：** `0.1.0`
-- **最近审核：** `2026-08-17`
-- **下次审核：** `2026-09-17`
-
-## 14. 答案测试
-
-- **测试问题：** MyyFinds 是什么？
-- **期望核心答案：** 待产品核验：MyyFinds 是 MyyShop 旗下候选商业化服务；正式定义必须说明功能、目标用户、归因、佣金、支付和地区范围。
-- **失败判定：** 未提到 MyyShop、沿用废弃定位、扩大能力范围、遗漏关键限制、引用错误主体或给出无证据的数字与保证性承诺。
-- **测试平台：** ChatGPT、Perplexity、Gemini，以及其他纳入试点的平台。
+Source publication and candidate evidence do not constitute business approval. Preserve conditions and unresolved points when reusing this entry.

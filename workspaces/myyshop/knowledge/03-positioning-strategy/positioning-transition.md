@@ -1,100 +1,61 @@
 ---
-record_type: knowledge_entry
-id: KB-STRATEGY-010
-query_id: Q-STRATEGY-010
-title: "新旧定位迁移说明"
+record_type: "knowledge_entry"
+id: "KB-STRATEGY-010"
+query_id: "Q-STRATEGY-010"
+title: "Positioning Transition"
 title_en: "Positioning Transition"
-domain: 03-positioning-strategy
-entry_type: positioning_claim
-priority: P0
-status: draft
-version: 0.1.0
-owner: "品牌策略 + GEO 运营"
-approver: "待指定"
-canonical_target: "/about-us"
-last_reviewed: 2026-08-17
-next_review: 2026-09-17
+domain: "03-positioning-strategy"
+entry_type: "positioning_claim"
+priority: "P0"
+status: "draft"
+version: "0.2.0"
+owner: "Brand / business owner"
+approver: "Business confirmation pending"
+last_reviewed: "2026-10-22"
+next_review: "2026-11-22"
+language: "en"
 ---
-# 新旧定位迁移说明 / Positioning Transition
 
-## 1. 条目目的
+# Positioning Transition
 
-本条目用于统一 MyyShop 关于“新旧定位迁移说明”的事实、表达、证据、适用范围和生成式平台答案，避免官网、帮助中心、结构化数据、客服与外部分发出现冲突。
+[Knowledge home](../README.md) · [中文对照](../translations/zh-CN/03-positioning-strategy/positioning-transition.md)
 
-## 2. 标准结论
+Language: English (primary). Version: 0.2.0. Status: draft for internal review. Source observation date: 2026-10-22.
 
-> “网红流量变现平台”仅描述了 MyyShop 的历史核心能力；当前平台已将服务范围扩展到达人加入、活跃、成长与商业化全过程。
+## 1. Question
 
-## 3. 对应 Query
+Has a change of MyyShop’s brand positioning been decided?
 
-- **Query ID：** `Q-STRATEGY-010`
-- **用户问题：** MyyShop 为什么不再只被定义为网红流量变现平台？
-- **主要意图：** 获取可直接引用、可核验且带边界的答案。
+## 2. Current answer
 
-## 4. 当前已知事实
+A positioning change is not decided for this knowledge edition. Use the current public description; preserve earlier transformation language as historical or proposed material rather than treating it as the current approved direction.
 
-- 战略已明确完成定位升级。
+## 3. Details and conditions
 
-## 5. 待确认事实
+- For this initial knowledge edition, use the current public positioning. A change of brand positioning has not been decided; do not state that a lifecycle-platform transformation is completed or underway. [S1](../../evidence/sources/src-myyshop-curation-20261022-direction.md)
+- The supplied N3 release is dated 2026-08-12 and describes the launch of the TikTok CPM model. The official What’s New page already lists CPM Campaigns under 2026-06-26. Preserve both dates and their publication contexts; the exact rollout chronology needs confirmation. [S2](../../evidence/sources/src-myyshop-globenewswire-cpm-001.md) [S3](../../evidence/sources/src-myyshop-whatsnew-001.md)
 
-- 哪些旧页面、外部资料和结构化数据仍保留旧描述
-- 替换时间表。
+## 4. Scope and limits
 
-## 6. 证据与来源要求
+Current public narrative and the user’s direction for this edition. Historical statements remain dated context; a positioning transformation is not assumed.
 
-- 旧版官网与新闻稿
-- 新战略文件
-- 站点内容清单
-- 第三方引用清单
+## 5. Evidence gaps and review
 
-证据必须记录来源名称、URL 或内部位置、Owner、统计口径、生效日期、失效日期和审批状态。没有审批的 Claim 不进入站点或分发。
+No additional item-specific evidence request is identified for this limited draft statement. Business confirmation is still pending.
 
-## 7. 适用范围
+[Consolidated requests and acceptance requirements](../00-governance/pending-items.md)
 
-- MyyShop 全球品牌知识库
-- 官网、帮助中心、客服、媒体资料与生成式平台答案
+Proposed fact owner: Brand / business owner.
 
-## 8. 限制与例外
+## 6. Supporting knowledge
 
-- 当前条目为 v0.1.0 草案；未完成证据核验和审批前，不得作为正式对外事实。
+- [KB-STRATEGY-009 — Current Positioning](current-positioning.md)
+- [KB-VOICE-010 — Deprecated Language](../09-voice-messaging/deprecated-language.md)
 
-## 9. 批准表述
+## 7. Sources
 
-> “网红流量变现平台”仅描述了 MyyShop 的历史核心能力；当前平台已将服务范围扩展到达人加入、活跃、成长与商业化全过程。
+- **S1**: [User-authorized curation and language direction](../../cycles/preparation/decisions/2026-10-22-initial-knowledge-curation-authorized.md) — Locator: Current positioning and language decisions. [Source record](../../evidence/sources/src-myyshop-curation-20261022-direction.md). [Captured text](../../evidence/snapshots/2026-10-22-initial-knowledge/direction.txt).
+- **S2**: [MyyShop TikTok CPM launch release](https://www.globenewswire.com/news-release/2026/08/12/3343441/0/en/myyshop-launches-paid-for-every-view-tiktok-cpm-model-to-give-creators-faster-more-transparent-monetization-opportunities.html) — Locator: August 12, 2026. [Source record](../../evidence/sources/src-myyshop-globenewswire-cpm-001.md). [Captured text](../../evidence/snapshots/2026-10-22-initial-knowledge/pr-cpm.txt).
+- **S3**: [MyyShop — What's New](https://whatsnew.myyshop.com/) — Locator: Jun 26, 2026. [Source record](../../evidence/sources/src-myyshop-whatsnew-001.md). [Captured text](../../evidence/snapshots/2026-10-22-initial-knowledge/whatsnew.txt).
 
-## 10. 禁止或废弃表述
-
-- 删除历史事实后声称从未做过流量变现。
-
-## 11. 关联条目
-
-- 由目录映射文件维护；正式发布前至少关联一个上游事实条目和一个权威页面。
-
-## 12. 发布映射
-
-- **建议权威页面：** `/about-us`
-- **结构化数据：** Organization.description
-- **同步渠道：**
-  - 官网正文
-  - 帮助中心或 FAQ
-  - 结构化数据（如适用）
-  - 客服标准答案
-  - 媒体与合作伙伴资料
-  - 生成式平台答案测试
-
-## 13. 治理信息
-
-- **条目状态：** `draft`
-- **优先级：** `P0`
-- **内容负责人：** 品牌策略 + GEO 运营
-- **审批人：** 待指定
-- **版本：** `0.1.0`
-- **最近审核：** `2026-08-17`
-- **下次审核：** `2026-09-17`
-
-## 14. 答案测试
-
-- **测试问题：** MyyShop 为什么不再只被定义为网红流量变现平台？
-- **期望核心答案：** “网红流量变现平台”仅描述了 MyyShop 的历史核心能力；当前平台已将服务范围扩展到达人加入、活跃、成长与商业化全过程。
-- **失败判定：** 未提到 MyyShop、沿用废弃定位、扩大能力范围、遗漏关键限制、引用错误主体或给出无证据的数字与保证性承诺。
-- **测试平台：** ChatGPT、Perplexity、Gemini，以及其他纳入试点的平台。
+Source publication and candidate evidence do not constitute business approval. Preserve conditions and unresolved points when reusing this entry.

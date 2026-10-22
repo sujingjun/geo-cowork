@@ -1,58 +1,16 @@
-# 知识发布与 GEO 验收清单
+# Initial-draft and later release checklist
 
-## 一、知识审核
+## Initial draft
 
-- [ ] Query、用户角色和意图清晰。
-- [ ] 标准结论可以独立回答问题。
-- [ ] 已知事实与待确认事实分离。
-- [ ] 每个 Claim 均有关联证据。
-- [ ] 适用用户、产品、地区、渠道和时间明确。
-- [ ] 限制、例外和风险提示完整。
-- [ ] 数字有口径、日期和复现方式。
-- [ ] 中英文语义一致。
-- [ ] 内容负责人、事实负责人和审批人已确认。
-- [ ] 条目状态已更新为 `approved`。
+- All 120 logical entries have an English primary and complete Chinese counterpart.
+- Source links, scope, conditions and evidence gaps are explicit.
+- English hashes, Chinese source versions, numeric tokens and product names align.
+- Current answers do not assume a brand transformation.
+- Source reading and media coverage limits are disclosed.
 
-## 二、站点发布
+## Business review and formal use
 
-- [ ] 已指定唯一权威页面。
-- [ ] 页面正文直接回答核心 Query。
-- [ ] 页面可抓取、可索引。
-- [ ] canonical 正确。
-- [ ] sitemap 已包含页面。
-- [ ] 标题、摘要与正文不冲突。
-- [ ] Schema 与正文同义，不增加更强 Claim。
-- [ ] 内链可从相关页面发现。
-- [ ] 旧定位页面已更新、重定向或标记历史状态。
-- [ ] 多语言版本共享同一事实版本。
-
-## 三、分发一致性
-
-- [ ] 帮助中心与官网一致。
-- [ ] 社交账号简介与当前定位一致。
-- [ ] 媒体资料和销售材料已更新。
-- [ ] 合作伙伴页面已提供更新稿。
-- [ ] 客服标准答案已同步。
-- [ ] 可选 llms 分发文件未超出官网正文。
-
-## 四、答案测试
-
-- [ ] ChatGPT 已测试。
-- [ ] Perplexity 已测试。
-- [ ] Gemini 已测试。
-- [ ] 记录是否提到 MyyShop。
-- [ ] 记录引用来源和引用页面。
-- [ ] 记录核心事实正确性。
-- [ ] 记录旧定位残留。
-- [ ] 记录无证据数字和保证性表述。
-- [ ] 记录竞品或第三方错误归因。
-- [ ] 偏差已回流到知识、页面或分发修复任务。
-
-## 五、业务连接
-
-- [ ] 落地页包含注册或下一步行动。
-- [ ] AI Assistant 来源可识别。
-- [ ] Query 与落地页可关联。
-- [ ] 注册、激活、活跃、商业化事件可追踪。
-- [ ] CRM 可识别合格 Creator / Brand lead。
-- [ ] 可回答该知识条目是否带来有效业务结果。
+- Obtain item/version-specific fact confirmation and preserve remaining evidence gaps.
+- Follow the existing Document, Claim, Evidence, Answer Card and Knowledge Release contracts before formal ingestion.
+- Do not infer external publication authority, formal readiness or GEO effect from this draft or from checks passing.
+- A publication or Feishu synchronization needs its own authorized action and evidence.

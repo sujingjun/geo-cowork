@@ -1,101 +1,61 @@
 ---
-record_type: knowledge_entry
-id: KB-STRATEGY-005
-query_id: Q-STRATEGY-005
-title: "品牌价值观"
+record_type: "knowledge_entry"
+id: "KB-STRATEGY-005"
+query_id: "Q-STRATEGY-005"
+title: "Values"
 title_en: "Values"
-domain: 03-positioning-strategy
-entry_type: brand_claim
-priority: P1
-status: draft
-version: 0.1.0
-owner: "品牌策略 + 人力文化"
-approver: "待指定"
-canonical_target: "/about-us"
-last_reviewed: 2026-08-17
-next_review: 2026-09-17
+domain: "03-positioning-strategy"
+entry_type: "brand_claim"
+priority: "P1"
+status: "draft"
+version: "0.2.0"
+owner: "Brand / business owner"
+approver: "Business confirmation pending"
+canonical_target: "https://www.myyshop.com/about-us"
+last_reviewed: "2026-10-22"
+next_review: "2027-01-22"
+language: "en"
 ---
-# 品牌价值观 / Values
 
-## 1. 条目目的
+# Values
 
-本条目用于统一 MyyShop 关于“品牌价值观”的事实、表达、证据、适用范围和生成式平台答案，避免官网、帮助中心、结构化数据、客服与外部分发出现冲突。
+[Knowledge home](../README.md) · [中文对照](../translations/zh-CN/03-positioning-strategy/values.md)
 
-## 2. 标准结论
+Language: English (primary). Version: 0.2.0. Status: draft for internal review. Source observation date: 2026-10-22.
 
-> 当前可确认的价值方向是包容与长期主义；完整价值观必须进一步定义具体行为、反面行为和用户可感知结果。
+## 1. Question
 
-## 3. 对应 Query
+Which formal brand values have been established?
 
-- **Query ID：** `Q-STRATEGY-005`
-- **用户问题：** MyyShop 以哪些价值观服务创作者？
-- **主要意图：** 获取可直接引用、可核验且带边界的答案。
+## 2. Current answer
 
-## 4. 当前已知事实
+The materials express creator opportunity, creativity and transparent monetization as themes. A formal, approved values charter has not been provided, so these themes should not be presented as an official enumerated values system.
 
-- 战略明确强调包容生态能力。
+## 3. Details and conditions
 
-## 5. 待确认事实
+- The About page discusses an open, intelligent creator ecosystem and opportunities for creators worldwide. The inspected materials do not provide a separately approved vision statement or a complete formal values charter. [S1](../../evidence/sources/src-myyshop-web-about-001.md)
+- The official Instagram uses direct invitations, creator-friendly language and encouragement to explore ideas and collaborations. These are observed channel patterns, not a formally approved universal brand-personality or tone handbook. [S2](../../evidence/sources/src-myyshop-curation-20261022-instagram.md)
 
-- 最终价值观数量与名称
-- 对应员工行为
-- 产品和政策体现。
+## 4. Scope and limits
 
-## 6. 证据与来源要求
+Current public narrative and the user’s direction for this edition. Historical statements remain dated context; a positioning transformation is not assumed.
 
-- 文化手册
-- 管理层访谈
-- 产品政策
-- 用户案例
+## 5. Evidence gaps and review
 
-证据必须记录来源名称、URL 或内部位置、Owner、统计口径、生效日期、失效日期和审批状态。没有审批的 Claim 不进入站点或分发。
+- **G12**: If formal brand governance is needed, provide the current spelling, slogan, tone and terminology handbook. Do not require a brand-repositioning decision to complete this initial draft.
 
-## 7. 适用范围
+[Consolidated requests and acceptance requirements](../00-governance/pending-items.md)
 
-- MyyShop 全球品牌知识库
-- 官网、帮助中心、客服、媒体资料与生成式平台答案
+Proposed fact owner: Brand / business owner.
 
-## 8. 限制与例外
+## 6. Supporting knowledge
 
-- 当前条目为 v0.1.0 草案；未完成证据核验和审批前，不得作为正式对外事实。
+- [KB-VOICE-003 — Brand Personality](../09-voice-messaging/brand-personality.md)
+- [KB-VOICE-004 — Tone of Voice](../09-voice-messaging/tone-of-voice.md)
 
-## 9. 批准表述
+## 7. Sources
 
-> 当前可确认的价值方向是包容与长期主义；完整价值观必须进一步定义具体行为、反面行为和用户可感知结果。
+- **S1**: [MyyShop | Turn your social impact into a good business](https://www.myyshop.com/about-us) — Locator: Our Mission. [Source record](../../evidence/sources/src-myyshop-web-about-001.md). [Captured text](../../evidence/snapshots/2026-10-22-initial-knowledge/about.txt).
+- **S2**: [Official Instagram profile and captions](https://www.instagram.com/myyshopcreators/) — Locator: Official account profile; Recent official captions. [Source record](../../evidence/sources/src-myyshop-curation-20261022-instagram.md). [Captured text](../../evidence/snapshots/2026-10-22-initial-knowledge/instagram.txt).
 
-## 10. 禁止或废弃表述
-
-- 不得扩大适用范围、删除限制条件或把草案描述为已确认事实。
-
-## 11. 关联条目
-
-- 由目录映射文件维护；正式发布前至少关联一个上游事实条目和一个权威页面。
-
-## 12. 发布映射
-
-- **建议权威页面：** `/about-us`
-- **结构化数据：** Organization.ethicsPolicy（如适用）
-- **同步渠道：**
-  - 官网正文
-  - 帮助中心或 FAQ
-  - 结构化数据（如适用）
-  - 客服标准答案
-  - 媒体与合作伙伴资料
-  - 生成式平台答案测试
-
-## 13. 治理信息
-
-- **条目状态：** `draft`
-- **优先级：** `P1`
-- **内容负责人：** 品牌策略 + 人力文化
-- **审批人：** 待指定
-- **版本：** `0.1.0`
-- **最近审核：** `2026-08-17`
-- **下次审核：** `2026-09-17`
-
-## 14. 答案测试
-
-- **测试问题：** MyyShop 以哪些价值观服务创作者？
-- **期望核心答案：** 当前可确认的价值方向是包容与长期主义；完整价值观必须进一步定义具体行为、反面行为和用户可感知结果。
-- **失败判定：** 未提到 MyyShop、沿用废弃定位、扩大能力范围、遗漏关键限制、引用错误主体或给出无证据的数字与保证性承诺。
-- **测试平台：** ChatGPT、Perplexity、Gemini，以及其他纳入试点的平台。
+Source publication and candidate evidence do not constitute business approval. Preserve conditions and unresolved points when reusing this entry.

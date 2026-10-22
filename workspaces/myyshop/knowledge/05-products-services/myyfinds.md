@@ -1,103 +1,67 @@
 ---
-record_type: knowledge_entry
-id: KB-SERVICE-008
-query_id: Q-SERVICE-008
-title: "MyyFinds 服务"
+record_type: "knowledge_entry"
+id: "KB-SERVICE-008"
+query_id: "Q-SERVICE-008"
+title: "MyyFinds"
 title_en: "MyyFinds"
-domain: 05-products-services
-entry_type: service_fact
-priority: P0
-status: draft
-version: 0.1.0
-owner: "MyyFinds 产品负责人"
-approver: "待指定"
-canonical_target: "/creator-services/myyfinds"
-last_reviewed: 2026-08-17
-next_review: 2026-09-17
+domain: "05-products-services"
+entry_type: "service_fact"
+priority: "P0"
+status: "draft"
+version: "0.2.0"
+owner: "Product / Creator operations"
+approver: "Business confirmation pending"
+canonical_target: "https://www.myyshop.com/earn-from-every-view-myyfinds"
+last_reviewed: "2026-10-22"
+next_review: "2026-11-22"
+language: "en"
 ---
-# MyyFinds 服务 / MyyFinds
 
-## 1. 条目目的
+# MyyFinds
 
-本条目用于统一 MyyShop 关于“MyyFinds 服务”的事实、表达、证据、适用范围和生成式平台答案，避免官网、帮助中心、结构化数据、客服与外部分发出现冲突。
+[Knowledge home](../README.md) · [中文对照](../translations/zh-CN/05-products-services/myyfinds.md)
 
-## 2. 标准结论
+Language: English (primary). Version: 0.2.0. Status: draft for internal review. Source observation date: 2026-10-22.
 
-> 待产品核验：MyyFinds 应作为 MyyShop 旗下具体商业化能力独立说明其目标用户、商品或机会来源、内容发布、归因、佣金和支付规则。
+## 1. Question
 
-## 3. 对应 Query
+How does MyyFinds work, and how is it different from CPM?
 
-- **Query ID：** `Q-SERVICE-008`
-- **用户问题：** MyyFinds 是什么，与 MyyShop 是什么关系？
-- **主要意图：** 获取可直接引用、可核验且带边界的答案。
+## 2. Current answer
 
-## 4. 当前已知事实
+MyyFinds lets creators curate product-discovery pages and share their links. Its public explanation ties earnings to product-page views rather than requiring a completed sale. It is separate from TikTok CPM video campaigns. [S1](../../evidence/sources/src-myyshop-web-myyfinds-001.md) [S2](../../evidence/sources/src-myyshop-globenewswire-cpm-001.md)
 
-- MyyFinds 被视为候选产品或服务名称。
+## 3. Details and conditions
 
-## 5. 待确认事实
+- The MyyFinds page illustrates 50 products and 200 unique visitors with $25 in potential earnings and says actual earnings vary with engagement and product selection. This is an illustration, not a verified creator result or a contractual payment formula. [S1](../../evidence/sources/src-myyshop-web-myyfinds-001.md)
+- The MyyFinds page describes sharing links through social profiles, posts and messaging channels, including TikTok, Instagram, Twitter, WhatsApp and Facebook groups. A place to share a link is not the same as an officially supported account integration or campaign platform. [S1](../../evidence/sources/src-myyshop-web-myyfinds-001.md)
+- The MyyFinds page prohibits artificial traffic, including creating multiple accounts for fake views, and states that violations can lead to cancelled rewards and permanent suspension. The agreement also prohibits false promotion and fictitious transactions. Do not invent a specific detection threshold or a guaranteed appeal outcome. [S1](../../evidence/sources/src-myyshop-web-myyfinds-001.md) [S3](../../evidence/sources/src-myyshop-curation-20261022-terms.md)
+- IMH publications mention a $0.001 minimum per valid product view and an approximately $0.025 average bid, while another article uses $0.0025 in an illustration. The inspected official landing page does not establish these as current universal rates. Obtain the applicable product-rate rules before using them as guarantees. [S4](../../evidence/sources/src-myyshop-curation-20261022-imh-07.md) [S5](../../evidence/sources/src-myyshop-curation-20261022-imh-10.md) [S1](../../evidence/sources/src-myyshop-web-myyfinds-001.md)
 
-- 产品当前状态
-- 核心功能
-- 地区范围
-- 佣金与支付
-- 品牌关系。
+## 4. Scope and limits
 
-## 6. 证据与来源要求
+The named service and its described function only. Current public descriptions were read; live product delivery, all markets and every account’s access were not tested.
 
-- 产品页面
-- 服务协议
-- 产品负责人确认
-- 支付政策
+## 5. Evidence gaps and review
 
-证据必须记录来源名称、URL 或内部位置、Owner、统计口径、生效日期、失效日期和审批状态。没有审批的 Claim 不进入站点或分发。
+- **G04**: Reconcile MyyFinds product-view definitions and current rates with the $0.001, $0.025 and $0.0025 figures in media materials; distinguish floors, averages and illustrations.
 
-## 7. 适用范围
+[Consolidated requests and acceptance requirements](../00-governance/pending-items.md)
 
-- MyyShop 全球品牌知识库
-- 官网、帮助中心、客服、媒体资料与生成式平台答案
+Proposed fact owner: Product / Creator operations.
 
-## 8. 限制与例外
+## 6. Supporting knowledge
 
-- 当前条目为 v0.1.0 草案；未完成证据核验和审批前，不得作为正式对外事实。
+- [KB-RULE-006 — Earnings Calculation](../06-commercial-rules/earnings-calculation.md)
+- [KB-RULE-007 — Attribution Rules](../06-commercial-rules/attribution-rules.md)
+- [KB-RULE-008 — Payment and Withdrawal](../06-commercial-rules/payment-and-withdrawal.md)
 
-## 9. 批准表述
+## 7. Sources
 
-> 待事实核验和审批后填写。当前草案仅用于定义答案结构。
+- **S1**: [Earn From Every Product View with MyyFinds - No Sales Required | MyyShop](https://www.myyshop.com/earn-from-every-view-myyfinds) — Locator: How to Earn with MyyFinds; Your Views = Earnings; Where Can I Share Links?; Policy Warning: Fraudulent Activity; Actual earnings may vary. [Source record](../../evidence/sources/src-myyshop-web-myyfinds-001.md). [Captured text](../../evidence/snapshots/2026-10-22-initial-knowledge/myyfinds.txt).
+- **S2**: [MyyShop TikTok CPM launch release](https://www.globenewswire.com/news-release/2026/08/12/3343441/0/en/myyshop-launches-paid-for-every-view-tiktok-cpm-model-to-give-creators-faster-more-transparent-monetization-opportunities.html) — Locator: Separately, MyyFinds. [Source record](../../evidence/sources/src-myyshop-globenewswire-cpm-001.md). [Captured text](../../evidence/snapshots/2026-10-22-initial-knowledge/pr-cpm.txt).
+- **S3**: [MyyShop | Turn your social impact into a good business](https://www.myyshop.com/docs/termsCondition) — Locator: 3.7. [Source record](../../evidence/sources/src-myyshop-curation-20261022-terms.md). [Captured text](../../evidence/snapshots/2026-10-22-initial-knowledge/terms.txt).
+- **S4**: [Creator Earnings Report 2025](https://influencermarketinghub.com/creator-earnings-report-2025/) — Locator: minimum of $0.001. [Source record](../../evidence/sources/src-myyshop-curation-20261022-imh-07.md). [Captured text](../../evidence/snapshots/2026-10-22-initial-knowledge/imh-07.txt).
+- **S5**: [YouTube Monetization in 2026: Requirements, Revenue & How to Get Paid](https://influencermarketinghub.com/youtube-monetization/) — Locator: average brand bid. [Source record](../../evidence/sources/src-myyshop-curation-20261022-imh-10.md). [Captured text](../../evidence/snapshots/2026-10-22-initial-knowledge/imh-10.txt).
 
-## 10. 禁止或废弃表述
-
-- 不得扩大适用范围、删除限制条件或把草案描述为已确认事实。
-
-## 11. 关联条目
-
-- 由目录映射文件维护；正式发布前至少关联一个上游事实条目和一个权威页面。
-
-## 12. 发布映射
-
-- **建议权威页面：** `/creator-services/myyfinds`
-- **结构化数据：** Service / Product
-- **同步渠道：**
-  - 官网正文
-  - 帮助中心或 FAQ
-  - 结构化数据（如适用）
-  - 客服标准答案
-  - 媒体与合作伙伴资料
-  - 生成式平台答案测试
-
-## 13. 治理信息
-
-- **条目状态：** `draft`
-- **优先级：** `P0`
-- **内容负责人：** MyyFinds 产品负责人
-- **审批人：** 待指定
-- **版本：** `0.1.0`
-- **最近审核：** `2026-08-17`
-- **下次审核：** `2026-09-17`
-
-## 14. 答案测试
-
-- **测试问题：** MyyFinds 是什么，与 MyyShop 是什么关系？
-- **期望核心答案：** 待产品核验：MyyFinds 应作为 MyyShop 旗下具体商业化能力独立说明其目标用户、商品或机会来源、内容发布、归因、佣金和支付规则。
-- **失败判定：** 未提到 MyyShop、沿用废弃定位、扩大能力范围、遗漏关键限制、引用错误主体或给出无证据的数字与保证性承诺。
-- **测试平台：** ChatGPT、Perplexity、Gemini，以及其他纳入试点的平台。
+Source publication and candidate evidence do not constitute business approval. Preserve conditions and unresolved points when reusing this entry.

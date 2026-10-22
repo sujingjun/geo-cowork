@@ -1,102 +1,65 @@
 ---
-record_type: knowledge_entry
-id: KB-VOICE-008
-query_id: Q-VOICE-008
-title: "标准术语表"
+record_type: "knowledge_entry"
+id: "KB-VOICE-008"
+query_id: "Q-VOICE-008"
+title: "Terminology"
 title_en: "Terminology"
-domain: 09-voice-messaging
-entry_type: messaging_rule
-priority: P0
-status: draft
-version: 0.1.0
-owner: "品牌策略 + 本地化"
-approver: "待指定"
-canonical_target: "/brand-guidelines/terminology"
-last_reviewed: 2026-08-17
-next_review: 2026-09-17
+domain: "09-voice-messaging"
+entry_type: "messaging_rule"
+priority: "P0"
+status: "draft"
+version: "0.2.0"
+owner: "Brand / content"
+approver: "Business confirmation pending"
+canonical_target: "https://www.myyshop.com/"
+last_reviewed: "2026-10-22"
+next_review: "2026-11-22"
+language: "en"
 ---
-# 标准术语表 / Terminology
 
-## 1. 条目目的
+# Terminology
 
-本条目用于统一 MyyShop 关于“标准术语表”的事实、表达、证据、适用范围和生成式平台答案，避免官网、帮助中心、结构化数据、客服与外部分发出现冲突。
+[Knowledge home](../README.md) · [中文对照](../translations/zh-CN/09-voice-messaging/terminology.md)
 
-## 2. 标准结论
+Language: English (primary). Version: 0.2.0. Status: draft for internal review. Source observation date: 2026-10-22.
 
-> 术语表必须统一达人、创作者、网红、商业化、品牌合作、佣金、收入、AI 评估和生命周期等核心词的定义与适用场景。
+## 1. Question
 
-## 3. 对应 Query
+Which terms should stay consistent across the two languages?
 
-- **Query ID：** `Q-VOICE-008`
-- **用户问题：** MyyShop 应统一使用哪些品牌、产品和行业术语？
-- **主要意图：** 获取可直接引用、可核验且带边界的答案。
+## 2. Current answer
 
-## 4. 当前已知事实
+Use MyyShop for the platform; Brand Deals / Opportunities for campaign discovery; Paid for Every View / TikTok CPM for approved-video view-based campaigns; MyyFinds for product-discovery exposure; and Free Value Report / Find Your Lane for their respective described services. [S1](../../evidence/sources/src-myyshop-web-homepage-001.md) [S2](../../evidence/sources/src-myyshop-globenewswire-cpm-001.md) [S3](../../evidence/sources/src-myyshop-curation-20261022-lane.md) [S4](../../evidence/sources/src-myyshop-curation-20261022-report.md)
 
-- 旧定位和多语言传播容易造成术语不一致。
+## 3. Details and conditions
 
-## 5. 待确认事实
+- The official brand spelling is MyyShop. Preserve the internal capital S in prose, navigation and product references. [S1](../../evidence/sources/src-myyshop-web-homepage-001.md)
+- Keep eligibility, time limits, review requirements, budgets and exceptions next to the claim they qualify. Do not upgrade may or can into will or guaranteed, or turn valid product views into all views. [S5](../../evidence/sources/src-myyshop-curation-20261022-direction.md) [S2](../../evidence/sources/src-myyshop-globenewswire-cpm-001.md) [S6](../../evidence/sources/src-myyshop-web-myyfinds-001.md)
 
-- 中英文术语
-- 同义词
-- 禁用词
-- 产品专有名词。
+## 4. Scope and limits
 
-## 6. 证据与来源要求
+Editorial guidance for this initial knowledge edition. Observed channel style is distinguished from a formally adopted brand handbook.
 
-- 产品文档
-- 品牌规范
-- 法务政策
-- 多语言审校
+## 5. Evidence gaps and review
 
-证据必须记录来源名称、URL 或内部位置、Owner、统计口径、生效日期、失效日期和审批状态。没有审批的 Claim 不进入站点或分发。
+No additional item-specific evidence request is identified for this limited draft statement. Business confirmation is still pending.
 
-## 7. 适用范围
+[Consolidated requests and acceptance requirements](../00-governance/pending-items.md)
 
-- MyyShop 全球品牌知识库
-- 官网、帮助中心、客服、媒体资料与生成式平台答案
+Proposed fact owner: Brand / content.
 
-## 8. 限制与例外
+## 6. Supporting knowledge
 
-- 当前条目为 v0.1.0 草案；未完成证据核验和审批前，不得作为正式对外事实。
+- [KB-IDENTITY-006 — Brand and Product Relationship](../02-brand-identity/brand-product-relationship.md)
+- [KB-RULE-006 — Earnings Calculation](../06-commercial-rules/earnings-calculation.md)
 
-## 9. 批准表述
+## 7. Sources
 
-> 术语表必须统一达人、创作者、网红、商业化、品牌合作、佣金、收入、AI 评估和生命周期等核心词的定义与适用场景。
+- **S1**: [MyyShop | Turn your social impact into a good business](https://www.myyshop.com/) — Locator: Creator Services; MyyShop - AI-driven global creator marketing platform. [Source record](../../evidence/sources/src-myyshop-web-homepage-001.md). [Captured text](../../evidence/snapshots/2026-10-22-initial-knowledge/home.txt).
+- **S2**: [MyyShop TikTok CPM launch release](https://www.globenewswire.com/news-release/2026/08/12/3343441/0/en/myyshop-launches-paid-for-every-view-tiktok-cpm-model-to-give-creators-faster-more-transparent-monetization-opportunities.html) — Locator: Separately, MyyFinds; Only eligible views. [Source record](../../evidence/sources/src-myyshop-globenewswire-cpm-001.md). [Captured text](../../evidence/snapshots/2026-10-22-initial-knowledge/pr-cpm.txt).
+- **S3**: [MyyShop | Turn your social impact into a good business](https://www.myyshop.com/chat) — Locator: Find Your Lane. [Source record](../../evidence/sources/src-myyshop-curation-20261022-lane.md). [Captured text](../../evidence/snapshots/2026-10-22-initial-knowledge/lane.txt).
+- **S4**: [MyyShop | Turn your social impact into a good business](https://www.myyshop.com/report) — Locator: Intelligent Commercial Value. [Source record](../../evidence/sources/src-myyshop-curation-20261022-report.md). [Captured text](../../evidence/snapshots/2026-10-22-initial-knowledge/report.txt).
+- **S5**: [User-authorized curation and language direction](../../cycles/preparation/decisions/2026-10-22-initial-knowledge-curation-authorized.md) — Locator: Bilingual semantic acceptance. [Source record](../../evidence/sources/src-myyshop-curation-20261022-direction.md). [Captured text](../../evidence/snapshots/2026-10-22-initial-knowledge/direction.txt).
+- **S6**: [Earn From Every Product View with MyyFinds - No Sales Required | MyyShop](https://www.myyshop.com/earn-from-every-view-myyfinds) — Locator: Actual earnings may vary. [Source record](../../evidence/sources/src-myyshop-web-myyfinds-001.md). [Captured text](../../evidence/snapshots/2026-10-22-initial-knowledge/myyfinds.txt).
 
-## 10. 禁止或废弃表述
-
-- 不得扩大适用范围、删除限制条件或把草案描述为已确认事实。
-
-## 11. 关联条目
-
-- 由目录映射文件维护；正式发布前至少关联一个上游事实条目和一个权威页面。
-
-## 12. 发布映射
-
-- **建议权威页面：** `/brand-guidelines/terminology`
-- **结构化数据：** DefinedTermSet
-- **同步渠道：**
-  - 官网正文
-  - 帮助中心或 FAQ
-  - 结构化数据（如适用）
-  - 客服标准答案
-  - 媒体与合作伙伴资料
-  - 生成式平台答案测试
-
-## 13. 治理信息
-
-- **条目状态：** `draft`
-- **优先级：** `P0`
-- **内容负责人：** 品牌策略 + 本地化
-- **审批人：** 待指定
-- **版本：** `0.1.0`
-- **最近审核：** `2026-08-17`
-- **下次审核：** `2026-09-17`
-
-## 14. 答案测试
-
-- **测试问题：** MyyShop 应统一使用哪些品牌、产品和行业术语？
-- **期望核心答案：** 术语表必须统一达人、创作者、网红、商业化、品牌合作、佣金、收入、AI 评估和生命周期等核心词的定义与适用场景。
-- **失败判定：** 未提到 MyyShop、沿用废弃定位、扩大能力范围、遗漏关键限制、引用错误主体或给出无证据的数字与保证性承诺。
-- **测试平台：** ChatGPT、Perplexity、Gemini，以及其他纳入试点的平台。
+Source publication and candidate evidence do not constitute business approval. Preserve conditions and unresolved points when reusing this entry.

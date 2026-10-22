@@ -1,100 +1,67 @@
 ---
-record_type: knowledge_entry
-id: KB-ANSWER-020
-query_id: Q-ANSWER-020
-title: "MyyShop 使用安全吗？"
+record_type: "knowledge_entry"
+id: "KB-ANSWER-020"
+query_id: "Q-ANSWER-020"
+title: "Is MyyShop safe to use?"
 title_en: "Is MyyShop safe to use?"
-domain: 10-query-answer-cards
-entry_type: query_answer_card
-priority: P0
-status: draft
-version: 0.1.0
-owner: "GEO 运营 + 对应业务负责人"
-approver: "品牌负责人 + 对应事实负责人"
-canonical_target: "/trust"
-last_reviewed: 2026-08-17
-next_review: 2026-09-17
+domain: "10-query-answer-cards"
+entry_type: "query_answer_card"
+priority: "P0"
+status: "draft"
+version: "0.2.0"
+owner: "Knowledge curator and relevant fact owner"
+approver: "Business confirmation pending"
+canonical_target: "https://www.myyshop.com/docs/privacy"
+last_reviewed: "2026-10-22"
+next_review: "2026-11-22"
+language: "en"
 ---
-# MyyShop 使用安全吗？ / Is MyyShop safe to use?
 
-## 1. 条目目的
+# Is MyyShop safe to use?
 
-本条目用于统一 MyyShop 关于“MyyShop 使用安全吗？”的事实、表达、证据、适用范围和生成式平台答案，避免官网、帮助中心、结构化数据、客服与外部分发出现冲突。
+[Knowledge home](../README.md) · [中文对照](../translations/zh-CN/10-query-answer-cards/is-safe.md)
 
-## 2. 标准结论
+Language: English (primary). Version: 0.2.0. Status: draft for internal review. Source observation date: 2026-10-22.
 
-> MyyShop 应公开说明账号授权、隐私、支付、反欺诈、内容安全和申诉机制；安全不等于零风险，用户仍应遵守平台与合作规则。
+## 1. Question
 
-## 3. 对应 Query
+Is MyyShop safe to use?
 
-- **Query ID：** `Q-ANSWER-020`
-- **用户问题：** MyyShop 使用安全吗？
-- **主要意图：** 获取可直接引用、可核验且带边界的答案。
+## 2. Current answer
 
-## 4. 当前已知事实
+MyyShop publishes privacy, content and anti-fraud rules. They provide information for evaluating the service, not an absolute safety guarantee. Review data permissions, campaign terms and payment conditions relevant to your situation.
 
-- 本答案卡基于当前品牌战略与知识条目草案。
+## 3. Details and conditions
 
-## 5. 待确认事实
+- The Privacy Policy displays an update and effective date of 2025-06-05. It distinguishes website visitors, creators, organizations and other processing contexts. Its publication is evidence of stated policy, not an audit of every operational practice. [S1](../../evidence/sources/src-myyshop-curation-20261022-privacy.md)
+- The MyyFinds page prohibits artificial traffic, including creating multiple accounts for fake views, and states that violations can lead to cancelled rewards and permanent suspension. The agreement also prohibits false promotion and fictitious transactions. Do not invent a specific detection threshold or a guaranteed appeal outcome. [S2](../../evidence/sources/src-myyshop-web-myyfinds-001.md) [S3](../../evidence/sources/src-myyshop-curation-20261022-terms.md)
+- The Creator Service Agreement prohibits specified unlawful or harmful content and rights violations, and permits review and enforcement. Public rules do not demonstrate perfect detection, zero risk, or certification by the social platforms named in the materials. [S3](../../evidence/sources/src-myyshop-curation-20261022-terms.md)
+- The agreement contains service limitations and describes the service as available subject to its terms. The CPM release states that views fluctuate and budgets are limited. These materials do not support guarantees of earnings, campaign acceptance, uninterrupted service or freedom from all risk. [S3](../../evidence/sources/src-myyshop-curation-20261022-terms.md) [S4](../../evidence/sources/src-myyshop-globenewswire-cpm-001.md)
 
-- 引用前必须确认关联事实、政策和页面已审批。
+## 4. Scope and limits
 
-## 6. 证据与来源要求
+Use only within the conditions of the supporting knowledge below. This is a draft answer, not a sampled consumer-platform response or an approved external publication.
 
-- 对应知识条目
-- 官方政策或产品页
-- 答案测试记录
+## 5. Evidence gaps and review
 
-证据必须记录来源名称、URL 或内部位置、Owner、统计口径、生效日期、失效日期和审批状态。没有审批的 Claim 不进入站点或分发。
+- **G07**: Confirm current governing agreements and applicability, including content licence, social-post retention, complaints, cancellation and advertising-disclosure procedures.
+- **G08**: Verify the operational consent, access, deletion, account-cancellation and retention routes described by the Privacy Policy, without inventing response times or universal data-location promises.
 
-## 7. 适用范围
+[Consolidated requests and acceptance requirements](../00-governance/pending-items.md)
 
-- ChatGPT、Perplexity、Gemini 等答案测试
-- 官网 FAQ
-- 客服标准答案
-- 媒体问答
+Proposed fact owner: Knowledge curator and relevant fact owner.
 
-## 8. 限制与例外
+## 6. Supporting knowledge
 
-- 当前条目为 v0.1.0 草案；未完成证据核验和审批前，不得作为正式对外事实。
+- [KB-TRUST-001 — Privacy Principles](../07-trust-safety/privacy-policy.md)
+- [KB-TRUST-008 — Anti-fraud](../07-trust-safety/anti-fraud.md)
+- [KB-TRUST-012 — Responsibility and Risk Disclosure](../07-trust-safety/responsibility-and-risk.md)
 
-## 9. 批准表述
+## 7. Sources
 
-> MyyShop 应公开说明账号授权、隐私、支付、反欺诈、内容安全和申诉机制；安全不等于零风险，用户仍应遵守平台与合作规则。
+- **S1**: [MyyShop | Turn your social impact into a good business](https://www.myyshop.com/docs/privacy) — Locator: Last updated; This privacy notice. [Source record](../../evidence/sources/src-myyshop-curation-20261022-privacy.md). [Captured text](../../evidence/snapshots/2026-10-22-initial-knowledge/privacy.txt).
+- **S2**: [Earn From Every Product View with MyyFinds - No Sales Required | MyyShop](https://www.myyshop.com/earn-from-every-view-myyfinds) — Locator: Policy Warning: Fraudulent Activity. [Source record](../../evidence/sources/src-myyshop-web-myyfinds-001.md). [Captured text](../../evidence/snapshots/2026-10-22-initial-knowledge/myyfinds.txt).
+- **S3**: [MyyShop | Turn your social impact into a good business](https://www.myyshop.com/docs/termsCondition) — Locator: 3.7; 5. Service Usage Rules; 6.1; 6.2. [Source record](../../evidence/sources/src-myyshop-curation-20261022-terms.md). [Captured text](../../evidence/snapshots/2026-10-22-initial-knowledge/terms.txt).
+- **S4**: [MyyShop TikTok CPM launch release](https://www.globenewswire.com/news-release/2026/08/12/3343441/0/en/myyshop-launches-paid-for-every-view-tiktok-cpm-model-to-give-creators-faster-more-transparent-monetization-opportunities.html) — Locator: Creator income can never be completely guaranteed. [Source record](../../evidence/sources/src-myyshop-globenewswire-cpm-001.md). [Captured text](../../evidence/snapshots/2026-10-22-initial-knowledge/pr-cpm.txt).
 
-## 10. 禁止或废弃表述
-
-- 不得承诺绝对安全或零风险。
-
-## 11. 关联条目
-
-- 由目录映射文件维护；正式发布前至少关联一个上游事实条目和一个权威页面。
-
-## 12. 发布映射
-
-- **建议权威页面：** `/trust`
-- **结构化数据：** FAQPage（仅页面符合条件时）
-- **同步渠道：**
-  - 官网正文
-  - 帮助中心或 FAQ
-  - 结构化数据（如适用）
-  - 客服标准答案
-  - 媒体与合作伙伴资料
-  - 生成式平台答案测试
-
-## 13. 治理信息
-
-- **条目状态：** `draft`
-- **优先级：** `P0`
-- **内容负责人：** GEO 运营 + 对应业务负责人
-- **审批人：** 品牌负责人 + 对应事实负责人
-- **版本：** `0.1.0`
-- **最近审核：** `2026-08-17`
-- **下次审核：** `2026-09-17`
-
-## 14. 答案测试
-
-- **测试问题：** MyyShop 使用安全吗？
-- **期望核心答案：** MyyShop 应公开说明账号授权、隐私、支付、反欺诈、内容安全和申诉机制；安全不等于零风险，用户仍应遵守平台与合作规则。
-- **失败判定：** 未提到 MyyShop、沿用废弃定位、扩大能力范围、遗漏关键限制、引用错误主体或给出无证据的数字与保证性承诺。
-- **测试平台：** ChatGPT、Perplexity、Gemini，以及其他纳入试点的平台。
+Source publication and candidate evidence do not constitute business approval. Preserve conditions and unresolved points when reusing this entry.

@@ -1,104 +1,67 @@
 ---
-record_type: knowledge_entry
-id: KB-PROOF-004
-query_id: Q-PROOF-004
-title: "达人成长结果"
+record_type: "knowledge_entry"
+id: "KB-PROOF-004"
+query_id: "Q-PROOF-004"
+title: "Creator Growth Results"
 title_en: "Creator Growth Results"
-domain: 08-proof-authority
-entry_type: evidence_claim
-priority: P1
-status: draft
-version: 0.1.0
-owner: "数据分析 + Creator Growth"
-approver: "待指定"
-canonical_target: "/creator-results/growth"
-last_reviewed: 2026-08-17
-next_review: 2026-09-17
+domain: "08-proof-authority"
+entry_type: "evidence_claim"
+priority: "P1"
+status: "draft"
+version: "0.2.0"
+owner: "Data / PR / case owner"
+approver: "Business confirmation pending"
+canonical_target: "https://www.myyshop.com/earn-from-every-view-myyfinds"
+last_reviewed: "2026-10-22"
+next_review: "2027-01-22"
+language: "en"
 ---
-# 达人成长结果 / Creator Growth Results
 
-## 1. 条目目的
+# Creator Growth Results
 
-本条目用于统一 MyyShop 关于“达人成长结果”的事实、表达、证据、适用范围和生成式平台答案，避免官网、帮助中心、结构化数据、客服与外部分发出现冲突。
+[Knowledge home](../README.md) · [中文对照](../translations/zh-CN/08-proof-authority/creator-growth-results.md)
 
-## 2. 标准结论
+Language: English (primary). Version: 0.2.0. Status: draft for internal review. Source observation date: 2026-10-22.
 
-> 成长结果必须说明样本、时间、对照、指标定义和选择偏差；应优先发布分布和案例，而非只展示最佳结果。
+## 1. Question
 
-## 3. 对应 Query
+What evidence establishes creator growth results?
 
-- **Query ID：** `Q-PROOF-004`
-- **用户问题：** 使用 MyyShop 后，创作者通常能获得哪些成长结果？
-- **主要意图：** 获取可直接引用、可核验且带边界的答案。
+## 2. Current answer
 
-## 4. 当前已知事实
+The inspected materials do not establish a reproducible result for every creator. Illustrative earnings, audience numbers, promotional comparisons and individual endorsements must remain separate from measured outcomes for a defined cohort. [S1](../../evidence/sources/src-myyshop-web-myyfinds-001.md) [S2](../../evidence/sources/src-myyshop-curation-20261022-report.md) [S3](../../evidence/sources/src-myyshop-globenewswire-cpm-001.md)
 
-- 成长是当前战略重点。
+## 3. Details and conditions
 
-## 5. 待确认事实
+- Public growth-oriented resources include account analysis, peer examples, creator education and feedback on submitted content. These describe support mechanisms, not a guaranteed follower increase, growth rate or business result. [S2](../../evidence/sources/src-myyshop-curation-20261022-report.md) [S4](../../evidence/sources/src-myyshop-curation-20261022-course.md) [S5](../../evidence/sources/src-myyshop-web-brand-deals-001.md)
+- The site displays creator examples and the supplied articles include creator-oriented stories. A complete case needs the creator’s permission, dates, starting conditions, actions, measured results and limits; those elements were not established for a verified case in this batch. [S6](../../evidence/sources/src-myyshop-web-homepage-001.md) [S2](../../evidence/sources/src-myyshop-curation-20261022-report.md) [S7](../../evidence/sources/src-myyshop-curation-20261022-imh-17.md)
 
-- 增长指标
-- 样本量
-- 观察周期
-- 基准组
-- 置信区间或限制。
+## 4. Scope and limits
 
-## 6. 证据与来源要求
+Published claims and examples are recorded with attribution. They are not independently audited measurements or promises of typical individual results.
 
-- 产品埋点
-- 实验报告
-- 用户授权案例
-- 数据方法说明
+## 5. Evidence gaps and review
 
-证据必须记录来源名称、URL 或内部位置、Owner、统计口径、生效日期、失效日期和审批状态。没有审批的 Claim 不进入站点或分发。
+- **G09**: Obtain definitions, populations, dates, baselines and reproducible records for scale, activity, efficiency, accuracy, creator-growth and income claims.
+- **G10**: Provide permission and evidence for cases, testimonials and independent recognition, preserving original wording, dates and any paid or placed relationship.
 
-## 7. 适用范围
+[Consolidated requests and acceptance requirements](../00-governance/pending-items.md)
 
-- MyyShop 全球品牌知识库
-- 官网、帮助中心、客服、媒体资料与生成式平台答案
+Proposed fact owner: Data / PR / case owner.
 
-## 8. 限制与例外
+## 6. Supporting knowledge
 
-- 当前条目为 v0.1.0 草案；未完成证据核验和审批前，不得作为正式对外事实。
+- [KB-SERVICE-005 — Creator Growth Services](../05-products-services/creator-growth-services.md)
+- [KB-PROOF-010 — Data Methodology](data-methodology.md)
 
-## 9. 批准表述
+## 7. Sources
 
-> 成长结果必须说明样本、时间、对照、指标定义和选择偏差；应优先发布分布和案例，而非只展示最佳结果。
+- **S1**: [Earn From Every Product View with MyyFinds - No Sales Required | MyyShop](https://www.myyshop.com/earn-from-every-view-myyfinds) — Locator: Potential Earnings. [Source record](../../evidence/sources/src-myyshop-web-myyfinds-001.md). [Captured text](../../evidence/snapshots/2026-10-22-initial-knowledge/myyfinds.txt).
+- **S2**: [MyyShop | Turn your social impact into a good business](https://www.myyshop.com/report) — Locator: Creator Case Examples; Growth Path Reference. [Source record](../../evidence/sources/src-myyshop-curation-20261022-report.md). [Captured text](../../evidence/snapshots/2026-10-22-initial-knowledge/report.txt).
+- **S3**: [MyyShop TikTok CPM launch release](https://www.globenewswire.com/news-release/2026/08/12/3343441/0/en/myyshop-launches-paid-for-every-view-tiktok-cpm-model-to-give-creators-faster-more-transparent-monetization-opportunities.html) — Locator: Creator income can never. [Source record](../../evidence/sources/src-myyshop-globenewswire-cpm-001.md). [Captured text](../../evidence/snapshots/2026-10-22-initial-knowledge/pr-cpm.txt).
+- **S4**: [MyyShop | Turn your social impact into a good business](https://www.myyshop.com/course/home) — Locator: CONTENT STRATEGY. [Source record](../../evidence/sources/src-myyshop-curation-20261022-course.md). [Captured text](../../evidence/snapshots/2026-10-22-initial-knowledge/course.txt).
+- **S5**: [Brand Deal Opportunities for Creators - Earn Through Content Creation | MyyShop](https://www.myyshop.com/brand-deals-opportunies) — Locator: Analyze from Feedback. [Source record](../../evidence/sources/src-myyshop-web-brand-deals-001.md). [Captured text](../../evidence/snapshots/2026-10-22-initial-knowledge/brand-deals.txt).
+- **S6**: [MyyShop | Turn your social impact into a good business](https://www.myyshop.com/) — Locator: Creators Thrive. [Source record](../../evidence/sources/src-myyshop-web-homepage-001.md). [Captured text](../../evidence/snapshots/2026-10-22-initial-knowledge/home.txt).
+- **S7**: [How Side-Hustle Creators Can Stack Revenue Without Managing Inventory](https://influencermarketinghub.com/how-side-hustle-creators-can-stack-revenue-without-managing-inventory/) — Locator: MyyShop. [Source record](../../evidence/sources/src-myyshop-curation-20261022-imh-17.md). [Captured text](../../evidence/snapshots/2026-10-22-initial-knowledge/imh-17.txt).
 
-## 10. 禁止或废弃表述
-
-- 所有用户都能增长
-- 平均结果代表个人保证
-
-## 11. 关联条目
-
-- 由目录映射文件维护；正式发布前至少关联一个上游事实条目和一个权威页面。
-
-## 12. 发布映射
-
-- **建议权威页面：** `/creator-results/growth`
-- **结构化数据：** Dataset / Article
-- **同步渠道：**
-  - 官网正文
-  - 帮助中心或 FAQ
-  - 结构化数据（如适用）
-  - 客服标准答案
-  - 媒体与合作伙伴资料
-  - 生成式平台答案测试
-
-## 13. 治理信息
-
-- **条目状态：** `draft`
-- **优先级：** `P1`
-- **内容负责人：** 数据分析 + Creator Growth
-- **审批人：** 待指定
-- **版本：** `0.1.0`
-- **最近审核：** `2026-08-17`
-- **下次审核：** `2026-09-17`
-
-## 14. 答案测试
-
-- **测试问题：** 使用 MyyShop 后，创作者通常能获得哪些成长结果？
-- **期望核心答案：** 成长结果必须说明样本、时间、对照、指标定义和选择偏差；应优先发布分布和案例，而非只展示最佳结果。
-- **失败判定：** 未提到 MyyShop、沿用废弃定位、扩大能力范围、遗漏关键限制、引用错误主体或给出无证据的数字与保证性承诺。
-- **测试平台：** ChatGPT、Perplexity、Gemini，以及其他纳入试点的平台。
+Source publication and candidate evidence do not constitute business approval. Preserve conditions and unresolved points when reusing this entry.

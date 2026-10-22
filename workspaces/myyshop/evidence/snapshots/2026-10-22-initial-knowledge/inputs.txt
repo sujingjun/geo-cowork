@@ -1,0 +1,9 @@
+N3 and IMH workbook registers
+
+Original files were read without modification.
+业务对外pr稿/IMH-相关落地链接.xlsx
+SHA-256: 0f3a13cb1581c573551db616b4afe683962d0783005fabb7cf1d6d6ca37c2fd2
+业务对外pr稿/MyyShop Launches “Paid for Every View” TikTok CPM Model to Give Creators Faster, More Transparent Monetization Opportunities N3通稿.xls
+SHA-256: 39a72f795577482d1e93d17138ae66285d02bec83e898d8325a0922dda7c1b07
+
+See pr-link-register.json and pr-link-register.csv for every extracted cell reference, original URL, normalized target and reading outcome. N3 total-links sheet: 891 rows, 890 distinct raw URL strings. The workbook reports syndication of one N3 release; most listed republications were not read. IMH B2:B17: 16 placement targets. Placement is not independent corroboration.

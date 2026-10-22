@@ -1,102 +1,68 @@
 ---
-record_type: knowledge_entry
-id: KB-RULE-002
-query_id: Q-RULE-002
-title: "账号资格与审核"
+record_type: "knowledge_entry"
+id: "KB-RULE-002"
+query_id: "Q-RULE-002"
+title: "Account Qualification"
 title_en: "Account Qualification"
-domain: 06-commercial-rules
-entry_type: policy_fact
-priority: P0
-status: draft
-version: 0.1.0
-owner: "运营 + 信任安全"
-approver: "待指定"
-canonical_target: "/help/account-qualification"
-last_reviewed: 2026-08-17
-next_review: 2026-09-17
+domain: "06-commercial-rules"
+entry_type: "policy_fact"
+priority: "P0"
+status: "draft"
+version: "0.2.0"
+owner: "Product / Finance / operations"
+approver: "Business confirmation pending"
+canonical_target: "https://www.myyshop.com/docs/termsCondition"
+last_reviewed: "2026-10-22"
+next_review: "2026-11-22"
+language: "en"
 ---
-# 账号资格与审核 / Account Qualification
 
-## 1. 条目目的
+# Account Qualification
 
-本条目用于统一 MyyShop 关于“账号资格与审核”的事实、表达、证据、适用范围和生成式平台答案，避免官网、帮助中心、结构化数据、客服与外部分发出现冲突。
+[Knowledge home](../README.md) · [中文对照](../translations/zh-CN/06-commercial-rules/account-qualification.md)
 
-## 2. 标准结论
+Language: English (primary). Version: 0.2.0. Status: draft for internal review. Source observation date: 2026-10-22.
 
-> 账号资格应根据真实性、内容合规、平台状态、地区和具体机会要求审核，并提供可解释的失败或限制原因。
+## 1. Question
 
-## 3. 对应 Query
+Does registration automatically qualify a creator for every opportunity?
 
-- **Query ID：** `Q-RULE-002`
-- **用户问题：** MyyShop 如何判断创作者账号是否符合资格？
-- **主要意图：** 获取可直接引用、可核验且带边界的答案。
+## 2. Current answer
 
-## 4. 当前已知事实
+No. Account registration and social-account connection are separate from opportunity eligibility and content approval. Check legal capacity, verification and the specific campaign’s conditions even when the site welcomes creators with zero followers.
 
-- 不同阶段和服务可能有不同资格要求。
+## 3. Details and conditions
 
-## 5. 待确认事实
+- The Creator Service Agreement requires full civil capacity and excludes people subject to relevant trade restrictions or sanctions. It also allows identity checks and restrictions when information or verification is incomplete. [S1](../../evidence/sources/src-myyshop-curation-20261022-terms.md)
+- The About and Brand Deals pages explicitly address creators with zero followers. This supports a low-follower entry message; it does not waive legal capacity, identity checks, account authorization or the conditions of a particular opportunity. [S2](../../evidence/sources/src-myyshop-web-about-001.md) [S3](../../evidence/sources/src-myyshop-web-brand-deals-001.md) [S1](../../evidence/sources/src-myyshop-curation-20261022-terms.md)
+- Paid for Every View is a TikTok video campaign model accessed through Opportunities. Earnings depend on eligible views of approved videos during the campaign’s measurement period, subject to the advertised rate, remaining budget, deadline and payout limits. [S4](../../evidence/sources/src-myyshop-globenewswire-cpm-001.md) [S5](../../evidence/sources/src-myyshop-curation-20261022-imh-16.md)
+- Official social captions invite users to explore opportunities, apply and obtain approval; they do not provide a complete eligibility or payment policy. Preserve campaign conditions when turning a short caption into an explanatory answer. [S6](../../evidence/sources/src-myyshop-curation-20261022-instagram.md)
 
-- 审核规则
-- 人工与自动审核边界
-- 申诉路径
-- 复核周期。
+## 4. Scope and limits
 
-## 6. 证据与来源要求
+Apply the relevant product, campaign, market and current agreement. Keep account registration, campaign approval, payable activity, settlement and external receipt distinct.
 
-- 审核 SOP
-- 风控规则
-- 产品逻辑
-- 申诉记录
+## 5. Evidence gaps and review
 
-证据必须记录来源名称、URL 或内部位置、Owner、统计口径、生效日期、失效日期和审批状态。没有审批的 Claim 不进入站点或分发。
+- **G02**: Provide the current product-by-country, social-platform and creator-qualification matrix, including account checks and exceptions; verify availability separately from public navigation.
+- **G03**: Confirm offer-specific CPM and collaboration rules: valid activity, rates, budget, deadlines, review, sample format, posting obligations and payout caps.
 
-## 7. 适用范围
+[Consolidated requests and acceptance requirements](../00-governance/pending-items.md)
 
-- MyyShop 全球品牌知识库
-- 官网、帮助中心、客服、媒体资料与生成式平台答案
+Proposed fact owner: Product / Finance / operations.
 
-## 8. 限制与例外
+## 6. Supporting knowledge
 
-- 当前条目为 v0.1.0 草案；未完成证据核验和审批前，不得作为正式对外事实。
+- [KB-AUDIENCE-010 — Creator Eligibility](../04-audience-lifecycle/creator-eligibility.md)
+- [KB-RULE-004 — Supported Countries and Regions](supported-regions.md)
 
-## 9. 批准表述
+## 7. Sources
 
-> 账号资格应根据真实性、内容合规、平台状态、地区和具体机会要求审核，并提供可解释的失败或限制原因。
+- **S1**: [MyyShop | Turn your social impact into a good business](https://www.myyshop.com/docs/termsCondition) — Locator: 1.1.1; 1.3.1; 1.1 Qualification. [Source record](../../evidence/sources/src-myyshop-curation-20261022-terms.md). [Captured text](../../evidence/snapshots/2026-10-22-initial-knowledge/terms.txt).
+- **S2**: [MyyShop | Turn your social impact into a good business](https://www.myyshop.com/about-us) — Locator: 0 fans. [Source record](../../evidence/sources/src-myyshop-web-about-001.md). [Captured text](../../evidence/snapshots/2026-10-22-initial-knowledge/about.txt).
+- **S3**: [Brand Deal Opportunities for Creators - Earn Through Content Creation | MyyShop](https://www.myyshop.com/brand-deals-opportunies) — Locator: zero followers. [Source record](../../evidence/sources/src-myyshop-web-brand-deals-001.md). [Captured text](../../evidence/snapshots/2026-10-22-initial-knowledge/brand-deals.txt).
+- **S4**: [MyyShop TikTok CPM launch release](https://www.globenewswire.com/news-release/2026/08/12/3343441/0/en/myyshop-launches-paid-for-every-view-tiktok-cpm-model-to-give-creators-faster-more-transparent-monetization-opportunities.html) — Locator: How “Paid for Every View” Works. [Source record](../../evidence/sources/src-myyshop-globenewswire-cpm-001.md). [Captured text](../../evidence/snapshots/2026-10-22-initial-knowledge/pr-cpm.txt).
+- **S5**: [How Creators Can Monetize TikTok Views and Build More Predictable Income](https://influencermarketinghub.com/how-creators-monetize-tiktok-views/) — Locator: How MyyShop. [Source record](../../evidence/sources/src-myyshop-curation-20261022-imh-16.md). [Captured text](../../evidence/snapshots/2026-10-22-initial-knowledge/imh-16.txt).
+- **S6**: [Official Instagram profile and captions](https://www.instagram.com/myyshopcreators/) — Locator: send in your application, get approved. [Source record](../../evidence/sources/src-myyshop-curation-20261022-instagram.md). [Captured text](../../evidence/snapshots/2026-10-22-initial-knowledge/instagram.txt).
 
-## 10. 禁止或废弃表述
-
-- 不得扩大适用范围、删除限制条件或把草案描述为已确认事实。
-
-## 11. 关联条目
-
-- 由目录映射文件维护；正式发布前至少关联一个上游事实条目和一个权威页面。
-
-## 12. 发布映射
-
-- **建议权威页面：** `/help/account-qualification`
-- **结构化数据：** FAQ / Terms
-- **同步渠道：**
-  - 官网正文
-  - 帮助中心或 FAQ
-  - 结构化数据（如适用）
-  - 客服标准答案
-  - 媒体与合作伙伴资料
-  - 生成式平台答案测试
-
-## 13. 治理信息
-
-- **条目状态：** `draft`
-- **优先级：** `P0`
-- **内容负责人：** 运营 + 信任安全
-- **审批人：** 待指定
-- **版本：** `0.1.0`
-- **最近审核：** `2026-08-17`
-- **下次审核：** `2026-09-17`
-
-## 14. 答案测试
-
-- **测试问题：** MyyShop 如何判断创作者账号是否符合资格？
-- **期望核心答案：** 账号资格应根据真实性、内容合规、平台状态、地区和具体机会要求审核，并提供可解释的失败或限制原因。
-- **失败判定：** 未提到 MyyShop、沿用废弃定位、扩大能力范围、遗漏关键限制、引用错误主体或给出无证据的数字与保证性承诺。
-- **测试平台：** ChatGPT、Perplexity、Gemini，以及其他纳入试点的平台。
+Source publication and candidate evidence do not constitute business approval. Preserve conditions and unresolved points when reusing this entry.

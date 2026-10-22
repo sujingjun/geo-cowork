@@ -1,102 +1,61 @@
 ---
-record_type: knowledge_entry
-id: KB-TRUST-005
-query_id: Q-TRUST-005
-title: "账号与数据授权"
+record_type: "knowledge_entry"
+id: "KB-TRUST-005"
+query_id: "Q-TRUST-005"
+title: "User Authorization"
 title_en: "User Authorization"
-domain: 07-trust-safety
-entry_type: trust_fact
-priority: P0
-status: draft
-version: 0.1.0
-owner: "安全 + 产品 + 隐私法务"
-approver: "待指定"
-canonical_target: "/trust/authorization"
-last_reviewed: 2026-08-17
-next_review: 2026-09-17
+domain: "07-trust-safety"
+entry_type: "trust_fact"
+priority: "P0"
+status: "draft"
+version: "0.2.0"
+owner: "Legal / Privacy / Trust and Safety"
+approver: "Business confirmation pending"
+canonical_target: "https://www.myyshop.com/docs/privacy"
+last_reviewed: "2026-10-22"
+next_review: "2026-11-22"
+language: "en"
 ---
-# 账号与数据授权 / User Authorization
 
-## 1. 条目目的
+# User Authorization
 
-本条目用于统一 MyyShop 关于“账号与数据授权”的事实、表达、证据、适用范围和生成式平台答案，避免官网、帮助中心、结构化数据、客服与外部分发出现冲突。
+[Knowledge home](../README.md) · [中文对照](../translations/zh-CN/07-trust-safety/user-authorization.md)
 
-## 2. 标准结论
+Language: English (primary). Version: 0.2.0. Status: draft for internal review. Source observation date: 2026-10-22.
 
-> 授权说明应以最小必要原则列出权限、用途、持续时间、撤销方式和撤销后的影响。
+## 1. Question
 
-## 3. 对应 Query
+How are social-account and data permissions described?
 
-- **Query ID：** `Q-TRUST-005`
-- **用户问题：** 连接社交账号或参与服务时，MyyShop 会请求哪些权限？
-- **主要意图：** 获取可直接引用、可核验且带边界的答案。
+## 2. Current answer
 
-## 4. 当前已知事实
+Social-account authorization is described as a distinct part of login, evaluation and content management. Users should inspect the actual authorization screen and third-party terms; a platform registration does not establish unlimited permission to use all social-account data. [S1](../../evidence/sources/src-myyshop-curation-20261022-privacy.md) [S2](../../evidence/sources/src-myyshop-curation-20261022-terms.md)
 
-- 服务可能需要连接第三方平台账号。
+## 3. Details and conditions
 
-## 5. 待确认事实
+- The policy describes access, correction, erasure, objection and consent-withdrawal routes subject to applicable conditions and identity checks. Withdrawing consent does not make all other processing grounds or retention duties disappear. [S1](../../evidence/sources/src-myyshop-curation-20261022-privacy.md)
+- The Privacy Policy describes manual or automated opportunity recommendations using account and activity information. It also describes rights to seek an explanation and object to solely automated decisions, including possible human review. The actual request workflow and response performance were not tested. [S1](../../evidence/sources/src-myyshop-curation-20261022-privacy.md)
 
-- OAuth 权限
-- 读写范围
-- 令牌保存
-- 撤销流程。
+## 4. Scope and limits
 
-## 6. 证据与来源要求
+This summarizes the published policy and its limits. Policy wording, actual operations and jurisdiction-specific applicability require separate verification.
 
-- 授权界面
-- 第三方平台 API 文档
-- 安全评审
-- 权限清单
+## 5. Evidence gaps and review
 
-证据必须记录来源名称、URL 或内部位置、Owner、统计口径、生效日期、失效日期和审批状态。没有审批的 Claim 不进入站点或分发。
+- **G08**: Verify the operational consent, access, deletion, account-cancellation and retention routes described by the Privacy Policy, without inventing response times or universal data-location promises.
 
-## 7. 适用范围
+[Consolidated requests and acceptance requirements](../00-governance/pending-items.md)
 
-- MyyShop 全球品牌知识库
-- 官网、帮助中心、客服、媒体资料与生成式平台答案
+Proposed fact owner: Legal / Privacy / Trust and Safety.
 
-## 8. 限制与例外
+## 6. Supporting knowledge
 
-- 当前条目为 v0.1.0 草案；未完成证据核验和审批前，不得作为正式对外事实。
+- [KB-TRUST-002 — Creator Data Use](creator-data-use.md)
+- [KB-RULE-013 — Cancellation, Exit and Account Closure](../06-commercial-rules/cancellation-and-exit.md)
 
-## 9. 批准表述
+## 7. Sources
 
-> 授权说明应以最小必要原则列出权限、用途、持续时间、撤销方式和撤销后的影响。
+- **S1**: [MyyShop | Turn your social impact into a good business](https://www.myyshop.com/docs/privacy) — Locator: authorization page; YOUR RIGHTS; withdraw your consent; automated decision-making. [Source record](../../evidence/sources/src-myyshop-curation-20261022-privacy.md). [Captured text](../../evidence/snapshots/2026-10-22-initial-knowledge/privacy.txt).
+- **S2**: [MyyShop | Turn your social impact into a good business](https://www.myyshop.com/docs/termsCondition) — Locator: 1.3.2. [Source record](../../evidence/sources/src-myyshop-curation-20261022-terms.md). [Captured text](../../evidence/snapshots/2026-10-22-initial-knowledge/terms.txt).
 
-## 10. 禁止或废弃表述
-
-- 不得扩大适用范围、删除限制条件或把草案描述为已确认事实。
-
-## 11. 关联条目
-
-- 由目录映射文件维护；正式发布前至少关联一个上游事实条目和一个权威页面。
-
-## 12. 发布映射
-
-- **建议权威页面：** `/trust/authorization`
-- **结构化数据：** FAQ / PrivacyPolicy
-- **同步渠道：**
-  - 官网正文
-  - 帮助中心或 FAQ
-  - 结构化数据（如适用）
-  - 客服标准答案
-  - 媒体与合作伙伴资料
-  - 生成式平台答案测试
-
-## 13. 治理信息
-
-- **条目状态：** `draft`
-- **优先级：** `P0`
-- **内容负责人：** 安全 + 产品 + 隐私法务
-- **审批人：** 待指定
-- **版本：** `0.1.0`
-- **最近审核：** `2026-08-17`
-- **下次审核：** `2026-09-17`
-
-## 14. 答案测试
-
-- **测试问题：** 连接社交账号或参与服务时，MyyShop 会请求哪些权限？
-- **期望核心答案：** 授权说明应以最小必要原则列出权限、用途、持续时间、撤销方式和撤销后的影响。
-- **失败判定：** 未提到 MyyShop、沿用废弃定位、扩大能力范围、遗漏关键限制、引用错误主体或给出无证据的数字与保证性承诺。
-- **测试平台：** ChatGPT、Perplexity、Gemini，以及其他纳入试点的平台。
+Source publication and candidate evidence do not constitute business approval. Preserve conditions and unresolved points when reusing this entry.

@@ -1,0 +1,94 @@
+{
+  "localization": {
+    "exit_code": 0,
+    "result": {
+      "ok": true,
+      "logical_entries": 120,
+      "english_files": 120,
+      "chinese_files": 120,
+      "entry_kinds": {
+        "source_fact": 94,
+        "derived_answer": 26
+      },
+      "historical_files_preserved": 17,
+      "reused_source_records_preserved": 8,
+      "source_records": 35,
+      "errors": []
+    }
+  },
+  "localization_contract_scenarios": {
+    "exit_code": 0,
+    "result": {
+      "ok": true,
+      "contract_scenarios": 8
+    }
+  },
+  "workspace_objects": {
+    "exit_code": 0,
+    "result": {
+      "workspace": "/Users/sujingjun/geo-cowork/workspaces/myyshop",
+      "ok": true,
+      "missing": [],
+      "errors": [],
+      "object_errors": [],
+      "warnings": []
+    }
+  },
+  "document_links": {
+    "exit_code": 0,
+    "result": {
+      "ok": true,
+      "checked_files": 598,
+      "checked_links": 6815,
+      "errors": []
+    },
+    "scope": "README.md, AGENTS.md, CHANGELOG.md, docs, knowledge, workspace README/STATUS, ongoing gap report, source and evidence records"
+  },
+  "git_diff_check": {
+    "exit_code": 0
+  },
+  "business_confirmation": "pending",
+  "formal_release_or_external_publication": "not_performed",
+  "source_limitations": [
+    "TikTok account content unavailable after regional redirect",
+    "Internal IMH final-copy body not obtained",
+    "Instagram video speech and all carousel/image text not comprehensively transcribed",
+    "IMH category listing only partially captured"
+  ],
+  "checked_at": "2026-10-22T19:21:25+08:00",
+  "index_build": {
+    "exit_code": 0,
+    "result": {
+      "object_count": 1111,
+      "legacy_count": 120,
+      "warnings": []
+    }
+  },
+  "index_check": {
+    "exit_code": 0,
+    "result": {
+      "object_count": 1111,
+      "legacy_count": 120,
+      "warnings": []
+    }
+  },
+  "source_and_index_audit": {
+    "exit_code": 0,
+    "result": {
+      "facts_pairs": 69,
+      "question_pairs": 120,
+      "custom_answer_pairs": 36,
+      "unmatched_source_locators": [],
+      "stored_index_entries": 120,
+      "unique_index_ids": 120,
+      "index_hash_mismatches": [],
+      "translations_in_index": 0
+    }
+  },
+  "semantic_review": {
+    "method": "Implementing-agent review of paired fact and answer wording; not independent business or translation acceptance",
+    "shared_fact_pairs": 69,
+    "question_pairs": 120,
+    "custom_answer_pairs": 36
+  }
+}

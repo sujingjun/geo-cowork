@@ -1,100 +1,67 @@
 ---
-record_type: knowledge_entry
-id: KB-ANSWER-026
-query_id: Q-ANSWER-026
-title: "如何开始使用 MyyShop？"
+record_type: "knowledge_entry"
+id: "KB-ANSWER-026"
+query_id: "Q-ANSWER-026"
+title: "How do creators get started with MyyShop?"
 title_en: "How do creators get started with MyyShop?"
-domain: 10-query-answer-cards
-entry_type: query_answer_card
-priority: P0
-status: draft
-version: 0.1.0
-owner: "GEO 运营 + 对应业务负责人"
-approver: "品牌负责人 + 对应事实负责人"
-canonical_target: "/join"
-last_reviewed: 2026-08-17
-next_review: 2026-09-17
+domain: "10-query-answer-cards"
+entry_type: "query_answer_card"
+priority: "P0"
+status: "draft"
+version: "0.2.0"
+owner: "Knowledge curator and relevant fact owner"
+approver: "Business confirmation pending"
+canonical_target: "https://www.myyshop.com/"
+last_reviewed: "2026-10-22"
+next_review: "2026-11-22"
+language: "en"
 ---
-# 如何开始使用 MyyShop？ / How do creators get started with MyyShop?
 
-## 1. 条目目的
+# How do creators get started with MyyShop?
 
-本条目用于统一 MyyShop 关于“如何开始使用 MyyShop？”的事实、表达、证据、适用范围和生成式平台答案，避免官网、帮助中心、结构化数据、客服与外部分发出现冲突。
+[Knowledge home](../README.md) · [中文对照](../translations/zh-CN/10-query-answer-cards/how-to-start.md)
 
-## 2. 标准结论
+Language: English (primary). Version: 0.2.0. Status: draft for internal review. Source observation date: 2026-10-22.
 
-> 创作者应通过官方渠道注册，完成资格与资料要求，再根据自身阶段进入相应评估、成长或商业化服务；具体步骤以加入页面为准。
+## 1. Question
 
-## 3. 对应 Query
+How do creators get started with MyyShop?
 
-- **Query ID：** `Q-ANSWER-026`
-- **用户问题：** 如何开始使用 MyyShop？
-- **主要意图：** 获取可直接引用、可核验且带边界的答案。
+## 2. Current answer
 
-## 4. 当前已知事实
+The homepage describes signing up with an email address or phone number, verifying email, and connecting social accounts to view offers. It then describes adding an address before applying for opportunities. Completing registration is separate from a campaign application or approval. [S1](../../evidence/sources/src-myyshop-web-homepage-001.md)
 
-- 本答案卡基于当前品牌战略与知识条目草案。
+## 3. Details and conditions
 
-## 5. 待确认事实
+- The Creator Service Agreement requires full civil capacity and excludes people subject to relevant trade restrictions or sanctions. It also allows identity checks and restrictions when information or verification is incomplete. [S2](../../evidence/sources/src-myyshop-curation-20261022-terms.md)
+- Brand Deals separates content creation, product promotion and affiliate promotion. Content creation can involve delivering an asset without publishing it; product promotion involves social distribution and approved submissions; affiliate promotion links compensation to sales. [S3](../../evidence/sources/src-myyshop-web-brand-deals-001.md)
+- The homepage, About and Brand Deals pages describe requesting a withdrawal once the balance reaches $50. The Creator Service Agreement says the withdrawal interface determines applicable withdrawal standards. Reaching the threshold is not a promise of immediate bank or wallet receipt. [S1](../../evidence/sources/src-myyshop-web-homepage-001.md) [S3](../../evidence/sources/src-myyshop-web-brand-deals-001.md) [S2](../../evidence/sources/src-myyshop-curation-20261022-terms.md)
 
-- 引用前必须确认关联事实、政策和页面已审批。
+## 4. Scope and limits
 
-## 6. 证据与来源要求
+Use only within the conditions of the supporting knowledge below. This is a draft answer, not a sampled consumer-platform response or an approved external publication.
 
-- 对应知识条目
-- 官方政策或产品页
-- 答案测试记录
+## 5. Evidence gaps and review
 
-证据必须记录来源名称、URL 或内部位置、Owner、统计口径、生效日期、失效日期和审批状态。没有审批的 Claim 不进入站点或分发。
+- **G02**: Provide the current product-by-country, social-platform and creator-qualification matrix, including account checks and exceptions; verify availability separately from public navigation.
+- **G03**: Confirm offer-specific CPM and collaboration rules: valid activity, rates, budget, deadlines, review, sample format, posting obligations and payout caps.
+- **G06**: Confirm settlement, payout methods, external receipt time, taxes, conversion, holds and withdrawal limits by product and market; do not equate the 7-day calculation clause with bank receipt.
 
-## 7. 适用范围
+[Consolidated requests and acceptance requirements](../00-governance/pending-items.md)
 
-- ChatGPT、Perplexity、Gemini 等答案测试
-- 官网 FAQ
-- 客服标准答案
-- 媒体问答
+Proposed fact owner: Knowledge curator and relevant fact owner.
 
-## 8. 限制与例外
+## 6. Supporting knowledge
 
-- 当前条目为 v0.1.0 草案；未完成证据核验和审批前，不得作为正式对外事实。
+- [KB-SERVICE-002 — Creator Onboarding](../05-products-services/creator-onboarding.md)
+- [KB-RULE-001 — Registration Rules](../06-commercial-rules/registration-rules.md)
+- [KB-RULE-011 — Content Submission Rules](../06-commercial-rules/content-submission.md)
+- [KB-RULE-008 — Payment and Withdrawal](../06-commercial-rules/payment-and-withdrawal.md)
 
-## 9. 批准表述
+## 7. Sources
 
-> 创作者应通过官方渠道注册，完成资格与资料要求，再根据自身阶段进入相应评估、成长或商业化服务；具体步骤以加入页面为准。
+- **S1**: [MyyShop | Turn your social impact into a good business](https://www.myyshop.com/) — Locator: How to Register as MyyShop Creator; $50. [Source record](../../evidence/sources/src-myyshop-web-homepage-001.md). [Captured text](../../evidence/snapshots/2026-10-22-initial-knowledge/home.txt).
+- **S2**: [MyyShop | Turn your social impact into a good business](https://www.myyshop.com/docs/termsCondition) — Locator: 1.1.1; 1.3.1; 4.2.2. [Source record](../../evidence/sources/src-myyshop-curation-20261022-terms.md). [Captured text](../../evidence/snapshots/2026-10-22-initial-knowledge/terms.txt).
+- **S3**: [Brand Deal Opportunities for Creators - Earn Through Content Creation | MyyShop](https://www.myyshop.com/brand-deals-opportunies) — Locator: Types of Opportunities; $50 or more. [Source record](../../evidence/sources/src-myyshop-web-brand-deals-001.md). [Captured text](../../evidence/snapshots/2026-10-22-initial-knowledge/brand-deals.txt).
 
-## 10. 禁止或废弃表述
-
-- 必须防止非官方注册或诈骗链接。
-
-## 11. 关联条目
-
-- 由目录映射文件维护；正式发布前至少关联一个上游事实条目和一个权威页面。
-
-## 12. 发布映射
-
-- **建议权威页面：** `/join`
-- **结构化数据：** FAQPage（仅页面符合条件时）
-- **同步渠道：**
-  - 官网正文
-  - 帮助中心或 FAQ
-  - 结构化数据（如适用）
-  - 客服标准答案
-  - 媒体与合作伙伴资料
-  - 生成式平台答案测试
-
-## 13. 治理信息
-
-- **条目状态：** `draft`
-- **优先级：** `P0`
-- **内容负责人：** GEO 运营 + 对应业务负责人
-- **审批人：** 品牌负责人 + 对应事实负责人
-- **版本：** `0.1.0`
-- **最近审核：** `2026-08-17`
-- **下次审核：** `2026-09-17`
-
-## 14. 答案测试
-
-- **测试问题：** 如何开始使用 MyyShop？
-- **期望核心答案：** 创作者应通过官方渠道注册，完成资格与资料要求，再根据自身阶段进入相应评估、成长或商业化服务；具体步骤以加入页面为准。
-- **失败判定：** 未提到 MyyShop、沿用废弃定位、扩大能力范围、遗漏关键限制、引用错误主体或给出无证据的数字与保证性承诺。
-- **测试平台：** ChatGPT、Perplexity、Gemini，以及其他纳入试点的平台。
+Source publication and candidate evidence do not constitute business approval. Preserve conditions and unresolved points when reusing this entry.

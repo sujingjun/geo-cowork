@@ -1,101 +1,61 @@
 ---
-record_type: knowledge_entry
-id: KB-VOICE-011
-query_id: Q-VOICE-011
-title: "中英文表达规范"
+record_type: "knowledge_entry"
+id: "KB-VOICE-011"
+query_id: "Q-VOICE-011"
+title: "Bilingual Style Guide"
 title_en: "Bilingual Style Guide"
-domain: 09-voice-messaging
-entry_type: messaging_rule
-priority: P1
-status: draft
-version: 0.1.0
-owner: "本地化 + 品牌策略"
-approver: "待指定"
-canonical_target: "/brand-guidelines/bilingual"
-last_reviewed: 2026-08-17
-next_review: 2026-09-17
+domain: "09-voice-messaging"
+entry_type: "messaging_rule"
+priority: "P1"
+status: "draft"
+version: "0.2.0"
+owner: "Brand / content"
+approver: "Business confirmation pending"
+canonical_target: "https://www.myyshop.com/earn-from-every-view-myyfinds"
+last_reviewed: "2026-10-22"
+next_review: "2027-01-22"
+language: "en"
 ---
-# 中英文表达规范 / Bilingual Style Guide
 
-## 1. 条目目的
+# Bilingual Style Guide
 
-本条目用于统一 MyyShop 关于“中英文表达规范”的事实、表达、证据、适用范围和生成式平台答案，避免官网、帮助中心、结构化数据、客服与外部分发出现冲突。
+[Knowledge home](../README.md) · [中文对照](../translations/zh-CN/09-voice-messaging/bilingual-style-guide.md)
 
-## 2. 标准结论
+Language: English (primary). Version: 0.2.0. Status: draft for internal review. Source observation date: 2026-10-22.
 
-> 中英文版本必须共享同一事实、范围和限制；允许为语义自然进行创译，但不得在任何语言中增加未审批能力或更强承诺。
+## 1. Question
 
-## 3. 对应 Query
+How are the English primary version and Chinese reading version maintained?
 
-- **Query ID：** `Q-VOICE-011`
-- **用户问题：** MyyShop 的中英文品牌表达如何保持同义和一致？
-- **主要意图：** 获取可直接引用、可核验且带边界的答案。
+## 2. Current answer
 
-## 4. 当前已知事实
+English is the primary knowledge version and Simplified Chinese is the complete reading counterpart. Both versions share one knowledge ID, facts, evidence and fact version; a translation is not another knowledge object or a new independent source. [S1](../../evidence/sources/src-myyshop-curation-20261022-direction.md)
 
-- 品牌面向全球创作者，需要多语言一致性。
+## 3. Details and conditions
 
-## 5. 待确认事实
+- Keep eligibility, time limits, review requirements, budgets and exceptions next to the claim they qualify. Do not upgrade may or can into will or guaranteed, or turn valid product views into all views. [S1](../../evidence/sources/src-myyshop-curation-20261022-direction.md) [S2](../../evidence/sources/src-myyshop-globenewswire-cpm-001.md) [S3](../../evidence/sources/src-myyshop-web-myyfinds-001.md)
 
-- 英文定位最终稿
-- 关键术语
-- 地区变体
-- 审校责任人。
+## 4. Scope and limits
 
-## 6. 证据与来源要求
+Editorial guidance for this initial knowledge edition. Observed channel style is distinguished from a formally adopted brand handbook.
 
-- 双语品牌规范
-- 本地化 QA
-- 页面对照审计
+## 5. Evidence gaps and review
 
-证据必须记录来源名称、URL 或内部位置、Owner、统计口径、生效日期、失效日期和审批状态。没有审批的 Claim 不进入站点或分发。
+No additional item-specific evidence request is identified for this limited draft statement. Business confirmation is still pending.
 
-## 7. 适用范围
+[Consolidated requests and acceptance requirements](../00-governance/pending-items.md)
 
-- MyyShop 全球品牌知识库
-- 官网、帮助中心、客服、媒体资料与生成式平台答案
+Proposed fact owner: Brand / content.
 
-## 8. 限制与例外
+## 6. Supporting knowledge
 
-- 当前条目为 v0.1.0 草案；未完成证据核验和审批前，不得作为正式对外事实。
+- [KB-VOICE-008 — Terminology](terminology.md)
+- [KB-VOICE-012 — Channel Messaging Guidelines](channel-guidelines.md)
 
-## 9. 批准表述
+## 7. Sources
 
-> 中英文版本必须共享同一事实、范围和限制；允许为语义自然进行创译，但不得在任何语言中增加未审批能力或更强承诺。
+- **S1**: [User-authorized curation and language direction](../../cycles/preparation/decisions/2026-10-22-initial-knowledge-curation-authorized.md) — Locator: English primary; Simplified Chinese reading copies; Bilingual semantic acceptance. [Source record](../../evidence/sources/src-myyshop-curation-20261022-direction.md). [Captured text](../../evidence/snapshots/2026-10-22-initial-knowledge/direction.txt).
+- **S2**: [MyyShop TikTok CPM launch release](https://www.globenewswire.com/news-release/2026/08/12/3343441/0/en/myyshop-launches-paid-for-every-view-tiktok-cpm-model-to-give-creators-faster-more-transparent-monetization-opportunities.html) — Locator: Only eligible views. [Source record](../../evidence/sources/src-myyshop-globenewswire-cpm-001.md). [Captured text](../../evidence/snapshots/2026-10-22-initial-knowledge/pr-cpm.txt).
+- **S3**: [Earn From Every Product View with MyyFinds - No Sales Required | MyyShop](https://www.myyshop.com/earn-from-every-view-myyfinds) — Locator: Actual earnings may vary. [Source record](../../evidence/sources/src-myyshop-web-myyfinds-001.md). [Captured text](../../evidence/snapshots/2026-10-22-initial-knowledge/myyfinds.txt).
 
-## 10. 禁止或废弃表述
-
-- 不得扩大适用范围、删除限制条件或把草案描述为已确认事实。
-
-## 11. 关联条目
-
-- 由目录映射文件维护；正式发布前至少关联一个上游事实条目和一个权威页面。
-
-## 12. 发布映射
-
-- **建议权威页面：** `/brand-guidelines/bilingual`
-- **结构化数据：** 无强制要求
-- **同步渠道：**
-  - 官网正文
-  - 帮助中心或 FAQ
-  - 结构化数据（如适用）
-  - 客服标准答案
-  - 媒体与合作伙伴资料
-  - 生成式平台答案测试
-
-## 13. 治理信息
-
-- **条目状态：** `draft`
-- **优先级：** `P1`
-- **内容负责人：** 本地化 + 品牌策略
-- **审批人：** 待指定
-- **版本：** `0.1.0`
-- **最近审核：** `2026-08-17`
-- **下次审核：** `2026-09-17`
-
-## 14. 答案测试
-
-- **测试问题：** MyyShop 的中英文品牌表达如何保持同义和一致？
-- **期望核心答案：** 中英文版本必须共享同一事实、范围和限制；允许为语义自然进行创译，但不得在任何语言中增加未审批能力或更强承诺。
-- **失败判定：** 未提到 MyyShop、沿用废弃定位、扩大能力范围、遗漏关键限制、引用错误主体或给出无证据的数字与保证性承诺。
-- **测试平台：** ChatGPT、Perplexity、Gemini，以及其他纳入试点的平台。
+Source publication and candidate evidence do not constitute business approval. Preserve conditions and unresolved points when reusing this entry.

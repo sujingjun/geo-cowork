@@ -1,98 +1,61 @@
 ---
-record_type: knowledge_entry
-id: KB-IDENTITY-001
-query_id: Q-IDENTITY-001
-title: "品牌官方名称"
+record_type: "knowledge_entry"
+id: "KB-IDENTITY-001"
+query_id: "Q-IDENTITY-001"
+title: "Official Brand Name"
 title_en: "Official Brand Name"
-domain: 02-brand-identity
-entry_type: entity_fact
-priority: P0
-status: draft
-version: 0.1.0
-owner: "品牌策略"
-approver: "品牌负责人 + 法务"
-canonical_target: "/about-us"
-last_reviewed: 2026-08-17
-next_review: 2026-09-17
+domain: "02-brand-identity"
+entry_type: "entity_fact"
+priority: "P0"
+status: "draft"
+version: "0.2.0"
+owner: "Brand / Legal"
+approver: "Business confirmation pending"
+canonical_target: "https://www.myyshop.com/"
+last_reviewed: "2026-10-22"
+next_review: "2026-11-22"
+language: "en"
 ---
-# 品牌官方名称 / Official Brand Name
 
-## 1. 条目目的
+# Official Brand Name
 
-本条目用于统一 MyyShop 关于“品牌官方名称”的事实、表达、证据、适用范围和生成式平台答案，避免官网、帮助中心、结构化数据、客服与外部分发出现冲突。
+[Knowledge home](../README.md) · [中文对照](../translations/zh-CN/02-brand-identity/official-brand-name.md)
 
-## 2. 标准结论
+Language: English (primary). Version: 0.2.0. Status: draft for internal review. Source observation date: 2026-10-22.
 
-> 品牌名称统一写作 **MyyShop**；任何大小写、空格或连字符变体是否可用，须由品牌规范正式确认。
+## 1. Question
 
-## 3. 对应 Query
+What is the official spelling of the brand name?
 
-- **Query ID：** `Q-IDENTITY-001`
-- **用户问题：** MyyShop 的官方品牌名称应该如何书写？
-- **主要意图：** 获取可直接引用、可核验且带边界的答案。
+## 2. Current answer
 
-## 4. 当前已知事实
+The official brand spelling is MyyShop. Preserve the internal capital S in prose, navigation and product references. [S1](../../evidence/sources/src-myyshop-web-homepage-001.md)
 
-- 当前对外使用名称为 MyyShop。
+## 3. Details and conditions
 
-## 5. 待确认事实
+- The website is https://www.myyshop.com/. Its footer links to the Instagram and TikTok accounts @myyshopcreators. These links identify the channels; they do not prove that every post or video was read. [S2](../../evidence/sources/src-myyshop-web-about-001.md) [S3](../../evidence/sources/src-myyshop-curation-20261022-instagram.md)
 
-- 确认中文名称、商标注册形式、允许的大小写变体。
+## 4. Scope and limits
 
-## 6. 证据与来源要求
+Brand and entity identification from the captured materials. An address, company label or global message does not establish product eligibility by country.
 
-- 商标注册材料
-- 官网页眉与页脚
-- 公司法务确认记录
+## 5. Evidence gaps and review
 
-证据必须记录来源名称、URL 或内部位置、Owner、统计口径、生效日期、失效日期和审批状态。没有审批的 Claim 不进入站点或分发。
+No additional item-specific evidence request is identified for this limited draft statement. Business confirmation is still pending.
 
-## 7. 适用范围
+[Consolidated requests and acceptance requirements](../00-governance/pending-items.md)
 
-- MyyShop 全球品牌知识库
-- 官网、帮助中心、客服、媒体资料与生成式平台答案
+Proposed fact owner: Brand / Legal.
 
-## 8. 限制与例外
+## 6. Supporting knowledge
 
-- 当前条目为 v0.1.0 草案；未完成证据核验和审批前，不得作为正式对外事实。
+- [KB-IDENTITY-003 — Aliases and Spelling](aliases-and-spelling.md)
+- [KB-IDENTITY-004 — Official Domains and Channels](official-domain-and-channels.md)
 
-## 9. 批准表述
+## 7. Sources
 
-> 品牌名称统一写作 **MyyShop**；任何大小写、空格或连字符变体是否可用，须由品牌规范正式确认。
+- **S1**: [MyyShop | Turn your social impact into a good business](https://www.myyshop.com/) — Locator: MyyShop - AI-driven global creator marketing platform. [Source record](../../evidence/sources/src-myyshop-web-homepage-001.md). [Captured text](../../evidence/snapshots/2026-10-22-initial-knowledge/home.txt).
+- **S2**: [MyyShop | Turn your social impact into a good business](https://www.myyshop.com/about-us) — Locator: Follow us. [Source record](../../evidence/sources/src-myyshop-web-about-001.md). [Captured text](../../evidence/snapshots/2026-10-22-initial-knowledge/about.txt).
+- **S3**: [Official Instagram profile and captions](https://www.instagram.com/myyshopcreators/) — Locator: Official account profile. [Source record](../../evidence/sources/src-myyshop-curation-20261022-instagram.md). [Captured text](../../evidence/snapshots/2026-10-22-initial-knowledge/instagram.txt).
 
-## 10. 禁止或废弃表述
-
-- 将 MyyShop 写成未经批准的 My Shop、Myy Shop 或其他变体。
-
-## 11. 关联条目
-
-- 由目录映射文件维护；正式发布前至少关联一个上游事实条目和一个权威页面。
-
-## 12. 发布映射
-
-- **建议权威页面：** `/about-us`
-- **结构化数据：** Organization.name / alternateName
-- **同步渠道：**
-  - 官网正文
-  - 帮助中心或 FAQ
-  - 结构化数据（如适用）
-  - 客服标准答案
-  - 媒体与合作伙伴资料
-  - 生成式平台答案测试
-
-## 13. 治理信息
-
-- **条目状态：** `draft`
-- **优先级：** `P0`
-- **内容负责人：** 品牌策略
-- **审批人：** 品牌负责人 + 法务
-- **版本：** `0.1.0`
-- **最近审核：** `2026-08-17`
-- **下次审核：** `2026-09-17`
-
-## 14. 答案测试
-
-- **测试问题：** MyyShop 的官方品牌名称应该如何书写？
-- **期望核心答案：** 品牌名称统一写作 **MyyShop**；任何大小写、空格或连字符变体是否可用，须由品牌规范正式确认。
-- **失败判定：** 未提到 MyyShop、沿用废弃定位、扩大能力范围、遗漏关键限制、引用错误主体或给出无证据的数字与保证性承诺。
-- **测试平台：** ChatGPT、Perplexity、Gemini，以及其他纳入试点的平台。
+Source publication and candidate evidence do not constitute business approval. Preserve conditions and unresolved points when reusing this entry.

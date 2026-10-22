@@ -1,103 +1,62 @@
 ---
-record_type: knowledge_entry
-id: KB-RULE-001
-query_id: Q-RULE-001
-title: "注册规则"
+record_type: "knowledge_entry"
+id: "KB-RULE-001"
+query_id: "Q-RULE-001"
+title: "Registration Rules"
 title_en: "Registration Rules"
-domain: 06-commercial-rules
-entry_type: policy_fact
-priority: P0
-status: draft
-version: 0.1.0
-owner: "增长产品 + 法务"
-approver: "待指定"
-canonical_target: "/help/registration"
-last_reviewed: 2026-08-17
-next_review: 2026-09-17
+domain: "06-commercial-rules"
+entry_type: "policy_fact"
+priority: "P0"
+status: "draft"
+version: "0.2.0"
+owner: "Product / Finance / operations"
+approver: "Business confirmation pending"
+canonical_target: "https://www.myyshop.com/"
+last_reviewed: "2026-10-22"
+next_review: "2026-11-22"
+language: "en"
 ---
-# 注册规则 / Registration Rules
 
-## 1. 条目目的
+# Registration Rules
 
-本条目用于统一 MyyShop 关于“注册规则”的事实、表达、证据、适用范围和生成式平台答案，避免官网、帮助中心、结构化数据、客服与外部分发出现冲突。
+[Knowledge home](../README.md) · [中文对照](../translations/zh-CN/06-commercial-rules/registration-rules.md)
 
-## 2. 标准结论
+Language: English (primary). Version: 0.2.0. Status: draft for internal review. Source observation date: 2026-10-22.
 
-> 注册规则必须明确年龄、地区、身份、账号、同意条款和必要资料；不同服务的附加条件应单独列出。
+## 1. Question
 
-## 3. 对应 Query
+What registration steps and conditions are described?
 
-- **Query ID：** `Q-RULE-001`
-- **用户问题：** 注册 MyyShop 需要满足什么条件？
-- **主要意图：** 获取可直接引用、可核验且带边界的答案。
+## 2. Current answer
 
-## 4. 当前已知事实
+The homepage describes signing up with an email address or phone number, verifying email, and connecting social accounts to view offers. It then describes adding an address before applying for opportunities. Completing registration is separate from a campaign application or approval. [S1](../../evidence/sources/src-myyshop-web-homepage-001.md)
 
-- 当前尚未写入已审批注册规则。
+## 3. Details and conditions
 
-## 5. 待确认事实
+- The Creator Service Agreement requires full civil capacity and excludes people subject to relevant trade restrictions or sanctions. It also allows identity checks and restrictions when information or verification is incomplete. [S2](../../evidence/sources/src-myyshop-curation-20261022-terms.md)
+- The Privacy Policy describes users over 18, with an applicable-law exception permitting use without parental or guardian consent, and requires capacity to enter a binding contract. Preserve the exception and legal-capacity requirement rather than inventing a universal age threshold for every jurisdiction. [S3](../../evidence/sources/src-myyshop-curation-20261022-privacy.md)
 
-- 最低年龄
-- 身份验证
-- 手机号或邮箱
-- 社交账号要求
-- 受限地区。
+## 4. Scope and limits
 
-## 6. 证据与来源要求
+Apply the relevant product, campaign, market and current agreement. Keep account registration, campaign approval, payable activity, settlement and external receipt distinct.
 
-- 用户协议
-- 注册流程
-- KYC 或身份规则
-- 法务确认
+## 5. Evidence gaps and review
 
-证据必须记录来源名称、URL 或内部位置、Owner、统计口径、生效日期、失效日期和审批状态。没有审批的 Claim 不进入站点或分发。
+- **G02**: Provide the current product-by-country, social-platform and creator-qualification matrix, including account checks and exceptions; verify availability separately from public navigation.
 
-## 7. 适用范围
+[Consolidated requests and acceptance requirements](../00-governance/pending-items.md)
 
-- MyyShop 全球品牌知识库
-- 官网、帮助中心、客服、媒体资料与生成式平台答案
+Proposed fact owner: Product / Finance / operations.
 
-## 8. 限制与例外
+## 6. Supporting knowledge
 
-- 当前条目为 v0.1.0 草案；未完成证据核验和审批前，不得作为正式对外事实。
+- [KB-SERVICE-002 — Creator Onboarding](../05-products-services/creator-onboarding.md)
+- [KB-RULE-002 — Account Qualification](account-qualification.md)
 
-## 9. 批准表述
+## 7. Sources
 
-> 注册规则必须明确年龄、地区、身份、账号、同意条款和必要资料；不同服务的附加条件应单独列出。
+- **S1**: [MyyShop | Turn your social impact into a good business](https://www.myyshop.com/) — Locator: How to Register as MyyShop Creator. [Source record](../../evidence/sources/src-myyshop-web-homepage-001.md). [Captured text](../../evidence/snapshots/2026-10-22-initial-knowledge/home.txt).
+- **S2**: [MyyShop | Turn your social impact into a good business](https://www.myyshop.com/docs/termsCondition) — Locator: 1.1.1; 1.3.1. [Source record](../../evidence/sources/src-myyshop-curation-20261022-terms.md). [Captured text](../../evidence/snapshots/2026-10-22-initial-knowledge/terms.txt).
+- **S3**: [MyyShop | Turn your social impact into a good business](https://www.myyshop.com/docs/privacy) — Locator: 5. MINORS. [Source record](../../evidence/sources/src-myyshop-curation-20261022-privacy.md). [Captured text](../../evidence/snapshots/2026-10-22-initial-knowledge/privacy.txt).
 
-## 10. 禁止或废弃表述
-
-- 不得扩大适用范围、删除限制条件或把草案描述为已确认事实。
-
-## 11. 关联条目
-
-- 由目录映射文件维护；正式发布前至少关联一个上游事实条目和一个权威页面。
-
-## 12. 发布映射
-
-- **建议权威页面：** `/help/registration`
-- **结构化数据：** FAQ / Terms
-- **同步渠道：**
-  - 官网正文
-  - 帮助中心或 FAQ
-  - 结构化数据（如适用）
-  - 客服标准答案
-  - 媒体与合作伙伴资料
-  - 生成式平台答案测试
-
-## 13. 治理信息
-
-- **条目状态：** `draft`
-- **优先级：** `P0`
-- **内容负责人：** 增长产品 + 法务
-- **审批人：** 待指定
-- **版本：** `0.1.0`
-- **最近审核：** `2026-08-17`
-- **下次审核：** `2026-09-17`
-
-## 14. 答案测试
-
-- **测试问题：** 注册 MyyShop 需要满足什么条件？
-- **期望核心答案：** 注册规则必须明确年龄、地区、身份、账号、同意条款和必要资料；不同服务的附加条件应单独列出。
-- **失败判定：** 未提到 MyyShop、沿用废弃定位、扩大能力范围、遗漏关键限制、引用错误主体或给出无证据的数字与保证性承诺。
-- **测试平台：** ChatGPT、Perplexity、Gemini，以及其他纳入试点的平台。
+Source publication and candidate evidence do not constitute business approval. Preserve conditions and unresolved points when reusing this entry.

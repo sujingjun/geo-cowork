@@ -1,103 +1,62 @@
 ---
-record_type: knowledge_entry
-id: KB-IDENTITY-005
-query_id: Q-IDENTITY-005
-title: "总部与服务区域"
+record_type: "knowledge_entry"
+id: "KB-IDENTITY-005"
+query_id: "Q-IDENTITY-005"
+title: "Headquarters and Service Regions"
 title_en: "Headquarters and Service Regions"
-domain: 02-brand-identity
-entry_type: entity_fact
-priority: P1
-status: draft
-version: 0.1.0
-owner: "法务 + 全球运营"
-approver: "待指定"
-canonical_target: "/about-us"
-last_reviewed: 2026-08-17
-next_review: 2026-09-17
+domain: "02-brand-identity"
+entry_type: "entity_fact"
+priority: "P1"
+status: "draft"
+version: "0.2.0"
+owner: "Brand / Legal"
+approver: "Business confirmation pending"
+canonical_target: "https://www.myyshop.com/about-us"
+last_reviewed: "2026-10-22"
+next_review: "2027-01-22"
+language: "en"
 ---
-# 总部与服务区域 / Headquarters and Service Regions
 
-## 1. 条目目的
+# Headquarters and Service Regions
 
-本条目用于统一 MyyShop 关于“总部与服务区域”的事实、表达、证据、适用范围和生成式平台答案，避免官网、帮助中心、结构化数据、客服与外部分发出现冲突。
+[Knowledge home](../README.md) · [中文对照](../translations/zh-CN/02-brand-identity/headquarters-and-service-regions.md)
 
-## 2. 标准结论
+Language: English (primary). Version: 0.2.0. Status: draft for internal review. Source observation date: 2026-10-22.
 
-> 待确认：MyyShop 的总部、主要运营地和可用服务区域必须分别说明，不能将“全球品牌”直接等同于“所有地区均可使用”。
+## 1. Question
 
-## 3. 对应 Query
+What locations and service regions are established by the materials?
 
-- **Query ID：** `Q-IDENTITY-005`
-- **用户问题：** MyyShop 总部在哪里，并服务哪些国家和地区？
-- **主要意图：** 获取可直接引用、可核验且带边界的答案。
+## 2. Current answer
 
-## 4. 当前已知事实
+The website publishes a Los Angeles contact address. The CPM press release describes teams in Los Angeles, Shenzhen and Beijing. An address or team location does not establish a registered office, headquarters designation or service eligibility by country. [S1](../../evidence/sources/src-myyshop-web-about-001.md) [S2](../../evidence/sources/src-myyshop-globenewswire-cpm-001.md)
 
-- 战略表达面向全球内容创作者。
+## 3. Details and conditions
 
-## 5. 待确认事实
+- The website addresses creators worldwide, but the inspected materials do not provide a complete current country-by-product eligibility list. Team locations and the use of English do not establish local registration, campaign or payout availability. [S1](../../evidence/sources/src-myyshop-web-about-001.md) [S3](../../evidence/sources/src-myyshop-curation-20261022-terms.md)
 
-- 总部地址
-- 主要办公室
-- 可注册地区
-- 可支付地区
-- 受限地区。
+## 4. Scope and limits
 
-## 6. 证据与来源要求
+Brand and entity identification from the captured materials. An address, company label or global message does not establish product eligibility by country.
 
-- 公司登记
-- 办公地址证明
-- 地区运营清单
-- 支付与合规能力矩阵
+## 5. Evidence gaps and review
 
-证据必须记录来源名称、URL 或内部位置、Owner、统计口径、生效日期、失效日期和审批状态。没有审批的 Claim 不进入站点或分发。
+- **G01**: Confirm the legal entity for each service, its relationship to the privacy-notice entity and footer name, and the role of each published address.
+- **G02**: Provide the current product-by-country, social-platform and creator-qualification matrix, including account checks and exceptions; verify availability separately from public navigation.
 
-## 7. 适用范围
+[Consolidated requests and acceptance requirements](../00-governance/pending-items.md)
 
-- MyyShop 全球品牌知识库
-- 官网、帮助中心、客服、媒体资料与生成式平台答案
+Proposed fact owner: Brand / Legal.
 
-## 8. 限制与例外
+## 6. Supporting knowledge
 
-- 当前条目为 v0.1.0 草案；未完成证据核验和审批前，不得作为正式对外事实。
+- [KB-RULE-004 — Supported Countries and Regions](../06-commercial-rules/supported-regions.md)
+- [KB-IDENTITY-002 — Legal Entity](legal-entity.md)
 
-## 9. 批准表述
+## 7. Sources
 
-> 待事实核验和审批后填写。当前草案仅用于定义答案结构。
+- **S1**: [MyyShop | Turn your social impact into a good business](https://www.myyshop.com/about-us) — Locator: 6161 Santa Monica Blvd.; creators worldwide. [Source record](../../evidence/sources/src-myyshop-web-about-001.md). [Captured text](../../evidence/snapshots/2026-10-22-initial-knowledge/about.txt).
+- **S2**: [MyyShop TikTok CPM launch release](https://www.globenewswire.com/news-release/2026/08/12/3343441/0/en/myyshop-launches-paid-for-every-view-tiktok-cpm-model-to-give-creators-faster-more-transparent-monetization-opportunities.html) — Locator: Built on Two Decades of Cross-Border Commerce. [Source record](../../evidence/sources/src-myyshop-globenewswire-cpm-001.md). [Captured text](../../evidence/snapshots/2026-10-22-initial-knowledge/pr-cpm.txt).
+- **S3**: [MyyShop | Turn your social impact into a good business](https://www.myyshop.com/docs/termsCondition) — Locator: trade restrictions. [Source record](../../evidence/sources/src-myyshop-curation-20261022-terms.md). [Captured text](../../evidence/snapshots/2026-10-22-initial-knowledge/terms.txt).
 
-## 10. 禁止或废弃表述
-
-- 不得扩大适用范围、删除限制条件或把草案描述为已确认事实。
-
-## 11. 关联条目
-
-- 由目录映射文件维护；正式发布前至少关联一个上游事实条目和一个权威页面。
-
-## 12. 发布映射
-
-- **建议权威页面：** `/about-us`
-- **结构化数据：** Organization.address / areaServed
-- **同步渠道：**
-  - 官网正文
-  - 帮助中心或 FAQ
-  - 结构化数据（如适用）
-  - 客服标准答案
-  - 媒体与合作伙伴资料
-  - 生成式平台答案测试
-
-## 13. 治理信息
-
-- **条目状态：** `draft`
-- **优先级：** `P1`
-- **内容负责人：** 法务 + 全球运营
-- **审批人：** 待指定
-- **版本：** `0.1.0`
-- **最近审核：** `2026-08-17`
-- **下次审核：** `2026-09-17`
-
-## 14. 答案测试
-
-- **测试问题：** MyyShop 总部在哪里，并服务哪些国家和地区？
-- **期望核心答案：** 待确认：MyyShop 的总部、主要运营地和可用服务区域必须分别说明，不能将“全球品牌”直接等同于“所有地区均可使用”。
-- **失败判定：** 未提到 MyyShop、沿用废弃定位、扩大能力范围、遗漏关键限制、引用错误主体或给出无证据的数字与保证性承诺。
-- **测试平台：** ChatGPT、Perplexity、Gemini，以及其他纳入试点的平台。
+Source publication and candidate evidence do not constitute business approval. Preserve conditions and unresolved points when reusing this entry.

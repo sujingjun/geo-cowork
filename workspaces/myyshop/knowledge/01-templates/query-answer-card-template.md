@@ -1,58 +1,21 @@
----
-record_type: knowledge_entry
-id: KB-ANSWER-000
-query_id: Q-ANSWER-000
-title: "标准答案卡标题"
-title_en: "Answer Card Title"
-domain: 10-query-answer-cards
-entry_type: query_answer_card
-priority: P0
-status: draft
-version: 0.1.0
-owner: "GEO 运营 + 对应业务负责人"
-approver: "品牌负责人 + 对应事实负责人"
-canonical_target: "/proposed-path"
-last_reviewed: YYYY-MM-DD
-next_review: YYYY-MM-DD
----
+# English primary derived-answer template
 
-# 标准答案卡标题
+This template describes a legacy draft answer entry, not an approved canonical Answer Card.
 
-## 用户 Query
+## Structure
 
-> 用户的真实问题。
+Use the same seven sections as the knowledge-entry template. The current answer should answer the question directly, followed by only the facts needed to explain it. Cite supporting source-fact entries and preserve their conditions. An answer may reuse several facts; several answers may reuse one fact.
 
-## 直接答案
+## Required distinctions
 
-> 先用 1—3 句直接回答，不绕开问题。
+- Account registration, campaign eligibility, approval, payable activity and actual receipt are different steps.
+- TikTok CPM video views and MyyFinds product-page views are different mechanisms.
+- A current public description is not proof of runtime delivery, universal availability or a guaranteed outcome.
+- Missing facts remain unknown. Do not fill them from industry assumptions.
+- Use current positioning. Do not treat a lifecycle-platform transformation as decided.
 
-## 支撑 Claim
+## Translation and later formal use
 
-1. Claim 1 → 关联知识条目与证据。
-2. Claim 2 → 关联知识条目与证据。
+The Chinese copy must reproduce the full meaning, evidence and limitations, with the English source version and hash. Do not create a second knowledge_entry object. Before formal ingestion, follow the existing Answer Card query_refs, claim_versions and approval contracts; this draft does not populate or approve those objects.
 
-## 必须保留的条件与限制
-
-- 条件 1。
-- 限制 1。
-
-## 不允许出现的答案
-
-- 废弃定位。
-- 无证据数字。
-- 保证性承诺。
-
-## 权威来源
-
-- 权威页面：
-- 关联知识条目：
-- 外部可引用来源：
-
-## 平台测试记录
-
-| 平台 | 是否提及 MyyShop | 引用来源 | 核心事实正确 | 旧定位残留 | 修复任务 |
-|---|---|---|---|---|---|
-| ChatGPT | 待测 | 待测 | 待测 | 待测 | 待补充 |
-| Claude | 待测 | 待测 | 待测 | 待测 | 待补充 |
-| Perplexity | 待测 | 待测 | 待测 | 待测 | 待补充 |
-| Gemini | 待测 | 待测 | 待测 | 待测 | 待补充 |
+[中文说明](../translations/zh-CN/01-templates/query-answer-card-template.md)

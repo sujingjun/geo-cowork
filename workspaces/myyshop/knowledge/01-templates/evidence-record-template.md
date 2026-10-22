@@ -1,50 +1,16 @@
-# 证据记录模板
+# Evidence capture and citation checklist
 
-## 基本信息
+Use the existing Source and Evidence contracts for machine-readable records. This checklist does not introduce a new record type.
 
-- **Evidence ID：** `EV-0000`
-- **名称：**
-- **来源类型：** 法律文件 / 战略文件 / 产品数据 / 财务数据 / 运营记录 / 用户案例 / 第三方资料
-- **Owner：**
-- **可信等级：** A / B / C / D
-- **审批状态：** draft / verifying / approved / expired
+- Identify the original file, page or post, the publishing entity and any author/placement/syndication relationship.
+- Preserve original-file hashes or captured bytes; identify normalized text separately from raw HTML and media.
+- Record publication, effective and capture dates separately. Unknown dates remain unknown.
+- Identify the exact paragraph, section, cell, image or caption that supports the statement.
+- State the product, audience, market, measurement period and exceptions that limit support.
+- Record unavailable, partial, redirected or unreviewed portions. A successful HTTP response is not complete reading.
+- Keep related publications from one press release together; do not count them as independent corroboration.
+- Evidence created during curation remains candidate unless an actual human decision supports another state.
 
-## 来源位置
+English and Chinese entries use the same evidence records. Do not create another source merely because the explanatory text was translated.
 
-- **公开 URL：**
-- **内部系统或路径：**
-- **访问权限：**
-- **原始文件版本：**
-
-## 支撑范围
-
-- **关联知识条目：**
-- **支撑 Claim：**
-- **适用用户：**
-- **适用产品：**
-- **适用地区：**
-- **生效日期：**
-- **失效日期：**
-
-## 数据口径
-
-- **统计对象：**
-- **时间范围：**
-- **去重方式：**
-- **排除项：**
-- **查询或报表：**
-- **复现步骤：**
-
-## 风险与限制
-
-- 样本偏差：
-- 数据缺失：
-- 外部依赖：
-- 不可用于支持的表述：
-
-## 审批
-
-- **事实负责人：**
-- **数据或法务审核：**
-- **批准日期：**
-- **下次审核：**
+[中文说明](../translations/zh-CN/01-templates/evidence-record-template.md)

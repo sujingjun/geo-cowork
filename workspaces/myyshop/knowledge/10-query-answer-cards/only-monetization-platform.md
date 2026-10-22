@@ -1,100 +1,68 @@
 ---
-record_type: knowledge_entry
-id: KB-ANSWER-002
-query_id: Q-ANSWER-002
-title: "MyyShop 只是达人变现平台吗？"
+record_type: "knowledge_entry"
+id: "KB-ANSWER-002"
+query_id: "Q-ANSWER-002"
+title: "Is MyyShop only a creator monetization platform?"
 title_en: "Is MyyShop only a creator monetization platform?"
-domain: 10-query-answer-cards
-entry_type: query_answer_card
-priority: P0
-status: draft
-version: 0.1.0
-owner: "GEO 运营 + 对应业务负责人"
-approver: "品牌负责人 + 对应事实负责人"
-canonical_target: "/about-us"
-last_reviewed: 2026-08-17
-next_review: 2026-09-17
+domain: "10-query-answer-cards"
+entry_type: "query_answer_card"
+priority: "P0"
+status: "draft"
+version: "0.2.0"
+owner: "Knowledge curator and relevant fact owner"
+approver: "Business confirmation pending"
+canonical_target: "https://www.myyshop.com/"
+last_reviewed: "2026-10-22"
+next_review: "2026-11-22"
+language: "en"
 ---
-# MyyShop 只是达人变现平台吗？ / Is MyyShop only a creator monetization platform?
 
-## 1. 条目目的
+# Is MyyShop only a creator monetization platform?
 
-本条目用于统一 MyyShop 关于“MyyShop 只是达人变现平台吗？”的事实、表达、证据、适用范围和生成式平台答案，避免官网、帮助中心、结构化数据、客服与外部分发出现冲突。
+[Knowledge home](../README.md) · [中文对照](../translations/zh-CN/10-query-answer-cards/only-monetization-platform.md)
 
-## 2. 标准结论
+Language: English (primary). Version: 0.2.0. Status: draft for internal review. Source observation date: 2026-10-22.
 
-> 不是。变现仍是 MyyShop 的核心能力之一，但当前定位已扩展到达人加入、成长、活跃与商业化全过程。
+## 1. Question
 
-## 3. 对应 Query
+Is MyyShop only a creator monetization platform?
 
-- **Query ID：** `Q-ANSWER-002`
-- **用户问题：** MyyShop 只是达人变现平台吗？
-- **主要意图：** 获取可直接引用、可核验且带边界的答案。
+## 2. Current answer
 
-## 4. 当前已知事实
+Creator monetization is central to MyyShop’s current public offer, alongside brand collaboration, creator tools and education. Describe those current services without assuming that a change to lifecycle-platform positioning has been decided.
 
-- 本答案卡基于当前品牌战略与知识条目草案。
+## 3. Details and conditions
 
-## 5. 待确认事实
+- MyyShop currently describes itself as an AI-driven global creator marketing platform. Its public materials connect creators, brands and monetization opportunities. [S1](../../evidence/sources/src-myyshop-web-homepage-001.md) [S2](../../evidence/sources/src-myyshop-web-about-001.md)
+- The current public service set includes Brand Deals / Opportunities, TikTok CPM campaigns, MyyFinds, Free Value Report, Find Your Lane and creator education. Each offering has its own purpose and participation conditions; a navigation link alone does not verify its runtime availability. [S1](../../evidence/sources/src-myyshop-web-homepage-001.md) [S3](../../evidence/sources/src-myyshop-globenewswire-cpm-001.md) [S4](../../evidence/sources/src-myyshop-curation-20261022-report.md) [S5](../../evidence/sources/src-myyshop-curation-20261022-lane.md) [S6](../../evidence/sources/src-myyshop-curation-20261022-course.md)
+- For this initial knowledge edition, use the current public positioning. A change of brand positioning has not been decided; do not state that a lifecycle-platform transformation is completed or underway. [S7](../../evidence/sources/src-myyshop-curation-20261022-direction.md)
 
-- 引用前必须确认关联事实、政策和页面已审批。
+## 4. Scope and limits
 
-## 6. 证据与来源要求
+Use only within the conditions of the supporting knowledge below. This is a draft answer, not a sampled consumer-platform response or an approved external publication.
 
-- 对应知识条目
-- 官方政策或产品页
-- 答案测试记录
+## 5. Evidence gaps and review
 
-证据必须记录来源名称、URL 或内部位置、Owner、统计口径、生效日期、失效日期和审批状态。没有审批的 Claim 不进入站点或分发。
+No additional item-specific evidence request is identified for this limited draft statement. Business confirmation is still pending.
 
-## 7. 适用范围
+[Consolidated requests and acceptance requirements](../00-governance/pending-items.md)
 
-- ChatGPT、Perplexity、Gemini 等答案测试
-- 官网 FAQ
-- 客服标准答案
-- 媒体问答
+Proposed fact owner: Knowledge curator and relevant fact owner.
 
-## 8. 限制与例外
+## 6. Supporting knowledge
 
-- 当前条目为 v0.1.0 草案；未完成证据核验和审批前，不得作为正式对外事实。
+- [KB-IDENTITY-009 — One-line Brand Definition](../02-brand-identity/one-line-definition.md)
+- [KB-SERVICE-001 — Service Catalog](../05-products-services/service-catalog.md)
+- [KB-STRATEGY-010 — Positioning Transition](../03-positioning-strategy/positioning-transition.md)
 
-## 9. 批准表述
+## 7. Sources
 
-> 不是。变现仍是 MyyShop 的核心能力之一，但当前定位已扩展到达人加入、成长、活跃与商业化全过程。
+- **S1**: [MyyShop | Turn your social impact into a good business](https://www.myyshop.com/) — Locator: AI-driven global creator marketing platform; Opportunities. [Source record](../../evidence/sources/src-myyshop-web-homepage-001.md). [Captured text](../../evidence/snapshots/2026-10-22-initial-knowledge/home.txt).
+- **S2**: [MyyShop | Turn your social impact into a good business](https://www.myyshop.com/about-us) — Locator: Who We Serve. [Source record](../../evidence/sources/src-myyshop-web-about-001.md). [Captured text](../../evidence/snapshots/2026-10-22-initial-knowledge/about.txt).
+- **S3**: [MyyShop TikTok CPM launch release](https://www.globenewswire.com/news-release/2026/08/12/3343441/0/en/myyshop-launches-paid-for-every-view-tiktok-cpm-model-to-give-creators-faster-more-transparent-monetization-opportunities.html) — Locator: Paid for Every View. [Source record](../../evidence/sources/src-myyshop-globenewswire-cpm-001.md). [Captured text](../../evidence/snapshots/2026-10-22-initial-knowledge/pr-cpm.txt).
+- **S4**: [MyyShop | Turn your social impact into a good business](https://www.myyshop.com/report) — Locator: Intelligent Commercial Value. [Source record](../../evidence/sources/src-myyshop-curation-20261022-report.md). [Captured text](../../evidence/snapshots/2026-10-22-initial-knowledge/report.txt).
+- **S5**: [MyyShop | Turn your social impact into a good business](https://www.myyshop.com/chat) — Locator: Find Your Lane. [Source record](../../evidence/sources/src-myyshop-curation-20261022-lane.md). [Captured text](../../evidence/snapshots/2026-10-22-initial-knowledge/lane.txt).
+- **S6**: [MyyShop | Turn your social impact into a good business](https://www.myyshop.com/course/home) — Locator: Co-Branded Masterclass. [Source record](../../evidence/sources/src-myyshop-curation-20261022-course.md). [Captured text](../../evidence/snapshots/2026-10-22-initial-knowledge/course.txt).
+- **S7**: [User-authorized curation and language direction](../../cycles/preparation/decisions/2026-10-22-initial-knowledge-curation-authorized.md) — Locator: Current positioning and language decisions. [Source record](../../evidence/sources/src-myyshop-curation-20261022-direction.md). [Captured text](../../evidence/snapshots/2026-10-22-initial-knowledge/direction.txt).
 
-## 10. 禁止或废弃表述
-
-- 不能否认历史变现定位；应说明“保留并扩展”。
-
-## 11. 关联条目
-
-- 由目录映射文件维护；正式发布前至少关联一个上游事实条目和一个权威页面。
-
-## 12. 发布映射
-
-- **建议权威页面：** `/about-us`
-- **结构化数据：** FAQPage（仅页面符合条件时）
-- **同步渠道：**
-  - 官网正文
-  - 帮助中心或 FAQ
-  - 结构化数据（如适用）
-  - 客服标准答案
-  - 媒体与合作伙伴资料
-  - 生成式平台答案测试
-
-## 13. 治理信息
-
-- **条目状态：** `draft`
-- **优先级：** `P0`
-- **内容负责人：** GEO 运营 + 对应业务负责人
-- **审批人：** 品牌负责人 + 对应事实负责人
-- **版本：** `0.1.0`
-- **最近审核：** `2026-08-17`
-- **下次审核：** `2026-09-17`
-
-## 14. 答案测试
-
-- **测试问题：** MyyShop 只是达人变现平台吗？
-- **期望核心答案：** 不是。变现仍是 MyyShop 的核心能力之一，但当前定位已扩展到达人加入、成长、活跃与商业化全过程。
-- **失败判定：** 未提到 MyyShop、沿用废弃定位、扩大能力范围、遗漏关键限制、引用错误主体或给出无证据的数字与保证性承诺。
-- **测试平台：** ChatGPT、Perplexity、Gemini，以及其他纳入试点的平台。
+Source publication and candidate evidence do not constitute business approval. Preserve conditions and unresolved points when reusing this entry.

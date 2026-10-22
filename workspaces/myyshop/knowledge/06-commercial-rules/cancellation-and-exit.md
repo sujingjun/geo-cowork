@@ -1,102 +1,63 @@
 ---
-record_type: knowledge_entry
-id: KB-RULE-013
-query_id: Q-RULE-013
-title: "取消、退出与账号关闭"
+record_type: "knowledge_entry"
+id: "KB-RULE-013"
+query_id: "Q-RULE-013"
+title: "Cancellation, Exit and Account Closure"
 title_en: "Cancellation, Exit and Account Closure"
-domain: 06-commercial-rules
-entry_type: policy_fact
-priority: P0
-status: draft
-version: 0.1.0
-owner: "产品运营 + 法务"
-approver: "待指定"
-canonical_target: "/help/cancellation-and-exit"
-last_reviewed: 2026-08-17
-next_review: 2026-09-17
+domain: "06-commercial-rules"
+entry_type: "policy_fact"
+priority: "P0"
+status: "draft"
+version: "0.2.0"
+owner: "Product / Finance / operations"
+approver: "Business confirmation pending"
+canonical_target: "https://www.myyshop.com/docs/privacy"
+last_reviewed: "2026-10-22"
+next_review: "2026-11-22"
+language: "en"
 ---
-# 取消、退出与账号关闭 / Cancellation, Exit and Account Closure
 
-## 1. 条目目的
+# Cancellation, Exit and Account Closure
 
-本条目用于统一 MyyShop 关于“取消、退出与账号关闭”的事实、表达、证据、适用范围和生成式平台答案，避免官网、帮助中心、结构化数据、客服与外部分发出现冲突。
+[Knowledge home](../README.md) · [中文对照](../translations/zh-CN/06-commercial-rules/cancellation-and-exit.md)
 
-## 2. 标准结论
+Language: English (primary). Version: 0.2.0. Status: draft for internal review. Source observation date: 2026-10-22.
 
-> 取消与退出规则应说明可取消时间、已产生义务、未结算收益、数据保留、账号删除和恢复条件。
+## 1. Question
 
-## 3. 对应 Query
+How can a creator leave or close an account?
 
-- **Query ID：** `Q-RULE-013`
-- **用户问题：** 创作者如何取消活动、退出服务或关闭账号？
-- **主要意图：** 获取可直接引用、可核验且带边界的答案。
+## 2. Current answer
 
-## 4. 当前已知事实
+The Privacy Policy directs account-cancellation requests to the published contact channel and requires identity verification and satisfaction of Account Cancellation Instructions. Those instructions and the effects on active orders, balances and data retention were not fully supplied in this batch. [S1](../../evidence/sources/src-myyshop-curation-20261022-privacy.md)
 
-- 退出机制是全生命周期服务的必要边界。
+## 3. Details and conditions
 
-## 5. 待确认事实
+- The policy describes retention according to need and legal, regulatory, tax, accounting or dispute-related requirements, with longer retention possible in stated circumstances. It also describes international transfers, including creator data stored in the US. Do not replace these conditions with immediate deletion, a fixed retention period or a local-storage guarantee. [S1](../../evidence/sources/src-myyshop-curation-20261022-privacy.md)
+- The agreement contains service limitations and describes the service as available subject to its terms. The CPM release states that views fluctuate and budgets are limited. These materials do not support guarantees of earnings, campaign acceptance, uninterrupted service or freedom from all risk. [S2](../../evidence/sources/src-myyshop-curation-20261022-terms.md) [S3](../../evidence/sources/src-myyshop-globenewswire-cpm-001.md)
 
-- 活动取消规则
-- 账号注销流程
-- 数据删除时限
-- 未完成付款。
+## 4. Scope and limits
 
-## 6. 证据与来源要求
+Apply the relevant product, campaign, market and current agreement. Keep account registration, campaign approval, payable activity, settlement and external receipt distinct.
 
-- 用户协议
-- 隐私政策
-- 客服 SOP
-- 财务流程
+## 5. Evidence gaps and review
 
-证据必须记录来源名称、URL 或内部位置、Owner、统计口径、生效日期、失效日期和审批状态。没有审批的 Claim 不进入站点或分发。
+- **G07**: Confirm current governing agreements and applicability, including content licence, social-post retention, complaints, cancellation and advertising-disclosure procedures.
+- **G08**: Verify the operational consent, access, deletion, account-cancellation and retention routes described by the Privacy Policy, without inventing response times or universal data-location promises.
 
-## 7. 适用范围
+[Consolidated requests and acceptance requirements](../00-governance/pending-items.md)
 
-- MyyShop 全球品牌知识库
-- 官网、帮助中心、客服、媒体资料与生成式平台答案
+Proposed fact owner: Product / Finance / operations.
 
-## 8. 限制与例外
+## 6. Supporting knowledge
 
-- 当前条目为 v0.1.0 草案；未完成证据核验和审批前，不得作为正式对外事实。
+- [KB-TRUST-001 — Privacy Principles](../07-trust-safety/privacy-policy.md)
+- [KB-RULE-014 — Disputes and Appeals](disputes-and-appeals.md)
 
-## 9. 批准表述
+## 7. Sources
 
-> 取消与退出规则应说明可取消时间、已产生义务、未结算收益、数据保留、账号删除和恢复条件。
+- **S1**: [MyyShop | Turn your social impact into a good business](https://www.myyshop.com/docs/privacy) — Locator: If you need to cancel your account; retain your Personal Data; creators' data in the US. [Source record](../../evidence/sources/src-myyshop-curation-20261022-privacy.md). [Captured text](../../evidence/snapshots/2026-10-22-initial-knowledge/privacy.txt).
+- **S2**: [MyyShop | Turn your social impact into a good business](https://www.myyshop.com/docs/termsCondition) — Locator: 6.1; 6.2. [Source record](../../evidence/sources/src-myyshop-curation-20261022-terms.md). [Captured text](../../evidence/snapshots/2026-10-22-initial-knowledge/terms.txt).
+- **S3**: [MyyShop TikTok CPM launch release](https://www.globenewswire.com/news-release/2026/08/12/3343441/0/en/myyshop-launches-paid-for-every-view-tiktok-cpm-model-to-give-creators-faster-more-transparent-monetization-opportunities.html) — Locator: Creator income can never be completely guaranteed. [Source record](../../evidence/sources/src-myyshop-globenewswire-cpm-001.md). [Captured text](../../evidence/snapshots/2026-10-22-initial-knowledge/pr-cpm.txt).
 
-## 10. 禁止或废弃表述
-
-- 不得扩大适用范围、删除限制条件或把草案描述为已确认事实。
-
-## 11. 关联条目
-
-- 由目录映射文件维护；正式发布前至少关联一个上游事实条目和一个权威页面。
-
-## 12. 发布映射
-
-- **建议权威页面：** `/help/cancellation-and-exit`
-- **结构化数据：** FAQ / Terms
-- **同步渠道：**
-  - 官网正文
-  - 帮助中心或 FAQ
-  - 结构化数据（如适用）
-  - 客服标准答案
-  - 媒体与合作伙伴资料
-  - 生成式平台答案测试
-
-## 13. 治理信息
-
-- **条目状态：** `draft`
-- **优先级：** `P0`
-- **内容负责人：** 产品运营 + 法务
-- **审批人：** 待指定
-- **版本：** `0.1.0`
-- **最近审核：** `2026-08-17`
-- **下次审核：** `2026-09-17`
-
-## 14. 答案测试
-
-- **测试问题：** 创作者如何取消活动、退出服务或关闭账号？
-- **期望核心答案：** 取消与退出规则应说明可取消时间、已产生义务、未结算收益、数据保留、账号删除和恢复条件。
-- **失败判定：** 未提到 MyyShop、沿用废弃定位、扩大能力范围、遗漏关键限制、引用错误主体或给出无证据的数字与保证性承诺。
-- **测试平台：** ChatGPT、Perplexity、Gemini，以及其他纳入试点的平台。
+Source publication and candidate evidence do not constitute business approval. Preserve conditions and unresolved points when reusing this entry.

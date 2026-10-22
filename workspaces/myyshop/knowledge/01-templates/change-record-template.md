@@ -1,43 +1,17 @@
-# 知识变更记录模板
+# Knowledge change record template
 
-## 变更信息
+Record the change date, entry IDs, previous and new versions, changed statements, sources and reason. Separate fact changes from translation-only wording corrections.
 
-- **Change ID：** `CHG-YYYYMMDD-000`
-- **发起人：**
-- **日期：**
-- **关联知识条目：**
-- **变更类型：** 新增 / 修正 / 范围调整 / 数据更新 / 废弃 / 紧急下线
+## Review information
 
-## 变更原因
+Record the actual decision, affected scope and version, reviewer and unresolved evidence. An editing instruction, published page or successful validation does not authorize an invented approval.
 
-说明触发变更的业务、政策、产品、数据、站点或生成式平台答案问题。
+## Downstream impact
 
-## 变更前
+List affected answers, related facts, public-page references and any later formal objects. Preserve frozen inputs and historical assessments; a reassessment uses an explicit knowledge version and is not a new platform sample.
 
-> 原标准结论、范围、证据或状态。
+## Bilingual completion
 
-## 变更后
+Record English SHA-256, Chinese source version/hash and translation review date. Mark an incomplete counterpart stale. Refresh the coverage register and run the localization and link checks. External publication or Feishu synchronization is recorded only when separately authorized and actually completed.
 
-> 新标准结论、范围、证据或状态。
-
-## 影响评估
-
-- 官网页面：
-- canonical：
-- Schema：
-- sitemap：
-- 帮助中心：
-- 客服答案：
-- 社交与媒体资料：
-- 生成式平台测试：
-- 业务指标：
-
-## 审批与发布
-
-- **事实负责人：**
-- **品牌审核：**
-- **法务或数据审核：**
-- **批准日期：**
-- **计划发布日期：**
-- **实际发布日期：**
-- **回滚方案：**
+[中文说明](../translations/zh-CN/01-templates/change-record-template.md)

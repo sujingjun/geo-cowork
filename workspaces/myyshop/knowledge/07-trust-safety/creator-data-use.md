@@ -1,102 +1,63 @@
 ---
-record_type: knowledge_entry
-id: KB-TRUST-002
-query_id: Q-TRUST-002
-title: "达人数据使用说明"
+record_type: "knowledge_entry"
+id: "KB-TRUST-002"
+query_id: "Q-TRUST-002"
+title: "Creator Data Use"
 title_en: "Creator Data Use"
-domain: 07-trust-safety
-entry_type: trust_fact
-priority: P0
-status: draft
-version: 0.1.0
-owner: "隐私法务 + 数据治理"
-approver: "待指定"
-canonical_target: "/privacy/creator-data"
-last_reviewed: 2026-08-17
-next_review: 2026-09-17
+domain: "07-trust-safety"
+entry_type: "trust_fact"
+priority: "P0"
+status: "draft"
+version: "0.2.0"
+owner: "Legal / Privacy / Trust and Safety"
+approver: "Business confirmation pending"
+canonical_target: "https://www.myyshop.com/docs/privacy"
+last_reviewed: "2026-10-22"
+next_review: "2026-11-22"
+language: "en"
 ---
-# 达人数据使用说明 / Creator Data Use
 
-## 1. 条目目的
+# Creator Data Use
 
-本条目用于统一 MyyShop 关于“达人数据使用说明”的事实、表达、证据、适用范围和生成式平台答案，避免官网、帮助中心、结构化数据、客服与外部分发出现冲突。
+[Knowledge home](../README.md) · [中文对照](../translations/zh-CN/07-trust-safety/creator-data-use.md)
 
-## 2. 标准结论
+Language: English (primary). Version: 0.2.0. Status: draft for internal review. Source observation date: 2026-10-22.
 
-> 创作者数据只能用于已披露且有合法依据的账号服务、分析、匹配、风控、支付和改进目的；不同用途需说明是否可选择退出。
+## 1. Question
 
-## 3. 对应 Query
+What creator data does the policy describe collecting and using?
 
-- **Query ID：** `Q-TRUST-002`
-- **用户问题：** MyyShop 会如何使用创作者账号、内容和表现数据？
-- **主要意图：** 获取可直接引用、可核验且带边界的答案。
+## 2. Current answer
 
-## 4. 当前已知事实
+For creator sign-up and use, the policy lists contact and identity-verification information, payment-related information, connected social accounts and campaign data. It describes using these for account operations, matching, qualification assessment, payment settlement, support and fraud detection. [S1](../../evidence/sources/src-myyshop-curation-20261022-privacy.md)
 
-- 成长、匹配与商业化可能依赖创作者数据。
+## 3. Details and conditions
 
-## 5. 待确认事实
+- Social-account authorization is described as a distinct part of login, evaluation and content management. Users should inspect the actual authorization screen and third-party terms; a platform registration does not establish unlimited permission to use all social-account data. [S1](../../evidence/sources/src-myyshop-curation-20261022-privacy.md) [S2](../../evidence/sources/src-myyshop-curation-20261022-terms.md)
+- The Privacy Policy describes manual or automated opportunity recommendations using account and activity information. It also describes rights to seek an explanation and object to solely automated decisions, including possible human review. The actual request workflow and response performance were not tested. [S1](../../evidence/sources/src-myyshop-curation-20261022-privacy.md)
+- The policy describes retention according to need and legal, regulatory, tax, accounting or dispute-related requirements, with longer retention possible in stated circumstances. It also describes international transfers, including creator data stored in the US. Do not replace these conditions with immediate deletion, a fixed retention period or a local-storage guarantee. [S1](../../evidence/sources/src-myyshop-curation-20261022-privacy.md)
 
-- 各字段用途
-- 第三方共享
-- 模型训练使用
-- 数据导出与删除。
+## 4. Scope and limits
 
-## 6. 证据与来源要求
+This summarizes the published policy and its limits. Policy wording, actual operations and jurisdiction-specific applicability require separate verification.
 
-- 数据字典
-- 隐私政策
-- 授权界面
-- 处理活动记录
+## 5. Evidence gaps and review
 
-证据必须记录来源名称、URL 或内部位置、Owner、统计口径、生效日期、失效日期和审批状态。没有审批的 Claim 不进入站点或分发。
+- **G08**: Verify the operational consent, access, deletion, account-cancellation and retention routes described by the Privacy Policy, without inventing response times or universal data-location promises.
+- **G17**: Confirm AI capability, data provenance, model/measurement claims and explanation or human-review procedures before making stronger technical or effectiveness statements.
 
-## 7. 适用范围
+[Consolidated requests and acceptance requirements](../00-governance/pending-items.md)
 
-- MyyShop 全球品牌知识库
-- 官网、帮助中心、客服、媒体资料与生成式平台答案
+Proposed fact owner: Legal / Privacy / Trust and Safety.
 
-## 8. 限制与例外
+## 6. Supporting knowledge
 
-- 当前条目为 v0.1.0 草案；未完成证据核验和审批前，不得作为正式对外事实。
+- [KB-TRUST-003 — AI Use and Explainability](ai-use.md)
+- [KB-TRUST-005 — User Authorization](user-authorization.md)
 
-## 9. 批准表述
+## 7. Sources
 
-> 创作者数据只能用于已披露且有合法依据的账号服务、分析、匹配、风控、支付和改进目的；不同用途需说明是否可选择退出。
+- **S1**: [MyyShop | Turn your social impact into a good business](https://www.myyshop.com/docs/privacy) — Locator: 1.4 When you sign up as a “creator”; authorization page; automated decision-making; retain your Personal Data; creators' data in the US. [Source record](../../evidence/sources/src-myyshop-curation-20261022-privacy.md). [Captured text](../../evidence/snapshots/2026-10-22-initial-knowledge/privacy.txt).
+- **S2**: [MyyShop | Turn your social impact into a good business](https://www.myyshop.com/docs/termsCondition) — Locator: 1.3.2. [Source record](../../evidence/sources/src-myyshop-curation-20261022-terms.md). [Captured text](../../evidence/snapshots/2026-10-22-initial-knowledge/terms.txt).
 
-## 10. 禁止或废弃表述
-
-- 不得扩大适用范围、删除限制条件或把草案描述为已确认事实。
-
-## 11. 关联条目
-
-- 由目录映射文件维护；正式发布前至少关联一个上游事实条目和一个权威页面。
-
-## 12. 发布映射
-
-- **建议权威页面：** `/privacy/creator-data`
-- **结构化数据：** PrivacyPolicy
-- **同步渠道：**
-  - 官网正文
-  - 帮助中心或 FAQ
-  - 结构化数据（如适用）
-  - 客服标准答案
-  - 媒体与合作伙伴资料
-  - 生成式平台答案测试
-
-## 13. 治理信息
-
-- **条目状态：** `draft`
-- **优先级：** `P0`
-- **内容负责人：** 隐私法务 + 数据治理
-- **审批人：** 待指定
-- **版本：** `0.1.0`
-- **最近审核：** `2026-08-17`
-- **下次审核：** `2026-09-17`
-
-## 14. 答案测试
-
-- **测试问题：** MyyShop 会如何使用创作者账号、内容和表现数据？
-- **期望核心答案：** 创作者数据只能用于已披露且有合法依据的账号服务、分析、匹配、风控、支付和改进目的；不同用途需说明是否可选择退出。
-- **失败判定：** 未提到 MyyShop、沿用废弃定位、扩大能力范围、遗漏关键限制、引用错误主体或给出无证据的数字与保证性承诺。
-- **测试平台：** ChatGPT、Perplexity、Gemini，以及其他纳入试点的平台。
+Source publication and candidate evidence do not constitute business approval. Preserve conditions and unresolved points when reusing this entry.

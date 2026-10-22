@@ -1,102 +1,65 @@
 ---
-record_type: knowledge_entry
-id: KB-RULE-009
-query_id: Q-RULE-009
-title: "汇率、税费与处理费用"
+record_type: "knowledge_entry"
+id: "KB-RULE-009"
+query_id: "Q-RULE-009"
+title: "Exchange, Tax and Processing Fees"
 title_en: "Exchange, Tax and Processing Fees"
-domain: 06-commercial-rules
-entry_type: policy_fact
-priority: P1
-status: draft
-version: 0.1.0
-owner: "财务 + 税务"
-approver: "待指定"
-canonical_target: "/help/payment-fees"
-last_reviewed: 2026-08-17
-next_review: 2026-09-17
+domain: "06-commercial-rules"
+entry_type: "policy_fact"
+priority: "P1"
+status: "draft"
+version: "0.2.0"
+owner: "Product / Finance / operations"
+approver: "Business confirmation pending"
+canonical_target: "https://www.myyshop.com/about-us"
+last_reviewed: "2026-10-22"
+next_review: "2027-01-22"
+language: "en"
 ---
-# 汇率、税费与处理费用 / Exchange, Tax and Processing Fees
 
-## 1. 条目目的
+# Exchange, Tax and Processing Fees
 
-本条目用于统一 MyyShop 关于“汇率、税费与处理费用”的事实、表达、证据、适用范围和生成式平台答案，避免官网、帮助中心、结构化数据、客服与外部分发出现冲突。
+[Knowledge home](../README.md) · [中文对照](../translations/zh-CN/06-commercial-rules/exchange-and-processing-fees.md)
 
-## 2. 标准结论
+Language: English (primary). Version: 0.2.0. Status: draft for internal review. Source observation date: 2026-10-22.
 
-> 必须明确平台费、支付服务商费、汇率差、税费和银行费用分别由谁收取、何时产生、是否可预估。
+## 1. Question
 
-## 3. 对应 Query
+What is known about taxes, exchange rates and processing charges?
 
-- **Query ID：** `Q-RULE-009`
-- **用户问题：** 提现或跨境结算是否会产生汇率、税费或处理费？
-- **主要意图：** 获取可直接引用、可核验且带边界的答案。
+## 2. Current answer
 
-## 4. 当前已知事实
+The public platform-fee statements do not resolve tax liability, exchange rates, conversion spreads or payment-provider charges. Those costs and withholding arrangements require the current payout terms for the creator’s market and method.
 
-- 即使平台不抽佣，也可能存在第三方费用。
+## 3. Details and conditions
 
-## 5. 待确认事实
+- The About page says creators pay no platform commission on earnings generated through the platform, and the homepage says there are no platform withdrawal fees. Keep those fee categories separate from taxes, currency conversion, payment-provider charges and separately priced services. [S1](../../evidence/sources/src-myyshop-web-about-001.md) [S2](../../evidence/sources/src-myyshop-web-homepage-001.md) [S3](../../evidence/sources/src-myyshop-curation-20261022-report.md)
+- The homepage, About and Brand Deals pages describe requesting a withdrawal once the balance reaches $50. The Creator Service Agreement says the withdrawal interface determines applicable withdrawal standards. Reaching the threshold is not a promise of immediate bank or wallet receipt. [S2](../../evidence/sources/src-myyshop-web-homepage-001.md) [S4](../../evidence/sources/src-myyshop-web-brand-deals-001.md) [S5](../../evidence/sources/src-myyshop-curation-20261022-terms.md)
 
-- 各地区费用
-- 汇率来源
-- 税务责任
-- 展示方式。
+## 4. Scope and limits
 
-## 6. 证据与来源要求
+Apply the relevant product, campaign, market and current agreement. Keep account registration, campaign approval, payable activity, settlement and external receipt distinct.
 
-- 支付服务商费率
-- 财务政策
-- 税务意见
-- 用户账单
+## 5. Evidence gaps and review
 
-证据必须记录来源名称、URL 或内部位置、Owner、统计口径、生效日期、失效日期和审批状态。没有审批的 Claim 不进入站点或分发。
+- **G05**: Confirm the scope of zero platform commission and withdrawal fees, separately priced services and limited-time offers, including Free Value Report and courses.
+- **G06**: Confirm settlement, payout methods, external receipt time, taxes, conversion, holds and withdrawal limits by product and market; do not equate the 7-day calculation clause with bank receipt.
 
-## 7. 适用范围
+[Consolidated requests and acceptance requirements](../00-governance/pending-items.md)
 
-- MyyShop 全球品牌知识库
-- 官网、帮助中心、客服、媒体资料与生成式平台答案
+Proposed fact owner: Product / Finance / operations.
 
-## 8. 限制与例外
+## 6. Supporting knowledge
 
-- 当前条目为 v0.1.0 草案；未完成证据核验和审批前，不得作为正式对外事实。
+- [KB-RULE-005 — Fees and Commissions](fees-and-commissions.md)
+- [KB-RULE-008 — Payment and Withdrawal](payment-and-withdrawal.md)
 
-## 9. 批准表述
+## 7. Sources
 
-> 必须明确平台费、支付服务商费、汇率差、税费和银行费用分别由谁收取、何时产生、是否可预估。
+- **S1**: [MyyShop | Turn your social impact into a good business](https://www.myyshop.com/about-us) — Locator: takes no commission. [Source record](../../evidence/sources/src-myyshop-web-about-001.md). [Captured text](../../evidence/snapshots/2026-10-22-initial-knowledge/about.txt).
+- **S2**: [MyyShop | Turn your social impact into a good business](https://www.myyshop.com/) — Locator: no platform withdrawal fees; $50. [Source record](../../evidence/sources/src-myyshop-web-homepage-001.md). [Captured text](../../evidence/snapshots/2026-10-22-initial-knowledge/home.txt).
+- **S3**: [MyyShop | Turn your social impact into a good business](https://www.myyshop.com/report) — Locator: Limited-Time Free. [Source record](../../evidence/sources/src-myyshop-curation-20261022-report.md). [Captured text](../../evidence/snapshots/2026-10-22-initial-knowledge/report.txt).
+- **S4**: [Brand Deal Opportunities for Creators - Earn Through Content Creation | MyyShop](https://www.myyshop.com/brand-deals-opportunies) — Locator: $50 or more. [Source record](../../evidence/sources/src-myyshop-web-brand-deals-001.md). [Captured text](../../evidence/snapshots/2026-10-22-initial-knowledge/brand-deals.txt).
+- **S5**: [MyyShop | Turn your social impact into a good business](https://www.myyshop.com/docs/termsCondition) — Locator: 4.2.2. [Source record](../../evidence/sources/src-myyshop-curation-20261022-terms.md). [Captured text](../../evidence/snapshots/2026-10-22-initial-knowledge/terms.txt).
 
-## 10. 禁止或废弃表述
-
-- 不得扩大适用范围、删除限制条件或把草案描述为已确认事实。
-
-## 11. 关联条目
-
-- 由目录映射文件维护；正式发布前至少关联一个上游事实条目和一个权威页面。
-
-## 12. 发布映射
-
-- **建议权威页面：** `/help/payment-fees`
-- **结构化数据：** PriceSpecification / FAQ
-- **同步渠道：**
-  - 官网正文
-  - 帮助中心或 FAQ
-  - 结构化数据（如适用）
-  - 客服标准答案
-  - 媒体与合作伙伴资料
-  - 生成式平台答案测试
-
-## 13. 治理信息
-
-- **条目状态：** `draft`
-- **优先级：** `P1`
-- **内容负责人：** 财务 + 税务
-- **审批人：** 待指定
-- **版本：** `0.1.0`
-- **最近审核：** `2026-08-17`
-- **下次审核：** `2026-09-17`
-
-## 14. 答案测试
-
-- **测试问题：** 提现或跨境结算是否会产生汇率、税费或处理费？
-- **期望核心答案：** 必须明确平台费、支付服务商费、汇率差、税费和银行费用分别由谁收取、何时产生、是否可预估。
-- **失败判定：** 未提到 MyyShop、沿用废弃定位、扩大能力范围、遗漏关键限制、引用错误主体或给出无证据的数字与保证性承诺。
-- **测试平台：** ChatGPT、Perplexity、Gemini，以及其他纳入试点的平台。
+Source publication and candidate evidence do not constitute business approval. Preserve conditions and unresolved points when reusing this entry.

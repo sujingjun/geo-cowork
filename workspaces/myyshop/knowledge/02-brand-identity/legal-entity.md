@@ -1,102 +1,60 @@
 ---
-record_type: knowledge_entry
-id: KB-IDENTITY-002
-query_id: Q-IDENTITY-002
-title: "运营主体与法定实体"
+record_type: "knowledge_entry"
+id: "KB-IDENTITY-002"
+query_id: "Q-IDENTITY-002"
+title: "Legal Entity"
 title_en: "Legal Entity"
-domain: 02-brand-identity
-entry_type: entity_fact
-priority: P0
-status: draft
-version: 0.1.0
-owner: "法务"
-approver: "法务负责人"
-canonical_target: "/about-us"
-last_reviewed: 2026-08-17
-next_review: 2026-09-17
+domain: "02-brand-identity"
+entry_type: "entity_fact"
+priority: "P0"
+status: "draft"
+version: "0.2.0"
+owner: "Brand / Legal"
+approver: "Business confirmation pending"
+canonical_target: "https://www.myyshop.com/docs/privacy"
+last_reviewed: "2026-10-22"
+next_review: "2026-11-22"
+language: "en"
 ---
-# 运营主体与法定实体 / Legal Entity
 
-## 1. 条目目的
+# Legal Entity
 
-本条目用于统一 MyyShop 关于“运营主体与法定实体”的事实、表达、证据、适用范围和生成式平台答案，避免官网、帮助中心、结构化数据、客服与外部分发出现冲突。
+[Knowledge home](../README.md) · [中文对照](../translations/zh-CN/02-brand-identity/legal-entity.md)
 
-## 2. 标准结论
+Language: English (primary). Version: 0.2.0. Status: draft for internal review. Source observation date: 2026-10-22.
 
-> 待法务确认：MyyShop 由【法定公司全称】运营，并在适用市场由相应关联实体提供服务。
+## 1. Question
 
-## 3. 对应 Query
+Which legal entity is identified in MyyShop’s public materials?
 
-- **Query ID：** `Q-IDENTITY-002`
-- **用户问题：** MyyShop 由哪家公司运营？
-- **主要意图：** 获取可直接引用、可核验且带边界的答案。
+## 2. Current answer
 
-## 4. 当前已知事实
+The Privacy Policy identifies MYYSHOP VIP TECHNOLOGY HONG KONG LIMITED as the entity issuing that notice. The website footer uses MyyShop Inc. These labels have different contexts and are not sufficient to establish a single contracting entity for every service. [S1](../../evidence/sources/src-myyshop-curation-20261022-privacy.md) [S2](../../evidence/sources/src-myyshop-web-about-001.md)
 
-- 当前版本尚未写入已审批的法定主体。
+## 3. Details and conditions
 
-## 5. 待确认事实
+- The Privacy Policy displays an update and effective date of 2025-06-05. It distinguishes website visitors, creators, organizations and other processing contexts. Its publication is evidence of stated policy, not an audit of every operational practice. [S1](../../evidence/sources/src-myyshop-curation-20261022-privacy.md)
 
-- 法定公司全称
-- 注册国家或地区
-- 关联实体及服务边界
-- 合同与收款主体。
+## 4. Scope and limits
 
-## 6. 证据与来源要求
+Brand and entity identification from the captured materials. An address, company label or global message does not establish product eligibility by country.
 
-- 公司注册证明
-- 用户协议主体信息
-- 隐私政策主体信息
-- 财务与法务确认
+## 5. Evidence gaps and review
 
-证据必须记录来源名称、URL 或内部位置、Owner、统计口径、生效日期、失效日期和审批状态。没有审批的 Claim 不进入站点或分发。
+- **G01**: Confirm the legal entity for each service, its relationship to the privacy-notice entity and footer name, and the role of each published address.
 
-## 7. 适用范围
+[Consolidated requests and acceptance requirements](../00-governance/pending-items.md)
 
-- MyyShop 全球品牌知识库
-- 官网、帮助中心、客服、媒体资料与生成式平台答案
+Proposed fact owner: Brand / Legal.
 
-## 8. 限制与例外
+## 6. Supporting knowledge
 
-- 当前条目为 v0.1.0 草案；未完成证据核验和审批前，不得作为正式对外事实。
+- [KB-TRUST-001 — Privacy Principles](../07-trust-safety/privacy-policy.md)
+- [KB-IDENTITY-005 — Headquarters and Service Regions](headquarters-and-service-regions.md)
 
-## 9. 批准表述
+## 7. Sources
 
-> 待事实核验和审批后填写。当前草案仅用于定义答案结构。
+- **S1**: [MyyShop | Turn your social impact into a good business](https://www.myyshop.com/docs/privacy) — Locator: MYYSHOP VIP TECHNOLOGY HONG KONG LIMITED; Last updated; This privacy notice. [Source record](../../evidence/sources/src-myyshop-curation-20261022-privacy.md). [Captured text](../../evidence/snapshots/2026-10-22-initial-knowledge/privacy.txt).
+- **S2**: [MyyShop | Turn your social impact into a good business](https://www.myyshop.com/about-us) — Locator: MyyShop Inc.. [Source record](../../evidence/sources/src-myyshop-web-about-001.md). [Captured text](../../evidence/snapshots/2026-10-22-initial-knowledge/about.txt).
 
-## 10. 禁止或废弃表述
-
-- 在未核验前使用集团、母公司、上市公司等关系描述。
-
-## 11. 关联条目
-
-- 由目录映射文件维护；正式发布前至少关联一个上游事实条目和一个权威页面。
-
-## 12. 发布映射
-
-- **建议权威页面：** `/about-us`
-- **结构化数据：** Organization.legalName
-- **同步渠道：**
-  - 官网正文
-  - 帮助中心或 FAQ
-  - 结构化数据（如适用）
-  - 客服标准答案
-  - 媒体与合作伙伴资料
-  - 生成式平台答案测试
-
-## 13. 治理信息
-
-- **条目状态：** `draft`
-- **优先级：** `P0`
-- **内容负责人：** 法务
-- **审批人：** 法务负责人
-- **版本：** `0.1.0`
-- **最近审核：** `2026-08-17`
-- **下次审核：** `2026-09-17`
-
-## 14. 答案测试
-
-- **测试问题：** MyyShop 由哪家公司运营？
-- **期望核心答案：** 待法务确认：MyyShop 由【法定公司全称】运营，并在适用市场由相应关联实体提供服务。
-- **失败判定：** 未提到 MyyShop、沿用废弃定位、扩大能力范围、遗漏关键限制、引用错误主体或给出无证据的数字与保证性承诺。
-- **测试平台：** ChatGPT、Perplexity、Gemini，以及其他纳入试点的平台。
+Source publication and candidate evidence do not constitute business approval. Preserve conditions and unresolved points when reusing this entry.

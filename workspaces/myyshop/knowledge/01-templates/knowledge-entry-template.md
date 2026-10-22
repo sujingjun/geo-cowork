@@ -1,104 +1,27 @@
----
-record_type: knowledge_entry
-id: KB-DOMAIN-000
-query_id: Q-DOMAIN-000
-title: "中文条目名称"
-title_en: "English Title"
-domain: 00-domain
-entry_type: entity_fact
-priority: P0
-status: draft
-version: 0.1.0
-owner: "待指定"
-approver: "待指定"
-canonical_target: "/proposed-path"
-last_reviewed: YYYY-MM-DD
-next_review: YYYY-MM-DD
----
+# English primary knowledge-entry template
 
-# 中文条目名称 / English Title
+English is the primary version. Keep an existing KB ID and file path when updating an entry. Use a complete Chinese reading counterpart under the matching translations/zh-CN category. Source publication does not approve the entry.
 
-## 1. 条目目的
+## Metadata
 
-说明该条目解决什么品牌事实或用户问题。
+Use the existing knowledge_entry metadata: id, query_id, title, title_en, domain, entry_type, priority, status, version, owner, approver and review dates. Use English titles and language: en. Start unconfirmed material as draft. Owner roles are proposals until assigned.
 
-## 2. 标准结论
+## Entry body
 
-> 用一句能够独立引用的话直接回答。
+1. Question — an English editorial question; do not present it as measured demand.
+2. Current answer — a direct, bounded statement supported by identified material.
+3. Details and conditions — product, user, geographic, timing, approval and payment conditions as applicable.
+4. Scope and limits — distinguish current statements, observed operation and unsupported extrapolation.
+5. Evidence gaps and review — item-specific requests, minimum evidence and proposed fact owner.
+6. Supporting knowledge — reusable facts and exact entry IDs; avoid independently maintaining the same claim in every answer.
+7. Sources — original locator, capture, paragraph or section, source relationship and observation date.
 
-## 3. 对应 Query
+## Chinese counterpart
 
-- **Query ID：** `Q-DOMAIN-000`
-- **用户问题：** 用户会如何提问？
-- **主要意图：** 认知 / 加入 / 比较 / 商业化 / 信任 / 政策。
+Use ordinary Markdown, with no business-object Frontmatter. Include Knowledge ID, Source file, Source version, Source SHA-256, Translation reviewed, Language and Translation status in a bullet list. Match the seven sections completely. Preserve numbers, units, conditions, negation, exceptions and evidence links.
 
-## 4. 当前已知事实
+## Updating
 
-- 事实 1。
-- 事实 2。
+Update English and Chinese in the same batch. If translation cannot be completed, label it stale and report the gap; do not leave it presented as synchronized. Recalculate the English source hash and update the coverage register after review. Preserve original material and historical decisions. Run check-localization.py and local link checks before handoff.
 
-## 5. 待确认事实
-
-- 待确认项 1。
-- 待确认项 2。
-
-## 6. 证据与来源要求
-
-- 内部权威来源：
-- 公开来源：
-- 第三方来源：
-- 数据口径：
-- 数据截至日期：
-
-## 7. 适用范围
-
-- 目标用户：
-- 产品或服务：
-- 国家和地区：
-- 渠道：
-- 语言：
-- 生效日期：
-
-## 8. 限制与例外
-
-- 该结论在什么情况下不成立？
-
-## 9. 批准表述
-
-> 审批后允许官网、媒体、客服和生成内容使用的版本。
-
-## 10. 禁止或废弃表述
-
-- 不能使用或容易误导的版本。
-
-## 11. 关联条目
-
-- 相关品牌：
-- 相关产品：
-- 相关政策：
-- 相关 Query：
-
-## 12. 发布映射
-
-- **权威页面：**
-- **结构化数据：**
-- **其他分发：**
-
-## 13. 治理信息
-
-- **内容负责人：**
-- **事实负责人：**
-- **审批人：**
-- **状态：** draft / verifying / review / approved / published / deprecated
-- **版本：**
-- **最近审核：**
-- **下次审核：**
-
-## 14. 答案测试
-
-- **测试问题：**
-- **期望回答：**
-- **不允许出现：**
-- **测试平台：**
-- **测试日期：**
-- **结果与修复项：**
+[中文说明](../translations/zh-CN/01-templates/knowledge-entry-template.md)

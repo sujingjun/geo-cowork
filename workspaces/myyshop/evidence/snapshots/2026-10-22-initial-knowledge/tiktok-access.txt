@@ -1,0 +1,4 @@
+Requested account: https://www.tiktok.com/@myyshopcreators
+Observed final URL in Chrome and the in-app browser: https://www.tiktok.com/hk/about
+Visible text: Dear Users, We regret to inform you that we have discontinued operating TikTok in Hong Kong. Thank you for the time you have spent with us on the platform and for giving us the opportunity to bring a little bit of joy into your life. The TikTok Team
+The requested account bio, pinned posts and recent posts were not read. This is a regional-access gap, not evidence of no posts.

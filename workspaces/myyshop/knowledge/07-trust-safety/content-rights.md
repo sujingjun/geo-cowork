@@ -1,102 +1,62 @@
 ---
-record_type: knowledge_entry
-id: KB-TRUST-004
-query_id: Q-TRUST-004
-title: "内容与知识产权"
+record_type: "knowledge_entry"
+id: "KB-TRUST-004"
+query_id: "Q-TRUST-004"
+title: "Content and Intellectual Property Rights"
 title_en: "Content and Intellectual Property Rights"
-domain: 07-trust-safety
-entry_type: trust_fact
-priority: P0
-status: draft
-version: 0.1.0
-owner: "法务 + 品牌合作"
-approver: "待指定"
-canonical_target: "/terms/content-rights"
-last_reviewed: 2026-08-17
-next_review: 2026-09-17
+domain: "07-trust-safety"
+entry_type: "trust_fact"
+priority: "P0"
+status: "draft"
+version: "0.2.0"
+owner: "Legal / Privacy / Trust and Safety"
+approver: "Business confirmation pending"
+canonical_target: "https://www.myyshop.com/docs/termsCondition"
+last_reviewed: "2026-10-22"
+next_review: "2026-11-22"
+language: "en"
 ---
-# 内容与知识产权 / Content and Intellectual Property Rights
 
-## 1. 条目目的
+# Content and Intellectual Property Rights
 
-本条目用于统一 MyyShop 关于“内容与知识产权”的事实、表达、证据、适用范围和生成式平台答案，避免官网、帮助中心、结构化数据、客服与外部分发出现冲突。
+[Knowledge home](../README.md) · [中文对照](../translations/zh-CN/07-trust-safety/content-rights.md)
 
-## 2. 标准结论
+Language: English (primary). Version: 0.2.0. Status: draft for internal review. Source observation date: 2026-10-22.
 
-> 内容权利条目必须区分原始所有权、平台使用许可、品牌使用许可、二次编辑、广告投放、期限、地域和撤销条件。
+## 1. Question
 
-## 3. 对应 Query
+Who owns creator content, and what use rights are described?
 
-- **Query ID：** `Q-TRUST-004`
-- **用户问题：** 创作者发布或提交的内容归谁所有？
-- **主要意图：** 获取可直接引用、可核验且带边界的答案。
+## 2. Current answer
 
-## 4. 当前已知事实
+The agreement states that creator-supplied content belongs to the creator or relevant rights holders, while section 8.3 also describes a broad worldwide exclusive licence and sublicensing rights. Ownership and licensed use are different; the shorter About-page copyright statement must not erase the agreement’s permissions. [S1](../../evidence/sources/src-myyshop-curation-20261022-terms.md) [S2](../../evidence/sources/src-myyshop-web-about-001.md)
 
-- 品牌合作和内容分发会涉及权利授权。
+## 3. Details and conditions
 
-## 5. 待确认事实
+- Creators must have the necessary rights and meet the relevant brief and review standards. No-sample campaigns may use authorized brand assets, but permission to use those assets is not a licence for misleading product claims, fabricated experience or stolen content. [S1](../../evidence/sources/src-myyshop-curation-20261022-terms.md) [S3](../../evidence/sources/src-myyshop-globenewswire-cpm-001.md)
+- The agreement allows a creator to request verification of commercial-order fees and raise complaints about advertiser product issues or unauthorized use of content. Keep the issue, offer, submitted evidence and applicable policy identifiable; no universal appeal deadline or guaranteed outcome was established. [S1](../../evidence/sources/src-myyshop-curation-20261022-terms.md)
 
-- 默认版权归属
-- 授权范围
-- UGC 使用
-- 第三方素材责任。
+## 4. Scope and limits
 
-## 6. 证据与来源要求
+This summarizes the published policy and its limits. Policy wording, actual operations and jurisdiction-specific applicability require separate verification.
 
-- 用户协议
-- 活动合同
-- 知识产权政策
-- 品牌授权记录
+## 5. Evidence gaps and review
 
-证据必须记录来源名称、URL 或内部位置、Owner、统计口径、生效日期、失效日期和审批状态。没有审批的 Claim 不进入站点或分发。
+- **G07**: Confirm current governing agreements and applicability, including content licence, social-post retention, complaints, cancellation and advertising-disclosure procedures.
 
-## 7. 适用范围
+[Consolidated requests and acceptance requirements](../00-governance/pending-items.md)
 
-- MyyShop 全球品牌知识库
-- 官网、帮助中心、客服、媒体资料与生成式平台答案
+Proposed fact owner: Legal / Privacy / Trust and Safety.
 
-## 8. 限制与例外
+## 6. Supporting knowledge
 
-- 当前条目为 v0.1.0 草案；未完成证据核验和审批前，不得作为正式对外事实。
+- [KB-RULE-011 — Content Submission Rules](../06-commercial-rules/content-submission.md)
+- [KB-RULE-014 — Disputes and Appeals](../06-commercial-rules/disputes-and-appeals.md)
 
-## 9. 批准表述
+## 7. Sources
 
-> 内容权利条目必须区分原始所有权、平台使用许可、品牌使用许可、二次编辑、广告投放、期限、地域和撤销条件。
+- **S1**: [MyyShop | Turn your social impact into a good business](https://www.myyshop.com/docs/termsCondition) — Locator: 8.3; 3.4; 3.6; 3.7; 3.8; 3.9. [Source record](../../evidence/sources/src-myyshop-curation-20261022-terms.md). [Captured text](../../evidence/snapshots/2026-10-22-initial-knowledge/terms.txt).
+- **S2**: [MyyShop | Turn your social impact into a good business](https://www.myyshop.com/about-us) — Locator: Copyright Protection. [Source record](../../evidence/sources/src-myyshop-web-about-001.md). [Captured text](../../evidence/snapshots/2026-10-22-initial-knowledge/about.txt).
+- **S3**: [MyyShop TikTok CPM launch release](https://www.globenewswire.com/news-release/2026/08/12/3343441/0/en/myyshop-launches-paid-for-every-view-tiktok-cpm-model-to-give-creators-faster-more-transparent-monetization-opportunities.html) — Locator: Zero-Sample Campaigns Reduce Cross-Border Friction. [Source record](../../evidence/sources/src-myyshop-globenewswire-cpm-001.md). [Captured text](../../evidence/snapshots/2026-10-22-initial-knowledge/pr-cpm.txt).
 
-## 10. 禁止或废弃表述
-
-- 不得扩大适用范围、删除限制条件或把草案描述为已确认事实。
-
-## 11. 关联条目
-
-- 由目录映射文件维护；正式发布前至少关联一个上游事实条目和一个权威页面。
-
-## 12. 发布映射
-
-- **建议权威页面：** `/terms/content-rights`
-- **结构化数据：** Terms / DigitalDocumentPermission
-- **同步渠道：**
-  - 官网正文
-  - 帮助中心或 FAQ
-  - 结构化数据（如适用）
-  - 客服标准答案
-  - 媒体与合作伙伴资料
-  - 生成式平台答案测试
-
-## 13. 治理信息
-
-- **条目状态：** `draft`
-- **优先级：** `P0`
-- **内容负责人：** 法务 + 品牌合作
-- **审批人：** 待指定
-- **版本：** `0.1.0`
-- **最近审核：** `2026-08-17`
-- **下次审核：** `2026-09-17`
-
-## 14. 答案测试
-
-- **测试问题：** 创作者发布或提交的内容归谁所有？
-- **期望核心答案：** 内容权利条目必须区分原始所有权、平台使用许可、品牌使用许可、二次编辑、广告投放、期限、地域和撤销条件。
-- **失败判定：** 未提到 MyyShop、沿用废弃定位、扩大能力范围、遗漏关键限制、引用错误主体或给出无证据的数字与保证性承诺。
-- **测试平台：** ChatGPT、Perplexity、Gemini，以及其他纳入试点的平台。
+Source publication and candidate evidence do not constitute business approval. Preserve conditions and unresolved points when reusing this entry.

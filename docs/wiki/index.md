@@ -3,6 +3,11 @@ title: geo-cowork 知识库导航
 kind: index
 status: verified
 sources:
+  - docs/records/2026-10-22-myyshop-initial-knowledge-curation-record.md
+  - docs/tasks/2026-10-22-myyshop-initial-knowledge-curation.md
+  - docs/plans/2026-10-22-myyshop-initial-knowledge-curation-plan.md
+  - docs/plans/2026-10-19-source-monitoring-and-query-discovery-plan.md
+  - docs/requirements/2026-10-18-geo-user-journey-and-loop-discovery.md
   - docs/records/2026-10-17-myyshop-geo-full-flow-audit.md
   - docs/records/2026-10-17-oneglanse-mcp-integration-record.md
   - docs/plans/2026-10-17-oneglanse-mcp-integration-plan.md
@@ -40,7 +45,7 @@ sources:
   - docs/requirements/2026-08-25-platform-automation-permission-backlog.md
   - docs/specs/0006-consumer-answer-testing.md
   - docs/plans/2026-08-24-m5-consumer-answer-testing-plan.md
-updated: 2026-10-17
+updated: 2026-10-22
 ---
 
 # geo-cowork 知识库导航
@@ -51,7 +56,7 @@ updated: 2026-10-17
 
 | 页面 | kind | status | updated |
 | --- | --- | --- | --- |
-| [index.md](index.md)（本页） | index | verified | 2026-10-17 |
+| [index.md](index.md)（本页） | index | verified | 2026-10-22 |
 | [OneGlanse 对接](oneglanse-integration.md) | architecture | implemented | 2026-10-17 |
 | [正式真实双周期](real-cycles.md) | product | implemented | 2026-10-17 |
 
@@ -62,6 +67,10 @@ updated: 2026-10-17
 见[正式真实双周期导航](real-cycles.md)。当前下一行动以2026-09-20批准Plan与实际preflight为准；下方旧专题入口保留历史追溯。
 
 ## Canonical 入口
+
+- 初始知识整理：[MyyShop 初始品牌知识库整理计划](../plans/2026-10-22-myyshop-initial-knowledge-curation-plan.md)（approved；英文主版、中文对照，沿用现状）；[执行记录](../records/2026-10-22-myyshop-initial-knowledge-curation-record.md)记录 120 个逻辑条目、来源覆盖、补证及验证。默认入口为[英文知识库](../../workspaces/myyshop/knowledge/README.md)，知识事实仍待业务确认。
+- 当前访谈草案：[GEO 用户旅程与持续循环](../requirements/2026-10-18-geo-user-journey-and-loop-discovery.md)（proposed；Q1–Q51 核心选择已收敛，GA4 自动读取注册信号，接入时创建飞书智能体与对应人员的异常通知群；第 9 节列出落地清单，实际能力待验收）
+- 信源覆盖与分流：[信源监控、舆情与 Query 发现](../plans/2026-10-19-source-monitoring-and-query-discovery-plan.md)（proposed；需求信源日常检查与消费者答案周采样分开，实际接入及调度待落实）
 
 - 仓级规则：[`../../AGENTS.md`](../../AGENTS.md)
 - 工作流规范：[`../workflow.md`](../workflow.md)

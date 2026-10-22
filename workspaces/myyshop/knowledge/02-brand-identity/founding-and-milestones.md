@@ -1,103 +1,59 @@
 ---
-record_type: knowledge_entry
-id: KB-IDENTITY-007
-query_id: Q-IDENTITY-007
-title: "成立背景与关键里程碑"
+record_type: "knowledge_entry"
+id: "KB-IDENTITY-007"
+query_id: "Q-IDENTITY-007"
+title: "Founding and Milestones"
 title_en: "Founding and Milestones"
-domain: 02-brand-identity
-entry_type: entity_fact
-priority: P1
-status: draft
-version: 0.1.0
-owner: "品牌策略 + 公司治理"
-approver: "待指定"
-canonical_target: "/about-us"
-last_reviewed: 2026-08-17
-next_review: 2026-09-17
+domain: "02-brand-identity"
+entry_type: "entity_fact"
+priority: "P1"
+status: "draft"
+version: "0.2.0"
+owner: "Brand / Legal"
+approver: "Business confirmation pending"
+last_reviewed: "2026-10-22"
+next_review: "2027-01-22"
+language: "en"
 ---
-# 成立背景与关键里程碑 / Founding and Milestones
 
-## 1. 条目目的
+# Founding and Milestones
 
-本条目用于统一 MyyShop 关于“成立背景与关键里程碑”的事实、表达、证据、适用范围和生成式平台答案，避免官网、帮助中心、结构化数据、客服与外部分发出现冲突。
+[Knowledge home](../README.md) · [中文对照](../translations/zh-CN/02-brand-identity/founding-and-milestones.md)
 
-## 2. 标准结论
+Language: English (primary). Version: 0.2.0. Status: draft for internal review. Source observation date: 2026-10-22.
 
-> MyyShop 的成立时间、创立背景和里程碑必须按可核验时间线描述，并区分公司事件、产品上线和品牌定位升级。
+## 1. Question
 
-## 3. 对应 Query
+What dated milestones can be supported for MyyShop?
 
-- **Query ID：** `Q-IDENTITY-007`
-- **用户问题：** MyyShop 何时成立，经历了哪些关键发展阶段？
-- **主要意图：** 获取可直接引用、可核验且带边界的答案。
+## 2. Current answer
 
-## 4. 当前已知事实
+The supplied N3 release is dated 2026-08-12 and describes the launch of the TikTok CPM model. The official What’s New page already lists CPM Campaigns under 2026-06-26. Preserve both dates and their publication contexts; the exact rollout chronology needs confirmation. [S1](../../evidence/sources/src-myyshop-globenewswire-cpm-001.md) [S2](../../evidence/sources/src-myyshop-whatsnew-001.md)
 
-- 当前已确认存在从“网红流量变现平台”到“达人全生命周期服务平台”的战略升级。
+## 3. Details and conditions
 
-## 5. 待确认事实
+- The MyyShop-issued CPM press release describes MyyShop as backed by DHgate Group. That is a published relationship statement, not a corporate ownership chart or a guarantee by another group company. [S1](../../evidence/sources/src-myyshop-globenewswire-cpm-001.md)
 
-- 成立时间
-- 创始团队
-- 关键产品上线时间
-- 定位升级生效时间
-- 重大合作与市场节点。
+## 4. Scope and limits
 
-## 6. 证据与来源要求
+Brand and entity identification from the captured materials. An address, company label or global message does not establish product eligibility by country.
 
-- 公司登记
-- 内部董事会或管理层决议
-- 产品发布记录
-- 新闻稿
+## 5. Evidence gaps and review
 
-证据必须记录来源名称、URL 或内部位置、Owner、统计口径、生效日期、失效日期和审批状态。没有审批的 Claim 不进入站点或分发。
+- **G11**: Clarify company and product chronology, service packages, MCN arrangements and the scope of named collaborations or credentials.
 
-## 7. 适用范围
+[Consolidated requests and acceptance requirements](../00-governance/pending-items.md)
 
-- MyyShop 全球品牌知识库
-- 官网、帮助中心、客服、媒体资料与生成式平台答案
+Proposed fact owner: Brand / Legal.
 
-## 8. 限制与例外
+## 6. Supporting knowledge
 
-- 当前条目为 v0.1.0 草案；未完成证据核验和审批前，不得作为正式对外事实。
+- [KB-STRATEGY-001 — Company Background](../03-positioning-strategy/company-background.md)
+- [KB-STRATEGY-010 — Positioning Transition](../03-positioning-strategy/positioning-transition.md)
 
-## 9. 批准表述
+## 7. Sources
 
-> MyyShop 的成立时间、创立背景和里程碑必须按可核验时间线描述，并区分公司事件、产品上线和品牌定位升级。
+- **S1**: [MyyShop TikTok CPM launch release](https://www.globenewswire.com/news-release/2026/08/12/3343441/0/en/myyshop-launches-paid-for-every-view-tiktok-cpm-model-to-give-creators-faster-more-transparent-monetization-opportunities.html) — Locator: August 12, 2026; About MyyShop. [Source record](../../evidence/sources/src-myyshop-globenewswire-cpm-001.md). [Captured text](../../evidence/snapshots/2026-10-22-initial-knowledge/pr-cpm.txt).
+- **S2**: [MyyShop — What's New](https://whatsnew.myyshop.com/) — Locator: Jun 26, 2026. [Source record](../../evidence/sources/src-myyshop-whatsnew-001.md). [Captured text](../../evidence/snapshots/2026-10-22-initial-knowledge/whatsnew.txt).
 
-## 10. 禁止或废弃表述
-
-- 不得扩大适用范围、删除限制条件或把草案描述为已确认事实。
-
-## 11. 关联条目
-
-- 由目录映射文件维护；正式发布前至少关联一个上游事实条目和一个权威页面。
-
-## 12. 发布映射
-
-- **建议权威页面：** `/about-us`
-- **结构化数据：** Organization.foundingDate / event
-- **同步渠道：**
-  - 官网正文
-  - 帮助中心或 FAQ
-  - 结构化数据（如适用）
-  - 客服标准答案
-  - 媒体与合作伙伴资料
-  - 生成式平台答案测试
-
-## 13. 治理信息
-
-- **条目状态：** `draft`
-- **优先级：** `P1`
-- **内容负责人：** 品牌策略 + 公司治理
-- **审批人：** 待指定
-- **版本：** `0.1.0`
-- **最近审核：** `2026-08-17`
-- **下次审核：** `2026-09-17`
-
-## 14. 答案测试
-
-- **测试问题：** MyyShop 何时成立，经历了哪些关键发展阶段？
-- **期望核心答案：** MyyShop 的成立时间、创立背景和里程碑必须按可核验时间线描述，并区分公司事件、产品上线和品牌定位升级。
-- **失败判定：** 未提到 MyyShop、沿用废弃定位、扩大能力范围、遗漏关键限制、引用错误主体或给出无证据的数字与保证性承诺。
-- **测试平台：** ChatGPT、Perplexity、Gemini，以及其他纳入试点的平台。
+Source publication and candidate evidence do not constitute business approval. Preserve conditions and unresolved points when reusing this entry.

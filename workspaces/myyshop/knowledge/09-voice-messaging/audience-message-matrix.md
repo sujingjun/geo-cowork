@@ -1,102 +1,66 @@
 ---
-record_type: knowledge_entry
-id: KB-VOICE-007
-query_id: Q-VOICE-007
-title: "分受众信息矩阵"
+record_type: "knowledge_entry"
+id: "KB-VOICE-007"
+query_id: "Q-VOICE-007"
+title: "Audience Message Matrix"
 title_en: "Audience Message Matrix"
-domain: 09-voice-messaging
-entry_type: messaging_rule
-priority: P0
-status: draft
-version: 0.1.0
-owner: "品牌策略 + 增长"
-approver: "待指定"
-canonical_target: "/brand-guidelines/audience-messaging"
-last_reviewed: 2026-08-17
-next_review: 2026-09-17
+domain: "09-voice-messaging"
+entry_type: "messaging_rule"
+priority: "P0"
+status: "draft"
+version: "0.2.0"
+owner: "Brand / content"
+approver: "Business confirmation pending"
+canonical_target: "https://www.myyshop.com/"
+last_reviewed: "2026-10-22"
+next_review: "2026-11-22"
+language: "en"
 ---
-# 分受众信息矩阵 / Audience Message Matrix
 
-## 1. 条目目的
+# Audience Message Matrix
 
-本条目用于统一 MyyShop 关于“分受众信息矩阵”的事实、表达、证据、适用范围和生成式平台答案，避免官网、帮助中心、结构化数据、客服与外部分发出现冲突。
+[Knowledge home](../README.md) · [中文对照](../translations/zh-CN/09-voice-messaging/audience-message-matrix.md)
 
-## 2. 标准结论
+Language: English (primary). Version: 0.2.0. Status: draft for internal review. Source observation date: 2026-10-22.
 
-> 每类受众必须有独立的主要问题、价值主张、证明、风险边界和行动入口，不能复用同一句泛化品牌介绍。
+## 1. Question
 
-## 3. 对应 Query
+How should messages differ by audience without changing the facts?
 
-- **Query ID：** `Q-VOICE-007`
-- **用户问题：** MyyShop 面向新手达人、成熟达人、品牌方和 MCN 应分别说什么？
-- **主要意图：** 获取可直接引用、可核验且带边界的答案。
+## 2. Current answer
 
-## 4. 当前已知事实
+Public pages address creators ranging from beginners and nano creators to established creators with large audiences. Brand-facing campaign and matching capabilities are also described in the CPM release. Marketing audiences must be distinguished from account and campaign eligibility. [S1](../../evidence/sources/src-myyshop-web-homepage-001.md) [S2](../../evidence/sources/src-myyshop-web-about-001.md) [S3](../../evidence/sources/src-myyshop-globenewswire-cpm-001.md)
 
-- 平台服务多类生命周期阶段和生态角色。
+## 3. Details and conditions
 
-## 5. 待确认事实
+- Brand Deals separates content creation, product promotion and affiliate promotion. Content creation can involve delivering an asset without publishing it; product promotion involves social distribution and approved submissions; affiliate promotion links compensation to sales. [S4](../../evidence/sources/src-myyshop-web-brand-deals-001.md)
+- The CPM release describes brand-side budgets, creative requirements, content review and performance visibility. IMH describes broader TikTok Shop and commerce support, but exact brand packages, prices, markets and service commitments require the relevant agreement. [S3](../../evidence/sources/src-myyshop-globenewswire-cpm-001.md) [S5](../../evidence/sources/src-myyshop-influencer-marketing-hub-001.md)
+- The first GEO research group is English-speaking creators in the US who seek their first monetization opportunity. This is a research and prioritization setting, not proof that every member of that group is eligible for a MyyShop service or payment method. [S6](../../evidence/sources/src-myyshop-curation-20261022-direction.md)
 
-- 受众优先级
-- 消息版本
-- 渠道差异
-- 转化目标。
+## 4. Scope and limits
 
-## 6. 证据与来源要求
+Editorial guidance for this initial knowledge edition. Observed channel style is distinguished from a formally adopted brand handbook.
 
-- 用户画像
-- 营销漏斗
-- 销售材料
-- Query 集
+## 5. Evidence gaps and review
 
-证据必须记录来源名称、URL 或内部位置、Owner、统计口径、生效日期、失效日期和审批状态。没有审批的 Claim 不进入站点或分发。
+- **G02**: Provide the current product-by-country, social-platform and creator-qualification matrix, including account checks and exceptions; verify availability separately from public navigation.
+- **G12**: If formal brand governance is needed, provide the current spelling, slogan, tone and terminology handbook. Do not require a brand-repositioning decision to complete this initial draft.
 
-## 7. 适用范围
+[Consolidated requests and acceptance requirements](../00-governance/pending-items.md)
 
-- MyyShop 全球品牌知识库
-- 官网、帮助中心、客服、媒体资料与生成式平台答案
+Proposed fact owner: Brand / content.
 
-## 8. 限制与例外
+## 6. Supporting knowledge
 
-- 当前条目为 v0.1.0 草案；未完成证据核验和审批前，不得作为正式对外事实。
+- [KB-AUDIENCE-012 — Audience Value Propositions](../04-audience-lifecycle/audience-value-propositions.md)
 
-## 9. 批准表述
+## 7. Sources
 
-> 每类受众必须有独立的主要问题、价值主张、证明、风险边界和行动入口，不能复用同一句泛化品牌介绍。
+- **S1**: [MyyShop | Turn your social impact into a good business](https://www.myyshop.com/) — Locator: Creators Thrive with MyyShop. [Source record](../../evidence/sources/src-myyshop-web-homepage-001.md). [Captured text](../../evidence/snapshots/2026-10-22-initial-knowledge/home.txt).
+- **S2**: [MyyShop | Turn your social impact into a good business](https://www.myyshop.com/about-us) — Locator: Who We Serve. [Source record](../../evidence/sources/src-myyshop-web-about-001.md). [Captured text](../../evidence/snapshots/2026-10-22-initial-knowledge/about.txt).
+- **S3**: [MyyShop TikTok CPM launch release](https://www.globenewswire.com/news-release/2026/08/12/3343441/0/en/myyshop-launches-paid-for-every-view-tiktok-cpm-model-to-give-creators-faster-more-transparent-monetization-opportunities.html) — Locator: For brands. [Source record](../../evidence/sources/src-myyshop-globenewswire-cpm-001.md). [Captured text](../../evidence/snapshots/2026-10-22-initial-knowledge/pr-cpm.txt).
+- **S4**: [Brand Deal Opportunities for Creators - Earn Through Content Creation | MyyShop](https://www.myyshop.com/brand-deals-opportunies) — Locator: Types of Opportunities. [Source record](../../evidence/sources/src-myyshop-web-brand-deals-001.md). [Captured text](../../evidence/snapshots/2026-10-22-initial-knowledge/brand-deals.txt).
+- **S5**: [MyyShop Review 2026: Features, Pricing & TikTok Shop Commerce](https://influencermarketinghub.com/myyshop/) — Locator: For brands. [Source record](../../evidence/sources/src-myyshop-influencer-marketing-hub-001.md). [Captured text](../../evidence/snapshots/2026-10-22-initial-knowledge/imh-15.txt).
+- **S6**: [User-authorized curation and language direction](../../cycles/preparation/decisions/2026-10-22-initial-knowledge-curation-authorized.md) — Locator: Research scope is not product eligibility. [Source record](../../evidence/sources/src-myyshop-curation-20261022-direction.md). [Captured text](../../evidence/snapshots/2026-10-22-initial-knowledge/direction.txt).
 
-## 10. 禁止或废弃表述
-
-- 不得扩大适用范围、删除限制条件或把草案描述为已确认事实。
-
-## 11. 关联条目
-
-- 由目录映射文件维护；正式发布前至少关联一个上游事实条目和一个权威页面。
-
-## 12. 发布映射
-
-- **建议权威页面：** `/brand-guidelines/audience-messaging`
-- **结构化数据：** 无强制要求
-- **同步渠道：**
-  - 官网正文
-  - 帮助中心或 FAQ
-  - 结构化数据（如适用）
-  - 客服标准答案
-  - 媒体与合作伙伴资料
-  - 生成式平台答案测试
-
-## 13. 治理信息
-
-- **条目状态：** `draft`
-- **优先级：** `P0`
-- **内容负责人：** 品牌策略 + 增长
-- **审批人：** 待指定
-- **版本：** `0.1.0`
-- **最近审核：** `2026-08-17`
-- **下次审核：** `2026-09-17`
-
-## 14. 答案测试
-
-- **测试问题：** MyyShop 面向新手达人、成熟达人、品牌方和 MCN 应分别说什么？
-- **期望核心答案：** 每类受众必须有独立的主要问题、价值主张、证明、风险边界和行动入口，不能复用同一句泛化品牌介绍。
-- **失败判定：** 未提到 MyyShop、沿用废弃定位、扩大能力范围、遗漏关键限制、引用错误主体或给出无证据的数字与保证性承诺。
-- **测试平台：** ChatGPT、Perplexity、Gemini，以及其他纳入试点的平台。
+Source publication and candidate evidence do not constitute business approval. Preserve conditions and unresolved points when reusing this entry.

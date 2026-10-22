@@ -1,103 +1,64 @@
 ---
-record_type: knowledge_entry
-id: KB-SERVICE-010
-query_id: Q-SERVICE-010
-title: "面向 MCN 达人的服务"
+record_type: "knowledge_entry"
+id: "KB-SERVICE-010"
+query_id: "Q-SERVICE-010"
+title: "MCN Creator Services"
 title_en: "MCN Creator Services"
-domain: 05-products-services
-entry_type: service_fact
-priority: P1
-status: draft
-version: 0.1.0
-owner: "MCN 业务负责人 + 法务"
-approver: "待指定"
-canonical_target: "/mcn/creator-services"
-last_reviewed: 2026-08-17
-next_review: 2026-09-17
+domain: "05-products-services"
+entry_type: "service_fact"
+priority: "P1"
+status: "draft"
+version: "0.2.0"
+owner: "Product / Creator operations"
+approver: "Business confirmation pending"
+canonical_target: "https://www.myyshop.com/course/home"
+last_reviewed: "2026-10-22"
+next_review: "2027-01-22"
+language: "en"
 ---
-# 面向 MCN 达人的服务 / MCN Creator Services
 
-## 1. 条目目的
+# MCN Creator Services
 
-本条目用于统一 MyyShop 关于“面向 MCN 达人的服务”的事实、表达、证据、适用范围和生成式平台答案，避免官网、帮助中心、结构化数据、客服与外部分发出现冲突。
+[Knowledge home](../README.md) · [中文对照](../translations/zh-CN/05-products-services/mcn-creator-services.md)
 
-## 2. 标准结论
+Language: English (primary). Version: 0.2.0. Status: draft for internal review. Source observation date: 2026-10-22.
 
-> 待业务核验：如 MyyShop 面向 MCN 达人提供服务，应明确 MCN、达人和 MyyShop 三方的账号、数据、机会、结算和责任关系。
+## 1. Question
 
-## 3. 对应 Query
+What MCN-related support is established for creators?
 
-- **Query ID：** `Q-SERVICE-010`
-- **用户问题：** MyyShop 是否为 MCN 旗下创作者提供服务？
-- **主要意图：** 获取可直接引用、可核验且带边界的答案。
+## 2. Current answer
 
-## 4. 当前已知事实
+The company’s CPM release lists MCN development, content production, livestream commerce and offline creator activations within its wider ecosystem. It does not establish that every creator signs an MCN management contract or that all services are included in ordinary registration. [S1](../../evidence/sources/src-myyshop-globenewswire-cpm-001.md)
 
-- MCN Creator 被列入候选服务关系。
+## 3. Details and conditions
 
-## 5. 待确认事实
+- The Co-Branded Masterclass page describes a MyyShop × MediaLabs Creator Monetization Program with content strategy, account growth, product selection and sales topics. The official Instagram also names The Social Commerce Playbook as the first course. Course access, pricing, completion and certification conditions need their own rules. [S2](../../evidence/sources/src-myyshop-curation-20261022-course.md) [S3](../../evidence/sources/src-myyshop-curation-20261022-instagram.md)
+- The About page directs collaboration issues to the support team and says cases are reviewed under platform policies. The Creator Service Agreement describes fee verification and complaints concerning advertiser conduct. A response-time or resolution guarantee is not established by these descriptions. [S4](../../evidence/sources/src-myyshop-web-about-001.md) [S5](../../evidence/sources/src-myyshop-curation-20261022-terms.md)
 
-- 服务是否上线
-- 合同关系
-- 数据授权
-- 收益结算
-- 地区范围。
+## 4. Scope and limits
 
-## 6. 证据与来源要求
+The named service and its described function only. Current public descriptions were read; live product delivery, all markets and every account’s access were not tested.
 
-- MCN 合同
-- 产品流程
-- 数据授权文件
-- 财务结算规则
+## 5. Evidence gaps and review
 
-证据必须记录来源名称、URL 或内部位置、Owner、统计口径、生效日期、失效日期和审批状态。没有审批的 Claim 不进入站点或分发。
+- **G11**: Clarify company and product chronology, service packages, MCN arrangements and the scope of named collaborations or credentials.
 
-## 7. 适用范围
+[Consolidated requests and acceptance requirements](../00-governance/pending-items.md)
 
-- MyyShop 全球品牌知识库
-- 官网、帮助中心、客服、媒体资料与生成式平台答案
+Proposed fact owner: Product / Creator operations.
 
-## 8. 限制与例外
+## 6. Supporting knowledge
 
-- 当前条目为 v0.1.0 草案；未完成证据核验和审批前，不得作为正式对外事实。
+- [KB-AUDIENCE-009 — Professional Development Stage](../04-audience-lifecycle/professional-development-stage.md)
+- [KB-SERVICE-011 — MCN and Brand Services](mcn-brand-services.md)
 
-## 9. 批准表述
+## 7. Sources
 
-> 待事实核验和审批后填写。当前草案仅用于定义答案结构。
+- **S1**: [MyyShop TikTok CPM launch release](https://www.globenewswire.com/news-release/2026/08/12/3343441/0/en/myyshop-launches-paid-for-every-view-tiktok-cpm-model-to-give-creators-faster-more-transparent-monetization-opportunities.html) — Locator: Its ecosystem includes. [Source record](../../evidence/sources/src-myyshop-globenewswire-cpm-001.md). [Captured text](../../evidence/snapshots/2026-10-22-initial-knowledge/pr-cpm.txt).
+- **S2**: [MyyShop | Turn your social impact into a good business](https://www.myyshop.com/course/home) — Locator: WHO WE ARE. [Source record](../../evidence/sources/src-myyshop-curation-20261022-course.md). [Captured text](../../evidence/snapshots/2026-10-22-initial-knowledge/course.txt).
+- **S3**: [Official Instagram profile and captions](https://www.instagram.com/myyshopcreators/) — Locator: The Social Commerce Playbook. [Source record](../../evidence/sources/src-myyshop-curation-20261022-instagram.md). [Captured text](../../evidence/snapshots/2026-10-22-initial-knowledge/instagram.txt).
+- **S4**: [MyyShop | Turn your social impact into a good business](https://www.myyshop.com/about-us) — Locator: Platform Support. [Source record](../../evidence/sources/src-myyshop-web-about-001.md). [Captured text](../../evidence/snapshots/2026-10-22-initial-knowledge/about.txt).
+- **S5**: [MyyShop | Turn your social impact into a good business](https://www.myyshop.com/docs/termsCondition) — Locator: 3.7; 3.8; 3.9. [Source record](../../evidence/sources/src-myyshop-curation-20261022-terms.md). [Captured text](../../evidence/snapshots/2026-10-22-initial-knowledge/terms.txt).
 
-## 10. 禁止或废弃表述
-
-- 不得扩大适用范围、删除限制条件或把草案描述为已确认事实。
-
-## 11. 关联条目
-
-- 由目录映射文件维护；正式发布前至少关联一个上游事实条目和一个权威页面。
-
-## 12. 发布映射
-
-- **建议权威页面：** `/mcn/creator-services`
-- **结构化数据：** Service
-- **同步渠道：**
-  - 官网正文
-  - 帮助中心或 FAQ
-  - 结构化数据（如适用）
-  - 客服标准答案
-  - 媒体与合作伙伴资料
-  - 生成式平台答案测试
-
-## 13. 治理信息
-
-- **条目状态：** `draft`
-- **优先级：** `P1`
-- **内容负责人：** MCN 业务负责人 + 法务
-- **审批人：** 待指定
-- **版本：** `0.1.0`
-- **最近审核：** `2026-08-17`
-- **下次审核：** `2026-09-17`
-
-## 14. 答案测试
-
-- **测试问题：** MyyShop 是否为 MCN 旗下创作者提供服务？
-- **期望核心答案：** 待业务核验：如 MyyShop 面向 MCN 达人提供服务，应明确 MCN、达人和 MyyShop 三方的账号、数据、机会、结算和责任关系。
-- **失败判定：** 未提到 MyyShop、沿用废弃定位、扩大能力范围、遗漏关键限制、引用错误主体或给出无证据的数字与保证性承诺。
-- **测试平台：** ChatGPT、Perplexity、Gemini，以及其他纳入试点的平台。
+Source publication and candidate evidence do not constitute business approval. Preserve conditions and unresolved points when reusing this entry.

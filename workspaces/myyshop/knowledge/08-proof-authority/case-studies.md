@@ -1,102 +1,63 @@
 ---
-record_type: knowledge_entry
-id: KB-PROOF-007
-query_id: Q-PROOF-007
-title: "创作者与品牌案例"
+record_type: "knowledge_entry"
+id: "KB-PROOF-007"
+query_id: "Q-PROOF-007"
+title: "Case Studies"
 title_en: "Case Studies"
-domain: 08-proof-authority
-entry_type: evidence_asset
-priority: P0
-status: draft
-version: 0.1.0
-owner: "内容营销 + 数据分析 + 法务"
-approver: "待指定"
-canonical_target: "/case-studies"
-last_reviewed: 2026-08-17
-next_review: 2026-09-17
+domain: "08-proof-authority"
+entry_type: "evidence_asset"
+priority: "P0"
+status: "draft"
+version: "0.2.0"
+owner: "Data / PR / case owner"
+approver: "Business confirmation pending"
+canonical_target: "https://www.myyshop.com/"
+last_reviewed: "2026-10-22"
+next_review: "2026-11-22"
+language: "en"
 ---
-# 创作者与品牌案例 / Case Studies
 
-## 1. 条目目的
+# Case Studies
 
-本条目用于统一 MyyShop 关于“创作者与品牌案例”的事实、表达、证据、适用范围和生成式平台答案，避免官网、帮助中心、结构化数据、客服与外部分发出现冲突。
+[Knowledge home](../README.md) · [中文对照](../translations/zh-CN/08-proof-authority/case-studies.md)
 
-## 2. 标准结论
+Language: English (primary). Version: 0.2.0. Status: draft for internal review. Source observation date: 2026-10-22.
 
-> 案例必须记录背景、起点、使用服务、时间线、结果、数据口径、限制、用户授权和可公开素材，不得只保留宣传结论。
+## 1. Question
 
-## 3. 对应 Query
+What is required before a creator or brand story becomes a verified case?
 
-- **Query ID：** `Q-PROOF-007`
-- **用户问题：** 有哪些真实案例可以证明 MyyShop 的服务价值？
-- **主要意图：** 获取可直接引用、可核验且带边界的答案。
+## 2. Current answer
 
-## 4. 当前已知事实
+The site displays creator examples and the supplied articles include creator-oriented stories. A complete case needs the creator’s permission, dates, starting conditions, actions, measured results and limits; those elements were not established for a verified case in this batch. [S1](../../evidence/sources/src-myyshop-web-homepage-001.md) [S2](../../evidence/sources/src-myyshop-curation-20261022-report.md) [S3](../../evidence/sources/src-myyshop-curation-20261022-imh-17.md)
 
-- 案例是生成式平台引用和用户决策的重要证据。
+## 3. Details and conditions
 
-## 5. 待确认事实
+- The inspected materials do not establish a reproducible result for every creator. Illustrative earnings, audience numbers, promotional comparisons and individual endorsements must remain separate from measured outcomes for a defined cohort. [S4](../../evidence/sources/src-myyshop-web-myyfinds-001.md) [S2](../../evidence/sources/src-myyshop-curation-20261022-report.md) [S5](../../evidence/sources/src-myyshop-globenewswire-cpm-001.md)
 
-- 首批代表性达人案例
-- 品牌案例
-- 失败或限制经验
-- 授权范围。
+## 4. Scope and limits
 
-## 6. 证据与来源要求
+Published claims and examples are recorded with attribution. They are not independently audited measurements or promises of typical individual results.
 
-- 用户访谈
-- 后台数据
-- 授权书
-- 品牌确认
+## 5. Evidence gaps and review
 
-证据必须记录来源名称、URL 或内部位置、Owner、统计口径、生效日期、失效日期和审批状态。没有审批的 Claim 不进入站点或分发。
+- **G10**: Provide permission and evidence for cases, testimonials and independent recognition, preserving original wording, dates and any paid or placed relationship.
 
-## 7. 适用范围
+[Consolidated requests and acceptance requirements](../00-governance/pending-items.md)
 
-- MyyShop 全球品牌知识库
-- 官网、帮助中心、客服、媒体资料与生成式平台答案
+Proposed fact owner: Data / PR / case owner.
 
-## 8. 限制与例外
+## 6. Supporting knowledge
 
-- 当前条目为 v0.1.0 草案；未完成证据核验和审批前，不得作为正式对外事实。
+- [KB-PROOF-004 — Creator Growth Results](creator-growth-results.md)
+- [KB-PROOF-005 — Creator Income Results](creator-income-results.md)
 
-## 9. 批准表述
+## 7. Sources
 
-> 案例必须记录背景、起点、使用服务、时间线、结果、数据口径、限制、用户授权和可公开素材，不得只保留宣传结论。
+- **S1**: [MyyShop | Turn your social impact into a good business](https://www.myyshop.com/) — Locator: Creators Thrive. [Source record](../../evidence/sources/src-myyshop-web-homepage-001.md). [Captured text](../../evidence/snapshots/2026-10-22-initial-knowledge/home.txt).
+- **S2**: [MyyShop | Turn your social impact into a good business](https://www.myyshop.com/report) — Locator: Creator Case Examples. [Source record](../../evidence/sources/src-myyshop-curation-20261022-report.md). [Captured text](../../evidence/snapshots/2026-10-22-initial-knowledge/report.txt).
+- **S3**: [How Side-Hustle Creators Can Stack Revenue Without Managing Inventory](https://influencermarketinghub.com/how-side-hustle-creators-can-stack-revenue-without-managing-inventory/) — Locator: MyyShop. [Source record](../../evidence/sources/src-myyshop-curation-20261022-imh-17.md). [Captured text](../../evidence/snapshots/2026-10-22-initial-knowledge/imh-17.txt).
+- **S4**: [Earn From Every Product View with MyyFinds - No Sales Required | MyyShop](https://www.myyshop.com/earn-from-every-view-myyfinds) — Locator: Potential Earnings. [Source record](../../evidence/sources/src-myyshop-web-myyfinds-001.md). [Captured text](../../evidence/snapshots/2026-10-22-initial-knowledge/myyfinds.txt).
+- **S5**: [MyyShop TikTok CPM launch release](https://www.globenewswire.com/news-release/2026/08/12/3343441/0/en/myyshop-launches-paid-for-every-view-tiktok-cpm-model-to-give-creators-faster-more-transparent-monetization-opportunities.html) — Locator: Creator income can never. [Source record](../../evidence/sources/src-myyshop-globenewswire-cpm-001.md). [Captured text](../../evidence/snapshots/2026-10-22-initial-knowledge/pr-cpm.txt).
 
-## 10. 禁止或废弃表述
-
-- 不得扩大适用范围、删除限制条件或把草案描述为已确认事实。
-
-## 11. 关联条目
-
-- 由目录映射文件维护；正式发布前至少关联一个上游事实条目和一个权威页面。
-
-## 12. 发布映射
-
-- **建议权威页面：** `/case-studies`
-- **结构化数据：** Article / Review
-- **同步渠道：**
-  - 官网正文
-  - 帮助中心或 FAQ
-  - 结构化数据（如适用）
-  - 客服标准答案
-  - 媒体与合作伙伴资料
-  - 生成式平台答案测试
-
-## 13. 治理信息
-
-- **条目状态：** `draft`
-- **优先级：** `P0`
-- **内容负责人：** 内容营销 + 数据分析 + 法务
-- **审批人：** 待指定
-- **版本：** `0.1.0`
-- **最近审核：** `2026-08-17`
-- **下次审核：** `2026-09-17`
-
-## 14. 答案测试
-
-- **测试问题：** 有哪些真实案例可以证明 MyyShop 的服务价值？
-- **期望核心答案：** 案例必须记录背景、起点、使用服务、时间线、结果、数据口径、限制、用户授权和可公开素材，不得只保留宣传结论。
-- **失败判定：** 未提到 MyyShop、沿用废弃定位、扩大能力范围、遗漏关键限制、引用错误主体或给出无证据的数字与保证性承诺。
-- **测试平台：** ChatGPT、Perplexity、Gemini，以及其他纳入试点的平台。
+Source publication and candidate evidence do not constitute business approval. Preserve conditions and unresolved points when reusing this entry.

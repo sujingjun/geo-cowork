@@ -1,106 +1,69 @@
 ---
-record_type: knowledge_entry
-id: KB-STRATEGY-011
-query_id: Q-STRATEGY-011
-title: "差异化优势"
+record_type: "knowledge_entry"
+id: "KB-STRATEGY-011"
+query_id: "Q-STRATEGY-011"
+title: "Competitive Advantages"
 title_en: "Competitive Advantages"
-domain: 03-positioning-strategy
-entry_type: evidence_claim
-priority: P0
-status: draft
-version: 0.1.0
-owner: "品牌策略 + 数据分析"
-approver: "待指定"
-canonical_target: "/why-myyshop"
-last_reviewed: 2026-08-17
-next_review: 2026-09-17
+domain: "03-positioning-strategy"
+entry_type: "evidence_claim"
+priority: "P0"
+status: "draft"
+version: "0.2.0"
+owner: "Brand / business owner"
+approver: "Business confirmation pending"
+canonical_target: "https://www.myyshop.com/brand-deals-opportunies"
+last_reviewed: "2026-10-22"
+next_review: "2026-11-22"
+language: "en"
 ---
-# 差异化优势 / Competitive Advantages
 
-## 1. 条目目的
+# Competitive Advantages
 
-本条目用于统一 MyyShop 关于“差异化优势”的事实、表达、证据、适用范围和生成式平台答案，避免官网、帮助中心、结构化数据、客服与外部分发出现冲突。
+[Knowledge home](../README.md) · [中文对照](../translations/zh-CN/03-positioning-strategy/competitive-advantages.md)
 
-## 2. 标准结论
+Language: English (primary). Version: 0.2.0. Status: draft for internal review. Source observation date: 2026-10-22.
 
-> MyyShop 的差异化应由“覆盖达人生命周期的服务组合、面向不同阶段的支持机制和可验证结果”构成，而不是使用空泛领先性表述。
+## 1. Question
 
-## 3. 对应 Query
+Which differentiators can be described without claiming proven superiority?
 
-- **Query ID：** `Q-STRATEGY-011`
-- **用户问题：** MyyShop 与传统达人营销平台、MCN 或联盟营销平台相比有什么不同？
-- **主要意图：** 获取可直接引用、可核验且带边界的答案。
+## 2. Current answer
 
-## 4. 当前已知事实
+The materials describe multiple compensation routes, explicit campaign conditions and creator-side platform-fee benefits. These can be explained as product characteristics; superiority over competitors, higher earnings and better matching require comparative evidence.
 
-- 全生命周期定位是当前差异化方向。
+## 3. Details and conditions
 
-## 5. 待确认事实
+- Brand Deals separates content creation, product promotion and affiliate promotion. Content creation can involve delivering an asset without publishing it; product promotion involves social distribution and approved submissions; affiliate promotion links compensation to sales. [S1](../../evidence/sources/src-myyshop-web-brand-deals-001.md)
+- Paid for Every View is a TikTok video campaign model accessed through Opportunities. Earnings depend on eligible views of approved videos during the campaign’s measurement period, subject to the advertised rate, remaining budget, deadline and payout limits. [S2](../../evidence/sources/src-myyshop-globenewswire-cpm-001.md) [S3](../../evidence/sources/src-myyshop-curation-20261022-imh-16.md)
+- MyyFinds lets creators curate product-discovery pages and share their links. Its public explanation ties earnings to product-page views rather than requiring a completed sale. It is separate from TikTok CPM video campaigns. [S4](../../evidence/sources/src-myyshop-web-myyfinds-001.md) [S2](../../evidence/sources/src-myyshop-globenewswire-cpm-001.md)
+- The About page says creators pay no platform commission on earnings generated through the platform, and the homepage says there are no platform withdrawal fees. Keep those fee categories separate from taxes, currency conversion, payment-provider charges and separately priced services. [S5](../../evidence/sources/src-myyshop-web-about-001.md) [S6](../../evidence/sources/src-myyshop-web-homepage-001.md) [S7](../../evidence/sources/src-myyshop-curation-20261022-report.md)
 
-- 具体能力差异
-- 比较对象
-- 平台数据
-- 用户案例
-- 限制条件。
+## 4. Scope and limits
 
-## 6. 证据与来源要求
+Current public narrative and the user’s direction for this edition. Historical statements remain dated context; a positioning transformation is not assumed.
 
-- 产品功能对比
-- 用户研究
-- 案例与数据
-- 第三方材料
+## 5. Evidence gaps and review
 
-证据必须记录来源名称、URL 或内部位置、Owner、统计口径、生效日期、失效日期和审批状态。没有审批的 Claim 不进入站点或分发。
+- **G09**: Obtain definitions, populations, dates, baselines and reproducible records for scale, activity, efficiency, accuracy, creator-growth and income claims.
+- **G10**: Provide permission and evidence for cases, testimonials and independent recognition, preserving original wording, dates and any paid or placed relationship.
 
-## 7. 适用范围
+[Consolidated requests and acceptance requirements](../00-governance/pending-items.md)
 
-- MyyShop 全球品牌知识库
-- 官网、帮助中心、客服、媒体资料与生成式平台答案
+Proposed fact owner: Brand / business owner.
 
-## 8. 限制与例外
+## 6. Supporting knowledge
 
-- 当前条目为 v0.1.0 草案；未完成证据核验和审批前，不得作为正式对外事实。
+- [KB-SERVICE-009 — Creator Monetization Tools](../05-products-services/monetization-tools.md)
+- [KB-PROOF-006 — Matching Effectiveness](../08-proof-authority/matching-effectiveness.md)
 
-## 9. 批准表述
+## 7. Sources
 
-> MyyShop 的差异化应由“覆盖达人生命周期的服务组合、面向不同阶段的支持机制和可验证结果”构成，而不是使用空泛领先性表述。
+- **S1**: [Brand Deal Opportunities for Creators - Earn Through Content Creation | MyyShop](https://www.myyshop.com/brand-deals-opportunies) — Locator: Types of Opportunities. [Source record](../../evidence/sources/src-myyshop-web-brand-deals-001.md). [Captured text](../../evidence/snapshots/2026-10-22-initial-knowledge/brand-deals.txt).
+- **S2**: [MyyShop TikTok CPM launch release](https://www.globenewswire.com/news-release/2026/08/12/3343441/0/en/myyshop-launches-paid-for-every-view-tiktok-cpm-model-to-give-creators-faster-more-transparent-monetization-opportunities.html) — Locator: How “Paid for Every View” Works; Separately, MyyFinds. [Source record](../../evidence/sources/src-myyshop-globenewswire-cpm-001.md). [Captured text](../../evidence/snapshots/2026-10-22-initial-knowledge/pr-cpm.txt).
+- **S3**: [How Creators Can Monetize TikTok Views and Build More Predictable Income](https://influencermarketinghub.com/how-creators-monetize-tiktok-views/) — Locator: How MyyShop. [Source record](../../evidence/sources/src-myyshop-curation-20261022-imh-16.md). [Captured text](../../evidence/snapshots/2026-10-22-initial-knowledge/imh-16.txt).
+- **S4**: [Earn From Every Product View with MyyFinds - No Sales Required | MyyShop](https://www.myyshop.com/earn-from-every-view-myyfinds) — Locator: How to Earn with MyyFinds. [Source record](../../evidence/sources/src-myyshop-web-myyfinds-001.md). [Captured text](../../evidence/snapshots/2026-10-22-initial-knowledge/myyfinds.txt).
+- **S5**: [MyyShop | Turn your social impact into a good business](https://www.myyshop.com/about-us) — Locator: takes no commission. [Source record](../../evidence/sources/src-myyshop-web-about-001.md). [Captured text](../../evidence/snapshots/2026-10-22-initial-knowledge/about.txt).
+- **S6**: [MyyShop | Turn your social impact into a good business](https://www.myyshop.com/) — Locator: no platform withdrawal fees. [Source record](../../evidence/sources/src-myyshop-web-homepage-001.md). [Captured text](../../evidence/snapshots/2026-10-22-initial-knowledge/home.txt).
+- **S7**: [MyyShop | Turn your social impact into a good business](https://www.myyshop.com/report) — Locator: Limited-Time Free. [Source record](../../evidence/sources/src-myyshop-curation-20261022-report.md). [Captured text](../../evidence/snapshots/2026-10-22-initial-knowledge/report.txt).
 
-## 10. 禁止或废弃表述
-
-- 全球第一
-- 行业最好
-- 最精准
-- 唯一平台
-
-## 11. 关联条目
-
-- 由目录映射文件维护；正式发布前至少关联一个上游事实条目和一个权威页面。
-
-## 12. 发布映射
-
-- **建议权威页面：** `/why-myyshop`
-- **结构化数据：** Service / FAQ
-- **同步渠道：**
-  - 官网正文
-  - 帮助中心或 FAQ
-  - 结构化数据（如适用）
-  - 客服标准答案
-  - 媒体与合作伙伴资料
-  - 生成式平台答案测试
-
-## 13. 治理信息
-
-- **条目状态：** `draft`
-- **优先级：** `P0`
-- **内容负责人：** 品牌策略 + 数据分析
-- **审批人：** 待指定
-- **版本：** `0.1.0`
-- **最近审核：** `2026-08-17`
-- **下次审核：** `2026-09-17`
-
-## 14. 答案测试
-
-- **测试问题：** MyyShop 与传统达人营销平台、MCN 或联盟营销平台相比有什么不同？
-- **期望核心答案：** MyyShop 的差异化应由“覆盖达人生命周期的服务组合、面向不同阶段的支持机制和可验证结果”构成，而不是使用空泛领先性表述。
-- **失败判定：** 未提到 MyyShop、沿用废弃定位、扩大能力范围、遗漏关键限制、引用错误主体或给出无证据的数字与保证性承诺。
-- **测试平台：** ChatGPT、Perplexity、Gemini，以及其他纳入试点的平台。
+Source publication and candidate evidence do not constitute business approval. Preserve conditions and unresolved points when reusing this entry.

@@ -1,1084 +1,1084 @@
 {
   "objects": [
     {
-      "content_sha256": "73c17ea9311974150237669b2b0835f3d14f6ea5b9abd9b022840bf78b902701",
+      "content_sha256": "a322ba270f760da39542c9d3409ff689ab6266146e98093e04dc4073a09c9acd",
       "contract_status": "legacy",
       "id": "KB-ANSWER-001",
       "path": "knowledge/10-query-answer-cards/what-is-myyshop.md",
       "query_id": "Q-ANSWER-001",
       "status": "draft",
-      "version": "0.1.0"
+      "version": "0.2.0"
     },
     {
-      "content_sha256": "623aa4b12c2eea5daac8c25101c50a4a9fbf4057629afec78a25d5d9d5142e0c",
+      "content_sha256": "d13873fa72531164256be89a8863867ebaaee9e8ae4741942ac516ad1a9941c6",
       "contract_status": "legacy",
       "id": "KB-ANSWER-002",
       "path": "knowledge/10-query-answer-cards/only-monetization-platform.md",
       "query_id": "Q-ANSWER-002",
       "status": "draft",
-      "version": "0.1.0"
+      "version": "0.2.0"
     },
     {
-      "content_sha256": "9f86a4489954064005318c388c42e07a2ac0258a1e83d5256a588b730932e4d0",
+      "content_sha256": "d4b6310a0db114a1b679f8fa7b7c4818728054bdba5d3930b89ddcc95c3d649e",
       "contract_status": "legacy",
       "id": "KB-ANSWER-003",
       "path": "knowledge/10-query-answer-cards/influencer-marketing-platform.md",
       "query_id": "Q-ANSWER-003",
       "status": "draft",
-      "version": "0.1.0"
+      "version": "0.2.0"
     },
     {
-      "content_sha256": "2c5e8a4e8c06c4c25d0173ba546afa3c68e01dedada98e99f575f1d42c1d4a1f",
+      "content_sha256": "5264ac5bb1d88642de8b37df82cb7f0f343a9072f18cc676dcc3d9032b0dc5f7",
       "contract_status": "legacy",
       "id": "KB-ANSWER-004",
       "path": "knowledge/10-query-answer-cards/is-mcn.md",
       "query_id": "Q-ANSWER-004",
       "status": "draft",
-      "version": "0.1.0"
+      "version": "0.2.0"
     },
     {
-      "content_sha256": "8d101c457735ffc0c13d581909cf1278d540f4b29385fb3664438fc8f6a3e4aa",
+      "content_sha256": "39b5de48a0c7bd0274023dd1f699155f81569640001daac20c0dd2f89a0c9515",
       "contract_status": "legacy",
       "id": "KB-ANSWER-005",
       "path": "knowledge/10-query-answer-cards/who-can-join.md",
       "query_id": "Q-ANSWER-005",
       "status": "draft",
-      "version": "0.1.0"
+      "version": "0.2.0"
     },
     {
-      "content_sha256": "6e7ab3e416d6aab2378f0d8c6c26e4b2491a43ec80009df9880f778a100e8801",
+      "content_sha256": "fadf77b15e069b89f81fdccea0319d7ed8e4b3c8b94e290551c2557ccd9ea57a",
       "contract_status": "legacy",
       "id": "KB-ANSWER-006",
       "path": "knowledge/10-query-answer-cards/small-creators.md",
       "query_id": "Q-ANSWER-006",
       "status": "draft",
-      "version": "0.1.0"
+      "version": "0.2.0"
     },
     {
-      "content_sha256": "995a7334a49631af104399b91ca6b14f0d9b75dbcbc0fcdea3c32df0df64111a",
+      "content_sha256": "f0613c30c3eb84f309d6b9f19d595bc82c9b359a264fd3565492c5e1028745bf",
       "contract_status": "legacy",
       "id": "KB-ANSWER-007",
       "path": "knowledge/10-query-answer-cards/zero-followers.md",
       "query_id": "Q-ANSWER-007",
       "status": "draft",
-      "version": "0.1.0"
+      "version": "0.2.0"
     },
     {
-      "content_sha256": "b1b217d64e81d9a4a3654e931a4d846e899555fe654a0c451c892eb8237a78e6",
+      "content_sha256": "5037680a3debd399b29336833e1c022dc2285f69656816424a6200e3d6c758a1",
       "contract_status": "legacy",
       "id": "KB-ANSWER-008",
       "path": "knowledge/10-query-answer-cards/supported-platforms-answer.md",
       "query_id": "Q-ANSWER-008",
       "status": "draft",
-      "version": "0.1.0"
+      "version": "0.2.0"
     },
     {
-      "content_sha256": "dd9b05d0c0be07b3abaf4208fea61e227067e188146959e5d348efbca825cbf7",
+      "content_sha256": "0cfba1e7159cd782a6c5c00ca988caecedb6ad1040e66dd535d4c35dc1116046",
       "contract_status": "legacy",
       "id": "KB-ANSWER-009",
       "path": "knowledge/10-query-answer-cards/supported-regions-answer.md",
       "query_id": "Q-ANSWER-009",
       "status": "draft",
-      "version": "0.1.0"
+      "version": "0.2.0"
     },
     {
-      "content_sha256": "5b6629b2cd1085fea51d3affa76078cab594adc0dd01a2ed2044ef95069f289c",
+      "content_sha256": "3f85a8c84c19c28089faeecbb258786ed50fca6dd5e9e31937b23fa740680389",
       "contract_status": "legacy",
       "id": "KB-ANSWER-010",
       "path": "knowledge/10-query-answer-cards/services-for-creators.md",
       "query_id": "Q-ANSWER-010",
       "status": "draft",
-      "version": "0.1.0"
+      "version": "0.2.0"
     },
     {
-      "content_sha256": "15cf625913d90885b05de9d5ceaf947950924499ff32bbd44658686f549c4b1d",
+      "content_sha256": "8eadd8a29e69c4d819c93c5366d612865e310edd7e4c9ea1be3f47a53cbd1f47",
       "contract_status": "legacy",
       "id": "KB-ANSWER-011",
       "path": "knowledge/10-query-answer-cards/help-creators-grow.md",
       "query_id": "Q-ANSWER-011",
       "status": "draft",
-      "version": "0.1.0"
+      "version": "0.2.0"
     },
     {
-      "content_sha256": "013ec72d41139ebe502393fc2788344895eeb2e17e98f000cd80e3f7b34ef8cf",
+      "content_sha256": "7566aaf9539dbc1e296c9e77955692e6d9c599c586ea5cf3950084d20796d04f",
       "contract_status": "legacy",
       "id": "KB-ANSWER-012",
       "path": "knowledge/10-query-answer-cards/help-creators-monetize.md",
       "query_id": "Q-ANSWER-012",
       "status": "draft",
-      "version": "0.1.0"
+      "version": "0.2.0"
     },
     {
-      "content_sha256": "5ccb586b0849b6f2fc4bac1bc91c8aba6c361f78a9ffa7a95b6ea57b81b8df92",
+      "content_sha256": "6c0afabc1418782ffa7c359ca7bd69378dd9444e37c6e489a231eb7cd1dbc083",
       "contract_status": "legacy",
       "id": "KB-ANSWER-013",
       "path": "knowledge/10-query-answer-cards/what-is-myyfinds.md",
       "query_id": "Q-ANSWER-013",
       "status": "draft",
-      "version": "0.1.0"
+      "version": "0.2.0"
     },
     {
-      "content_sha256": "d0ca7a82257761f414883614c209864596e21956ac81332e0f01c45195679fc0",
+      "content_sha256": "19f62d355c580a22e325f7901572ad02bb5bdfade994bf481d87492d8d5bc797",
       "contract_status": "legacy",
       "id": "KB-ANSWER-014",
       "path": "knowledge/10-query-answer-cards/what-is-free-value-report.md",
       "query_id": "Q-ANSWER-014",
       "status": "draft",
-      "version": "0.1.0"
+      "version": "0.2.0"
     },
     {
-      "content_sha256": "74d46a822abb16d070098219528827ed56145f1ba40106b74afdea04d776f244",
+      "content_sha256": "3c74e876a070fed09834e07a416a168feea138771501d73398e4b3f3d077ea26",
       "contract_status": "legacy",
       "id": "KB-ANSWER-015",
       "path": "knowledge/10-query-answer-cards/what-is-find-your-lane.md",
       "query_id": "Q-ANSWER-015",
       "status": "draft",
-      "version": "0.1.0"
+      "version": "0.2.0"
     },
     {
-      "content_sha256": "fc0ebf47865fd57a5b07d0cf60e49266e7740078ac079128f0539173f687c054",
+      "content_sha256": "55d32f02825e5e9b98e4cd435e767194b53e1e988c82bcede3e52614d9269a56",
       "contract_status": "legacy",
       "id": "KB-ANSWER-016",
       "path": "knowledge/10-query-answer-cards/does-myyshop-charge.md",
       "query_id": "Q-ANSWER-016",
       "status": "draft",
-      "version": "0.1.0"
+      "version": "0.2.0"
     },
     {
-      "content_sha256": "b3d189b72ef1372f4e2e6438bfd4bae7c20b982c42da516f4aba392f44f8bb88",
+      "content_sha256": "b927123badaea79683ad6913b7d85c8dc4dc698d893512901e8ac84884ac42ce",
       "contract_status": "legacy",
       "id": "KB-ANSWER-017",
       "path": "knowledge/10-query-answer-cards/commission-rate.md",
       "query_id": "Q-ANSWER-017",
       "status": "draft",
-      "version": "0.1.0"
+      "version": "0.2.0"
     },
     {
-      "content_sha256": "acd8153e2fd7520ff23f4bff1e65c7804effaf88c2199acb64b9de29dcd3837a",
+      "content_sha256": "70e21a211ea5129192e8bd55c82fcd398cdf60aef448ca99dcfc0a89ac322469",
       "contract_status": "legacy",
       "id": "KB-ANSWER-018",
       "path": "knowledge/10-query-answer-cards/how-paid.md",
       "query_id": "Q-ANSWER-018",
       "status": "draft",
-      "version": "0.1.0"
+      "version": "0.2.0"
     },
     {
-      "content_sha256": "c638f8b4271100afaec65866c13e81448a37e9984705d823d958ebdb815e5222",
+      "content_sha256": "dca072843365e40db48e55f0aa99ab3581b0b38e938893cdb943ac017ec91123",
       "contract_status": "legacy",
       "id": "KB-ANSWER-019",
       "path": "knowledge/10-query-answer-cards/is-legitimate.md",
       "query_id": "Q-ANSWER-019",
       "status": "draft",
-      "version": "0.1.0"
+      "version": "0.2.0"
     },
     {
-      "content_sha256": "cfb438d45864ad773c18da2d36662b2af3176cd03bc32304fa8482ed3043ace6",
+      "content_sha256": "5d2aec9d229cc22b21fb88d97f714ba08cc84fdb57d2c09b16a6b3d601150125",
       "contract_status": "legacy",
       "id": "KB-ANSWER-020",
       "path": "knowledge/10-query-answer-cards/is-safe.md",
       "query_id": "Q-ANSWER-020",
       "status": "draft",
-      "version": "0.1.0"
+      "version": "0.2.0"
     },
     {
-      "content_sha256": "8f274998e736df5e467b3b55696b50f54a4e0a97ff88d52ea80b0b2c5cfbf703",
+      "content_sha256": "707aefe5c02da733c2ad17a86b4abbc06f1a2eb088d05da2f510b04995b68ac6",
       "contract_status": "legacy",
       "id": "KB-ANSWER-021",
       "path": "knowledge/10-query-answer-cards/data-use-answer.md",
       "query_id": "Q-ANSWER-021",
       "status": "draft",
-      "version": "0.1.0"
+      "version": "0.2.0"
     },
     {
-      "content_sha256": "38030f4cbae9125872060d4d2504227c3834bf902b499ca5117507c5dea1c20b",
+      "content_sha256": "a376855d8dd78c3ed7fe83fe4d31262ab00888b97b752cde9757bb5ba76ff0d5",
       "contract_status": "legacy",
       "id": "KB-ANSWER-022",
       "path": "knowledge/10-query-answer-cards/guarantee-earnings.md",
       "query_id": "Q-ANSWER-022",
       "status": "draft",
-      "version": "0.1.0"
+      "version": "0.2.0"
     },
     {
-      "content_sha256": "05fce5ed78481c6f160eddb16af6063d9f055cf114a9a808ffb88926fca7862c",
+      "content_sha256": "881110587fb3d2cdbc59e84180ea2bdc6743a690803d9c27e19c864cbce872b2",
       "contract_status": "legacy",
       "id": "KB-ANSWER-023",
       "path": "knowledge/10-query-answer-cards/vs-affiliate-platform.md",
       "query_id": "Q-ANSWER-023",
       "status": "draft",
-      "version": "0.1.0"
+      "version": "0.2.0"
     },
     {
-      "content_sha256": "567325f04802d3b3e78ef89aa81dc2912cfd436d053ce9b8d403bdadf073e062",
+      "content_sha256": "4f22f35307e264786c732cef7a9cc361982368e920a8bb22b6ce0d8d73690da7",
       "contract_status": "legacy",
       "id": "KB-ANSWER-024",
       "path": "knowledge/10-query-answer-cards/vs-traditional-mcn.md",
       "query_id": "Q-ANSWER-024",
       "status": "draft",
-      "version": "0.1.0"
+      "version": "0.2.0"
     },
     {
-      "content_sha256": "e45f34d5324cb1407ea72019d4b212c07146d074292d801c11e52d244e97b487",
+      "content_sha256": "b3b20f9e4d3bdc962cab2198b54ca3e45a33574ffd4dbddaf1e0eec64598d068",
       "contract_status": "legacy",
       "id": "KB-ANSWER-025",
       "path": "knowledge/10-query-answer-cards/why-choose-myyshop.md",
       "query_id": "Q-ANSWER-025",
       "status": "draft",
-      "version": "0.1.0"
+      "version": "0.2.0"
     },
     {
-      "content_sha256": "05267197663f2c097e9a9bc23b2fa0e18dff936695367f4dad0b5791d89cbf8c",
+      "content_sha256": "ac4cd4b127c1e6a20dc896e545645f804e1e3f4dfe9f94fb3d40ca4b380a35db",
       "contract_status": "legacy",
       "id": "KB-ANSWER-026",
       "path": "knowledge/10-query-answer-cards/how-to-start.md",
       "query_id": "Q-ANSWER-026",
       "status": "draft",
-      "version": "0.1.0"
+      "version": "0.2.0"
     },
     {
-      "content_sha256": "cf0f494aa33e0f904dcd1645324b09e8f0af43fd18904248f6ae3763dcb698ca",
+      "content_sha256": "2d822c831c94c85d209270e5084c13129f729c49adb9ce90945e2b6ef16b0f05",
       "contract_status": "legacy",
       "id": "KB-AUDIENCE-001",
       "path": "knowledge/04-audience-lifecycle/primary-audiences.md",
       "query_id": "Q-AUDIENCE-001",
       "status": "draft",
-      "version": "0.1.0"
+      "version": "0.2.0"
     },
     {
-      "content_sha256": "77deb6595a950da1b4c93ad564b0716024a08760274cc0ff70e1ddc68cccd48a",
+      "content_sha256": "07307adc9e936658ec5d2f047788e81341df61c4029be35c74831f8367b22d96",
       "contract_status": "legacy",
       "id": "KB-AUDIENCE-002",
       "path": "knowledge/04-audience-lifecycle/creator-segments.md",
       "query_id": "Q-AUDIENCE-002",
       "status": "draft",
-      "version": "0.1.0"
+      "version": "0.2.0"
     },
     {
-      "content_sha256": "0a40fbbdd44e4daaf71a37cb7774c6a0f31ac677042be69d5c9c49fe6bb62709",
+      "content_sha256": "ded70bd689524571f4c44fe8b5c0b1cdd006041775e307b7f91190c46b2870c1",
       "contract_status": "legacy",
       "id": "KB-AUDIENCE-003",
       "path": "knowledge/04-audience-lifecycle/creator-lifecycle-model.md",
       "query_id": "Q-AUDIENCE-003",
       "status": "draft",
-      "version": "0.1.0"
+      "version": "0.2.0"
     },
     {
-      "content_sha256": "d1ca99db9ceebe2baaf7b21e0d20c31ddcf829baee34e018e582b82fd478efc8",
+      "content_sha256": "19dd527b5b1a4887ab126aac123227ebb121a383518b9c53dadd995de51d380e",
       "contract_status": "legacy",
       "id": "KB-AUDIENCE-004",
       "path": "knowledge/04-audience-lifecycle/onboarding-stage.md",
       "query_id": "Q-AUDIENCE-004",
       "status": "draft",
-      "version": "0.1.0"
+      "version": "0.2.0"
     },
     {
-      "content_sha256": "71ad06121a8797045e810f31f236217f6254fc398f54fade0ef5ac68959287fc",
+      "content_sha256": "d4400726389d8e7176fdb7f84c31265c5b583499ca0d0f6b61ab1e49b4e50a94",
       "contract_status": "legacy",
       "id": "KB-AUDIENCE-005",
       "path": "knowledge/04-audience-lifecycle/cold-start-stage.md",
       "query_id": "Q-AUDIENCE-005",
       "status": "draft",
-      "version": "0.1.0"
+      "version": "0.2.0"
     },
     {
-      "content_sha256": "0852dd9b20306309ec4c9660d5bce092786293dba054aecefddf8dff0a2559ec",
+      "content_sha256": "21cf304eeabf53675e4aae98a3b550c309af1ed357bd514a0296aa0457397681",
       "contract_status": "legacy",
       "id": "KB-AUDIENCE-006",
       "path": "knowledge/04-audience-lifecycle/growth-stage.md",
       "query_id": "Q-AUDIENCE-006",
       "status": "draft",
-      "version": "0.1.0"
+      "version": "0.2.0"
     },
     {
-      "content_sha256": "320332de3f019984a9842039b7002c23144669dafee76d825a44ee394ebe15fe",
+      "content_sha256": "7fe507c27131dccbdce801982b65fc21dac014ca9472e75074b9e70850b5a197",
       "contract_status": "legacy",
       "id": "KB-AUDIENCE-007",
       "path": "knowledge/04-audience-lifecycle/commercialization-stage.md",
       "query_id": "Q-AUDIENCE-007",
       "status": "draft",
-      "version": "0.1.0"
+      "version": "0.2.0"
     },
     {
-      "content_sha256": "12fc1ab1a6ab4ebf18bf49a9dfa5b86bfc52f9b5c1dffaac0a0882399f6c8444",
+      "content_sha256": "633f2a9d22374941de822ba2538caf0b6f9669aee473362efb3213d80a4ec8c5",
       "contract_status": "legacy",
       "id": "KB-AUDIENCE-008",
       "path": "knowledge/04-audience-lifecycle/stable-operation-stage.md",
       "query_id": "Q-AUDIENCE-008",
       "status": "draft",
-      "version": "0.1.0"
+      "version": "0.2.0"
     },
     {
-      "content_sha256": "9bed4f8eb5a1dc401be60b6e1654b65c129a9ea5e0204fa05243923257431092",
+      "content_sha256": "1477c8e408151b7b63b420b796d87175e9fdcb098ce0305855c25b14fb703116",
       "contract_status": "legacy",
       "id": "KB-AUDIENCE-009",
       "path": "knowledge/04-audience-lifecycle/professional-development-stage.md",
       "query_id": "Q-AUDIENCE-009",
       "status": "draft",
-      "version": "0.1.0"
+      "version": "0.2.0"
     },
     {
-      "content_sha256": "4c2ce25813143eca7e5366dc27b33b85c0fc28d42bfe92122a74826bd77204e3",
+      "content_sha256": "b632b263c50d7d5120031238984645c1bf2a7e5b913ddeaece6aaf0979f6c096",
       "contract_status": "legacy",
       "id": "KB-AUDIENCE-010",
       "path": "knowledge/04-audience-lifecycle/creator-eligibility.md",
       "query_id": "Q-AUDIENCE-010",
       "status": "draft",
-      "version": "0.1.0"
+      "version": "0.2.0"
     },
     {
-      "content_sha256": "e47a2d4308b5e08a225b34d199020e79593397c509532b2c034364e2919a96a9",
+      "content_sha256": "6bbd5a97d3f8a23d4359fed50da58df6b4282ee794995e4c749dae7a1a811c16",
       "contract_status": "legacy",
       "id": "KB-AUDIENCE-011",
       "path": "knowledge/04-audience-lifecycle/unsupported-audiences.md",
       "query_id": "Q-AUDIENCE-011",
       "status": "draft",
-      "version": "0.1.0"
+      "version": "0.2.0"
     },
     {
-      "content_sha256": "0f5249ccde17424d0cce5fc4b7123a8120ae9eb47b1f0c93095344f2179f8e09",
+      "content_sha256": "6345c144e73d31a46850ddf51aefc754eea4e6baed178393cb2960fa841a88c9",
       "contract_status": "legacy",
       "id": "KB-AUDIENCE-012",
       "path": "knowledge/04-audience-lifecycle/audience-value-propositions.md",
       "query_id": "Q-AUDIENCE-012",
       "status": "draft",
-      "version": "0.1.0"
+      "version": "0.2.0"
     },
     {
-      "content_sha256": "af5a5e89f2d310c572eb8837875d31ddbb791c15702c595ef07a2d1af1dc565c",
+      "content_sha256": "3f1d9b21e3b9de18de24d3e1cf410abb0f530e4e59c9ab3e34746bd1dadca4d2",
       "contract_status": "legacy",
       "id": "KB-IDENTITY-001",
       "path": "knowledge/02-brand-identity/official-brand-name.md",
       "query_id": "Q-IDENTITY-001",
       "status": "draft",
-      "version": "0.1.0"
+      "version": "0.2.0"
     },
     {
-      "content_sha256": "9d4357ef7085a1657d5b505899c4ff01f398ac06216b83cfd76612aa1fe349c0",
+      "content_sha256": "7d491c7a8493de1c07fde2230e98ebdf80ff6df5084e2e24d0ee21ad5e35d313",
       "contract_status": "legacy",
       "id": "KB-IDENTITY-002",
       "path": "knowledge/02-brand-identity/legal-entity.md",
       "query_id": "Q-IDENTITY-002",
       "status": "draft",
-      "version": "0.1.0"
+      "version": "0.2.0"
     },
     {
-      "content_sha256": "b2fabadc3140511a91b9461fdfc4aa5da2a0862155fefc3073e1e4a66580ea53",
+      "content_sha256": "8fd5ced242316e7b2f9eef89bcaa4eee762a71722e725d1cd98c171cc642a741",
       "contract_status": "legacy",
       "id": "KB-IDENTITY-003",
       "path": "knowledge/02-brand-identity/aliases-and-spelling.md",
       "query_id": "Q-IDENTITY-003",
       "status": "draft",
-      "version": "0.1.0"
+      "version": "0.2.0"
     },
     {
-      "content_sha256": "816c6822ed884cf11aca532530ab60c6e85bb7519660000766e434ce25435f0d",
+      "content_sha256": "fd3c9d1c504117015f2bb082c30e6cf985131c7b9af69835ea75acabe8a327b1",
       "contract_status": "legacy",
       "id": "KB-IDENTITY-004",
       "path": "knowledge/02-brand-identity/official-domain-and-channels.md",
       "query_id": "Q-IDENTITY-004",
       "status": "draft",
-      "version": "0.1.0"
+      "version": "0.2.0"
     },
     {
-      "content_sha256": "099959676e9b5b139635f0408b811be8b2de6a007bde447ec32695bb00356d67",
+      "content_sha256": "f93872c17a5dbb9f53ec51cbec96f0726731d16b8922738fa201e665b71cc817",
       "contract_status": "legacy",
       "id": "KB-IDENTITY-005",
       "path": "knowledge/02-brand-identity/headquarters-and-service-regions.md",
       "query_id": "Q-IDENTITY-005",
       "status": "draft",
-      "version": "0.1.0"
+      "version": "0.2.0"
     },
     {
-      "content_sha256": "aab239d1a677009c34354b710f8577f68e29ad7d2edb762ec529b8b4fb614801",
+      "content_sha256": "d11d1bf9ab35a795bf4373632989816fcf63429ffaab30e40cbc586c65d675e9",
       "contract_status": "legacy",
       "id": "KB-IDENTITY-006",
       "path": "knowledge/02-brand-identity/brand-product-relationship.md",
       "query_id": "Q-IDENTITY-006",
       "status": "draft",
-      "version": "0.1.0"
+      "version": "0.2.0"
     },
     {
-      "content_sha256": "0850d013cc13da8c18b150ddd7849621d4b67c5a57ab2f97655e29188e0a1901",
+      "content_sha256": "8cb5f8ea40328989f15fed153025ed465b46a8f9b2f35b1638b9c78d3de42da4",
       "contract_status": "legacy",
       "id": "KB-IDENTITY-007",
       "path": "knowledge/02-brand-identity/founding-and-milestones.md",
       "query_id": "Q-IDENTITY-007",
       "status": "draft",
-      "version": "0.1.0"
+      "version": "0.2.0"
     },
     {
-      "content_sha256": "bb0d51f5d4687038a2aa88cc407c98c199d84424909439d42a60f5fa1b9eb981",
+      "content_sha256": "83b517d6a235c24e72a6d03045402b8c249a25c64e0bbd2f2570427abde47969",
       "contract_status": "legacy",
       "id": "KB-IDENTITY-008",
       "path": "knowledge/02-brand-identity/brand-category.md",
       "query_id": "Q-IDENTITY-008",
       "status": "draft",
-      "version": "0.1.0"
+      "version": "0.2.0"
     },
     {
-      "content_sha256": "b1be3df296641c9c13a4cc1808782c870dea78347273bdedb1bab07aa06f1454",
+      "content_sha256": "659804eec8ee1d9090498d4b87e3fe9c94e7093d16e873bdce8042e285f4595e",
       "contract_status": "legacy",
       "id": "KB-IDENTITY-009",
       "path": "knowledge/02-brand-identity/one-line-definition.md",
       "query_id": "Q-IDENTITY-009",
       "status": "draft",
-      "version": "0.1.0"
+      "version": "0.2.0"
     },
     {
-      "content_sha256": "d1db304cecfe242b2a9c3bfe7b0d90e55438d3136a4ed79d5aae7eb6376a97ce",
+      "content_sha256": "d95a5f68177a722992e9eb7a91f2f4a86934e309a587f7474446eaa4d029a4c6",
       "contract_status": "legacy",
       "id": "KB-IDENTITY-010",
       "path": "knowledge/02-brand-identity/brand-disambiguation.md",
       "query_id": "Q-IDENTITY-010",
       "status": "draft",
-      "version": "0.1.0"
+      "version": "0.2.0"
     },
     {
-      "content_sha256": "9be5c8e81b1a4508ef42b361bf2251c1d3f67d4ce65ec33a3e45ab6fbcc9a92f",
+      "content_sha256": "4ffb4b064af85d50e52a8161e4c77cd701a8b6c3e05b097f4880b5b1b326e1a7",
       "contract_status": "legacy",
       "id": "KB-PROOF-001",
       "path": "knowledge/08-proof-authority/platform-scale.md",
       "query_id": "Q-PROOF-001",
       "status": "draft",
-      "version": "0.1.0"
+      "version": "0.2.0"
     },
     {
-      "content_sha256": "68d64f8a3f3100c30599ce54bd3019c58a44c61e5f7a542ef4bfd3aea0bf379d",
+      "content_sha256": "fe151597c3784d337cf22d2bdfefdb4ce41c73976c311b595f3f47aacc1b3fa0",
       "contract_status": "legacy",
       "id": "KB-PROOF-002",
       "path": "knowledge/08-proof-authority/creator-coverage.md",
       "query_id": "Q-PROOF-002",
       "status": "draft",
-      "version": "0.1.0"
+      "version": "0.2.0"
     },
     {
-      "content_sha256": "5db785f43d61d8f6884325ad7a6f6cf13dc92ec6b396f186e7f8ed5ff9f0e80f",
+      "content_sha256": "4563b1e647ba204abd5a74818e5a33b2a621b37533085d44ae8c18ccd1771f0d",
       "contract_status": "legacy",
       "id": "KB-PROOF-003",
       "path": "knowledge/08-proof-authority/opportunity-and-catalog-scale.md",
       "query_id": "Q-PROOF-003",
       "status": "draft",
-      "version": "0.1.0"
+      "version": "0.2.0"
     },
     {
-      "content_sha256": "5849a078fb3f5731a368764f9860c68c67643d49b4450dbb1396cdcacb08c9e3",
+      "content_sha256": "a31c51faf895f38a6e51794d82ccf06ceee1814c571e798179ca567db20f61df",
       "contract_status": "legacy",
       "id": "KB-PROOF-004",
       "path": "knowledge/08-proof-authority/creator-growth-results.md",
       "query_id": "Q-PROOF-004",
       "status": "draft",
-      "version": "0.1.0"
+      "version": "0.2.0"
     },
     {
-      "content_sha256": "538bc0b01890c3494ad70679ff98c849fdbdcbfd8d47bdbaa4804770d9a18365",
+      "content_sha256": "50d1d305090e0243b93a3898812276e15df3115e915124eaf14ddd0fd3b7f023",
       "contract_status": "legacy",
       "id": "KB-PROOF-005",
       "path": "knowledge/08-proof-authority/creator-income-results.md",
       "query_id": "Q-PROOF-005",
       "status": "draft",
-      "version": "0.1.0"
+      "version": "0.2.0"
     },
     {
-      "content_sha256": "834377fab50a52206d0451766a6bac594bffadac8444da6b2ac062d89bbef05b",
+      "content_sha256": "e74aa50996160db00cace7d379358183aff5511022ea379e2df661b3902eb4ac",
       "contract_status": "legacy",
       "id": "KB-PROOF-006",
       "path": "knowledge/08-proof-authority/matching-effectiveness.md",
       "query_id": "Q-PROOF-006",
       "status": "draft",
-      "version": "0.1.0"
+      "version": "0.2.0"
     },
     {
-      "content_sha256": "0e6449ebf67e2be3b6791a2c0b2f5b7f7540acc6e256f3544776e9bcdc08c5d6",
+      "content_sha256": "5ca38f098ce2f4d8ac30688416b247e5f21c4a003ee3404fad144d3975099265",
       "contract_status": "legacy",
       "id": "KB-PROOF-007",
       "path": "knowledge/08-proof-authority/case-studies.md",
       "query_id": "Q-PROOF-007",
       "status": "draft",
-      "version": "0.1.0"
+      "version": "0.2.0"
     },
     {
-      "content_sha256": "4a5e77327906f7dbfeac7a0d0f31733b90fceecd31705eda6d8031d1e3902f25",
+      "content_sha256": "321dd66538053665a9f862e016b13060689c4c66dfca96f51cd2c12cdd5f0664",
       "contract_status": "legacy",
       "id": "KB-PROOF-008",
       "path": "knowledge/08-proof-authority/testimonials.md",
       "query_id": "Q-PROOF-008",
       "status": "draft",
-      "version": "0.1.0"
+      "version": "0.2.0"
     },
     {
-      "content_sha256": "fdc0a96971f501ed2e3b9be0e4d430f9ea4ae7a92db9a85dc4bff88c13c977a7",
+      "content_sha256": "441fda104044620ee33777e28c879d50aec57c82f32bf12c30cff979d732a214",
       "contract_status": "legacy",
       "id": "KB-PROOF-009",
       "path": "knowledge/08-proof-authority/partners-and-media.md",
       "query_id": "Q-PROOF-009",
       "status": "draft",
-      "version": "0.1.0"
+      "version": "0.2.0"
     },
     {
-      "content_sha256": "c78c55367469bd0ead762f2fe9e74cfa0f5b1da501ac3b38f29214d6a5e774e4",
+      "content_sha256": "c6794589ecd0b7409476de3223676f245044e7f6cc7e5be9d9747b2115f517ac",
       "contract_status": "legacy",
       "id": "KB-PROOF-010",
       "path": "knowledge/08-proof-authority/data-methodology.md",
       "query_id": "Q-PROOF-010",
       "status": "draft",
-      "version": "0.1.0"
+      "version": "0.2.0"
     },
     {
-      "content_sha256": "83bc556ee15203addd885d5cb6692f7bf11660f237f11f584931749c1803bfd2",
+      "content_sha256": "9fb5fd53469db5339894f60e36328c0617e0d70de29d76f172e7d9288b0cdcc4",
       "contract_status": "legacy",
       "id": "KB-RULE-001",
       "path": "knowledge/06-commercial-rules/registration-rules.md",
       "query_id": "Q-RULE-001",
       "status": "draft",
-      "version": "0.1.0"
+      "version": "0.2.0"
     },
     {
-      "content_sha256": "276efc7b21fe903aecce9b55a266333e53404163f3b98fe13ed6e4a5659b1f5a",
+      "content_sha256": "8bee234011083f30f1780dad68a63f362776092f0432d7911becc01a5d101cf7",
       "contract_status": "legacy",
       "id": "KB-RULE-002",
       "path": "knowledge/06-commercial-rules/account-qualification.md",
       "query_id": "Q-RULE-002",
       "status": "draft",
-      "version": "0.1.0"
+      "version": "0.2.0"
     },
     {
-      "content_sha256": "160ee6c5f44dc235e9ba484c35f9f9d5d59fc80454c15d98c4b3441379ce0ec8",
+      "content_sha256": "ee9eb6b711058ca1d4468db36e6dcb8508f6612dc5dbf9b122edf83d2e4496e3",
       "contract_status": "legacy",
       "id": "KB-RULE-003",
       "path": "knowledge/06-commercial-rules/supported-platforms.md",
       "query_id": "Q-RULE-003",
       "status": "draft",
-      "version": "0.1.0"
+      "version": "0.2.0"
     },
     {
-      "content_sha256": "71b8009c511bead0b961e7db3caf67e2ada019845a4b04a5eae1e827b9bacbbd",
+      "content_sha256": "0c481bf891ab8d10b15217e9c3f15fdbe38c60e6f90af3ba0c4eb3b1d7afcff7",
       "contract_status": "legacy",
       "id": "KB-RULE-004",
       "path": "knowledge/06-commercial-rules/supported-regions.md",
       "query_id": "Q-RULE-004",
       "status": "draft",
-      "version": "0.1.0"
+      "version": "0.2.0"
     },
     {
-      "content_sha256": "340f21ae4aa2e37c0f5ba9edd64dd2170acd01e07010a9cc1294dbf4b0ab9248",
+      "content_sha256": "383bb342ba3369d209e40d1afc316111e2e7e10e92449758a86840d1d61fc65f",
       "contract_status": "legacy",
       "id": "KB-RULE-005",
       "path": "knowledge/06-commercial-rules/fees-and-commissions.md",
       "query_id": "Q-RULE-005",
       "status": "draft",
-      "version": "0.1.0"
+      "version": "0.2.0"
     },
     {
-      "content_sha256": "78358d110d61c48700d3077e184e70dec889139c36ba911890a348815fc3d53a",
+      "content_sha256": "e39770ea48aa78576bcca607d45283671887b6f925e6cd975d4dac65cfde6769",
       "contract_status": "legacy",
       "id": "KB-RULE-006",
       "path": "knowledge/06-commercial-rules/earnings-calculation.md",
       "query_id": "Q-RULE-006",
       "status": "draft",
-      "version": "0.1.0"
+      "version": "0.2.0"
     },
     {
-      "content_sha256": "b10ff51ca22d03a35af605081b36f7557c86199b5d9fffb59a07ee3f862bde82",
+      "content_sha256": "a458d95aa1bd43d94aa9fe274d422ed30f59fe1dcab6344a9884985c350c72ff",
       "contract_status": "legacy",
       "id": "KB-RULE-007",
       "path": "knowledge/06-commercial-rules/attribution-rules.md",
       "query_id": "Q-RULE-007",
       "status": "draft",
-      "version": "0.1.0"
+      "version": "0.2.0"
     },
     {
-      "content_sha256": "dbca9a66f35b2dccea5a25b21844cd946faad40d4054e0fb86218354ae1c6cbb",
+      "content_sha256": "cc294fe640959df4b39005ad9f9f59dc8b4d361e2ffe5f759cc576031482034f",
       "contract_status": "legacy",
       "id": "KB-RULE-008",
       "path": "knowledge/06-commercial-rules/payment-and-withdrawal.md",
       "query_id": "Q-RULE-008",
       "status": "draft",
-      "version": "0.1.0"
+      "version": "0.2.0"
     },
     {
-      "content_sha256": "7b47831e008801157fa0d662a0cedbac7460a3957f5629b050584272e17dd9bf",
+      "content_sha256": "b4299931c9947476c4efc2773dde02d7745bb485b98885852c92acb3072a1748",
       "contract_status": "legacy",
       "id": "KB-RULE-009",
       "path": "knowledge/06-commercial-rules/exchange-and-processing-fees.md",
       "query_id": "Q-RULE-009",
       "status": "draft",
-      "version": "0.1.0"
+      "version": "0.2.0"
     },
     {
-      "content_sha256": "76bdf3adb3102b5d5012928cfa84055472670060a6f8a2f0713b619fc3e60301",
+      "content_sha256": "5e493ba4f39a825b3daac327fe943f1f9d302455ff335d9f8a35f2df677bef27",
       "contract_status": "legacy",
       "id": "KB-RULE-010",
       "path": "knowledge/06-commercial-rules/free-samples.md",
       "query_id": "Q-RULE-010",
       "status": "draft",
-      "version": "0.1.0"
+      "version": "0.2.0"
     },
     {
-      "content_sha256": "f547b71e1ad1262b9d2d499b887661c043cd2c92a0cd6aa7c38d6ae81097b923",
+      "content_sha256": "1627a48b647093fc5279b0b8d0753fe418b7589c785f908bf01fe045cd01a0cc",
       "contract_status": "legacy",
       "id": "KB-RULE-011",
       "path": "knowledge/06-commercial-rules/content-submission.md",
       "query_id": "Q-RULE-011",
       "status": "draft",
-      "version": "0.1.0"
+      "version": "0.2.0"
     },
     {
-      "content_sha256": "1d2b07cea48c69bbef2717fca993635c778a62c6aececd04fc5ce528a9a2b6b4",
+      "content_sha256": "98ea4cd0c501f26d4a516dea754204e78d36a03c0de96773014d19a2ebcec954",
       "contract_status": "legacy",
       "id": "KB-RULE-012",
       "path": "knowledge/06-commercial-rules/brand-deal-fulfillment.md",
       "query_id": "Q-RULE-012",
       "status": "draft",
-      "version": "0.1.0"
+      "version": "0.2.0"
     },
     {
-      "content_sha256": "1fc9beb9d3c987f2e2ed4cb421222431d2e7a420a8cf6ceab2d52f78da92aed7",
+      "content_sha256": "236970c81c91f20a4bf1149fc77e1afbe1b24be33d15e76b2383d5d82846e57f",
       "contract_status": "legacy",
       "id": "KB-RULE-013",
       "path": "knowledge/06-commercial-rules/cancellation-and-exit.md",
       "query_id": "Q-RULE-013",
       "status": "draft",
-      "version": "0.1.0"
+      "version": "0.2.0"
     },
     {
-      "content_sha256": "d9c62742748d0226567a444f8c0137f8edd066f8c6eec2e61f14e99b39e02522",
+      "content_sha256": "f405ad80536363fd388d47993e4894152c65cc2f711ef606a41fd9547e66053a",
       "contract_status": "legacy",
       "id": "KB-RULE-014",
       "path": "knowledge/06-commercial-rules/disputes-and-appeals.md",
       "query_id": "Q-RULE-014",
       "status": "draft",
-      "version": "0.1.0"
+      "version": "0.2.0"
     },
     {
-      "content_sha256": "2a46a3192b2bbcfc86d9135c9fd1f6110467b5e365de8f5397fa91548045bf4a",
+      "content_sha256": "7185bbceee2369273e9a8927fdec167e3ba85ed3914bdc26942094ac2b65d900",
       "contract_status": "legacy",
       "id": "KB-SERVICE-001",
       "path": "knowledge/05-products-services/service-catalog.md",
       "query_id": "Q-SERVICE-001",
       "status": "draft",
-      "version": "0.1.0"
+      "version": "0.2.0"
     },
     {
-      "content_sha256": "a721f3e37ec517635792dcfbb9ab48f41529abb76bf16bcf7fbc49a20681eb1b",
+      "content_sha256": "a14fe6eba157865af8591c880ee6daa8e65288c8a554ff06cf4ef295cbdbd94d",
       "contract_status": "legacy",
       "id": "KB-SERVICE-002",
       "path": "knowledge/05-products-services/creator-onboarding.md",
       "query_id": "Q-SERVICE-002",
       "status": "draft",
-      "version": "0.1.0"
+      "version": "0.2.0"
     },
     {
-      "content_sha256": "745ebb691ce52399a7cda94f621345076e890bd43f866ae53a83803cf0fcf92d",
+      "content_sha256": "8bb114a15cc7c69ea219c6480f0cc23f19f5f2c940fdf78a8f647dff54f9e163",
       "contract_status": "legacy",
       "id": "KB-SERVICE-003",
       "path": "knowledge/05-products-services/free-value-report.md",
       "query_id": "Q-SERVICE-003",
       "status": "draft",
-      "version": "0.1.0"
+      "version": "0.2.0"
     },
     {
-      "content_sha256": "08e9e5e6b65c71ab319819580b41e79c23c84b775cf34f850a7835e38ab69499",
+      "content_sha256": "7a1a0a74a5691f00709d45d3671f92b39f5653d184f54c5e829be5b6addfb745",
       "contract_status": "legacy",
       "id": "KB-SERVICE-004",
       "path": "knowledge/05-products-services/find-your-lane.md",
       "query_id": "Q-SERVICE-004",
       "status": "draft",
-      "version": "0.1.0"
+      "version": "0.2.0"
     },
     {
-      "content_sha256": "d2385a7f5f97b2783f7b2637d743c53d64e8707be1e68377f286580221e237e2",
+      "content_sha256": "2ea5c6a89f65892f00ce63df5d57ec1623c5935867facbdb9297d22482da5c38",
       "contract_status": "legacy",
       "id": "KB-SERVICE-005",
       "path": "knowledge/05-products-services/creator-growth-services.md",
       "query_id": "Q-SERVICE-005",
       "status": "draft",
-      "version": "0.1.0"
+      "version": "0.2.0"
     },
     {
-      "content_sha256": "65b5bff3a209f4efeeb213f793fb95cb555708e761b2b50f93b8fc69a212a797",
+      "content_sha256": "1c5f47aac3a925972ef26b8f6385d2d8ad920abc23f5657044b49d56feb813b6",
       "contract_status": "legacy",
       "id": "KB-SERVICE-006",
       "path": "knowledge/05-products-services/creator-activity-services.md",
       "query_id": "Q-SERVICE-006",
       "status": "draft",
-      "version": "0.1.0"
+      "version": "0.2.0"
     },
     {
-      "content_sha256": "d73767b6e5d10c09eba16a79c5631ee9e735aecbe94daddab9a358e81323c6f0",
+      "content_sha256": "42aa9e670f47d6768b7778ef711f6784df479d67df32428fd9e2f4534d1e8755",
       "contract_status": "legacy",
       "id": "KB-SERVICE-007",
       "path": "knowledge/05-products-services/brand-deals.md",
       "query_id": "Q-SERVICE-007",
       "status": "draft",
-      "version": "0.1.0"
+      "version": "0.2.0"
     },
     {
-      "content_sha256": "f9c14e8c877eab91040be86bc948b63ed8b6d77349aafcd2a0c8ee9a39c2804c",
+      "content_sha256": "ed69a424cd13f3d0dfda73213052760d12b8a3843e73309d675b1b8c87bc5dba",
       "contract_status": "legacy",
       "id": "KB-SERVICE-008",
       "path": "knowledge/05-products-services/myyfinds.md",
       "query_id": "Q-SERVICE-008",
       "status": "draft",
-      "version": "0.1.0"
+      "version": "0.2.0"
     },
     {
-      "content_sha256": "c4ed5f86263b435e3f028b4c5e68e00647155faeb2670daa97f4dd1997afe08d",
+      "content_sha256": "bd6585b1f2b5a188c609c20f651a28cc6b9422edef3f8d9d9e0e88d2bc75a300",
       "contract_status": "legacy",
       "id": "KB-SERVICE-009",
       "path": "knowledge/05-products-services/monetization-tools.md",
       "query_id": "Q-SERVICE-009",
       "status": "draft",
-      "version": "0.1.0"
+      "version": "0.2.0"
     },
     {
-      "content_sha256": "041247d9046c7442424c1873b6074f93a94cb450dac9c2dd20c1461dde77e36d",
+      "content_sha256": "4842bc54333652a782622ea77c0e7f8beae6a271d0daa18f15ccca2cd486ff4f",
       "contract_status": "legacy",
       "id": "KB-SERVICE-010",
       "path": "knowledge/05-products-services/mcn-creator-services.md",
       "query_id": "Q-SERVICE-010",
       "status": "draft",
-      "version": "0.1.0"
+      "version": "0.2.0"
     },
     {
-      "content_sha256": "b645f34c95e9c83840737c0656f5d1c699e252866ecf2c75636765ab7c295ba2",
+      "content_sha256": "d18c776e58e34818712a630d2237944f2c6d7dc7b05ec9f402757232b7397bc2",
       "contract_status": "legacy",
       "id": "KB-SERVICE-011",
       "path": "knowledge/05-products-services/mcn-brand-services.md",
       "query_id": "Q-SERVICE-011",
       "status": "draft",
-      "version": "0.1.0"
+      "version": "0.2.0"
     },
     {
-      "content_sha256": "ce61666ee2a646eff685ff6c7682047d79ac7e44c001868f17f0e0f39e2fe4d2",
+      "content_sha256": "48b21147cba9021c1dd57b55309c3e8a823d911406c3b93fc80e46b008ed855f",
       "contract_status": "legacy",
       "id": "KB-SERVICE-012",
       "path": "knowledge/05-products-services/creator-support.md",
       "query_id": "Q-SERVICE-012",
       "status": "draft",
-      "version": "0.1.0"
+      "version": "0.2.0"
     },
     {
-      "content_sha256": "02380cd59f4fdd3debb9b49bcf20763b50995bd3e75fd15939f4690b3be1e9d0",
+      "content_sha256": "1a115c9b1351a0ac3cef559e1bcf8aa6217f0f1c5d25d91ced6371448264c97a",
       "contract_status": "legacy",
       "id": "KB-STRATEGY-001",
       "path": "knowledge/03-positioning-strategy/company-background.md",
       "query_id": "Q-STRATEGY-001",
       "status": "draft",
-      "version": "0.1.0"
+      "version": "0.2.0"
     },
     {
-      "content_sha256": "eff1eea41a401848df66611568cf55d24869be6644059de75620c0a99f5477a4",
+      "content_sha256": "d424d5611a487238e1be46a20f2aa246f50c793e8b23105063a93efef1ed41e6",
       "contract_status": "legacy",
       "id": "KB-STRATEGY-002",
       "path": "knowledge/03-positioning-strategy/brand-story.md",
       "query_id": "Q-STRATEGY-002",
       "status": "draft",
-      "version": "0.1.0"
+      "version": "0.2.0"
     },
     {
-      "content_sha256": "234fe904c1251d665fd3c1224918b8cb0ff3387a5a0dcd95f4830243440849e8",
+      "content_sha256": "af73219fb1c68558ee5078586edc0d7d0444702919357bcb72ad84e4e42dc6d3",
       "contract_status": "legacy",
       "id": "KB-STRATEGY-003",
       "path": "knowledge/03-positioning-strategy/mission.md",
       "query_id": "Q-STRATEGY-003",
       "status": "draft",
-      "version": "0.1.0"
+      "version": "0.2.0"
     },
     {
-      "content_sha256": "6cf04ebb929732a39c8a896dacc1ee549165f37a20d3813b464a4c62cf38b79c",
+      "content_sha256": "435857142851d9eac61b6411795f8275384ced50d0bc33f3b305d42d56860a10",
       "contract_status": "legacy",
       "id": "KB-STRATEGY-004",
       "path": "knowledge/03-positioning-strategy/vision.md",
       "query_id": "Q-STRATEGY-004",
       "status": "draft",
-      "version": "0.1.0"
+      "version": "0.2.0"
     },
     {
-      "content_sha256": "3a2e1bdceabab0baf43684ea3da58c232ceace146c665cc71722eb7a2e2bb23f",
+      "content_sha256": "5f1e4a3cfc046aca16550069ae3a806e53d52f5997bcdf73ca148998498bcb2a",
       "contract_status": "legacy",
       "id": "KB-STRATEGY-005",
       "path": "knowledge/03-positioning-strategy/values.md",
       "query_id": "Q-STRATEGY-005",
       "status": "draft",
-      "version": "0.1.0"
+      "version": "0.2.0"
     },
     {
-      "content_sha256": "8733f90bdb7ed26364060dfbf5d3bcbc3c46d952585e575a1d384d8155aa6c56",
+      "content_sha256": "025c3a814fa7601dd6958e4d1de696ee718db8921c3a8d01724ad7f2cfe75f85",
       "contract_status": "legacy",
       "id": "KB-STRATEGY-006",
       "path": "knowledge/03-positioning-strategy/core-beliefs.md",
       "query_id": "Q-STRATEGY-006",
       "status": "draft",
-      "version": "0.1.0"
+      "version": "0.2.0"
     },
     {
-      "content_sha256": "35395a53302c9bd64f48f15788063a00a86a07d2e470f90ea744cc83a03ea404",
+      "content_sha256": "cfc9b933d7e08e7f2ac3a02ee335427a4e7046f10f539da6fd509902e9feca5b",
       "contract_status": "legacy",
       "id": "KB-STRATEGY-007",
       "path": "knowledge/03-positioning-strategy/brand-promise.md",
       "query_id": "Q-STRATEGY-007",
       "status": "draft",
-      "version": "0.1.0"
+      "version": "0.2.0"
     },
     {
-      "content_sha256": "1266157216adca7ecbb61025adae1fabc3c9b0ab50723165d1c2cea92d93d262",
+      "content_sha256": "aee53674139cfd8a64e7b4905527d5256655bbbb282e1ac68a48b9f8d22b428a",
       "contract_status": "legacy",
       "id": "KB-STRATEGY-008",
       "path": "knowledge/03-positioning-strategy/non-promises.md",
       "query_id": "Q-STRATEGY-008",
       "status": "draft",
-      "version": "0.1.0"
+      "version": "0.2.0"
     },
     {
-      "content_sha256": "3483e631504ab89d9accbf309e9e8bd5aa36226f47e9f3fb671cd76fb2a2956e",
+      "content_sha256": "7b507cfec584afa82b302402781b433e1c1157ee48ba1c7e8bb6c3f990acedba",
       "contract_status": "legacy",
       "id": "KB-STRATEGY-009",
       "path": "knowledge/03-positioning-strategy/current-positioning.md",
       "query_id": "Q-STRATEGY-009",
       "status": "draft",
-      "version": "0.1.0"
+      "version": "0.2.0"
     },
     {
-      "content_sha256": "fc5cfc5395f612a49df6f1487e840d3def15b6344d713d51d9cd642a174df5dd",
+      "content_sha256": "a6f6fff9c60f17d4a0ffa8407f64a9c67fc306880496d9167df53b2c994b3ca7",
       "contract_status": "legacy",
       "id": "KB-STRATEGY-010",
       "path": "knowledge/03-positioning-strategy/positioning-transition.md",
       "query_id": "Q-STRATEGY-010",
       "status": "draft",
-      "version": "0.1.0"
+      "version": "0.2.0"
     },
     {
-      "content_sha256": "09e515509cc6191e097e8552678d61325f4aee003a45bfaf23e7e785e79cba64",
+      "content_sha256": "80f461ca4d2da8382fcc6007edf89b4a64dca1085534b4cbc6b5978c28ebea6c",
       "contract_status": "legacy",
       "id": "KB-STRATEGY-011",
       "path": "knowledge/03-positioning-strategy/competitive-advantages.md",
       "query_id": "Q-STRATEGY-011",
       "status": "draft",
-      "version": "0.1.0"
+      "version": "0.2.0"
     },
     {
-      "content_sha256": "66c6f75dee2e83106baef66715548b69b3fffa8e0f3f24d053d66feed3c86178",
+      "content_sha256": "b26e0c21275eccaf7712d94297e4c54a2f54f5120e0c4e32e7083177d44cd44d",
       "contract_status": "legacy",
       "id": "KB-STRATEGY-012",
       "path": "knowledge/03-positioning-strategy/strategic-boundaries.md",
       "query_id": "Q-STRATEGY-012",
       "status": "draft",
-      "version": "0.1.0"
+      "version": "0.2.0"
     },
     {
-      "content_sha256": "a989d78c6aa88f9115002ac19d815549eca0064d7ea3f886917023a3b2616130",
+      "content_sha256": "72a6f470684a3e8efccc05e4426b6864756921fb8ae4e426b67c1f02cf0e5daa",
       "contract_status": "legacy",
       "id": "KB-TRUST-001",
       "path": "knowledge/07-trust-safety/privacy-policy.md",
       "query_id": "Q-TRUST-001",
       "status": "draft",
-      "version": "0.1.0"
+      "version": "0.2.0"
     },
     {
-      "content_sha256": "4f2347ae604e6b219fbcdc361740c642125afbbac96758a6591adeb14428a016",
+      "content_sha256": "4d61b9e0529fc60c435c18d9ee861557a603b256398a3532ae7e26b05e2d1ae4",
       "contract_status": "legacy",
       "id": "KB-TRUST-002",
       "path": "knowledge/07-trust-safety/creator-data-use.md",
       "query_id": "Q-TRUST-002",
       "status": "draft",
-      "version": "0.1.0"
+      "version": "0.2.0"
     },
     {
-      "content_sha256": "74e9973732468ab8c4d417fbd14ece5ddf836350d53c44841db30d45599fffab",
+      "content_sha256": "ce2cbebb467f44d0ecbe277f843aa8e8ffa393ee22b197a7e41c08638ba23b3a",
       "contract_status": "legacy",
       "id": "KB-TRUST-003",
       "path": "knowledge/07-trust-safety/ai-use.md",
       "query_id": "Q-TRUST-003",
       "status": "draft",
-      "version": "0.1.0"
+      "version": "0.2.0"
     },
     {
-      "content_sha256": "4a686c2fe2b70d65f6eda03e3dd634133ce003a462d9b2dc83fabfd929c86e07",
+      "content_sha256": "45885b7d68bba64079b87ea5966b838fa1e57c100dc868d66370956b76c5d242",
       "contract_status": "legacy",
       "id": "KB-TRUST-004",
       "path": "knowledge/07-trust-safety/content-rights.md",
       "query_id": "Q-TRUST-004",
       "status": "draft",
-      "version": "0.1.0"
+      "version": "0.2.0"
     },
     {
-      "content_sha256": "86ee1f6c7d48e2ed1f3097a06ee1e70bd6fa1951a85d4684fd68e775575997d3",
+      "content_sha256": "b5be89b86052522689a3760aa658cb739dc37ca52cb48136ec67fcc42f8a1ea3",
       "contract_status": "legacy",
       "id": "KB-TRUST-005",
       "path": "knowledge/07-trust-safety/user-authorization.md",
       "query_id": "Q-TRUST-005",
       "status": "draft",
-      "version": "0.1.0"
+      "version": "0.2.0"
     },
     {
-      "content_sha256": "ff61857519ebe1b0936f1e248b37b2db5804dc466328d74314c37ebcc746d9b6",
+      "content_sha256": "3bd7c4be1fda4126dda8bb4312eb48a2405d197c22dbb0a784b27a3189e015cb",
       "contract_status": "legacy",
       "id": "KB-TRUST-006",
       "path": "knowledge/07-trust-safety/brand-safety.md",
       "query_id": "Q-TRUST-006",
       "status": "draft",
-      "version": "0.1.0"
+      "version": "0.2.0"
     },
     {
-      "content_sha256": "64a4e67741551ba0bcb25bdc2cbbb9ab7284521cd3259d025b9e41bfa590d2bd",
+      "content_sha256": "3386203bc38a8eaeb21d1e39f15bba645d7327c29fd28308acd293c25913f325",
       "contract_status": "legacy",
       "id": "KB-TRUST-007",
       "path": "knowledge/07-trust-safety/ad-disclosure.md",
       "query_id": "Q-TRUST-007",
       "status": "draft",
-      "version": "0.1.0"
+      "version": "0.2.0"
     },
     {
-      "content_sha256": "83f19584daed5c69961914751934f35b6cb9f5870adef703b029c3a5d83a3fd1",
+      "content_sha256": "e99465029a0407a3a7fc7568147a77a34ce5444f4c01bcbfd9d38f407e582a31",
       "contract_status": "legacy",
       "id": "KB-TRUST-008",
       "path": "knowledge/07-trust-safety/anti-fraud.md",
       "query_id": "Q-TRUST-008",
       "status": "draft",
-      "version": "0.1.0"
+      "version": "0.2.0"
     },
     {
-      "content_sha256": "213b7e4e694ea9cc6615d70e53a6806c856ca436f4bbbf89b71232d0974cc57f",
+      "content_sha256": "1cfe2086fedfcf1db4019a3a24263ab957f99813948af28e576ad4f7ddcdd282",
       "contract_status": "legacy",
       "id": "KB-TRUST-009",
       "path": "knowledge/07-trust-safety/minor-protection.md",
       "query_id": "Q-TRUST-009",
       "status": "draft",
-      "version": "0.1.0"
+      "version": "0.2.0"
     },
     {
-      "content_sha256": "4c219fad8599057ed916cb4e595caba454c952b92fc1ee3fa5617e6705b95e2b",
+      "content_sha256": "0cbd9862019be10592e4e0e1014ca452652a059414475e77df7475dec064f969",
       "contract_status": "legacy",
       "id": "KB-TRUST-010",
       "path": "knowledge/07-trust-safety/content-authenticity.md",
       "query_id": "Q-TRUST-010",
       "status": "draft",
-      "version": "0.1.0"
+      "version": "0.2.0"
     },
     {
-      "content_sha256": "cbdab2b3a5dbb122e5518f704bae79fe9362cc8a88cf7707971340c3cbaf1b48",
+      "content_sha256": "6bb4310d3b6f2010a3b4832791c11e9048e66d1b48138f0bba32283baf6008da",
       "contract_status": "legacy",
       "id": "KB-TRUST-011",
       "path": "knowledge/07-trust-safety/customer-support-standards.md",
       "query_id": "Q-TRUST-011",
       "status": "draft",
-      "version": "0.1.0"
+      "version": "0.2.0"
     },
     {
-      "content_sha256": "5f9dd3b4af3318bd2152149794fbd454d3bc92fd3243de9a10cef41cb46045e3",
+      "content_sha256": "de75769eecdd575e58b9449eb5146ea2ead39207670bd23b263be596019251d0",
       "contract_status": "legacy",
       "id": "KB-TRUST-012",
       "path": "knowledge/07-trust-safety/responsibility-and-risk.md",
       "query_id": "Q-TRUST-012",
       "status": "draft",
-      "version": "0.1.0"
+      "version": "0.2.0"
     },
     {
-      "content_sha256": "d5e2ce03cd5d0ead1d020075b1cdf3ec15d098beaba06762f23fffa3913af57f",
+      "content_sha256": "6319cdc39ea796cfbe0ae32a49371ba5202f2f9183fcb7a22563770edcb3db11",
       "contract_status": "legacy",
       "id": "KB-VOICE-001",
       "path": "knowledge/09-voice-messaging/brand-statement.md",
       "query_id": "Q-VOICE-001",
       "status": "draft",
-      "version": "0.1.0"
+      "version": "0.2.0"
     },
     {
-      "content_sha256": "ddf0aee3afecc6b98adb17411742a3dd1b0b26a17b3cc50672cb02e997cc06ac",
+      "content_sha256": "8ac249aab071fa779e659ab22859598b5b46524d29808644e791fe67d433979a",
       "contract_status": "legacy",
       "id": "KB-VOICE-002",
       "path": "knowledge/09-voice-messaging/brand-slogan.md",
       "query_id": "Q-VOICE-002",
       "status": "draft",
-      "version": "0.1.0"
+      "version": "0.2.0"
     },
     {
-      "content_sha256": "3bf9f51c9b98078daa433181fed974bc46324095b293138722ca2822281b4358",
+      "content_sha256": "7c5d1f5bd74aa3dc2acc1e5344c9a68f3d2d9dcee135930650f9a309243bb33b",
       "contract_status": "legacy",
       "id": "KB-VOICE-003",
       "path": "knowledge/09-voice-messaging/brand-personality.md",
       "query_id": "Q-VOICE-003",
       "status": "draft",
-      "version": "0.1.0"
+      "version": "0.2.0"
     },
     {
-      "content_sha256": "dffa339157db51ce0937ed7b59c9b1b54dd21fa3b62f969e3f54fe01dffee076",
+      "content_sha256": "857a9bb12b6f1ae944039019e59eb4f71a73b6bde4380dbe9896a1a124dde4c3",
       "contract_status": "legacy",
       "id": "KB-VOICE-004",
       "path": "knowledge/09-voice-messaging/tone-of-voice.md",
       "query_id": "Q-VOICE-004",
       "status": "draft",
-      "version": "0.1.0"
+      "version": "0.2.0"
     },
     {
-      "content_sha256": "e57cc8c0427297689580f03ef3159be0aece584cd60404d40601842ede3adf4d",
+      "content_sha256": "1c3caddfd1d5c4124ae415fb1eb38c3055d10708e8450240c5389382f919dc28",
       "contract_status": "legacy",
       "id": "KB-VOICE-005",
       "path": "knowledge/09-voice-messaging/editorial-pillars.md",
       "query_id": "Q-VOICE-005",
       "status": "draft",
-      "version": "0.1.0"
+      "version": "0.2.0"
     },
     {
-      "content_sha256": "e41668425483bcdd9441bd88326aa8a0dbc0c80cabb400631349ecd3a56de1ec",
+      "content_sha256": "c587754f23934014353a76695edf7f327c348879c9482587935ddadafa55e20c",
       "contract_status": "legacy",
       "id": "KB-VOICE-006",
       "path": "knowledge/09-voice-messaging/message-hierarchy.md",
       "query_id": "Q-VOICE-006",
       "status": "draft",
-      "version": "0.1.0"
+      "version": "0.2.0"
     },
     {
-      "content_sha256": "2abb142df8bcce2dae6402075cc62a122339e2d8c76c1c17b1b525d052f364f8",
+      "content_sha256": "8786539b50e44b149f58dc61f345dea6cda9a6829e62d2922d8a00a83c115777",
       "contract_status": "legacy",
       "id": "KB-VOICE-007",
       "path": "knowledge/09-voice-messaging/audience-message-matrix.md",
       "query_id": "Q-VOICE-007",
       "status": "draft",
-      "version": "0.1.0"
+      "version": "0.2.0"
     },
     {
-      "content_sha256": "d8bf7bd2a026df78fd78459a9a9db59e128fe911f15b233a366dd835831782ab",
+      "content_sha256": "a41da594480bd34fdd4768cd47e7fc953a8f142140c14043b65524179c8b338e",
       "contract_status": "legacy",
       "id": "KB-VOICE-008",
       "path": "knowledge/09-voice-messaging/terminology.md",
       "query_id": "Q-VOICE-008",
       "status": "draft",
-      "version": "0.1.0"
+      "version": "0.2.0"
     },
     {
-      "content_sha256": "c1015e5de7ab0044942e6e7abc31e7057d0e50fecaddf44dbdd49216c1970664",
+      "content_sha256": "ca3c60582403cfee6d78cdc19f717f0d6bd8db52821e18071f2f5862afa1496f",
       "contract_status": "legacy",
       "id": "KB-VOICE-009",
       "path": "knowledge/09-voice-messaging/forbidden-terms.md",
       "query_id": "Q-VOICE-009",
       "status": "draft",
-      "version": "0.1.0"
+      "version": "0.2.0"
     },
     {
-      "content_sha256": "c4cfdc661602d4fab7638c49f58ef8e8b6a4889e3a0d598d8edd4aa9dbafb3b2",
+      "content_sha256": "e7143c9475ac7c0008c13e1cd36bafc9d85d207dc476ade14bfb791fe0e39ff0",
       "contract_status": "legacy",
       "id": "KB-VOICE-010",
       "path": "knowledge/09-voice-messaging/deprecated-language.md",
       "query_id": "Q-VOICE-010",
       "status": "draft",
-      "version": "0.1.0"
+      "version": "0.2.0"
     },
     {
-      "content_sha256": "8e0d4ad746f1b38349abdc648e0bfa3799469e7ad3f27a34e2952a9ee35507c4",
+      "content_sha256": "b4100406128e01bc8aafadff5d6aab39eb2752e0815dabad4b500518ee45d415",
       "contract_status": "legacy",
       "id": "KB-VOICE-011",
       "path": "knowledge/09-voice-messaging/bilingual-style-guide.md",
       "query_id": "Q-VOICE-011",
       "status": "draft",
-      "version": "0.1.0"
+      "version": "0.2.0"
     },
     {
-      "content_sha256": "8723f014443d1efa7a4596635dea9e12d170a4ca482cd94b4b8efc36986c39c4",
+      "content_sha256": "94c8d699c60e20fe4fb9155ddb6f3949f848a743b513797649a249aa3ead7453",
       "contract_status": "legacy",
       "id": "KB-VOICE-012",
       "path": "knowledge/09-voice-messaging/channel-guidelines.md",
       "query_id": "Q-VOICE-012",
       "status": "draft",
-      "version": "0.1.0"
+      "version": "0.2.0"
     }
   ],
   "record_type": "knowledge_entry",

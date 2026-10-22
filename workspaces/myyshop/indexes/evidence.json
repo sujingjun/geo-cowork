@@ -14,6 +14,326 @@
       "version": "1.0.0"
     },
     {
+      "id": "EVD-MYYSHOP-CURATION-20261022-ABOUT",
+      "path": "evidence/records/evd-myyshop-curation-20261022-about.md",
+      "refs": [
+        "SRC-MYYSHOP-WEB-ABOUT-001"
+      ],
+      "status": "candidate",
+      "updated_at": "2026-10-22T17:38:11+08:00",
+      "version": "1.0.0"
+    },
+    {
+      "id": "EVD-MYYSHOP-CURATION-20261022-ACADEMY",
+      "path": "evidence/records/evd-myyshop-curation-20261022-academy.md",
+      "refs": [
+        "SRC-MYYSHOP-CURATION-20261022-ACADEMY"
+      ],
+      "status": "candidate",
+      "updated_at": "2026-10-22T17:45:06+08:00",
+      "version": "1.0.0"
+    },
+    {
+      "id": "EVD-MYYSHOP-CURATION-20261022-BLOG",
+      "path": "evidence/records/evd-myyshop-curation-20261022-blog.md",
+      "refs": [
+        "SRC-MYYSHOP-CURATION-20261022-BLOG"
+      ],
+      "status": "candidate",
+      "updated_at": "2026-10-22T17:45:06+08:00",
+      "version": "1.0.0"
+    },
+    {
+      "id": "EVD-MYYSHOP-CURATION-20261022-BRAND-DEALS",
+      "path": "evidence/records/evd-myyshop-curation-20261022-brand-deals.md",
+      "refs": [
+        "SRC-MYYSHOP-WEB-BRAND-DEALS-001"
+      ],
+      "status": "candidate",
+      "updated_at": "2026-10-22T17:38:11+08:00",
+      "version": "1.0.0"
+    },
+    {
+      "id": "EVD-MYYSHOP-CURATION-20261022-COURSE",
+      "path": "evidence/records/evd-myyshop-curation-20261022-course.md",
+      "refs": [
+        "SRC-MYYSHOP-CURATION-20261022-COURSE"
+      ],
+      "status": "candidate",
+      "updated_at": "2026-10-22T17:45:06+08:00",
+      "version": "1.0.0"
+    },
+    {
+      "id": "EVD-MYYSHOP-CURATION-20261022-DIRECTION",
+      "path": "evidence/records/evd-myyshop-curation-20261022-direction.md",
+      "refs": [
+        "SRC-MYYSHOP-CURATION-20261022-DIRECTION"
+      ],
+      "status": "candidate",
+      "updated_at": "2026-10-22T18:33:45+08:00",
+      "version": "1.0.0"
+    },
+    {
+      "id": "EVD-MYYSHOP-CURATION-20261022-HOME",
+      "path": "evidence/records/evd-myyshop-curation-20261022-home.md",
+      "refs": [
+        "SRC-MYYSHOP-WEB-HOMEPAGE-001"
+      ],
+      "status": "candidate",
+      "updated_at": "2026-10-22T17:38:11+08:00",
+      "version": "1.0.0"
+    },
+    {
+      "id": "EVD-MYYSHOP-CURATION-20261022-IMH-02",
+      "path": "evidence/records/evd-myyshop-curation-20261022-imh-02.md",
+      "refs": [
+        "SRC-MYYSHOP-CURATION-20261022-IMH-02"
+      ],
+      "status": "candidate",
+      "updated_at": "2026-10-22T17:38:11+08:00",
+      "version": "1.0.0"
+    },
+    {
+      "id": "EVD-MYYSHOP-CURATION-20261022-IMH-03",
+      "path": "evidence/records/evd-myyshop-curation-20261022-imh-03.md",
+      "refs": [
+        "SRC-MYYSHOP-CURATION-20261022-IMH-03"
+      ],
+      "status": "candidate",
+      "updated_at": "2026-10-22T17:38:11+08:00",
+      "version": "1.0.0"
+    },
+    {
+      "id": "EVD-MYYSHOP-CURATION-20261022-IMH-04",
+      "path": "evidence/records/evd-myyshop-curation-20261022-imh-04.md",
+      "refs": [
+        "SRC-MYYSHOP-CURATION-20261022-IMH-04"
+      ],
+      "status": "candidate",
+      "updated_at": "2026-10-22T17:38:11+08:00",
+      "version": "1.0.0"
+    },
+    {
+      "id": "EVD-MYYSHOP-CURATION-20261022-IMH-05",
+      "path": "evidence/records/evd-myyshop-curation-20261022-imh-05.md",
+      "refs": [
+        "SRC-MYYSHOP-CURATION-20261022-IMH-05"
+      ],
+      "status": "candidate",
+      "updated_at": "2026-10-22T17:38:11+08:00",
+      "version": "1.0.0"
+    },
+    {
+      "id": "EVD-MYYSHOP-CURATION-20261022-IMH-06",
+      "path": "evidence/records/evd-myyshop-curation-20261022-imh-06.md",
+      "refs": [
+        "SRC-MYYSHOP-CURATION-20261022-IMH-06"
+      ],
+      "status": "candidate",
+      "updated_at": "2026-10-22T17:38:11+08:00",
+      "version": "1.0.0"
+    },
+    {
+      "id": "EVD-MYYSHOP-CURATION-20261022-IMH-07",
+      "path": "evidence/records/evd-myyshop-curation-20261022-imh-07.md",
+      "refs": [
+        "SRC-MYYSHOP-CURATION-20261022-IMH-07"
+      ],
+      "status": "candidate",
+      "updated_at": "2026-10-22T17:38:11+08:00",
+      "version": "1.0.0"
+    },
+    {
+      "id": "EVD-MYYSHOP-CURATION-20261022-IMH-08",
+      "path": "evidence/records/evd-myyshop-curation-20261022-imh-08.md",
+      "refs": [
+        "SRC-MYYSHOP-CURATION-20261022-IMH-08"
+      ],
+      "status": "candidate",
+      "updated_at": "2026-10-22T17:38:11+08:00",
+      "version": "1.0.0"
+    },
+    {
+      "id": "EVD-MYYSHOP-CURATION-20261022-IMH-09",
+      "path": "evidence/records/evd-myyshop-curation-20261022-imh-09.md",
+      "refs": [
+        "SRC-MYYSHOP-CURATION-20261022-IMH-09"
+      ],
+      "status": "candidate",
+      "updated_at": "2026-10-22T17:38:11+08:00",
+      "version": "1.0.0"
+    },
+    {
+      "id": "EVD-MYYSHOP-CURATION-20261022-IMH-10",
+      "path": "evidence/records/evd-myyshop-curation-20261022-imh-10.md",
+      "refs": [
+        "SRC-MYYSHOP-CURATION-20261022-IMH-10"
+      ],
+      "status": "candidate",
+      "updated_at": "2026-10-22T17:38:11+08:00",
+      "version": "1.0.0"
+    },
+    {
+      "id": "EVD-MYYSHOP-CURATION-20261022-IMH-11",
+      "path": "evidence/records/evd-myyshop-curation-20261022-imh-11.md",
+      "refs": [
+        "SRC-MYYSHOP-CURATION-20261022-IMH-11"
+      ],
+      "status": "candidate",
+      "updated_at": "2026-10-22T17:38:11+08:00",
+      "version": "1.0.0"
+    },
+    {
+      "id": "EVD-MYYSHOP-CURATION-20261022-IMH-12",
+      "path": "evidence/records/evd-myyshop-curation-20261022-imh-12.md",
+      "refs": [
+        "SRC-MYYSHOP-CURATION-20261022-IMH-12"
+      ],
+      "status": "candidate",
+      "updated_at": "2026-10-22T17:38:11+08:00",
+      "version": "1.0.0"
+    },
+    {
+      "id": "EVD-MYYSHOP-CURATION-20261022-IMH-13",
+      "path": "evidence/records/evd-myyshop-curation-20261022-imh-13.md",
+      "refs": [
+        "SRC-MYYSHOP-CURATION-20261022-IMH-13"
+      ],
+      "status": "candidate",
+      "updated_at": "2026-10-22T17:38:11+08:00",
+      "version": "1.0.0"
+    },
+    {
+      "id": "EVD-MYYSHOP-CURATION-20261022-IMH-15",
+      "path": "evidence/records/evd-myyshop-curation-20261022-imh-15.md",
+      "refs": [
+        "SRC-MYYSHOP-INFLUENCER-MARKETING-HUB-001"
+      ],
+      "status": "candidate",
+      "updated_at": "2026-10-22T17:38:11+08:00",
+      "version": "1.0.0"
+    },
+    {
+      "id": "EVD-MYYSHOP-CURATION-20261022-IMH-16",
+      "path": "evidence/records/evd-myyshop-curation-20261022-imh-16.md",
+      "refs": [
+        "SRC-MYYSHOP-CURATION-20261022-IMH-16"
+      ],
+      "status": "candidate",
+      "updated_at": "2026-10-22T17:38:11+08:00",
+      "version": "1.0.0"
+    },
+    {
+      "id": "EVD-MYYSHOP-CURATION-20261022-IMH-17",
+      "path": "evidence/records/evd-myyshop-curation-20261022-imh-17.md",
+      "refs": [
+        "SRC-MYYSHOP-CURATION-20261022-IMH-17"
+      ],
+      "status": "candidate",
+      "updated_at": "2026-10-22T17:38:11+08:00",
+      "version": "1.0.0"
+    },
+    {
+      "id": "EVD-MYYSHOP-CURATION-20261022-INPUTS",
+      "path": "evidence/records/evd-myyshop-curation-20261022-inputs.md",
+      "refs": [
+        "SRC-MYYSHOP-CURATION-20261022-INPUTS"
+      ],
+      "status": "candidate",
+      "updated_at": "2026-10-22T18:33:45+08:00",
+      "version": "1.0.0"
+    },
+    {
+      "id": "EVD-MYYSHOP-CURATION-20261022-INSTAGRAM",
+      "path": "evidence/records/evd-myyshop-curation-20261022-instagram.md",
+      "refs": [
+        "SRC-MYYSHOP-CURATION-20261022-INSTAGRAM"
+      ],
+      "status": "candidate",
+      "updated_at": "2026-10-22T18:33:45+08:00",
+      "version": "1.0.0"
+    },
+    {
+      "id": "EVD-MYYSHOP-CURATION-20261022-LANE",
+      "path": "evidence/records/evd-myyshop-curation-20261022-lane.md",
+      "refs": [
+        "SRC-MYYSHOP-CURATION-20261022-LANE"
+      ],
+      "status": "candidate",
+      "updated_at": "2026-10-22T17:45:06+08:00",
+      "version": "1.0.0"
+    },
+    {
+      "id": "EVD-MYYSHOP-CURATION-20261022-MYYFINDS",
+      "path": "evidence/records/evd-myyshop-curation-20261022-myyfinds.md",
+      "refs": [
+        "SRC-MYYSHOP-WEB-MYYFINDS-001"
+      ],
+      "status": "candidate",
+      "updated_at": "2026-10-22T17:38:11+08:00",
+      "version": "1.0.0"
+    },
+    {
+      "id": "EVD-MYYSHOP-CURATION-20261022-NEWSROOM",
+      "path": "evidence/records/evd-myyshop-curation-20261022-newsroom.md",
+      "refs": [
+        "SRC-MYYSHOP-NEWSROOM-001"
+      ],
+      "status": "candidate",
+      "updated_at": "2026-10-22T17:45:06+08:00",
+      "version": "1.0.0"
+    },
+    {
+      "id": "EVD-MYYSHOP-CURATION-20261022-PR-CPM",
+      "path": "evidence/records/evd-myyshop-curation-20261022-pr-cpm.md",
+      "refs": [
+        "SRC-MYYSHOP-GLOBENEWSWIRE-CPM-001"
+      ],
+      "status": "candidate",
+      "updated_at": "2026-10-22T17:38:11+08:00",
+      "version": "1.0.0"
+    },
+    {
+      "id": "EVD-MYYSHOP-CURATION-20261022-PRIVACY",
+      "path": "evidence/records/evd-myyshop-curation-20261022-privacy.md",
+      "refs": [
+        "SRC-MYYSHOP-CURATION-20261022-PRIVACY"
+      ],
+      "status": "candidate",
+      "updated_at": "2026-10-22T17:38:11+08:00",
+      "version": "1.0.0"
+    },
+    {
+      "id": "EVD-MYYSHOP-CURATION-20261022-REPORT",
+      "path": "evidence/records/evd-myyshop-curation-20261022-report.md",
+      "refs": [
+        "SRC-MYYSHOP-CURATION-20261022-REPORT"
+      ],
+      "status": "candidate",
+      "updated_at": "2026-10-22T17:45:06+08:00",
+      "version": "1.0.0"
+    },
+    {
+      "id": "EVD-MYYSHOP-CURATION-20261022-TERMS",
+      "path": "evidence/records/evd-myyshop-curation-20261022-terms.md",
+      "refs": [
+        "SRC-MYYSHOP-CURATION-20261022-TERMS"
+      ],
+      "status": "candidate",
+      "updated_at": "2026-10-22T17:38:11+08:00",
+      "version": "1.0.0"
+    },
+    {
+      "id": "EVD-MYYSHOP-CURATION-20261022-WHATSNEW",
+      "path": "evidence/records/evd-myyshop-curation-20261022-whatsnew.md",
+      "refs": [
+        "SRC-MYYSHOP-WHATSNEW-001"
+      ],
+      "status": "candidate",
+      "updated_at": "2026-10-22T17:45:06+08:00",
+      "version": "1.0.0"
+    },
+    {
       "id": "EVD-MYYSHOP-LEGACY-DEFINITION-001",
       "path": "evidence/records/evd-myyshop-legacy-definition-001.md",
       "refs": [

@@ -1,102 +1,64 @@
 ---
-record_type: knowledge_entry
-id: KB-AUDIENCE-011
-query_id: Q-AUDIENCE-011
-title: "暂不支持或受限用户"
+record_type: "knowledge_entry"
+id: "KB-AUDIENCE-011"
+query_id: "Q-AUDIENCE-011"
+title: "Unsupported or Restricted Audiences"
 title_en: "Unsupported or Restricted Audiences"
-domain: 04-audience-lifecycle
-entry_type: policy_fact
-priority: P0
-status: draft
-version: 0.1.0
-owner: "法务 + 信任安全"
-approver: "待指定"
-canonical_target: "/help/creator-eligibility"
-last_reviewed: 2026-08-17
-next_review: 2026-09-17
+domain: "04-audience-lifecycle"
+entry_type: "policy_fact"
+priority: "P0"
+status: "draft"
+version: "0.2.0"
+owner: "Creator operations / Product"
+approver: "Business confirmation pending"
+canonical_target: "https://www.myyshop.com/docs/termsCondition"
+last_reviewed: "2026-10-22"
+next_review: "2026-11-22"
+language: "en"
 ---
-# 暂不支持或受限用户 / Unsupported or Restricted Audiences
 
-## 1. 条目目的
+# Unsupported or Restricted Audiences
 
-本条目用于统一 MyyShop 关于“暂不支持或受限用户”的事实、表达、证据、适用范围和生成式平台答案，避免官网、帮助中心、结构化数据、客服与外部分发出现冲突。
+[Knowledge home](../README.md) · [中文对照](../translations/zh-CN/04-audience-lifecycle/unsupported-audiences.md)
 
-## 2. 标准结论
+Language: English (primary). Version: 0.2.0. Status: draft for internal review. Source observation date: 2026-10-22.
 
-> 不符合年龄、地区、内容安全、账号真实性或特定服务资格要求的用户，可能无法注册或使用部分服务。
+## 1. Question
 
-## 3. 对应 Query
+Which users or activities may be restricted?
 
-- **Query ID：** `Q-AUDIENCE-011`
-- **用户问题：** 哪些用户或场景暂时不适合使用 MyyShop？
-- **主要意图：** 获取可直接引用、可核验且带边界的答案。
+## 2. Current answer
 
-## 4. 当前已知事实
+The Creator Service Agreement requires full civil capacity and excludes people subject to relevant trade restrictions or sanctions. It also allows identity checks and restrictions when information or verification is incomplete. [S1](../../evidence/sources/src-myyshop-curation-20261022-terms.md)
 
-- 服务边界必须与包容定位同时说明。
+## 3. Details and conditions
 
-## 5. 待确认事实
+- The Privacy Policy describes users over 18, with an applicable-law exception permitting use without parental or guardian consent, and requires capacity to enter a binding contract. Preserve the exception and legal-capacity requirement rather than inventing a universal age threshold for every jurisdiction. [S2](../../evidence/sources/src-myyshop-curation-20261022-privacy.md)
+- The MyyFinds page prohibits artificial traffic, including creating multiple accounts for fake views, and states that violations can lead to cancelled rewards and permanent suspension. The agreement also prohibits false promotion and fictitious transactions. Do not invent a specific detection threshold or a guaranteed appeal outcome. [S3](../../evidence/sources/src-myyshop-web-myyfinds-001.md) [S1](../../evidence/sources/src-myyshop-curation-20261022-terms.md)
+- The Creator Service Agreement prohibits specified unlawful or harmful content and rights violations, and permits review and enforcement. Public rules do not demonstrate perfect detection, zero risk, or certification by the social platforms named in the materials. [S1](../../evidence/sources/src-myyshop-curation-20261022-terms.md)
 
-- 受限国家和地区
-- 禁止内容类别
-- 未成年人规则
-- 制裁或支付限制。
+## 4. Scope and limits
 
-## 6. 证据与来源要求
+The audience or practical workflow described here is not a universal eligibility rule, approved segmentation model or guarantee of outcomes.
 
-- 条款政策
-- 信任安全规则
-- 支付机构限制
-- 法务意见
+## 5. Evidence gaps and review
 
-证据必须记录来源名称、URL 或内部位置、Owner、统计口径、生效日期、失效日期和审批状态。没有审批的 Claim 不进入站点或分发。
+- **G02**: Provide the current product-by-country, social-platform and creator-qualification matrix, including account checks and exceptions; verify availability separately from public navigation.
+- **G07**: Confirm current governing agreements and applicability, including content licence, social-post retention, complaints, cancellation and advertising-disclosure procedures.
 
-## 7. 适用范围
+[Consolidated requests and acceptance requirements](../00-governance/pending-items.md)
 
-- MyyShop 全球品牌知识库
-- 官网、帮助中心、客服、媒体资料与生成式平台答案
+Proposed fact owner: Creator operations / Product.
 
-## 8. 限制与例外
+## 6. Supporting knowledge
 
-- 当前条目为 v0.1.0 草案；未完成证据核验和审批前，不得作为正式对外事实。
+- [KB-RULE-002 — Account Qualification](../06-commercial-rules/account-qualification.md)
+- [KB-TRUST-008 — Anti-fraud](../07-trust-safety/anti-fraud.md)
 
-## 9. 批准表述
+## 7. Sources
 
-> 不符合年龄、地区、内容安全、账号真实性或特定服务资格要求的用户，可能无法注册或使用部分服务。
+- **S1**: [MyyShop | Turn your social impact into a good business](https://www.myyshop.com/docs/termsCondition) — Locator: 1.1.1; 1.3.1; 3.7; 5. Service Usage Rules. [Source record](../../evidence/sources/src-myyshop-curation-20261022-terms.md). [Captured text](../../evidence/snapshots/2026-10-22-initial-knowledge/terms.txt).
+- **S2**: [MyyShop | Turn your social impact into a good business](https://www.myyshop.com/docs/privacy) — Locator: 5. MINORS. [Source record](../../evidence/sources/src-myyshop-curation-20261022-privacy.md). [Captured text](../../evidence/snapshots/2026-10-22-initial-knowledge/privacy.txt).
+- **S3**: [Earn From Every Product View with MyyFinds - No Sales Required | MyyShop](https://www.myyshop.com/earn-from-every-view-myyfinds) — Locator: Policy Warning: Fraudulent Activity. [Source record](../../evidence/sources/src-myyshop-web-myyfinds-001.md). [Captured text](../../evidence/snapshots/2026-10-22-initial-knowledge/myyfinds.txt).
 
-## 10. 禁止或废弃表述
-
-- 不得扩大适用范围、删除限制条件或把草案描述为已确认事实。
-
-## 11. 关联条目
-
-- 由目录映射文件维护；正式发布前至少关联一个上游事实条目和一个权威页面。
-
-## 12. 发布映射
-
-- **建议权威页面：** `/help/creator-eligibility`
-- **结构化数据：** FAQ / Terms
-- **同步渠道：**
-  - 官网正文
-  - 帮助中心或 FAQ
-  - 结构化数据（如适用）
-  - 客服标准答案
-  - 媒体与合作伙伴资料
-  - 生成式平台答案测试
-
-## 13. 治理信息
-
-- **条目状态：** `draft`
-- **优先级：** `P0`
-- **内容负责人：** 法务 + 信任安全
-- **审批人：** 待指定
-- **版本：** `0.1.0`
-- **最近审核：** `2026-08-17`
-- **下次审核：** `2026-09-17`
-
-## 14. 答案测试
-
-- **测试问题：** 哪些用户或场景暂时不适合使用 MyyShop？
-- **期望核心答案：** 不符合年龄、地区、内容安全、账号真实性或特定服务资格要求的用户，可能无法注册或使用部分服务。
-- **失败判定：** 未提到 MyyShop、沿用废弃定位、扩大能力范围、遗漏关键限制、引用错误主体或给出无证据的数字与保证性承诺。
-- **测试平台：** ChatGPT、Perplexity、Gemini，以及其他纳入试点的平台。
+Source publication and candidate evidence do not constitute business approval. Preserve conditions and unresolved points when reusing this entry.

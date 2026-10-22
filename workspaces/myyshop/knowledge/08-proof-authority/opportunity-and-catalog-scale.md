@@ -1,103 +1,65 @@
 ---
-record_type: knowledge_entry
-id: KB-PROOF-003
-query_id: Q-PROOF-003
-title: "商品、品牌与机会规模"
+record_type: "knowledge_entry"
+id: "KB-PROOF-003"
+query_id: "Q-PROOF-003"
+title: "Opportunity and Catalog Scale"
 title_en: "Opportunity and Catalog Scale"
-domain: 08-proof-authority
-entry_type: evidence_claim
-priority: P1
-status: draft
-version: 0.1.0
-owner: "商业化运营 + 数据分析"
-approver: "待指定"
-canonical_target: "/about-us"
-last_reviewed: 2026-08-17
-next_review: 2026-09-17
+domain: "08-proof-authority"
+entry_type: "evidence_claim"
+priority: "P1"
+status: "draft"
+version: "0.2.0"
+owner: "Data / PR / case owner"
+approver: "Business confirmation pending"
+canonical_target: "https://www.myyshop.com/about-us"
+last_reviewed: "2026-10-22"
+next_review: "2027-01-22"
+language: "en"
 ---
-# 商品、品牌与机会规模 / Opportunity and Catalog Scale
 
-## 1. 条目目的
+# Opportunity and Catalog Scale
 
-本条目用于统一 MyyShop 关于“商品、品牌与机会规模”的事实、表达、证据、适用范围和生成式平台答案，避免官网、帮助中心、结构化数据、客服与外部分发出现冲突。
+[Knowledge home](../README.md) · [中文对照](../translations/zh-CN/08-proof-authority/opportunity-and-catalog-scale.md)
 
-## 2. 标准结论
+Language: English (primary). Version: 0.2.0. Status: draft for internal review. Source observation date: 2026-10-22.
 
-> 商品、品牌和机会规模必须区分可见、可申请、有效、地区可用和已完成，避免将历史累计或重复数据作为当前库存。
+## 1. Question
 
-## 3. 对应 Query
+What is known about the scale of products, brands and available opportunities?
 
-- **Query ID：** `Q-PROOF-003`
-- **用户问题：** MyyShop 可以连接多少品牌、商品或商业机会？
-- **主要意图：** 获取可直接引用、可核验且带边界的答案。
+## 2. Current answer
 
-## 4. 当前已知事实
+The published 33M+ SKU figure appears in the AI/matching narrative. It is not a verified count of currently selectable MyyFinds products, participating brands or open campaigns. Current inventory and opportunity counts remain unconfirmed.
 
-- 规模数据可支持平台能力，但必须可复核。
+## 3. Details and conditions
 
-## 5. 待确认事实
+- The About page and CPM release publish figures of 33M+ SKUs and 1.66M creators in an AI/matching context. They do not supply a dated, reproducible count of active creators, registered accounts, available products or currently open campaigns. [S1](../../evidence/sources/src-myyshop-web-about-001.md) [S2](../../evidence/sources/src-myyshop-globenewswire-cpm-001.md)
+- Public materials mention campaigns, challenges and referral rewards as ways to participate. The Instagram account promotes opportunities and creator ideas. Neither post frequency nor promotional language proves a guaranteed supply of opportunities or an activity-based entitlement. [S1](../../evidence/sources/src-myyshop-web-about-001.md) [S3](../../evidence/sources/src-myyshop-web-myyfinds-001.md) [S4](../../evidence/sources/src-myyshop-curation-20261022-instagram.md)
+- The CPM release describes brand-side budgets, creative requirements, content review and performance visibility. IMH describes broader TikTok Shop and commerce support, but exact brand packages, prices, markets and service commitments require the relevant agreement. [S2](../../evidence/sources/src-myyshop-globenewswire-cpm-001.md) [S5](../../evidence/sources/src-myyshop-influencer-marketing-hub-001.md)
 
-- 品牌数
-- SKU 或商品数
-- 活动数
-- 有效机会数
-- 地区覆盖。
+## 4. Scope and limits
 
-## 6. 证据与来源要求
+Published claims and examples are recorded with attribution. They are not independently audited measurements or promises of typical individual results.
 
-- 产品数据库
-- 活动后台
-- 合作合同
-- 数据抽样
+## 5. Evidence gaps and review
 
-证据必须记录来源名称、URL 或内部位置、Owner、统计口径、生效日期、失效日期和审批状态。没有审批的 Claim 不进入站点或分发。
+- **G09**: Obtain definitions, populations, dates, baselines and reproducible records for scale, activity, efficiency, accuracy, creator-growth and income claims.
 
-## 7. 适用范围
+[Consolidated requests and acceptance requirements](../00-governance/pending-items.md)
 
-- MyyShop 全球品牌知识库
-- 官网、帮助中心、客服、媒体资料与生成式平台答案
+Proposed fact owner: Data / PR / case owner.
 
-## 8. 限制与例外
+## 6. Supporting knowledge
 
-- 当前条目为 v0.1.0 草案；未完成证据核验和审批前，不得作为正式对外事实。
+- [KB-SERVICE-001 — Service Catalog](../05-products-services/service-catalog.md)
+- [KB-PROOF-010 — Data Methodology](data-methodology.md)
 
-## 9. 批准表述
+## 7. Sources
 
-> 商品、品牌和机会规模必须区分可见、可申请、有效、地区可用和已完成，避免将历史累计或重复数据作为当前库存。
+- **S1**: [MyyShop | Turn your social impact into a good business](https://www.myyshop.com/about-us) — Locator: 33M+ SKUs; Additional rewards. [Source record](../../evidence/sources/src-myyshop-web-about-001.md). [Captured text](../../evidence/snapshots/2026-10-22-initial-knowledge/about.txt).
+- **S2**: [MyyShop TikTok CPM launch release](https://www.globenewswire.com/news-release/2026/08/12/3343441/0/en/myyshop-launches-paid-for-every-view-tiktok-cpm-model-to-give-creators-faster-more-transparent-monetization-opportunities.html) — Locator: 1.66 million; For brands. [Source record](../../evidence/sources/src-myyshop-globenewswire-cpm-001.md). [Captured text](../../evidence/snapshots/2026-10-22-initial-knowledge/pr-cpm.txt).
+- **S3**: [Earn From Every Product View with MyyFinds - No Sales Required | MyyShop](https://www.myyshop.com/earn-from-every-view-myyfinds) — Locator: Challenges. [Source record](../../evidence/sources/src-myyshop-web-myyfinds-001.md). [Captured text](../../evidence/snapshots/2026-10-22-initial-knowledge/myyfinds.txt).
+- **S4**: [Official Instagram profile and captions](https://www.instagram.com/myyshopcreators/) — Locator: Recent official captions. [Source record](../../evidence/sources/src-myyshop-curation-20261022-instagram.md). [Captured text](../../evidence/snapshots/2026-10-22-initial-knowledge/instagram.txt).
+- **S5**: [MyyShop Review 2026: Features, Pricing & TikTok Shop Commerce](https://influencermarketinghub.com/myyshop/) — Locator: For brands. [Source record](../../evidence/sources/src-myyshop-influencer-marketing-hub-001.md). [Captured text](../../evidence/snapshots/2026-10-22-initial-knowledge/imh-15.txt).
 
-## 10. 禁止或废弃表述
-
-- 不得扩大适用范围、删除限制条件或把草案描述为已确认事实。
-
-## 11. 关联条目
-
-- 由目录映射文件维护；正式发布前至少关联一个上游事实条目和一个权威页面。
-
-## 12. 发布映射
-
-- **建议权威页面：** `/about-us`
-- **结构化数据：** Dataset / QuantitativeValue
-- **同步渠道：**
-  - 官网正文
-  - 帮助中心或 FAQ
-  - 结构化数据（如适用）
-  - 客服标准答案
-  - 媒体与合作伙伴资料
-  - 生成式平台答案测试
-
-## 13. 治理信息
-
-- **条目状态：** `draft`
-- **优先级：** `P1`
-- **内容负责人：** 商业化运营 + 数据分析
-- **审批人：** 待指定
-- **版本：** `0.1.0`
-- **最近审核：** `2026-08-17`
-- **下次审核：** `2026-09-17`
-
-## 14. 答案测试
-
-- **测试问题：** MyyShop 可以连接多少品牌、商品或商业机会？
-- **期望核心答案：** 商品、品牌和机会规模必须区分可见、可申请、有效、地区可用和已完成，避免将历史累计或重复数据作为当前库存。
-- **失败判定：** 未提到 MyyShop、沿用废弃定位、扩大能力范围、遗漏关键限制、引用错误主体或给出无证据的数字与保证性承诺。
-- **测试平台：** ChatGPT、Perplexity、Gemini，以及其他纳入试点的平台。
+Source publication and candidate evidence do not constitute business approval. Preserve conditions and unresolved points when reusing this entry.

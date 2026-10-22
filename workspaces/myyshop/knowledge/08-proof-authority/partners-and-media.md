@@ -1,102 +1,64 @@
 ---
-record_type: knowledge_entry
-id: KB-PROOF-009
-query_id: Q-PROOF-009
-title: "合作伙伴、媒体与第三方认可"
+record_type: "knowledge_entry"
+id: "KB-PROOF-009"
+query_id: "Q-PROOF-009"
+title: "Partners, Media and Third-party Recognition"
 title_en: "Partners, Media and Third-party Recognition"
-domain: 08-proof-authority
-entry_type: evidence_asset
-priority: P1
-status: draft
-version: 0.1.0
-owner: "公关 + 商务 + 法务"
-approver: "待指定"
-canonical_target: "/about-us/recognition"
-last_reviewed: 2026-08-17
-next_review: 2026-09-17
+domain: "08-proof-authority"
+entry_type: "evidence_asset"
+priority: "P1"
+status: "draft"
+version: "0.2.0"
+owner: "Data / PR / case owner"
+approver: "Business confirmation pending"
+canonical_target: "https://www.myyshop.com/course/home"
+last_reviewed: "2026-10-22"
+next_review: "2027-01-22"
+language: "en"
 ---
-# 合作伙伴、媒体与第三方认可 / Partners, Media and Third-party Recognition
 
-## 1. 条目目的
+# Partners, Media and Third-party Recognition
 
-本条目用于统一 MyyShop 关于“合作伙伴、媒体与第三方认可”的事实、表达、证据、适用范围和生成式平台答案，避免官网、帮助中心、结构化数据、客服与外部分发出现冲突。
+[Knowledge home](../README.md) · [中文对照](../translations/zh-CN/08-proof-authority/partners-and-media.md)
 
-## 2. 标准结论
+Language: English (primary). Version: 0.2.0. Status: draft for internal review. Source observation date: 2026-10-22.
 
-> 合作伙伴、媒体报道和奖项必须区分付费合作、客户关系、技术集成、编辑报道和正式认证，并附公开来源与有效期。
+## 1. Question
 
-## 3. 对应 Query
+Which partnerships, media placements or recognitions are supported?
 
-- **Query ID：** `Q-PROOF-009`
-- **用户问题：** 哪些品牌、机构或媒体公开认可或合作过 MyyShop？
-- **主要意图：** 获取可直接引用、可核验且带边界的答案。
+## 2. Current answer
 
-## 4. 当前已知事实
+The materials establish that particular content was published or listed and that the official course page names MediaLabs. They do not independently verify every claimed partnership, media endorsement, audience reach or award. Describe each relationship at the strength its source supports.
 
-- 第三方材料可帮助建立实体权威性。
+## 3. Details and conditions
 
-## 5. 待确认事实
+- The supplied PR spreadsheets are distribution and placement records. One N3 release appears across many listed domains; the IMH workbook explicitly labels article insertions and guest articles. Repetition or placement alone is not independent corroboration, an award, a partnership contract or endorsement by every publisher. [S1](../../evidence/sources/src-myyshop-curation-20261022-inputs.md)
+- The Co-Branded Masterclass page describes a MyyShop × MediaLabs Creator Monetization Program with content strategy, account growth, product selection and sales topics. The official Instagram also names The Social Commerce Playbook as the first course. Course access, pricing, completion and certification conditions need their own rules. [S2](../../evidence/sources/src-myyshop-curation-20261022-course.md) [S3](../../evidence/sources/src-myyshop-curation-20261022-instagram.md)
+- The MyyShop-issued CPM press release describes MyyShop as backed by DHgate Group. That is a published relationship statement, not a corporate ownership chart or a guarantee by another group company. [S4](../../evidence/sources/src-myyshop-globenewswire-cpm-001.md)
 
-- 可公开 Logo
-- 合作状态
-- 报道链接
-- 奖项颁发方与年份。
+## 4. Scope and limits
 
-## 6. 证据与来源要求
+Published claims and examples are recorded with attribution. They are not independently audited measurements or promises of typical individual results.
 
-- 合同授权
-- 媒体原文
-- 奖项证书
-- 合作方确认
+## 5. Evidence gaps and review
 
-证据必须记录来源名称、URL 或内部位置、Owner、统计口径、生效日期、失效日期和审批状态。没有审批的 Claim 不进入站点或分发。
+- **G10**: Provide permission and evidence for cases, testimonials and independent recognition, preserving original wording, dates and any paid or placed relationship.
+- **G11**: Clarify company and product chronology, service packages, MCN arrangements and the scope of named collaborations or credentials.
 
-## 7. 适用范围
+[Consolidated requests and acceptance requirements](../00-governance/pending-items.md)
 
-- MyyShop 全球品牌知识库
-- 官网、帮助中心、客服、媒体资料与生成式平台答案
+Proposed fact owner: Data / PR / case owner.
 
-## 8. 限制与例外
+## 6. Supporting knowledge
 
-- 当前条目为 v0.1.0 草案；未完成证据核验和审批前，不得作为正式对外事实。
+- [KB-PROOF-010 — Data Methodology](data-methodology.md)
 
-## 9. 批准表述
+## 7. Sources
 
-> 合作伙伴、媒体报道和奖项必须区分付费合作、客户关系、技术集成、编辑报道和正式认证，并附公开来源与有效期。
+- **S1**: [Provided PR files and link register](../../evidence/snapshots/2026-10-22-initial-knowledge/pr-link-register.json) — Locator: N3 and IMH workbook registers. [Source record](../../evidence/sources/src-myyshop-curation-20261022-inputs.md). [Captured text](../../evidence/snapshots/2026-10-22-initial-knowledge/inputs.txt).
+- **S2**: [MyyShop | Turn your social impact into a good business](https://www.myyshop.com/course/home) — Locator: WHO WE ARE. [Source record](../../evidence/sources/src-myyshop-curation-20261022-course.md). [Captured text](../../evidence/snapshots/2026-10-22-initial-knowledge/course.txt).
+- **S3**: [Official Instagram profile and captions](https://www.instagram.com/myyshopcreators/) — Locator: The Social Commerce Playbook. [Source record](../../evidence/sources/src-myyshop-curation-20261022-instagram.md). [Captured text](../../evidence/snapshots/2026-10-22-initial-knowledge/instagram.txt).
+- **S4**: [MyyShop TikTok CPM launch release](https://www.globenewswire.com/news-release/2026/08/12/3343441/0/en/myyshop-launches-paid-for-every-view-tiktok-cpm-model-to-give-creators-faster-more-transparent-monetization-opportunities.html) — Locator: About MyyShop. [Source record](../../evidence/sources/src-myyshop-globenewswire-cpm-001.md). [Captured text](../../evidence/snapshots/2026-10-22-initial-knowledge/pr-cpm.txt).
 
-## 10. 禁止或废弃表述
-
-- 不得扩大适用范围、删除限制条件或把草案描述为已确认事实。
-
-## 11. 关联条目
-
-- 由目录映射文件维护；正式发布前至少关联一个上游事实条目和一个权威页面。
-
-## 12. 发布映射
-
-- **建议权威页面：** `/about-us/recognition`
-- **结构化数据：** Organization.sameAs / Article
-- **同步渠道：**
-  - 官网正文
-  - 帮助中心或 FAQ
-  - 结构化数据（如适用）
-  - 客服标准答案
-  - 媒体与合作伙伴资料
-  - 生成式平台答案测试
-
-## 13. 治理信息
-
-- **条目状态：** `draft`
-- **优先级：** `P1`
-- **内容负责人：** 公关 + 商务 + 法务
-- **审批人：** 待指定
-- **版本：** `0.1.0`
-- **最近审核：** `2026-08-17`
-- **下次审核：** `2026-09-17`
-
-## 14. 答案测试
-
-- **测试问题：** 哪些品牌、机构或媒体公开认可或合作过 MyyShop？
-- **期望核心答案：** 合作伙伴、媒体报道和奖项必须区分付费合作、客户关系、技术集成、编辑报道和正式认证，并附公开来源与有效期。
-- **失败判定：** 未提到 MyyShop、沿用废弃定位、扩大能力范围、遗漏关键限制、引用错误主体或给出无证据的数字与保证性承诺。
-- **测试平台：** ChatGPT、Perplexity、Gemini，以及其他纳入试点的平台。
+Source publication and candidate evidence do not constitute business approval. Preserve conditions and unresolved points when reusing this entry.
